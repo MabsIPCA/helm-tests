@@ -1,0 +1,9 @@
+﻿# Values file for index out of range test
+testIndexEmpty: false
+testIndexBeyond: false
+testIndexNegative: false
+testIndexNil: true
+emptyList: []
+servers: []
+items: []
+nilList: null

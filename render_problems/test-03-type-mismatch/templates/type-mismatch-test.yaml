@@ -1,0 +1,16 @@
+# Test: Type mismatch errors - fails on wrong type operations
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-type-test
+data:
+  # Fails: Cannot range over non-iterable (number)
+  {{- if .Values.testRangeNumber }}
+  {{- range .Values.port }}
+  portItem: {{ . | quote }}
+  {{- end }}
+  {{- end }}
+  # Fails: String formatting with wrong type
+  {{- if .Values.testPrintfType }}
+  formatted: {{ printf "%s-suffix" .Values.numericId }}
+  {{- end }}

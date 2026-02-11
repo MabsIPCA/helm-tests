@@ -1,0 +1,5 @@
+﻿# Values file for division by zero test
+testDivZero: false
+testModZero: false
+testBothZero: true
+number: 100
