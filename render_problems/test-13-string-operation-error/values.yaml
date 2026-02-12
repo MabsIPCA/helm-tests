@@ -1,10 +1,60 @@
-﻿# Values file for string operation error test
-testSubstrInvalid: false
-testTruncNegative: false
-testAtoiInvalid: false
-testInt64Invalid: false
-testFloat64Invalid: false
-shortString: "hi"
-nonNumeric: "abc"
-invalidNumber: "not-a-number"
-notAFloat: "xyz"
+﻿# Values file for string operation error tests
+
+# Test configuration
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
+
+# Test data - one per type (different error outputs)
+nilValue: null
+stringValue: "Hello World"
+numberValue: 42
+boolValue: true
+listValue: [1, 2, 3]
+dictValue: {"key": "value"}
+
+# Parameters for functions that need int arguments
+negativeInt: -5
+validInt: 4
+
+# Test flags for all string functions
+testPrint: false
+testPrintln: false
+testPrintf: false
+testTrim: false
+testTrimAll: false
+testTrimPrefix: false
+testTrimSuffix: false
+testLower: false
+testUpper: false
+testTitle: false
+testUntitle: false
+testRepeat: false
+testSubstr: false
+testNospace: false
+testTrunc: false
+testAbbrev: false
+testAbbrevboth: false
+testInitials: false
+testRandAlphaNum: false
+testRandAlpha: false
+testRandNumeric: false
+testRandAscii: false
+testWrap: false
+testWrapWith: false
+testContains: false
+testHasPrefix: false
+testHasSuffix: false
+testQuote: false
+testSquote: false
+testCat: false
+testIndent: false
+testNindent: false
+testReplace: false
+testPlural: false
+testSnakecase: false
+testCamelcase: false
+testKebabcase: false
+testSwapcase: false
+testShuffle: false
+testAtoi: false
+testInt64: false
+testFloat64: false

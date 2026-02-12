@@ -1,27 +1,235 @@
-# Test: String operation errors - fails on invalid string operations
+# Test: String operation errors - comprehensive testing of all string functions
+{{- $testData := index .Values .Values.testDataType }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-string-test
 data:
-  # Fails: substr with invalid indices
-  {{- if .Values.testSubstrInvalid }}
-  substring: {{ substr -5 100 .Values.shortString | quote }}
+  # ==========================================
+  # Print functions
+  # ==========================================
+  # Test: print
+  {{- if .Values.testPrint }}
+  printResult: {{ print $testData | quote }}
   {{- end }}
-  # Fails: trunc with negative length
-  {{- if .Values.testTruncNegative }}
-  truncated: {{ trunc -10 .Values.text | quote }}
+  # Test: println
+  {{- if .Values.testPrintln }}
+  printlnResult: {{ println $testData | quote }}
   {{- end }}
-  # Fails: atoi on non-numeric string
-  {{- if .Values.testAtoiInvalid }}
-  converted: {{ atoi .Values.nonNumeric }}
+  # Test: printf
+  {{- if .Values.testPrintf }}
+  printfResult: {{ printf .Values.invalidFormat $testData | quote }}
   {{- end }}
-  # Fails: int64 conversion error
-  {{- if .Values.testInt64Invalid }}
-  int64Value: {{ int64 .Values.invalidNumber }}
+
+  # ==========================================
+  # Trimming functions
+  # ==========================================
+  # Test: trim
+  {{- if .Values.testTrim }}
+  trimResult: {{ trim $testData | quote }}
   {{- end }}
-  # Fails: float64 conversion error
-  {{- if .Values.testFloat64Invalid }}
-  floatValue: {{ float64 .Values.notAFloat }}
+  # Test: trimAll
+  {{- if .Values.testTrimAll }}
+  trimAllResult: {{ trimAll "H" $testData | quote }}
+  {{- end }}
+  # Test: trimPrefix
+  {{- if .Values.testTrimPrefix }}
+  trimPrefixResult: {{ trimPrefix "Hello" $testData | quote }}
+  {{- end }}
+  # Test: trimSuffix
+  {{- if .Values.testTrimSuffix }}
+  trimSuffixResult: {{ trimSuffix "World" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Case functions
+  # ==========================================
+  # Test: lower
+  {{- if .Values.testLower }}
+  lowerResult: {{ lower $testData | quote }}
+  {{- end }}
+  # Test: upper
+  {{- if .Values.testUpper }}
+  upperResult: {{ upper $testData | quote }}
+  {{- end }}
+  # Test: title
+  {{- if .Values.testTitle }}
+  titleResult: {{ title $testData | quote }}
+  {{- end }}
+  # Test: untitle
+  {{- if .Values.testUntitle }}
+  untitleResult: {{ untitle $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # String manipulation functions
+  # ==========================================
+  # Test: repeat
+  {{- if .Values.testRepeat }}
+  repeatResult: {{ repeat .Values.negativeRepeat $testData | quote }}
+  {{- end }}
+  # Test: substr
+  {{- if .Values.testSubstr }}
+  substrResult: {{ substr .Values.negativeStart .Values.invalidEnd $testData | quote }}
+  {{- end }}
+  # Test: nospace
+  {{- if .Values.testNospace }}
+  nospaceResult: {{ nospace $testData | quote }}
+  {{- end }}
+  # Test: trunc
+  {{- if .Values.testTrunc }}
+  truncResult: {{ trunc .Values.negativeTrunc $testData | quote }}
+  {{- end }}
+  # Test: abbrev
+  {{- if .Values.testAbbrev }}
+  abbrevResult: {{ abbrev .Values.shortAbbrevLen $testData | quote }}
+  {{- end }}
+  # Test: abbrevboth
+  {{- if .Values.testAbbrevboth }}
+  abbrevbothResult: {{ abbrevboth .Values.shortAbbrevLen .Values.shortAbbrevLen $testData | quote }}
+  {{- end }}
+  # Test: initials
+  {{- if .Values.testInitials }}
+  initialsResult: {{ initials $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Random string functions
+  # ==========================================
+  # Test: randAlphaNum
+  {{- if .Values.testRandAlphaNum }}
+  randAlphaNumResult: {{ randAlphaNum .Values.negativeRepeat | quote }}
+  {{- end }}
+  # Test: randAlpha
+  {{- if .Values.testRandAlpha }}
+  randAlphaResult: {{ randAlpha .Values.negativeRepeat | quote }}
+  {{- end }}
+  # Test: randNumeric
+  {{- if .Values.testRandNumeric }}
+  randNumericResult: {{ randNumeric .Values.negativeRepeat | quote }}
+  {{- end }}
+  # Test: randAscii
+  {{- if .Values.testRandAscii }}
+  randAsciiResult: {{ randAscii .Values.negativeRepeat | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Wrap functions
+  # ==========================================
+  # Test: wrap
+  {{- if .Values.testWrap }}
+  wrapResult: {{ wrap .Values.negativeWrapWidth $testData | quote }}
+  {{- end }}
+  # Test: wrapWith
+  {{- if .Values.testWrapWith }}
+  wrapWithResult: {{ wrapWith .Values.negativeWrapWidth "\n" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Search/match functions
+  # ==========================================
+  # Test: contains
+  {{- if .Values.testContains }}
+  containsResult: {{ contains "test" $testData | quote }}
+  {{- end }}
+  # Test: hasPrefix
+  {{- if .Values.testHasPrefix }}
+  hasPrefixResult: {{ hasPrefix "Hello" $testData | quote }}
+  {{- end }}
+  # Test: hasSuffix
+  {{- if .Values.testHasSuffix }}
+  hasSuffixResult: {{ hasSuffix "World" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Quoting functions
+  # ==========================================
+  # Test: quote
+  {{- if .Values.testQuote }}
+  quoteResult: {{ quote $testData }}
+  {{- end }}
+  # Test: squote
+  {{- if .Values.testSquote }}
+  squoteResult: {{ squote $testData }}
+  {{- end }}
+
+  # ==========================================
+  # Concatenation
+  # ==========================================
+  # Test: cat
+  {{- if .Values.testCat }}
+  catResult: {{ cat $testData "suffix" | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Indentation functions
+  # ==========================================
+  # Test: indent
+  {{- if .Values.testIndent }}
+  indentResult: {{ indent .Values.negativeIndent $testData | quote }}
+  {{- end }}
+  # Test: nindent
+  {{- if .Values.testNindent }}
+  nindentResult: {{ nindent .Values.negativeIndent $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Replacement
+  # ==========================================
+  # Test: replace
+  {{- if .Values.testReplace }}
+  replaceResult: {{ replace "Hello" "Hi" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Pluralization
+  # ==========================================
+  # Test: plural
+  {{- if .Values.testPlural }}
+  pluralResult: {{ plural "item" "items" .Values.negativeRepeat | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Case conversion functions
+  # ==========================================
+  # Test: snakecase
+  {{- if .Values.testSnakecase }}
+  snakecaseResult: {{ snakecase $testData | quote }}
+  {{- end }}
+  # Test: camelcase
+  {{- if .Values.testCamelcase }}
+  camelcaseResult: {{ camelcase $testData | quote }}
+  {{- end }}
+  # Test: kebabcase
+  {{- if .Values.testKebabcase }}
+  kebabcaseResult: {{ kebabcase $testData | quote }}
+  {{- end }}
+  # Test: swapcase
+  {{- if .Values.testSwapcase }}
+  swapcaseResult: {{ swapcase $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Shuffle
+  # ==========================================
+  # Test: shuffle
+  {{- if .Values.testShuffle }}
+  shuffleResult: {{ shuffle $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Type conversion functions
+  # ==========================================
+  # Test: atoi
+  {{- if .Values.testAtoi }}
+  atoiResult: {{ atoi $testData }}
+  {{- end }}
+  # Test: int64
+  {{- if .Values.testInt64 }}
+  int64Result: {{ int64 $testData }}
+  {{- end }}
+  # Test: float64
+  {{- if .Values.testFloat64 }}
+  float64Result: {{ float64 $testData }}
   {{- end }}
 
