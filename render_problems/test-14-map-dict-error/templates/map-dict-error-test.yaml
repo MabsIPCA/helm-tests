@@ -1,29 +1,111 @@
-# Test: Map/dict operation errors - fails on invalid map operations
+# Test: Map/dict operation errors - comprehensive testing of all dict functions
+{{- $testData := index .Values .Values.testDataType }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Release.Name }}-map-test
+  name: {{ .Release.Name }}-map-dict-test
 data:
-  # Fails: pluck on non-existent keys with required
-  {{- if .Values.testPluckRequired }}
-  {{- $result := pluck "nonExistentKey" .Values.emptyDict }}
-  pluckedValue: {{ required "Key not found" (first $result) }}
+  # ==========================================
+  # Dict creation and manipulation
+  # ==========================================
+  # Test: dict - create a dictionary
+  {{- if .Values.testDict }}
+  dictResult: {{ dict "key1" $testData "key2" "value2" | toJson | quote }}
   {{- end }}
-  # Fails: hasKey on non-map value
-  {{- if .Values.testHasKeyNonMap }}
-  hasKeyResult: {{ hasKey .Values.stringValue "key" }}
+
+  # Test: get - get a value from a dict
+  {{- if .Values.testGet }}
+  getResult: {{ get $testData "key" | quote }}
   {{- end }}
-  # Fails: keys on non-dict
-  {{- if .Values.testKeysNonDict }}
-  keysList: {{ keys .Values.stringValue | toJson }}
+
+  # Test: set - set a value in a dict
+  {{- if .Values.testSet }}
+  {{- $_ := set $testData "newKey" "newValue" }}
+  setResult: {{ $testData | toJson | quote }}
   {{- end }}
-  # Fails: values on non-dict
-  {{- if .Values.testValuesNonDict }}
-  valuesList: {{ values .Values.listValue | toJson }}
+
+  # Test: unset - remove a key from a dict
+  {{- if .Values.testUnset }}
+  {{- $_ := unset $testData "key" }}
+  unsetResult: {{ $testData | toJson | quote }}
   {{- end }}
-  # Fails: merge with non-dict argument
-  {{- if .Values.testMergeNonDict }}
-  {{- $result := merge .Values.dict1 .Values.stringValue }}
-  merged: {{ $result | toJson }}
+
+  # ==========================================
+  # Dict query functions
+  # ==========================================
+  # Test: hasKey - check if key exists
+  {{- if .Values.testHasKey }}
+  hasKeyResult: {{ hasKey $testData "key" | quote }}
+  {{- end }}
+
+  # Test: pluck - extract values from list of dicts
+  # pluck expects variadic dict arguments, so we test with the data directly
+  {{- if .Values.testPluck }}
+  pluckResult: {{ pluck "name" $testData | toJson | quote }}
+  {{- end }}
+
+  # Test: dig - traverse nested dict (tests deep navigation)
+  # dig path... default dict - navigates nested structure
+  {{- if .Values.testDig }}
+  digResult: {{ dig "a" "b" "c" "d" "notfound" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Merge functions
+  # ==========================================
+  # Test: merge - merge dicts (first dict wins)
+  {{- if .Values.testMerge }}
+  mergeResult: {{ merge $testData .Values.dictForMerge | toJson | quote }}
+  {{- end }}
+
+  # Test: mustMerge - merge dicts with error on failure
+  {{- if .Values.testMustMerge }}
+  mustMergeResult: {{ mustMerge $testData .Values.dictForMerge | toJson | quote }}
+  {{- end }}
+
+  # Test: mergeOverwrite - merge dicts (last dict wins)
+  {{- if .Values.testMergeOverwrite }}
+  mergeOverwriteResult: {{ mergeOverwrite $testData .Values.dictForMerge | toJson | quote }}
+  {{- end }}
+
+  # Test: mustMergeOverwrite - merge dicts with error on failure
+  {{- if .Values.testMustMergeOverwrite }}
+  mustMergeOverwriteResult: {{ mustMergeOverwrite $testData .Values.dictForMerge | toJson | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Dict extraction functions
+  # ==========================================
+  # Test: keys - get all keys from dict
+  {{- if .Values.testKeys }}
+  keysResult: {{ keys $testData | toJson | quote }}
+  {{- end }}
+
+  # Test: pick - create dict with only specified keys
+  {{- if .Values.testPick }}
+  pickResult: {{ pick $testData "key" "name" "a" "stringKey" | toJson | quote }}
+  {{- end }}
+
+  # Test: omit - create dict without specified keys
+  {{- if .Values.testOmit }}
+  omitResult: {{ omit $testData "key" "name" | toJson | quote }}
+  {{- end }}
+
+  # Test: values - get all values from dict
+  {{- if .Values.testValues }}
+  valuesResult: {{ values $testData | toJson | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Copy functions
+  # ==========================================
+  # Test: deepCopy - deep copy a dict
+  {{- if .Values.testDeepCopy }}
+  deepCopyResult: {{ deepCopy $testData | toJson | quote }}
+  {{- end }}
+
+  # Test: mustDeepCopy - deep copy with error on failure
+  {{- if .Values.testMustDeepCopy }}
+  mustDeepCopyResult: {{ mustDeepCopy $testData | toJson | quote }}
   {{- end }}
 

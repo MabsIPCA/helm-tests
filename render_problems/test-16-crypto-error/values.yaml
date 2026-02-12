@@ -1,14 +1,88 @@
-﻿# Values file for crypto error test
-testBase64DecodeInvalid: false
-testGenPrivateKeyInvalid: false
-testEncryptAESInvalid: false
-testDecryptAESInvalid: false
-testDerivePasswordInvalid: false
-invalidBase64: "not!!!base64"
-shortKey: "short"
-data: "data"
-aesKey: "1234567890123456"
-invalidEncryptedData: "invalid"
-password: "pass"
-user: "user"
-site: "site"
+# Values file for crypto error test
+testDataType: nilValue
+
+# ==================================================
+# Basic data types
+# ==================================================
+nilValue: null
+stringValue: "Hello World"
+numberValue: 42
+boolValue: true
+listValue: [1, 2, 3]
+dictValue:
+  key: value
+
+# ==================================================
+# Valid strings for hashing
+# ==================================================
+hashInput: "test data"
+emptyString: ""
+
+# ==================================================
+# AES Keys (must be 16, 24, or 32 bytes)
+# ==================================================
+aesKey16: "1234567890123456"
+aesKey24: "123456789012345678901234"
+aesKey32: "12345678901234567890123456789012"
+aesKeyShort: "short"
+aesKeyWrong: "12345678901234567"
+
+# ==================================================
+# Private key types
+# ==================================================
+keyTypeRSA: "rsa"
+keyTypeDSA: "dsa"
+keyTypeECDSA: "ecdsa"
+keyTypeED25519: "ed25519"
+keyTypeInvalid: "invalid-type"
+
+# ==================================================
+# Password/htpasswd parameters
+# ==================================================
+password: "mypassword"
+user: "testuser"
+site: "example.com"
+
+# ==================================================
+# Certificate parameters
+# ==================================================
+certCN: "example.com"
+certDays: 365
+certOrg: "Test Org"
+certIPs:
+  - "127.0.0.1"
+certDomains:
+  - "example.com"
+  - "www.example.com"
+
+# ==================================================
+# Numeric values
+# ==================================================
+bytesCount16: 16
+bytesCount32: 32
+numZero: 0
+numNegative: -1
+
+# ==================================================
+# Encrypted data for decryption tests
+# ==================================================
+encryptedData: "c2VjcmV0IGRhdGE="
+plaintextData: "secret data"
+
+# ==================================================
+# Test flags for all crypto functions
+# ==================================================
+testSha1sum: false
+testSha256sum: false
+testAdler32sum: false
+testHtpasswd: false
+testRandBytes: false
+testDerivePassword: false
+testGenPrivateKey: false
+testBuildCustomCert: false
+testGenCA: false
+testGenSelfSignedCert: false
+testGenSignedCert: false
+testEncryptAES: false
+testDecryptAES: false
+

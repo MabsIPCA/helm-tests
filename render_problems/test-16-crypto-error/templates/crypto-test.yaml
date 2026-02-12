@@ -1,0 +1,64 @@
+{{- $testData := index .Values .Values.testDataType }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-crypto-test
+data:
+  {{- if .Values.testSha1sum }}
+  sha1sumResult: {{ sha1sum $testData | quote }}
+  {{- end }}
+
+  {{- if .Values.testSha256sum }}
+  sha256sumResult: {{ sha256sum $testData | quote }}
+  {{- end }}
+
+  {{- if .Values.testAdler32sum }}
+  adler32sumResult: {{ adler32sum $testData | quote }}
+  {{- end }}
+
+  {{- if .Values.testHtpasswd }}
+  htpasswdResult: {{ htpasswd .Values.user $testData | quote }}
+  {{- end }}
+
+  {{- if .Values.testRandBytes }}
+  randBytesResult: {{ randBytes $testData | quote }}
+  {{- end }}
+
+  {{- if .Values.testDerivePassword }}
+  derivePasswordResult: {{ derivePassword 1 "long" $testData .Values.user .Values.site | quote }}
+  {{- end }}
+
+  {{- if .Values.testGenPrivateKey }}
+  genPrivateKeyResult: {{ genPrivateKey $testData | quote }}
+  {{- end }}
+
+  {{- if .Values.testBuildCustomCert }}
+  {{- $ca := genCA "Test CA" 365 }}
+  buildCustomCertResult: {{ buildCustomCert $testData ($ca.Key | b64enc) | quote }}
+  {{- end }}
+
+  {{- if .Values.testGenCA }}
+  genCAResult: {{ genCA $testData 365 | quote }}
+  {{- end }}
+
+  {{- if .Values.testGenSelfSignedCert }}
+  {{- $cert := genSelfSignedCert $testData .Values.certIPs .Values.certDomains 365 }}
+  genSelfSignedCertResult: {{ $cert.Cert | quote }}
+  {{- end }}
+
+  {{- if .Values.testGenSignedCert }}
+  {{- $ca := genCA "Test CA" 365 }}
+  {{- $cert := genSignedCert $testData .Values.certIPs .Values.certDomains 365 $ca }}
+  genSignedCertResult: {{ $cert.Cert | quote }}
+  {{- end }}
+
+  {{- if .Values.testEncryptAES }}
+  encryptAESResult: {{ encryptAES $testData .Values.plaintextData | quote }}
+  {{- end }}
+
+  {{- if .Values.testDecryptAES }}
+  decryptAESResult: {{ decryptAES $testData .Values.encryptedData | quote }}
+  {{- end }}
+
+
+

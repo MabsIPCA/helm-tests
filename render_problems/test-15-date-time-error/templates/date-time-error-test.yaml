@@ -1,27 +1,138 @@
-# Test: Date/time operation errors - fails on invalid date operations
+# Test: Date/time operation errors - comprehensive testing of all date/time functions
+{{- $testData := index .Values .Values.testDataType }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-datetime-test
 data:
-  # Fails: Invalid date format string
-  {{- if .Values.testInvalidDateFormat }}
-  formattedDate: {{ dateInZone "invalid-format-string" (now) "UTC" | quote }}
+  # ==========================================
+  # Current time functions
+  # ==========================================
+  # Test: now - returns current time
+  {{- if .Values.testNow }}
+  nowResult: {{ now | date "2006-01-02T15:04:05Z07:00" | quote }}
   {{- end }}
-  # Fails: Invalid timezone
-  {{- if .Values.testInvalidTimezone }}
-  zonedDate: {{ dateInZone "2006-01-02" (now) "Invalid/Timezone" | quote }}
+
+  # Test: ago - returns duration since time
+  {{- if .Values.testAgo }}
+  agoResult: {{ ago $testData | quote }}
   {{- end }}
-  # Fails: toDate with invalid date string
-  {{- if .Values.testToDateInvalid }}
-  parsedDate: {{ toDate "2006-01-02" .Values.invalidDateString }}
+
+  # ==========================================
+  # Date formatting functions
+  # ==========================================
+  # Test: date - format a date
+  {{- if .Values.testDate }}
+  dateResult: {{ date "2006-01-02" $testData | quote }}
   {{- end }}
-  # Fails: dateModify with invalid duration
-  {{- if .Values.testDateModifyInvalid }}
-  modifiedDate: {{ dateModify "invalid-duration" (now) | quote }}
+
+  # Test: dateInZone - format a date in a specific timezone
+  {{- if .Values.testDateInZone }}
+  dateInZoneResult: {{ dateInZone "2006-01-02 15:04:05" $testData "UTC" | quote }}
   {{- end }}
-  # Fails: durationRound with invalid duration
-  {{- if .Values.testDurationInvalid }}
-  duration: {{ durationRound .Values.invalidDuration }}
+
+  # ==========================================
+  # Duration functions
+  # ==========================================
+  # Test: duration - parse a duration string
+  {{- if .Values.testDuration }}
+  durationResult: {{ duration $testData | quote }}
   {{- end }}
+
+  # Test: durationRound - round a duration
+  {{- if .Values.testDurationRound }}
+  durationRoundResult: {{ durationRound $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Unix epoch functions
+  # ==========================================
+  # Test: unixEpoch - convert time to unix epoch
+  {{- if .Values.testUnixEpoch }}
+  unixEpochResult: {{ unixEpoch $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Date modification functions
+  # ==========================================
+  # Test: dateModify - modify a date by a duration
+  {{- if .Values.testDateModify }}
+  dateModifyResult: {{ dateModify "1h" $testData | quote }}
+  {{- end }}
+
+  # Test: mustDateModify - modify a date with error on failure
+  {{- if .Values.testMustDateModify }}
+  mustDateModifyResult: {{ mustDateModify "1h" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # HTML date functions
+  # ==========================================
+  # Test: htmlDate - format date for HTML date input
+  {{- if .Values.testHtmlDate }}
+  htmlDateResult: {{ htmlDate $testData | quote }}
+  {{- end }}
+
+  # Test: htmlDateInZone - format date for HTML in specific timezone
+  {{- if .Values.testHtmlDateInZone }}
+  htmlDateInZoneResult: {{ htmlDateInZone $testData "UTC" | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Date parsing functions
+  # ==========================================
+  # Test: toDate - parse a string to date
+  {{- if .Values.testToDate }}
+  toDateResult: {{ toDate "2006-01-02" $testData | quote }}
+  {{- end }}
+
+  # Test: mustToDate - parse with error on failure
+  {{- if .Values.testMustToDate }}
+  mustToDateResult: {{ mustToDate "2006-01-02" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Additional edge case tests
+  # ==========================================
+
+  # Test: dateInZone with invalid timezone
+  {{- if .Values.testDateInZoneInvalidTZ }}
+  dateInZoneInvalidTZ: {{ dateInZone "2006-01-02 15:04:05" (now) .Values.tzInvalid | quote }}
+  {{- end }}
+
+  # Test: htmlDateInZone with invalid timezone
+  {{- if .Values.testHtmlDateInZoneInvalidTZ }}
+  htmlDateInZoneInvalidTZ: {{ htmlDateInZone (now) .Values.tzInvalid | quote }}
+  {{- end }}
+
+  # Test: dateModify with invalid duration
+  {{- if .Values.testDateModifyInvalidDuration }}
+  dateModifyInvalidDuration: {{ dateModify .Values.durationInvalid (now) | quote }}
+  {{- end }}
+
+  # Test: mustDateModify with invalid duration (should fail)
+  {{- if .Values.testMustDateModifyInvalidDuration }}
+  mustDateModifyInvalidDuration: {{ mustDateModify .Values.durationInvalid (now) | quote }}
+  {{- end }}
+
+  # Test: toDate with wrong format
+  {{- if .Values.testToDateWrongFormat }}
+  toDateWrongFormat: {{ toDate "Jan 2, 2006" .Values.dateISO8601 | quote }}
+  {{- end }}
+
+  # Test: mustToDate with wrong format (should fail)
+  {{- if .Values.testMustToDateWrongFormat }}
+  mustToDateWrongFormat: {{ mustToDate "Jan 2, 2006" .Values.dateISO8601 | quote }}
+  {{- end }}
+
+  # Test: ago with now (edge case - very small duration)
+  {{- if .Values.testAgoWithNow }}
+  agoWithNow: {{ ago (now) | quote }}
+  {{- end }}
+
+  # Test: unixEpoch with now
+  {{- if .Values.testUnixEpochWithNow }}
+  unixEpochWithNow: {{ unixEpoch (now) | quote }}
+  {{- end }}
+
 

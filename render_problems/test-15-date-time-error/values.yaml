@@ -1,8 +1,129 @@
-﻿# Values file for date/time error test
-testInvalidDateFormat: false
-testInvalidTimezone: false
-testToDateInvalid: false
-testDateModifyInvalid: false
-testDurationInvalid: false
-invalidDateString: "not-a-date"
-invalidDuration: "invalid"
+﻿# Values file for date/time operation error tests
+
+# Test configuration
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
+
+# ==================================================
+# Basic data types (non-date)
+# ==================================================
+nilValue: null
+stringValue: "Hello World"
+numberValue: 42
+boolValue: true
+listValue: [1, 2, 3]
+dictValue:
+  key: value
+
+# ==================================================
+# Valid date/time strings (various formats)
+# ==================================================
+
+# ISO 8601 / RFC 3339 formats
+dateISO8601: "2026-02-12T15:04:05Z"
+dateISO8601WithTZ: "2026-02-12T15:04:05+01:00"
+dateISO8601NoTime: "2026-02-12"
+
+# RFC 2822 format (email date format)
+dateRFC2822: "Thu, 12 Feb 2026 15:04:05 +0000"
+
+# Common date formats
+dateSlash: "02/12/2026"
+dateDash: "02-12-2026"
+dateUS: "February 12, 2026"
+dateEU: "12 February 2026"
+
+# Unix timestamps
+dateUnixString: "1770811445"
+dateUnixInt: 1770811445
+
+# Time only formats
+timeOnly: "15:04:05"
+timeWithMicros: "15:04:05.000000"
+
+# Partial/incomplete dates
+dateYearMonth: "2026-02"
+dateYearOnly: "2026"
+
+# ==================================================
+# Invalid date strings (for error testing)
+# ==================================================
+dateInvalidFormat: "not-a-date"
+dateInvalidMonth: "2026-13-01"
+dateInvalidDay: "2026-02-30"
+dateEmpty: ""
+dateGarbage: "xyz123!@#"
+
+# ==================================================
+# Duration strings
+# ==================================================
+
+# Valid durations
+durationValid: "1h30m"
+durationSeconds: "3600s"
+durationMinutes: "90m"
+durationHours: "24h"
+durationComplex: "2h45m30s"
+durationNegative: "-1h"
+durationMillis: "500ms"
+durationMicros: "1000us"
+durationNanos: "1000000ns"
+
+# Invalid durations
+durationInvalid: "invalid"
+durationBadUnit: "10x"
+durationEmpty: ""
+
+# ==================================================
+# Timezone strings
+# ==================================================
+tzUTC: "UTC"
+tzNewYork: "America/New_York"
+tzLondon: "Europe/London"
+tzTokyo: "Asia/Tokyo"
+tzInvalid: "Invalid/Timezone"
+tzEmpty: ""
+
+# ==================================================
+# Date format strings (Go reference time: Mon Jan 2 15:04:05 MST 2006)
+# ==================================================
+formatISO8601: "2006-01-02T15:04:05Z07:00"
+formatDateOnly: "2006-01-02"
+formatTimeOnly: "15:04:05"
+formatDateTime: "2006-01-02 15:04:05"
+formatUS: "January 2, 2006"
+formatEU: "2 January 2006"
+formatRFC822: "02 Jan 06 15:04 MST"
+formatRFC850: "Monday, 02-Jan-06 15:04:05 MST"
+formatRFC1123: "Mon, 02 Jan 2006 15:04:05 MST"
+formatRFC3339: "2006-01-02T15:04:05Z07:00"
+formatKitchen: "3:04PM"
+formatStamp: "Jan _2 15:04:05"
+formatInvalid: "not-a-format"
+
+# ==================================================
+# Test flags for all date/time functions
+# ==================================================
+testNow: false
+testAgo: false
+testDate: false
+testDateInZone: false
+testDuration: false
+testDurationRound: false
+testUnixEpoch: false
+testDateModify: false
+testMustDateModify: false
+testHtmlDate: false
+testHtmlDateInZone: false
+testToDate: false
+testMustToDate: false
+
+# Additional edge case test flags
+testDateInZoneInvalidTZ: false
+testHtmlDateInZoneInvalidTZ: false
+testDateModifyInvalidDuration: false
+testMustDateModifyInvalidDuration: false
+testToDateWrongFormat: false
+testMustToDateWrongFormat: false
+testAgoWithNow: false
+testUnixEpochWithNow: false
+

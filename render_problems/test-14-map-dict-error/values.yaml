@@ -1,10 +1,153 @@
-﻿# Values file for map/dict error test
-testPluckRequired: false
-testHasKeyNonMap: false
-testKeysNonDict: false
-testValuesNonDict: false
-testMergeNonDict: false
-emptyDict: {}
-dict1:
-  key: value
+﻿# Values file for map/dict operation error tests
+
+# Test configuration
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
+
+# ==================================================
+# Basic data types (non-dict)
+# ==================================================
+nilValue: null
+stringValue: "Hello World"
+numberValue: 42
+boolValue: true
 listValue: [1, 2, 3]
+
+# ==================================================
+# Dictionary types (various complexities)
+# ==================================================
+
+# Simple flat dictionary
+dictSimple:
+  key: value
+  name: test
+
+# Empty dictionary
+dictEmpty: {}
+
+# Nested dictionary (2 levels)
+dictNested:
+  level1:
+    level2: deepValue
+    another: data
+  topKey: topValue
+
+# Deeply nested dictionary (4 levels)
+dictDeepNested:
+  a:
+    b:
+      c:
+        d: deepest
+        value: found
+      shallow: here
+    mid: level
+  root: value
+
+# Dictionary with mixed value types
+dictMixedTypes:
+  stringKey: "hello"
+  numberKey: 123
+  boolKey: true
+  nullKey: null
+  listKey: [1, 2, 3]
+  nestedKey:
+    inner: value
+
+# Dictionary with list of dicts (for pluck testing)
+dictWithListOfDicts:
+  items:
+    - name: item1
+      value: 100
+    - name: item2
+      value: 200
+    - name: item3
+      value: 300
+
+# Dictionary with special characters in keys
+dictSpecialKeys:
+  "key-with-dash": value1
+  "key.with.dots": value2
+  "key_with_underscore": value3
+  "key with spaces": value4
+
+# Dictionary with numeric-like keys
+dictNumericKeys:
+  "1": first
+  "2": second
+  "100": hundredth
+
+# Large flat dictionary (many keys)
+dictLargeFlat:
+  key1: value1
+  key2: value2
+  key3: value3
+  key4: value4
+  key5: value5
+  key6: value6
+  key7: value7
+  key8: value8
+  key9: value9
+  key10: value10
+
+# Dictionary for merge testing (overlapping keys)
+dictForMerge:
+  shared: fromMergeDict
+  unique2: onlyInMerge
+  nested:
+    sharedNested: fromMerge
+
+# Reference dict for merge operations
+dictValue:
+  key: value
+  shared: fromOriginal
+  unique1: onlyInOriginal
+  nested:
+    level2: deepValue
+    sharedNested: fromOriginal
+
+# ==================================================
+# List types for edge case testing
+# ==================================================
+
+# List of dictionaries (for pluck)
+listOfDicts:
+  - name: alice
+    age: 30
+    city: NYC
+  - name: bob
+    age: 25
+    city: LA
+  - name: charlie
+    age: 35
+    city: Chicago
+
+# Empty list
+listEmpty: []
+
+# List with mixed types
+listMixed:
+  - "string"
+  - 123
+  - true
+  - null
+  - key: value
+
+# ==================================================
+# Test flags for all dict functions
+# ==================================================
+testDict: false
+testGet: false
+testSet: false
+testUnset: false
+testHasKey: false
+testPluck: false
+testDig: false
+testMerge: false
+testMustMerge: false
+testMergeOverwrite: false
+testMustMergeOverwrite: false
+testKeys: false
+testPick: false
+testOmit: false
+testValues: false
+testDeepCopy: false
+testMustDeepCopy: false

@@ -1,0 +1,53 @@
+{
+  "testNumber": 14,
+  "testName": "Map/Dict Operation Errors",
+  "chartName": "test-dict",
+  "testFunctions": [
+    {"name": "testDict", "func": "dict"},
+    {"name": "testGet", "func": "get"},
+    {"name": "testSet", "func": "set"},
+    {"name": "testUnset", "func": "unset"},
+    {"name": "testHasKey", "func": "hasKey"},
+    {"name": "testPluck", "func": "pluck"},
+    {"name": "testDig", "func": "dig"},
+    {"name": "testMerge", "func": "merge"},
+    {"name": "testMustMerge", "func": "mustMerge"},
+    {"name": "testMergeOverwrite", "func": "mergeOverwrite"},
+    {"name": "testMustMergeOverwrite", "func": "mustMergeOverwrite"},
+    {"name": "testKeys", "func": "keys"},
+    {"name": "testPick", "func": "pick"},
+    {"name": "testOmit", "func": "omit"},
+    {"name": "testValues", "func": "values"},
+    {"name": "testDeepCopy", "func": "deepCopy"},
+    {"name": "testMustDeepCopy", "func": "mustDeepCopy"}
+  ],
+  "dataTypes": [
+    "nilValue",
+    "stringValue",
+    "numberValue",
+    "boolValue",
+    "listValue",
+    "dictSimple",
+    "dictEmpty",
+    "dictNested",
+    "dictDeepNested",
+    "dictMixedTypes",
+    "dictWithListOfDicts",
+    "dictSpecialKeys",
+    "dictNumericKeys",
+    "dictLargeFlat",
+    "dictForMerge",
+    "dictValue",
+    "listOfDicts",
+    "listEmpty",
+    "listMixed"
+  ],
+  "errorPatterns": [
+    "wrong type[^;]*; expected [^;]+; got [^\\s]+",
+    "invalid value[^;]*; expected [^\\s]+",
+    "error calling \\w+: [^\\n]+",
+    "cannot .+ type [^\\s]+",
+    "expected .+, got .+"
+  ]
+}
+
