@@ -1,16 +1,30 @@
-﻿# Values file for invalid regex test
-testRegexMatch: false # pass, invalid regex is ignored
-testMustRegexMatch: false # fail due to invalid regex
-testRegexFindAll: false # fail due to invalid regex
-testMustRegexFindAll: false # fail due to invalid regex
-testRegexFind: false # fail due to invalid regex
-testMustRegexFind: false # fail due to invalid regex
-testRegexReplaceAll: false # fail due to invalid regex
-testMustRegexReplaceAll: false # fail due to invalid regex
-testRegexReplaceAllLiteral: false # fail due to invalid regex
-testMustRegexReplaceAllLiteral: false # fail due to invalid regex
-testRegexSplit: false  # fail due to invalid regex
-testMustRegexSplit: false  # fail due to invalid regex
+﻿# Values file for regex operation error tests
 
-inputString: "test123"
-text: "sample text"
+# Test configuration
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
+
+# Test data - one per type
+nilValue: null
+stringValue: "test123 sample text"
+numberValue: 42
+boolValue: true
+listValue: [1, 2, 3]
+dictValue: {"key": "value"}
+
+# Valid regex pattern for testing type errors
+validPattern: "[a-z]+"
+replacement: "REPLACED"
+
+# Test flags for all regex functions
+testRegexMatch: false
+testMustRegexMatch: false
+testRegexFindAll: false
+testMustRegexFindAll: false
+testRegexFind: false
+testMustRegexFind: false
+testRegexReplaceAll: false
+testMustRegexReplaceAll: false
+testRegexReplaceAllLiteral: false
+testMustRegexReplaceAllLiteral: false
+testRegexSplit: false
+testMustRegexSplit: false

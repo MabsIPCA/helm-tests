@@ -1,56 +1,75 @@
-# Test 12: List Operation Errors - Test Results
+# Test 12: List Operation Errors
 
-## Summary Table
+**Generated:** 2026-02-13 00:56:56
 
-| Function | Result | Error Type | Description |
-|----------|--------|------------|-------------|
-| `first` | ❌ FAIL | `nil pointer dereference` | Fails when called on nil list |
-| `mustFirst` | ❌ FAIL | `nil pointer dereference` | Fails when called on nil list |
-| `rest` | ✅ PASS | - | Returns empty list [] on empty/nil list |
-| `mustRest` | ✅ PASS | - | Returns empty list [] on empty/nil list |
-| `last` | ✅ PASS | - | Returns empty string on empty/nil list |
-| `mustLast` | ✅ PASS | - | Returns empty string on empty/nil list |
-| `initial` | ✅ PASS | - | Returns empty list [] on empty/nil list |
-| `mustInitial` | ✅ PASS | - | Returns empty list [] on empty/nil list |
-| `append` | ❌ FAIL | `Cannot push on type string` | Fails when called on non-list (string) |
-| `mustAppend` | ❌ FAIL | `Cannot push on type string` | Fails when called on non-list (string) |
-| `prepend` | ❌ FAIL | `Cannot prepend on type string` | Fails when called on non-list (string) |
-| `mustPrepend` | ❌ FAIL | `Cannot prepend on type string` | Fails when called on non-list (string) |
-| `concat` | ❌ FAIL | `Cannot concat type string as list` | Fails when trying to concat non-list |
-| `reverse` | ❌ FAIL | `Cannot find reverse on type string` | Fails when called on non-list (string) |
-| `mustReverse` | ❌ FAIL | `Cannot find reverse on type string` | Fails when called on non-list (string) |
-| `uniq` | ❌ FAIL | `Cannot find uniq on type string` | Fails when called on non-list (string) |
-| `mustUniq` | ❌ FAIL | `Cannot find uniq on type string` | Fails when called on non-list (string) |
-| `without` | ❌ FAIL | `Cannot find without on type string` | Fails when called on non-list (string) |
-| `mustWithout` | ❌ FAIL | `Cannot find without on type string` | Fails when called on non-list (string) |
-| `has` | ❌ FAIL | `Cannot find has on type string` | Fails when called on non-list (string) |
-| `mustHas` | ❌ FAIL | `Cannot find has on type string` | Fails when called on non-list (string) |
-| `compact` | ❌ FAIL | `Cannot compact on type string` | Fails when called on non-list (string) |
-| `mustCompact` | ❌ FAIL | `Cannot compact on type string` | Fails when called on non-list (string) |
-| `index` | ❌ FAIL | `index out of range` | Fails when index exceeds list bounds |
-| `slice` | ❌ FAIL | `slice index out of bounds` | Fails when slice range exceeds list bounds |
-| `mustSlice` | ❌ FAIL | `slice index out of bounds` | Fails when slice range exceeds list bounds |
-| `until` | ❌ FAIL | `wrong type; expected int; got float64` | Fails with wrong type (needs int literal) |
-| `untilStep` | ✅ PASS | - | Does not fail with zero step (returns empty list) |
-| `seq` | ❌ FAIL | `wrong type; expected int; got string` | Fails when given string instead of int |
-| `chunk` | ❌ FAIL | `wrong type; expected int; got float64` | Fails with wrong type (needs int literal) |
+**Total:** 180 | **Passed:** 29 (16.1%) | **Failed:** 151 (83.9%)
 
-## Key Findings
+## Test Matrix
 
-### Functions that DON'T fail (unexpectedly):
-- `rest` and `mustRest` - return empty list on nil/empty lists
-- `last` and `mustLast` - return empty string on nil/empty lists  
-- `initial` and `mustInitial` - return empty list on nil/empty lists
-- `untilStep` - returns empty list with zero step instead of failing
+| Function | nilValue | stringValue | numberValue | boolValue | listValue | dictValue |
+|----------|------|------|------|------|------|------|
+| `first` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustFirst` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `rest` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustRest` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `last` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustLast` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `initial` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustInitial` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `append` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustAppend` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `prepend` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustPrepend` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `concat` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `reverse` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustReverse` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `uniq` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustUniq` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `without` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustWithout` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `has` | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustHas` | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `compact` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustCompact` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `index` | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ |
+| `slice` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `mustSlice` | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| `until` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| `untilStep` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| `seq` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| `chunk` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
-### Functions that FAIL with nil lists:
-- `first`, `mustFirst` - nil pointer dereference
+## Failure Details
 
-### Functions that FAIL with non-list types (string):
-- All append, prepend, concat, reverse, uniq, without, has, compact functions
-
-### Functions that FAIL with index/range errors:
-- `index`, `slice`, `mustSlice`
-
-### Functions that FAIL with type errors:
-- `until`, `seq`, `chunk` - require int literals, fail with float64 or string
+| Function | nilValue | stringValue | numberValue | boolValue | listValue | dictValue |
+|----------|------|------|------|------|------|------|
+| `first` | error calling first: runtime error: invalid memory address o... | error calling first: Cannot find first on type string | error calling first: Cannot find first on type float64 | error calling first: Cannot find first on type bool | - | error calling first: Cannot find first on type map |
+| `mustFirst` | error calling mustFirst: runtime error: invalid memory addre... | error calling mustFirst: Cannot find first on type string | error calling mustFirst: Cannot find first on type float64 | error calling mustFirst: Cannot find first on type bool | - | error calling mustFirst: Cannot find first on type map |
+| `rest` | error calling rest: runtime error: invalid memory address or... | error calling rest: Cannot find rest on type string | error calling rest: Cannot find rest on type float64 | error calling rest: Cannot find rest on type bool | - | error calling rest: Cannot find rest on type map |
+| `mustRest` | error calling mustRest: runtime error: invalid memory addres... | error calling mustRest: Cannot find rest on type string | error calling mustRest: Cannot find rest on type float64 | error calling mustRest: Cannot find rest on type bool | - | error calling mustRest: Cannot find rest on type map |
+| `last` | error calling last: runtime error: invalid memory address or... | error calling last: Cannot find last on type string | error calling last: Cannot find last on type float64 | error calling last: Cannot find last on type bool | - | error calling last: Cannot find last on type map |
+| `mustLast` | error calling mustLast: runtime error: invalid memory addres... | error calling mustLast: Cannot find last on type string | error calling mustLast: Cannot find last on type float64 | error calling mustLast: Cannot find last on type bool | - | error calling mustLast: Cannot find last on type map |
+| `initial` | error calling initial: runtime error: invalid memory address... | error calling initial: Cannot find initial on type string | error calling initial: Cannot find initial on type float64 | error calling initial: Cannot find initial on type bool | - | error calling initial: Cannot find initial on type map |
+| `mustInitial` | error calling mustInitial: runtime error: invalid memory add... | error calling mustInitial: Cannot find initial on type strin... | error calling mustInitial: Cannot find initial on type float... | error calling mustInitial: Cannot find initial on type bool | - | error calling mustInitial: Cannot find initial on type map |
+| `append` | error calling append: runtime error: invalid memory address ... | error calling append: Cannot push on type string | error calling append: Cannot push on type float64 | error calling append: Cannot push on type bool | - | error calling append: Cannot push on type map |
+| `mustAppend` | error calling mustAppend: runtime error: invalid memory addr... | error calling mustAppend: Cannot push on type string | error calling mustAppend: Cannot push on type float64 | error calling mustAppend: Cannot push on type bool | - | error calling mustAppend: Cannot push on type map |
+| `prepend` | error calling prepend: runtime error: invalid memory address... | error calling prepend: Cannot prepend on type string | error calling prepend: Cannot prepend on type float64 | error calling prepend: Cannot prepend on type bool | - | error calling prepend: Cannot prepend on type map |
+| `mustPrepend` | error calling mustPrepend: runtime error: invalid memory add... | error calling mustPrepend: Cannot prepend on type string | error calling mustPrepend: Cannot prepend on type float64 | error calling mustPrepend: Cannot prepend on type bool | - | error calling mustPrepend: Cannot prepend on type map |
+| `concat` | error calling concat: runtime error: invalid memory address ... | error calling concat: Cannot concat type string as list | error calling concat: Cannot concat type float64 as list | error calling concat: Cannot concat type bool as list | - | error calling concat: Cannot concat type map as list |
+| `reverse` | error calling reverse: runtime error: invalid memory address... | error calling reverse: Cannot find reverse on type string | error calling reverse: Cannot find reverse on type float64 | error calling reverse: Cannot find reverse on type bool | - | error calling reverse: Cannot find reverse on type map |
+| `mustReverse` | error calling mustReverse: runtime error: invalid memory add... | error calling mustReverse: Cannot find reverse on type strin... | error calling mustReverse: Cannot find reverse on type float... | error calling mustReverse: Cannot find reverse on type bool | - | error calling mustReverse: Cannot find reverse on type map |
+| `uniq` | error calling uniq: runtime error: invalid memory address or... | error calling uniq: Cannot find uniq on type string | error calling uniq: Cannot find uniq on type float64 | error calling uniq: Cannot find uniq on type bool | - | error calling uniq: Cannot find uniq on type map |
+| `mustUniq` | error calling mustUniq: runtime error: invalid memory addres... | error calling mustUniq: Cannot find uniq on type string | error calling mustUniq: Cannot find uniq on type float64 | error calling mustUniq: Cannot find uniq on type bool | - | error calling mustUniq: Cannot find uniq on type map |
+| `without` | error calling without: runtime error: invalid memory address... | error calling without: Cannot find without on type string | error calling without: Cannot find without on type float64 | error calling without: Cannot find without on type bool | - | error calling without: Cannot find without on type map |
+| `mustWithout` | error calling mustWithout: runtime error: invalid memory add... | error calling mustWithout: Cannot find without on type strin... | error calling mustWithout: Cannot find without on type float... | error calling mustWithout: Cannot find without on type bool | - | error calling mustWithout: Cannot find without on type map |
+| `has` | - | error calling has: Cannot find has on type string | error calling has: Cannot find has on type float64 | error calling has: Cannot find has on type bool | - | error calling has: Cannot find has on type map |
+| `mustHas` | - | error calling mustHas: Cannot find has on type string | error calling mustHas: Cannot find has on type float64 | error calling mustHas: Cannot find has on type bool | - | error calling mustHas: Cannot find has on type map |
+| `compact` | error calling compact: runtime error: invalid memory address... | error calling compact: Cannot compact on type string | error calling compact: Cannot compact on type float64 | error calling compact: Cannot compact on type bool | - | error calling compact: Cannot compact on type map |
+| `mustCompact` | error calling mustCompact: runtime error: invalid memory add... | error calling mustCompact: Cannot compact on type string | error calling mustCompact: Cannot compact on type float64 | error calling mustCompact: Cannot compact on type bool | - | error calling mustCompact: Cannot compact on type map |
+| `index` | error calling index: index of untyped nil | - | error calling index: can't index item of type float64 | error calling index: can't index item of type bool | - | error calling index: value has type int; should be string |
+| `slice` | error calling slice: runtime error: invalid memory address o... | error calling slice: list should be type of slice or array b... | error calling slice: list should be type of slice or array b... | error calling slice: list should be type of slice or array b... | - | error calling slice: list should be type of slice or array b... |
+| `mustSlice` | error calling mustSlice: runtime error: invalid memory addre... | error calling mustSlice: list should be type of slice or arr... | error calling mustSlice: list should be type of slice or arr... | error calling mustSlice: list should be type of slice or arr... | - | error calling mustSlice: list should be type of slice or arr... |
+| `until` | invalid value; expected int | wrong type for value; expected int; got string | wrong type for value; expected int; got float64 | wrong type for value; expected int; got bool | wrong type for value; expected int; got []interface | wrong type for value; expected int; got map[string]interface |
+| `untilStep` | invalid value; expected int | wrong type for value; expected int; got string | wrong type for value; expected int; got float64 | wrong type for value; expected int; got bool | wrong type for value; expected int; got []interface | wrong type for value; expected int; got map[string]interface |
+| `seq` | invalid value; expected int | wrong type for value; expected int; got string | wrong type for value; expected int; got float64 | wrong type for value; expected int; got bool | wrong type for value; expected int; got []interface | wrong type for value; expected int; got map[string]interface |
+| `chunk` | invalid value; expected int | wrong type for value; expected int; got string | wrong type for value; expected int; got float64 | wrong type for value; expected int; got bool | wrong type for value; expected int; got []interface | wrong type for value; expected int; got map[string]interface |

@@ -1,0 +1,18 @@
+# Values file for URL function error tests
+
+# Test configuration
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
+
+# Test data - one per type
+nilValue: null
+stringValue: "https://example.com/path"
+numberValue: 42
+boolValue: true
+listValue: [1, 2, 3]
+dictValue: {"key": "value"}
+
+# Test flags for URL functions
+testUrlParse: false
+testUrlJoin: false
+testUrlquery: false
+

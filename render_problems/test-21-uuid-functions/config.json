@@ -1,0 +1,14 @@
+{
+  "testNumber": 21,
+  "testName": "UUID Function Errors",
+  "chartName": "test-uuid",
+  "testFunctions": [
+    {"name": "testUuidv4", "func": "uuidv4"}
+  ],
+  "dataTypes": [
+    "default"
+  ],
+  "errorPatterns": [
+    "error calling \\w+: [^\\n]+"
+  ]
+}

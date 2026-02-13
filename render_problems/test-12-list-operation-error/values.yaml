@@ -1,50 +1,47 @@
-﻿# Values file for list operation error tests
+﻿﻿# Values file for list operation error tests
 
 # Test configuration
-testDataType: nilList  # Which data type to test (can be overridden with --set)
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
 
-# Test data - different types to test
-nilList: null
-emptyList: []
+# Test data - one per type
+nilValue: null
 stringValue: "not a list"
 numberValue: 42
 boolValue: true
+listValue: [1, 2, 3]
 dictValue: {"key": "value"}
-validList: [1, 2, 3]
-shortList: [1, 2]
-negativeNumber: -5
-invalidSeqStart: "abc"
-invalidSeqEnd: "xyz"
-invalidChunkSize: 0
 
-# List function tests
-testFirst: false              # fails with nil pointer dereference on nilList
-testMustFirst: false          # fails with nil pointer dereference on nilList
-testRest: false               # does not fail - returns empty list [] on empty/nil lists
-testMustRest: false           # does not fail - returns empty list [] on empty/nil lists
-testLast: false               # does not fail - returns empty string on empty/nil lists
-testMustLast: false           # does not fail - returns empty string on empty/nil lists
-testInitial: false            # does not fail - returns empty list [] on empty/nil lists
-testMustInitial: false        # does not fail - returns empty list [] on empty/nil lists
-testAppend: false             # fails with "Cannot push on type string" on notAList
-testMustAppend: false         # fails with "Cannot push on type string" on notAList
-testPrepend: false            # fails with "Cannot prepend on type string" on notAList
-testMustPrepend: false        # fails with "Cannot prepend on type string" on notAList
-testConcat: false             # fails with "Cannot concat type string as list" on notAList
-testReverse: false            # fails with "Cannot find reverse on type string" on notAList
-testMustReverse: false        # fails with "Cannot find reverse on type string" on notAList
-testUniq: false               # fails with "Cannot find uniq on type string" on notAList
-testMustUniq: false           # fails with "Cannot find uniq on type string" on notAList
-testWithout: false            # fails with "Cannot find without on type string" on notAList
-testMustWithout: false        # fails with "Cannot find without on type string" on notAList
-testHas: false                # fails with "Cannot find has on type string" on notAList
-testMustHas: false            # fails with "Cannot find has on type string" on notAList
-testCompact: false            # fails with "Cannot compact on type string" on notAList
-testMustCompact: false        # fails with "Cannot compact on type string" on notAList
-testIndex: false              # fails with "index out of range: 10"
-testSlice: false              # fails with "slice index out of bounds"
-testMustSlice: false          # fails with "slice index out of bounds"
-testUntil: false              # fails with "wrong type; expected int; got float64"
-testUntilStep: false          # does not fail - returns empty list with zero step
-testSeq: false                # fails with "wrong type; expected int; got string"
-testChunk: false              # fails with "wrong type; expected int; got float64"
+# Additional list for concat testing
+validList: [4, 5, 6]
+
+# Test flags for all list functions
+testFirst: false
+testMustFirst: false
+testRest: false
+testMustRest: false
+testLast: false
+testMustLast: false
+testInitial: false
+testMustInitial: false
+testAppend: false
+testMustAppend: false
+testPrepend: false
+testMustPrepend: false
+testConcat: false
+testReverse: false
+testMustReverse: false
+testUniq: false
+testMustUniq: false
+testWithout: false
+testMustWithout: false
+testHas: false
+testMustHas: false
+testCompact: false
+testMustCompact: false
+testIndex: false
+testSlice: false
+testMustSlice: false
+testUntil: false
+testUntilStep: false
+testSeq: false
+testChunk: false

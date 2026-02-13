@@ -1,66 +1,71 @@
-# Test: Invalid regex patterns - fails on regex compilation errors
+# Test: Regex operation errors - comprehensive testing of all regex functions
+{{- $testData := index .Values .Values.testDataType }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-regex-test
 data:
-  # Fails: regexMatch with invalid pattern
+  # ==========================================
+  # Match functions
+  # ==========================================
+  # Test: regexMatch
   {{- if .Values.testRegexMatch }}
-  regexMatch: {{ regexMatch "(?P<invalid" .Values.inputString | quote }}
+  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}
   {{- end }}
-
-  # Fails: mustRegexMatch with invalid pattern
+  # Test: mustRegexMatch
   {{- if .Values.testMustRegexMatch }}
-  mustRegexMatch: {{ mustRegexMatch "(?P<invalid" .Values.inputString | quote }}
+  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}
   {{- end }}
 
-  # Fails: regexFindAll with invalid pattern
+  # ==========================================
+  # Find functions
+  # ==========================================
+  # Test: regexFindAll
   {{- if .Values.testRegexFindAll }}
-  regexFindAll: {{ regexFindAll "[unclosed" .Values.text -1 | quote }}
+  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}
   {{- end }}
-
-  # Fails: mustRegexFindAll with invalid pattern
+  # Test: mustRegexFindAll
   {{- if .Values.testMustRegexFindAll }}
-  mustRegexFindAll: {{ mustRegexFindAll "[unclosed" .Values.text -1 | quote }}
+  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}
   {{- end }}
-
-  # Fails: regexFind with invalid pattern
+  # Test: regexFind
   {{- if .Values.testRegexFind }}
-  regexFind: {{ regexFind "(?P<bad" .Values.text | quote }}
+  regexFind: {{ regexFind .Values.validPattern $testData | quote }}
   {{- end }}
-
-  # Fails: mustRegexFind with invalid pattern
+  # Test: mustRegexFind
   {{- if .Values.testMustRegexFind }}
-  mustRegexFind: {{ mustRegexFind "(?P<bad" .Values.text | quote }}
+  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}
   {{- end }}
 
-  # Fails: regexReplaceAll with invalid pattern
+  # ==========================================
+  # Replace functions
+  # ==========================================
+  # Test: regexReplaceAll
   {{- if .Values.testRegexReplaceAll }}
-  regexReplaceAll: {{ regexReplaceAll "(?P<invalid" "${invalid}" .Values.text | quote }}
+  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}
   {{- end }}
-
-  # Fails: mustRegexReplaceAll with invalid pattern
+  # Test: mustRegexReplaceAll
   {{- if .Values.testMustRegexReplaceAll }}
-  mustRegexReplaceAll: {{ mustRegexReplaceAll "(?P<invalid" "${invalid}" .Values.text | quote }}
+  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}
   {{- end }}
-
-  # Fails: regexReplaceAllLiteral with invalid pattern
+  # Test: regexReplaceAllLiteral
   {{- if .Values.testRegexReplaceAllLiteral }}
-  regexReplaceAllLiteral: {{ regexReplaceAllLiteral "*invalid[" "replacement" .Values.text | quote }}
+  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}
   {{- end }}
-
-  # Fails: mustRegexReplaceAllLiteral with invalid pattern
+  # Test: mustRegexReplaceAllLiteral
   {{- if .Values.testMustRegexReplaceAllLiteral }}
-  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral "*invalid[" "replacement" .Values.text | quote }}
+  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}
   {{- end }}
 
-  # Fails: regexSplit with invalid pattern
+  # ==========================================
+  # Split functions
+  # ==========================================
+  # Test: regexSplit
   {{- if .Values.testRegexSplit }}
-  regexSplit: {{ regexSplit "(?P<bad" .Values.text -1 | quote }}
+  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}
   {{- end }}
-
-  # Fails: mustRegexSplit with invalid pattern
+  # Test: mustRegexSplit
   {{- if .Values.testMustRegexSplit }}
-  mustRegexSplit: {{ mustRegexSplit "(?P<bad" .Values.text -1 | quote }}
+  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}
   {{- end }}
 

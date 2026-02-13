@@ -1,10 +1,13 @@
-# Test: List operation errors - fails on invalid list operations
+# Test: List operation errors - comprehensive testing of all list functions
 {{- $testData := index .Values .Values.testDataType }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-list-test
 data:
+  # ==========================================
+  # First/Last functions
+  # ==========================================
   # Test: first
   {{- if .Values.testFirst }}
   firstItem: {{ first $testData | quote }}
@@ -37,6 +40,10 @@ data:
   {{- if .Values.testMustInitial }}
   mustInitialItems: {{ mustInitial $testData | toJson }}
   {{- end }}
+
+  # ==========================================
+  # Append/Prepend functions
+  # ==========================================
   # Test: append
   {{- if .Values.testAppend }}
   appendedList: {{ append $testData "item" | toJson }}
@@ -53,6 +60,10 @@ data:
   {{- if .Values.testMustPrepend }}
   mustPrependedList: {{ mustPrepend $testData "item" | toJson }}
   {{- end }}
+
+  # ==========================================
+  # List manipulation functions
+  # ==========================================
   # Test: concat
   {{- if .Values.testConcat }}
   concatenatedList: {{ concat .Values.validList $testData | toJson }}
@@ -73,6 +84,10 @@ data:
   {{- if .Values.testMustUniq }}
   mustUniqueList: {{ mustUniq $testData | toJson }}
   {{- end }}
+
+  # ==========================================
+  # Search/Filter functions
+  # ==========================================
   # Test: without
   {{- if .Values.testWithout }}
   withoutList: {{ without $testData "item" | toJson }}
@@ -97,31 +112,39 @@ data:
   {{- if .Values.testMustCompact }}
   mustCompactList: {{ mustCompact $testData | toJson }}
   {{- end }}
+
+  # ==========================================
+  # Index/Slice functions
+  # ==========================================
   # Test: index
   {{- if .Values.testIndex }}
-  indexedItem: {{ index $testData 10 | quote }}
+  indexedItem: {{ index $testData 0 | quote }}
   {{- end }}
   # Test: slice
   {{- if .Values.testSlice }}
-  slicedList: {{ slice $testData 5 10 | toJson }}
+  slicedList: {{ slice $testData 0 1 | toJson }}
   {{- end }}
   # Test: mustSlice
   {{- if .Values.testMustSlice }}
-  mustSlicedList: {{ mustSlice $testData 5 10 | toJson }}
+  mustSlicedList: {{ mustSlice $testData 0 1 | toJson }}
   {{- end }}
-  # Test: until - separate test with different data
+
+  # ==========================================
+  # Range/Sequence functions
+  # ==========================================
+  # Test: until
   {{- if .Values.testUntil }}
-  untilList: {{ until .Values.negativeNumber | toJson }}
+  untilList: {{ until $testData | toJson }}
   {{- end }}
-  # Test: untilStep - separate test
+  # Test: untilStep
   {{- if .Values.testUntilStep }}
-  untilStepList: {{ untilStep 0 10 0 | toJson }}
+  untilStepList: {{ untilStep $testData 10 1 | toJson }}
   {{- end }}
-  # Test: seq - separate test
+  # Test: seq
   {{- if .Values.testSeq }}
-  seqList: {{ seq .Values.invalidSeqStart .Values.invalidSeqEnd | toJson }}
+  seqList: {{ seq $testData | toJson }}
   {{- end }}
-  # Test: chunk - separate test
+  # Test: chunk
   {{- if .Values.testChunk }}
-  chunkedList: {{ chunk .Values.invalidChunkSize .Values.validList | toJson }}
+  chunkedList: {{ chunk $testData .Values.validList | toJson }}
   {{- end }}

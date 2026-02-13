@@ -1,0 +1,14 @@
+# Test: UUID function - test if uuidv4 works
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-uuid-test
+data:
+  # Test: uuidv4 - generates a random UUID v4
+  {{- if .Values.testUuidv4 }}
+  uuidv4Value: {{ uuidv4 | quote }}
+  {{- end }}
+
+
+
+

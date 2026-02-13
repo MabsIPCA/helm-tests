@@ -1,0 +1,92 @@
+# Test: Type conversion errors - comprehensive testing of all type conversion functions
+{{- $testData := index .Values .Values.testDataType }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-type-conversion-test
+data:
+  # ==========================================
+  # String conversion functions
+  # ==========================================
+  # Test: toStrings
+  {{- if .Values.testToStrings }}
+  toStringsValue: {{ toStrings $testData | toJson }}
+  {{- end }}
+
+  # ==========================================
+  # Decimal conversion functions
+  # ==========================================
+  # Test: toDecimal
+  {{- if .Values.testToDecimal }}
+  toDecimalValue: {{ toDecimal $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # JSON conversion functions
+  # ==========================================
+  # Test: toJson
+  {{- if .Values.testToJson }}
+  toJsonValue: {{ toJson $testData | quote }}
+  {{- end }}
+  # Test: mustToJson
+  {{- if .Values.testMustToJson }}
+  mustToJsonValue: {{ mustToJson $testData | quote }}
+  {{- end }}
+  # Test: toPrettyJson
+  {{- if .Values.testToPrettyJson }}
+  toPrettyJsonValue: {{ toPrettyJson $testData | quote }}
+  {{- end }}
+  # Test: mustToPrettyJson
+  {{- if .Values.testMustToPrettyJson }}
+  mustToPrettyJsonValue: {{ mustToPrettyJson $testData | quote }}
+  {{- end }}
+  # Test: toRawJson
+  {{- if .Values.testToRawJson }}
+  toRawJsonValue: {{ toRawJson $testData | quote }}
+  {{- end }}
+  # Test: mustToRawJson
+  {{- if .Values.testMustToRawJson }}
+  mustToRawJsonValue: {{ mustToRawJson $testData | quote }}
+  {{- end }}
+  # Test: fromJson
+  {{- if .Values.testFromJson }}
+  {{- $parsed := $testData | fromJson }}
+  fromJsonValue: {{ $parsed | toJson }}
+  {{- end }}
+  # Test: fromJsonArray
+  {{- if .Values.testFromJsonArray }}
+  {{- $arr := $testData | fromJsonArray }}
+  fromJsonArrayValue: {{ $arr | toJson }}
+  {{- end }}
+
+  # ==========================================
+  # YAML conversion functions
+  # ==========================================
+  # Test: fromYaml
+  {{- if .Values.testFromYaml }}
+  {{- $parsed := $testData | fromYaml }}
+  fromYamlValue: {{ $parsed | toJson }}
+  {{- end }}
+  # Test: toYaml
+  {{- if .Values.testToYaml }}
+  toYamlValue: {{ toYaml $testData | quote }}
+  {{- end }}
+  # Test: toYamlPretty
+  {{- if .Values.testToYamlPretty }}
+  toYamlPrettyValue: {{ toYamlPretty $testData | quote }}
+  {{- end }}
+  # Test: fromYamlArray
+  {{- if .Values.testFromYamlArray }}
+  {{- $arr := $testData | fromYamlArray }}
+  fromYamlArrayValue: {{ $arr | toJson }}
+  {{- end }}
+
+  # ==========================================
+  # TOML conversion functions
+  # ==========================================
+  # Test: toToml
+  {{- if .Values.testToToml }}
+  toTomlValue: {{ toToml $testData | quote }}
+  {{- end }}
+
+

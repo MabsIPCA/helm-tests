@@ -1,0 +1,29 @@
+﻿﻿# Values file for type conversion error tests
+
+# Test configuration
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
+
+# Test data - one per type
+nilValue: null
+stringValue: "test string"
+numberValue: 42
+boolValue: true
+listValue: [1, 2, 3]
+dictValue: {"key": "value"}
+
+# Test flags for all type conversion functions
+testToStrings: false
+testToDecimal: false
+testToJson: false
+testMustToJson: false
+testToPrettyJson: false
+testMustToPrettyJson: false
+testToRawJson: false
+testMustToRawJson: false
+testFromYaml: false
+testFromJson: false
+testFromJsonArray: false
+testToYaml: false
+testToYamlPretty: false
+testFromYamlArray: false
+testToToml: false

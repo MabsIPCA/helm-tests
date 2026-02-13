@@ -1,3 +1,23 @@
-﻿# Values file for file read error test
+﻿# Values file for file and path function error tests
+
+# Test configuration
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
+
+# Test data - one per type
+nilValue: null
+stringValue: "/path/to/file.txt"
+numberValue: 42
+boolValue: true
+listValue: [1, 2, 3]
+dictValue: {"key": "value"}
+
+# Test flags for path functions
+testBase: false
+testDir: false
+testClean: false
+testExt: false
+testIsAbs: false
+
+# Test flags for file functions
 testGlobRequired: false
 testAsConfigEmpty: false

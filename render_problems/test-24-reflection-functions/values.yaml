@@ -1,0 +1,23 @@
+# Values file for reflection function error tests
+
+# Test configuration
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
+
+# Test data - one per type
+nilValue: null
+stringValue: "test string"
+numberValue: 42
+boolValue: true
+listValue: [1, 2, 3]
+dictValue: {"key": "value"}
+
+# Comparison value for deepEqual
+compareValue: "test string"
+
+# Test flags for reflection functions
+testKindOf: false
+testKindIs: false
+testTypeOf: false
+testTypeIs: false
+testTypeIsLike: false
+testDeepEqual: false

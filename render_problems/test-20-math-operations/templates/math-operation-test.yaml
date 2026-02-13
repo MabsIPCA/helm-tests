@@ -1,0 +1,91 @@
+# Test: Math operation errors - comprehensive testing of all math functions
+{{- $testData := index .Values .Values.testDataType }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-math-test
+data:
+  # ==========================================
+  # Integer math functions
+  # ==========================================
+  # Test: add
+  {{- if .Values.testAdd }}
+  addValue: {{ add $testData 10 | quote }}
+  {{- end }}
+  # Test: add1
+  {{- if .Values.testAdd1 }}
+  add1Value: {{ add1 $testData | quote }}
+  {{- end }}
+  # Test: sub
+  {{- if .Values.testSub }}
+  subValue: {{ sub $testData 5 | quote }}
+  {{- end }}
+  # Test: div
+  {{- if .Values.testDiv }}
+  divValue: {{ div $testData 2 | quote }}
+  {{- end }}
+  # Test: mod
+  {{- if .Values.testMod }}
+  modValue: {{ mod $testData 3 | quote }}
+  {{- end }}
+  # Test: mul
+  {{- if .Values.testMul }}
+  mulValue: {{ mul $testData 2 | quote }}
+  {{- end }}
+  # Test: max
+  {{- if .Values.testMax }}
+  maxValue: {{ max $testData 10 | quote }}
+  {{- end }}
+  # Test: min
+  {{- if .Values.testMin }}
+  minValue: {{ min $testData 10 | quote }}
+  {{- end }}
+  # Test: len
+  {{- if .Values.testLen }}
+  lenValue: {{ len $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Float math functions
+  # ==========================================
+  # Test: addf
+  {{- if .Values.testAddf }}
+  addfValue: {{ addf $testData 10.5 | quote }}
+  {{- end }}
+  # Test: add1f
+  {{- if .Values.testAdd1f }}
+  add1fValue: {{ add1f $testData | quote }}
+  {{- end }}
+  # Test: subf
+  {{- if .Values.testSubf }}
+  subfValue: {{ subf $testData 5.5 | quote }}
+  {{- end }}
+  # Test: divf
+  {{- if .Values.testDivf }}
+  divfValue: {{ divf $testData 2.0 | quote }}
+  {{- end }}
+  # Test: mulf
+  {{- if .Values.testMulf }}
+  mulfValue: {{ mulf $testData 2.5 | quote }}
+  {{- end }}
+  # Test: maxf
+  {{- if .Values.testMaxf }}
+  maxfValue: {{ maxf $testData 10.5 | quote }}
+  {{- end }}
+  # Test: minf
+  {{- if .Values.testMinf }}
+  minfValue: {{ minf $testData 10.5 | quote }}
+  {{- end }}
+  # Test: floor
+  {{- if .Values.testFloor }}
+  floorValue: {{ floor $testData | quote }}
+  {{- end }}
+  # Test: ceil
+  {{- if .Values.testCeil }}
+  ceilValue: {{ ceil $testData | quote }}
+  {{- end }}
+  # Test: round
+  {{- if .Values.testRound }}
+  roundValue: {{ round $testData 2 | quote }}
+  {{- end }}
+

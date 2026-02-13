@@ -1,0 +1,31 @@
+# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions
+{{- $testData := index .Values .Values.testDataType }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-encoding-test
+data:
+  # ==========================================
+  # Base64 functions
+  # ==========================================
+  # Test: b64enc - encode to Base64
+  {{- if .Values.testB64enc }}
+  b64encValue: {{ b64enc $testData | quote }}
+  {{- end }}
+  # Test: b64dec - decode from Base64
+  {{- if .Values.testB64dec }}
+  b64decValue: {{ b64dec $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Base32 functions
+  # ==========================================
+  # Test: b32enc - encode to Base32
+  {{- if .Values.testB32enc }}
+  b32encValue: {{ b32enc $testData | quote }}
+  {{- end }}
+  # Test: b32dec - decode from Base32
+  {{- if .Values.testB32dec }}
+  b32decValue: {{ b32dec $testData | quote }}
+  {{- end }}
+

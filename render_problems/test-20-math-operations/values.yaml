@@ -1,0 +1,34 @@
+# Values file for math operation error tests
+
+# Test configuration
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
+
+# Test data - one per type
+nilValue: null
+stringValue: "not a number"
+numberValue: 42
+boolValue: true
+listValue: [1, 2, 3]
+dictValue: {"key": "value"}
+
+# Test flags for all math functions
+testAdd: false
+testAdd1: false
+testSub: false
+testDiv: false
+testMod: false
+testMul: false
+testMax: false
+testMin: false
+testLen: false
+testAddf: false
+testAdd1f: false
+testSubf: false
+testDivf: false
+testMulf: false
+testMaxf: false
+testMinf: false
+testFloor: false
+testCeil: false
+testRound: false
+

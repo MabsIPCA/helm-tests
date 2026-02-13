@@ -1,0 +1,10 @@
+# Values file for UUID function error tests
+
+# Test configuration
+testDataType: default
+
+# Test data
+default: null
+
+# Test flags for UUID functions
+testUuidv4: false

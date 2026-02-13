@@ -1,0 +1,71 @@
+# Test: Semver function errors - comprehensive testing of semantic versioning functions
+{{- $testData := index .Values .Values.testDataType }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-semver-test
+data:
+  # ==========================================
+  # Semver parsing
+  # ==========================================
+  # Test: semver - parses a semver string
+  {{- if .Values.testSemver }}
+  semverValue: {{ semver $testData | toJson | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Basic semverCompare
+  # ==========================================
+  # Test: semverCompare - basic comparison
+  {{- if .Values.testSemverCompare }}
+  semverCompareValue: {{ semverCompare ">1.0.0" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Basic Comparisons (=, !=, >, <, >=, <=)
+  # ==========================================
+  # Test: semverCompare with basic operators
+  {{- if .Values.testSemverCompareBasic }}
+  semverCompareBasic: {{ semverCompare ">=1.0.0, <2.0.0" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Prerelease Versions
+  # ==========================================
+  # Test: semverCompare with prerelease
+  {{- if .Values.testSemverComparePrerelease }}
+  semverComparePrerelease: {{ semverCompare ">1.0.0-alpha" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Hyphen Range Comparisons
+  # ==========================================
+  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)
+  {{- if .Values.testSemverCompareHyphen }}
+  semverCompareHyphen: {{ semverCompare "1.0.0 - 2.0.0" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Wildcards In Comparisons
+  # ==========================================
+  # Test: semverCompare with wildcards (1.x, 1.2.x, *)
+  {{- if .Values.testSemverCompareWildcard }}
+  semverCompareWildcard: {{ semverCompare "1.x" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Tilde Range Comparisons (Patch)
+  # ==========================================
+  # Test: semverCompare with tilde (~1.2.3 allows patch changes)
+  {{- if .Values.testSemverCompareTilde }}
+  semverCompareTilde: {{ semverCompare "~1.2.0" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Caret Range Comparisons (Major)
+  # ==========================================
+  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)
+  {{- if .Values.testSemverCompareCaret }}
+  semverCompareCaret: {{ semverCompare "^1.0.0" $testData | quote }}
+  {{- end }}
+

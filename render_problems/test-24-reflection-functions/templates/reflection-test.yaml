@@ -1,0 +1,43 @@
+# Test: Reflection function errors - comprehensive testing of Kind, Type, and deepEqual functions
+{{- $testData := index .Values .Values.testDataType }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-reflection-test
+data:
+  # ==========================================
+  # Kind functions
+  # ==========================================
+  # Test: kindOf - returns the kind of a value
+  {{- if .Values.testKindOf }}
+  kindOfValue: {{ kindOf $testData | quote }}
+  {{- end }}
+  # Test: kindIs - checks if value is of a specific kind
+  {{- if .Values.testKindIs }}
+  kindIsValue: {{ kindIs "string" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Type functions
+  # ==========================================
+  # Test: typeOf - returns the type of a value
+  {{- if .Values.testTypeOf }}
+  typeOfValue: {{ typeOf $testData | quote }}
+  {{- end }}
+  # Test: typeIs - checks if value is of a specific type
+  {{- if .Values.testTypeIs }}
+  typeIsValue: {{ typeIs "string" $testData | quote }}
+  {{- end }}
+  # Test: typeIsLike - checks if value is like a specific type
+  {{- if .Values.testTypeIsLike }}
+  typeIsLikeValue: {{ typeIsLike "string" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Comparison functions
+  # ==========================================
+  # Test: deepEqual - compares two values for deep equality
+  {{- if .Values.testDeepEqual }}
+  deepEqualValue: {{ deepEqual $testData .Values.compareValue | quote }}
+  {{- end }}
+

@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"strings"
+	"sync"
 	"time"
 )
 
@@ -36,10 +37,20 @@ type TestResult struct {
 
 // Test directories to scan for config.json
 var testDirs = []string{
+	"test-09-invalid-regex",
+	"test-10-file-read-error",
+	"test-11-invalid-types",
+	"test-12-list-operation-error",
 	"test-13-string-operation-error",
 	"test-14-map-dict-error",
 	"test-15-date-time-error",
 	"test-16-crypto-error",
+	"test-20-math-operations",
+	"test-21-uuid-functions",
+	"test-22-url-functions",
+	"test-23-encoding-functions",
+	"test-24-reflection-functions",
+	"test-25-semver-functions",
 }
 
 func loadConfig(testDir string) (*TestConfig, error) {
@@ -184,12 +195,23 @@ func runTestSuite(config *TestConfig, baseDir string) (int, int, error) {
 
 	// Run all tests
 	results := make(map[string]map[string]TestResult)
+	var mu sync.Mutex
+	var wg sync.WaitGroup
 	for _, tf := range config.TestFunctions {
-		results[tf.Func] = make(map[string]TestResult)
-		for _, dt := range config.DataTypes {
-			results[tf.Func][dt] = runTest(testDir, config.ChartName, tf.Name, dt)
-		}
+		tf := tf // capture loop variable
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			funcResults := make(map[string]TestResult)
+			for _, dt := range config.DataTypes {
+				funcResults[dt] = runTest(testDir, config.ChartName, tf.Name, dt)
+			}
+			mu.Lock()
+			results[tf.Func] = funcResults
+			mu.Unlock()
+		}()
 	}
+	wg.Wait()
 
 	// Generate markdown
 	markdown := generateMarkdown(config, results)

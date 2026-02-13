@@ -1,5 +1,5 @@
-﻿apiVersion: v2
-name: test-12-list-operation-error
+﻿﻿apiVersion: v2
+name: test-list
 description: Test for list operation errors
 type: application
 version: 0.1.0

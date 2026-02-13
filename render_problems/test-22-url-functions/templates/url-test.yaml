@@ -1,0 +1,23 @@
+# Test: URL function errors - comprehensive testing of URL functions
+{{- $testData := index .Values .Values.testDataType }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-url-test
+data:
+  # ==========================================
+  # URL functions
+  # ==========================================
+  # Test: urlParse - parses a URL string into components
+  {{- if .Values.testUrlParse }}
+  urlParseValue: {{ urlParse $testData | toJson | quote }}
+  {{- end }}
+  # Test: urlJoin - joins URL components
+  {{- if .Values.testUrlJoin }}
+  urlJoinValue: {{ urlJoin (dict "scheme" "https" "host" "example.com" "path" $testData) | quote }}
+  {{- end }}
+  # Test: urlquery - URL encodes a string
+  {{- if .Values.testUrlquery }}
+  urlqueryValue: {{ urlquery $testData | quote }}
+  {{- end }}
+
