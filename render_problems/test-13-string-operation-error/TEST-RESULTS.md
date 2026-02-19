@@ -1,8 +1,8 @@
 # Test 13: String Operation Errors
 
-**Generated:** 2026-02-13 00:57:00
+**Generated:** 2026-02-19 19:53:08
 
-**Total:** 252 | **Passed:** 62 (24.6%) | **Failed:** 190 (75.4%)
+**Total:** 300 | **Passed:** 110 (36.7%) | **Failed:** 190 (63.3%)
 
 ## Test Matrix
 
@@ -11,6 +11,14 @@
 | `print` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | `println` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | `printf` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| `printf-%s` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `printf-%d` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `printf-%f` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `printf-%t` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `printf-%x` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `printf-%b` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `printf-%c` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `printf-%q` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | `trim` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `trimAll` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `trimPrefix` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |

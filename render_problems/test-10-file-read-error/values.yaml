@@ -1,4 +1,4 @@
-﻿# Values file for file and path function error tests
+# Values file for file and path function error tests
 
 # Test configuration
 testDataType: nilValue  # Which data type to test (can be overridden with --set)

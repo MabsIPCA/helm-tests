@@ -1,4 +1,4 @@
-﻿apiVersion: v2
+apiVersion: v2
 name: test-08-division-by-zero
 description: Test for division by zero errors
 type: application

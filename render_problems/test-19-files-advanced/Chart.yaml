@@ -1,4 +1,4 @@
-﻿apiVersion: v2
+apiVersion: v2
 name: test-19-files-advanced
 description: Test for advanced file operations errors
 type: application

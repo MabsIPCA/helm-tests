@@ -1,0 +1,86 @@
+{
+    "errorPatterns":  [
+                          "wrong type[^;]*; expected [^;]+; got [^\\s]+",
+                          "invalid value[^;]*; expected [^\\s]+",
+                          "error calling \\w+: [^\\n]+",
+                          "cannot .+ type [^\\s]+",
+                          "Cannot .+ type [^\\s]+",
+                          "nil pointer",
+                          "required value",
+                          "execution error",
+                          "incompatible types"
+                      ],
+    "chartName":  "test-logic-default",
+    "dataTypes":  [
+                      "nilValue",
+                      "stringValue",
+                      "numberValue",
+                      "boolValue",
+                      "listValue",
+                      "dictValue"
+                  ],
+    "testName":  "Logic and Default Functions",
+    "testNumber":  1,
+    "testFunctions":  [
+                          {
+                              "func":  "and",
+                              "name":  "testAnd"
+                          },
+                          {
+                              "func":  "or",
+                              "name":  "testOr"
+                          },
+                          {
+                              "func":  "not",
+                              "name":  "testNot"
+                          },
+                          {
+                              "func":  "eq",
+                              "name":  "testEq"
+                          },
+                          {
+                              "func":  "ne",
+                              "name":  "testNe"
+                          },
+                          {
+                              "func":  "lt",
+                              "name":  "testLt"
+                          },
+                          {
+                              "func":  "le",
+                              "name":  "testLe"
+                          },
+                          {
+                              "func":  "gt",
+                              "name":  "testGt"
+                          },
+                          {
+                              "func":  "ge",
+                              "name":  "testGe"
+                          },
+                          {
+                              "func":  "default",
+                              "name":  "testDefault"
+                          },
+                          {
+                              "func":  "required",
+                              "name":  "testRequired"
+                          },
+                          {
+                              "func":  "empty",
+                              "name":  "testEmpty"
+                          },
+                          {
+                              "func":  "fail",
+                              "name":  "testFail"
+                          },
+                          {
+                              "func":  "coalesce",
+                              "name":  "testCoalesce"
+                          },
+                          {
+                              "func":  "ternary",
+                              "name":  "testTernary"
+                          }
+                      ]
+}

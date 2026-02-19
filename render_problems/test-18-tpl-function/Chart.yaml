@@ -1,4 +1,4 @@
-﻿apiVersion: v2
+apiVersion: v2
 name: test-18-tpl-function
 description: Test for tpl function errors
 type: application

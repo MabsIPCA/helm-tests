@@ -16,9 +16,45 @@ data:
   {{- if .Values.testPrintln }}
   printlnResult: {{ println $testData | quote }}
   {{- end }}
-  # Test: printf
+  # Test: printf (generic)
   {{- if .Values.testPrintf }}
   printfResult: {{ printf .Values.invalidFormat $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Printf format specifiers
+  # ==========================================
+  # Test: printf %s - expects string
+  {{- if .Values.testPrintfString }}
+  printfStringResult: {{ printf "%s-suffix" $testData | quote }}
+  {{- end }}
+  # Test: printf %d - expects integer
+  {{- if .Values.testPrintfInt }}
+  printfIntResult: {{ printf "number: %d" $testData | quote }}
+  {{- end }}
+  # Test: printf %f - expects float
+  {{- if .Values.testPrintfFloat }}
+  printfFloatResult: {{ printf "float: %f" $testData | quote }}
+  {{- end }}
+  # Test: printf %t - expects boolean
+  {{- if .Values.testPrintfBool }}
+  printfBoolResult: {{ printf "bool: %t" $testData | quote }}
+  {{- end }}
+  # Test: printf %x - expects integer (hex)
+  {{- if .Values.testPrintfHex }}
+  printfHexResult: {{ printf "hex: %x" $testData | quote }}
+  {{- end }}
+  # Test: printf %b - expects integer (binary)
+  {{- if .Values.testPrintfBinary }}
+  printfBinaryResult: {{ printf "binary: %b" $testData | quote }}
+  {{- end }}
+  # Test: printf %c - expects integer (character)
+  {{- if .Values.testPrintfChar }}
+  printfCharResult: {{ printf "char: %c" $testData | quote }}
+  {{- end }}
+  # Test: printf %q - expects string (quoted)
+  {{- if .Values.testPrintfQuoted }}
+  printfQuotedResult: {{ printf "quoted: %q" $testData | quote }}
   {{- end }}
 
   # ==========================================

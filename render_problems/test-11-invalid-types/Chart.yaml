@@ -1,4 +1,4 @@
-﻿apiVersion: v2
+apiVersion: v2
 name: test-type-conversion
 description: Test for type conversion errors
 type: application

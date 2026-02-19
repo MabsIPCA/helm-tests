@@ -1,4 +1,4 @@
-﻿# Values file for index out of range test
+# Values file for index out of range test
 testIndexEmpty: false
 testIndexBeyond: false
 testIndexNegative: false

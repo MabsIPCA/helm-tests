@@ -1,0 +1,94 @@
+# Test: Logic and default functions - comprehensive testing
+{{- $testData := index .Values .Values.testDataType }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-logic-test
+data:
+  # ==========================================
+  # Boolean Logic Functions
+  # ==========================================
+  # Test: and - returns boolean AND of arguments
+  {{- if .Values.testAnd }}
+  andResult: {{ and $testData .Values.compareValue | quote }}
+  {{- end }}
+
+  # Test: or - returns boolean OR of arguments
+  {{- if .Values.testOr }}
+  orResult: {{ or $testData .Values.compareValue | quote }}
+  {{- end }}
+
+  # Test: not - returns boolean negation
+  {{- if .Values.testNot }}
+  notResult: {{ not $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Comparison Functions
+  # ==========================================
+  # Test: eq - returns true if equal
+  {{- if .Values.testEq }}
+  eqResult: {{ eq $testData .Values.compareValue | quote }}
+  {{- end }}
+
+  # Test: ne - returns true if not equal
+  {{- if .Values.testNe }}
+  neResult: {{ ne $testData .Values.compareValue | quote }}
+  {{- end }}
+
+  # Test: lt - returns true if less than
+  {{- if .Values.testLt }}
+  ltResult: {{ lt $testData .Values.compareValue | quote }}
+  {{- end }}
+
+  # Test: le - returns true if less than or equal
+  {{- if .Values.testLe }}
+  leResult: {{ le $testData .Values.compareValue | quote }}
+  {{- end }}
+
+  # Test: gt - returns true if greater than
+  {{- if .Values.testGt }}
+  gtResult: {{ gt $testData .Values.compareValue | quote }}
+  {{- end }}
+
+  # Test: ge - returns true if greater than or equal
+  {{- if .Values.testGe }}
+  geResult: {{ ge $testData .Values.compareValue | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Default/Required Functions
+  # ==========================================
+  # Test: default - returns default value if empty
+  {{- if .Values.testDefault }}
+  defaultResult: {{ default "fallback" $testData | quote }}
+  {{- end }}
+
+  # Test: required - fails if value is empty
+  {{- if .Values.testRequired }}
+  requiredResult: {{ required "value is required" $testData | quote }}
+  {{- end }}
+
+  # Test: empty - returns true if value is empty
+  {{- if .Values.testEmpty }}
+  emptyResult: {{ empty $testData | quote }}
+  {{- end }}
+
+  # Test: fail - explicitly fails with message
+  {{- if .Values.testFail }}
+  failResult: {{ fail (printf "intentional fail with: %v" $testData) }}
+  {{- end }}
+
+  # ==========================================
+  # Coalesce/Ternary Functions
+  # ==========================================
+  # Test: coalesce - returns first non-empty value
+  {{- if .Values.testCoalesce }}
+  coalesceResult: {{ coalesce $testData .Values.compareValue "default" | quote }}
+  {{- end }}
+
+  # Test: ternary - conditional expression
+  {{- if .Values.testTernary }}
+  ternaryResult: {{ ternary "yes" "no" $testData | quote }}
+  {{- end }}
+

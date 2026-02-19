@@ -1,4 +1,4 @@
-﻿# Values file for template syntax error test
+# Values file for template syntax error test
 testUnclosedAction: false
 testInvalidFunction: false
 testWrongArgs: false

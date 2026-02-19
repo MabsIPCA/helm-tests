@@ -1,4 +1,4 @@
-﻿apiVersion: v2
+apiVersion: v2
 name: test-04-index-out-of-range
 description: Test for index out of range errors
 type: application

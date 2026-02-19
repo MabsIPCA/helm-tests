@@ -37,6 +37,8 @@ type TestResult struct {
 
 // Test directories to scan for config.json
 var testDirs = []string{
+	"test-01-logic-default-functions",
+	"test-05-nil-pointer",
 	"test-09-invalid-regex",
 	"test-10-file-read-error",
 	"test-11-invalid-types",

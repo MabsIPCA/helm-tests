@@ -1,4 +1,4 @@
-﻿# Values file for helper template test
+# Values file for helper template test
 testHelperUndefinedVar: false
 testHelperSyntaxError: false
 testHelperTypeMismatch: false

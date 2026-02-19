@@ -1,4 +1,4 @@
-﻿# Values file for string operation error tests
+# Values file for string operation error tests
 
 # Test configuration
 testDataType: nilValue  # Which data type to test (can be overridden with --set)
@@ -19,6 +19,14 @@ validInt: 4
 testPrint: false
 testPrintln: false
 testPrintf: false
+testPrintfString: false
+testPrintfInt: false
+testPrintfFloat: false
+testPrintfBool: false
+testPrintfHex: false
+testPrintfBinary: false
+testPrintfChar: false
+testPrintfQuoted: false
 testTrim: false
 testTrimAll: false
 testTrimPrefix: false

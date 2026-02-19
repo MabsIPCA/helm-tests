@@ -1,4 +1,4 @@
-﻿﻿apiVersion: v2
+﻿apiVersion: v2
 name: test-list
 description: Test for list operation errors
 type: application

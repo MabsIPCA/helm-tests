@@ -1,4 +1,4 @@
-﻿apiVersion: v2
+apiVersion: v2
 name: test-06-template-syntax-error
 description: Test for template syntax errors
 type: application

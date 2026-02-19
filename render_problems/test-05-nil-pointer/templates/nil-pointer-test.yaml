@@ -1,23 +1,130 @@
-# Test: Nil pointer access - fails when accessing fields on nil
+# Test: Nil pointer dereference scenarios
+{{- $testData := index .Values .Values.testDataType }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Release.Name }}-nil-test
+  name: {{ .Release.Name }}-nil-pointer-test
 data:
-  # Fails: Accessing field on nil map
-  {{- if .Values.testNilMap }}
-  nilMapValue: {{ .Values.nilMap.key | quote }}
+  # ==========================================
+  # Direct nil map access
+  # ==========================================
+  {{- if .Values.testNilMapAccess }}
+  # Accessing a key on a nil map
+  nilMapAccess: {{ $testData.someKey | quote }}
   {{- end }}
-  # Fails: Accessing nested field on nil
-  {{- if .Values.testNilNested }}
-  nestedValue: {{ .Values.config.database.host | quote }}
+
+  # ==========================================
+  # Nested nil access
+  # ==========================================
+  {{- if .Values.testNilNestedMap }}
+  # Accessing nested key when parent is nil
+  nilNestedMap: {{ $testData.level1.key | quote }}
   {{- end }}
-  # Fails: Pipeline with nil value
-  {{- if .Values.testNilPipeline }}
-  pipelineValue: {{ .Values.nilValue | upper | quote }}
+
+  # ==========================================
+  # Deep nesting nil
+  # ==========================================
+  {{- if .Values.testNilDeepNest }}
+  # Accessing deeply nested nil
+  nilDeepNest: {{ $testData.level1.level2.level3.key | quote }}
   {{- end }}
-  # Fails: Encoding nil to base64
-  {{- if .Values.testNilBase64 }}
-  base64Value: {{ .Values.nilValue | b64enc }}
+
+  # ==========================================
+  # Nil in list access
+  # ==========================================
+  {{- if .Values.testNilListIndex }}
+  # Accessing property on nil list element
+  nilListIndex: {{ (index $testData 1).property | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Range over nil
+  # ==========================================
+  {{- if .Values.testNilRange }}
+  # Ranging over nil value
+  nilRange: |
+    {{- range $testData }}
+    - {{ .key }}
+    {{- end }}
+  {{- end }}
+
+  # ==========================================
+  # Nil with default (should work)
+  # ==========================================
+  {{- if .Values.testNilWithDefault }}
+  # Using default with nil
+  nilWithDefault: {{ default "fallback" $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Index function on nil
+  # ==========================================
+  {{- if .Values.testNilIndex }}
+  # Using index on nil
+  nilIndex: {{ index $testData "key" | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Pluck on nil
+  # ==========================================
+  {{- if .Values.testNilPluck }}
+  # Using pluck with nil in list
+  nilPluck: {{ pluck "key" $testData | toJson }}
+  {{- end }}
+
+  # ==========================================
+  # Keys on nil
+  # ==========================================
+  {{- if .Values.testNilKeys }}
+  # Getting keys from nil map
+  nilKeys: {{ keys $testData | toJson }}
+  {{- end }}
+
+  # ==========================================
+  # Values on nil
+  # ==========================================
+  {{- if .Values.testNilValues }}
+  # Getting values from nil map
+  nilValues: {{ values $testData | toJson }}
+  {{- end }}
+
+  # ==========================================
+  # Pick on nil
+  # ==========================================
+  {{- if .Values.testNilPick }}
+  # Using pick on nil map
+  nilPick: {{ pick $testData "key1" "key2" | toJson }}
+  {{- end }}
+
+  # ==========================================
+  # Omit on nil
+  # ==========================================
+  {{- if .Values.testNilOmit }}
+  # Using omit on nil map
+  nilOmit: {{ omit $testData "key1" | toJson }}
+  {{- end }}
+
+  # ==========================================
+  # Merge with nil
+  # ==========================================
+  {{- if .Values.testNilMerge }}
+  # Merging nil map
+  nilMerge: {{ merge $testData (dict "new" "value") | toJson }}
+  {{- end }}
+
+  # ==========================================
+  # Get on nil
+  # ==========================================
+  {{- if .Values.testNilGet }}
+  # Using get on nil map
+  nilGet: {{ get $testData "key" | quote }}
+  {{- end }}
+
+  # ==========================================
+  # HasKey on nil
+  # ==========================================
+  {{- if .Values.testNilHasKey }}
+  # Using hasKey on nil map
+  nilHasKey: {{ hasKey $testData "key" | quote }}
   {{- end }}
 

@@ -1,4 +1,4 @@
-﻿apiVersion: v2
+apiVersion: v2
 name: test-16-crypto-error
 description: Test for cryptographic function errors
 type: application

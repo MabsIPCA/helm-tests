@@ -1,4 +1,4 @@
-﻿# Values file for files advanced test
+# Values file for files advanced test
 testFilesBytesRequired: false
 testFilesLines: false
 testFilesAsSecrets: false

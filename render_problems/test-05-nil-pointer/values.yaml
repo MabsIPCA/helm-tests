@@ -1,8 +1,46 @@
-﻿# Values file for nil pointer test
-testNilMap: false
-testNilNested: false
-testNilPipeline: false
-testNilBase64: true
+# Values file for nil pointer dereference tests
+# Focus on specific nil pointer scenarios not covered by other type tests
+
+# Test configuration
+testDataType: nilMap
+
+# Nil pointer test scenarios
 nilMap: null
-nilValue: null
-config: null
+nilNested:
+  level1: null
+emptyMap: {}
+partialMap:
+  existing: "value"
+  # missing: nested.key
+nilInList:
+  - "item1"
+  - null
+  - "item3"
+nilInDict:
+  key1: "value1"
+  key2: null
+  key3: "value3"
+
+# Deep nesting scenarios
+deepNest:
+  level1:
+    level2:
+      level3: null
+
+# Test flags
+testNilMapAccess: false
+testNilNestedMap: false
+testNilDeepNest: false
+testNilListIndex: false
+testNilRange: false
+testNilWithDefault: false
+testNilIndex: false
+testNilPluck: false
+testNilKeys: false
+testNilValues: false
+testNilPick: false
+testNilOmit: false
+testNilMerge: false
+testNilGet: false
+testNilHasKey: false
+

@@ -1,4 +1,4 @@
-﻿﻿apiVersion: v2
+﻿apiVersion: v2
 name: test-regex
 description: Test for regex operation errors
 type: application

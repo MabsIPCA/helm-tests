@@ -1,4 +1,4 @@
-﻿# Values file for tpl function test
+# Values file for tpl function test
 testTplSyntaxError: false
 testTplUndefinedVar: false
 testTplRequired: false

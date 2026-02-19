@@ -1,4 +1,4 @@
-﻿apiVersion: v2
+apiVersion: v2
 name: test-13-string-operation-error
 description: Test for string operation errors
 type: application

@@ -1,0 +1,34 @@
+# Values file for logic and default function tests
+
+# Test configuration
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
+
+# Test data - one per type
+nilValue: null
+stringValue: "test string"
+numberValue: 42
+boolValue: true
+listValue: [1, 2, 3]
+dictValue: {"key": "value"}
+
+# Secondary values for comparison operations
+compareValue: 10
+compareString: "compare"
+
+# Test flags for all logic functions
+testAnd: false
+testOr: false
+testNot: false
+testEq: false
+testNe: false
+testLt: false
+testLe: false
+testGt: false
+testGe: false
+testDefault: false
+testRequired: false
+testEmpty: false
+testFail: false
+testCoalesce: false
+testTernary: false
+

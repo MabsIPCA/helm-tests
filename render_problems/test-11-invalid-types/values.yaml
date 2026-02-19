@@ -1,4 +1,4 @@
-﻿﻿# Values file for type conversion error tests
+# Values file for type conversion error tests
 
 # Test configuration
 testDataType: nilValue  # Which data type to test (can be overridden with --set)

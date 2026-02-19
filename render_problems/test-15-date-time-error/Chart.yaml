@@ -1,4 +1,4 @@
-﻿apiVersion: v2
+apiVersion: v2
 name: test-15-date-time-error
 description: Test for date/time parsing errors
 type: application

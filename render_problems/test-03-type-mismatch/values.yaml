@@ -1,6 +1,0 @@
-﻿# Values file for type mismatch test
-testRangeNumber: false
-testPrintfType: true
-port: 8080
-stringValue: "text"
-numericId: 12345
