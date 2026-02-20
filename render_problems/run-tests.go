@@ -54,13 +54,12 @@ var testDirs = []string{
 	"test-13-crypto-error",
 	"test-14-helper-template",
 	"test-15-tpl-function",
-	"test-16-files-advanced",
-	"test-17-math-operations",
-	"test-18-uuid-functions",
-	"test-19-url-functions",
-	"test-20-encoding-functions",
-	"test-21-reflection-functions",
-	"test-22-semver-functions",
+	"test-16-math-operations",
+	"test-17-uuid-functions",
+	"test-18-url-functions",
+	"test-19-encoding-functions",
+	"test-20-reflection-functions",
+	"test-21-semver-functions",
 }
 
 func loadConfig(testDir string) (*TestConfig, error) {

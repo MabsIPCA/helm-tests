@@ -1,5 +1,5 @@
 {
-  "testNumber": 22,
+  "testNumber": 21,
   "testName": "Semver Function Errors",
   "chartName": "test-semver",
   "testFunctions": [

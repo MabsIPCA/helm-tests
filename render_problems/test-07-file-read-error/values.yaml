@@ -1,4 +1,4 @@
-# Values file for file and path function error tests
+# Values file for file read, path function, and advanced files error tests
 
 # Test configuration
 testDataType: nilValue  # Which data type to test (can be overridden with --set)
@@ -21,3 +21,14 @@ testIsAbs: false
 # Test flags for file functions
 testGlobRequired: false
 testAsConfigEmpty: false
+
+# Test flags for advanced files operations (merged from test-16)
+testFilesMissingRequired: false
+testFilesEmptyRequired: false
+testFilesNilPath: false
+testFilesTplError: false
+
+# Test data for advanced files operations
+nilFilePath: null
+tplErrorContent: "{{ .Values.missing.nested }}"
+

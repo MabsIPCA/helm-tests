@@ -46,3 +46,29 @@ data:
   error: {{ fail "No config files found" }}
   {{- end }}
   {{- end }}
+
+  # ==========================================
+  # Advanced Files operations (merged from test-16)
+  # ==========================================
+  # Test: Required file content that doesn't exist
+  {{- if .Values.testFilesMissingRequired }}
+  missingContent: {{ required "File content is required" (.Files.Get "non-existent-file.txt") | quote }}
+  {{- end }}
+
+  # Test: Required file bytes that doesn't exist
+  {{- if .Values.testFilesEmptyRequired }}
+  {{- $bytes := .Files.GetBytes "another-missing-file.bin" }}
+  emptyBytes: {{ required "File bytes are required" $bytes | b64enc | quote }}
+  {{- end }}
+
+  # Test: Nil path passed to Files.Get
+  {{- if .Values.testFilesNilPath }}
+  {{- $content := .Files.Get .Values.nilFilePath }}
+  nilPathValue: {{ required "File path cannot be nil" $content | quote }}
+  {{- end }}
+
+  # Test: Template error in file content processed with tpl
+  {{- if .Values.testFilesTplError }}
+  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}
+  {{- end }}
+

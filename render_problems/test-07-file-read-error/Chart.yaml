@@ -1,6 +1,6 @@
 apiVersion: v2
-name: test-file-path
-description: Test for file and path function errors
+name: test-07-file-read-error
+description: Test for file read, path function, and advanced files errors
 type: application
 version: 0.1.0
 appVersion: "1.0"
