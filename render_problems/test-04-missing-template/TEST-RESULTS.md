@@ -1,6 +1,6 @@
-# Test 4: Missing Template Errors
+# Test 7: Missing Template Errors
 
-**Generated:** 2026-02-20 01:17:41
+**Generated:** 2026-02-20 01:47:53
 
 **Total:** 18 | **Passed:** 0 (0.0%) | **Failed:** 18 (100.0%)
 

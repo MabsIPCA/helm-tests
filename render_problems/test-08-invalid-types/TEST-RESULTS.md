@@ -1,6 +1,6 @@
-# Test 8: Type Conversion Errors
+# Test 11: Type Conversion Errors
 
-**Generated:** 2026-02-20 01:17:43
+**Generated:** 2026-02-20 01:47:54
 
 **Total:** 90 | **Passed:** 69 (76.7%) | **Failed:** 21 (23.3%)
 

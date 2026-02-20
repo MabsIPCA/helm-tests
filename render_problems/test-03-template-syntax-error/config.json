@@ -1,19 +1,19 @@
 {
-  "testNumber": 3,
+  "testNumber": 6,
   "testName": "Template Syntax Errors",
   "chartName": "test-syntax",
   "testFunctions": [],
   "subDirs": [
-    "field-on-non-map",
-    "index-out-of-range",
-    "invalid-function",
-    "invalid-range",
-    "len-on-scalar",
-    "range-over-scalar",
     "unclosed-action",
-    "undefined-var",
+    "invalid-function",
     "wrong-args",
-    "wrong-pipeline-type"
+    "undefined-var",
+    "invalid-range",
+    "wrong-pipeline-type",
+    "field-on-non-map",
+    "range-over-scalar",
+    "index-out-of-range",
+    "len-on-scalar"
   ],
   "errorPatterns": []
 }

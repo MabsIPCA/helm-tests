@@ -1,46 +1,39 @@
-# Test: Helper template errors - fails when helpers have errors
+# Test: Helper template errors - runtime errors in _helpers.tpl
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-helper-test
 data:
-  # Fails: Helper with undefined variable
-  {{- if .Values.testHelperUndefinedVar }}
-  value1: {{ include "helpers.undefinedVar" . | quote }}
-  {{- end }}
-  
-  # Fails: Helper with syntax error
-  {{- if .Values.testHelperSyntaxError }}
-  value2: {{ include "helpers.syntaxError" . | quote }}
-  {{- end }}
-  
-  # Fails: Helper with type mismatch
-  {{- if .Values.testHelperTypeMismatch }}
-  value3: {{ include "helpers.typeMismatch" . | quote }}
-  {{- end }}
-  
-  # Fails: Helper with division by zero
-  {{- if .Values.testHelperDivZero }}
-  value4: {{ include "helpers.divZero" . | quote }}
-  {{- end }}
-  
-  # Fails: Helper with required function
-  {{- if .Values.testHelperRequired }}
-  value5: {{ include "helpers.requiredValue" . | quote }}
-  {{- end }}
-  
-  # Fails: Helper with nil pointer
+  # ==========================================
+  # Helper template runtime error tests
+  # ==========================================
+
+  # Test: Nil pointer access in helper
   {{- if .Values.testHelperNilPointer }}
-  value6: {{ include "helpers.nilPointer" . | quote }}
-  {{- end }}
-  
-  # Fails: Helper calling non-existent helper
-  {{- if .Values.testHelperMissingInclude }}
-  value7: {{ include "helpers.callsMissing" . | quote }}
-  {{- end }}
-  
-  # Fails: Helper with invalid function
-  {{- if .Values.testHelperInvalidFunc }}
-  value8: {{ include "helpers.invalidFunction" . | quote }}
+  nilPointerValue: {{ include "helpers.nilPointer" . | quote }}
   {{- end }}
 
+  # Test: Required value missing in helper
+  {{- if .Values.testHelperRequired }}
+  requiredValue: {{ include "helpers.required" . | quote }}
+  {{- end }}
+
+  # Test: Range over scalar type in helper
+  {{- if .Values.testHelperRangeOverScalar }}
+  rangeOverScalarValue: {{ include "helpers.rangeOverScalar" . | quote }}
+  {{- end }}
+
+  # Test: Division by zero in helper
+  {{- if .Values.testHelperDivZero }}
+  divZeroValue: {{ include "helpers.divZero" . | quote }}
+  {{- end }}
+
+  # Test: Include non-existent template
+  {{- if .Values.testHelperMissingInclude }}
+  missingIncludeValue: {{ include "helpers.missingInclude" . | quote }}
+  {{- end }}
+
+  # Test: Explicit fail in helper
+  {{- if .Values.testHelperExplicitFail }}
+  explicitFailValue: {{ include "helpers.explicitFail" . | quote }}
+  {{- end }}

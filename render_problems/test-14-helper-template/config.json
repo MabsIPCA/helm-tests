@@ -1,0 +1,25 @@
+{
+  "testNumber": 14,
+  "testName": "Helper Template Errors",
+  "chartName": "test-14-helper-template",
+  "testFunctions": [
+    {"name": "testHelperNilPointer", "func": "helperNilPointer"},
+    {"name": "testHelperRequired", "func": "helperRequired"},
+    {"name": "testHelperRangeOverScalar", "func": "helperRangeOverScalar"},
+    {"name": "testHelperDivZero", "func": "helperDivZero"},
+    {"name": "testHelperMissingInclude", "func": "helperMissingInclude"},
+    {"name": "testHelperExplicitFail", "func": "helperExplicitFail"}
+  ],
+  "dataTypes": [
+    "default"
+  ],
+  "errorPatterns": [
+    "nil pointer evaluating",
+    "missingRequiredField is required",
+    "range can't iterate over",
+    "integer divide by zero",
+    "division by zero",
+    "no template \"[^\"]+\" associated",
+    "This helper explicitly fails"
+  ]
+}

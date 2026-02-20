@@ -1,0 +1,26 @@
+{
+  "testNumber": 15,
+  "testName": "tpl Function Errors",
+  "chartName": "test-15-tpl-function",
+  "testFunctions": [
+    {"name": "testTplSyntaxError", "func": "tplSyntaxError"},
+    {"name": "testTplNilPointer", "func": "tplNilPointer"},
+    {"name": "testTplRequired", "func": "tplRequired"},
+    {"name": "testTplDivZero", "func": "tplDivZero"},
+    {"name": "testTplTypeMismatch", "func": "tplTypeMismatch"},
+    {"name": "testTplInvalidFunc", "func": "tplInvalidFunc"},
+    {"name": "testTplFail", "func": "tplFail"}
+  ],
+  "dataTypes": [
+    "default"
+  ],
+  "errorPatterns": [
+    "unclosed action",
+    "nil pointer evaluating",
+    "tpl required value",
+    "integer divide by zero",
+    "range can't iterate over",
+    "function \"[^\"]+\" not defined",
+    "tpl triggered failure"
+  ]
+}

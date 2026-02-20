@@ -1,21 +1,23 @@
-# Values file for tpl function test
+# Values file for tpl function error tests
+
+# Test flags for tpl functions
 testTplSyntaxError: false
-testTplUndefinedVar: false
+testTplNilPointer: false
 testTplRequired: false
 testTplDivZero: false
 testTplTypeMismatch: false
-testTplNilPointer: false
 testTplInvalidFunc: false
-testTplMissingTemplate: false
 testTplFail: false
-testTplNested: false
+
+# Template strings for tpl function tests
 tplSyntaxError: "{{ .Values.someValue"
-tplUndefinedVar: "{{ .Values.nonExistent.nested.value }}"
+tplNilPointer: "{{ .Values.nilValue.nested.field }}"
 tplRequired: "{{ required \"tpl required value\" .Values.missingTplValue }}"
 tplDivZero: "{{ div 100 0 }}"
 tplTypeMismatch: "{{ range .Values.port }}item{{ end }}"
-tplNilPointer: "{{ .Values.nilValue.nested.field }}"
 tplInvalidFunc: "{{ invalidFunc \"arg\" }}"
-tplMissingTemplate: "{{ include \"missing.template\" . }}"
 tplFail: "{{ fail \"tpl triggered failure\" }}"
-tplNested: "{{ .Values.tplSyntaxError }}"
+
+# Test data
+nilValue: null
+port: 8080

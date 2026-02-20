@@ -1,11 +1,14 @@
-# Values file for helper template test
-testHelperUndefinedVar: false
-testHelperSyntaxError: false
-testHelperTypeMismatch: false
-testHelperDivZero: false
-testHelperRequired: false
-testHelperNilPointer: false
-testHelperMissingInclude: false
-testHelperInvalidFunc: false
-# Missing: helperRequiredValue
+# Values file for helper template error tests
+
+# Test data values
 nilHelper: null
+port: 8080
+# missingRequiredField: intentionally not defined
+
+# Test flags for helper template error functions
+testHelperNilPointer: false
+testHelperRequired: false
+testHelperRangeOverScalar: false
+testHelperDivZero: false
+testHelperMissingInclude: false
+testHelperExplicitFail: false

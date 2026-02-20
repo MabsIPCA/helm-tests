@@ -1,6 +1,6 @@
-# Test 6: Regex Operation Errors
+# Test 9: Regex Operation Errors
 
-**Generated:** 2026-02-20 01:17:42
+**Generated:** 2026-02-20 01:47:53
 
 **Total:** 72 | **Passed:** 12 (16.7%) | **Failed:** 60 (83.3%)
 
