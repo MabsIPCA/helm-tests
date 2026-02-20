@@ -1,0 +1,43 @@
+{
+  "testNumber": 17,
+  "testName": "Math Operation Errors",
+  "chartName": "test-math",
+  "testFunctions": [
+    {"name": "testAdd", "func": "add"},
+    {"name": "testAdd1", "func": "add1"},
+    {"name": "testSub", "func": "sub"},
+    {"name": "testDiv", "func": "div"},
+    {"name": "testMod", "func": "mod"},
+    {"name": "testMul", "func": "mul"},
+    {"name": "testMax", "func": "max"},
+    {"name": "testMin", "func": "min"},
+    {"name": "testLen", "func": "len"},
+    {"name": "testAddf", "func": "addf"},
+    {"name": "testAdd1f", "func": "add1f"},
+    {"name": "testSubf", "func": "subf"},
+    {"name": "testDivf", "func": "divf"},
+    {"name": "testMulf", "func": "mulf"},
+    {"name": "testMaxf", "func": "maxf"},
+    {"name": "testMinf", "func": "minf"},
+    {"name": "testFloor", "func": "floor"},
+    {"name": "testCeil", "func": "ceil"},
+    {"name": "testRound", "func": "round"}
+  ],
+  "dataTypes": [
+    "nilValue",
+    "stringValue",
+    "numberValue",
+    "boolValue",
+    "listValue",
+    "dictValue"
+  ],
+  "errorPatterns": [
+    "wrong type[^;]*; expected [^;]+; got [^\\s]+",
+    "invalid value[^;]*; expected [^\\s]+",
+    "error calling \\w+: [^\\n]+",
+    "cannot convert[^\\n]+",
+    "error converting[^\\n]+",
+    "len of type[^\\n]+"
+  ]
+}
+

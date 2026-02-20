@@ -1,0 +1,31 @@
+{
+  "testNumber": 22,
+  "testName": "Semver Function Errors",
+  "chartName": "test-semver",
+  "testFunctions": [
+    {"name": "testSemver", "func": "semver"},
+    {"name": "testSemverCompare", "func": "semverCompare"},
+    {"name": "testSemverCompareBasic", "func": "semverCompareBasic"},
+    {"name": "testSemverComparePrerelease", "func": "semverComparePrerelease"},
+    {"name": "testSemverCompareHyphen", "func": "semverCompareHyphen"},
+    {"name": "testSemverCompareWildcard", "func": "semverCompareWildcard"},
+    {"name": "testSemverCompareTilde", "func": "semverCompareTilde"},
+    {"name": "testSemverCompareCaret", "func": "semverCompareCaret"}
+  ],
+  "dataTypes": [
+    "nilValue",
+    "stringValue",
+    "numberValue",
+    "boolValue",
+    "listValue",
+    "dictValue"
+  ],
+  "errorPatterns": [
+    "wrong type[^;]*; expected [^;]+; got [^\\s]+",
+    "invalid value[^;]*; expected [^\\s]+",
+    "error calling \\w+: [^\\n]+",
+    "Invalid Semantic Version[^\\n]+",
+    "improper constraint[^\\n]+"
+  ]
+}
+

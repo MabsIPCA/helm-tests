@@ -1,7 +1,0 @@
-apiVersion: v2
-name: test-06e-invalid-range
-description: Test for invalid range syntax error (missing comma)
-type: application
-version: 0.1.0
-appVersion: "1.0"
-

@@ -1,0 +1,25 @@
+{
+  "testNumber": 4,
+  "testName": "Missing Template Errors",
+  "chartName": "test-missing",
+  "testFunctions": [
+    {"name": "testMissingInclude", "func": "missingInclude"},
+    {"name": "testMissingTemplate", "func": "missingTemplate"},
+    {"name": "testMissingSubchart", "func": "missingSubchart"}
+  ],
+  "dataTypes": [
+    "nilValue",
+    "stringValue",
+    "numberValue",
+    "boolValue",
+    "listValue",
+    "dictValue"
+  ],
+  "errorPatterns": [
+    "error calling include: template: no template",
+    "is not defined",
+    "no template .+ associated with template",
+    "error calling \\w+: [^\\n]+"
+  ]
+}
+
