@@ -1,0 +1,11 @@
+{
+  "testFunctions": [
+    {"name": "testIndexOutOfRange", "func": "indexOutOfRange"}
+  ],
+  "errorPatterns": [
+    "error calling \\w+: [^\\n]+",
+    "index out of range",
+    "index of untyped nil",
+    "can't index"
+  ]
+}

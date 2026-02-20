@@ -2,7 +2,7 @@
 
 ## Overview
 
-This directory contains 19 separate Helm charts, each designed to test a specific type of Helm template rendering error in isolation. This structure allows for precise identification and testing of different failure scenarios.
+This directory contains 18 separate Helm charts, each designed to test a specific type of Helm template rendering error in isolation. This structure allows for precise identification and testing of different failure scenarios.
 
 ## Chart Structure
 
@@ -45,15 +45,6 @@ test-XX-test-name/
 
 **Enable tests by setting**: `testRangeNumber`, `testMathString`, `testPrintfType`, `testRangeString` to `true`
 
-### 04. test-04-index-out-of-range
-**Description**: Test for index out of range errors  
-**Tests**:
-- Index on empty list
-- Index beyond list bounds
-- Negative index
-- Index on nil list
-
-**Enable tests by setting**: `testIndexEmpty`, `testIndexBeyond`, `testIndexNegative`, `testIndexNil` to `true`
 
 ### 05. test-05-nil-pointer
 **Description**: Test for nil pointer errors  
@@ -66,15 +57,20 @@ test-XX-test-name/
 **Enable tests by setting**: `testNilMap`, `testNilNested`, `testNilPipeline`, `testNilBase64` to `true`
 
 ### 06. test-06-template-syntax-error
-**Description**: Test for template syntax errors  
-**Tests**:
-- Unclosed template action
-- Invalid function name
-- Wrong number of arguments
-- Undefined variable reference
-- Invalid range syntax
+**Description**: Test for template syntax errors (each subtest is a separate chart)  
+**Subtests**:
+- `unclosed-action` — Unclosed template action
+- `invalid-function` — Invalid function name
+- `wrong-args` — Wrong number of arguments
+- `undefined-var` — Undefined variable reference
+- `invalid-range` — Invalid range syntax
+- `wrong-pipeline-type` — Piping wrong type to a function
+- `field-on-non-map` — Accessing field on non-map data
+- `range-over-scalar` — Range over a scalar value
+- `index-out-of-range` — Index access beyond bounds
+- `len-on-scalar` — Calling len on a scalar type
 
-**Enable tests by setting**: `testUnclosedAction`, `testInvalidFunction`, `testWrongArgs`, `testUndefinedVar`, `testInvalidRange` to `true`
+**Enable tests by setting**: `testUnclosedAction`, `testInvalidFunction`, `testWrongArgs`, `testUndefinedVar`, `testInvalidRange`, `testWrongPipelineType`, `testFieldOnNonMap`, `testRangeOverScalar`, `testIndexOutOfRange`, `testLenOnScalar` to `true`
 
 ### 07. test-07-missing-template
 **Description**: Test for missing template errors  

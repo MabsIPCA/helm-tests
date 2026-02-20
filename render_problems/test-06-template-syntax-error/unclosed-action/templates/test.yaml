@@ -1,0 +1,9 @@
+# Fails: Unclosed template action (missing closing braces)
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-unclosed-action
+data:
+  {{- if .Values.testUnclosedAction }}
+  badTemplate: {{ .Values.myValue
+  {{- end }}

@@ -1,0 +1,9 @@
+# Fails: Calling a function that does not exist
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-invalid-function
+data:
+  {{- if .Values.testInvalidFunction }}
+  badFunction: {{ nonExistentFunction .Values.myValue }}
+  {{- end }}

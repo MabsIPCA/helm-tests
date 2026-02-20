@@ -1,0 +1,7 @@
+apiVersion: v2
+name: test-06a-unclosed-action
+description: Test for unclosed template action syntax error
+type: application
+version: 0.1.0
+appVersion: "1.0"
+

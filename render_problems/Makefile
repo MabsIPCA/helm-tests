@@ -24,7 +24,7 @@ help:
 	@echo "Helm Template Error Tests"
 	@echo ""
 	@echo "Usage:"
-	@echo "  make          - Run all tests (13, 14, 15, 16)"
+	@echo "  make          - Run all tests"
 	@echo "  make test     - Run all tests"
 	@echo "  make build    - Build the test runner executable"
 	@echo "  make clean    - Remove generated executables"

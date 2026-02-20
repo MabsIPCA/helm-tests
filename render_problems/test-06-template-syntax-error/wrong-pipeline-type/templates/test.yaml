@@ -1,0 +1,9 @@
+# Fails: Piping a number to a string function
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-wrong-pipeline-type
+data:
+  {{- if .Values.testWrongPipelineType }}
+  wrongPipelineResult: {{ upper .Values.myNumber | quote }}
+  {{- end }}

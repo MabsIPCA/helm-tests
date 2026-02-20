@@ -1,0 +1,3 @@
+# Values file for unclosed action syntax error test
+testUnclosedAction: false
+myValue: "hello"

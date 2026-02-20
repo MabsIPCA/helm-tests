@@ -1,0 +1,9 @@
+# Fails: Referencing an undefined variable
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-undefined-var
+data:
+  {{- if .Values.testUndefinedVar }}
+  undefined: {{ $undefinedVariable }}
+  {{- end }}

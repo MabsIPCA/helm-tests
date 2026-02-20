@@ -1,0 +1,9 @@
+{
+  "testFunctions": [
+    {"name": "testWrongPipelineType", "func": "wrongPipelineType"}
+  ],
+  "errorPatterns": [
+    "wrong type[^;]*; expected [^;]+; got [^\\s]+",
+    "invalid value[^;]*; expected [^\\s]+"
+  ]
+}

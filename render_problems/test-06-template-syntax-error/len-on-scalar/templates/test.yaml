@@ -1,0 +1,9 @@
+# Fails: Calling len on a non-collection scalar type
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-len-on-scalar
+data:
+  {{- if .Values.testLenOnScalar }}
+  lenOnScalarResult: {{ len .Values.myNumber }}
+  {{- end }}

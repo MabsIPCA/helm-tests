@@ -1,0 +1,5 @@
+# Values file for invalid range syntax error test
+testInvalidRange: false
+myList:
+  - one
+  - two

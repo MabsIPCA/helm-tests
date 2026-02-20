@@ -16,11 +16,6 @@ data:
   {{- if .Values.testPrintln }}
   printlnResult: {{ println $testData | quote }}
   {{- end }}
-  # Test: printf (generic)
-  {{- if .Values.testPrintf }}
-  printfResult: {{ printf .Values.invalidFormat $testData | quote }}
-  {{- end }}
-
   # ==========================================
   # Printf format specifiers
   # ==========================================
@@ -100,29 +95,69 @@ data:
   # ==========================================
   # String manipulation functions
   # ==========================================
-  # Test: repeat
-  {{- if .Values.testRepeat }}
-  repeatResult: {{ repeat .Values.negativeRepeat $testData | quote }}
+  # Test: repeat (positive)
+  {{- if .Values.testRepeatPositive }}
+  repeatPositiveResult: {{ repeat (int .Values.positiveInt) $testData | quote }}
   {{- end }}
-  # Test: substr
-  {{- if .Values.testSubstr }}
-  substrResult: {{ substr .Values.negativeStart .Values.invalidEnd $testData | quote }}
+  # Test: repeat (zero)
+  {{- if .Values.testRepeatZero }}
+  repeatZeroResult: {{ repeat (int .Values.zeroInt) $testData | quote }}
+  {{- end }}
+  # Test: repeat (negative)
+  {{- if .Values.testRepeatNegative }}
+  repeatNegativeResult: {{ repeat (int .Values.negativeInt) $testData | quote }}
+  {{- end }}
+  # Test: substr (positive)
+  {{- if .Values.testSubstrPositive }}
+  substrPositiveResult: {{ substr 0 (int .Values.positiveInt) $testData | quote }}
+  {{- end }}
+  # Test: substr (zero)
+  {{- if .Values.testSubstrZero }}
+  substrZeroResult: {{ substr 0 (int .Values.zeroInt) $testData | quote }}
+  {{- end }}
+  # Test: substr (negative)
+  {{- if .Values.testSubstrNegative }}
+  substrNegativeResult: {{ substr (int .Values.negativeInt) 0 $testData | quote }}
   {{- end }}
   # Test: nospace
   {{- if .Values.testNospace }}
   nospaceResult: {{ nospace $testData | quote }}
   {{- end }}
-  # Test: trunc
-  {{- if .Values.testTrunc }}
-  truncResult: {{ trunc .Values.negativeTrunc $testData | quote }}
+  # Test: trunc (positive)
+  {{- if .Values.testTruncPositive }}
+  truncPositiveResult: {{ trunc (int .Values.positiveInt) $testData | quote }}
   {{- end }}
-  # Test: abbrev
-  {{- if .Values.testAbbrev }}
-  abbrevResult: {{ abbrev .Values.shortAbbrevLen $testData | quote }}
+  # Test: trunc (zero)
+  {{- if .Values.testTruncZero }}
+  truncZeroResult: {{ trunc (int .Values.zeroInt) $testData | quote }}
   {{- end }}
-  # Test: abbrevboth
-  {{- if .Values.testAbbrevboth }}
-  abbrevbothResult: {{ abbrevboth .Values.shortAbbrevLen .Values.shortAbbrevLen $testData | quote }}
+  # Test: trunc (negative)
+  {{- if .Values.testTruncNegative }}
+  truncNegativeResult: {{ trunc (int .Values.negativeInt) $testData | quote }}
+  {{- end }}
+  # Test: abbrev (positive)
+  {{- if .Values.testAbbrevPositive }}
+  abbrevPositiveResult: {{ abbrev (int .Values.positiveInt) $testData | quote }}
+  {{- end }}
+  # Test: abbrev (zero)
+  {{- if .Values.testAbbrevZero }}
+  abbrevZeroResult: {{ abbrev (int .Values.zeroInt) $testData | quote }}
+  {{- end }}
+  # Test: abbrev (negative)
+  {{- if .Values.testAbbrevNegative }}
+  abbrevNegativeResult: {{ abbrev (int .Values.negativeInt) $testData | quote }}
+  {{- end }}
+  # Test: abbrevboth (positive)
+  {{- if .Values.testAbbrevbothPositive }}
+  abbrevbothPositiveResult: {{ abbrevboth (int .Values.positiveInt) (int .Values.positiveInt) $testData | quote }}
+  {{- end }}
+  # Test: abbrevboth (zero)
+  {{- if .Values.testAbbrevbothZero }}
+  abbrevbothZeroResult: {{ abbrevboth (int .Values.zeroInt) (int .Values.zeroInt) $testData | quote }}
+  {{- end }}
+  # Test: abbrevboth (negative)
+  {{- if .Values.testAbbrevbothNegative }}
+  abbrevbothNegativeResult: {{ abbrevboth (int .Values.negativeInt) (int .Values.negativeInt) $testData | quote }}
   {{- end }}
   # Test: initials
   {{- if .Values.testInitials }}
@@ -132,33 +167,81 @@ data:
   # ==========================================
   # Random string functions
   # ==========================================
-  # Test: randAlphaNum
-  {{- if .Values.testRandAlphaNum }}
-  randAlphaNumResult: {{ randAlphaNum .Values.negativeRepeat | quote }}
+  # Test: randAlphaNum (positive)
+  {{- if .Values.testRandAlphaNumPositive }}
+  randAlphaNumPositiveResult: {{ randAlphaNum (int .Values.positiveInt) | quote }}
   {{- end }}
-  # Test: randAlpha
-  {{- if .Values.testRandAlpha }}
-  randAlphaResult: {{ randAlpha .Values.negativeRepeat | quote }}
+  # Test: randAlphaNum (zero)
+  {{- if .Values.testRandAlphaNumZero }}
+  randAlphaNumZeroResult: {{ randAlphaNum (int .Values.zeroInt) | quote }}
   {{- end }}
-  # Test: randNumeric
-  {{- if .Values.testRandNumeric }}
-  randNumericResult: {{ randNumeric .Values.negativeRepeat | quote }}
+  # Test: randAlphaNum (negative)
+  {{- if .Values.testRandAlphaNumNegative }}
+  randAlphaNumNegativeResult: {{ randAlphaNum (int .Values.negativeInt) | quote }}
   {{- end }}
-  # Test: randAscii
-  {{- if .Values.testRandAscii }}
-  randAsciiResult: {{ randAscii .Values.negativeRepeat | quote }}
+  # Test: randAlpha (positive)
+  {{- if .Values.testRandAlphaPositive }}
+  randAlphaPositiveResult: {{ randAlpha (int .Values.positiveInt) | quote }}
+  {{- end }}
+  # Test: randAlpha (zero)
+  {{- if .Values.testRandAlphaZero }}
+  randAlphaZeroResult: {{ randAlpha (int .Values.zeroInt) | quote }}
+  {{- end }}
+  # Test: randAlpha (negative)
+  {{- if .Values.testRandAlphaNegative }}
+  randAlphaNegativeResult: {{ randAlpha (int .Values.negativeInt) | quote }}
+  {{- end }}
+  # Test: randNumeric (positive)
+  {{- if .Values.testRandNumericPositive }}
+  randNumericPositiveResult: {{ randNumeric (int .Values.positiveInt) | quote }}
+  {{- end }}
+  # Test: randNumeric (zero)
+  {{- if .Values.testRandNumericZero }}
+  randNumericZeroResult: {{ randNumeric (int .Values.zeroInt) | quote }}
+  {{- end }}
+  # Test: randNumeric (negative)
+  {{- if .Values.testRandNumericNegative }}
+  randNumericNegativeResult: {{ randNumeric (int .Values.negativeInt) | quote }}
+  {{- end }}
+  # Test: randAscii (positive)
+  {{- if .Values.testRandAsciiPositive }}
+  randAsciiPositiveResult: {{ randAscii (int .Values.positiveInt) | quote }}
+  {{- end }}
+  # Test: randAscii (zero)
+  {{- if .Values.testRandAsciiZero }}
+  randAsciiZeroResult: {{ randAscii (int .Values.zeroInt) | quote }}
+  {{- end }}
+  # Test: randAscii (negative)
+  {{- if .Values.testRandAsciiNegative }}
+  randAsciiNegativeResult: {{ randAscii (int .Values.negativeInt) | quote }}
   {{- end }}
 
   # ==========================================
   # Wrap functions
   # ==========================================
-  # Test: wrap
-  {{- if .Values.testWrap }}
-  wrapResult: {{ wrap .Values.negativeWrapWidth $testData | quote }}
+  # Test: wrap (positive)
+  {{- if .Values.testWrapPositive }}
+  wrapPositiveResult: {{ wrap (int .Values.positiveInt) $testData | quote }}
   {{- end }}
-  # Test: wrapWith
-  {{- if .Values.testWrapWith }}
-  wrapWithResult: {{ wrapWith .Values.negativeWrapWidth "\n" $testData | quote }}
+  # Test: wrap (zero)
+  {{- if .Values.testWrapZero }}
+  wrapZeroResult: {{ wrap (int .Values.zeroInt) $testData | quote }}
+  {{- end }}
+  # Test: wrap (negative)
+  {{- if .Values.testWrapNegative }}
+  wrapNegativeResult: {{ wrap (int .Values.negativeInt) $testData | quote }}
+  {{- end }}
+  # Test: wrapWith (positive)
+  {{- if .Values.testWrapWithPositive }}
+  wrapWithPositiveResult: {{ wrapWith (int .Values.positiveInt) "\n" $testData | quote }}
+  {{- end }}
+  # Test: wrapWith (zero)
+  {{- if .Values.testWrapWithZero }}
+  wrapWithZeroResult: {{ wrapWith (int .Values.zeroInt) "\n" $testData | quote }}
+  {{- end }}
+  # Test: wrapWith (negative)
+  {{- if .Values.testWrapWithNegative }}
+  wrapWithNegativeResult: {{ wrapWith (int .Values.negativeInt) "\n" $testData | quote }}
   {{- end }}
 
   # ==========================================
@@ -200,13 +283,29 @@ data:
   # ==========================================
   # Indentation functions
   # ==========================================
-  # Test: indent
-  {{- if .Values.testIndent }}
-  indentResult: {{ indent .Values.negativeIndent $testData | quote }}
+  # Test: indent (positive)
+  {{- if .Values.testIndentPositive }}
+  indentPositiveResult: {{ indent (int .Values.positiveInt) $testData | quote }}
   {{- end }}
-  # Test: nindent
-  {{- if .Values.testNindent }}
-  nindentResult: {{ nindent .Values.negativeIndent $testData | quote }}
+  # Test: indent (zero)
+  {{- if .Values.testIndentZero }}
+  indentZeroResult: {{ indent (int .Values.zeroInt) $testData | quote }}
+  {{- end }}
+  # Test: indent (negative)
+  {{- if .Values.testIndentNegative }}
+  indentNegativeResult: {{ indent (int .Values.negativeInt) $testData | quote }}
+  {{- end }}
+  # Test: nindent (positive)
+  {{- if .Values.testNindentPositive }}
+  nindentPositiveResult: {{ nindent (int .Values.positiveInt) $testData | quote }}
+  {{- end }}
+  # Test: nindent (zero)
+  {{- if .Values.testNindentZero }}
+  nindentZeroResult: {{ nindent (int .Values.zeroInt) $testData | quote }}
+  {{- end }}
+  # Test: nindent (negative)
+  {{- if .Values.testNindentNegative }}
+  nindentNegativeResult: {{ nindent (int .Values.negativeInt) $testData | quote }}
   {{- end }}
 
   # ==========================================
@@ -220,9 +319,17 @@ data:
   # ==========================================
   # Pluralization
   # ==========================================
-  # Test: plural
-  {{- if .Values.testPlural }}
-  pluralResult: {{ plural "item" "items" .Values.negativeRepeat | quote }}
+  # Test: plural (positive)
+  {{- if .Values.testPluralPositive }}
+  pluralPositiveResult: {{ plural "item" "items" (int .Values.positiveInt) | quote }}
+  {{- end }}
+  # Test: plural (zero)
+  {{- if .Values.testPluralZero }}
+  pluralZeroResult: {{ plural "item" "items" (int .Values.zeroInt) | quote }}
+  {{- end }}
+  # Test: plural (negative)
+  {{- if .Values.testPluralNegative }}
+  pluralNegativeResult: {{ plural "item" "items" (int .Values.negativeInt) | quote }}
   {{- end }}
 
   # ==========================================

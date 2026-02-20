@@ -1,19 +1,30 @@
 # Test: Missing template/include - fails when template doesn't exist
+{{- $testData := index .Values .Values.testDataType }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-missing-template-test
 data:
-  # Fails: Including non-existent template
+  # ==========================================
+  # Include non-existent template
+  # ==========================================
+  # Test: missingInclude - including a template that does not exist
   {{- if .Values.testMissingInclude }}
-  includedValue: {{ include "non.existent.template" . | quote }}
-  {{- end }}
-  # Fails: Using non-existent named template
-  {{- if .Values.testMissingTemplate }}
-  templateValue: {{ template "undefined.template" . }}
-  {{- end }}
-  # Fails: Including helper from missing subchart
-  {{- if .Values.testMissingSubchart }}
-  subchartHelper: {{ include "missing-subchart.fullname" . }}
+  includedValue: {{ include "non.existent.template" $testData | quote }}
   {{- end }}
 
+  # ==========================================
+  # Named template reference
+  # ==========================================
+  # Test: missingTemplate - using template directive for undefined template
+  {{- if .Values.testMissingTemplate }}
+  templateValue: {{ template "undefined.template" $testData }}
+  {{- end }}
+
+  # ==========================================
+  # Missing subchart helper
+  # ==========================================
+  # Test: missingSubchart - including helper from non-existent subchart
+  {{- if .Values.testMissingSubchart }}
+  subchartHelper: {{ include "missing-subchart.fullname" $testData | quote }}
+  {{- end }}

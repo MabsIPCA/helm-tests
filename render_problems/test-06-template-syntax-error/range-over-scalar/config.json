@@ -1,0 +1,8 @@
+{
+  "testFunctions": [
+    {"name": "testRangeOverScalar", "func": "rangeOverScalar"}
+  ],
+  "errorPatterns": [
+    "range can't iterate over"
+  ]
+}

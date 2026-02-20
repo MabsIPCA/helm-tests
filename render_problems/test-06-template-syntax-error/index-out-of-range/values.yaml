@@ -1,0 +1,6 @@
+# Values file for index out of range test
+testIndexOutOfRange: false
+myList:
+  - one
+  - two
+  - three

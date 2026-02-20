@@ -1,0 +1,10 @@
+{
+  "testFunctions": [
+    {"name": "testFieldOnNonMap", "func": "fieldOnNonMap"}
+  ],
+  "errorPatterns": [
+    "error calling \\w+: [^\\n]+",
+    "cannot index",
+    "can't index"
+  ]
+}

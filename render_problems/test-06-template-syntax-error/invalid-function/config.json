@@ -1,0 +1,9 @@
+{
+  "testFunctions": [
+    {"name": "testInvalidFunction", "func": "invalidFunction"}
+  ],
+  "errorPatterns": [
+    "parse error[^\\n]*: [^\\n]+",
+    "function .+ not defined"
+  ]
+}

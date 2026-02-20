@@ -1,19 +1,46 @@
-# Test: Division by zero - fails on math errors
+# Test: Division by zero - math errors with different data types
+{{- $testData := index .Values .Values.testDataType }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-division-test
 data:
-  # Fails: Division by zero
-  {{- if .Values.testDivZero }}
-  divisionResult: {{ div .Values.number 0 | quote }}
-  {{- end }}
-  # Fails: Modulo by zero
-  {{- if .Values.testModZero }}
-  moduloResult: {{ mod .Values.number 0 | quote }}
-  {{- end }}
-  # Fails: Division with zero dividend and divisor
-  {{- if .Values.testBothZero }}
-  bothZero: {{ div 0 0 | quote }}
+  # ==========================================
+  # Division by zero
+  # ==========================================
+  # Test: divByZero - dividing data by zero
+  {{- if .Values.testDivByZero }}
+  divByZeroResult: {{ div $testData 0 | quote }}
   {{- end }}
 
+  # ==========================================
+  # Modulo by zero
+  # ==========================================
+  # Test: modByZero - modulo data by zero
+  {{- if .Values.testModByZero }}
+  modByZeroResult: {{ mod $testData 0 | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Division of data by data (self-division)
+  # ==========================================
+  # Test: divByData - dividing a constant by data (zero data = div by zero)
+  {{- if .Values.testDivByData }}
+  divByDataResult: {{ div 100 $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Modulo of data by data
+  # ==========================================
+  # Test: modByData - modulo a constant by data (zero data = mod by zero)
+  {{- if .Values.testModByData }}
+  modByDataResult: {{ mod 100 $testData | quote }}
+  {{- end }}
+
+  # ==========================================
+  # Division with data as dividend
+  # ==========================================
+  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)
+  {{- if .Values.testDivDataByTwo }}
+  divDataByTwoResult: {{ div $testData 2 | quote }}
+  {{- end }}

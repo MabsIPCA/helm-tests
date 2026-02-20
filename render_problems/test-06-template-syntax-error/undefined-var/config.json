@@ -1,0 +1,9 @@
+{
+  "testFunctions": [
+    {"name": "testUndefinedVar", "func": "undefinedVar"}
+  ],
+  "errorPatterns": [
+    "parse error[^\\n]*: [^\\n]+",
+    "undefined variable"
+  ]
+}

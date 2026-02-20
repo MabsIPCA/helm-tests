@@ -1,0 +1,11 @@
+# Fails: Attempting to range over a non-iterable scalar value
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-range-over-scalar
+data:
+  {{- if .Values.testRangeOverScalar }}
+  {{- range .Values.myNumber }}
+  rangeItem: {{ . | quote }}
+  {{- end }}
+  {{- end }}

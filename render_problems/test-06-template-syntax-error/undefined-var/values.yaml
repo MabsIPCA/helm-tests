@@ -1,0 +1,2 @@
+# Values file for undefined variable syntax error test
+testUndefinedVar: false

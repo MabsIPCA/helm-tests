@@ -1,0 +1,9 @@
+# Fails: Wrong number of arguments to a function
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-wrong-args
+data:
+  {{- if .Values.testWrongArgs }}
+  wrongArgs: {{ upper .Values.myValue "extra" "args" }}
+  {{- end }}

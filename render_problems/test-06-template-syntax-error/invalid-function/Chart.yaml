@@ -1,0 +1,7 @@
+apiVersion: v2
+name: test-06b-invalid-function
+description: Test for invalid function name syntax error
+type: application
+version: 0.1.0
+appVersion: "1.0"
+

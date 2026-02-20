@@ -1,0 +1,9 @@
+# Fails: Accessing a field on non-map data via index
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-field-on-non-map
+data:
+  {{- if .Values.testFieldOnNonMap }}
+  fieldOnNonMapResult: {{ index .Values.myString "nonExistentField" | quote }}
+  {{- end }}

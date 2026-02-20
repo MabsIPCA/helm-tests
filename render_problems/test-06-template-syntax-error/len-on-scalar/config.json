@@ -1,0 +1,9 @@
+{
+  "testFunctions": [
+    {"name": "testLenOnScalar", "func": "lenOnScalar"}
+  ],
+  "errorPatterns": [
+    "error calling \\w+: [^\\n]+",
+    "len of type"
+  ]
+}

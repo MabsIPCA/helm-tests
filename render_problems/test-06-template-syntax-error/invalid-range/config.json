@@ -1,0 +1,10 @@
+{
+  "testFunctions": [
+    {"name": "testInvalidRange", "func": "invalidRange"}
+  ],
+  "errorPatterns": [
+    "parse error[^\\n]*: [^\\n]+",
+    "undefined variable",
+    "expected"
+  ]
+}

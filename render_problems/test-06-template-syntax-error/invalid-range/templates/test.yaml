@@ -1,0 +1,11 @@
+# Fails: Invalid range syntax (missing comma between $key and $value)
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-invalid-range
+data:
+  {{- if .Values.testInvalidRange }}
+  {{- range $key $value .Values.myList }}
+  item: {{ $value }}
+  {{- end }}
+  {{- end }}

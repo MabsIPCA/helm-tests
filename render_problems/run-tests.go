@@ -21,12 +21,14 @@ type TestConfig struct {
 	TestFunctions []TestFunction `json:"testFunctions"`
 	DataTypes     []string       `json:"dataTypes"`
 	ErrorPatterns []string       `json:"errorPatterns"`
+	SubDirs       []string       `json:"subDirs,omitempty"`
 }
 
 // TestFunction defines a function to test
 type TestFunction struct {
-	Name string `json:"name"`
-	Func string `json:"func"`
+	Name   string `json:"name"`
+	Func   string `json:"func"`
+	SubDir string `json:"subDir,omitempty"`
 }
 
 // TestResult holds the result of a single test
@@ -39,6 +41,9 @@ type TestResult struct {
 var testDirs = []string{
 	"test-01-logic-default-functions",
 	"test-05-nil-pointer",
+	"test-06-template-syntax-error",
+	"test-07-missing-template",
+	"test-08-division-by-zero",
 	"test-09-invalid-regex",
 	"test-10-file-read-error",
 	"test-11-invalid-types",
@@ -68,14 +73,74 @@ func loadConfig(testDir string) (*TestConfig, error) {
 	}
 
 	config.DirName = filepath.Base(testDir)
+
+	// If subDirs are specified, load each sub-dir config and merge
+	if len(config.SubDirs) > 0 {
+		dataTypeSet := make(map[string]bool)
+		for _, dt := range config.DataTypes {
+			dataTypeSet[dt] = true
+		}
+		errorPatternSet := make(map[string]bool)
+		for _, ep := range config.ErrorPatterns {
+			errorPatternSet[ep] = true
+		}
+
+		for _, subDir := range config.SubDirs {
+			subConfigPath := filepath.Join(testDir, subDir, "config.json")
+			subData, err := os.ReadFile(subConfigPath)
+			if err != nil {
+				return nil, fmt.Errorf("failed to read sub-config %s: %v", subDir, err)
+			}
+
+			var subConfig TestConfig
+			if err := json.Unmarshal(subData, &subConfig); err != nil {
+				return nil, fmt.Errorf("failed to parse sub-config %s: %v", subDir, err)
+			}
+
+			// Tag each function with its subDir and merge
+			for i := range subConfig.TestFunctions {
+				subConfig.TestFunctions[i].SubDir = subDir
+			}
+			config.TestFunctions = append(config.TestFunctions, subConfig.TestFunctions...)
+
+			// Merge dataTypes
+			for _, dt := range subConfig.DataTypes {
+				if !dataTypeSet[dt] {
+					config.DataTypes = append(config.DataTypes, dt)
+					dataTypeSet[dt] = true
+				}
+			}
+
+			// Merge errorPatterns
+			for _, ep := range subConfig.ErrorPatterns {
+				if !errorPatternSet[ep] {
+					config.ErrorPatterns = append(config.ErrorPatterns, ep)
+					errorPatternSet[ep] = true
+				}
+			}
+		}
+	}
+
+	// Default to a single "default" data type if none are specified
+	if len(config.DataTypes) == 0 {
+		config.DataTypes = []string{"default"}
+	}
+
 	return &config, nil
 }
 
-func runTest(testDir, chartName, funcName, dataType string) TestResult {
-	cmd := exec.Command("helm", "template", chartName, ".",
-		"--set", fmt.Sprintf("%s=true", funcName),
-		"--set", fmt.Sprintf("testDataType=%s", dataType))
-	cmd.Dir = testDir
+func runTest(testDir, chartName, funcName, dataType, subDir string) TestResult {
+	runDir := testDir
+	if subDir != "" {
+		runDir = filepath.Join(testDir, subDir)
+		chartName = subDir
+	}
+	args := []string{"template", chartName, ".", "--set", fmt.Sprintf("%s=true", funcName)}
+	if dataType != "default" {
+		args = append(args, "--set", fmt.Sprintf("testDataType=%s", dataType))
+	}
+	cmd := exec.Command("helm", args...)
+	cmd.Dir = runDir
 
 	output, err := cmd.CombinedOutput()
 	if err != nil {
@@ -206,7 +271,7 @@ func runTestSuite(config *TestConfig, baseDir string) (int, int, error) {
 			defer wg.Done()
 			funcResults := make(map[string]TestResult)
 			for _, dt := range config.DataTypes {
-				funcResults[dt] = runTest(testDir, config.ChartName, tf.Name, dt)
+				funcResults[dt] = runTest(testDir, config.ChartName, tf.Name, dt, tf.SubDir)
 			}
 			mu.Lock()
 			results[tf.Func] = funcResults

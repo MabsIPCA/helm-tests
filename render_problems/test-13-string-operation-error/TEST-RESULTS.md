@@ -1,8 +1,8 @@
 # Test 13: String Operation Errors
 
-**Generated:** 2026-02-19 19:53:08
+**Generated:** 2026-02-20 00:44:10
 
-**Total:** 300 | **Passed:** 110 (36.7%) | **Failed:** 190 (63.3%)
+**Total:** 462 | **Passed:** 224 (48.5%) | **Failed:** 238 (51.5%)
 
 ## Test Matrix
 
@@ -10,7 +10,6 @@
 |----------|------|------|------|------|------|------|
 | `print` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | `println` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `printf` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | `printf-%s` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | `printf-%d` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | `printf-%f` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -27,29 +26,57 @@
 | `upper` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `title` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `untitle` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| `repeat` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `substr` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| `repeat-positive` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `repeat-zero` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `repeat-negative` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| `substr-positive` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `substr-zero` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `substr-negative` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `nospace` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| `trunc` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `abbrev` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `abbrevboth` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| `trunc-positive` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `trunc-zero` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `trunc-negative` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `abbrev-positive` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `abbrev-zero` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `abbrev-negative` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `abbrevboth-positive` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `abbrevboth-zero` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `abbrevboth-negative` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `initials` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| `randAlphaNum` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `randAlpha` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `randNumeric` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `randAscii` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `wrap` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `wrapWith` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| `randAlphaNum-positive` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `randAlphaNum-zero` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `randAlphaNum-negative` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `randAlpha-positive` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `randAlpha-zero` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `randAlpha-negative` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `randNumeric-positive` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `randNumeric-zero` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `randNumeric-negative` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `randAscii-positive` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `randAscii-zero` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `randAscii-negative` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `wrap-positive` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `wrap-zero` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `wrap-negative` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `wrapWith-positive` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `wrapWith-zero` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `wrapWith-negative` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `contains` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `hasPrefix` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `hasSuffix` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `quote` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | `squote` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | `cat` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `indent` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| `nindent` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| `indent-positive` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `indent-zero` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `indent-negative` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| `nindent-positive` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `nindent-zero` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| `nindent-negative` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | `replace` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| `plural` | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| `plural-positive` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `plural-zero` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| `plural-negative` | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | `snakecase` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `camelcase` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
 | `kebabcase` | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
@@ -63,7 +90,6 @@
 
 | Function | nilValue | stringValue | numberValue | boolValue | listValue | dictValue |
 |----------|------|------|------|------|------|------|
-| `printf` | wrong type for value; expected string; got interface | wrong type for value; expected string; got interface | wrong type for value; expected string; got interface | wrong type for value; expected string; got interface | wrong type for value; expected string; got interface | wrong type for value; expected string; got interface |
 | `trim` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `trimAll` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `trimPrefix` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
@@ -72,26 +98,39 @@
 | `upper` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `title` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `untitle` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
-| `repeat` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
-| `substr` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
+| `repeat-positive` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `repeat-zero` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `repeat-negative` | invalid value; expected string | error calling repeat: strings: negative Repeat count | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `substr-positive` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `substr-zero` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `substr-negative` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `nospace` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
-| `trunc` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
-| `abbrev` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
-| `abbrevboth` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
+| `trunc-positive` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `trunc-zero` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `trunc-negative` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `abbrev-positive` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `abbrev-zero` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `abbrev-negative` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `abbrevboth-positive` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `abbrevboth-zero` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `abbrevboth-negative` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `initials` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
-| `randAlphaNum` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
-| `randAlpha` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
-| `randNumeric` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
-| `randAscii` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
-| `wrap` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
-| `wrapWith` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
+| `wrap-positive` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `wrap-zero` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `wrap-negative` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `wrapWith-positive` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `wrapWith-zero` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `wrapWith-negative` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `contains` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `hasPrefix` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `hasSuffix` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
-| `indent` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
-| `nindent` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
+| `indent-positive` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `indent-zero` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `indent-negative` | invalid value; expected string | error calling indent: strings: negative Repeat count | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `nindent-positive` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `nindent-zero` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
+| `nindent-negative` | invalid value; expected string | error calling nindent: strings: negative Repeat count | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `replace` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
-| `plural` | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface | wrong type for value; expected int; got interface |
 | `snakecase` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `camelcase` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |
 | `kebabcase` | invalid value; expected string | - | wrong type for value; expected string; got float64 | wrong type for value; expected string; got bool | wrong type for value; expected string; got []interface | wrong type for value; expected string; got map[string]interf... |

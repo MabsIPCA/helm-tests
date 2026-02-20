@@ -1,0 +1,8 @@
+{
+  "testFunctions": [
+    {"name": "testWrongArgs", "func": "wrongArgs"}
+  ],
+  "errorPatterns": [
+    "wrong number of args"
+  ]
+}

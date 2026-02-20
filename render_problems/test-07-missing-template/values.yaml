@@ -1,4 +1,17 @@
-# Values file for missing template test
+# Values file for missing template error tests
+
+# Test configuration
+testDataType: nilValue  # Which data type to test (can be overridden with --set)
+
+# Test data - one per type (different error outputs)
+nilValue: null
+stringValue: "Hello World"
+numberValue: 42
+boolValue: true
+listValue: [1, 2, 3]
+dictValue: {"key": "value"}
+
+# Test flags for all missing template functions
 testMissingInclude: false
-testMissingTemplate: true
+testMissingTemplate: false
 testMissingSubchart: false

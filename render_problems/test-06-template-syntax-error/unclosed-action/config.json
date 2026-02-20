@@ -1,0 +1,10 @@
+{
+  "testFunctions": [
+    {"name": "testUnclosedAction", "func": "unclosedAction"}
+  ],
+  "errorPatterns": [
+    "parse error[^\\n]*: [^\\n]+",
+    "unclosed action",
+    "unexpected"
+  ]
+}
