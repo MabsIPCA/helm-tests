@@ -1,0 +1,9 @@
+﻿# Development environment override
+environment: "development"
+replicas: 3
+database:
+  host: "dev-db.local"
+  name: "dev_db"
+resources:
+  requests:
+    cpu: "200m"

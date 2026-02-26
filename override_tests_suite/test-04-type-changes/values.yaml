@@ -1,0 +1,15 @@
+﻿# Default values with various types
+stringValue: "original-string"
+integerValue: 42
+floatValue: 3.14
+booleanValue: true
+nullValue: null
+listValue:
+  - "item1"
+  - "item2"
+mapValue:
+  key1: "value1"
+  key2: "value2"
+nestedMap:
+  level1:
+    level2: "nested-value"

@@ -1,0 +1,23 @@
+﻿# Values with null
+nullString: null
+nullNumber: null
+nullBool: null
+nullList: null
+nullMap: null
+# Values that will be set to null
+stringValue: "has-value"
+numberValue: 42
+boolValue: true
+listValue:
+  - "item1"
+  - "item2"
+mapValue:
+  key1: "value1"
+  key2: "value2"
+# Nested with null
+nested:
+  nullChild: null
+  hasValue: "exists"
+  deepNested:
+    alsoNull: null
+    alsoHasValue: "deep-exists"

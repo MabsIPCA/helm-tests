@@ -1,0 +1,8 @@
+﻿# Third override file - highest precedence
+environment: "override-3"
+replicas: 5
+database:
+  name: "override3_db"
+config:
+  features:
+    monitoring: true

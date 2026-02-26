@@ -1,0 +1,6 @@
+﻿# Override global values
+global:
+  environment: "production"
+  region: "eu-west-1"
+  config:
+    debug: true

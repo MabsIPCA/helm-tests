@@ -1,0 +1,72 @@
+{
+
+    "testNumber": 8,
+    "testName": "Subchart Override",
+    "description": "Tests subchart values override from parent chart and external files",
+    "chartName": "test-subchart-override",
+    "testCases": [
+        {
+            "name": "parent-defaults",
+            "description": "Parent chart overrides subchart defaults",
+            "valuesFiles": [],
+            "expected": {
+                "parentName": "parent-chart",
+                "subchart1.name": "subchart1-from-parent",
+                "subchart1.replicas": 3,
+                "subchart1.config.enabled": true,
+                "subchart2.name": "subchart2-from-parent",
+                "subchart2.port": 9090,
+                "global.environment": "development"
+            }
+        },
+        {
+            "name": "subchart-override",
+            "description": "External file overrides subchart values",
+            "valuesFiles": ["values-subchart-override.yaml"],
+            "expected": {
+                "subchart1.name": "subchart1-external-override",
+                "subchart1.replicas": 5,
+                "subchart1.config.timeout": 60,
+                "subchart2.name": "subchart2-external-override",
+                "subchart2.database.host": "external-db.local"
+            }
+        },
+        {
+            "name": "global-override",
+            "description": "Override global values",
+            "valuesFiles": ["values-global-override.yaml"],
+            "expected": {
+                "global.environment": "production",
+                "global.domain": "prod.example.com",
+                "global.newGlobal": "added-global"
+            }
+        },
+        {
+            "name": "combined-override",
+            "description": "Multiple overrides together",
+            "valuesFiles": ["values-subchart-override.yaml", "values-combined-override.yaml"],
+            "expected": {
+                "subchart1.replicas": 10,
+                "subchart2.port": 443,
+                "global.environment": "staging"
+            }
+        }
+    ],
+    "expectedBehavior": [
+        {
+            "field": "subchart-namespace",
+            "behavior": "prefixed",
+            "description": "Subchart values are under subchart name key"
+        },
+        {
+            "field": "global",
+            "behavior": "propagated",
+            "description": "Global values are accessible by all subcharts"
+        },
+        {
+            "field": "precedence",
+            "behavior": "external > parent > subchart",
+            "description": "External files override parent which overrides subchart defaults"
+        }
+    ]
+}

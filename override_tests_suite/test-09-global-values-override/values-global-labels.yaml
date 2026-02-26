@@ -1,0 +1,6 @@
+﻿# Override global labels
+global:
+  labels:
+    team: "devops"
+    environment: "staging"
+    newLabel: "added"

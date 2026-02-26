@@ -1,0 +1,108 @@
+{
+
+    "testNumber": 1,
+    "testName": "Basic Data Types Override",
+    "description": "Tests override behavior for all basic data types: strings, integers, floats, booleans, null, lists, and maps",
+    "chartName": "test-basic-data-types",
+    "testCases": [
+        {
+            "name": "default-values",
+            "description": "Verify default values without any override",
+            "valuesFiles": [],
+            "expected": {
+                "stringValue": "default-string",
+                "integerValue": 100,
+                "floatValue": 3.14,
+                "boolTrue": true,
+                "boolFalse": false,
+                "nullValue": null
+            }
+        },
+        {
+            "name": "string-override",
+            "description": "Override string values",
+            "valuesFiles": ["values-string-override.yaml"],
+            "expected": {
+                "stringValue": "overridden-string",
+                "emptyString": "no-longer-empty",
+                "nullValue": "was-null",
+                "simpleMap.key4": "new-key"
+            }
+        },
+        {
+            "name": "number-override",
+            "description": "Override numeric values (integers and floats)",
+            "valuesFiles": ["values-number-override.yaml"],
+            "expected": {
+                "integerValue": 999,
+                "zeroInteger": 42,
+                "negativeInteger": 100,
+                "floatValue": 99.99
+            }
+        },
+        {
+            "name": "boolean-override",
+            "description": "Override boolean values",
+            "valuesFiles": ["values-boolean-override.yaml"],
+            "expected": {
+                "boolTrue": false,
+                "boolFalse": true,
+                "config.enabled": true
+            }
+        },
+        {
+            "name": "list-override",
+            "description": "Override list values (lists are replaced, not merged)",
+            "valuesFiles": ["values-list-override.yaml"],
+            "expected": {
+                "simpleList": ["override1", "override2"],
+                "mixedList": ["all", "strings", "now"]
+            }
+        },
+        {
+            "name": "map-override",
+            "description": "Override map values (maps are merged)",
+            "valuesFiles": ["values-map-override.yaml"],
+            "expected": {
+                "simpleMap.key1": "new-value1",
+                "simpleMap.key2": "value2",
+                "simpleMap.newKey": "added-key",
+                "nestedMap.level1.level2.level3": "overridden-deep",
+                "nestedMap.level1.level2.newLevel3": "added-nested",
+                "nestedMap.level1.newLevel2": "added-at-level2"
+            }
+        }
+    ],
+    "expectedBehavior": [
+        {
+            "field": "strings",
+            "behavior": "replaced",
+            "description": "String values are completely replaced"
+        },
+        {
+            "field": "numbers",
+            "behavior": "replaced",
+            "description": "Numeric values are completely replaced"
+        },
+        {
+            "field": "booleans",
+            "behavior": "replaced",
+            "description": "Boolean values are completely replaced"
+        },
+        {
+            "field": "lists",
+            "behavior": "replaced",
+            "description": "Lists are completely replaced, not merged"
+        },
+        {
+            "field": "maps",
+            "behavior": "merged",
+            "description": "Maps are recursively merged"
+        },
+        {
+            "field": "null",
+            "behavior": "replaced",
+            "description": "Null can be overridden with any type"
+        }
+    ]
+}

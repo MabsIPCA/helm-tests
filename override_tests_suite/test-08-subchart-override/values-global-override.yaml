@@ -1,0 +1,6 @@
+﻿# Override global values
+global:
+  environment: "production"
+  domain: "prod.example.com"
+  imageRegistry: "registry.prod.local"
+  newGlobal: "added-global"

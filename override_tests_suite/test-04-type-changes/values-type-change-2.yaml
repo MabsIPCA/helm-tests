@@ -1,0 +1,10 @@
+﻿# Change list to map
+listValue:
+  first: "item1"
+  second: "item2"
+# Change map to list
+mapValue:
+  - "key1-value1"
+  - "key2-value2"
+# Change nested map to string
+nestedMap: "flattened-value"

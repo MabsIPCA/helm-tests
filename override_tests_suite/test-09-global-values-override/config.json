@@ -1,0 +1,78 @@
+{
+
+    "testNumber": 9,
+    "testName": "Global Values Override",
+    "description": "Tests global values propagation and override behavior",
+    "chartName": "test-global-values",
+    "testCases": [
+        {
+            "name": "default-globals",
+            "description": "Default global values from parent",
+            "valuesFiles": [],
+            "expected": {
+                "global.environment": "default",
+                "global.region": "us-east-1",
+                "global.imageTag": "latest",
+                "global.config.debug": false
+            }
+        },
+        {
+            "name": "override-globals",
+            "description": "Override global values",
+            "valuesFiles": ["values-global-prod.yaml"],
+            "expected": {
+                "global.environment": "production",
+                "global.region": "eu-west-1",
+                "global.config.debug": true,
+                "global.config.logLevel": "info"
+            }
+        },
+        {
+            "name": "add-globals",
+            "description": "Add new global values",
+            "valuesFiles": ["values-global-add.yaml"],
+            "expected": {
+                "global.environment": "default",
+                "global.newValue": "added-via-override",
+                "global.config.newConfig": "added-config"
+            }
+        },
+        {
+            "name": "override-nested-globals",
+            "description": "Override nested global values like labels",
+            "valuesFiles": ["values-global-labels.yaml"],
+            "expected": {
+                "global.labels.team": "devops",
+                "global.labels.app": "test",
+                "global.labels.newLabel": "added"
+            }
+        },
+        {
+            "name": "chained-global-override",
+            "description": "Multiple global overrides in sequence",
+            "valuesFiles": ["values-global-prod.yaml", "values-global-add.yaml"],
+            "expected": {
+                "global.environment": "production",
+                "global.region": "eu-west-1",
+                "global.newValue": "added-via-override"
+            }
+        }
+    ],
+    "expectedBehavior": [
+        {
+            "field": "global",
+            "behavior": "propagated",
+            "description": "Global values propagate to all subcharts"
+        },
+        {
+            "field": "global-merge",
+            "behavior": "deep-merge",
+            "description": "Global values are deeply merged"
+        },
+        {
+            "field": "child-global",
+            "behavior": "overridden",
+            "description": "Parent global values override child global defaults"
+        }
+    ]
+}

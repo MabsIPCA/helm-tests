@@ -1,0 +1,16 @@
+﻿# Production environment override
+environment: "production"
+replicas: 10
+enabled: true
+database:
+  host: "prod-db.example.com"
+  port: 5433
+  username: "prod_user"
+  password: "secure_prod_password"
+resources:
+  requests:
+    cpu: "1000m"
+    memory: "1Gi"
+  limits:
+    cpu: "2000m"
+    memory: "2Gi"

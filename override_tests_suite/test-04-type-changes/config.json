@@ -1,0 +1,81 @@
+{
+
+    "testNumber": 4,
+    "testName": "Type Changes During Override",
+    "description": "Tests behavior when value types change during override",
+    "chartName": "test-type-changes",
+    "testCases": [
+        {
+            "name": "scalar-type-changes",
+            "description": "Change types of scalar values",
+            "valuesFiles": ["values-type-change-1.yaml"],
+            "expected": {
+                "stringValue": 12345,
+                "integerValue": "forty-two",
+                "booleanValue": "yes",
+                "nullValue.key": "now-has-value"
+            }
+        },
+        {
+            "name": "collection-type-changes",
+            "description": "Change between list and map types",
+            "valuesFiles": ["values-type-change-2.yaml"],
+            "expected": {
+                "listValue.first": "item1",
+                "listValue.second": "item2",
+                "mapValue": ["key1-value1", "key2-value2"],
+                "nestedMap": "flattened-value"
+            }
+        },
+        {
+            "name": "null-override-all",
+            "description": "Override all values to null",
+            "valuesFiles": ["values-null-override.yaml"],
+            "expected": {
+                "stringValue": null,
+                "integerValue": null,
+                "floatValue": null,
+                "booleanValue": null,
+                "listValue": null,
+                "mapValue": null
+            }
+        },
+        {
+            "name": "chained-type-changes",
+            "description": "Multiple type changes in sequence",
+            "valuesFiles": ["values-type-change-1.yaml", "values-null-override.yaml"],
+            "expected": {
+                "stringValue": null,
+                "integerValue": null,
+                "booleanValue": null
+            }
+        }
+    ],
+    "expectedBehavior": [
+        {
+            "field": "scalar-to-scalar",
+            "behavior": "replaced",
+            "description": "Scalar type changes are allowed and replace completely"
+        },
+        {
+            "field": "list-to-map",
+            "behavior": "replaced",
+            "description": "List can be replaced with map"
+        },
+        {
+            "field": "map-to-list",
+            "behavior": "replaced",
+            "description": "Map can be replaced with list"
+        },
+        {
+            "field": "any-to-null",
+            "behavior": "replaced",
+            "description": "Any type can be set to null"
+        },
+        {
+            "field": "null-to-any",
+            "behavior": "replaced",
+            "description": "Null can be replaced with any type"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+﻿# Deeply nested structure
+level1:
+  value: "l1-value"
+  level2:
+    value: "l2-value"
+    level3:
+      value: "l3-value"
+      level4:
+        value: "l4-value"
+        level5:
+          value: "l5-value"
+          deepest: "original-deepest"
+# Complex nested with mixed types
+complex:
+  name: "complex-structure"
+  settings:
+    database:
+      primary:
+        host: "primary-db"
+        port: 5432
+        credentials:
+          username: "admin"
+          password: "secret"
+      replicas:
+        - host: "replica1"
+          port: 5432
+        - host: "replica2"
+          port: 5432
+    cache:
+      enabled: false
+      ttl: 3600

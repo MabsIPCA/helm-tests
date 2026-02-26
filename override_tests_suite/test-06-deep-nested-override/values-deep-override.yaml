@@ -1,0 +1,8 @@
+﻿# Override deepest level
+level1:
+  level2:
+    level3:
+      level4:
+        level5:
+          deepest: "overridden-deepest"
+          newKey: "added-at-deepest"

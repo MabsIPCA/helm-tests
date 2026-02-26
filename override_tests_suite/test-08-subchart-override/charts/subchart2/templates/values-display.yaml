@@ -1,0 +1,4 @@
+﻿subchart2-values: |
+{{ .Values | toYaml | indent 4 }}
+subchart2-global: |
+{{ .Values.global | toYaml | indent 4 }}

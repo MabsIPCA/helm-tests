@@ -1,0 +1,13 @@
+﻿# Parent values
+parentValue: "parent-specific"
+# Global values
+global:
+  environment: "default"
+  region: "us-east-1"
+  imageTag: "latest"
+  config:
+    debug: false
+    logLevel: "info"
+  labels:
+    team: "platform"
+    app: "test"

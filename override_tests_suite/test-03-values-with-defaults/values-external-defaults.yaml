@@ -1,0 +1,10 @@
+﻿# External default values file
+appName: "external-default"
+environment: "base"
+replicas: 2
+enabled: true
+database:
+  host: "external-default-db"
+  name: "external_db"
+# New value not in chart defaults
+externalOnlyValue: "exists-only-in-external"

@@ -1,0 +1,7 @@
+﻿# Subchart1 default values
+name: "subchart1-default"
+replicas: 1
+port: 8080
+config:
+  enabled: false
+  timeout: 30

@@ -1,0 +1,17 @@
+﻿# Replace list with more items
+simpleList:
+  - "new1"
+  - "new2"
+  - "new3"
+  - "new4"
+  - "new5"
+objectList:
+  - name: "newObj1"
+    value: "newValue1"
+    enabled: true
+  - name: "newObj2"
+    value: "newValue2"
+    enabled: true
+  - name: "newObj3"
+    value: "newValue3"
+    enabled: false

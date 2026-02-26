@@ -1,0 +1,8 @@
+﻿# Override null values with actual values
+nullString: "now-has-string"
+nullNumber: 100
+nullBool: true
+nullList:
+  - "new-item"
+nullMap:
+  newKey: "new-value"

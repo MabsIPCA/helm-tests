@@ -1,0 +1,6 @@
+﻿# Child chart values
+childValue: "child-specific"
+port: 8080
+# Child's own global (will be overridden by parent)
+global:
+  environment: "child-default"

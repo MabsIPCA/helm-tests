@@ -1,0 +1,7 @@
+﻿# Combined override
+subchart1:
+  replicas: 10
+subchart2:
+  port: 443
+global:
+  environment: "staging"

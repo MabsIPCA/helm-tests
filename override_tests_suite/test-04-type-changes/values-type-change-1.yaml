@@ -1,0 +1,9 @@
+﻿# Change string to integer
+stringValue: 12345
+# Change integer to string
+integerValue: "forty-two"
+# Change boolean to string
+booleanValue: "yes"
+# Change null to map
+nullValue:
+  key: "now-has-value"

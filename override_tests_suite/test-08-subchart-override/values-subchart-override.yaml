@@ -1,0 +1,10 @@
+﻿# Override subchart values via external file
+subchart1:
+  name: "subchart1-external-override"
+  replicas: 5
+  config:
+    timeout: 60
+subchart2:
+  name: "subchart2-external-override"
+  database:
+    host: "external-db.local"

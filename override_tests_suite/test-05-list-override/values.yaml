@@ -1,0 +1,26 @@
+﻿# Default values with various list types
+simpleList:
+  - "item1"
+  - "item2"
+  - "item3"
+numberList:
+  - 1
+  - 2
+  - 3
+objectList:
+  - name: "obj1"
+    value: "value1"
+    enabled: true
+  - name: "obj2"
+    value: "value2"
+    enabled: false
+nestedLists:
+  level1:
+    - "nested1"
+    - "nested2"
+mixedList:
+  - "string"
+  - 123
+  - true
+  - null
+  - key: "value"

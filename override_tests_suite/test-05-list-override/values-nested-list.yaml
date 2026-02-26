@@ -1,0 +1,8 @@
+﻿# Nested list override
+nestedLists:
+  level1:
+    - "replaced1"
+    - "replaced2"
+    - "replaced3"
+  level2:
+    - "new-nested"

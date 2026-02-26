@@ -1,0 +1,83 @@
+{
+
+    "testNumber": 2,
+    "testName": "Multiple Values Files Precedence",
+    "description": "Tests precedence when using multiple -f flags with values files",
+    "chartName": "test-multiple-values",
+    "testCases": [
+        {
+            "name": "single-override",
+            "description": "Single override file over default values",
+            "valuesFiles": ["values-override-1.yaml"],
+            "expected": {
+                "environment": "override-1",
+                "replicas": 2,
+                "version": "1.0.0",
+                "database.host": "override1-db.local",
+                "database.port": 5432,
+                "config.logLevel": "debug"
+            }
+        },
+        {
+            "name": "two-overrides",
+            "description": "Two override files, second takes precedence",
+            "valuesFiles": ["values-override-1.yaml", "values-override-2.yaml"],
+            "expected": {
+                "environment": "override-2",
+                "replicas": 2,
+                "version": "2.0.0",
+                "database.host": "override2-db.local",
+                "database.port": 5433,
+                "database.name": "override1_db",
+                "config.logLevel": "debug",
+                "config.timeout": 60,
+                "config.features.caching": true
+            }
+        },
+        {
+            "name": "three-overrides",
+            "description": "Three override files, last takes precedence",
+            "valuesFiles": ["values-override-1.yaml", "values-override-2.yaml", "values-override-3.yaml"],
+            "expected": {
+                "environment": "override-3",
+                "replicas": 5,
+                "version": "2.0.0",
+                "database.host": "override2-db.local",
+                "database.port": 5433,
+                "database.name": "override3_db",
+                "config.logLevel": "debug",
+                "config.timeout": 60,
+                "config.features.caching": true,
+                "config.features.monitoring": true
+            }
+        },
+        {
+            "name": "reverse-order",
+            "description": "Same files in reverse order",
+            "valuesFiles": ["values-override-3.yaml", "values-override-2.yaml", "values-override-1.yaml"],
+            "expected": {
+                "environment": "override-1",
+                "replicas": 2,
+                "database.host": "override1-db.local",
+                "database.name": "override1_db"
+            }
+        }
+    ],
+    "expectedBehavior": [
+        {
+            "field": "precedence",
+            "behavior": "left-to-right",
+            "description": "Later -f flags override earlier ones"
+        },
+        {
+            "field": "maps",
+            "behavior": "deep-merge",
+            "description": "Maps are deeply merged across all files"
+        },
+        {
+            "field": "scalars",
+            "behavior": "last-wins",
+            "description": "Scalar values from the last file win"
+        }
+    ]
+}

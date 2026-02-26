@@ -1,0 +1,6 @@
+﻿apiVersion: v2
+name: test-values-with-defaults
+description: Test chart for default values file interaction
+type: application
+version: 0.1.0
+appVersion: "1.0"

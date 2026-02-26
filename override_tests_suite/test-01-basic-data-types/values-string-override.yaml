@@ -1,0 +1,14 @@
+# Override values for string type tests
+stringValue: "overridden-string"
+emptyString: "no-longer-empty"
+
+# Override null to string
+nullValue: "was-null"
+
+# Override map to contain strings
+simpleMap:
+  key1: "override1"
+  key2: "override2"
+  key3: "override3"
+  key4: "new-key"
+

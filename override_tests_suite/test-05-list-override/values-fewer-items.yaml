@@ -1,0 +1,8 @@
+﻿# Replace list with fewer items
+simpleList:
+  - "override1"
+  - "override2"
+# Replace number list with different numbers
+numberList:
+  - 100
+  - 200

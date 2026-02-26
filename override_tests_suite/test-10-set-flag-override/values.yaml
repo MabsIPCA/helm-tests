@@ -1,0 +1,15 @@
+﻿# Default values
+stringValue: "default-string"
+numberValue: 100
+boolValue: false
+nullValue: null
+nested:
+  level1:
+    value: "nested-default"
+    number: 50
+list:
+  - "item1"
+  - "item2"
+config:
+  name: "default-config"
+  enabled: false

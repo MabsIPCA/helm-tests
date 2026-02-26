@@ -1,0 +1,13 @@
+﻿# Override complex nested
+complex:
+  settings:
+    database:
+      primary:
+        host: "new-primary-db"
+        credentials:
+          password: "new-secret"
+      replicas:
+        - host: "new-replica1"
+          port: 5433
+    cache:
+      enabled: true

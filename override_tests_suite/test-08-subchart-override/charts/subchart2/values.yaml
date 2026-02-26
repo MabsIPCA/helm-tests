@@ -1,0 +1,6 @@
+﻿# Subchart2 default values
+name: "subchart2-default"
+port: 8081
+database:
+  host: "localhost"
+  port: 5432

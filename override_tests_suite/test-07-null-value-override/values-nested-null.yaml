@@ -1,0 +1,5 @@
+﻿# Override nested null values
+nested:
+  nullChild: "now-has-value"
+  deepNested:
+    alsoNull: "also-has-value"

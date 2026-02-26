@@ -1,0 +1,93 @@
+{
+
+    "testNumber": 3,
+    "testName": "Multiple Values Files with Default Values",
+    "description": "Tests interaction between chart defaults and external values files",
+    "chartName": "test-values-with-defaults",
+    "testCases": [
+        {
+            "name": "chart-defaults-only",
+            "description": "Only chart default values.yaml",
+            "valuesFiles": [],
+            "expected": {
+                "appName": "chart-default",
+                "environment": "default",
+                "replicas": 1,
+                "chartOnlyValue": "exists-only-in-chart"
+            }
+        },
+        {
+            "name": "external-defaults",
+            "description": "External defaults over chart defaults",
+            "valuesFiles": ["values-external-defaults.yaml"],
+            "expected": {
+                "appName": "external-default",
+                "environment": "base",
+                "replicas": 2,
+                "enabled": true,
+                "database.host": "external-default-db",
+                "database.port": 5432,
+                "chartOnlyValue": "exists-only-in-chart",
+                "externalOnlyValue": "exists-only-in-external"
+            }
+        },
+        {
+            "name": "external-then-dev",
+            "description": "External defaults then dev override",
+            "valuesFiles": ["values-external-defaults.yaml", "values-dev.yaml"],
+            "expected": {
+                "appName": "external-default",
+                "environment": "development",
+                "replicas": 3,
+                "database.host": "dev-db.local",
+                "database.name": "dev_db",
+                "chartOnlyValue": "exists-only-in-chart",
+                "externalOnlyValue": "exists-only-in-external",
+                "resources.requests.cpu": "200m"
+            }
+        },
+        {
+            "name": "dev-only",
+            "description": "Dev override directly on chart defaults",
+            "valuesFiles": ["values-dev.yaml"],
+            "expected": {
+                "appName": "chart-default",
+                "environment": "development",
+                "replicas": 3,
+                "database.host": "dev-db.local",
+                "chartOnlyValue": "exists-only-in-chart"
+            }
+        },
+        {
+            "name": "external-then-prod",
+            "description": "External defaults then prod override",
+            "valuesFiles": ["values-external-defaults.yaml", "values-prod.yaml"],
+            "expected": {
+                "environment": "production",
+                "replicas": 10,
+                "database.host": "prod-db.example.com",
+                "database.port": 5433,
+                "database.username": "prod_user",
+                "chartOnlyValue": "exists-only-in-chart",
+                "externalOnlyValue": "exists-only-in-external"
+            }
+        }
+    ],
+    "expectedBehavior": [
+        {
+            "field": "chart values.yaml",
+            "behavior": "base",
+            "description": "Chart values.yaml is always the base layer"
+        },
+        {
+            "field": "external files",
+            "behavior": "overlay",
+            "description": "External files are merged on top of chart defaults"
+        },
+        {
+            "field": "unique keys",
+            "behavior": "preserved",
+            "description": "Keys unique to each layer are preserved through merging"
+        }
+    ]
+}

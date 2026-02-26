@@ -1,0 +1,130 @@
+{
+
+    "testNumber": 10,
+    "testName": "Set Flag Override",
+    "description": "Tests --set and --set-string flag behavior and precedence",
+    "chartName": "test-set-flag",
+    "testCases": [
+        {
+            "name": "simple-set",
+            "description": "Simple --set flag override",
+            "valuesFiles": [],
+            "setFlags": ["stringValue=set-value"],
+            "expected": {
+                "stringValue": "set-value"
+            }
+        },
+        {
+            "name": "set-number",
+            "description": "--set with numeric value",
+            "valuesFiles": [],
+            "setFlags": ["numberValue=999"],
+            "expected": {
+                "numberValue": 999
+            }
+        },
+        {
+            "name": "set-boolean",
+            "description": "--set with boolean value",
+            "valuesFiles": [],
+            "setFlags": ["boolValue=true"],
+            "expected": {
+                "boolValue": true
+            }
+        },
+        {
+            "name": "set-nested",
+            "description": "--set with nested path",
+            "valuesFiles": [],
+            "setFlags": ["nested.level1.value=set-nested-value", "nested.level1.number=999"],
+            "expected": {
+                "nested.level1.value": "set-nested-value",
+                "nested.level1.number": 999
+            }
+        },
+        {
+            "name": "set-string-number",
+            "description": "--set-string forces string type",
+            "valuesFiles": [],
+            "setStringFlags": ["numberValue=123"],
+            "expected": {
+                "numberValue": "123"
+            }
+        },
+        {
+            "name": "set-string-bool",
+            "description": "--set-string with boolean-like value",
+            "valuesFiles": [],
+            "setStringFlags": ["boolValue=true"],
+            "expected": {
+                "boolValue": "true"
+            }
+        },
+        {
+            "name": "set-over-file",
+            "description": "--set overrides values file",
+            "valuesFiles": ["values-base.yaml"],
+            "setFlags": ["stringValue=set-wins"],
+            "expected": {
+                "stringValue": "set-wins",
+                "config.name": "from-values-file"
+            }
+        },
+        {
+            "name": "multiple-set",
+            "description": "Multiple --set flags",
+            "valuesFiles": [],
+            "setFlags": ["stringValue=first", "numberValue=111", "config.enabled=true"],
+            "expected": {
+                "stringValue": "first",
+                "numberValue": 111,
+                "config.enabled": true
+            }
+        },
+        {
+            "name": "set-list-index",
+            "description": "--set with list index creates a new list",
+            "valuesFiles": [],
+            "setFlags": ["list[0]=new-item1"],
+            "expected": {
+                "list": ["new-item1"]
+            }
+        },
+        {
+            "name": "set-null",
+            "description": "--set with null value sets actual null (key removed from output)",
+            "valuesFiles": [],
+            "setFlags": ["stringValue=null"],
+            "expected": {
+                "stringValue": null
+            }
+        }
+    ],
+    "expectedBehavior": [
+        {
+            "field": "--set",
+            "behavior": "type-inferred",
+            "description": "--set infers type from value (number, boolean, string)"
+        },
+        {
+            "field": "--set-string",
+            "behavior": "always-string",
+            "description": "--set-string always treats value as string"
+        },
+        {
+            "field": "precedence",
+            "behavior": "--set > -f",
+            "description": "--set flags have higher precedence than values files"
+        },
+        {
+            "field": "nested-path",
+            "behavior": "dot-notation",
+            "description": "Use dot notation for nested paths"
+        },
+        {
+            "field": "list-index",
+            "behavior": "bracket-notation",
+            "description": "Use [index] notation for list items"
+        }
+    ]
+}

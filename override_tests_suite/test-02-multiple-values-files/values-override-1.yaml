@@ -1,0 +1,8 @@
+﻿# First override file
+environment: "override-1"
+replicas: 2
+database:
+  host: "override1-db.local"
+  name: "override1_db"
+config:
+  logLevel: "debug"

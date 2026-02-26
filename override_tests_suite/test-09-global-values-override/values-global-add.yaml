@@ -1,0 +1,5 @@
+﻿# Add new global values
+global:
+  newValue: "added-via-override"
+  config:
+    newConfig: "added-config"

@@ -1,0 +1,70 @@
+{
+
+    "testNumber": 5,
+    "testName": "List Override Behavior",
+    "description": "Tests that lists are completely replaced, not merged",
+    "chartName": "test-list-override",
+    "testCases": [
+        {
+            "name": "fewer-items",
+            "description": "Override list with fewer items",
+            "valuesFiles": ["values-fewer-items.yaml"],
+            "expected": {
+                "simpleList": ["override1", "override2"],
+                "numberList": [100, 200]
+            }
+        },
+        {
+            "name": "more-items",
+            "description": "Override list with more items",
+            "valuesFiles": ["values-more-items.yaml"],
+            "expected": {
+                "simpleList": ["new1", "new2", "new3", "new4", "new5"]
+            }
+        },
+        {
+            "name": "empty-lists",
+            "description": "Override with empty lists",
+            "valuesFiles": ["values-empty-lists.yaml"],
+            "expected": {
+                "simpleList": [],
+                "numberList": [],
+                "objectList": []
+            }
+        },
+        {
+            "name": "nested-list",
+            "description": "Override nested lists",
+            "valuesFiles": ["values-nested-list.yaml"],
+            "expected": {
+                "nestedLists.level1": ["replaced1", "replaced2", "replaced3"],
+                "nestedLists.level2": ["new-nested"]
+            }
+        },
+        {
+            "name": "sequential-list-override",
+            "description": "Multiple files overriding same list",
+            "valuesFiles": ["values-fewer-items.yaml", "values-more-items.yaml"],
+            "expected": {
+                "simpleList": ["new1", "new2", "new3", "new4", "new5"]
+            }
+        }
+    ],
+    "expectedBehavior": [
+        {
+            "field": "lists",
+            "behavior": "full-replacement",
+            "description": "Lists are completely replaced, never merged"
+        },
+        {
+            "field": "list-length",
+            "behavior": "no-constraint",
+            "description": "Override list can have any length"
+        },
+        {
+            "field": "empty-list",
+            "behavior": "valid",
+            "description": "Empty list [] is a valid override"
+        }
+    ]
+}

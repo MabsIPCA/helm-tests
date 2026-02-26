@@ -1,0 +1,3 @@
+all-values: |
+{{ .Values | toYaml | indent 4 }}
+

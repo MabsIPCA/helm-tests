@@ -1,0 +1,17 @@
+# Override values for numeric type tests
+integerValue: 999
+zeroInteger: 42
+negativeInteger: 100
+
+floatValue: 99.99
+zeroFloat: 1.5
+negativeFloat: 0.001
+
+# Override list with numbers
+numberList:
+  - 10
+  - 20
+  - 30
+  - 40
+  - 50
+

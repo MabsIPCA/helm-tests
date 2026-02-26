@@ -1,0 +1,8 @@
+﻿# Override at multiple levels
+level1:
+  value: "l1-overridden"
+  level2:
+    value: "l2-overridden"
+    level3:
+      level4:
+        value: "l4-overridden"

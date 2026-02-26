@@ -1,0 +1,10 @@
+﻿# Override values to test map/object behavior
+simpleMap:
+  key1: "new-value1"
+  newKey: "added-key"
+nestedMap:
+  level1:
+    level2:
+      level3: "overridden-deep"
+      newLevel3: "added-nested"
+    newLevel2: "added-at-level2"

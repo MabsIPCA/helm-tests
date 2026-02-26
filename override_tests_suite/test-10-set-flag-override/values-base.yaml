@@ -1,0 +1,4 @@
+﻿# Values file that will be combined with --set flags
+stringValue: "from-values-file"
+config:
+  name: "from-values-file"

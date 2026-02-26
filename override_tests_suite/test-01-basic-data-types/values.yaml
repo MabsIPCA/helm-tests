@@ -1,0 +1,62 @@
+# Default values for test-01-basic-data-types
+# Testing all basic data types
+
+# String values
+stringValue: "default-string"
+emptyString: ""
+
+# Integer values
+integerValue: 100
+zeroInteger: 0
+negativeInteger: -50
+
+# Float values
+floatValue: 3.14
+zeroFloat: 0.0
+negativeFloat: -2.5
+
+# Boolean values
+boolTrue: true
+boolFalse: false
+
+# Null value
+nullValue: null
+
+# List/Array values
+simpleList:
+  - "item1"
+  - "item2"
+  - "item3"
+
+numberList:
+  - 1
+  - 2
+  - 3
+
+mixedList:
+  - "string"
+  - 123
+  - true
+  - null
+
+# Map/Object values
+simpleMap:
+  key1: "value1"
+  key2: "value2"
+  key3: "value3"
+
+nestedMap:
+  level1:
+    level2:
+      level3: "deep-value"
+
+# Complex nested structure
+config:
+  name: "default-config"
+  enabled: false
+  settings:
+    timeout: 30
+    retries: 3
+    features:
+      - "feature-a"
+      - "feature-b"

@@ -1,0 +1,63 @@
+{
+
+    "testNumber": 6,
+    "testName": "Deep Nested Structure Override",
+    "description": "Tests override behavior for deeply nested structures",
+    "chartName": "test-deep-nested",
+    "testCases": [
+        {
+            "name": "deepest-level",
+            "description": "Override only the deepest nested level",
+            "valuesFiles": ["values-deep-override.yaml"],
+            "expected": {
+                "level1.level2.level3.level4.level5.deepest": "overridden-deepest",
+                "level1.level2.level3.level4.level5.newKey": "added-at-deepest",
+                "level1.level2.level3.level4.level5.value": "l5-value",
+                "level1.value": "l1-value"
+            }
+        },
+        {
+            "name": "multi-level",
+            "description": "Override at multiple nesting levels",
+            "valuesFiles": ["values-multi-level.yaml"],
+            "expected": {
+                "level1.value": "l1-overridden",
+                "level1.level2.value": "l2-overridden",
+                "level1.level2.level3.value": "l3-value",
+                "level1.level2.level3.level4.value": "l4-overridden",
+                "level1.level2.level3.level4.level5.value": "l5-value"
+            }
+        },
+        {
+            "name": "complex-nested",
+            "description": "Override complex nested structure with mixed types",
+            "valuesFiles": ["values-complex-override.yaml"],
+            "expected": {
+                "complex.name": "complex-structure",
+                "complex.settings.database.primary.host": "new-primary-db",
+                "complex.settings.database.primary.port": 5432,
+                "complex.settings.database.primary.credentials.username": "admin",
+                "complex.settings.database.primary.credentials.password": "new-secret",
+                "complex.settings.cache.enabled": true,
+                "complex.settings.cache.ttl": 3600
+            }
+        }
+    ],
+    "expectedBehavior": [
+        {
+            "field": "nested-maps",
+            "behavior": "deep-merge",
+            "description": "Maps are merged at all nesting levels"
+        },
+        {
+            "field": "partial-path",
+            "behavior": "preserved",
+            "description": "Unspecified intermediate keys are preserved"
+        },
+        {
+            "field": "new-keys",
+            "behavior": "added",
+            "description": "New keys can be added at any depth"
+        }
+    ]
+}

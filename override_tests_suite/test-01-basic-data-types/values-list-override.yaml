@@ -1,0 +1,8 @@
+﻿# Override values to test list behavior
+simpleList:
+  - "override1"
+  - "override2"
+mixedList:
+  - "all"
+  - "strings"
+  - "now"

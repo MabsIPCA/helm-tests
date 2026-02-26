@@ -1,0 +1,71 @@
+{
+
+    "testNumber": 7,
+    "testName": "Null Value Override",
+    "description": "Tests behavior when overriding null values and setting values to null",
+    "chartName": "test-null-override",
+    "testCases": [
+        {
+            "name": "null-to-value",
+            "description": "Override null values with actual values",
+            "valuesFiles": ["values-null-to-value.yaml"],
+            "expected": {
+                "nullString": "now-has-string",
+                "nullNumber": 100,
+                "nullBool": true,
+                "nullList": ["new-item"],
+                "nullMap.newKey": "new-value"
+            }
+        },
+        {
+            "name": "value-to-null",
+            "description": "Override values to null",
+            "valuesFiles": ["values-value-to-null.yaml"],
+            "expected": {
+                "stringValue": null,
+                "numberValue": null,
+                "boolValue": null,
+                "listValue": null,
+                "mapValue": null
+            }
+        },
+        {
+            "name": "nested-null",
+            "description": "Override nested null values",
+            "valuesFiles": ["values-nested-null.yaml"],
+            "expected": {
+                "nested.nullChild": "now-has-value",
+                "nested.hasValue": "exists",
+                "nested.deepNested.alsoNull": "also-has-value",
+                "nested.deepNested.alsoHasValue": "deep-exists"
+            }
+        },
+        {
+            "name": "round-trip",
+            "description": "Set to value then back to null - values set in first file remain if not overridden",
+            "valuesFiles": ["values-null-to-value.yaml", "values-value-to-null.yaml"],
+            "expected": {
+                "nullString": "now-has-string",
+                "nullNumber": 100,
+                "stringValue": null
+            }
+        }
+    ],
+    "expectedBehavior": [
+        {
+            "field": "null-to-value",
+            "behavior": "replaced",
+            "description": "Null values can be overridden with any type"
+        },
+        {
+            "field": "value-to-null",
+            "behavior": "replaced",
+            "description": "Any value can be set to null"
+        },
+        {
+            "field": "nested-null",
+            "behavior": "merged",
+            "description": "Nested structures with null are properly merged"
+        }
+    ]
+}

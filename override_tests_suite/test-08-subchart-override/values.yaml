@@ -1,0 +1,18 @@
+﻿# Parent chart values
+parentName: "parent-chart"
+parentVersion: "1.0.0"
+# Override subchart1 values from parent
+subchart1:
+  name: "subchart1-from-parent"
+  replicas: 3
+  config:
+    enabled: true
+# Override subchart2 values from parent  
+subchart2:
+  name: "subchart2-from-parent"
+  port: 9090
+# Global values (accessible by all subcharts)
+global:
+  environment: "development"
+  domain: "example.com"
+  imageRegistry: "docker.io"

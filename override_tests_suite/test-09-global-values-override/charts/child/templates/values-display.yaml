@@ -1,0 +1,4 @@
+﻿child-values: |
+{{ .Values | toYaml | indent 4 }}
+child-global: |
+{{ .Values.global | toYaml | indent 4 }}

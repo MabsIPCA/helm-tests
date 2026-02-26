@@ -1,0 +1,6 @@
+﻿# Override values for boolean type tests
+boolTrue: false
+boolFalse: true
+# Override nested config boolean
+config:
+  enabled: true

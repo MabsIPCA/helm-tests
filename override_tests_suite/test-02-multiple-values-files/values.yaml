@@ -1,0 +1,14 @@
+﻿# Default values - lowest precedence
+environment: "default"
+replicas: 1
+version: "1.0.0"
+database:
+  host: "localhost"
+  port: 5432
+  name: "default_db"
+config:
+  logLevel: "info"
+  timeout: 30
+  features:
+    caching: false
+    monitoring: false
