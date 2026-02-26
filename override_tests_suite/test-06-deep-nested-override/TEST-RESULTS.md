@@ -2,7 +2,7 @@
 
 **Description:** Tests override behavior for deeply nested structures
 
-**Generated:** 2026-02-26 23:03:41
+**Generated:** 2026-02-26 23:44:23
 
 ## Summary
 
@@ -26,8 +26,8 @@ helm template test-deep-nested . -f values-deep-override.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-deep-override.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `level1.level2.level3.level4.level5.deepest` | `"original-deepest"` | `"overridden-deepest"` | `"overridden-deepest"` |
 | `level1.level2.level3.level4.level5.newKey` | _(not set)_ | `"added-at-deepest"` | `"added-at-deepest"` |
 | `level1.level2.level3.level4.level5.value` | `"l5-value"` | `"l5-value"` | `"l5-value"` |
@@ -47,8 +47,8 @@ helm template test-deep-nested . -f values-multi-level.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-multi-level.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `level1.level2.level3.level4.level5.value` | `"l5-value"` | `"l5-value"` | `"l5-value"` |
 | `level1.level2.level3.level4.value` | `"l4-value"` | `"l4-overridden"` | `"l4-overridden"` |
 | `level1.level2.level3.value` | `"l3-value"` | `"l3-value"` | `"l3-value"` |
@@ -69,8 +69,8 @@ helm template test-deep-nested . -f values-complex-override.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-complex-override.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `complex.name` | `"complex-structure"` | `"complex-structure"` | `"complex-structure"` |
 | `complex.settings.cache.enabled` | `false` | `true` | `true` |
 | `complex.settings.cache.ttl` | `3600` | `3600` | `3600` |

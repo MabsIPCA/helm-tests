@@ -2,7 +2,7 @@
 
 **Description:** Tests override behavior for all basic data types: strings, integers, floats, booleans, null, lists, and maps
 
-**Generated:** 2026-02-26 23:03:36
+**Generated:** 2026-02-26 23:44:17
 
 ## Summary
 
@@ -52,8 +52,8 @@ helm template test-basic-data-types . -f values-string-override.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-string-override.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `emptyString` | `""` | `"no-longer-empty"` | `"no-longer-empty"` |
 | `nullValue` | `null` | `"was-null"` | `"was-null"` |
 | `simpleMap.key4` | _(not set)_ | `"new-key"` | `"new-key"` |
@@ -73,8 +73,8 @@ helm template test-basic-data-types . -f values-number-override.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-number-override.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `floatValue` | `3.14` | `99.99` | `99.99` |
 | `integerValue` | `100` | `999` | `999` |
 | `negativeInteger` | `-50` | `100` | `100` |
@@ -94,8 +94,8 @@ helm template test-basic-data-types . -f values-boolean-override.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-boolean-override.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `boolFalse` | `false` | `true` | `true` |
 | `boolTrue` | `true` | `false` | `false` |
 | `config.enabled` | `false` | `true` | `true` |
@@ -114,8 +114,8 @@ helm template test-basic-data-types . -f values-list-override.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-list-override.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `mixedList` | `["string", 123, true, null]` | `["all", "strings", "now"]` | `["all", "strings", "now"]` |
 | `simpleList` | `["item1", "item2", "item3"]` | `["override1", "override2"]` | `["override1", "override2"]` |
 
@@ -133,8 +133,8 @@ helm template test-basic-data-types . -f values-map-override.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-map-override.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `nestedMap.level1.level2.level3` | `"deep-value"` | `"overridden-deep"` | `"overridden-deep"` |
 | `nestedMap.level1.level2.newLevel3` | _(not set)_ | `"added-nested"` | `"added-nested"` |
 | `nestedMap.level1.newLevel2` | _(not set)_ | `"added-at-level2"` | `"added-at-level2"` |

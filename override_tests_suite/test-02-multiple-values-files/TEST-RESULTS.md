@@ -2,7 +2,7 @@
 
 **Description:** Tests precedence when using multiple -f flags with values files
 
-**Generated:** 2026-02-26 23:03:37
+**Generated:** 2026-02-26 23:44:19
 
 ## Summary
 
@@ -27,8 +27,8 @@ helm template test-multiple-values . -f values-override-1.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-override-1.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `config.logLevel` | `"info"` | `"debug"` | `"debug"` |
 | `database.host` | `"localhost"` | `"override1-db.local"` | `"override1-db.local"` |
 | `database.port` | `5432` | `5432` | `5432` |

@@ -2,7 +2,7 @@
 
 **Description:** Tests interaction between chart defaults and external values files
 
-**Generated:** 2026-02-26 23:03:38
+**Generated:** 2026-02-26 23:44:20
 
 ## Summary
 
@@ -49,8 +49,8 @@ helm template test-values-with-defaults . -f values-external-defaults.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-external-defaults.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `appName` | `"chart-default"` | `"external-default"` | `"external-default"` |
 | `chartOnlyValue` | `"exists-only-in-chart"` | `"exists-only-in-chart"` | `"exists-only-in-chart"` |
 | `database.host` | `"chart-default-db"` | `"external-default-db"` | `"external-default-db"` |
@@ -99,8 +99,8 @@ helm template test-values-with-defaults . -f values-dev.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-dev.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `appName` | `"chart-default"` | `"chart-default"` | `"chart-default"` |
 | `chartOnlyValue` | `"exists-only-in-chart"` | `"exists-only-in-chart"` | `"exists-only-in-chart"` |
 | `database.host` | `"chart-default-db"` | `"dev-db.local"` | `"dev-db.local"` |

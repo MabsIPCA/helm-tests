@@ -2,7 +2,7 @@
 
 **Description:** Tests behavior when value types change during override
 
-**Generated:** 2026-02-26 23:03:39
+**Generated:** 2026-02-26 23:44:21
 
 ## Summary
 
@@ -27,8 +27,8 @@ helm template test-type-changes . -f values-type-change-1.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-type-change-1.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `booleanValue` | `true` | `"yes"` | `"yes"` |
 | `integerValue` | `42` | `"forty-two"` | `"forty-two"` |
 | `nullValue.key` | _(not set)_ | `"now-has-value"` | `"now-has-value"` |
@@ -48,8 +48,8 @@ helm template test-type-changes . -f values-type-change-2.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-type-change-2.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `listValue.first` | _(not set)_ | `"item1"` | `"item1"` |
 | `listValue.second` | _(not set)_ | `"item2"` | `"item2"` |
 | `mapValue` | `{key1: "value1", key2: "value2"}` | `["key1-value1", "key2-value2"]` | `["key1-value1", "key2-value2"]` |
@@ -69,8 +69,8 @@ helm template test-type-changes . -f values-null-override.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-null-override.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `booleanValue` | `true` | _(not set)_ | _(not set)_ |
 | `floatValue` | `3.14` | _(not set)_ | _(not set)_ |
 | `integerValue` | `42` | _(not set)_ | _(not set)_ |

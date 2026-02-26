@@ -2,7 +2,7 @@
 
 **Description:** Tests that lists are completely replaced, not merged
 
-**Generated:** 2026-02-26 23:03:41
+**Generated:** 2026-02-26 23:44:22
 
 ## Summary
 
@@ -28,8 +28,8 @@ helm template test-list-override . -f values-fewer-items.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-fewer-items.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `numberList` | `[1, 2, 3]` | `[100, 200]` | `[100, 200]` |
 | `simpleList` | `["item1", "item2", "item3"]` | `["override1", "override2"]` | `["override1", "override2"]` |
 
@@ -47,8 +47,8 @@ helm template test-list-override . -f values-more-items.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-more-items.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `simpleList` | `["item1", "item2", "item3"]` | `["new1", "new2", "new3", "new4", "new5"]` | `["new1", "new2", "new3", "new4", "new5"]` |
 
 ---
@@ -65,8 +65,8 @@ helm template test-list-override . -f values-empty-lists.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-empty-lists.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `numberList` | `[1, 2, 3]` | `[]` | `[]` |
 | `objectList` | `[{enabled: true, name: "obj1", value: "value1"}, {enabled: false, name: "obj2", value: "value2"}]` | `[]` | `[]` |
 | `simpleList` | `["item1", "item2", "item3"]` | `[]` | `[]` |
@@ -85,8 +85,8 @@ helm template test-list-override . -f values-nested-list.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-nested-list.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `nestedLists.level1` | `["nested1", "nested2"]` | `["replaced1", "replaced2", "replaced3"]` | `["replaced1", "replaced2", "replaced3"]` |
 | `nestedLists.level2` | _(not set)_ | `["new-nested"]` | `["new-nested"]` |
 

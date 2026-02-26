@@ -2,7 +2,7 @@
 
 **Description:** Tests --set and --set-string flag behavior and precedence
 
-**Generated:** 2026-02-26 23:03:47
+**Generated:** 2026-02-26 23:44:29
 
 ## Summary
 
@@ -33,8 +33,8 @@ helm template test-set-flag . --set stringValue=set-value
 
 **Values Comparison:**
 
-| Field | Default | `--set stringValue=set-value` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `stringValue` | `"default-string"` | `"set-value"` | `"set-value"` |
 
 ---
@@ -51,8 +51,8 @@ helm template test-set-flag . --set numberValue=999
 
 **Values Comparison:**
 
-| Field | Default | `--set numberValue=999` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `numberValue` | `100` | `999` | `999` |
 
 ---
@@ -69,8 +69,8 @@ helm template test-set-flag . --set boolValue=true
 
 **Values Comparison:**
 
-| Field | Default | `--set boolValue=true` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `boolValue` | `false` | `true` | `true` |
 
 ---
@@ -106,8 +106,8 @@ helm template test-set-flag . --set-string numberValue=123
 
 **Values Comparison:**
 
-| Field | Default | `--set-string numberValue=123` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `numberValue` | `100` | `"123"` | `"123"` |
 
 ---
@@ -124,8 +124,8 @@ helm template test-set-flag . --set-string boolValue=true
 
 **Values Comparison:**
 
-| Field | Default | `--set-string boolValue=true` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `boolValue` | `false` | `"true"` | `"true"` |
 
 ---
@@ -181,8 +181,8 @@ helm template test-set-flag . --set list[0]=new-item1
 
 **Values Comparison:**
 
-| Field | Default | `--set list[0]=new-item1` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `list` | `["item1", "item2"]` | `["new-item1"]` | `["new-item1"]` |
 
 ---
@@ -199,8 +199,8 @@ helm template test-set-flag . --set stringValue=null
 
 **Values Comparison:**
 
-| Field | Default | `--set stringValue=null` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `stringValue` | `"default-string"` | _(not set)_ | _(not set)_ |
 
 ---

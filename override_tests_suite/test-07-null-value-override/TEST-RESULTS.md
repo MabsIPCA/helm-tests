@@ -2,7 +2,7 @@
 
 **Description:** Tests behavior when overriding null values and setting values to null
 
-**Generated:** 2026-02-26 23:03:42
+**Generated:** 2026-02-26 23:44:24
 
 ## Summary
 
@@ -27,8 +27,8 @@ helm template test-null-override . -f values-null-to-value.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-null-to-value.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `nullBool` | `null` | `true` | `true` |
 | `nullList` | `null` | `["new-item"]` | `["new-item"]` |
 | `nullMap.newKey` | _(not set)_ | `"new-value"` | `"new-value"` |
@@ -49,8 +49,8 @@ helm template test-null-override . -f values-value-to-null.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-value-to-null.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `boolValue` | `true` | _(not set)_ | _(not set)_ |
 | `listValue` | `["item1", "item2"]` | _(not set)_ | _(not set)_ |
 | `mapValue` | `{key1: "value1", key2: "value2"}` | _(not set)_ | _(not set)_ |
@@ -71,8 +71,8 @@ helm template test-null-override . -f values-nested-null.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-nested-null.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `nested.deepNested.alsoHasValue` | `"deep-exists"` | `"deep-exists"` | `"deep-exists"` |
 | `nested.deepNested.alsoNull` | `null` | `"also-has-value"` | `"also-has-value"` |
 | `nested.hasValue` | `"exists"` | `"exists"` | `"exists"` |

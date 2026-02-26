@@ -2,7 +2,7 @@
 
 **Description:** Tests subchart values override from parent chart and external files
 
-**Generated:** 2026-02-26 23:03:43
+**Generated:** 2026-02-26 23:44:25
 
 ## Summary
 
@@ -51,8 +51,8 @@ helm template test-subchart-override . -f values-subchart-override.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-subchart-override.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `subchart1.config.timeout` | `30` | `60` | `60` |
 | `subchart1.name` | `"subchart1-from-parent"` | `"subchart1-external-override"` | `"subchart1-external-override"` |
 | `subchart1.replicas` | `3` | `5` | `5` |
@@ -73,8 +73,8 @@ helm template test-subchart-override . -f values-global-override.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-global-override.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `global.domain` | `"example.com"` | `"prod.example.com"` | `"prod.example.com"` |
 | `global.environment` | `"development"` | `"production"` | `"production"` |
 | `global.newGlobal` | _(not set)_ | `"added-global"` | `"added-global"` |

@@ -2,7 +2,7 @@
 
 **Description:** Tests global values propagation and override behavior
 
-**Generated:** 2026-02-26 23:03:44
+**Generated:** 2026-02-26 23:44:26
 
 ## Summary
 
@@ -49,8 +49,8 @@ helm template test-global-values . -f values-global-prod.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-global-prod.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `global.config.debug` | `false` | `true` | `true` |
 | `global.config.logLevel` | `"info"` | `"info"` | `"info"` |
 | `global.environment` | `"default"` | `"production"` | `"production"` |
@@ -70,8 +70,8 @@ helm template test-global-values . -f values-global-add.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-global-add.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `global.config.newConfig` | _(not set)_ | `"added-config"` | `"added-config"` |
 | `global.environment` | `"default"` | `"default"` | `"default"` |
 | `global.newValue` | _(not set)_ | `"added-via-override"` | `"added-via-override"` |
@@ -90,8 +90,8 @@ helm template test-global-values . -f values-global-labels.yaml
 
 **Values Comparison:**
 
-| Field | Default | `values-global-labels.yaml` | **Final** |
-|-------|---------|----------|----------|
+| Field | Default | Override | Final |
+|-------|---------|---------|-------|
 | `global.labels.app` | `"test"` | `"test"` | `"test"` |
 | `global.labels.newLabel` | _(not set)_ | `"added"` | `"added"` |
 | `global.labels.team` | `"platform"` | `"devops"` | `"devops"` |
