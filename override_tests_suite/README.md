@@ -22,9 +22,6 @@ The test suite covers:
 # Run all tests
 make test
 
-# Build test runner
-make build
-
 # Clean generated files
 make clean
 ```

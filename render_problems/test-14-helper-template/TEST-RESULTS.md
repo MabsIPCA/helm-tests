@@ -1,6 +1,6 @@
 # Test 14: Helper Template Errors
 
-**Generated:** 2026-02-20 02:07:05
+**Generated:** 2026-02-27 00:00:29
 
 **Total:** 6 | **Passed:** 0 (0.0%) | **Failed:** 6 (100.0%)
 

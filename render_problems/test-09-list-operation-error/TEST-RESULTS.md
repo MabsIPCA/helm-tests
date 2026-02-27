@@ -1,6 +1,6 @@
 # Test 9: List Operation Errors
 
-**Generated:** 2026-02-20 02:06:41
+**Generated:** 2026-02-27 00:00:01
 
 **Total:** 180 | **Passed:** 29 (16.1%) | **Failed:** 151 (83.9%)
 

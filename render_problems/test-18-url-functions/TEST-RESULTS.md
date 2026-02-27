@@ -1,6 +1,6 @@
 # Test 18: URL Function Errors
 
-**Generated:** 2026-02-20 02:07:07
+**Generated:** 2026-02-27 00:00:32
 
 **Total:** 18 | **Passed:** 8 (44.4%) | **Failed:** 10 (55.6%)
 

@@ -1,6 +1,6 @@
 # Test 6: Template Syntax Errors
 
-**Generated:** 2026-02-20 02:06:35
+**Generated:** 2026-02-26 23:59:54
 
 **Total:** 10 | **Passed:** 0 (0.0%) | **Failed:** 10 (100.0%)
 
