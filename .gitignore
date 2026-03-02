@@ -1,2 +1,4 @@
 */vendor
 */.env
+helm_fetcher/cloned/*
+.idea/*
