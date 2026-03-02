@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/csv"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"os"
 	"os/exec"
@@ -134,17 +135,6 @@ func cloneRepo(repoURL, destDir string) error {
 	return cmd.Run()
 }
 
-func checkoutMainBranch(repoDir string) {
-	for _, branch := range []string{"main", "master"} {
-		cmd := exec.Command("git", "-C", repoDir, "checkout", branch)
-		if err := cmd.Run(); err == nil {
-			log.Info().Str("branch", branch).Msg("Checked out")
-			return
-		}
-	}
-	log.Warn().Str("dir", repoDir).Msg("Could not checkout main/master – staying on default")
-}
-
 // ---------------------------------------------------------------------------
 // Chart / values helpers
 // ---------------------------------------------------------------------------
@@ -190,6 +180,21 @@ func combinations(items []string) [][]string {
 		out = append(out, combo)
 	}
 	return out
+}
+
+// ---------------------------------------------------------------------------
+// helm dependency build
+// ---------------------------------------------------------------------------
+
+func runHelmDependencyBuild(chartPath string) error {
+	cmd := exec.Command("helm", "dependency", "build", chartPath)
+	out, err := cmd.CombinedOutput()
+	if err != nil {
+		log.Warn().Str("chart", chartPath).Str("output", string(out)).Msg("helm dependency build failed (continuing)")
+		return err
+	}
+	log.Info().Str("chart", chartPath).Msg("helm dependency build succeeded")
+	return nil
 }
 
 // ---------------------------------------------------------------------------
@@ -239,12 +244,72 @@ func writeCSV(filename string, results []ChartResult) error {
 	return nil
 }
 
+// appendCSVRow appends a single result row to the CSV file (creates with header if missing).
+func appendCSVRow(filename string, r ChartResult) {
+	needsHeader := false
+	if _, err := os.Stat(filename); os.IsNotExist(err) {
+		needsHeader = true
+	}
+	f, err := os.OpenFile(filename, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0o644)
+	if err != nil {
+		log.Error().Err(err).Msg("Cannot open CSV for append")
+		return
+	}
+	defer f.Close()
+
+	w := csv.NewWriter(f)
+	defer w.Flush()
+
+	if needsHeader {
+		_ = w.Write([]string{"repo_url", "repo_name", "chart_path", "values_files", "helm_command", "success", "error_message"})
+	}
+	_ = w.Write([]string{
+		r.RepoURL,
+		r.RepoName,
+		r.ChartPath,
+		strings.Join(r.ValuesFiles, " | "),
+		r.HelmCommand,
+		fmt.Sprintf("%t", r.Success),
+		r.ErrorMessage,
+	})
+}
+
+// flushAllResultsJSON overwrites the JSON file with the current full slice.
+func flushAllResultsJSON(filename string, results []ChartResult) {
+	data, _ := json.MarshalIndent(results, "", "  ")
+	_ = os.WriteFile(filename, data, 0o644)
+}
+
+// removeDir removes a directory tree and logs it.
+func removeDir(dir string) {
+	if err := os.RemoveAll(dir); err != nil {
+		log.Warn().Err(err).Str("dir", dir).Msg("Could not remove directory")
+	} else {
+		log.Info().Str("dir", dir).Msg("Removed (no errors – not needed)")
+	}
+}
+
+// filterFailures returns only the results that have Success == false.
+func filterFailures(results []ChartResult) []ChartResult {
+	var out []ChartResult
+	for _, r := range results {
+		if !r.Success {
+			out = append(out, r)
+		}
+	}
+	return out
+}
+
 // ---------------------------------------------------------------------------
 // main
 // ---------------------------------------------------------------------------
 
 func main() {
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr, TimeFormat: time.Kitchen})
+
+	perPage := flag.Int("per-page", 30, "Results per GitHub search page (max 100)")
+	maxPages := flag.Int("max-pages", 3, "Number of pages to fetch (≈ per-page × max-pages unique repos)")
+	flag.Parse()
 
 	if err := godotenv.Load(); err != nil {
 		log.Warn().Msg(".env not found – using environment variables")
@@ -256,9 +321,7 @@ func main() {
 	}
 
 	// ---- 1. Search GitHub ----
-	perPage := 30
-	maxPages := 3 // ≈ 90 unique repos
-	repos, err := searchGitHubCharts(token, perPage, maxPages)
+	repos, err := searchGitHubCharts(token, *perPage, *maxPages)
 	if err != nil {
 		log.Error().Err(err).Msg("Search encountered an error (continuing with partial results)")
 	}
@@ -269,7 +332,15 @@ func main() {
 	cloneBase := filepath.Join(".", "cloned")
 	_ = os.MkdirAll(cloneBase, 0o755)
 
-	var allResults, failResults []ChartResult
+	const allJSONFile = "catalog_all_results.json"
+	const failCSVFile = "catalog_failures.csv"
+
+	// Remove stale output from previous runs.
+	_ = os.Remove(allJSONFile)
+	_ = os.Remove(failCSVFile)
+
+	var allResults []ChartResult
+	totalFailures := 0
 
 	for i, repoURL := range repos {
 		repoName := strings.TrimPrefix(repoURL, "https://github.com/")
@@ -287,13 +358,17 @@ func main() {
 			log.Error().Err(err).Str("repo", repoName).Msg("Clone failed – skipping")
 			continue
 		}
-		checkoutMainBranch(destDir)
 
 		// ---- 3. Find charts ----
 		charts := findCharts(destDir)
 		log.Info().Int("charts", len(charts)).Msg("Charts found in repo")
 
+		repoHasFailures := false
+
 		for _, chartDir := range charts {
+			// ---- 3b. Build dependencies first ----
+			runHelmDependencyBuild(chartDir)
+
 			valuesFiles := findValuesFiles(chartDir)
 			log.Info().
 				Str("chart", chartDir).
@@ -311,7 +386,9 @@ func main() {
 			}
 			if runErr != nil {
 				res.ErrorMessage = output
-				failResults = append(failResults, res)
+				appendCSVRow(failCSVFile, res)
+				repoHasFailures = true
+				totalFailures++
 				log.Warn().Str("cmd", cmdStr).Msg("FAIL (default)")
 			}
 			allResults = append(allResults, res)
@@ -337,31 +414,47 @@ func main() {
 					}
 					if runErr != nil {
 						r.ErrorMessage = output
-						failResults = append(failResults, r)
+						appendCSVRow(failCSVFile, r)
+						repoHasFailures = true
+						totalFailures++
 						log.Warn().Str("cmd", cmdStr).Msg("FAIL")
 					}
 					allResults = append(allResults, r)
 				}
 			}
 		}
+
+		// ---- Incremental: flush JSON after each repo ----
+		flushAllResultsJSON(allJSONFile, allResults)
+
+		// ---- Cleanup: remove repos that produced zero errors ----
+		if !repoHasFailures {
+			removeDir(destDir)
+		} else {
+			log.Info().Str("repo", repoName).Msg("Keeping cloned repo (has failures)")
+		}
+
+		log.Info().
+			Int("total_runs_so_far", len(allResults)).
+			Int("failures_so_far", totalFailures).
+			Str("repo", repoName).
+			Msg("Repo processing complete – output flushed")
 	}
 
-	// ---- 5. Write output files ----
-	allJSON, _ := json.MarshalIndent(allResults, "", "  ")
-	_ = os.WriteFile("catalog_all_results.json", allJSON, 0o644)
-
-	if err := writeCSV("catalog_failures.csv", failResults); err != nil {
+	// ---- 5. Final summary write ----
+	flushAllResultsJSON(allJSONFile, allResults)
+	if err := writeCSV(failCSVFile, filterFailures(allResults)); err != nil {
 		log.Error().Err(err).Msg("CSV write failed")
 	}
 
 	log.Info().
 		Int("total_runs", len(allResults)).
-		Int("failures", len(failResults)).
-		Int("successes", len(allResults)-len(failResults)).
+		Int("failures", totalFailures).
+		Int("successes", len(allResults)-totalFailures).
 		Msg("Done")
 
 	fmt.Println()
-	fmt.Printf("✅  %d total runs, %d failures cataloged.\n", len(allResults), len(failResults))
+	fmt.Printf("✅  %d total runs, %d failures cataloged.\n", len(allResults), totalFailures)
 	fmt.Println("   → catalog_all_results.json  (all results)")
 	fmt.Println("   → catalog_failures.csv       (failures only)")
 }
