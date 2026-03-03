@@ -17,18 +17,38 @@ import (
 )
 
 // ---------------------------------------------------------------------------
-// Types
+// Types – organized by project/repo
 // ---------------------------------------------------------------------------
 
-// ChartResult holds the result for a chart + values combination.
-type ChartResult struct {
-	RepoURL      string   `json:"repo_url"`
-	RepoName     string   `json:"repo_name"`
+// RunResult holds a single helm template execution result.
+type RunResult struct {
 	ChartPath    string   `json:"chart_path"`
-	ValuesFiles  []string `json:"values_files"`
+	ValuesFiles  []string `json:"values_files,omitempty"`
 	HelmCommand  string   `json:"helm_command"`
 	Success      bool     `json:"success"`
 	ErrorMessage string   `json:"error_message,omitempty"`
+}
+
+// ChartSummary groups all runs for a single chart.
+type ChartSummary struct {
+	ChartPath string      `json:"chart_path"`
+	TotalRuns int         `json:"total_runs"`
+	Successes int         `json:"successes"`
+	Failures  int         `json:"failures"`
+	Runs      []RunResult `json:"runs"`
+}
+
+// RepoResult holds all results for a single repository.
+type RepoResult struct {
+	RepoURL       string         `json:"repo_url"`
+	RepoName      string         `json:"repo_name"`
+	ClonedDir     string         `json:"cloned_dir"`
+	TotalCharts   int            `json:"total_charts"`
+	TotalRuns     int            `json:"total_runs"`
+	TotalSuccess  int            `json:"total_successes"`
+	TotalFailures int            `json:"total_failures"`
+	Charts        []ChartSummary `json:"charts"`
+	Kept          bool           `json:"kept"` // true if repo kept due to failures
 }
 
 // gitHubSearchResult models the JSON returned by the GitHub code-search API.
@@ -45,11 +65,9 @@ type gitHubSearchResult struct {
 }
 
 // ---------------------------------------------------------------------------
-// GitHub search  – uses curl to avoid the Go HTTP hang on Windows
+// GitHub search – uses curl to avoid the Go HTTP hang on Windows
 // ---------------------------------------------------------------------------
 
-// curlGitHubAPI shells out to curl.exe so we sidestep every Go-on-Windows TLS
-// / proxy / HTTP2 quirk that causes the request to hang forever.
 func curlGitHubAPI(url, token string) ([]byte, error) {
 	args := []string{
 		"-s", "-S",
@@ -67,8 +85,6 @@ func curlGitHubAPI(url, token string) ([]byte, error) {
 	return out, nil
 }
 
-// searchGitHubCharts searches for repos that contain a Chart.yaml using the
-// GitHub v3 Code Search API via curl.
 func searchGitHubCharts(token string, perPage, maxPages int) ([]string, error) {
 	seen := map[string]bool{}
 	var repos []string
@@ -108,7 +124,6 @@ func searchGitHubCharts(token string, perPage, maxPages int) ([]string, error) {
 			break
 		}
 
-		// GitHub code-search: 10 req/min for authenticated users.
 		if page < maxPages {
 			log.Info().Msg("Sleeping 7 s to respect rate-limit …")
 			time.Sleep(7 * time.Second)
@@ -155,14 +170,29 @@ func findCharts(baseDir string) []string {
 
 func findValuesFiles(chartDir string) []string {
 	var all []string
-	for _, pat := range []string{"values*.yaml", "values*.yml"} {
+	for _, pat := range []string{"*.yaml", "*.yml"} {
 		matches, _ := filepath.Glob(filepath.Join(chartDir, pat))
-		all = append(all, matches...)
+		for _, m := range matches {
+			base := filepath.Base(m)
+			// Skip the default values file (Helm loads it automatically)
+			if base == "values.yaml" || base == "values.yml" {
+				continue
+			}
+			// Skip any Chart*.yaml / Chart*.yml (chart descriptor files, e.g. Chart.yaml, Chart-svc.yaml)
+			if strings.HasPrefix(strings.ToLower(base), "chart") {
+				continue
+			}
+			// Skip anything that is not a regular file (e.g. symlinked dirs)
+			info, err := os.Stat(m)
+			if err != nil || !info.Mode().IsRegular() {
+				continue
+			}
+			all = append(all, m)
+		}
 	}
 	return all
 }
 
-// combinations returns every non-empty subset of items.
 func combinations(items []string) [][]string {
 	n := len(items)
 	if n == 0 {
@@ -214,10 +244,112 @@ func runHelmTemplate(chartPath string, valuesFiles []string) (cmdStr, output str
 }
 
 // ---------------------------------------------------------------------------
-// CSV writer
+// Output writers
 // ---------------------------------------------------------------------------
 
-func writeCSV(filename string, results []ChartResult) error {
+func flushJSON(filename string, repos []RepoResult) {
+	data, _ := json.MarshalIndent(repos, "", "  ")
+	_ = os.WriteFile(filename, data, 0o644)
+}
+
+func writeMarkdownTable(filename string, repos []RepoResult) error {
+	f, err := os.Create(filename)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	// Header
+	fmt.Fprintln(f, "# Helm Chart Catalog Results")
+	fmt.Fprintln(f)
+	fmt.Fprintln(f, "## Summary by Repository")
+	fmt.Fprintln(f)
+	fmt.Fprintln(f, "| # | Repository | Charts | Runs | ✅ Success | ❌ Failures | Success Rate | Status |")
+	fmt.Fprintln(f, "|---|------------|--------|------|------------|-------------|--------------|--------|")
+
+	totalCharts := 0
+	totalRuns := 0
+	totalSuccess := 0
+	totalFailures := 0
+
+	for i, repo := range repos {
+		rate := float64(0)
+		if repo.TotalRuns > 0 {
+			rate = float64(repo.TotalSuccess) / float64(repo.TotalRuns) * 100
+		}
+		status := "Removed"
+		if repo.Kept {
+			status = "Kept"
+		}
+
+		fmt.Fprintf(f, "| %d | [%s](%s) | %d | %d | %d | %d | %.1f%% | %s |\n",
+			i+1,
+			repo.RepoName,
+			repo.RepoURL,
+			repo.TotalCharts,
+			repo.TotalRuns,
+			repo.TotalSuccess,
+			repo.TotalFailures,
+			rate,
+			status,
+		)
+
+		totalCharts += repo.TotalCharts
+		totalRuns += repo.TotalRuns
+		totalSuccess += repo.TotalSuccess
+		totalFailures += repo.TotalFailures
+	}
+
+	// Totals row
+	totalRate := float64(0)
+	if totalRuns > 0 {
+		totalRate = float64(totalSuccess) / float64(totalRuns) * 100
+	}
+	fmt.Fprintln(f, "|---|------------|--------|------|------------|-------------|--------------|--------|")
+	fmt.Fprintf(f, "| **Total** | **%d repos** | **%d** | **%d** | **%d** | **%d** | **%.1f%%** | - |\n",
+		len(repos), totalCharts, totalRuns, totalSuccess, totalFailures, totalRate)
+
+	// Detailed failures section
+	fmt.Fprintln(f)
+	fmt.Fprintln(f, "## Failure Details")
+	fmt.Fprintln(f)
+
+	for _, repo := range repos {
+		if repo.TotalFailures == 0 {
+			continue
+		}
+
+		fmt.Fprintf(f, "### %s\n\n", repo.RepoName)
+
+		for _, chart := range repo.Charts {
+			if chart.Failures == 0 {
+				continue
+			}
+
+			fmt.Fprintf(f, "#### `%s`\n\n", chart.ChartPath)
+			fmt.Fprintln(f, "| Values Files | Command | Error |")
+			fmt.Fprintln(f, "|--------------|---------|-------|")
+
+			for _, run := range chart.Runs {
+				if run.Success {
+					continue
+				}
+				values := "(default)"
+				if len(run.ValuesFiles) > 0 {
+					values = strings.Join(run.ValuesFiles, ", ")
+				}
+				errMsg := strings.ReplaceAll(run.ErrorMessage, "\n", " ")
+				errMsg = strings.ReplaceAll(errMsg, "|", "\\|")
+				fmt.Fprintf(f, "| %s | `%s` | %s |\n", values, run.HelmCommand, errMsg)
+			}
+			fmt.Fprintln(f)
+		}
+	}
+
+	return nil
+}
+
+func writeFailuresCSV(filename string, repos []RepoResult) error {
 	f, err := os.Create(filename)
 	if err != nil {
 		return err
@@ -227,77 +359,35 @@ func writeCSV(filename string, results []ChartResult) error {
 	w := csv.NewWriter(f)
 	defer w.Flush()
 
-	header := []string{"repo_url", "repo_name", "chart_path", "values_files", "helm_command", "success", "error_message"}
+	header := []string{"repo_url", "repo_name", "chart_path", "values_files", "helm_command", "error_message"}
 	_ = w.Write(header)
 
-	for _, r := range results {
-		_ = w.Write([]string{
-			r.RepoURL,
-			r.RepoName,
-			r.ChartPath,
-			strings.Join(r.ValuesFiles, " | "),
-			r.HelmCommand,
-			fmt.Sprintf("%t", r.Success),
-			r.ErrorMessage,
-		})
+	for _, repo := range repos {
+		for _, chart := range repo.Charts {
+			for _, run := range chart.Runs {
+				if run.Success {
+					continue
+				}
+				_ = w.Write([]string{
+					repo.RepoURL,
+					repo.RepoName,
+					run.ChartPath,
+					strings.Join(run.ValuesFiles, " | "),
+					run.HelmCommand,
+					run.ErrorMessage,
+				})
+			}
+		}
 	}
 	return nil
 }
 
-// appendCSVRow appends a single result row to the CSV file (creates with header if missing).
-func appendCSVRow(filename string, r ChartResult) {
-	needsHeader := false
-	if _, err := os.Stat(filename); os.IsNotExist(err) {
-		needsHeader = true
-	}
-	f, err := os.OpenFile(filename, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0o644)
-	if err != nil {
-		log.Error().Err(err).Msg("Cannot open CSV for append")
-		return
-	}
-	defer f.Close()
-
-	w := csv.NewWriter(f)
-	defer w.Flush()
-
-	if needsHeader {
-		_ = w.Write([]string{"repo_url", "repo_name", "chart_path", "values_files", "helm_command", "success", "error_message"})
-	}
-	_ = w.Write([]string{
-		r.RepoURL,
-		r.RepoName,
-		r.ChartPath,
-		strings.Join(r.ValuesFiles, " | "),
-		r.HelmCommand,
-		fmt.Sprintf("%t", r.Success),
-		r.ErrorMessage,
-	})
-}
-
-// flushAllResultsJSON overwrites the JSON file with the current full slice.
-func flushAllResultsJSON(filename string, results []ChartResult) {
-	data, _ := json.MarshalIndent(results, "", "  ")
-	_ = os.WriteFile(filename, data, 0o644)
-}
-
-// removeDir removes a directory tree and logs it.
 func removeDir(dir string) {
 	if err := os.RemoveAll(dir); err != nil {
 		log.Warn().Err(err).Str("dir", dir).Msg("Could not remove directory")
 	} else {
 		log.Info().Str("dir", dir).Msg("Removed (no errors – not needed)")
 	}
-}
-
-// filterFailures returns only the results that have Success == false.
-func filterFailures(results []ChartResult) []ChartResult {
-	var out []ChartResult
-	for _, r := range results {
-		if !r.Success {
-			out = append(out, r)
-		}
-	}
-	return out
 }
 
 // ---------------------------------------------------------------------------
@@ -308,7 +398,7 @@ func main() {
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr, TimeFormat: time.Kitchen})
 
 	perPage := flag.Int("per-page", 30, "Results per GitHub search page (max 100)")
-	maxPages := flag.Int("max-pages", 3, "Number of pages to fetch (≈ per-page × max-pages unique repos)")
+	maxPages := flag.Int("max-pages", 3, "Number of pages to fetch")
 	flag.Parse()
 
 	if err := godotenv.Load(); err != nil {
@@ -332,15 +422,15 @@ func main() {
 	cloneBase := filepath.Join(".", "cloned")
 	_ = os.MkdirAll(cloneBase, 0o755)
 
-	const allJSONFile = "catalog_all_results.json"
-	const failCSVFile = "catalog_failures.csv"
+	const jsonFile = "catalog_by_project.json"
+	const mdFile = "catalog_results.md"
+	const csvFile = "catalog_failures.csv"
 
-	// Remove stale output from previous runs.
-	_ = os.Remove(allJSONFile)
-	_ = os.Remove(failCSVFile)
+	_ = os.Remove(jsonFile)
+	_ = os.Remove(mdFile)
+	_ = os.Remove(csvFile)
 
-	var allResults []ChartResult
-	totalFailures := 0
+	var allRepos []RepoResult
 
 	for i, repoURL := range repos {
 		repoName := strings.TrimPrefix(repoURL, "https://github.com/")
@@ -353,7 +443,13 @@ func main() {
 			Str("repo", repoName).
 			Msg("Processing repo")
 
-		// ---- 2. Clone & checkout ----
+		repoResult := RepoResult{
+			RepoURL:   repoURL,
+			RepoName:  repoName,
+			ClonedDir: destDir,
+		}
+
+		// ---- 2. Clone ----
 		if err := cloneRepo(repoURL, destDir); err != nil {
 			log.Error().Err(err).Str("repo", repoName).Msg("Clone failed – skipping")
 			continue
@@ -361,39 +457,39 @@ func main() {
 
 		// ---- 3. Find charts ----
 		charts := findCharts(destDir)
+		repoResult.TotalCharts = len(charts)
 		log.Info().Int("charts", len(charts)).Msg("Charts found in repo")
 
-		repoHasFailures := false
-
 		for _, chartDir := range charts {
-			// ---- 3b. Build dependencies first ----
-			runHelmDependencyBuild(chartDir)
+			err := runHelmDependencyBuild(chartDir)
+			if err != nil {
+				log.Warn().Str("chart", chartDir).Msg("Skipping helm template runs due to dependency build failure")
+				continue
+			}
+
+			chartSummary := ChartSummary{ChartPath: chartDir}
 
 			valuesFiles := findValuesFiles(chartDir)
-			log.Info().
-				Str("chart", chartDir).
-				Int("values_files", len(valuesFiles)).
-				Msg("Scanning chart")
+			log.Info().Str("chart", chartDir).Int("values_files", len(valuesFiles)).Msg("Scanning chart")
 
-			// ---- 4a. Default run (no -f flags) ----
+			// ---- 4a. Default run ----
 			cmdStr, output, runErr := runHelmTemplate(chartDir, nil)
-			res := ChartResult{
-				RepoURL:     repoURL,
-				RepoName:    repoName,
+			run := RunResult{
 				ChartPath:   chartDir,
 				HelmCommand: cmdStr,
 				Success:     runErr == nil,
 			}
 			if runErr != nil {
-				res.ErrorMessage = output
-				appendCSVRow(failCSVFile, res)
-				repoHasFailures = true
-				totalFailures++
+				run.ErrorMessage = output
+				chartSummary.Failures++
 				log.Warn().Str("cmd", cmdStr).Msg("FAIL (default)")
+			} else {
+				chartSummary.Successes++
 			}
-			allResults = append(allResults, res)
+			chartSummary.Runs = append(chartSummary.Runs, run)
+			chartSummary.TotalRuns++
 
-			// ---- 4b. Every non-empty subset of values files ----
+			// ---- 4b. Value combinations ----
 			if len(valuesFiles) > 0 {
 				if len(valuesFiles) > 10 {
 					log.Warn().Int("n", len(valuesFiles)).Msg("Capping values files to 10")
@@ -404,9 +500,7 @@ func main() {
 
 				for _, combo := range combos {
 					cmdStr, output, runErr := runHelmTemplate(chartDir, combo)
-					r := ChartResult{
-						RepoURL:     repoURL,
-						RepoName:    repoName,
+					r := RunResult{
 						ChartPath:   chartDir,
 						ValuesFiles: combo,
 						HelmCommand: cmdStr,
@@ -414,47 +508,67 @@ func main() {
 					}
 					if runErr != nil {
 						r.ErrorMessage = output
-						appendCSVRow(failCSVFile, r)
-						repoHasFailures = true
-						totalFailures++
+						chartSummary.Failures++
 						log.Warn().Str("cmd", cmdStr).Msg("FAIL")
+					} else {
+						chartSummary.Successes++
 					}
-					allResults = append(allResults, r)
+					chartSummary.Runs = append(chartSummary.Runs, r)
+					chartSummary.TotalRuns++
 				}
 			}
+
+			repoResult.Charts = append(repoResult.Charts, chartSummary)
+			repoResult.TotalRuns += chartSummary.TotalRuns
+			repoResult.TotalSuccess += chartSummary.Successes
+			repoResult.TotalFailures += chartSummary.Failures
 		}
 
-		// ---- Incremental: flush JSON after each repo ----
-		flushAllResultsJSON(allJSONFile, allResults)
-
-		// ---- Cleanup: remove repos that produced zero errors ----
-		if !repoHasFailures {
-			removeDir(destDir)
-		} else {
+		// ---- Cleanup or keep ----
+		if repoResult.TotalFailures > 0 {
+			repoResult.Kept = true
 			log.Info().Str("repo", repoName).Msg("Keeping cloned repo (has failures)")
+		} else {
+			repoResult.Kept = false
+			removeDir(destDir)
 		}
+
+		allRepos = append(allRepos, repoResult)
+
+		// ---- Incremental flush ----
+		flushJSON(jsonFile, allRepos)
+		_ = writeMarkdownTable(mdFile, allRepos)
 
 		log.Info().
-			Int("total_runs_so_far", len(allResults)).
-			Int("failures_so_far", totalFailures).
+			Int("total_runs", repoResult.TotalRuns).
+			Int("failures", repoResult.TotalFailures).
 			Str("repo", repoName).
 			Msg("Repo processing complete – output flushed")
 	}
 
-	// ---- 5. Final summary write ----
-	flushAllResultsJSON(allJSONFile, allResults)
-	if err := writeCSV(failCSVFile, filterFailures(allResults)); err != nil {
-		log.Error().Err(err).Msg("CSV write failed")
+	// ---- 5. Final writes ----
+	flushJSON(jsonFile, allRepos)
+	_ = writeMarkdownTable(mdFile, allRepos)
+	_ = writeFailuresCSV(csvFile, allRepos)
+
+	// Summary
+	totalRuns := 0
+	totalFailures := 0
+	for _, r := range allRepos {
+		totalRuns += r.TotalRuns
+		totalFailures += r.TotalFailures
 	}
 
 	log.Info().
-		Int("total_runs", len(allResults)).
+		Int("repos", len(allRepos)).
+		Int("total_runs", totalRuns).
 		Int("failures", totalFailures).
-		Int("successes", len(allResults)-totalFailures).
+		Int("successes", totalRuns-totalFailures).
 		Msg("Done")
 
 	fmt.Println()
-	fmt.Printf("✅  %d total runs, %d failures cataloged.\n", len(allResults), totalFailures)
-	fmt.Println("   → catalog_all_results.json  (all results)")
-	fmt.Println("   → catalog_failures.csv       (failures only)")
+	fmt.Printf("✅  %d repos processed, %d total runs, %d failures.\n", len(allRepos), totalRuns, totalFailures)
+	fmt.Println("   → catalog_by_project.json  (all results by project)")
+	fmt.Println("   → catalog_results.md       (markdown summary table)")
+	fmt.Println("   → catalog_failures.csv     (failures only)")
 }
