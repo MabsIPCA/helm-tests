@@ -19,7 +19,7 @@ CLONE_DIR := cloned
 
 ## run: fetch repos from GitHub, run helm template on all combinations
 run:
-	go run helm_chart_render_catalog.go \
+	go run main.go \
 		-per-page=$(PER_PAGE) \
 		-max-pages=$(MAX_PAGES)
 

@@ -1,4 +1,4 @@
-module helm_fetcher
+module github.com/MabsIPCA/helm-tests/helm_fetcher
 
 go 1.25.3
 
