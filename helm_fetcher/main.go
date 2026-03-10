@@ -27,12 +27,6 @@ const (
 	maxPagesDefault = 3
 )
 
-const (
-	jsonFile = "catalog_by_project.json"
-	mdFile   = "catalog_results.md"
-	csvFile  = "catalog_failures.csv"
-)
-
 func main() {
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr, TimeFormat: time.Kitchen})
 
@@ -60,11 +54,17 @@ func main() {
 	// Prepare output files and clone base dir
 	cloneBase := filepath.Join(".", "cloned")
 	_ = os.MkdirAll(cloneBase, 0o755)
-	_ = os.Remove(jsonFile)
-	_ = os.Remove(mdFile)
-	_ = os.Remove(csvFile)
+	// Remove old output files
+	for _, f := range []string{
+		"catalog_by_project.json", "catalog_kept.json", "catalog_removed.json", "catalog_dep_failures.json",
+		"catalog_results.md", "catalog_kept.md", "catalog_removed.md", "catalog_dep_failures.md",
+		"catalog_failures.csv", "catalog_kept_failures.csv", "catalog_dep_failures.csv",
+	} {
+		_ = os.Remove(f)
+	}
 
 	var allRepos []model.RepoResult
+	var allDepFailures []model.DepFailureEntry
 
 	// iterate over repos
 	for i, repoURL := range repos {
@@ -97,10 +97,24 @@ func main() {
 
 		// iterate over charts
 		for _, chartDir := range charts {
-			err := helm.RunHelmDependencyBuild(chartDir)
-			if err != nil {
-				log.Warn().Str("chart", chartDir).Msg("Skipping helm template runs due to dependency build failure")
-				continue
+			depErr := helm.RunHelmDependencyBuild(chartDir)
+			if depErr != nil {
+				log.Warn().Str("chart", chartDir).Msg("Dependency build failure – skipping remaining charts in repo")
+				depErrOutput := depErr.Error()
+				chartSummary := model.ChartSummary{
+					ChartPath:       chartDir,
+					DepBuildFailure: true,
+					DepBuildError:   depErrOutput,
+				}
+				repoResult.Charts = append(repoResult.Charts, chartSummary)
+				repoResult.TotalDepFailures++
+				allDepFailures = append(allDepFailures, model.DepFailureEntry{
+					RepoURL:   repoURL,
+					RepoName:  repoName,
+					ChartPath: chartDir,
+					Error:     depErrOutput,
+				})
+				break
 			}
 
 			chartSummary := model.ChartSummary{ChartPath: chartDir}
@@ -132,6 +146,10 @@ func main() {
 					valuesFiles = valuesFiles[:10]
 				}
 				combos := helm.Combinations(valuesFiles)
+				if len(combos) > 100 {
+					log.Warn().Int("n", len(combos)).Msg("Capping combinations to 100")
+					combos = combos[:100]
+				}
 				log.Info().Int("combinations", len(combos)).Msg("Running value-file combinations")
 
 				for _, combo := range combos {
@@ -160,10 +178,14 @@ func main() {
 			repoResult.TotalFailures += chartSummary.Failures
 		}
 
-		// Decide whether to keep or remove the cloned repo based on failures
-		if repoResult.TotalFailures > 0 {
+		// Decide whether to keep or remove the cloned repo based on failures / dep failures
+		if repoResult.TotalDepFailures > 0 {
+			repoResult.DepFailed = true
+			repoResult.Kept = false
+			log.Info().Str("repo", repoName).Int("dep_failures", repoResult.TotalDepFailures).Msg("Marking repo as dep-failed")
+		} else if repoResult.TotalFailures > 0 {
 			repoResult.Kept = true
-			log.Info().Str("repo", repoName).Msg("Keeping cloned repo (has failures)")
+			log.Info().Str("repo", repoName).Msg("Keeping cloned repo (has template failures)")
 		} else {
 			repoResult.Kept = false
 			exporter.RemoveDir(destDir)
@@ -172,8 +194,7 @@ func main() {
 		allRepos = append(allRepos, repoResult)
 
 		// write continuous output after each repo to avoid losing data on crashes
-		exporter.FlushJSON(jsonFile, allRepos)
-		_ = exporter.WriteMarkdownTable(mdFile, allRepos)
+		exporter.FlushAll(allRepos, allDepFailures)
 
 		log.Info().
 			Int("total_runs", repoResult.TotalRuns).
@@ -183,27 +204,39 @@ func main() {
 	}
 
 	// export final results
-	exporter.FlushJSON(jsonFile, allRepos)
-	_ = exporter.WriteMarkdownTable(mdFile, allRepos)
-	_ = exporter.WriteFailuresCSV(csvFile, allRepos)
+	exporter.FlushAll(allRepos, allDepFailures)
 
 	totalRuns := 0
 	totalFailures := 0
+	totalDepFails := 0
 	for _, r := range allRepos {
 		totalRuns += r.TotalRuns
 		totalFailures += r.TotalFailures
+		totalDepFails += r.TotalDepFailures
 	}
 
 	log.Info().
 		Int("repos", len(allRepos)).
 		Int("total_runs", totalRuns).
 		Int("failures", totalFailures).
+		Int("dep_failures", totalDepFails).
 		Int("successes", totalRuns-totalFailures).
 		Msg("Done")
 
 	fmt.Println()
-	fmt.Printf("✅  %d repos processed, %d total runs, %d failures.\n", len(allRepos), totalRuns, totalFailures)
-	fmt.Println("   → catalog_by_project.json  (all results by project)")
-	fmt.Println("   → catalog_results.md       (markdown summary table)")
-	fmt.Println("   → catalog_failures.csv     (failures only)")
+	fmt.Printf("✅  %d repos processed, %d total runs, %d template failures, %d dep-build failures.\n",
+		len(allRepos), totalRuns, totalFailures, totalDepFails)
+	fmt.Println()
+	fmt.Println("Output files:")
+	fmt.Println("  catalog_by_project.json      — all results")
+	fmt.Println("  catalog_kept.json            — repos with template failures (kept)")
+	fmt.Println("  catalog_removed.json         — repos with no failures (removed)")
+	fmt.Println("  catalog_dep_failures.json    — repos with dep-build failures")
+	fmt.Println("  catalog_results.md           — full markdown summary")
+	fmt.Println("  catalog_kept.md              — kept repos markdown")
+	fmt.Println("  catalog_removed.md           — removed repos markdown")
+	fmt.Println("  catalog_dep_failures.md      — dep-failure details markdown")
+	fmt.Println("  catalog_failures.csv         — all template failures (CSV)")
+	fmt.Println("  catalog_kept_failures.csv    — kept repos template failures (CSV)")
+	fmt.Println("  catalog_dep_failures.csv     — dep-build failures (CSV)")
 }

@@ -6,7 +6,7 @@
 # Number of results per page (max 100 for GitHub code search)
 PER_PAGE  ?= 100
 # Number of pages to fetch  (≈ PER_PAGE × MAX_PAGES unique repos)
-MAX_PAGES ?= 10
+MAX_PAGES ?= 5
 
 # Output files
 ALL_JSON  := catalog_all_results.json

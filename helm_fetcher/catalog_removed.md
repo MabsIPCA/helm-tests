@@ -1,0 +1,123 @@
+# Helm Chart Catalog Results
+
+## Summary by Repository
+
+| # | Repository | Charts | Runs | ✅ Success | ❌ Failures | 🔧 Dep Failures | Success Rate | Status |
+|---|------------|--------|------|------------|-------------|-----------------|--------------|--------|
+| 1 | [hail-is/hail](https://github.com/hail-is/hail) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 2 | [secureCodeBox/secureCodeBox](https://github.com/secureCodeBox/secureCodeBox) | 42 | 42 | 42 | 0 | 0 | 100.0% | Removed |
+| 3 | [estafette/estafette-gke-preemptible-killer](https://github.com/estafette/estafette-gke-preemptible-killer) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 4 | [redhat-cop/operator-utils](https://github.com/redhat-cop/operator-utils) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 5 | [joejulian/chart-dex](https://github.com/joejulian/chart-dex) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 6 | [portswigger-cloud/legacy-charts](https://github.com/portswigger-cloud/legacy-charts) | 120 | 120 | 120 | 0 | 0 | 100.0% | Removed |
+| 7 | [justindav1s/sealed-secrets](https://github.com/justindav1s/sealed-secrets) | 1 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 8 | [KingRyuK69/kubernetics](https://github.com/KingRyuK69/kubernetics) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 9 | [stakater-charts/rbac](https://github.com/stakater-charts/rbac) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 10 | [ThompsonCarter/Java-for-Web-Development](https://github.com/ThompsonCarter/Java-for-Web-Development) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 11 | [stakater/chart-configmapcontroller](https://github.com/stakater/chart-configmapcontroller) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 12 | [kuberlab-catalog/linkerd](https://github.com/kuberlab-catalog/linkerd) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 13 | [David-VTUK/turing-pi-automation](https://github.com/David-VTUK/turing-pi-automation) | 16 | 16 | 16 | 0 | 0 | 100.0% | Removed |
+| 14 | [hxwxdmhd/noxsuite-security-platform](https://github.com/hxwxdmhd/noxsuite-security-platform) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 15 | [timfeirg/lain-cli](https://github.com/timfeirg/lain-cli) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 16 | [ios-xr/xrd-terraform](https://github.com/ios-xr/xrd-terraform) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 17 | [SupportTools/KubeCertWatch](https://github.com/SupportTools/KubeCertWatch) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 18 | [AustrianDataLAB/pacman](https://github.com/AustrianDataLAB/pacman) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 19 | [aws-controllers-k8s/code-generator](https://github.com/aws-controllers-k8s/code-generator) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 20 | [redhat-cop/proactive-node-scaling-operator](https://github.com/redhat-cop/proactive-node-scaling-operator) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 21 | [infobloxopen/atlas-cli](https://github.com/infobloxopen/atlas-cli) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 22 | [joejulian/template-chart](https://github.com/joejulian/template-chart) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 23 | [fiaas/fiaas-deploy-daemon](https://github.com/fiaas/fiaas-deploy-daemon) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 24 | [SupportTools/rancher-centralized-monitoring](https://github.com/SupportTools/rancher-centralized-monitoring) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 25 | [arminzaugg/sturdy-octo-omni](https://github.com/arminzaugg/sturdy-octo-omni) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
+| 26 | [SupportTools/push-to-k8s](https://github.com/SupportTools/push-to-k8s) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 27 | [greenpeace/planet4-helm-static](https://github.com/greenpeace/planet4-helm-static) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 28 | [mathianasj/idp-operator](https://github.com/mathianasj/idp-operator) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 29 | [SupportTools/uptime-kuma](https://github.com/SupportTools/uptime-kuma) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 30 | [rubernetes/rubectl](https://github.com/rubernetes/rubectl) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 31 | [effervescentia/bun-elysia-react-starter](https://github.com/effervescentia/bun-elysia-react-starter) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 32 | [jucroada/ProyectoFinal_MLOps_PUJ](https://github.com/jucroada/ProyectoFinal_MLOps_PUJ) | 11 | 11 | 11 | 0 | 0 | 100.0% | Removed |
+| 33 | [freiheit-com/kuberpult](https://github.com/freiheit-com/kuberpult) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 34 | [cwcloudtech/cwcloud-api](https://github.com/cwcloudtech/cwcloud-api) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 35 | [PaulJequann/the-lab](https://github.com/PaulJequann/the-lab) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 36 | [notch8/stack_car](https://github.com/notch8/stack_car) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 37 | [abugeia/home_kluster](https://github.com/abugeia/home_kluster) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
+| 38 | [rooooomania/mms-front-app](https://github.com/rooooomania/mms-front-app) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 39 | [nradojcic/chart](https://github.com/nradojcic/chart) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 40 | [auto-shift/autoshiftv2](https://github.com/auto-shift/autoshiftv2) | 39 | 39 | 39 | 0 | 0 | 100.0% | Removed |
+| 41 | [zrross11/boatmcp](https://github.com/zrross11/boatmcp) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 42 | [SupportTools/website](https://github.com/SupportTools/website) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 43 | [SupportTools/rancher-upgrade-tool](https://github.com/SupportTools/rancher-upgrade-tool) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 44 | [hxwxdmhd/NoxGuard---NoxPanel](https://github.com/hxwxdmhd/NoxGuard---NoxPanel) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 45 | [hxwxdmhd/NoxPanel_Suite_WIP](https://github.com/hxwxdmhd/NoxPanel_Suite_WIP) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 46 | [ericmelz/ez-tools](https://github.com/ericmelz/ez-tools) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 47 | [darta-ai/darta-monorepo](https://github.com/darta-ai/darta-monorepo) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 48 | [ConductionNL/digispoof](https://github.com/ConductionNL/digispoof) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 49 | [ConductionNL/corona-interface](https://github.com/ConductionNL/corona-interface) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 50 | [ConductionNL/bzk-mock](https://github.com/ConductionNL/bzk-mock) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 51 | [ol3d/home-ops](https://github.com/ol3d/home-ops) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 52 | [bdkoeh/survivalRAG](https://github.com/bdkoeh/survivalRAG) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 53 | [DataLinkDC/dinky](https://github.com/DataLinkDC/dinky) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 54 | [Spazzy757/helm-operator](https://github.com/Spazzy757/helm-operator) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 55 | [crutonjohn/gitops](https://github.com/crutonjohn/gitops) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 56 | [fallewi/Kubernetes-configs](https://github.com/fallewi/Kubernetes-configs) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 57 | [Luohao-Yan/Louis-dify-apps](https://github.com/Luohao-Yan/Louis-dify-apps) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 58 | [Aptomi/k8s-app-engine](https://github.com/Aptomi/k8s-app-engine) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 59 | [no1here0003/Talos-cluster](https://github.com/no1here0003/Talos-cluster) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 60 | [serafino16/Apache-Fineract](https://github.com/serafino16/Apache-Fineract) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
+| 61 | [GustavoJST/kube-botblocker](https://github.com/GustavoJST/kube-botblocker) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 62 | [Portkey-AI/helm](https://github.com/Portkey-AI/helm) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 63 | [reggie-k/argocd-tests](https://github.com/reggie-k/argocd-tests) | 103 | 103 | 103 | 0 | 0 | 100.0% | Removed |
+| 64 | [Gin-G/tds-test](https://github.com/Gin-G/tds-test) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 65 | [PierreH2/homelab](https://github.com/PierreH2/homelab) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 66 | [vurachaitanya/test_helm](https://github.com/vurachaitanya/test_helm) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 67 | [oceanbase/ob-samples](https://github.com/oceanbase/ob-samples) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 68 | [SepehrNoey/KaaS](https://github.com/SepehrNoey/KaaS) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 69 | [fxiang1/app-samples](https://github.com/fxiang1/app-samples) | 6 | 6 | 6 | 0 | 0 | 100.0% | Removed |
+| 70 | [amitvashisttech/docker-k8s-EY-E-02-Dec-2024](https://github.com/amitvashisttech/docker-k8s-EY-E-02-Dec-2024) | 4 | 4 | 4 | 0 | 0 | 100.0% | Removed |
+| 71 | [oleksandr-codefresh/argo-load-product-1](https://github.com/oleksandr-codefresh/argo-load-product-1) | 93 | 95 | 95 | 0 | 0 | 100.0% | Removed |
+| 72 | [postgresml/pgcat](https://github.com/postgresml/pgcat) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 73 | [production-gitops-public/argocd-tools](https://github.com/production-gitops-public/argocd-tools) | 6 | 6 | 6 | 0 | 0 | 100.0% | Removed |
+| 74 | [InditexTech/k8s-overcommit-operator](https://github.com/InditexTech/k8s-overcommit-operator) | 7 | 7 | 7 | 0 | 0 | 100.0% | Removed |
+| 75 | [GracjanKoscinski/azureDeploymentPipeline](https://github.com/GracjanKoscinski/azureDeploymentPipeline) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
+| 76 | [TykTechnologies/tyk-charts](https://github.com/TykTechnologies/tyk-charts) | 11 | 11 | 11 | 0 | 0 | 100.0% | Removed |
+| 77 | [NotIlya4/Tests](https://github.com/NotIlya4/Tests) | 4 | 4 | 4 | 0 | 0 | 100.0% | Removed |
+| 78 | [media-streaming-mesh/msm-deployments](https://github.com/media-streaming-mesh/msm-deployments) | 6 | 6 | 6 | 0 | 0 | 100.0% | Removed |
+| 79 | [josephaw1022/KubernetesWebhookModeSpike](https://github.com/josephaw1022/KubernetesWebhookModeSpike) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 80 | [AnchorFree/helm-charts](https://github.com/AnchorFree/helm-charts) | 22 | 22 | 22 | 0 | 0 | 100.0% | Removed |
+| 81 | [ops-center/alerts](https://github.com/ops-center/alerts) | 29 | 58 | 58 | 0 | 0 | 100.0% | Removed |
+| 82 | [oxblixxx/k8s](https://github.com/oxblixxx/k8s) | 56 | 56 | 56 | 0 | 0 | 100.0% | Removed |
+| 83 | [Basekick-Labs/arc](https://github.com/Basekick-Labs/arc) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 84 | [beaesthetic/beaesthetic-backend](https://github.com/beaesthetic/beaesthetic-backend) | 7 | 7 | 7 | 0 | 0 | 100.0% | Removed |
+| 85 | [minnathdhani/MERN-Assignment](https://github.com/minnathdhani/MERN-Assignment) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 86 | [mlaustin44/server_setup](https://github.com/mlaustin44/server_setup) | 15 | 15 | 15 | 0 | 0 | 100.0% | Removed |
+| 87 | [argoproj-labs/argocd-agent](https://github.com/argoproj-labs/argocd-agent) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 88 | [vbg03/Proyecto-Tolerancia-Fallos-Kubernetes](https://github.com/vbg03/Proyecto-Tolerancia-Fallos-Kubernetes) | 9 | 9 | 9 | 0 | 0 | 100.0% | Removed |
+| 89 | [Ankoay-Feno/kubernetes-autoscaling-aws](https://github.com/Ankoay-Feno/kubernetes-autoscaling-aws) | 4 | 4 | 4 | 0 | 0 | 100.0% | Removed |
+| 90 | [georg-nikola/movie-picker](https://github.com/georg-nikola/movie-picker) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
+| 91 | [simongdavies/silver-garbanzo](https://github.com/simongdavies/silver-garbanzo) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 92 | [AlexanderSenf/ga4gh_compute_trial](https://github.com/AlexanderSenf/ga4gh_compute_trial) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 93 | [landonc/helm-charts](https://github.com/landonc/helm-charts) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 94 | [la-cc/k8s-data-to-s3-cronjob](https://github.com/la-cc/k8s-data-to-s3-cronjob) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 95 | [DigiBugCat/cassandra-k8s](https://github.com/DigiBugCat/cassandra-k8s) | 4 | 8 | 8 | 0 | 0 | 100.0% | Removed |
+| 96 | [onecx/onecx-develop-adminer](https://github.com/onecx/onecx-develop-adminer) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 97 | [filipesuhett/Kommander](https://github.com/filipesuhett/Kommander) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 98 | [its-philipp/afga_modern](https://github.com/its-philipp/afga_modern) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 99 | [s11ngh/mycelium](https://github.com/s11ngh/mycelium) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 100 | [ext-sakamoro/ALICE-Codec-Cloud](https://github.com/ext-sakamoro/ALICE-Codec-Cloud) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 101 | [VanhJulien/AtelierKubernetes](https://github.com/VanhJulien/AtelierKubernetes) | 1 | 4 | 4 | 0 | 0 | 100.0% | Removed |
+| 102 | [sinhaparth5/portfolio-web-helm](https://github.com/sinhaparth5/portfolio-web-helm) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 103 | [victorZKov/helm-charts](https://github.com/victorZKov/helm-charts) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 104 | [dfds/ssu-k8s](https://github.com/dfds/ssu-k8s) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 105 | [sp-nadinekirin/aws-deploy-test](https://github.com/sp-nadinekirin/aws-deploy-test) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 106 | [666chaoge666/dinky-dev](https://github.com/666chaoge666/dinky-dev) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 107 | [gersonrs/tutorial-minio](https://github.com/gersonrs/tutorial-minio) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 108 | [essaid00/hertzbeat](https://github.com/essaid00/hertzbeat) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 109 | [oleksandr-codefresh/argo-load-product-2](https://github.com/oleksandr-codefresh/argo-load-product-2) | 93 | 95 | 95 | 0 | 0 | 100.0% | Removed |
+| 110 | [oleksandr-codefresh/argo-load-product-3](https://github.com/oleksandr-codefresh/argo-load-product-3) | 93 | 95 | 95 | 0 | 0 | 100.0% | Removed |
+| 111 | [perplexityai/pgcat](https://github.com/perplexityai/pgcat) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 112 | [fmb0racle/pgcat-custom](https://github.com/fmb0racle/pgcat-custom) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+|---|------------|--------|------|------------|-------------|-----------------|--------------|--------|
+| **Total** | **112 repos** | **877** | **920** | **920** | **0** | **0** | **100.0%** | - |
+
+## Failure Details
+

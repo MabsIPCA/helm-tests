@@ -1,0 +1,638 @@
+[
+  {
+    "repo_url": "https://github.com/ConductionNL/procces-engine",
+    "repo_name": "ConductionNL/procces-engine",
+    "chart_path": "cloned\\ConductionNL__procces-engine\\api\\helm",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/pluralsh/plural-helm-charts",
+    "repo_name": "pluralsh/plural-helm-charts",
+    "chart_path": "cloned\\pluralsh__plural-helm-charts\\charts\\airbyte",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/michaelw/common.itsumi",
+    "repo_name": "michaelw/common.itsumi",
+    "chart_path": "cloned\\michaelw__common.itsumi",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.31.3: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.31.3\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.31.3: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.31.3\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/solo-io/skv2",
+    "repo_name": "solo-io/skv2",
+    "chart_path": "cloned\\solo-io__skv2\\codegen\\test\\chart\\conditional-crds",
+    "error": "Error: validation: chart.metadata.name is required"
+  },
+  {
+    "repo_url": "https://github.com/flytrap/docker-admin",
+    "repo_name": "flytrap/docker-admin",
+    "chart_path": "cloned\\flytrap__docker-admin\\charts\\apisix-1.3",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.apiseven.com, https://charts.apiseven.com. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/akv-akv/de_research",
+    "repo_name": "akv-akv/de_research",
+    "chart_path": "cloned\\akv-akv__de_research\\kubernetes\\charts\\airbyte",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/Authorization-component",
+    "repo_name": "ConductionNL/Authorization-component",
+    "chart_path": "cloned\\ConductionNL__Authorization-component\\api\\helm",
+    "error": "load.go:138: Warning: Dependency locking is handled in Chart.lock since apiVersion \"v2\". We recommend migrating to Chart.lock.\nError: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/MirahImage/postfacto",
+    "repo_name": "MirahImage/postfacto",
+    "chart_path": "cloned\\MirahImage__postfacto\\tkg\\postfacto",
+    "error": "Error: no repository definition for @bitnami, @bitnami. Please add them via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/noygal/helm",
+    "repo_name": "noygal/helm",
+    "chart_path": "cloned\\noygal__helm\\charts\\example-dev-tools",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://noygal.github.com/helm\" chart repository:\n\tGet \"https://noygal.github.com/helm/index.yaml\": dial tcp: lookup noygal.github.com: no such host\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-19cefd96797d2c0b3ed74271dcee4ae7ad7d02cb4d4e47a98431938d24b11530 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-19cefd96797d2c0b3ed74271dcee4ae7ad7d02cb4d4e47a98431938d24b11530-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/manics/zero-to-jupyterhub-k8s-chart-expanded",
+    "repo_name": "manics/zero-to-jupyterhub-k8s-chart-expanded",
+    "chart_path": "cloned\\manics__zero-to-jupyterhub-k8s-chart-expanded\\0.8.1",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/unicef/magasin",
+    "repo_name": "unicef/magasin",
+    "chart_path": "cloned\\unicef__magasin\\helm\\dagster",
+    "error": "Error: no repository definition for https://raw.githubusercontent.com/bitnami/charts/eb5f9a9513d987b519f0ecd732e7031241c50328/bitnami, https://raw.githubusercontent.com/bitnami/charts/eb5f9a9513d987b519f0ecd732e7031241c50328/bitnami, https://raw.githubusercontent.com/bitnami/charts/eb5f9a9513d987b519f0ecd732e7031241c50328/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/berichtservice",
+    "repo_name": "ConductionNL/berichtservice",
+    "chart_path": "cloned\\ConductionNL__berichtservice\\api\\helm",
+    "error": "load.go:138: Warning: Dependency locking is handled in Chart.lock since apiVersion \"v2\". We recommend migrating to Chart.lock.\nError: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/commonground-ui",
+    "repo_name": "ConductionNL/commonground-ui",
+    "chart_path": "cloned\\ConductionNL__commonground-ui\\api\\helm",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/Veronneau-Techno-Conseil/comax-commons",
+    "repo_name": "Veronneau-Techno-Conseil/comax-commons",
+    "chart_path": "cloned\\Veronneau-Techno-Conseil__comax-commons\\helm_referee",
+    "error": "Error: no repository definition for https://mongodb.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/waTeim/mcp-base",
+    "repo_name": "waTeim/mcp-base",
+    "chart_path": "cloned\\waTeim__mcp-base\\chart",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading redis from repo oci://registry-1.docker.io/cloudpirates\nSave error occurred:  could not download oci://registry-1.docker.io/cloudpirates/redis: failed to resolve registry-1.docker.io/cloudpirates/redis:0.16.4: GET \"https://registry-1.docker.io/v2/cloudpirates/redis/manifests/0.16.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/cloudpirates/redis: failed to resolve registry-1.docker.io/cloudpirates/redis:0.16.4: GET \"https://registry-1.docker.io/v2/cloudpirates/redis/manifests/0.16.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/datawizz/Firestream",
+    "repo_name": "datawizz/Firestream",
+    "chart_path": "cloned\\datawizz__Firestream\\src\\charts\\bitnami\\airflow",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:21.2.5: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/21.2.5\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:21.2.5: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/21.2.5\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/limagbz/data-mesh-yelp",
+    "repo_name": "limagbz/data-mesh-yelp",
+    "chart_path": "cloned\\limagbz__data-mesh-yelp\\infra\\monitoring\\loki\\helm",
+    "error": "Error: no repository definition for https://charts.min.io/, https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/efremov-it/security",
+    "repo_name": "efremov-it/security",
+    "chart_path": "cloned\\efremov-it__security\\practice\\weeks\\2-3\\secureCodeBox\\operator",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/zaak-registratie-component",
+    "repo_name": "ConductionNL/zaak-registratie-component",
+    "chart_path": "cloned\\ConductionNL__zaak-registratie-component\\api\\helm",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/checkinservice",
+    "repo_name": "ConductionNL/checkinservice",
+    "chart_path": "cloned\\ConductionNL__checkinservice\\api\\helm",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: can't get a valid version for 1 subchart(s): \"postgresql\" (repository \"https://charts.bitnami.com/bitnami\", version \"10.1.1\"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/digispoof-old",
+    "repo_name": "ConductionNL/digispoof-old",
+    "chart_path": "cloned\\ConductionNL__digispoof-old\\api\\helm",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/proto-application-commonground",
+    "repo_name": "ConductionNL/proto-application-commonground",
+    "chart_path": "cloned\\ConductionNL__proto-application-commonground\\api\\helm",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/bitnami/charts",
+    "repo_name": "bitnami/charts",
+    "chart_path": "cloned\\bitnami__charts\\bitnami\\airflow",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:22.0.4: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/22.0.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:22.0.4: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/22.0.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/grafana/helm-charts",
+    "repo_name": "grafana/helm-charts",
+    "chart_path": "cloned\\grafana__helm-charts\\charts\\enterprise-metrics",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://helm.min.io/\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: minio chart not found in repo https://helm.min.io/"
+  },
+  {
+    "repo_url": "https://github.com/cloudnativeapp/charts",
+    "repo_name": "cloudnativeapp/charts",
+    "chart_path": "cloned\\cloudnativeapp__charts\\curated\\airflow",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/krateoplatformops/composition-portal-starter",
+    "repo_name": "krateoplatformops/composition-portal-starter",
+    "chart_path": "cloned\\krateoplatformops__composition-portal-starter\\chart",
+    "error": "Error: validation: chart.metadata.version \"CHART_VERSION\" is invalid"
+  },
+  {
+    "repo_url": "https://github.com/samcab28/Diseno-Software",
+    "repo_name": "samcab28/Diseno-Software",
+    "chart_path": "cloned\\samcab28__Diseno-Software\\proyecto\\caso4\\charts\\databases",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/rancher/charts",
+    "repo_name": "rancher/charts",
+    "chart_path": "cloned\\rancher__charts\\charts\\epinio\\102.0.1+up1.6.2",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/gersonrs/hand-on-airflow-with-minio",
+    "repo_name": "gersonrs/hand-on-airflow-with-minio",
+    "chart_path": "cloned\\gersonrs__hand-on-airflow-with-minio\\airflow",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/musqat/lectures",
+    "repo_name": "musqat/lectures",
+    "chart_path": "cloned\\musqat__lectures\\MicroService\\section_16\\helm\\grafana",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.31.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.31.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.31.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.31.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/general-rj45/mini-ml-stand-GRJ45",
+    "repo_name": "general-rj45/mini-ml-stand-GRJ45",
+    "chart_path": "cloned\\general-rj45__mini-ml-stand-GRJ45\\airflow-14.2.5\\airflow",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:17.11.3: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/17.11.3\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:17.11.3: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/17.11.3\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/shini4i/charts",
+    "repo_name": "shini4i/charts",
+    "chart_path": "cloned\\shini4i__charts\\charts\\app",
+    "error": "Error: no repository definition for https://shini4i.github.io/charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/otus-kuber-2020-07/israodin_platform",
+    "repo_name": "otus-kuber-2020-07/israodin_platform",
+    "chart_path": "cloned\\otus-kuber-2020-07__israodin_platform\\kubernetes-templating\\hipster-shop",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/robertbenzinger/charts",
+    "repo_name": "robertbenzinger/charts",
+    "chart_path": "cloned\\robertbenzinger__charts\\janusgraph",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: can't get a valid version for 2 subchart(s): \"cassandra\" (repository \"https://charts.bitnami.com/bitnami\", version \"5.6.1\"), \"elasticsearch\" (repository \"https://charts.bitnami.com/bitnami\", version \"12.6.2\"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml"
+  },
+  {
+    "repo_url": "https://github.com/openlit/helm",
+    "repo_name": "openlit/helm",
+    "chart_path": "cloned\\openlit__helm\\charts\\openlit",
+    "error": "Error: no repository definition for https://openlit.github.io/helm/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/marcus-sa/helm-charts",
+    "repo_name": "marcus-sa/helm-charts",
+    "chart_path": "cloned\\marcus-sa__helm-charts\\repositories\\banzaicloud-stable\\anchore-engine\\0.13.0\\chart",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com, https://kubernetes-charts.storage.googleapis.com, https://kubernetes-charts.storage.googleapis.com. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/hey101/scale-catalog",
+    "repo_name": "hey101/scale-catalog",
+    "chart_path": "cloned\\hey101__scale-catalog\\incubator\\archivebox\\0.7.2",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.5.1: Get \"https://tccr.io/v2/truecharts/common/manifests/17.5.1\": dial tcp: lookup tccr.io: no such host\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.5.1: Get \"https://tccr.io/v2/truecharts/common/manifests/17.5.1\": dial tcp: lookup tccr.io: no such host"
+  },
+  {
+    "repo_url": "https://github.com/unity-systems/spring-demo",
+    "repo_name": "unity-systems/spring-demo",
+    "chart_path": "cloned\\unity-systems__spring-demo\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://chartmuseum.build.cd.jenkins-x.io\" chart repository:\n\tGet \"https://chartmuseum.build.cd.jenkins-x.io/index.yaml\": dial tcp 35.205.186.189:443: connectex: Uma tentativa de ligação falhou porque o componente ligado não respondeu\r\ncorretamente após um período de tempo, ou a ligação estabelecida falhou\r\nporque o anfitrião ligado não respondeu.\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-e0b822155b4ae5f667d1ffc8875a97176819d25e9b8afb113dc2a031f0a96e31 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-e0b822155b4ae5f667d1ffc8875a97176819d25e9b8afb113dc2a031f0a96e31-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/deresegetachew/playing-helm",
+    "repo_name": "deresegetachew/playing-helm",
+    "chart_path": "cloned\\deresegetachew__playing-helm\\kanban-backend",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/nadav07/helmTesting",
+    "repo_name": "nadav07/helmTesting",
+    "chart_path": "cloned\\nadav07__helmTesting\\chartTest",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/ibuildthecloud/rancher-charts",
+    "repo_name": "ibuildthecloud/rancher-charts",
+    "chart_path": "cloned\\ibuildthecloud__rancher-charts\\charts\\anchore-engine\\0.1.0",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/czerwonk/hakanai",
+    "repo_name": "czerwonk/hakanai",
+    "chart_path": "cloned\\czerwonk__hakanai\\helm\\hakanai",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:20.5.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/20.5.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:20.5.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/20.5.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/Abinesh0206/gitlab-ce",
+    "repo_name": "Abinesh0206/gitlab-ce",
+    "chart_path": "cloned\\Abinesh0206__gitlab-ce",
+    "error": "Error: no repository definition for https://charts.jetstack.io/, https://prometheus-community.github.io/helm-charts, https://charts.bitnami.com/bitnami, https://charts.gitlab.io/, https://charts.bitnami.com/bitnami, https://charts.gitlab.io/, https://helm.traefik.io/traefik, https://haproxytech.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/samfms/truecharts",
+    "repo_name": "samfms/truecharts",
+    "chart_path": "cloned\\samfms__truecharts\\deprecated\\bitwarden\\1.2.5",
+    "error": "Error: no repository definition for https://truecharts.org/, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Blankeeir/demo",
+    "repo_name": "Blankeeir/demo",
+    "chart_path": "cloned\\Blankeeir__demo\\infrastructure\\helm\\rafiki",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://interledger.github.io/helm-charts, https://interledger.github.io/helm-charts, https://interledger.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/randoli/helm-charts",
+    "repo_name": "randoli/helm-charts",
+    "chart_path": "cloned\\randoli__helm-charts\\charts\\loki",
+    "error": "Error: no repository definition for https://charts.min.io/, https://grafana.github.io/helm-charts, https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/dylanjustice/the-grid",
+    "repo_name": "dylanjustice/the-grid",
+    "chart_path": "cloned\\dylanjustice__the-grid\\gitops\\workloads\\kube-prometheus",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Mark4562/Truenas-Scale",
+    "repo_name": "Mark4562/Truenas-Scale",
+    "chart_path": "cloned\\Mark4562__Truenas-Scale\\premium\\authelia\\23.13.13",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 2 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:20.3.11: Get \"https://tccr.io/v2/truecharts/common/manifests/20.3.11\": dial tcp: lookup tccr.io: no such host\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:20.3.11: Get \"https://tccr.io/v2/truecharts/common/manifests/20.3.11\": dial tcp: lookup tccr.io: no such host"
+  },
+  {
+    "repo_url": "https://github.com/praveenperera/matrix-element",
+    "repo_name": "praveenperera/matrix-element",
+    "chart_path": "cloned\\praveenperera__matrix-element\\matrix-synapse",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/suomitek/suomitek-charts",
+    "repo_name": "suomitek/suomitek-charts",
+    "chart_path": "cloned\\suomitek__suomitek-charts\\suomitek\\airflow",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/sapcc/helm-charts",
+    "repo_name": "sapcc/helm-charts",
+    "chart_path": "cloned\\sapcc__helm-charts\\common\\inventory-updater",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading owner-info from repo oci://keppel.eu-de-1.cloud.sap/ccloud-helm\nSave error occurred:  could not download oci://keppel.eu-de-1.cloud.sap/ccloud-helm/owner-info: failed to resolve keppel.eu-de-1.cloud.sap/ccloud-helm/owner-info:0.2.0: Get \"https://keppel.eu-de-1.cloud.sap/v2/ccloud-helm/owner-info/manifests/0.2.0\": dial tcp: lookup keppel.eu-de-1.cloud.sap: getaddrinfow: Este é geralmente um erro temporário durante a resolução de nomes de anfitrião e significa que o servidor local não recebeu uma resposta de um servidor autoritário.\nError: could not download oci://keppel.eu-de-1.cloud.sap/ccloud-helm/owner-info: failed to resolve keppel.eu-de-1.cloud.sap/ccloud-helm/owner-info:0.2.0: Get \"https://keppel.eu-de-1.cloud.sap/v2/ccloud-helm/owner-info/manifests/0.2.0\": dial tcp: lookup keppel.eu-de-1.cloud.sap: getaddrinfow: Este é geralmente um erro temporário durante a resolução de nomes de anfitrião e significa que o servidor local não recebeu uma resposta de um servidor autoritário."
+  },
+  {
+    "repo_url": "https://github.com/feliux/containers-lab",
+    "repo_name": "feliux/containers-lab",
+    "chart_path": "cloned\\feliux__containers-lab\\k8s\\sysdig",
+    "error": "Error: directory cloned\\feliux__containers-lab\\k8s\\admission-controller not found"
+  },
+  {
+    "repo_url": "https://github.com/quantumreasoning/kubeapps",
+    "repo_name": "quantumreasoning/kubeapps",
+    "chart_path": "cloned\\quantumreasoning__kubeapps\\chart\\kubeapps",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:20.2.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/20.2.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:20.2.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/20.2.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/ndawpa/guiadodevops",
+    "repo_name": "ndawpa/guiadodevops",
+    "chart_path": "cloned\\ndawpa__guiadodevops\\kubernetes\\helm\\airflow-1.18.0\\airflow",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/jstrachan/demo16",
+    "repo_name": "jstrachan/demo16",
+    "chart_path": "cloned\\jstrachan__demo16\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://chartmuseum.build.cd.jenkins-x.io\" chart repository:\n\tGet \"https://chartmuseum.build.cd.jenkins-x.io/index.yaml\": dial tcp 35.205.186.189:443: connectex: Uma tentativa de ligação falhou porque o componente ligado não respondeu\r\ncorretamente após um período de tempo, ou a ligação estabelecida falhou\r\nporque o anfitrião ligado não respondeu.\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-e0b822155b4ae5f667d1ffc8875a97176819d25e9b8afb113dc2a031f0a96e31 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-e0b822155b4ae5f667d1ffc8875a97176819d25e9b8afb113dc2a031f0a96e31-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/t9k/apps",
+    "repo_name": "t9k/apps",
+    "chart_path": "cloned\\t9k__apps\\user-console\\chatnio\\chart",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 2 charts\nDownloading mysql from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/mysql: failed to resolve registry-1.docker.io/bitnamicharts/mysql:9.18.2: GET \"https://registry-1.docker.io/v2/bitnamicharts/mysql/manifests/9.18.2\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/mysql: failed to resolve registry-1.docker.io/bitnamicharts/mysql:9.18.2: GET \"https://registry-1.docker.io/v2/bitnamicharts/mysql/manifests/9.18.2\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/TrevorSquillario/iDRAC-Telemetry-Ansible-Demo",
+    "repo_name": "TrevorSquillario/iDRAC-Telemetry-Ansible-Demo",
+    "chart_path": "cloned\\TrevorSquillario__iDRAC-Telemetry-Ansible-Demo\\k8s\\helm\\app",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/DOME-Marketplace/dome-gitops",
+    "repo_name": "DOME-Marketplace/dome-gitops",
+    "chart_path": "cloned\\DOME-Marketplace__dome-gitops\\ionos\\marketplace\\kafka",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading kafka from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/kafka: failed to resolve registry-1.docker.io/bitnamicharts/kafka:26.0.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/kafka/manifests/26.0.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/kafka: failed to resolve registry-1.docker.io/bitnamicharts/kafka:26.0.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/kafka/manifests/26.0.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/deepdivenow/rke2-charts",
+    "repo_name": "deepdivenow/rke2-charts",
+    "chart_path": "cloned\\deepdivenow__rke2-charts\\charts\\harvester-cloud-provider\\harvester-cloud-provider\\0.2.100",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/aemneina/testcatalog",
+    "repo_name": "aemneina/testcatalog",
+    "chart_path": "cloned\\aemneina__testcatalog\\incubator\\gogs",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/dynatrace-wwse/enablement-kubernetes-opentelemetry",
+    "repo_name": "dynatrace-wwse/enablement-kubernetes-opentelemetry",
+    "chart_path": "cloned\\dynatrace-wwse__enablement-kubernetes-opentelemetry\\.devcontainer\\apps\\astroshop\\helm\\dt-otel-demo-helm",
+    "error": "Error: no repository definition for https://open-telemetry.github.io/opentelemetry-helm-charts, https://open-telemetry.github.io/opentelemetry-helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/keonhoban/mlops-infra-gitops",
+    "repo_name": "keonhoban/mlops-infra-gitops",
+    "chart_path": "cloned\\keonhoban__mlops-infra-gitops\\baseline\\charts\\minio-wrapper",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading minio from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/minio: failed to resolve registry-1.docker.io/bitnamicharts/minio:17.0.21: GET \"https://registry-1.docker.io/v2/bitnamicharts/minio/manifests/17.0.21\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/minio: failed to resolve registry-1.docker.io/bitnamicharts/minio:17.0.21: GET \"https://registry-1.docker.io/v2/bitnamicharts/minio/manifests/17.0.21\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/SBasak8/eu-val-loki",
+    "repo_name": "SBasak8/eu-val-loki",
+    "chart_path": "cloned\\SBasak8__eu-val-loki\\charts\\airflow",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: can't get a valid version for 1 subchart(s): \"postgresql\" (repository \"https://charts.bitnami.com/bitnami\", version \"10.5.3\"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml"
+  },
+  {
+    "repo_url": "https://github.com/VadimShtukan/otus_homework",
+    "repo_name": "VadimShtukan/otus_homework",
+    "chart_path": "cloned\\VadimShtukan__otus_homework\\architect\\lesson05\\kubernetis\\helm-chart",
+    "error": "Error: no repository definition for https://kubernetes-charts.storage.googleapis.com. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/dariuszbolkowski/ezdrp_process",
+    "repo_name": "dariuszbolkowski/ezdrp_process",
+    "chart_path": "cloned\\dariuszbolkowski__ezdrp_process\\charts\\ezd-backend\\1.0.0\\charts\\mongodb",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ValeriiVasianovych/argocd-kubernetes-infrastructure",
+    "repo_name": "ValeriiVasianovych/argocd-kubernetes-infrastructure",
+    "chart_path": "cloned\\ValeriiVasianovych__argocd-kubernetes-infrastructure\\icdev-01\\helmCharts\\prometheus-stack",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/Jozefwl/applications-waldoserver",
+    "repo_name": "Jozefwl/applications-waldoserver",
+    "chart_path": "cloned\\Jozefwl__applications-waldoserver\\Applications\\ERPNext\\erpnext-official\\erpnext",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/svtechnmaa/charts",
+    "repo_name": "svtechnmaa/charts",
+    "chart_path": "cloned\\svtechnmaa__charts\\kubernetes\\airflow",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: can't get a valid version for 1 subchart(s): \"postgresql\" (repository \"https://charts.bitnami.com/bitnami\", version \"10.5.3\"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml"
+  },
+  {
+    "repo_url": "https://github.com/kingdonb/gitops-hephy",
+    "repo_name": "kingdonb/gitops-hephy",
+    "chart_path": "cloned\\kingdonb__gitops-hephy\\workflow",
+    "error": "Error: error unpacking subchart monitor in workflow: error unpacking subchart grafana in monitor: validation: chart.metadata.version \"\u003cWill be populated by the ci before publishing the chart\u003e\" is invalid"
+  },
+  {
+    "repo_url": "https://github.com/NourBkh/k8s-config-repo",
+    "repo_name": "NourBkh/k8s-config-repo",
+    "chart_path": "cloned\\NourBkh__k8s-config-repo\\monitoring",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/cyberrangecz/devops-helm",
+    "repo_name": "cyberrangecz/devops-helm",
+    "chart_path": "cloned\\cyberrangecz__devops-helm\\helm\\crczp-head",
+    "error": "Error: directory cloned\\cyberrangecz__devops-helm\\helm\\charts\\common not found"
+  },
+  {
+    "repo_url": "https://github.com/joostvdg/cmg",
+    "repo_name": "joostvdg/cmg",
+    "chart_path": "cloned\\joostvdg__cmg\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/superdoo/multitier-webapp",
+    "repo_name": "superdoo/multitier-webapp",
+    "chart_path": "cloned\\superdoo__multitier-webapp\\helm\\postgresql",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/IvanciniGT/formacionHelm",
+    "repo_name": "IvanciniGT/formacionHelm",
+    "chart_path": "cloned\\IvanciniGT__formacionHelm\\charts\\mariadb",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.6.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.6.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.6.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.6.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/wadhekarpankaj/k8s-infrastructure",
+    "repo_name": "wadhekarpankaj/k8s-infrastructure",
+    "chart_path": "cloned\\wadhekarpankaj__k8s-infrastructure\\charts\\argo-cd",
+    "error": "Error: no repository definition for https://dandydeveloper.github.io/charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/cb-kubecd/bdd-gh-1581604741",
+    "repo_name": "cb-kubecd/bdd-gh-1581604741",
+    "chart_path": "cloned\\cb-kubecd__bdd-gh-1581604741\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/Ammar-Taimoori/speechmatics-helm-chart",
+    "repo_name": "Ammar-Taimoori/speechmatics-helm-chart",
+    "chart_path": "cloned\\Ammar-Taimoori__speechmatics-helm-chart\\1.2.0\\sm-realtime",
+    "error": "Error: directory cloned\\Ammar-Taimoori__speechmatics-helm-chart\\1.2.0\\sm-proxy not found"
+  },
+  {
+    "repo_url": "https://github.com/sookeke/jps-pidp",
+    "repo_name": "sookeke/jps-pidp",
+    "chart_path": "cloned\\sookeke__jps-pidp\\charts\\nginx",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/HelmCI/ci-mon",
+    "repo_name": "HelmCI/ci-mon",
+    "chart_path": "cloned\\HelmCI__ci-mon\\charts\\jaeger",
+    "error": "Error: no repository definition for https://charts.helm.sh/incubator, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/KevMCarp/truecharts-catalog-fork",
+    "repo_name": "KevMCarp/truecharts-catalog-fork",
+    "chart_path": "cloned\\KevMCarp__truecharts-catalog-fork\\dependency\\clickhouse\\5.0.54",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://library-charts.truecharts.org\" chart repository:\n\tGet \"https://library-charts.truecharts.org/index.yaml\": dial tcp: lookup library-charts.truecharts.org: no such host\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-024b189b59f6c6ccf0de6e5148db1578caf551c511f4eb220ece14cef00f80e0 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-024b189b59f6c6ccf0de6e5148db1578caf551c511f4eb220ece14cef00f80e0-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/tetratelabs/charts",
+    "repo_name": "tetratelabs/charts",
+    "chart_path": "cloned\\tetratelabs__charts\\charts\\demos\\istio-monitoring-demo",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/teamhephy/redis",
+    "repo_name": "teamhephy/redis",
+    "chart_path": "cloned\\teamhephy__redis\\charts\\redis",
+    "error": "Error: validation: chart.metadata.version \"\u003cWill be populated by the ci before publishing the chart\u003e\" is invalid"
+  },
+  {
+    "repo_url": "https://github.com/wesparish/rancher-catalog",
+    "repo_name": "wesparish/rancher-catalog",
+    "chart_path": "cloned\\wesparish__rancher-catalog\\charts\\ark-wes",
+    "error": "Error: directory cloned\\ark-server-charts\\charts\\ark-cluster not found"
+  },
+  {
+    "repo_url": "https://github.com/cb-kubecd/bdd-nh-import-1586949778",
+    "repo_name": "cb-kubecd/bdd-nh-import-1586949778",
+    "chart_path": "cloned\\cb-kubecd__bdd-nh-import-1586949778\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/tetratelabs/helm-charts",
+    "repo_name": "tetratelabs/helm-charts",
+    "chart_path": "cloned\\tetratelabs__helm-charts\\charts\\demos\\istio-monitoring-demo",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ArvigEnterprises/integration-tests-bluegreen",
+    "repo_name": "ArvigEnterprises/integration-tests-bluegreen",
+    "chart_path": "cloned\\ArvigEnterprises__integration-tests-bluegreen\\.helm\\charts\\arvigtestcluster334d\\canary",
+    "error": "Error: directory cloned\\ArvigEnterprises__integration-tests-bluegreen\\.helm\\charts\\arvigtestcluster334d\\laravel-library not found"
+  },
+  {
+    "repo_url": "https://github.com/tis-system/charts",
+    "repo_name": "tis-system/charts",
+    "chart_path": "cloned\\tis-system__charts\\charts\\demos\\istio-monitoring-demo\\0.1.0",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/LMCache/LMBench",
+    "repo_name": "LMCache/LMBench",
+    "chart_path": "cloned\\LMCache__LMBench\\2-serving-engines\\dynamo\\dynamo\\deploy\\cloud\\helm\\platform",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://nats-io.github.io/k8s/helm/charts/\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 6 charts\nDownloading nats from repo https://nats-io.github.io/k8s/helm/charts/\nDownloading etcd from repo https://charts.bitnami.com/bitnami\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/etcd: failed to resolve registry-1.docker.io/bitnamicharts/etcd:11.1.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/etcd/manifests/11.1.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/etcd: failed to resolve registry-1.docker.io/bitnamicharts/etcd:11.1.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/etcd/manifests/11.1.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/tkestack/charts",
+    "repo_name": "tkestack/charts",
+    "chart_path": "cloned\\tkestack__charts\\incubator\\airflow",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com/, https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/shakedaskayo/kubiya-demo",
+    "repo_name": "shakedaskayo/kubiya-demo",
+    "chart_path": "cloned\\shakedaskayo__kubiya-demo\\helm\\bitnami-charts\\bitnami\\airflow",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:18.11.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/18.11.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:18.11.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/18.11.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/moophlo/helm-charts",
+    "repo_name": "moophlo/helm-charts",
+    "chart_path": "cloned\\moophlo__helm-charts\\bitnami\\airflow",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:22.0.4: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/22.0.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:22.0.4: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/22.0.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/aicanhelp/ai-cloud",
+    "repo_name": "aicanhelp/ai-cloud",
+    "chart_path": "cloned\\aicanhelp__ai-cloud\\bitnami\\charts\\bitnami-202503\\airflow",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:20.7.1: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/20.7.1\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:20.7.1: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/20.7.1\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/itboon/bitnami-charts",
+    "repo_name": "itboon/bitnami-charts",
+    "chart_path": "cloned\\itboon__bitnami-charts\\charts-bitnami\\airflow",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:22.0.4: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/22.0.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:22.0.4: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/22.0.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/p-/PyroDocker",
+    "repo_name": "p-/PyroDocker",
+    "chart_path": "cloned\\p-__PyroDocker\\compose\\signoz\\deploy\\kubernetes\\platform",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://charts.helm.sh/incubator. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/yatvoikoresh/cloneranchercharts",
+    "repo_name": "yatvoikoresh/cloneranchercharts",
+    "chart_path": "cloned\\yatvoikoresh__cloneranchercharts\\charts\\epinio\\102.0.1+up1.6.2",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/otus-kuber-2020-04/israodin_platform",
+    "repo_name": "otus-kuber-2020-04/israodin_platform",
+    "chart_path": "cloned\\otus-kuber-2020-04__israodin_platform\\kubernetes-templating\\hipster-shop",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ccojocar/spring-demo",
+    "repo_name": "ccojocar/spring-demo",
+    "chart_path": "cloned\\ccojocar__spring-demo\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://chartmuseum.build.cd.jenkins-x.io\" chart repository:\n\tGet \"https://chartmuseum.build.cd.jenkins-x.io/index.yaml\": dial tcp 35.205.186.189:443: connectex: Uma tentativa de ligação falhou porque o componente ligado não respondeu\r\ncorretamente após um período de tempo, ou a ligação estabelecida falhou\r\nporque o anfitrião ligado não respondeu.\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-e0b822155b4ae5f667d1ffc8875a97176819d25e9b8afb113dc2a031f0a96e31 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-e0b822155b4ae5f667d1ffc8875a97176819d25e9b8afb113dc2a031f0a96e31-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/introproventures/spring-demo",
+    "repo_name": "introproventures/spring-demo",
+    "chart_path": "cloned\\introproventures__spring-demo\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://chartmuseum.build.cd.jenkins-x.io\" chart repository:\n\tGet \"https://chartmuseum.build.cd.jenkins-x.io/index.yaml\": dial tcp 35.205.186.189:443: connectex: Uma tentativa de ligação falhou porque o componente ligado não respondeu\r\ncorretamente após um período de tempo, ou a ligação estabelecida falhou\r\nporque o anfitrião ligado não respondeu.\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-e0b822155b4ae5f667d1ffc8875a97176819d25e9b8afb113dc2a031f0a96e31 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-e0b822155b4ae5f667d1ffc8875a97176819d25e9b8afb113dc2a031f0a96e31-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/leandrofrs/spring_demo",
+    "repo_name": "leandrofrs/spring_demo",
+    "chart_path": "cloned\\leandrofrs__spring_demo\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/susnata1981/spring-demo",
+    "repo_name": "susnata1981/spring-demo",
+    "chart_path": "cloned\\susnata1981__spring-demo\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/Jaebytes/TrueCharts",
+    "repo_name": "Jaebytes/TrueCharts",
+    "chart_path": "cloned\\Jaebytes__TrueCharts\\premium\\traefik\\26.10.19",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:20.3.12: Get \"https://tccr.io/v2/truecharts/common/manifests/20.3.12\": dial tcp: lookup tccr.io: no such host\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:20.3.12: Get \"https://tccr.io/v2/truecharts/common/manifests/20.3.12\": dial tcp: lookup tccr.io: no such host"
+  },
+  {
+    "repo_url": "https://github.com/PnsDev/Truechart-catalog-archive",
+    "repo_name": "PnsDev/Truechart-catalog-archive",
+    "chart_path": "cloned\\PnsDev__Truechart-catalog-archive\\incubator\\archivebox\\0.7.2",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp: lookup tccr.io: no such host\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp: lookup tccr.io: no such host"
+  },
+  {
+    "repo_url": "https://github.com/petersandor/tc-archive",
+    "repo_name": "petersandor/tc-archive",
+    "chart_path": "cloned\\petersandor__tc-archive\\scale-catalog\\incubator\\archivebox\\0.7.2",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp: lookup tccr.io: no such host\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp: lookup tccr.io: no such host"
+  },
+  {
+    "repo_url": "https://github.com/adstanley/archive",
+    "repo_name": "adstanley/archive",
+    "chart_path": "cloned\\adstanley__archive\\scale-catalog\\incubator\\archivebox\\0.7.2",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp: lookup tccr.io: no such host\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp: lookup tccr.io: no such host"
+  },
+  {
+    "repo_url": "https://github.com/tdunlap607/kubeapps-fork",
+    "repo_name": "tdunlap607/kubeapps-fork",
+    "chart_path": "cloned\\tdunlap607__kubeapps-fork\\chart\\kubeapps",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:20.6.1: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/20.6.1\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:20.6.1: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/20.6.1\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/adynetro/truecharts",
+    "repo_name": "adynetro/truecharts",
+    "chart_path": "cloned\\adynetro__truecharts\\incubator\\archivebox\\0.7.2",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp: lookup tccr.io: no such host\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp: lookup tccr.io: no such host"
+  }
+]

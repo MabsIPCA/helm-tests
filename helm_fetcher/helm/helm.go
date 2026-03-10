@@ -1,6 +1,7 @@
 package helm
 
 import (
+	"fmt"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -33,6 +34,10 @@ func FindValuesFiles(chartDir string) []string {
 			base := filepath.Base(m)
 			// Skip the default values file (Helm loads it automatically)
 			if base == "values.yaml" || base == "values.yml" {
+				continue
+			}
+			// skip non *values* yaml/yml files (e.g. Chart.yaml, Chart-svc.yaml, etc.)
+			if !strings.Contains(strings.ToLower(base), "values") {
 				continue
 			}
 			// Skip any Chart*.yaml / Chart*.yml (chart descriptor files, e.g. Chart.yaml, Chart-svc.yaml)
@@ -71,12 +76,17 @@ func Combinations(items []string) [][]string {
 }
 
 // RunHelmDependencyBuild executes "helm dependency build" for the given chart path and logs the result.
+// On failure, the returned error message contains the combined stdout+stderr output.
 func RunHelmDependencyBuild(chartPath string) error {
 	cmd := exec.Command("helm", "dependency", "build", chartPath)
 	out, err := cmd.CombinedOutput()
 	if err != nil {
-		log.Warn().Str("chart", chartPath).Str("output", string(out)).Msg("helm dependency build failed (continuing)")
-		return err
+		msg := strings.TrimSpace(string(out))
+		if msg == "" {
+			msg = err.Error()
+		}
+		log.Warn().Str("chart", chartPath).Str("output", msg).Msg("helm dependency build failed (continuing)")
+		return fmt.Errorf("%s", msg)
 	}
 	log.Info().Str("chart", chartPath).Msg("helm dependency build succeeded")
 	return nil
