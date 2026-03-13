@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-03-12T22:49:15.5031662Z",
+  "source_catalog": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\taxonomy_analyzer\\testdata\\sample_catalog.json",
+  "totals": {
+    "repos": 1,
+    "runs": 2,
+    "template_failures": 1,
+    "dependency_failures": 1,
+    "classified_errors": 2,
+    "unclassified_errors": 0
+  },
+  "by_kind": {
+    "dependency": {
+      "count": 1,
+      "examples": [
+        {
+          "repo_url": "https://github.com/example/repo-a",
+          "repo_name": "example/repo-a",
+          "chart_path": "cloned\\example__repo-a\\chart-a",
+          "error_source": "dependency",
+          "error_kind": "dependency",
+          "error_sub_kind": "missing_repository",
+          "error_message": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+        }
+      ]
+    },
+    "template": {
+      "count": 1,
+      "examples": [
+        {
+          "repo_url": "https://github.com/example/repo-a",
+          "repo_name": "example/repo-a",
+          "chart_path": "cloned\\example__repo-a\\chart-a",
+          "helm_command": "helm template test cloned\\example__repo-a\\chart-a",
+          "error_source": "template",
+          "error_kind": "template",
+          "error_sub_kind": "nil_pointer",
+          "error_message": "Error: template: x/templates/service.yaml:6:18: executing \"x/templates/service.yaml\" at \u003c.Values.service.type\u003e: nil pointer evaluating interface {}.type"
+        }
+      ]
+    }
+  },
+  "by_sub_kind": {
+    "dependency.missing_repository": {
+      "count": 1,
+      "examples": [
+        {
+          "repo_url": "https://github.com/example/repo-a",
+          "repo_name": "example/repo-a",
+          "chart_path": "cloned\\example__repo-a\\chart-a",
+          "error_source": "dependency",
+          "error_kind": "dependency",
+          "error_sub_kind": "missing_repository",
+          "error_message": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+        }
+      ]
+    },
+    "template.nil_pointer": {
+      "count": 1,
+      "examples": [
+        {
+          "repo_url": "https://github.com/example/repo-a",
+          "repo_name": "example/repo-a",
+          "chart_path": "cloned\\example__repo-a\\chart-a",
+          "helm_command": "helm template test cloned\\example__repo-a\\chart-a",
+          "error_source": "template",
+          "error_kind": "template",
+          "error_sub_kind": "nil_pointer",
+          "error_message": "Error: template: x/templates/service.yaml:6:18: executing \"x/templates/service.yaml\" at \u003c.Values.service.type\u003e: nil pointer evaluating interface {}.type"
+        }
+      ]
+    }
+  },
+  "by_repo": {
+    "example/repo-a": {
+      "dependency.missing_repository": 1,
+      "template.nil_pointer": 1
+    }
+  },
+  "unclassified": null,
+  "all_classified": [
+    {
+      "repo_url": "https://github.com/example/repo-a",
+      "repo_name": "example/repo-a",
+      "chart_path": "cloned\\example__repo-a\\chart-a",
+      "error_source": "dependency",
+      "error_kind": "dependency",
+      "error_sub_kind": "missing_repository",
+      "error_message": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+    },
+    {
+      "repo_url": "https://github.com/example/repo-a",
+      "repo_name": "example/repo-a",
+      "chart_path": "cloned\\example__repo-a\\chart-a",
+      "helm_command": "helm template test cloned\\example__repo-a\\chart-a",
+      "error_source": "template",
+      "error_kind": "template",
+      "error_sub_kind": "nil_pointer",
+      "error_message": "Error: template: x/templates/service.yaml:6:18: executing \"x/templates/service.yaml\" at \u003c.Values.service.type\u003e: nil pointer evaluating interface {}.type"
+    }
+  ]
+}

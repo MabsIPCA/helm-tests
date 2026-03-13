@@ -1,0 +1,3 @@
+repo_url,repo_name,chart_path,values_files,helm_command,error_source,error_kind,error_sub_kind,error_message
+https://github.com/example/repo-a,example/repo-a,cloned\example__repo-a\chart-a,,,dependency,dependency,missing_repository,Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
+https://github.com/example/repo-a,example/repo-a,cloned\example__repo-a\chart-a,,helm template test cloned\example__repo-a\chart-a,template,template,nil_pointer,"Error: template: x/templates/service.yaml:6:18: executing ""x/templates/service.yaml"" at <.Values.service.type>: nil pointer evaluating interface {}.type"
