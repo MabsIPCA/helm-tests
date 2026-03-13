@@ -1,0 +1,39 @@
+[
+  {
+    "repo_url": "https://github.com/example/repo-a",
+    "repo_name": "example/repo-a",
+    "cloned_dir": "cloned\\example__repo-a",
+    "total_charts": 1,
+    "total_runs": 2,
+    "total_successes": 0,
+    "total_failures": 1,
+    "total_dep_failures": 1,
+    "charts": [
+      {
+        "chart_path": "cloned\\example__repo-a\\chart-a",
+        "total_runs": 2,
+        "successes": 0,
+        "failures": 1,
+        "dep_build_failure": true,
+        "dep_build_error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'",
+        "runs": [
+          {
+            "chart_path": "cloned\\example__repo-a\\chart-a",
+            "helm_command": "helm template test cloned\\example__repo-a\\chart-a",
+            "success": false,
+            "error_message": "Error: template: x/templates/service.yaml:6:18: executing \"x/templates/service.yaml\" at <.Values.service.type>: nil pointer evaluating interface {}.type"
+          },
+          {
+            "chart_path": "cloned\\example__repo-a\\chart-a",
+            "helm_command": "helm template test cloned\\example__repo-a\\chart-a -f values.yaml",
+            "values_files": ["values.yaml"],
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": true,
+    "dep_failed": true
+  }
+]
+
