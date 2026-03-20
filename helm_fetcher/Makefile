@@ -3,10 +3,12 @@
 # helm_fetcher – Makefile
 # ---------------------------------------------------------------------------
 
-# Number of results per page (max 100 for GitHub code search)
-PER_PAGE  ?= 100
-# Number of pages to fetch  (≈ PER_PAGE × MAX_PAGES unique repos)
-MAX_PAGES ?= 5
+# Number of top entries to process from the selected source
+TOP       ?= 400
+# Number of entries fetched per API request/page (artifacthub max 60, github max 100)
+PAGE_SIZE ?= 60
+# Discovery source: artifacthub or github
+SOURCE    ?= artifacthub
 
 # Output files
 ALL_JSON  := catalog_all_results.json
@@ -17,11 +19,12 @@ CLONE_DIR := cloned
 
 .PHONY: run clean-cloned clean-output clean help
 
-## run: fetch repos from GitHub, run helm template on all combinations
+## run: fetch repos from selected source, run helm template on all combinations
 run:
 	go run main.go \
-		-per-page=$(PER_PAGE) \
-		-max-pages=$(MAX_PAGES)
+		-source=$(SOURCE) \
+		-top=$(TOP) \
+		-page-size=$(PAGE_SIZE)
 
 ## clean-cloned: remove all cloned repositories
 clean-cloned:
@@ -42,7 +45,7 @@ clean: clean-cloned clean-output
 ## help: show available targets
 help:
 	@echo.
-	@echo   Usage: make [target] [PER_PAGE=30] [MAX_PAGES=3]
+	@echo   Usage: make [target] [SOURCE=artifacthub] [TOP=400] [PAGE_SIZE=60]
 	@echo.
 	@echo   Targets:
 	@echo     run           - run the catalog script
@@ -52,7 +55,8 @@ help:
 	@echo     help          - show this message
 	@echo.
 	@echo   Variables:
-	@echo     PER_PAGE  (default: 30)  results per GitHub search page
-	@echo     MAX_PAGES (default:  3)  number of pages to fetch
+	@echo     SOURCE    (default: artifacthub) discovery source: artifacthub or github
+	@echo     TOP       (default: 400) number of top entries to process
+	@echo     PAGE_SIZE (default: 60) entries per API request/page (artifacthub max 60)
 	@echo.
 

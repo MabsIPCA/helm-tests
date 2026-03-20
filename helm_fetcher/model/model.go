@@ -55,3 +55,26 @@ type GitHubSearchResult struct {
 		} `json:"repository"`
 	} `json:"items"`
 }
+
+// ArtifactHubSearchResponse models the package search payload from Artifact Hub.
+type ArtifactHubSearchResponse struct {
+	Packages []ArtifactHubPackage `json:"packages"`
+}
+
+// ArtifactHubPackage contains the fields needed to resolve a source repository.
+type ArtifactHubPackage struct {
+	Name       string             `json:"name"`
+	Version    string             `json:"version"`
+	Repository ArtifactRepository `json:"repository"`
+	Links      []ArtifactLink     `json:"links"`
+}
+
+type ArtifactRepository struct {
+	Name string `json:"name"`
+	URL  string `json:"url"`
+}
+
+type ArtifactLink struct {
+	Name string `json:"name"`
+	URL  string `json:"url"`
+}

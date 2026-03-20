@@ -1,0 +1,90 @@
+[
+  {
+    "repo_url": "https://github.com/featurehub-io/featurehub",
+    "repo_name": "featurehub-io/featurehub",
+    "cloned_dir": "cloned\\featurehub-io__featurehub",
+    "total_charts": 5,
+    "total_runs": 6,
+    "total_successes": 5,
+    "total_failures": 1,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init",
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init\\charts\\deployment-manager",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init\\charts\\deployment-manager",
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init\\charts\\deployment-manager",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub",
+        "total_runs": 2,
+        "successes": 2,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub",
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub",
+            "success": true
+          },
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub",
+            "values_files": [
+              "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\ci-values.yaml"
+            ],
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub -f cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\ci-values.yaml",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\common",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\common",
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\common",
+            "success": false,
+            "error_message": "Error: template: common-config/templates/configmap.yaml:10:17: executing \"common-config/templates/configmap.yaml\" at \u003c.Values.global.testEnvironment\u003e: nil pointer evaluating interface {}.testEnvironment\n\nUse --debug flag to render out invalid YAML\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\mr-service",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\mr-service",
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\mr-service",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": true,
+    "dep_failed": false
+  }
+]

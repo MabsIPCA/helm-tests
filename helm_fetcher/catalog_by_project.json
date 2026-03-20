@@ -1,0 +1,1820 @@
+[
+  {
+    "repo_url": "https://github.com/FairwindsOps/goldilocks",
+    "repo_name": "FairwindsOps/goldilocks",
+    "cloned_dir": "cloned\\FairwindsOps__goldilocks",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/kubernetes/node-problem-detector",
+    "repo_name": "kubernetes/node-problem-detector",
+    "cloned_dir": "cloned\\kubernetes__node-problem-detector",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/deliveryhero/helm-charts",
+    "repo_name": "deliveryhero/helm-charts",
+    "cloned_dir": "cloned\\deliveryhero__helm-charts",
+    "total_charts": 53,
+    "total_runs": 53,
+    "total_successes": 53,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\aws-ebs-csi-driver",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\aws-ebs-csi-driver",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\aws-ebs-csi-driver",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\aws-s3-proxy",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\aws-s3-proxy",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\aws-s3-proxy",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\aws-service-events-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\aws-service-events-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\aws-service-events-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\aws-service-quotas-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\aws-service-quotas-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\aws-service-quotas-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\aws-storage-class",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\aws-storage-class",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\aws-storage-class",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\backstage",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\backstage",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\backstage",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\backstage-mono",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\backstage-mono",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\backstage-mono",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\cachet",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\cachet",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\cachet",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\cloudhealth-collector",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\cloudhealth-collector",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\cloudhealth-collector",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\cluster-overprovisioner",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\cluster-overprovisioner",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\cluster-overprovisioner",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\cortex-gateway",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\cortex-gateway",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\cortex-gateway",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\datadog-controller",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\datadog-controller",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\datadog-controller",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\dregsy",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\dregsy",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\dregsy",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\field-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\field-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\field-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\gripmock",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\gripmock",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\gripmock",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\hoppscotch",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\hoppscotch",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\hoppscotch",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\k8s-cloudwatch-adapter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\k8s-cloudwatch-adapter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\k8s-cloudwatch-adapter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\k8s-event-logger",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\k8s-event-logger",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\k8s-event-logger",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\k8s-resources",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\k8s-resources",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\k8s-resources",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\killgrave",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\killgrave",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\killgrave",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\kube-bench",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\kube-bench",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\kube-bench",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\kube-downscaler",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\kube-downscaler",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\kube-downscaler",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\kubecost-reports-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\kubecost-reports-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\kubecost-reports-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\labelsmanager-controller",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\labelsmanager-controller",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\labelsmanager-controller",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\listmonk",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\listmonk",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\listmonk",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\locust",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\locust",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\locust",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\metabase",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\metabase",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\metabase",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\mlflow",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\mlflow",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\mlflow",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\net-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\net-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\net-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\newrelic-controller",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\newrelic-controller",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\newrelic-controller",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\node-local-dns",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\node-local-dns",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\node-local-dns",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\node-problem-detector",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\node-problem-detector",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\node-problem-detector",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\pg-repack-scheduler",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\pg-repack-scheduler",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\pg-repack-scheduler",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\postgres-controller",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\postgres-controller",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\postgres-controller",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\priority-class",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\priority-class",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\priority-class",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-aws-costs-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-aws-costs-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-aws-costs-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-aws-health-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-aws-health-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-aws-health-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-aws-limits-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-aws-limits-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-aws-limits-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-cloudflare-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-cloudflare-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-cloudflare-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-k8s-events-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-k8s-events-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-k8s-events-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-locust-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-locust-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-locust-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-new-relic-app-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-new-relic-app-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-new-relic-app-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-new-relic-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-new-relic-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-new-relic-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-sentry-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-sentry-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-sentry-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-soti-mobicontrol-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-soti-mobicontrol-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-soti-mobicontrol-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-spot-termination-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-spot-termination-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-spot-termination-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-statsd-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\prometheus-statsd-exporter",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\prometheus-statsd-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\rds-downscaler",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\rds-downscaler",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\rds-downscaler",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\service-account",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\service-account",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\service-account",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\superset",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\superset",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\superset",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\toxiproxy",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\toxiproxy",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\toxiproxy",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\weblate",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\weblate",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\weblate",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\wiremock",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\deliveryhero__helm-charts\\stable\\wiremock",
+            "helm_command": "helm template test cloned\\deliveryhero__helm-charts\\stable\\wiremock",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/danielqsj/kafka_exporter",
+    "repo_name": "danielqsj/kafka_exporter",
+    "cloned_dir": "cloned\\danielqsj__kafka_exporter",
+    "total_charts": 1,
+    "total_runs": 1,
+    "total_successes": 1,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\danielqsj__kafka_exporter\\charts\\kafka-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\danielqsj__kafka_exporter\\charts\\kafka-exporter",
+            "helm_command": "helm template test cloned\\danielqsj__kafka_exporter\\charts\\kafka-exporter",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/langgenius/dify",
+    "repo_name": "langgenius/dify",
+    "cloned_dir": "cloned\\langgenius__dify",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/kubernetes/autoscaler",
+    "repo_name": "kubernetes/autoscaler",
+    "cloned_dir": "cloned\\kubernetes__autoscaler",
+    "total_charts": 2,
+    "total_runs": 2,
+    "total_successes": 2,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\kubernetes__autoscaler\\cluster-autoscaler\\charts\\cluster-autoscaler",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\kubernetes__autoscaler\\cluster-autoscaler\\charts\\cluster-autoscaler",
+            "helm_command": "helm template test cloned\\kubernetes__autoscaler\\cluster-autoscaler\\charts\\cluster-autoscaler",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\kubernetes__autoscaler\\vertical-pod-autoscaler\\charts\\vertical-pod-autoscaler",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\kubernetes__autoscaler\\vertical-pod-autoscaler\\charts\\vertical-pod-autoscaler",
+            "helm_command": "helm template test cloned\\kubernetes__autoscaler\\vertical-pod-autoscaler\\charts\\vertical-pod-autoscaler",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/AdguardTeam/AdGuardHome",
+    "repo_name": "AdguardTeam/AdGuardHome",
+    "cloned_dir": "cloned\\AdguardTeam__AdGuardHome",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/Altinity/clickhouse-operator",
+    "repo_name": "Altinity/clickhouse-operator",
+    "cloned_dir": "cloned\\Altinity__clickhouse-operator",
+    "total_charts": 1,
+    "total_runs": 1,
+    "total_successes": 1,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\Altinity__clickhouse-operator\\deploy\\helm\\clickhouse-operator",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\Altinity__clickhouse-operator\\deploy\\helm\\clickhouse-operator",
+            "helm_command": "helm template test cloned\\Altinity__clickhouse-operator\\deploy\\helm\\clickhouse-operator",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/Jamesits/docker-dst-server",
+    "repo_name": "Jamesits/docker-dst-server",
+    "cloned_dir": "cloned\\Jamesits__docker-dst-server",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/istio/istio",
+    "repo_name": "istio/istio",
+    "cloned_dir": "cloned\\istio__istio",
+    "total_charts": 10,
+    "total_runs": 10,
+    "total_successes": 10,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\istio__istio\\manifests\\charts\\base",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\istio__istio\\manifests\\charts\\base",
+            "helm_command": "helm template test cloned\\istio__istio\\manifests\\charts\\base",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\istio__istio\\manifests\\charts\\default",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\istio__istio\\manifests\\charts\\default",
+            "helm_command": "helm template test cloned\\istio__istio\\manifests\\charts\\default",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\istio__istio\\manifests\\charts\\gateway",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\istio__istio\\manifests\\charts\\gateway",
+            "helm_command": "helm template test cloned\\istio__istio\\manifests\\charts\\gateway",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\istio__istio\\manifests\\charts\\gateways\\istio-egress",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\istio__istio\\manifests\\charts\\gateways\\istio-egress",
+            "helm_command": "helm template test cloned\\istio__istio\\manifests\\charts\\gateways\\istio-egress",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\istio__istio\\manifests\\charts\\gateways\\istio-ingress",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\istio__istio\\manifests\\charts\\gateways\\istio-ingress",
+            "helm_command": "helm template test cloned\\istio__istio\\manifests\\charts\\gateways\\istio-ingress",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\istio__istio\\manifests\\charts\\istio-cni",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\istio__istio\\manifests\\charts\\istio-cni",
+            "helm_command": "helm template test cloned\\istio__istio\\manifests\\charts\\istio-cni",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\istio__istio\\manifests\\charts\\istio-control\\istio-discovery",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\istio__istio\\manifests\\charts\\istio-control\\istio-discovery",
+            "helm_command": "helm template test cloned\\istio__istio\\manifests\\charts\\istio-control\\istio-discovery",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\istio__istio\\manifests\\charts\\ztunnel",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\istio__istio\\manifests\\charts\\ztunnel",
+            "helm_command": "helm template test cloned\\istio__istio\\manifests\\charts\\ztunnel",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\istio__istio\\manifests\\sample-charts\\ambient",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\istio__istio\\manifests\\sample-charts\\ambient",
+            "helm_command": "helm template test cloned\\istio__istio\\manifests\\sample-charts\\ambient",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\istio__istio\\samples\\ambient-argo\\tag-chart",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\istio__istio\\samples\\ambient-argo\\tag-chart",
+            "helm_command": "helm template test cloned\\istio__istio\\samples\\ambient-argo\\tag-chart",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/netbox-community/netbox-chart",
+    "repo_name": "netbox-community/netbox-chart",
+    "cloned_dir": "cloned\\netbox-community__netbox-chart",
+    "total_charts": 2,
+    "total_runs": 2,
+    "total_successes": 2,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\netbox-community__netbox-chart\\charts\\netbox",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\netbox-community__netbox-chart\\charts\\netbox",
+            "helm_command": "helm template test cloned\\netbox-community__netbox-chart\\charts\\netbox",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\netbox-community__netbox-chart\\charts\\netbox-operator",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\netbox-community__netbox-chart\\charts\\netbox-operator",
+            "helm_command": "helm template test cloned\\netbox-community__netbox-chart\\charts\\netbox-operator",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/liranme/redisinsight-secure",
+    "repo_name": "liranme/redisinsight-secure",
+    "cloned_dir": "cloned\\liranme__redisinsight-secure",
+    "total_charts": 1,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 1,
+    "charts": [
+      {
+        "chart_path": "cloned\\liranme__redisinsight-secure\\helm\\redisinsight-secure",
+        "total_runs": 0,
+        "successes": 0,
+        "failures": 0,
+        "dep_build_failure": true,
+        "dep_build_error": "Error: no repository definition for https://oauth2-proxy.github.io/manifests. Please add the missing repos via 'helm repo add'",
+        "runs": null
+      }
+    ],
+    "kept": false,
+    "dep_failed": true
+  },
+  {
+    "repo_url": "https://github.com/atmoz/sftp",
+    "repo_name": "atmoz/sftp",
+    "cloned_dir": "cloned\\atmoz__sftp",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/kubernetes/kubernetes",
+    "repo_name": "kubernetes/kubernetes",
+    "cloned_dir": "cloned\\kubernetes__kubernetes",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/moby/buildkit",
+    "repo_name": "moby/buildkit",
+    "cloned_dir": "cloned\\moby__buildkit",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/helm/charts",
+    "repo_name": "helm/charts",
+    "cloned_dir": "cloned\\helm__charts",
+    "total_charts": 363,
+    "total_runs": 14,
+    "total_successes": 14,
+    "total_failures": 0,
+    "total_dep_failures": 1,
+    "charts": [
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\artifactory",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\artifactory",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\artifactory",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\aws-alb-ingress-controller",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\aws-alb-ingress-controller",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\aws-alb-ingress-controller",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\azuremonitor-containers",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\azuremonitor-containers",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\azuremonitor-containers",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\burrow",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\burrow",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\burrow",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\buzzfeed-sso",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\buzzfeed-sso",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\buzzfeed-sso",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\cassandra",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\cassandra",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\cassandra",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\cassandra-operator",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\cassandra-operator",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\cassandra-operator",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\cassandra-reaper",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\cassandra-reaper",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\cassandra-reaper",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\chartmuseum",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\chartmuseum",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\chartmuseum",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\check-mk",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\check-mk",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\check-mk",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\cockroachdb",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\cockroachdb",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\cockroachdb",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\common",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\common",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\common",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\consul",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\consul",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\consul",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\couchdb",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\helm__charts\\incubator\\couchdb",
+            "helm_command": "helm template test cloned\\helm__charts\\incubator\\couchdb",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\helm__charts\\incubator\\distribution",
+        "total_runs": 0,
+        "successes": 0,
+        "failures": 0,
+        "dep_build_failure": true,
+        "dep_build_error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com/, https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'",
+        "runs": null
+      }
+    ],
+    "kept": false,
+    "dep_failed": true
+  },
+  {
+    "repo_url": "https://github.com/kubernetes-sigs/cluster-api",
+    "repo_name": "kubernetes-sigs/cluster-api",
+    "cloned_dir": "cloned\\kubernetes-sigs__cluster-api",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/heptiolabs/eventrouter",
+    "repo_name": "heptiolabs/eventrouter",
+    "cloned_dir": "cloned\\heptiolabs__eventrouter",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/uselagoon/remote-controller",
+    "repo_name": "uselagoon/remote-controller",
+    "cloned_dir": "cloned\\uselagoon__remote-controller",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/ellie/atuin",
+    "repo_name": "ellie/atuin",
+    "cloned_dir": "cloned\\ellie__atuin",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/rm3l/dev-feed",
+    "repo_name": "rm3l/dev-feed",
+    "cloned_dir": "cloned\\rm3l__dev-feed",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/tokopedia/gripmock",
+    "repo_name": "tokopedia/gripmock",
+    "cloned_dir": "cloned\\tokopedia__gripmock",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/DependencyTrack/hyades",
+    "repo_name": "DependencyTrack/hyades",
+    "cloned_dir": "cloned\\DependencyTrack__hyades",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/kubeservice-stack/cpusets-controller",
+    "repo_name": "kubeservice-stack/cpusets-controller",
+    "cloned_dir": "cloned\\kubeservice-stack__cpusets-controller",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/rm3l/mac-oui",
+    "repo_name": "rm3l/mac-oui",
+    "cloned_dir": "cloned\\rm3l__mac-oui",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/reorg/pg_repack",
+    "repo_name": "reorg/pg_repack",
+    "cloned_dir": "cloned\\reorg__pg_repack",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/rm3l/service-names-port-numbers",
+    "repo_name": "rm3l/service-names-port-numbers",
+    "cloned_dir": "cloned\\rm3l__service-names-port-numbers",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/RunnerM/simply-dns-webhook",
+    "repo_name": "RunnerM/simply-dns-webhook",
+    "cloned_dir": "cloned\\RunnerM__simply-dns-webhook",
+    "total_charts": 1,
+    "total_runs": 1,
+    "total_successes": 1,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\RunnerM__simply-dns-webhook\\deploy\\simply-dns-webhook",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\RunnerM__simply-dns-webhook\\deploy\\simply-dns-webhook",
+            "helm_command": "helm template test cloned\\RunnerM__simply-dns-webhook\\deploy\\simply-dns-webhook",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/buchgr/bazel-remote",
+    "repo_name": "buchgr/bazel-remote",
+    "cloned_dir": "cloned\\buchgr__bazel-remote",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/CloudVE/helm-charts",
+    "repo_name": "CloudVE/helm-charts",
+    "cloned_dir": "cloned\\CloudVE__helm-charts",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/tektoncd/dashboard",
+    "repo_name": "tektoncd/dashboard",
+    "cloned_dir": "cloned\\tektoncd__dashboard",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/Quiq/docker-registry-ui",
+    "repo_name": "Quiq/docker-registry-ui",
+    "cloned_dir": "cloned\\Quiq__docker-registry-ui",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/sigoden/dufs",
+    "repo_name": "sigoden/dufs",
+    "cloned_dir": "cloned\\sigoden__dufs",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/slamdev/external-secrets-operator",
+    "repo_name": "slamdev/external-secrets-operator",
+    "cloned_dir": "cloned\\slamdev__external-secrets-operator",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/featurehub-io/featurehub",
+    "repo_name": "featurehub-io/featurehub",
+    "cloned_dir": "cloned\\featurehub-io__featurehub",
+    "total_charts": 5,
+    "total_runs": 6,
+    "total_successes": 5,
+    "total_failures": 1,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init",
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init\\charts\\deployment-manager",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init\\charts\\deployment-manager",
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\cluster-init\\namespace-init\\charts\\deployment-manager",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub",
+        "total_runs": 2,
+        "successes": 2,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub",
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub",
+            "success": true
+          },
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub",
+            "values_files": [
+              "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\ci-values.yaml"
+            ],
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub -f cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\ci-values.yaml",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\common",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\common",
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\common",
+            "success": false,
+            "error_message": "Error: template: common-config/templates/configmap.yaml:10:17: executing \"common-config/templates/configmap.yaml\" at \u003c.Values.global.testEnvironment\u003e: nil pointer evaluating interface {}.testEnvironment\n\nUse --debug flag to render out invalid YAML\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\mr-service",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\mr-service",
+            "helm_command": "helm template test cloned\\featurehub-io__featurehub\\pipeline\\deploy\\src\\main\\resources\\featurehub\\charts\\mr-service",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": true,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/duyet/gaxy",
+    "repo_name": "duyet/gaxy",
+    "cloned_dir": "cloned\\duyet__gaxy",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/guangzhengli/k8s-tutorials",
+    "repo_name": "guangzhengli/k8s-tutorials",
+    "cloned_dir": "cloned\\guangzhengli__k8s-tutorials",
+    "total_charts": 1,
+    "total_runs": 2,
+    "total_successes": 2,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\guangzhengli__k8s-tutorials\\helm-charts\\hello-helm",
+        "total_runs": 2,
+        "successes": 2,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\guangzhengli__k8s-tutorials\\helm-charts\\hello-helm",
+            "helm_command": "helm template test cloned\\guangzhengli__k8s-tutorials\\helm-charts\\hello-helm",
+            "success": true
+          },
+          {
+            "chart_path": "cloned\\guangzhengli__k8s-tutorials\\helm-charts\\hello-helm",
+            "values_files": [
+              "cloned\\guangzhengli__k8s-tutorials\\helm-charts\\hello-helm\\values-dev.yaml"
+            ],
+            "helm_command": "helm template test cloned\\guangzhengli__k8s-tutorials\\helm-charts\\hello-helm -f cloned\\guangzhengli__k8s-tutorials\\helm-charts\\hello-helm\\values-dev.yaml",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/mccutchen/go-httpbin",
+    "repo_name": "mccutchen/go-httpbin",
+    "cloned_dir": "cloned\\mccutchen__go-httpbin",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/BerriAI/litellm",
+    "repo_name": "BerriAI/litellm",
+    "cloned_dir": "cloned\\BerriAI__litellm",
+    "total_charts": 1,
+    "total_runs": 1,
+    "total_successes": 1,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\BerriAI__litellm\\deploy\\charts\\litellm-helm",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\BerriAI__litellm\\deploy\\charts\\litellm-helm",
+            "helm_command": "helm template test cloned\\BerriAI__litellm\\deploy\\charts\\litellm-helm",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/sclorg/nodejs-ex",
+    "repo_name": "sclorg/nodejs-ex",
+    "cloned_dir": "cloned\\sclorg__nodejs-ex",
+    "total_charts": 1,
+    "total_runs": 1,
+    "total_successes": 1,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\sclorg__nodejs-ex\\helm\\nodejs",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\sclorg__nodejs-ex\\helm\\nodejs",
+            "helm_command": "helm template test cloned\\sclorg__nodejs-ex\\helm\\nodejs",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/cradlepoint/kubernetes-helm-chart-pgbouncer",
+    "repo_name": "cradlepoint/kubernetes-helm-chart-pgbouncer",
+    "cloned_dir": "cloned\\cradlepoint__kubernetes-helm-chart-pgbouncer",
+    "total_charts": 1,
+    "total_runs": 1,
+    "total_successes": 1,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\cradlepoint__kubernetes-helm-chart-pgbouncer\\pgbouncer",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\cradlepoint__kubernetes-helm-chart-pgbouncer\\pgbouncer",
+            "helm_command": "helm template test cloned\\cradlepoint__kubernetes-helm-chart-pgbouncer\\pgbouncer",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/tektoncd/pipeline",
+    "repo_name": "tektoncd/pipeline",
+    "cloned_dir": "cloned\\tektoncd__pipeline",
+    "total_charts": 1,
+    "total_runs": 1,
+    "total_successes": 1,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "cloned\\tektoncd__pipeline\\test\\gohelloworld\\gohelloworld-chart",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "cloned\\tektoncd__pipeline\\test\\gohelloworld\\gohelloworld-chart",
+            "helm_command": "helm template test cloned\\tektoncd__pipeline\\test\\gohelloworld\\gohelloworld-chart",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": false,
+    "dep_failed": false
+  }
+]

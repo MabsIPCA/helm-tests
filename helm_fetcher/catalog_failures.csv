@@ -1,0 +1,5 @@
+repo_url,repo_name,chart_path,values_files,helm_command,error_message
+https://github.com/featurehub-io/featurehub,featurehub-io/featurehub,cloned\featurehub-io__featurehub\pipeline\deploy\src\main\resources\featurehub\charts\common,,helm template test cloned\featurehub-io__featurehub\pipeline\deploy\src\main\resources\featurehub\charts\common,"Error: template: common-config/templates/configmap.yaml:10:17: executing ""common-config/templates/configmap.yaml"" at <.Values.global.testEnvironment>: nil pointer evaluating interface {}.testEnvironment
+
+Use --debug flag to render out invalid YAML
+"

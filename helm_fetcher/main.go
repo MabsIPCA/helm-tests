@@ -8,7 +8,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/joho/godotenv"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 
@@ -19,31 +18,40 @@ import (
 )
 
 const (
-	perPageFlag     = "per-page"
-	perPageUsage    = "Results per GitHub search page (max 100)"
-	perPageDefault  = 30
-	maxPagesFlag    = "max-pages"
-	maxPagesUsage   = "Number of GitHub search pages to fetch (max 10)"
-	maxPagesDefault = 3
+	sourceFlag      = "source"
+	sourceUsage     = "Discovery source: artifacthub or github"
+	sourceDefault   = "artifacthub"
+	topFlag         = "top"
+	topUsage        = "Top N repositories/packages to inspect"
+	topDefault      = 400
+	pageSizeFlag    = "page-size"
+	pageSizeUsage   = "Results per API request/page (artifacthub max 60, github max 100)"
+	pageSizeDefault = 60
 )
 
 func main() {
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr, TimeFormat: time.Kitchen})
 
-	perPage := flag.Int(perPageFlag, perPageDefault, perPageUsage)
-	maxPages := flag.Int(maxPagesFlag, maxPagesDefault, maxPagesUsage)
+	source := flag.String(sourceFlag, sourceDefault, sourceUsage)
+	top := flag.Int(topFlag, topDefault, topUsage)
+	pageSize := flag.Int(pageSizeFlag, pageSizeDefault, pageSizeUsage)
 	flag.Parse()
 
-	if err := godotenv.Load(); err != nil {
-		log.Warn().Msg(".env not found – using environment variables")
-	}
-	token := os.Getenv("GITHUB_TOKEN")
-	if token == "" {
-		log.Fatal().Msg("GITHUB_TOKEN is required (set in .env or environment)")
+	selectedSource := strings.ToLower(strings.TrimSpace(*source))
+	var (
+		repos []string
+		err   error
+	)
+
+	switch selectedSource {
+	case "artifacthub":
+		repos, err = git.SearchTopArtifactHubRepos(*top, *pageSize)
+	case "github":
+		repos, err = git.SearchTopGitHubRepos(*top, *pageSize)
+	default:
+		log.Fatal().Str("source", *source).Msg("Invalid source. Use 'artifacthub' or 'github'")
 	}
 
-	// search for repos with Chart.yaml files
-	repos, err := git.SearchGitHubCharts(token, *perPage, *maxPages)
 	if err != nil {
 		log.Error().Err(err).Msg("Search encountered an error (continuing with partial results)")
 	}
