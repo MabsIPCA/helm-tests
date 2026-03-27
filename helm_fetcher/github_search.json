@@ -1,0 +1,3131 @@
+{
+  "source": "github",
+  "top": 1000,
+  "order": "desc",
+  "repos": [
+    {
+      "repo_url": "https://github.com/rancher/rancher",
+      "stars": 25441
+    },
+    {
+      "repo_url": "https://github.com/labring/sealos",
+      "stars": 17073
+    },
+    {
+      "repo_url": "https://github.com/cert-manager/cert-manager",
+      "stars": 13720
+    },
+    {
+      "repo_url": "https://github.com/bitnami/charts",
+      "stars": 10316
+    },
+    {
+      "repo_url": "https://github.com/refly-ai/refly",
+      "stars": 7087
+    },
+    {
+      "repo_url": "https://github.com/microsoft/FluidFramework",
+      "stars": 4918
+    },
+    {
+      "repo_url": "https://github.com/emissary-ingress/emissary",
+      "stars": 4495
+    },
+    {
+      "repo_url": "https://github.com/DataLinkDC/dinky",
+      "stars": 3713
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/kwok",
+      "stars": 3073
+    },
+    {
+      "repo_url": "https://github.com/inspektor-gadget/inspektor-gadget",
+      "stars": 2763
+    },
+    {
+      "repo_url": "https://github.com/linode/apl-core",
+      "stars": 2253
+    },
+    {
+      "repo_url": "https://github.com/cozystack/cozystack",
+      "stars": 2003
+    },
+    {
+      "repo_url": "https://github.com/grafana/helm-charts",
+      "stars": 1974
+    },
+    {
+      "repo_url": "https://github.com/microsoft/mssql-docker",
+      "stars": 1866
+    },
+    {
+      "repo_url": "https://github.com/norwoodj/helm-docs",
+      "stars": 1728
+    },
+    {
+      "repo_url": "https://github.com/semaphoreio/semaphore",
+      "stars": 1490
+    },
+    {
+      "repo_url": "https://github.com/securitybunker/databunker",
+      "stars": 1394
+    },
+    {
+      "repo_url": "https://github.com/trueforge-org/truecharts",
+      "stars": 1331
+    },
+    {
+      "repo_url": "https://github.com/secureCodeBox/secureCodeBox",
+      "stars": 964
+    },
+    {
+      "repo_url": "https://github.com/shortlink-org/shortlink",
+      "stars": 771
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-csi/csi-driver-smb",
+      "stars": 626
+    },
+    {
+      "repo_url": "https://github.com/openstack/openstack-helm",
+      "stars": 560
+    },
+    {
+      "repo_url": "https://github.com/medic/cht-core",
+      "stars": 526
+    },
+    {
+      "repo_url": "https://github.com/WeBankFinTech/Prophecis",
+      "stars": 510
+    },
+    {
+      "repo_url": "https://github.com/open-edge-platform/geti",
+      "stars": 469
+    },
+    {
+      "repo_url": "https://github.com/rancher/charts",
+      "stars": 427
+    },
+    {
+      "repo_url": "https://github.com/cloudnativeapp/charts",
+      "stars": 416
+    },
+    {
+      "repo_url": "https://github.com/BigKAA/youtube",
+      "stars": 403
+    },
+    {
+      "repo_url": "https://github.com/radondb/radondb-mysql-kubernetes",
+      "stars": 373
+    },
+    {
+      "repo_url": "https://github.com/IBM/charts",
+      "stars": 310
+    },
+    {
+      "repo_url": "https://github.com/Thakurvaibhav/k8s",
+      "stars": 308
+    },
+    {
+      "repo_url": "https://github.com/hyperledger-bevel/bevel-operator-fabric",
+      "stars": 297
+    },
+    {
+      "repo_url": "https://github.com/redhat-cop/namespace-configuration-operator",
+      "stars": 267
+    },
+    {
+      "repo_url": "https://github.com/JahstreetOrg/spark-on-kubernetes-helm",
+      "stars": 202
+    },
+    {
+      "repo_url": "https://github.com/vmware/secrets-manager",
+      "stars": 177
+    },
+    {
+      "repo_url": "https://github.com/jmcgrath207/k8s-ephemeral-storage-metrics",
+      "stars": 172
+    },
+    {
+      "repo_url": "https://github.com/vexxhost/atmosphere",
+      "stars": 159
+    },
+    {
+      "repo_url": "https://github.com/redhat-cop/operator-utils",
+      "stars": 154
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/blob-csi-driver",
+      "stars": 144
+    },
+    {
+      "repo_url": "https://github.com/unixhot/devops-x",
+      "stars": 126
+    },
+    {
+      "repo_url": "https://github.com/open-edge-platform/edge-ai-libraries",
+      "stars": 125
+    },
+    {
+      "repo_url": "https://github.com/aws-samples/amazon-eks-machine-learning-with-terraform-and-kubeflow",
+      "stars": 124
+    },
+    {
+      "repo_url": "https://github.com/ahgraber/homelab-gitops-k3s",
+      "stars": 109
+    },
+    {
+      "repo_url": "https://github.com/aws-controllers-k8s/code-generator",
+      "stars": 91
+    },
+    {
+      "repo_url": "https://github.com/rancher/rke2-charts",
+      "stars": 86
+    },
+    {
+      "repo_url": "https://github.com/JJGadgets/Biohazard",
+      "stars": 83
+    },
+    {
+      "repo_url": "https://github.com/aldoborrero/k8s-usenet",
+      "stars": 78
+    },
+    {
+      "repo_url": "https://github.com/Mirantis/rockoon",
+      "stars": 76
+    },
+    {
+      "repo_url": "https://github.com/apecloud/kubeblocks-addons",
+      "stars": 72
+    },
+    {
+      "repo_url": "https://github.com/Obmondo/KubeAid",
+      "stars": 71
+    },
+    {
+      "repo_url": "https://github.com/stackrox/helm-charts",
+      "stars": 67
+    },
+    {
+      "repo_url": "https://github.com/project-sunbird/sunbird-devops",
+      "stars": 61
+    },
+    {
+      "repo_url": "https://github.com/Borjis131/docker-open5gs",
+      "stars": 60
+    },
+    {
+      "repo_url": "https://github.com/FuelLabs/fuel-block-committer",
+      "stars": 60
+    },
+    {
+      "repo_url": "https://github.com/SimpleOpenSoftware/chronicle",
+      "stars": 60
+    },
+    {
+      "repo_url": "https://github.com/rancher/partner-charts",
+      "stars": 60
+    },
+    {
+      "repo_url": "https://github.com/CARV-ICS-FORTH/frisbee",
+      "stars": 52
+    },
+    {
+      "repo_url": "https://github.com/wikibook/kubepractice",
+      "stars": 52
+    },
+    {
+      "repo_url": "https://github.com/reefland/ansible-k3s-argocd-renovate",
+      "stars": 50
+    },
+    {
+      "repo_url": "https://github.com/pluralsh/plural-artifacts",
+      "stars": 49
+    },
+    {
+      "repo_url": "https://github.com/tmforum-oda/oda-canvas",
+      "stars": 47
+    },
+    {
+      "repo_url": "https://github.com/sa-mw-dach/bobbycar",
+      "stars": 46
+    },
+    {
+      "repo_url": "https://github.com/devdattakulkarni/CloudComputing",
+      "stars": 43
+    },
+    {
+      "repo_url": "https://github.com/boozallen/aissemble",
+      "stars": 42
+    },
+    {
+      "repo_url": "https://github.com/tkestack/charts",
+      "stars": 42
+    },
+    {
+      "repo_url": "https://github.com/ODIM-Project/ODIM",
+      "stars": 40
+    },
+    {
+      "repo_url": "https://github.com/sapcc/helm-charts",
+      "stars": 39
+    },
+    {
+      "repo_url": "https://github.com/opea-project/Enterprise-Inference",
+      "stars": 38
+    },
+    {
+      "repo_url": "https://github.com/platyplus/platyplus",
+      "stars": 37
+    },
+    {
+      "repo_url": "https://github.com/EtheaDev/kitto",
+      "stars": 36
+    },
+    {
+      "repo_url": "https://github.com/quickwit-oss/helm-charts",
+      "stars": 36
+    },
+    {
+      "repo_url": "https://github.com/opendevstack/ods-quickstarters",
+      "stars": 35
+    },
+    {
+      "repo_url": "https://github.com/acuvity/mcp-servers-registry",
+      "stars": 34
+    },
+    {
+      "repo_url": "https://github.com/etiennetremel/istio-cross-namespace-canary-release-demo",
+      "stars": 33
+    },
+    {
+      "repo_url": "https://github.com/k8s-home-lab/helm-charts",
+      "stars": 33
+    },
+    {
+      "repo_url": "https://github.com/hmcts/cnp-flux-config",
+      "stars": 32
+    },
+    {
+      "repo_url": "https://github.com/auto-shift/autoshiftv2",
+      "stars": 30
+    },
+    {
+      "repo_url": "https://github.com/nandod/kitto_frozen",
+      "stars": 30
+    },
+    {
+      "repo_url": "https://github.com/timfeirg/lain-cli",
+      "stars": 30
+    },
+    {
+      "repo_url": "https://github.com/crutonjohn/gitops",
+      "stars": 29
+    },
+    {
+      "repo_url": "https://github.com/mojaloop/helm",
+      "stars": 29
+    },
+    {
+      "repo_url": "https://github.com/jenkins-x/jx3-pipeline-catalog",
+      "stars": 28
+    },
+    {
+      "repo_url": "https://github.com/camptocamp/charts",
+      "stars": 26
+    },
+    {
+      "repo_url": "https://github.com/devtron-labs/charts",
+      "stars": 25
+    },
+    {
+      "repo_url": "https://github.com/pingidentity/helm-charts",
+      "stars": 25
+    },
+    {
+      "repo_url": "https://github.com/sunnysideup/silverstripe-ecommerce",
+      "stars": 25
+    },
+    {
+      "repo_url": "https://github.com/hypertrace/hypertrace-ui",
+      "stars": 24
+    },
+    {
+      "repo_url": "https://github.com/lakekeeper/lakekeeper-charts",
+      "stars": 23
+    },
+    {
+      "repo_url": "https://github.com/YAKEcloud/yake",
+      "stars": 22
+    },
+    {
+      "repo_url": "https://github.com/bflance/proxmox-talos",
+      "stars": 22
+    },
+    {
+      "repo_url": "https://github.com/k0rdent/catalog",
+      "stars": 21
+    },
+    {
+      "repo_url": "https://github.com/Loongson-Cloud-Community/dockerfiles",
+      "stars": 20
+    },
+    {
+      "repo_url": "https://github.com/junghoon2/k8s-class",
+      "stars": 19
+    },
+    {
+      "repo_url": "https://github.com/SupportTools/push-to-k8s",
+      "stars": 18
+    },
+    {
+      "repo_url": "https://github.com/rallyware/terraform-argocd-aws-eks-cluster-bootstrap",
+      "stars": 18
+    },
+    {
+      "repo_url": "https://github.com/openkruise/charts",
+      "stars": 16
+    },
+    {
+      "repo_url": "https://github.com/cloud-native-toolkit/toolkit-charts",
+      "stars": 15
+    },
+    {
+      "repo_url": "https://github.com/jharmison-redhat/openshift-setup",
+      "stars": 15
+    },
+    {
+      "repo_url": "https://github.com/suse-edge/charts",
+      "stars": 15
+    },
+    {
+      "repo_url": "https://github.com/FIWARE-Ops/marinera",
+      "stars": 14
+    },
+    {
+      "repo_url": "https://github.com/ai-solution-eng/frameworks",
+      "stars": 14
+    },
+    {
+      "repo_url": "https://github.com/oneconcern/datamon",
+      "stars": 14
+    },
+    {
+      "repo_url": "https://github.com/bamaas/HomeLab-2.0",
+      "stars": 13
+    },
+    {
+      "repo_url": "https://github.com/cnrancher/pandaria-catalog",
+      "stars": 13
+    },
+    {
+      "repo_url": "https://github.com/mrybas/k8s-bootstrap",
+      "stars": 13
+    },
+    {
+      "repo_url": "https://github.com/Sagar2366/tech-talks",
+      "stars": 12
+    },
+    {
+      "repo_url": "https://github.com/anodot/daria",
+      "stars": 12
+    },
+    {
+      "repo_url": "https://github.com/boozallen/sdp-helm-chart",
+      "stars": 12
+    },
+    {
+      "repo_url": "https://github.com/ironpeakservices/iron-chart-hugo",
+      "stars": 12
+    },
+    {
+      "repo_url": "https://github.com/DOME-Marketplace/dome-gitops",
+      "stars": 11
+    },
+    {
+      "repo_url": "https://github.com/deploystackio/deploy-templates",
+      "stars": 11
+    },
+    {
+      "repo_url": "https://github.com/randoli/helm-charts",
+      "stars": 11
+    },
+    {
+      "repo_url": "https://github.com/unixfox/k8s",
+      "stars": 11
+    },
+    {
+      "repo_url": "https://github.com/DotKube/KubeSQLServer-Operator",
+      "stars": 10
+    },
+    {
+      "repo_url": "https://github.com/bcgov/OCWA",
+      "stars": 10
+    },
+    {
+      "repo_url": "https://github.com/bdkoeh/survivalRAG",
+      "stars": 10
+    },
+    {
+      "repo_url": "https://github.com/btr1975/automation-framework",
+      "stars": 10
+    },
+    {
+      "repo_url": "https://github.com/henrywhitaker3/homelab",
+      "stars": 10
+    },
+    {
+      "repo_url": "https://github.com/kubero-dev/kubero-operator",
+      "stars": 10
+    },
+    {
+      "repo_url": "https://github.com/logicalisuki/ubiquity-open",
+      "stars": 10
+    },
+    {
+      "repo_url": "https://github.com/openmcp-project/metrics-operator",
+      "stars": 10
+    },
+    {
+      "repo_url": "https://github.com/redhat-cop/must-gather-operator",
+      "stars": 10
+    },
+    {
+      "repo_url": "https://github.com/LeoShivas/GitOps",
+      "stars": 9
+    },
+    {
+      "repo_url": "https://github.com/junghoon2/kube-books",
+      "stars": 9
+    },
+    {
+      "repo_url": "https://github.com/llajas/homelab",
+      "stars": 9
+    },
+    {
+      "repo_url": "https://github.com/preloop/preloop",
+      "stars": 9
+    },
+    {
+      "repo_url": "https://github.com/quangnhien/photo-posing-assistant",
+      "stars": 9
+    },
+    {
+      "repo_url": "https://github.com/Merck/Data-Profiler",
+      "stars": 8
+    },
+    {
+      "repo_url": "https://github.com/SimCubeLtd/simcube-helm-charts",
+      "stars": 8
+    },
+    {
+      "repo_url": "https://github.com/aabouzaid/modern-data-platform-poc",
+      "stars": 8
+    },
+    {
+      "repo_url": "https://github.com/cmgoffena13/etl-watcher",
+      "stars": 8
+    },
+    {
+      "repo_url": "https://github.com/hsmade/velero-ui",
+      "stars": 8
+    },
+    {
+      "repo_url": "https://github.com/stakater/nordmart-apps-gitops-config",
+      "stars": 8
+    },
+    {
+      "repo_url": "https://github.com/thoughtworks/byor-voting-infrastructure",
+      "stars": 8
+    },
+    {
+      "repo_url": "https://github.com/kaist-ina/TopFull",
+      "stars": 7
+    },
+    {
+      "repo_url": "https://github.com/starlingx/openstack-armada-app",
+      "stars": 7
+    },
+    {
+      "repo_url": "https://github.com/ybhatnagar/huddle",
+      "stars": 7
+    },
+    {
+      "repo_url": "https://github.com/AustrianDataLAB/pacman",
+      "stars": 6
+    },
+    {
+      "repo_url": "https://github.com/Jorrit05/DYNAMOS",
+      "stars": 6
+    },
+    {
+      "repo_url": "https://github.com/NETINT-Technologies/netint_k8_device_plugin",
+      "stars": 6
+    },
+    {
+      "repo_url": "https://github.com/SAP/component-operator-runtime",
+      "stars": 6
+    },
+    {
+      "repo_url": "https://github.com/appscode-cloud/ui-wizards",
+      "stars": 6
+    },
+    {
+      "repo_url": "https://github.com/batleforc/weebo-si",
+      "stars": 6
+    },
+    {
+      "repo_url": "https://github.com/celo-org/charts",
+      "stars": 6
+    },
+    {
+      "repo_url": "https://github.com/cloudstark/helm-charts",
+      "stars": 6
+    },
+    {
+      "repo_url": "https://github.com/dungdm93/shipyard",
+      "stars": 6
+    },
+    {
+      "repo_url": "https://github.com/juselius/Warmup",
+      "stars": 6
+    },
+    {
+      "repo_url": "https://github.com/sergelogvinov/node-labels-exporter",
+      "stars": 6
+    },
+    {
+      "repo_url": "https://github.com/Above-Os/terminus-apps",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/BrianCLong/summit",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/FarDust/homelab-stack",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/RHEcosystemAppEng/agentic-collections",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/SupportTools/k8s-ns-purger",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/atsip76/k8s_asterisk_project",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/chrisrun/bitcoind-chart",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/folio-org/folio-helm",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/ibuildthecloud/rancher-charts",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/kaikodata/canton-tooling",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/kloeckner-i/charts",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/krm-functions/catalog",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/teddy-ambona/kind-e2e",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/thousandwang17/sideTube",
+      "stars": 5
+    },
+    {
+      "repo_url": "https://github.com/CDCgov/NEDSS-Helm",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/Otus-DevOps-2019-08/sgremyachikh_microservices",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/SpechtLabs/k8s-deployment",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/SupportTools/rancher-centralized-monitoring",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/Unique-AG/helm-charts",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/cap-js/cap-operator-plugin",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/claytono/infra",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/general-rj45/mini-ml-stand-GRJ45",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/griggheo/blogomatic",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/iewiewiew/wei-notebook",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/ministryofjustice/laa-access-civil-legal-aid",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/ol3d/home-ops",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/pascalnaber/ignite-tour-k8s-lessons-learned",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/punchplatform/punch-helm",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/rflorenc/prometheusrule-validating-webhook",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/rsvancara/goblog",
+      "stars": 4
+    },
+    {
+      "repo_url": "https://github.com/CloudFitSoftware/PubSec-Info-Assistant",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/EamonKeane/k8s-cluster-services",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/JuniorJPDJ/charts",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/Makhuta/truecharts-archive-scale-catalog",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/cnieg/helm-charts",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/cwcloudtech/cwcloud-api",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/dynatrace-wwse/enablement-kubernetes-opentelemetry",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/dynatrace-wwse/enablement-kubernetes-opentelemetry-openpipeline",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/helxplatform/translator-devops",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/kast-spells/kast-system",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/opspresso/argocd-env-addons",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/pluralsh/plural-helm-charts",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/yapily/helm-charts",
+      "stars": 3
+    },
+    {
+      "repo_url": "https://github.com/AchillesChan/memo",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/AntSan813/react-hasura-keycloak-app",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/ApasoftTraining/cursoHelm",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/CosmeValera/ReactProjects",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/DEFRA/aphw-ddi-portal",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/FIWARE-Ops/batterypass-demonstrator",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/KevMCarp/truecharts-catalog-fork",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/NeuraLegion/helmcharts",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/Sureya/airflow_k8s_executor",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/Taipei-HUG/kubernetes-microservices",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/TheOpsDev/homelab",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/bakseter/whpah",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/cheyang/arena-spark",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/criteo/firmirror",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/devops4solutions/guestbook",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/dima1203oleg/predator-analytics",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/edixos/ekp-helm",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/elastic/k8s-integration-infra",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/elasticio/helm-charts",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/erost/vdz26-demo-fleet-commander",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/gambhirsharma/OnFly-Image-Optimization",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/inviqa/harness-docker",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/ishamuruga/opensamples",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/ishtiaqhimel/oms",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/jostho/trestle",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/kalavai-net/helm-charts",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/kamu-data/helm-charts",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/la-cc/k8s-data-to-s3-cronjob",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/lucidworks/ocp-fusion-helm-charts",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/midl-dev/etherlink-helm-charts",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/ministryofjustice/cloud-platform-how-out-of-date-are-we",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/ndebuhr/isidro",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/onasunnymorning/domain-os",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/openshift-helm-charts/stage",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/oracle-cne/catalog",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/rancher/ob-team-charts",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/sdelrio/k8s-gitops",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/shelleg/ac-k8s",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/shini4i/charts",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/shortlink-org/marketing",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/tetratelabs/charts",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/thelande/charts",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/via-cs/vtbench",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/vlab-research/fly",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/yunzck8s/cloudNative",
+      "stars": 2
+    },
+    {
+      "repo_url": "https://github.com/CSCfi/helm-charts",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/Coollision/homelab-config",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/FIWARE-Ops/fiware-gitops",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/Frndo1203/stack_iceberg_starrocks_k8s",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/GUR-ok/arch-brokerage-intercessor",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/GuanceDemo/guance-java-ruoyi-demo",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/IBM/turbonomic-container-platform",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/JonasHess/homelab-iac",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/K-FOSS/CoRE-CNTRL",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/Kapil-Bhalodiya/E-Commerce",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/Kapil-Bhalodiya/E-commerce-Platform",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/Kempo/dubhacks2018",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/LasseRapo/fabric-cti-sharing",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/LopeWale/dev_ignition",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/LuukHors/homelab",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/MrE-Fog/ks-installer2",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/PilotDataPlatform/helm-charts",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/Spazzy757/helm-operator",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/SpelmanDevops/retail-store",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/SupportTools/go-web-cache",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/SupportTools/node-doctor",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/TSMC-NYCU-LAB-13/infrastructures",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/TimFbr03/Cloud-Computing-DSKI",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/VadimShtukan/otus_homework",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/Vaibhav2goyal/alertmanager",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/WesleyJw/modern-data-stack",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/Yahya-rabii/soge-plus",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/aabouzaid/modern-data-platform-research-paper",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/adstanley/archive",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/alercebroker/web-services",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/alpha-hack-program/sagemaker-rhoai",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/bcgov/NewJobSurveyAdmin",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/cisco-open/appdynamics-k8s-webhook-instrumentor",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/codefuturist/helm-charts",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/dan1dan12345678/Helm_charts",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/davidlesicnik/homelab-argo",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/dboeckli/spring-6-icecold-micro-service",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/diastopy/projet_cell",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/effervescentia/bun-elysia-react-starter",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/fallewi/Kubernetes-configs",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/fjsabino022/inventory_service",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/gregorwolf/cap-python",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/gsuquet/homelab",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/helverinio/misw4406-14-desacopla2",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/hey101/scale-catalog",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/hmcts/hmcts-charts",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/ibm-mas/gitops",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/iliazlobin/atmos-landing-zones",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/joaquinrz/capi-aks",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/kast-spells/kaster",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/kast-spells/summon",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/kubewarden/policy-catalog",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/legion-platform/legion-infrastructure",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/martysweet/headless-render-api",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/merlindorin/charts",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/no1here0003/Talos-cluster",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/nwthomas/gitops",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/otus-kuber-2019-12/gidmaster_platform",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/penaagp-dev/pena-website",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/production-gitops-public/argocd-tools",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/rtang03/helm-charts",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/samm-git/structurizr-chart",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/stakater-charts/keycloak",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/stfc/cloud-helm-charts",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/sydney900/CQRS-ES-Microservices",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/tetratelabs/helm-charts",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/valerius257/k8s-nodelocaldns-helm",
+      "stars": 1
+    },
+    {
+      "repo_url": "https://github.com/100CallsToEurop/otus",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/100rd/platform-design",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/666chaoge666/dinky-dev",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ALIIQBAL786/open-exposure-gateway",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/AdmanTIC/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/AhmedHamdi2/ShopLite-DevOps-Pipeline",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/AlanKowalzky/rs-devops-task5",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/AlexanderBabel/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/AlexxNica/helm-charts-6",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Amaterassu17/RL_Microservice_Grouped_Scaler",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/AntonAleksandrov13/monorepo-practice",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ArtemVoropay/OTUS_HW",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Arthur-B-DevOps/old_helm_charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Avichayef/datateam_calculator",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Ayoobkibrahim/react-vite-project",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Backstage-Epitech/cltest",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Bahmni/helm-umbrella-chart",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Baitinq/fs-tracer-backend",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Bernardpro/ClusterGCP",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Bernardpro/ClusterGKE",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/BrightMove/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/CESNET/ansible-role-perun-k8s-server",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/CSCfi/helm-charts-elixir",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Clark1992/ECK1",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Cloudify-PS/backstage-catalog-entities",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ConductionNL/Authorization-component",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ConductionNL/adresservice",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ConductionNL/bzk-mock",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ConductionNL/commonground-ui",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ConductionNL/corona-interface",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ConductionNL/logicservice",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ConductionNL/review-component",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ConductionNL/user-component",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ConductionNL/verzoekregistratiecomponent",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ConductionNL/waardepapieren-register",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Coopersamjohn/plastiq-memry-cards",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Cray-HPE/cray-etcd",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/DalanCapital/dalan.capital",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/DanMadar27/devops-toolkit",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/DeejayRevok/news-discovery-app",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/DevPaulPOps/appFytBack",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Dystopian00/truecharts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/EduBrainBoost/SSID-open-core",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ElenaKutanov/Udacity_DataEngineerForAIApplications",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/EugeneKallis/kubernetes-cluster",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Evgeny-Nik/project_platform_app",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/FIWARE/VC-Integration-Test",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Fall1ngStar/homelab",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/FuelLabs/fuel-data",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/GUR-ok/otus-microservice-architecture",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Gin-G/argo-k8s-stuff",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Godjee1/kubernetes",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/GracjanKoscinski/azureDeploymentPipeline",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/GroomC4/c4ang-infra",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/HereNotThere/kerem-argocd-test",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/HomeScaleCloud/homescale-public",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/IndustryFusion/GitOpsRepo",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/IsraelBoka/airbyte-engeem",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Itamar-Ratson/devsecops",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/IvkinNikita/DevopLibrary",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/JS-BBMT/GoddardSchool",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Jaebytes/TrueCharts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/JaewonHur/constellation",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/JorgeP7/test-external-secret",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Josca/k0rdent-catalog-2",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Josca/k0rdent-catalog-3",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Josca/k0rdent-catalog-4",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/JosephatEze/k8s-helm-chart",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Joshua1476/CrewML",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/KHAEntertainment/rockchip-ai-stack",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/KhumainiShaik/dsl-for-helm-generation",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/KommunikativCh/rancher-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Kripu77/helm-argocd",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Kripu77/ts-node-redis-sentinel-k8s-example",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Kuber-2024-10OTUS/klimenko-sergey_repo",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Kuber-2025-04OTUS/Septolette_repo",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/LBrinkmann/machine_culture_machines",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/LMOrBits/slmops_infra",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/LeeLisker/helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Live-Quiz-Project/Central-Backend",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/LoneExile/playground",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/LuoLuann/e-commerce-es",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Luohao-Yan/Louis-dify-apps",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/MMR-46org/payment",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/MUST-CLOUD/osh",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ManuelDittmar/camunda-deployment",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Mark4562/Truenas-Scale",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/MartinMohan/docker-k8s",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/MdZaeed/omni_inte",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/MiKeLFernandeZz/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/MikeDafi/Nielsen-Istio-POC",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Minglong2012/OAIC_sch_dApp",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/MirahImage/postfacto",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Mirantis/magma-argocd-apps",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/MoranDanino/docker-k8s",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/MrAmbiG/urlsafe",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/MrE-Fog/ks-installerff",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Mustafakhn/forty4-aks-with-helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Nagum0/misc-study",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/NiklasRosenstein/nyl",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Odernor/hetzner-cloud",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/OlvBrn/ms_front-end",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Onlineberatung/onlineBeratung-kubernetes-ops",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Open-Source-Drilling-Community/GeodeticDatum",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Oremus-Labs/ol-kubernetes-cluster",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Otus-DevOps-2018-09/GidMaster_microservices",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Otus-DevOps-2020-02/DmitryKorlas_microservices",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Otus-DevOps-2020-02/j10i2_microservices",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Otus-DevOps-2022-05/hatterfix_microservices",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/PASBarbari/Transcendence",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ParkKyuIl/bluezone-map",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/PaulJequann/the-lab",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Perfect-Art-DOO/kcp-helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Piwriw/k8s_example_tools",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Pr0fChen/Sock-Shop---Helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/PullaPantangi/roboshop-k8s-26",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/QumulusTechnology/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/RC6799/goddard-backend",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Ramkhushi/helm_git_repo",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Ramkhushi/mygitrepo",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/RobertClarke64/k8s-homelab",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Salazar-99/clusty-dusty",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/SandwichApp-Otus-MA/BillingService",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/SandwichApp-Otus-MA/OrderService",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Shehbab-Kakkar/Docs",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/SimonDiazAbad/cabr-nestjs",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/SirObi/airflow_k8s_executor",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/StrahilPeykov/stayhub",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Subhagatoadak/ArchiPatterns",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/SubhamPramanik/es-helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Suite5/bitnami-helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/SupportTools/GoSQLGuard",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/SupportTools/KubeCertWatch",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/SupportTools/ReflowIngressLogs",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/SystemConsultantGroup/SCG-Monitoring-Config",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/TVN-Quang/istio",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/TheRegent/rickandmorty",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Thiru152003/jaeger",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/UMAR15071/Cloud_DataCenters_Labs",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/UPHRH-platform/sb-devops",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/VHlushchen/slack-notif",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/VajiraPrabuddhaka/choreo-opensource-dp-helm-chart",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ValeriiVasianovych/argocd-kubernetes-infrastructure",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Veronneau-Techno-Conseil/comax-commons",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/VollcomDigital/drupal-boilerplate",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/WhizUs/pr-review-meetup",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/Yuzu815/TruenasScaleArchive",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/abaid-khalid/argo-applications",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/abhilashindulkar/misc",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/abhitall/helm-enterprise-template",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/abhithakur2/injiweb_Sunbird_RC",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/abimaelrsergio/Abimoney",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/accelerated-containers/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/actions-marketplace-validations/Azure_kwok",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/adityavs/containerized-microservices-pipeline-service",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/adkumar1/dummy-clearing-house",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/aemneina/testcatalog",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ahadalichowdhury/free-tier-frontend",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/aicanhelp/ai-cloud",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/aicanhelp/ai-dataframe",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/akraino-edge-stack/iec-xconnect",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/akv-akv/de_research",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/alb3rtobr/geode-cloudnative-wan-replication",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/aliartiza75/flask-backend-application",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/alirionx/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/alnav3/argocd-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/amitvashisttech/docker-k8s-EY-E-02-Dec-2024",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ansil1999/helmchart-grafana",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ant-ano/yc-courses-ru-devops",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/anugram/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/anvega/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/arminzaugg/sturdy-octo-omni",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/arockiyastephenl/netlify-express",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ayarinesrine/pfe-deployment",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/banzai-team/lecturer",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/banzai-team/marketing_bot",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/banzai-team/prediction",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/batleforc/MonoFolio",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/batleforc/MonofolioOps",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/becketalservices/beas-cnx-cloud",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/blackskyi/kubernetes-helm-deployment",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/bps1980/operavia",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/brampurnot/sap-cap-mtx",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/bvcelari/my-flask-app",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/bysamio/charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/caiohmb/kuber_project",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-gh-1585039502",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-gh-1587408670",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-gh-1597486525",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-gh-1597841986",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-gh-1602170370",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-gh-1602633112",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-nh-1582713872",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-nh-1587383466",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-nh-import-1583025619",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-sbhg-import-1584026808",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-sbrp-import-1588095438",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-spring-1568056143",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-spring-1582490374",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-spring-1582498560",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-spring-1584801032",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-spring-1584981820",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-spring-1585593012",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-spring-1586353532",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-spring-1587811836",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-spring-1588180619",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/bdd-spring-1590590177",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cb-kubecd/golang-http-1550146943",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/changqian9/helm-chart",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ciokma/helm-azuredevops",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cleverhu/longhorn-backup-restore",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/cloud-pi-native/tuto-static-monorepo",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/codacy-open-source-projects-scans/cert-manager",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/codeblech/sprinklr-warmup",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/covelo12/journal",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/credo7/final",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/csantanapr-gitops-tr-test/multi-tenancy-gitops-services",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/danube-messaging/danube_helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dariuszbolkowski/ezdrp_process",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dasmeta/terraform-any-mongodb-query-logs",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/davivcgarcia/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ddidier/mosip-all",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/deB4SH/helm-opentelemetry-collector",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/deepdivenow/rke2-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dev-appmonsters/anthos-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/develoopio/charts-no-beta",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/devops-pals/k8s-ctf",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/devops22clc/spring-petclinic-microservices-ops",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dharshan08/msg_bus",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/didim365-kdh/kong-gateway",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dikshasunbird/sunbird-devops",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dire-kiwi/environment-bugrattle-dev",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/djangoheads/charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dmsuehir/mlt-draft-packs",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dnoland1/testcatalog",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dorkamotorka/inspektor-gadget-kcna-fork",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dorrab-env-repos/environment-antelopeebony-dev",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dorrab-env-repos/environment-jesterscythe-dev",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dorrab-env-repos/environment-razoroasis-dev",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dorrab-env-repos/environment-skulldog-dev",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dowie500/archive-catalog",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dploeger/cloudflare-ddns-update",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/drshade/rev",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ds-vologdin/otus-software-architect",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/dt-orders/keptn-onboarding",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/edgy-noodle/helm-rest-api",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/efremov-it/security",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/elchocarrero/gcp-helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/elchocarrero/strapi_helm_gcp",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/emre-carbon/repo1",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ep-infosec/33_apache_hop",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/evestidor/rancher-catalog",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/fabioroger/charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/federatedplatforms/Kubernetes-BDI-Node",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/felippemozer/helm-masterclass",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ffireHub/cloud-cadavre-exquis",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/fiap-four-lanches/fourlanches.k8s",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/flashflashrevolution/website",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/funkysi1701/funkysi1701.github.io",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/gabrieelsky/5g-upf-proactive-scaling",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/gccloudone-aurora/sidecar-terminator",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/gesselsam96/devops-sre-project",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/gongxiaohong/ks-installer",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/gtno1chun/opentofu-app",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/hafiznaveedchuhan-ctrl/CYBERSECURITY-WORKER-AGENT",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/hajle-silesia/container-orchestration-cd",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/hans-m-song/iac",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/harbur/chart-repo-example",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/harness/helm-srm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/hazemkhaled98/Read-Realm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/helxplatform/tycho-api-chart",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/hjj1991/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/holysoles/minio-helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/huangyingw/bitnami_charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/huiwenclayops/Hop-HW2",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/hxwxdmhd/NoxGuard---NoxPanel",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/hxwxdmhd/NoxPanel_Suite_WIP",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/hxwxdmhd/noxsuite-security-platform",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/hyperkineticnerd/helm-charts-stable",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/infratographer/load-balancer-operator",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/insightfinder/charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/isaackuang/kafka-cmak",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/itboon/bitnami-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ixofoundation/ixo-helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jabari-teampay/airbyte_shortcut",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jaivisal/datagenie-web",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jamartinez-zodia/helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/james-mchugh/event-driven-security",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/janpaulosalvador00/infra_stack",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jays-codes/ud-microservices-springboot-helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jenkins-x-bot-test/bdd-spring-1573134151",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jenyaftw/microservices",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jiangsier-xyz/jiangsier-trojan",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jimmyjones2/applicationset",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jmarchel7bulls/rbac-helm-chart",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/joejulian/chart-kube-lego",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/joejulian/chart-vault",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jogrodnik/kafka",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jonyjalfon94/helm-old-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/joshfng/bitnami.charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jovanhuang/appstore-ai-testing",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jstrachan/foo456",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jstrachan/nodey244",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/juan-coralogix/helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jucroada/ProyectoFinal_MLOps_PUJ",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/juwon8891/gitops-test",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/jwschman/homelabo",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/k8s-assistant/apps",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/karthikvkreddy/helm-poc",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/kast-spells/glyphs",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/khnguyen607/HRIS",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/kityk-cargo/wms-main",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/kolibri337/wordpress_project",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/komailo/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/krateoplatformops/composition-portal-starter",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/krezh/kauth",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/krok-o/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/kubis-ai/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/kubriX-demo/kubriX-demo-oss",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/kuchedav/fastapi_kubernetes",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/leonsteinhaeuser/rh-ocp-examples",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/lftraining/jx3-pipeline-catalog",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/likelion-backend-6th/delivery_app",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/lilygn/FleetCast",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/linfengsong/dblogfile",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/liuquanhao/all-helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/lloydchang/harness-helm-srm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/lovemetrue/argo-ci-cd",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/lucylow/02-10-26-medgemma",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/luohuazju/sillycat-k8s",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/lwpk110/server-repository",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/m1np3m/MLOps-module-3-4",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/madhurajayashanka/Meridian",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/mahalrs/hack",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/maheshlakkammanavar/InciCW26",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/mahfuzrubel0660/my-kubernetes-cluster",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/manics/zero-to-jupyterhub-k8s-chart-expanded",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/manojmaheshwarjg/snapinfra-platform",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/marcus-sa/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/marioalfaro75/idp-portal",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/marius851000/raspiconfig",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/mateuszsoltykiewicz/forge-helpers",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/mathspanda/ws-operator-demo",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/maxkerim/monitoring-gitops",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/maxo99/rotoreader",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/mcvavy/labgrid",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/mesosphere/sre-kommander-applications",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/michaelneale/jxaas1-try",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/michaelw/common.itsumi",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/michelleN/awesome-draft-packs",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ministryofjustice/hmpps-manage-users-temp-rewrite",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ministryofjustice/laa-amend-a-claim",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/momesgin/mo-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/moophlo/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/morero/testing",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/mpakeeru/helm-tomcat",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/mpdafa/dafa-tripla-terraform-service",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/mulyosyahidin/spring-boot-vocasia-microservices",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/muruganandam08/reportportal",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/musqat/lectures",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/nanome-ai/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/navdeep710/elasticsearch-helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ncolon-demos/multi-tenancy-gitops-services",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/nddipiazza/ocp-fusion-helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/neenajose-git/argo2711",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/nerginturgut/charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/nitishm/helm-controller-chart",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/nizamhaider786/flightctl-deployments",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/njg4ne/truecharts-archive",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/njohbillie/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/nowireless/charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/nradojcic/chart",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/omaksymiuk/terraform-project",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/orf/dask-gateway-eks",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/osism/osism-kubernetes",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/otus-kuber-2022-06/BorshchevY_platform",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ozlevka-work/rancher-eks-helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/p-/PyroDocker",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/pagopa/cstar-aks-cert-mounter",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/parchk/mqtt-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/pavannextaso/airbyte",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/pavannextaso/airbytec",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/peetahDarius/Outsource",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/perisatto/menuguru-product",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/petersandor/tc-archive",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/pgquerynarative/pgquerynarative",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/phongthien99/argocd-example-apps",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/pizzeria-ristorante/ristorante-deployment-config",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/plantonhq/infra-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/portswigger-cloud/legacy-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/practice-room/stage",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/praveenjayakar/freetrail",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/prezhdarov/kubevirt-helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/raelix/raelix-cluster",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/rafaelgrecco/open-pix",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/rafagfe/ws-stack-dados-k8s-luan-moreno",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/rainerleber/argocd",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/rajatjain20/Nagarro-KubernetesAssignmentAdvanced",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/redhat-appstudio/api-manager",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/redhat-pe-workshop/pe-workshop-parasol-helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/renegmed/learn-nats-collection",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/rjdp/cg_for_day_2",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/rogersbernat/truecharts-catalog",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/roiblum1/ClickCluster-Navigator",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/rouja/isso-chart",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/rridane/helm-argocd-cloudnative-kit",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ruan-oliveira/release2-6",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ryanwholey/app-helm-chart",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/sablearjun/cht-core",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/sachin-shetty/bifrost",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/salomontm/helm-ikp-kong",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/sambo2021/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/samfms/truecharts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/samwho/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/sary357/k8s-study",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/sasimpson/clickhouse-dev",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/schlattk/airbyte-retently",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/schristakis/5G-UPF-Scaling-Project",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/secretzer0/ix-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/serafino16/Apache-Fineract",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/sheharyaraj/devops-deployment",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/shivjm/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/showmepch/phalanx",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/shubhamkagithub/yoga",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/ska-telescope/ska-uksrc-cluster-gitops",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/skcc-cloud-ai-tech/ai-assistant-install",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/snapinfra/snapinfra-platform",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/sofyan48/belanak",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/sp-nadinekirin/aws-deploy-test",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/spoved/charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/stakater/chart-prometheus-k8s-services",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/stolostron/search-chart",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/sundarok/keda-component",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/superdoo/multitier-webapp",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/syhlion/2020-12th-ithome30day-helm-example",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/taodong/duotail-helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/tapiwanasheMbizvo/helm-pet-app",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/teamhephy/registry-proxy",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/techguys-tidc/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/tf-nira/mosip-helm-nira",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/thaigiaduc/Laravel-deploy-app",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/thandayuthapani/charts-test",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/thefunny42/auth-service",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/thomasferrandiz/setup_scripts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/timja-org/rpe-sweet-backend",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/tinhtq/app-of-apps",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/tis-system/charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/tjololo/websoaker",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/tke-apps/gitlab",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/tonitert/ad-infra-k3s",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/totogi/totogi.magma",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/triethuynh1408/devops-elsa-exam",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/tvtrungg/5G-project",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/umeshjaiswal/edge-ai-libraries",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/validatedpatterns-sandbox/amx-accelerated-rhoai-multicloud-gitops",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/vanelin/omni",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/vasudevchavan/helm_workshop",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/venmaniselvan/ibm-helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/vgurukool/tla-helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/vitorcarra/dok",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/vlab-research/replybot",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/vre-charite-autodeploy/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/weavegitops/traefik-and-weaveworks-profiles",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/wesparish/rancher-catalog",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/willsc/Elastic-build",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/wilump-labs/istio-in-action",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/wyfcoding/ecommerce",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/y7t2ffff/k8s-helm",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/yaezzin/DeliveryApp",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/yanhuanwang/k8s",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/yatvoikoresh/cloneranchercharts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/yoshz/node-health-agent",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/z200801/devops",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/zahlenhelfer/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/zakiheb0016/5g-amf-scaling",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/zanzibeer/datagram_ci_cd",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/zcx2001/helm-charts",
+      "stars": 0
+    },
+    {
+      "repo_url": "https://github.com/zdnscloud/chart",
+      "stars": 0
+    }
+  ]
+}

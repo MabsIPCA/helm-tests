@@ -1,43 +1,61 @@
 package main
 
 import (
-	"flag"
+	"encoding/json"
 	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
 	"time"
 
+	"github.com/joho/godotenv"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 
+	appconfig "github.com/MabsIPCA/helm-tests/helm_fetcher/config"
 	"github.com/MabsIPCA/helm-tests/helm_fetcher/exporter"
 	"github.com/MabsIPCA/helm-tests/helm_fetcher/git"
 	"github.com/MabsIPCA/helm-tests/helm_fetcher/helm"
 	"github.com/MabsIPCA/helm-tests/helm_fetcher/model"
 )
 
-const (
-	sourceFlag      = "source"
-	sourceUsage     = "Discovery source: artifacthub or github"
-	sourceDefault   = "artifacthub"
-	topFlag         = "top"
-	topUsage        = "Top N repositories/packages to inspect"
-	topDefault      = 400
-	pageSizeFlag    = "page-size"
-	pageSizeUsage   = "Results per API request/page (artifacthub max 60, github max 100)"
-	pageSizeDefault = 60
-)
+type githubSearchOutput struct {
+	Source string                 `json:"source"`
+	Top    int                    `json:"top"`
+	Order  string                 `json:"order"`
+	Repos  []git.GitHubRankedRepo `json:"repos"`
+}
+
+func loadDotEnvIfPresent() {
+	if err := godotenv.Load(); err != nil {
+		if !os.IsNotExist(err) {
+			log.Warn().Err(err).Msg("Failed to load .env")
+		}
+		return
+	}
+
+	log.Info().Msg("Loaded environment variables from .env")
+}
 
 func main() {
 	log.Logger = log.Output(zerolog.ConsoleWriter{Out: os.Stderr, TimeFormat: time.Kitchen})
+	loadDotEnvIfPresent()
 
-	source := flag.String(sourceFlag, sourceDefault, sourceUsage)
-	top := flag.Int(topFlag, topDefault, topUsage)
-	pageSize := flag.Int(pageSizeFlag, pageSizeDefault, pageSizeUsage)
-	flag.Parse()
+	cfg := appconfig.Parse()
 
-	selectedSource := strings.ToLower(strings.TrimSpace(*source))
+	selectedMode := strings.ToLower(strings.TrimSpace(cfg.Mode))
+	if selectedMode == "github-search-json" {
+		searchOnlyErr := runGitHubSearchJSONMode(cfg.PageSize, cfg.SearchTop, cfg.SearchOrder, cfg.SearchOut)
+		if searchOnlyErr != nil {
+			log.Fatal().Err(searchOnlyErr).Msg("github-search-json mode failed")
+		}
+		return
+	}
+	if selectedMode != "full" {
+		log.Fatal().Str("mode", cfg.Mode).Msg("Invalid mode. Use 'full' or 'github-search-json'")
+	}
+
+	selectedSource := strings.ToLower(strings.TrimSpace(cfg.Source))
 	var (
 		repos []string
 		err   error
@@ -45,11 +63,15 @@ func main() {
 
 	switch selectedSource {
 	case "artifacthub":
-		repos, err = git.SearchTopArtifactHubRepos(*top, *pageSize)
+		repos, err = git.SearchTopArtifactHubRepos(cfg.Top, cfg.PageSize)
 	case "github":
-		repos, err = git.SearchTopGitHubRepos(*top, *pageSize)
+		log.Info().
+			Str("search_json", cfg.SearchIn).
+			Int("top", cfg.Top).
+			Msg("GitHub source selected: loading ranked repos from JSON")
+		repos, err = loadGitHubReposFromJSON(cfg.SearchIn, cfg.Top)
 	default:
-		log.Fatal().Str("source", *source).Msg("Invalid source. Use 'artifacthub' or 'github'")
+		log.Fatal().Str("source", cfg.Source).Msg("Invalid source. Use 'artifacthub' or 'github'")
 	}
 
 	if err != nil {
@@ -247,4 +269,67 @@ func main() {
 	fmt.Println("  catalog_failures.csv         — all template failures (CSV)")
 	fmt.Println("  catalog_kept_failures.csv    — kept repos template failures (CSV)")
 	fmt.Println("  catalog_dep_failures.csv     — dep-build failures (CSV)")
+}
+
+func runGitHubSearchJSONMode(pageSize, top int, order, outputPath string) error {
+	normalizedOrder := strings.ToLower(strings.TrimSpace(order))
+	repos, err := git.SearchGitHubRepos(pageSize, top, normalizedOrder)
+	if err != nil {
+		log.Error().Err(err).Msg("GitHub search encountered an error (writing partial results)")
+	}
+	if len(repos) == 0 {
+		return fmt.Errorf("no repos found")
+	}
+
+	payload := githubSearchOutput{
+		Source: "github",
+		Top:    top,
+		Order:  normalizedOrder,
+		Repos:  repos,
+	}
+
+	data, marshalErr := json.MarshalIndent(payload, "", "  ")
+	if marshalErr != nil {
+		return fmt.Errorf("marshal github search output: %w", marshalErr)
+	}
+	if writeErr := os.WriteFile(outputPath, data, 0o644); writeErr != nil {
+		return fmt.Errorf("write github search output: %w", writeErr)
+	}
+
+	log.Info().Str("output", outputPath).Int("repos", len(repos)).Str("order", normalizedOrder).Msg("GitHub search JSON generated")
+	return err
+}
+
+func loadGitHubReposFromJSON(path string, top int) ([]string, error) {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return nil, fmt.Errorf("read search JSON (%s): %w", path, err)
+	}
+
+	var payload githubSearchOutput
+	if err := json.Unmarshal(data, &payload); err != nil {
+		return nil, fmt.Errorf("decode search JSON (%s): %w", path, err)
+	}
+	if len(payload.Repos) == 0 {
+		return nil, fmt.Errorf("search JSON has no repos: %s", path)
+	}
+
+	limit := len(payload.Repos)
+	if top > 0 && top < limit {
+		limit = top
+	}
+
+	repos := make([]string, 0, limit)
+	for i := 0; i < limit; i++ {
+		repoURL := strings.TrimSpace(payload.Repos[i].RepoURL)
+		if repoURL == "" {
+			continue
+		}
+		repos = append(repos, repoURL)
+	}
+	if len(repos) == 0 {
+		return nil, fmt.Errorf("search JSON contains only empty repo URLs: %s", path)
+	}
+
+	return repos, nil
 }
