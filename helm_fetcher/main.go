@@ -82,7 +82,11 @@ func main() {
 	}
 
 	// Prepare output files and clone base dir
-	cloneBase := filepath.Join(".", "cloned")
+	cloneBase := strings.TrimSpace(cfg.CloneDir)
+	if cloneBase == "" {
+		cloneBase = "cloned"
+	}
+	cloneBase = filepath.Clean(cloneBase)
 	_ = os.MkdirAll(cloneBase, 0o755)
 	// Remove old output files
 	for _, f := range []string{

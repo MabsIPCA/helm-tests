@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1630" viewBox="0 0 1400 1630">
+<style>
+.title { font: 700 22px sans-serif; fill: #111827; }
+.axis { font: 12px sans-serif; fill: #374151; }
+.label { font: 12px sans-serif; fill: #111827; }
+.value { font: 11px sans-serif; fill: #111827; }
+.grid { stroke: #e5e7eb; stroke-width: 1; }
+</style>
+<text class="title" x="24" y="36">Repository Popularity by Stars (Top 50)</text>
+<line class="grid" x1="480.00" y1="70" x2="480.00" y2="1570" />
+<text class="axis" x="480.00" y="1588" text-anchor="middle">0</text>
+<line class="grid" x1="626.67" y1="70" x2="626.67" y2="1570" />
+<text class="axis" x="626.67" y="1588" text-anchor="middle">4240</text>
+<line class="grid" x1="773.33" y1="70" x2="773.33" y2="1570" />
+<text class="axis" x="773.33" y="1588" text-anchor="middle">8480</text>
+<line class="grid" x1="920.00" y1="70" x2="920.00" y2="1570" />
+<text class="axis" x="920.00" y="1588" text-anchor="middle">12720</text>
+<line class="grid" x1="1066.67" y1="70" x2="1066.67" y2="1570" />
+<text class="axis" x="1066.67" y="1588" text-anchor="middle">16961</text>
+<line class="grid" x1="1213.33" y1="70" x2="1213.33" y2="1570" />
+<text class="axis" x="1213.33" y="1588" text-anchor="middle">21201</text>
+<line class="grid" x1="1360.00" y1="70" x2="1360.00" y2="1570" />
+<text class="axis" x="1360.00" y="1588" text-anchor="middle">25441</text>
+<text class="axis" x="920.00" y="1612" text-anchor="middle">GitHub stars</text>
+<text class="label" x="468" y="85.84" text-anchor="end">rancher/rancher</text>
+<rect x="480" y="70" width="880.00" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="1366.00" y="85.84">25441</text>
+<text class="label" x="468" y="115.84" text-anchor="end">labring/sealos</text>
+<rect x="480" y="100" width="590.55" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="1076.55" y="115.84">17073</text>
+<text class="label" x="468" y="145.84" text-anchor="end">cert-manager/cert-manager</text>
+<rect x="480" y="130" width="474.57" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="960.57" y="145.84">13720</text>
+<text class="label" x="468" y="175.84" text-anchor="end">bitnami/charts</text>
+<rect x="480" y="160" width="356.83" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="842.83" y="175.84">10316</text>
+<text class="label" x="468" y="205.84" text-anchor="end">refly-ai/refly</text>
+<rect x="480" y="190" width="245.14" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="731.14" y="205.84">7087</text>
+<text class="label" x="468" y="235.84" text-anchor="end">microsoft/FluidFramework</text>
+<rect x="480" y="220" width="170.11" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="656.11" y="235.84">4918</text>
+<text class="label" x="468" y="265.84" text-anchor="end">emissary-ingress/emissary</text>
+<rect x="480" y="250" width="155.48" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="641.48" y="265.84">4495</text>
+<text class="label" x="468" y="295.84" text-anchor="end">DataLinkDC/dinky</text>
+<rect x="480" y="280" width="128.43" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="614.43" y="295.84">3713</text>
+<text class="label" x="468" y="325.84" text-anchor="end">kubernetes-sigs/kwok</text>
+<rect x="480" y="310" width="106.29" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="592.29" y="325.84">3073</text>
+<text class="label" x="468" y="355.84" text-anchor="end">inspektor-gadget/inspektor-gadget</text>
+<rect x="480" y="340" width="95.57" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="581.57" y="355.84">2763</text>
+<text class="label" x="468" y="385.84" text-anchor="end">linode/apl-core</text>
+<rect x="480" y="370" width="77.93" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="563.93" y="385.84">2253</text>
+<text class="label" x="468" y="415.84" text-anchor="end">cozystack/cozystack</text>
+<rect x="480" y="400" width="69.28" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="555.28" y="415.84">2003</text>
+<text class="label" x="468" y="445.84" text-anchor="end">grafana/helm-charts</text>
+<rect x="480" y="430" width="68.28" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="554.28" y="445.84">1974</text>
+<text class="label" x="468" y="475.84" text-anchor="end">microsoft/mssql-docker</text>
+<rect x="480" y="460" width="64.54" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="550.54" y="475.84">1866</text>
+<text class="label" x="468" y="505.84" text-anchor="end">norwoodj/helm-docs</text>
+<rect x="480" y="490" width="59.77" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="545.77" y="505.84">1728</text>
+<text class="label" x="468" y="535.84" text-anchor="end">semaphoreio/semaphore</text>
+<rect x="480" y="520" width="51.54" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="537.54" y="535.84">1490</text>
+<text class="label" x="468" y="565.84" text-anchor="end">securitybunker/databunker</text>
+<rect x="480" y="550" width="48.22" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="534.22" y="565.84">1394</text>
+<text class="label" x="468" y="595.84" text-anchor="end">trueforge-org/truecharts</text>
+<rect x="480" y="580" width="46.04" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="532.04" y="595.84">1331</text>
+<text class="label" x="468" y="625.84" text-anchor="end">secureCodeBox/secureCodeBox</text>
+<rect x="480" y="610" width="33.34" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="519.34" y="625.84">964</text>
+<text class="label" x="468" y="655.84" text-anchor="end">shortlink-org/shortlink</text>
+<rect x="480" y="640" width="26.67" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="512.67" y="655.84">771</text>
+<text class="label" x="468" y="685.84" text-anchor="end">kubernetes-csi/csi-driver-smb</text>
+<rect x="480" y="670" width="21.65" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="507.65" y="685.84">626</text>
+<text class="label" x="468" y="715.84" text-anchor="end">openstack/openstack-helm</text>
+<rect x="480" y="700" width="19.37" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="505.37" y="715.84">560</text>
+<text class="label" x="468" y="745.84" text-anchor="end">medic/cht-core</text>
+<rect x="480" y="730" width="18.19" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="504.19" y="745.84">526</text>
+<text class="label" x="468" y="775.84" text-anchor="end">WeBankFinTech/Prophecis</text>
+<rect x="480" y="760" width="17.64" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="503.64" y="775.84">510</text>
+<text class="label" x="468" y="805.84" text-anchor="end">open-edge-platform/geti</text>
+<rect x="480" y="790" width="16.22" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="502.22" y="805.84">469</text>
+<text class="label" x="468" y="835.84" text-anchor="end">rancher/charts</text>
+<rect x="480" y="820" width="14.77" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="500.77" y="835.84">427</text>
+<text class="label" x="468" y="865.84" text-anchor="end">cloudnativeapp/charts</text>
+<rect x="480" y="850" width="14.39" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="500.39" y="865.84">416</text>
+<text class="label" x="468" y="895.84" text-anchor="end">BigKAA/youtube</text>
+<rect x="480" y="880" width="13.94" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="499.94" y="895.84">403</text>
+<text class="label" x="468" y="925.84" text-anchor="end">radondb/radondb-mysql-kubernetes</text>
+<rect x="480" y="910" width="12.90" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="498.90" y="925.84">373</text>
+<text class="label" x="468" y="955.84" text-anchor="end">IBM/charts</text>
+<rect x="480" y="940" width="10.72" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="496.72" y="955.84">310</text>
+<text class="label" x="468" y="985.84" text-anchor="end">Thakurvaibhav/k8s</text>
+<rect x="480" y="970" width="10.65" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="496.65" y="985.84">308</text>
+<text class="label" x="468" y="1015.84" text-anchor="end">hyperledger-bevel/bevel-operator-fabric</text>
+<rect x="480" y="1000" width="10.27" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="496.27" y="1015.84">297</text>
+<text class="label" x="468" y="1045.84" text-anchor="end">redhat-cop/namespace-configuration-operator</text>
+<rect x="480" y="1030" width="9.24" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="495.24" y="1045.84">267</text>
+<text class="label" x="468" y="1075.84" text-anchor="end">JahstreetOrg/spark-on-kubernetes-helm</text>
+<rect x="480" y="1060" width="6.99" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="492.99" y="1075.84">202</text>
+<text class="label" x="468" y="1105.84" text-anchor="end">vmware/secrets-manager</text>
+<rect x="480" y="1090" width="6.12" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="492.12" y="1105.84">177</text>
+<text class="label" x="468" y="1135.84" text-anchor="end">jmcgrath207/k8s-ephemeral-storage-metrics</text>
+<rect x="480" y="1120" width="5.95" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="491.95" y="1135.84">172</text>
+<text class="label" x="468" y="1165.84" text-anchor="end">vexxhost/atmosphere</text>
+<rect x="480" y="1150" width="5.50" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="491.50" y="1165.84">159</text>
+<text class="label" x="468" y="1195.84" text-anchor="end">redhat-cop/operator-utils</text>
+<rect x="480" y="1180" width="5.33" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="491.33" y="1195.84">154</text>
+<text class="label" x="468" y="1225.84" text-anchor="end">kubernetes-sigs/blob-csi-driver</text>
+<rect x="480" y="1210" width="4.98" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="490.98" y="1225.84">144</text>
+<text class="label" x="468" y="1255.84" text-anchor="end">unixhot/devops-x</text>
+<rect x="480" y="1240" width="4.36" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="490.36" y="1255.84">126</text>
+<text class="label" x="468" y="1285.84" text-anchor="end">open-edge-platform/edge-ai-libraries</text>
+<rect x="480" y="1270" width="4.32" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="490.32" y="1285.84">125</text>
+<text class="label" x="468" y="1315.84" text-anchor="end">aws-samples/amazon-eks-machine-learning-with-terraform-and-kubeflow</text>
+<rect x="480" y="1300" width="4.29" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="490.29" y="1315.84">124</text>
+<text class="label" x="468" y="1345.84" text-anchor="end">ahgraber/homelab-gitops-k3s</text>
+<rect x="480" y="1330" width="3.77" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="489.77" y="1345.84">109</text>
+<text class="label" x="468" y="1375.84" text-anchor="end">aws-controllers-k8s/code-generator</text>
+<rect x="480" y="1360" width="3.15" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="489.15" y="1375.84">91</text>
+<text class="label" x="468" y="1405.84" text-anchor="end">rancher/rke2-charts</text>
+<rect x="480" y="1390" width="2.97" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="488.97" y="1405.84">86</text>
+<text class="label" x="468" y="1435.84" text-anchor="end">JJGadgets/Biohazard</text>
+<rect x="480" y="1420" width="2.87" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="488.87" y="1435.84">83</text>
+<text class="label" x="468" y="1465.84" text-anchor="end">aldoborrero/k8s-usenet</text>
+<rect x="480" y="1450" width="2.70" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="488.70" y="1465.84">78</text>
+<text class="label" x="468" y="1495.84" text-anchor="end">Mirantis/rockoon</text>
+<rect x="480" y="1480" width="2.63" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="488.63" y="1495.84">76</text>
+<text class="label" x="468" y="1525.84" text-anchor="end">apecloud/kubeblocks-addons</text>
+<rect x="480" y="1510" width="2.49" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="488.49" y="1525.84">72</text>
+<text class="label" x="468" y="1555.84" text-anchor="end">Obmondo/KubeAid</text>
+<rect x="480" y="1540" width="2.46" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="488.46" y="1555.84">71</text>
+</svg>

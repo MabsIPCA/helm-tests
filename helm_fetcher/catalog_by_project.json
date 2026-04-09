@@ -1,0 +1,28 @@
+[
+  {
+    "repo_url": "https://github.com/FairwindsOps/goldilocks",
+    "repo_name": "FairwindsOps/goldilocks",
+    "cloned_dir": "E:\\helm_clones_artifacthub\\FairwindsOps__goldilocks",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  },
+  {
+    "repo_url": "https://github.com/kubernetes/node-problem-detector",
+    "repo_name": "kubernetes/node-problem-detector",
+    "cloned_dir": "E:\\helm_clones_artifacthub\\kubernetes__node-problem-detector",
+    "total_charts": 0,
+    "total_runs": 0,
+    "total_successes": 0,
+    "total_failures": 0,
+    "total_dep_failures": 0,
+    "charts": null,
+    "kept": false,
+    "dep_failed": false
+  }
+]

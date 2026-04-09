@@ -27,6 +27,9 @@ const (
 	searchOutFlag      = "search-out"
 	searchOutUsage     = "In github-search-json mode, output JSON file path"
 	searchOutDefault   = "github_search.json"
+	cloneDirFlag       = "clone-dir"
+	cloneDirUsage      = "Directory where repositories are cloned"
+	cloneDirDefault    = "cloned"
 )
 
 // Config groups all runtime settings parsed from CLI flags.
@@ -39,6 +42,7 @@ type Config struct {
 	SearchOrder string
 	SearchIn    string
 	SearchOut   string
+	CloneDir    string
 }
 
 func Parse() Config {
@@ -50,6 +54,7 @@ func Parse() Config {
 	searchOrder := flag.String(searchOrderFlag, searchOrderDefault, searchOrderUsage)
 	searchIn := flag.String(searchInFlag, searchInDefault, searchInUsage)
 	searchOut := flag.String(searchOutFlag, searchOutDefault, searchOutUsage)
+	cloneDir := flag.String(cloneDirFlag, cloneDirDefault, cloneDirUsage)
 	flag.Parse()
 
 	return Config{
@@ -61,5 +66,6 @@ func Parse() Config {
 		SearchOrder: *searchOrder,
 		SearchIn:    *searchIn,
 		SearchOut:   *searchOut,
+		CloneDir:    *cloneDir,
 	}
 }

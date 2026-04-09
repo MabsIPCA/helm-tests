@@ -4,11 +4,11 @@
 # ---------------------------------------------------------------------------
 
 # Number of top entries to process from the selected source
-TOP       ?= 400
+TOP       ?= 500
 # Number of entries fetched per API request/page (artifacthub max 60, github max 100)
 PAGE_SIZE ?= 60
 # Discovery source: artifacthub or github
-SOURCE    ?= github
+SOURCE    ?= artifacthub
 # In github-search-json mode, number of repos to fetch
 SEARCH_TOP ?= 1000
 # In github-search-json mode, star ordering: desc or asc
@@ -18,15 +18,21 @@ SEARCH_IN ?= github_search.json
 # In github-search-json mode, output JSON file path
 SEARCH_OUT ?= github_search.json
 
+# Plot generation settings
+PLOT_DIR ?= plots
+PLOT_TOP_PROBLEMS ?= 40
+PLOT_TOP_STARS ?= 50
+PLOT_TOP_POPULARITY ?= 200
+
 # Output files
 ALL_JSON  := catalog_all_results.json
 FAIL_CSV  := catalog_failures.csv
 SEARCH_JSON := github_search.json
 
-# Cloned repos directory
-CLONE_DIR := cloned
+# Cloned repos directory (override per run if needed)
+CLONE_DIR ?= E:/helm_clones_artifacthub
 
-.PHONY: run run-github-search-json clean-cloned clean-output clean help
+.PHONY: run run-github-search-json plot-problems plot-popularity plot-problems-popularity plot-all clean-cloned clean-output clean help
 
 ## run: fetch repos from selected source, run helm template on all combinations
 run:
@@ -35,7 +41,8 @@ run:
 		-source=$(SOURCE) \
 		-top=$(TOP) \
 		-page-size=$(PAGE_SIZE) \
-		-search-in=$(SEARCH_IN)
+		-search-in=$(SEARCH_IN) \
+		-clone-dir=$(CLONE_DIR)
 
 ## run-github-search-json: generate JSON only from GitHub search (no clone/template)
 run-github-search-json:
@@ -46,10 +53,35 @@ run-github-search-json:
 		-search-order=$(SEARCH_ORDER) \
 		-search-out=$(SEARCH_OUT)
 
+## plot-problems: generate SVG chart with problems per project
+plot-problems:
+	python scripts/plot_problems_per_project.py \
+		--catalog-in=catalog_by_project.json \
+		--output=$(PLOT_DIR)/problems_per_project.svg \
+		--top=$(PLOT_TOP_PROBLEMS)
+
+## plot-popularity: generate SVG chart with repo popularity (stars)
+plot-popularity:
+	python scripts/plot_repo_popularity.py \
+		--search-in=$(SEARCH_IN) \
+		--output=$(PLOT_DIR)/repo_popularity_stars.svg \
+		--top=$(PLOT_TOP_STARS)
+
+## plot-problems-popularity: generate SVG scatter chart with problems vs stars
+plot-problems-popularity:
+	python scripts/plot_problems_per_popularity.py \
+		--catalog-in=catalog_by_project.json \
+		--search-in=$(SEARCH_IN) \
+		--output=$(PLOT_DIR)/problems_per_popularity.svg \
+		--top=$(PLOT_TOP_POPULARITY)
+
+## plot-all: generate both plots
+plot-all: plot-problems plot-popularity plot-problems-popularity
+
 ## clean-cloned: remove all cloned repositories
 clean-cloned:
 	@echo "Removing $(CLONE_DIR)/ ..."
-	@if exist $(CLONE_DIR) rmdir /s /q $(CLONE_DIR)
+	@if exist "$(CLONE_DIR)" rmdir /s /q "$(CLONE_DIR)"
 	@echo "Done."
 
 ## clean-output: remove generated JSON and CSV output files
@@ -66,12 +98,16 @@ clean: clean-cloned clean-output
 ## help: show available targets
 help:
 	@echo.
-	@echo   Usage: make [target] [SOURCE=github] [TOP=400] [PAGE_SIZE=60]
+	@echo   Usage: make [target] [SOURCE=github] [TOP=400] [PAGE_SIZE=60] [CLONE_DIR=E:/helm_clones]
 	@echo.
 	@echo   Targets:
 	@echo     run                    - run full catalog flow (search, clone, helm template)
 	@echo     run-github-search-json - generate GitHub search JSON only
-	@echo     clean-cloned  - delete the cloned/ directory
+	@echo     plot-problems          - generate plots/problems_per_project.svg
+	@echo     plot-popularity        - generate plots/repo_popularity_stars.svg
+	@echo     plot-problems-popularity - generate plots/problems_per_popularity.svg
+	@echo     plot-all               - generate all plot files
+	@echo     clean-cloned  - delete the configured clone directory
 	@echo     clean-output  - delete catalog_all_results.json, catalog_failures.csv and github_search.json
 	@echo     clean         - clean-cloned + clean-output
 	@echo     help          - show this message
@@ -84,5 +120,10 @@ help:
 	@echo     SEARCH_TOP   (default: 1000) repos fetched in run-github-search-json mode
 	@echo     SEARCH_ORDER (default: desc) star order in run-github-search-json mode: desc or asc
 	@echo     SEARCH_OUT   (default: github_search.json) output JSON path in run-github-search-json mode
+	@echo     CLONE_DIR    (default: E:/helm_clones) clone destination for run/clean-cloned
+	@echo     PLOT_DIR     (default: plots) directory where chart SVG files are written
+	@echo     PLOT_TOP_PROBLEMS (default: 40) bars shown in problems-per-project chart
+	@echo     PLOT_TOP_STARS    (default: 50) bars shown in repo-popularity chart
+	@echo     PLOT_TOP_POPULARITY (default: 200) points shown in problems-vs-popularity chart
 	@echo.
 

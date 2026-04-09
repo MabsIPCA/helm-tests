@@ -1,0 +1,1298 @@
+[
+  {
+    "repo_url": "https://github.com/rancher/rancher",
+    "repo_name": "rancher/rancher",
+    "chart_path": "E:\\helm_clones\\rancher__rancher\\chart",
+    "error": "Error: cannot load Chart.yaml: error converting YAML to JSON: yaml: line 4: found character that cannot start any token"
+  },
+  {
+    "repo_url": "https://github.com/labring/sealos",
+    "repo_name": "labring/sealos",
+    "chart_path": "E:\\helm_clones\\labring__sealos\\deploy\\base\\higress\\v2.1.3\\charts\\higress",
+    "error": "Error: directory E:\\helm_clones\\labring__sealos\\deploy\\base\\higress\\v2.1.3\\charts\\core not found"
+  },
+  {
+    "repo_url": "https://github.com/refly-ai/refly",
+    "repo_name": "refly-ai/refly",
+    "chart_path": "E:\\helm_clones\\refly-ai__refly\\deploy\\helm\\refly-stack",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/linode/apl-core",
+    "repo_name": "linode/apl-core",
+    "chart_path": "E:\\helm_clones\\linode__apl-core\\chart\\chart-index",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/cozystack/cozystack",
+    "repo_name": "cozystack/cozystack",
+    "chart_path": "E:\\helm_clones\\cozystack__cozystack\\packages\\apps\\bucket",
+    "error": "Error: error unpacking subchart cozy-lib in bucket: Chart.yaml file is missing"
+  },
+  {
+    "repo_url": "https://github.com/grafana/helm-charts",
+    "repo_name": "grafana/helm-charts",
+    "chart_path": "E:\\helm_clones\\grafana__helm-charts\\charts\\enterprise-metrics",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://helm.min.io/\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: minio chart not found in repo https://helm.min.io/"
+  },
+  {
+    "repo_url": "https://github.com/norwoodj/helm-docs",
+    "repo_name": "norwoodj/helm-docs",
+    "chart_path": "E:\\helm_clones\\norwoodj__helm-docs\\example-charts\\custom-template",
+    "error": "Error: no repository definition for @stable. Please add them via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/securitybunker/databunker",
+    "repo_name": "securitybunker/databunker",
+    "chart_path": "E:\\helm_clones\\securitybunker__databunker\\charts\\databunker",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/rancher/charts",
+    "repo_name": "rancher/charts",
+    "chart_path": "E:\\helm_clones\\rancher__charts\\charts\\epinio\\102.0.1+up1.6.2",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/cloudnativeapp/charts",
+    "repo_name": "cloudnativeapp/charts",
+    "chart_path": "E:\\helm_clones\\cloudnativeapp__charts\\curated\\airflow",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/BigKAA/youtube",
+    "repo_name": "BigKAA/youtube",
+    "chart_path": "E:\\helm_clones\\BigKAA__youtube\\tracing\\for_admins\\charts\\jaeger\\jaeger",
+    "error": "Error: no repository definition for https://charts.helm.sh/incubator, https://helm.elastic.co, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/radondb/radondb-mysql-kubernetes",
+    "repo_name": "radondb/radondb-mysql-kubernetes",
+    "chart_path": "E:\\helm_clones\\radondb__radondb-mysql-kubernetes\\charts\\mysql-operator",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: directory E:\\helm_clones\\radondb__radondb-mysql-kubernetes\\charts\\mysql-operator\\charts\\mysqlcluster not found"
+  },
+  {
+    "repo_url": "https://github.com/IBM/charts",
+    "repo_name": "IBM/charts",
+    "chart_path": "E:\\helm_clones\\IBM__charts\\community\\artifactory-ha",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/JahstreetOrg/spark-on-kubernetes-helm",
+    "repo_name": "JahstreetOrg/spark-on-kubernetes-helm",
+    "chart_path": "E:\\helm_clones\\JahstreetOrg__spark-on-kubernetes-helm\\charts\\cluster-base",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes.github.io/ingress-nginx, https://charts.jetstack.io, https://charts.helm.sh/stable, https://charts.helm.sh/stable. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/vexxhost/atmosphere",
+    "repo_name": "vexxhost/atmosphere",
+    "chart_path": "E:\\helm_clones\\vexxhost__atmosphere\\charts\\barbican",
+    "error": "load.go:138: Warning: Dependency locking is handled in Chart.lock since apiVersion \"v2\". We recommend migrating to Chart.lock.\nError: no repository definition for https://tarballs.openstack.org/openstack-helm. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/unixhot/devops-x",
+    "repo_name": "unixhot/devops-x",
+    "chart_path": "E:\\helm_clones\\unixhot__devops-x\\helm\\gitlab",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/rancher/rke2-charts",
+    "repo_name": "rancher/rke2-charts",
+    "chart_path": "E:\\helm_clones\\rancher__rke2-charts\\packages\\rke2-cilium-legacy\\charts",
+    "error": "Error: directory E:\\helm_clones\\rancher__rke2-charts\\packages\\rke2-cilium-legacy\\charts\\charts\\cilium not found"
+  },
+  {
+    "repo_url": "https://github.com/stackrox/helm-charts",
+    "repo_name": "stackrox/helm-charts",
+    "chart_path": "E:\\helm_clones\\stackrox__helm-charts\\3.0.41.0",
+    "error": "Error: validation: chart.metadata.version \"3.0.41.0\" is invalid"
+  },
+  {
+    "repo_url": "https://github.com/project-sunbird/sunbird-devops",
+    "repo_name": "project-sunbird/sunbird-devops",
+    "chart_path": "E:\\helm_clones\\project-sunbird__sunbird-devops\\kubernetes\\helm_charts\\monitoring\\oauth2-proxy",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/rancher/partner-charts",
+    "repo_name": "rancher/partner-charts",
+    "chart_path": "E:\\helm_clones\\rancher__partner-charts\\charts\\amd\\amd-gpu\\0.10.0",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/CARV-ICS-FORTH/frisbee",
+    "repo_name": "CARV-ICS-FORTH/frisbee",
+    "chart_path": "E:\\helm_clones\\CARV-ICS-FORTH__frisbee\\charts\\platform",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/wikibook/kubepractice",
+    "repo_name": "wikibook/kubepractice",
+    "chart_path": "E:\\helm_clones\\wikibook__kubepractice\\ch06\\nginx-12.0.0",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/pluralsh/plural-artifacts",
+    "repo_name": "pluralsh/plural-artifacts",
+    "chart_path": "E:\\helm_clones\\pluralsh__plural-artifacts\\airbyte\\helm\\airbyte",
+    "error": "Error: directory E:\\helm_clones\\airbyte\\charts\\airbyte not found"
+  },
+  {
+    "repo_url": "https://github.com/tmforum-oda/oda-canvas",
+    "repo_name": "tmforum-oda/oda-canvas",
+    "chart_path": "E:\\helm_clones\\tmforum-oda__oda-canvas\\charts\\observability-stack",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://open-telemetry.github.io/opentelemetry-helm-charts, https://jaegertracing.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/sa-mw-dach/bobbycar",
+    "repo_name": "sa-mw-dach/bobbycar",
+    "chart_path": "E:\\helm_clones\\sa-mw-dach__bobbycar\\helm\\bobbycar-core-infra",
+    "error": "Error: no repository definition for https://drogue-iot.github.io/drogue-cloud-helm-charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/boozallen/aissemble",
+    "repo_name": "boozallen/aissemble",
+    "chart_path": "E:\\helm_clones\\boozallen__aissemble\\foundation\\foundation-archetype\\src\\main\\resources\\archetype-resources\\__rootArtifactId__-deploy\\src\\main\\resources\\apps\\common-infrastructure",
+    "error": "Error: validation: chart.metadata.version \"${version}\" is invalid"
+  },
+  {
+    "repo_url": "https://github.com/tkestack/charts",
+    "repo_name": "tkestack/charts",
+    "chart_path": "E:\\helm_clones\\tkestack__charts\\incubator\\airflow",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com/, https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/sapcc/helm-charts",
+    "repo_name": "sapcc/helm-charts",
+    "chart_path": "E:\\helm_clones\\sapcc__helm-charts\\common\\inventory-updater",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading owner-info from repo oci://keppel.eu-de-1.cloud.sap/ccloud-helm\nSave error occurred:  could not download oci://keppel.eu-de-1.cloud.sap/ccloud-helm/owner-info: failed to resolve keppel.eu-de-1.cloud.sap/ccloud-helm/owner-info:0.2.0: Get \"https://keppel.eu-de-1.cloud.sap/v2/ccloud-helm/owner-info/manifests/0.2.0\": dial tcp: lookup keppel.eu-de-1.cloud.sap: getaddrinfow: Este é geralmente um erro temporário durante a resolução de nomes de anfitrião e significa que o servidor local não recebeu uma resposta de um servidor autoritário.\nError: could not download oci://keppel.eu-de-1.cloud.sap/ccloud-helm/owner-info: failed to resolve keppel.eu-de-1.cloud.sap/ccloud-helm/owner-info:0.2.0: Get \"https://keppel.eu-de-1.cloud.sap/v2/ccloud-helm/owner-info/manifests/0.2.0\": dial tcp: lookup keppel.eu-de-1.cloud.sap: getaddrinfow: Este é geralmente um erro temporário durante a resolução de nomes de anfitrião e significa que o servidor local não recebeu uma resposta de um servidor autoritário."
+  },
+  {
+    "repo_url": "https://github.com/opea-project/Enterprise-Inference",
+    "repo_name": "opea-project/Enterprise-Inference",
+    "chart_path": "E:\\helm_clones\\opea-project__Enterprise-Inference\\core\\helm-charts\\genai-gateway",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 2 charts\nDownloading postgresql from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to resolve registry-1.docker.io/bitnamicharts/postgresql:16.7.4: GET \"https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/16.7.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to resolve registry-1.docker.io/bitnamicharts/postgresql:16.7.4: GET \"https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/16.7.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/platyplus/platyplus",
+    "repo_name": "platyplus/platyplus",
+    "chart_path": "E:\\helm_clones\\platyplus__platyplus\\charts\\hasura",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/opendevstack/ods-quickstarters",
+    "repo_name": "opendevstack/ods-quickstarters",
+    "chart_path": "E:\\helm_clones\\opendevstack__ods-quickstarters\\be-rust-axum\\rust-template\\chart",
+    "error": "Error: cannot load Chart.yaml: error converting YAML to JSON: yaml: invalid map key: map[interface {}]interface {}{\"project-name\":interface {}(nil)}"
+  },
+  {
+    "repo_url": "https://github.com/k8s-home-lab/helm-charts",
+    "repo_name": "k8s-home-lab/helm-charts",
+    "chart_path": "E:\\helm_clones\\k8s-home-lab__helm-charts\\unmaintained\\audiobookshelf",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://library-charts.k8s-at-home.com\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: can't get a valid version for 1 subchart(s): \"common\" (repository \"https://library-charts.k8s-at-home.com\", version \"4.5.3\"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml"
+  },
+  {
+    "repo_url": "https://github.com/mojaloop/helm",
+    "repo_name": "mojaloop/helm",
+    "chart_path": "E:\\helm_clones\\mojaloop__helm\\example-mojaloop-backend",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 9 charts\nDownloading kafka from repo https://charts.bitnami.com/bitnami\nPulled: registry-1.docker.io/bitnamicharts/kafka:31.5.0\nDigest: sha256:66624cc675d8be3d64fee1a1f9c8c1481ff95d7b2d6d0638560848df6dc3861a\nDownloading mysql from repo https://charts.bitnami.com/bitnami\nPulled: registry-1.docker.io/bitnamicharts/mysql:14.0.3\nDigest: sha256:2bbaf66e43dad7edce1eb563e19bcabd83eb8c8f79549505ad1c48e3a0cbfbba\nDownloading mongodb from repo https://charts.bitnami.com/bitnami\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/mongodb: failed to resolve registry-1.docker.io/bitnamicharts/mongodb:18.6.1: GET \"https://registry-1.docker.io/v2/bitnamicharts/mongodb/manifests/18.6.1\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/mongodb: failed to resolve registry-1.docker.io/bitnamicharts/mongodb:18.6.1: GET \"https://registry-1.docker.io/v2/bitnamicharts/mongodb/manifests/18.6.1\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/camptocamp/charts",
+    "repo_name": "camptocamp/charts",
+    "chart_path": "E:\\helm_clones\\camptocamp__charts\\logstash-super-turbo",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://kubernetes-charts.storage.googleapis.com/\" chart repository:\n\tfailed to fetch https://kubernetes-charts.storage.googleapis.com/index.yaml : 403 Forbidden\n...Successfully got an update from the \"https://helm.elastic.co\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-1067d9c6027b8c3f27b49e40521d64be96ea412858d8e45064fa44afd3966ddc found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-1067d9c6027b8c3f27b49e40521d64be96ea412858d8e45064fa44afd3966ddc-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/devtron-labs/charts",
+    "repo_name": "devtron-labs/charts",
+    "chart_path": "E:\\helm_clones\\devtron-labs__charts\\charts\\cluster-essentials",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://kubernetes-sigs.github.io/metrics-server/\" chart repository\n...Successfully got an update from the \"https://kedacore.github.io/charts\" chart repository\n...Successfully got an update from the \"https://kubernetes.github.io/autoscaler\" chart repository\n...Successfully got an update from the \"https://aws.github.io/eks-charts\" chart repository\n...Successfully got an update from the \"https://helm.devtron.ai\" chart repository\n...Successfully got an update from the \"https://helm.devtron.ai\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: can't get a valid version for 1 subchart(s): \"kubernetes-event-exporter\" (repository \"https://charts.bitnami.com/bitnami\", version \"1.2.*\"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml"
+  },
+  {
+    "repo_url": "https://github.com/YAKEcloud/yake",
+    "repo_name": "YAKEcloud/yake",
+    "chart_path": "E:\\helm_clones\\YAKEcloud__yake\\helmcharts\\acl",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: dependency \"controller\" has an invalid version/constraint format: improper constraint:"
+  },
+  {
+    "repo_url": "https://github.com/bflance/proxmox-talos",
+    "repo_name": "bflance/proxmox-talos",
+    "chart_path": "E:\\helm_clones\\bflance__proxmox-talos\\charts\\grafana-loki",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 5 charts\nDownloading memcached from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/memcached: failed to resolve registry-1.docker.io/bitnamicharts/memcached:7.6.2: GET \"https://registry-1.docker.io/v2/bitnamicharts/memcached/manifests/7.6.2\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/memcached: failed to resolve registry-1.docker.io/bitnamicharts/memcached:7.6.2: GET \"https://registry-1.docker.io/v2/bitnamicharts/memcached/manifests/7.6.2\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/k0rdent/catalog",
+    "repo_name": "k0rdent/catalog",
+    "chart_path": "E:\\helm_clones\\k0rdent__catalog\\apps\\alloy\\charts\\alloy-1.6.1",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Loongson-Cloud-Community/dockerfiles",
+    "repo_name": "Loongson-Cloud-Community/dockerfiles",
+    "chart_path": "E:\\helm_clones\\Loongson-Cloud-Community__dockerfiles\\kubesphere\\ks-installer\\v3.2.1\\roles\\ks-multicluster\\files\\kubefed\\kubefed",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://localhost/\" chart repository:\n\tGet \"https://localhost/index.yaml\": dial tcp [::1]:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-f2b99ce05b94599549c70dbbe7a891b278e7c3cacad02334fa44682fca36c740 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-f2b99ce05b94599549c70dbbe7a891b278e7c3cacad02334fa44682fca36c740-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/junghoon2/k8s-class",
+    "repo_name": "junghoon2/k8s-class",
+    "chart_path": "E:\\helm_clones\\junghoon2__k8s-class\\argo-cd\\argo-cd-5.14.1",
+    "error": "Error: no repository definition for https://dandydeveloper.github.io/charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/cloud-native-toolkit/toolkit-charts",
+    "repo_name": "cloud-native-toolkit/toolkit-charts",
+    "chart_path": "E:\\helm_clones\\cloud-native-toolkit__toolkit-charts\\stable\\cloud-setup",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/suse-edge/charts",
+    "repo_name": "suse-edge/charts",
+    "chart_path": "E:\\helm_clones\\suse-edge__charts\\charts\\kubevirt\\0.1.0",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: dependency \"cdi\" has an invalid version/constraint format: improper constraint:"
+  },
+  {
+    "repo_url": "https://github.com/ai-solution-eng/frameworks",
+    "repo_name": "ai-solution-eng/frameworks",
+    "chart_path": "E:\\helm_clones\\ai-solution-eng__frameworks\\appsmith\\3.6.4",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/cnrancher/pandaria-catalog",
+    "repo_name": "cnrancher/pandaria-catalog",
+    "chart_path": "E:\\helm_clones\\cnrancher__pandaria-catalog\\charts\\rancher-hami\\107.0.0+up2.5.2\\charts\\hami-webui",
+    "error": "Error: no repository definition for https://nvidia.github.io/dcgm-exporter/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Sagar2366/tech-talks",
+    "repo_name": "Sagar2366/tech-talks",
+    "chart_path": "E:\\helm_clones\\Sagar2366__tech-talks\\k8s_pune_oct22\\prometheus-comunity-helm-chart\\charts\\kube-prometheus-stack",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/boozallen/sdp-helm-chart",
+    "repo_name": "boozallen/sdp-helm-chart",
+    "chart_path": "E:\\helm_clones\\boozallen__sdp-helm-chart",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: dependency \"jenkins\" has an invalid version/constraint format: improper constraint:"
+  },
+  {
+    "repo_url": "https://github.com/DOME-Marketplace/dome-gitops",
+    "repo_name": "DOME-Marketplace/dome-gitops",
+    "chart_path": "E:\\helm_clones\\DOME-Marketplace__dome-gitops\\ionos_sbx\\marketplace\\postgis",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading postgresql from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to resolve registry-1.docker.io/bitnamicharts/postgresql:13.1.5: GET \"https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/13.1.5\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to resolve registry-1.docker.io/bitnamicharts/postgresql:13.1.5: GET \"https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/13.1.5\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/randoli/helm-charts",
+    "repo_name": "randoli/helm-charts",
+    "chart_path": "E:\\helm_clones\\randoli__helm-charts\\charts\\loki",
+    "error": "Error: no repository definition for https://charts.min.io/, https://grafana.github.io/helm-charts, https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/unixfox/k8s",
+    "repo_name": "unixfox/k8s",
+    "chart_path": "E:\\helm_clones\\unixfox__k8s\\charts\\bibliogram",
+    "error": "Error: no repository definition for https://library-charts.k8s-at-home.com. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/bcgov/OCWA",
+    "repo_name": "bcgov/OCWA",
+    "chart_path": "E:\\helm_clones\\bcgov__OCWA\\helm\\ocwa",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/henrywhitaker3/homelab",
+    "repo_name": "henrywhitaker3/homelab",
+    "chart_path": "E:\\helm_clones\\henrywhitaker3__homelab\\kubernetes\\k3s\\apps\\databases\\nats\\cluster\\chart",
+    "error": "Error: no repository definition for https://nats-io.github.io/k8s/helm/charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/kubero-dev/kubero-operator",
+    "repo_name": "kubero-dev/kubero-operator",
+    "chart_path": "E:\\helm_clones\\kubero-dev__kubero-operator\\helm-charts\\kuberoaddonmemcached",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 2 charts\nDownloading common from repo oci://registry-1.docker.io/cloudpirates\nSave error occurred:  could not download oci://registry-1.docker.io/cloudpirates/common: failed to resolve registry-1.docker.io/cloudpirates/common:1.0.0: GET \"https://registry-1.docker.io/v2/cloudpirates/common/manifests/1.0.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/cloudpirates/common: failed to resolve registry-1.docker.io/cloudpirates/common:1.0.0: GET \"https://registry-1.docker.io/v2/cloudpirates/common/manifests/1.0.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/logicalisuki/ubiquity-open",
+    "repo_name": "logicalisuki/ubiquity-open",
+    "chart_path": "E:\\helm_clones\\logicalisuki__ubiquity-open\\disabled\\jupyterhub",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 2 charts\nDownloading jupyterhub from repo https://charts.bitnami.com/bitnami\nDownloading common from repo https://charts.bitnami.com/bitnami\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.38.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.38.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.38.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.38.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/junghoon2/kube-books",
+    "repo_name": "junghoon2/kube-books",
+    "chart_path": "E:\\helm_clones\\junghoon2__kube-books\\ch06\\nginx-12.0.0",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/llajas/homelab",
+    "repo_name": "llajas/homelab",
+    "chart_path": "E:\\helm_clones\\llajas__homelab\\apps\\homeassistant",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://library-charts.k8s-at-home.com\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 4 charts\nDownloading common from repo https://library-charts.k8s-at-home.com\nDownloading postgresql from repo https://charts.bitnami.com/bitnami\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to resolve registry-1.docker.io/bitnamicharts/postgresql:16.7.21: GET \"https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/16.7.21\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to resolve registry-1.docker.io/bitnamicharts/postgresql:16.7.21: GET \"https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/16.7.21\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/preloop/preloop",
+    "repo_name": "preloop/preloop",
+    "chart_path": "E:\\helm_clones\\preloop__preloop\\helm\\preloop",
+    "error": "Error: no repository definition for https://nats-io.github.io/k8s/helm/charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/SimCubeLtd/simcube-helm-charts",
+    "repo_name": "SimCubeLtd/simcube-helm-charts",
+    "chart_path": "E:\\helm_clones\\SimCubeLtd__simcube-helm-charts\\charts\\bytesafe",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/stakater/nordmart-apps-gitops-config",
+    "repo_name": "stakater/nordmart-apps-gitops-config",
+    "chart_path": "E:\\helm_clones\\stakater__nordmart-apps-gitops-config\\01-arsenal\\01-stakater-nordmart-review-api\\01-dev",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://nexus-helm-stakater-nexus.apps.devtest.vxdqgl7u.kubeapp.cloud/repository/helm-charts/\" chart repository:\n\tGet \"https://nexus-helm-stakater-nexus.apps.devtest.vxdqgl7u.kubeapp.cloud/repository/helm-charts/index.yaml\": dial tcp: lookup nexus-helm-stakater-nexus.apps.devtest.vxdqgl7u.kubeapp.cloud: no such host\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-7ebb8ed6883774d2c679cf4b093eaa1b7bd49e3f4401e7427ef1456c3315f23d found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-7ebb8ed6883774d2c679cf4b093eaa1b7bd49e3f4401e7427ef1456c3315f23d-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/thoughtworks/byor-voting-infrastructure",
+    "repo_name": "thoughtworks/byor-voting-infrastructure",
+    "chart_path": "E:\\helm_clones\\thoughtworks__byor-voting-infrastructure\\src\\byor-voting-chart",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/starlingx/openstack-armada-app",
+    "repo_name": "starlingx/openstack-armada-app",
+    "chart_path": "E:\\helm_clones\\starlingx__openstack-armada-app\\stx-openstack-helm-fluxcd\\stx-openstack-helm-fluxcd\\helm-charts\\clients",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://localhost:8879/charts\" chart repository:\n\tGet \"http://localhost:8879/charts/index.yaml\": dial tcp [::1]:8879: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-878d619eb15837b169144dfaab3a7d6c5e800dd40daf0369bbe2b101f2275284 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-878d619eb15837b169144dfaab3a7d6c5e800dd40daf0369bbe2b101f2275284-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/appscode-cloud/ui-wizards",
+    "repo_name": "appscode-cloud/ui-wizards",
+    "chart_path": "E:\\helm_clones\\appscode-cloud__ui-wizards\\charts\\kubedbcom-elasticsearch-editor",
+    "error": "Error: chart file \"values.openapiv3_schema.yaml\" is larger than the maximum file size 5242880"
+  },
+  {
+    "repo_url": "https://github.com/celo-org/charts",
+    "repo_name": "celo-org/charts",
+    "chart_path": "E:\\helm_clones\\celo-org__charts\\charts\\espresso-node",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading postgresql from repo https://charts.bitnami.com/bitnami\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to resolve registry-1.docker.io/bitnamicharts/postgresql:16.4.1: GET \"https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/16.4.1\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to resolve registry-1.docker.io/bitnamicharts/postgresql:16.4.1: GET \"https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/16.4.1\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/cloudstark/helm-charts",
+    "repo_name": "cloudstark/helm-charts",
+    "chart_path": "E:\\helm_clones\\cloudstark__helm-charts\\postgrest",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/dungdm93/shipyard",
+    "repo_name": "dungdm93/shipyard",
+    "chart_path": "E:\\helm_clones\\dungdm93__shipyard\\helm\\druid",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: can't get a valid version for 2 subchart(s): \"zookeeper\" (repository \"https://charts.bitnami.com/bitnami\", version \"7.x.x\"), \"postgresql\" (repository \"https://charts.bitnami.com/bitnami\", version \"10.x.x\"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml"
+  },
+  {
+    "repo_url": "https://github.com/atsip76/k8s_asterisk_project",
+    "repo_name": "atsip76/k8s_asterisk_project",
+    "chart_path": "E:\\helm_clones\\atsip76__k8s_asterisk_project\\k8s\\gitlab",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://charts.gitlab.io/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ibuildthecloud/rancher-charts",
+    "repo_name": "ibuildthecloud/rancher-charts",
+    "chart_path": "E:\\helm_clones\\ibuildthecloud__rancher-charts\\charts\\anchore-engine\\0.1.0",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/kaikodata/canton-tooling",
+    "repo_name": "kaikodata/canton-tooling",
+    "chart_path": "E:\\helm_clones\\kaikodata__canton-tooling\\kubernetes\\templates\\canton-validator-template",
+    "error": "Error: validation: chart.metadata.version \"TEMPLATE_VERSION\" is invalid"
+  },
+  {
+    "repo_url": "https://github.com/teddy-ambona/kind-e2e",
+    "repo_name": "teddy-ambona/kind-e2e",
+    "chart_path": "E:\\helm_clones\\teddy-ambona__kind-e2e\\helm\\loki",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Otus-DevOps-2019-08/sgremyachikh_microservices",
+    "repo_name": "Otus-DevOps-2019-08/sgremyachikh_microservices",
+    "chart_path": "E:\\helm_clones\\Otus-DevOps-2019-08__sgremyachikh_microservices\\kubernetes\\Charts\\gitlab-omnibus",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://charts.gitlab.io/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/SpechtLabs/k8s-deployment",
+    "repo_name": "SpechtLabs/k8s-deployment",
+    "chart_path": "E:\\helm_clones\\SpechtLabs__k8s-deployment\\charts\\cert-checker",
+    "error": "Error: no repository definition for https://mogensen.github.io/cert-checker. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/claytono/infra",
+    "repo_name": "claytono/infra",
+    "chart_path": "E:\\helm_clones\\claytono__infra\\kubernetes\\crowdsec",
+    "error": "Error: no repository definition for https://crowdsecurity.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/general-rj45/mini-ml-stand-GRJ45",
+    "repo_name": "general-rj45/mini-ml-stand-GRJ45",
+    "chart_path": "E:\\helm_clones\\general-rj45__mini-ml-stand-GRJ45\\airflow-14.2.5\\airflow\\charts\\postgresql",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.4.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.4.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.4.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.4.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/griggheo/blogomatic",
+    "repo_name": "griggheo/blogomatic",
+    "chart_path": "E:\\helm_clones\\griggheo__blogomatic\\devops\\bootstrap_kind_cluster\\helm_charts\\signoz\\signoz",
+    "error": "Error: no repository definition for https://signoz.github.io/charts, https://signoz.github.io/charts, https://charts.jetstack.io, https://kubernetes.github.io/ingress-nginx, https://charts.min.io, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/punchplatform/punch-helm",
+    "repo_name": "punchplatform/punch-helm",
+    "chart_path": "E:\\helm_clones\\punchplatform__punch-helm\\operator",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: directory E:\\helm_clones\\punchplatform__punch-helm\\operator\\charts\\operator.certificate not found"
+  },
+  {
+    "repo_url": "https://github.com/EamonKeane/k8s-cluster-services",
+    "repo_name": "EamonKeane/k8s-cluster-services",
+    "chart_path": "E:\\helm_clones\\EamonKeane__k8s-cluster-services\\cluster-svc",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for http://kubernetes-charts.storage.googleapis.com/, http://kubernetes-charts.storage.googleapis.com/, http://storage.googleapis.com/kubernetes-charts-incubator, http://kubernetes-charts.storage.googleapis.com/, http://storage.googleapis.com/kubernetes-charts-incubator, http://storage.googleapis.com/kubernetes-charts-incubator, http://kubernetes-charts.storage.googleapis.com/, http://kubernetes-charts.storage.googleapis.com/, http://kubernetes-charts.storage.googleapis.com/, http://kubernetes-charts.storage.googleapis.com/, http://kubernetes-charts.storage.googleapis.com/, https://opensource-helm.squareroute.io/, http://kubernetes-charts.storage.googleapis.com/, https://helm.github.io/monocular, http://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Makhuta/truecharts-archive-scale-catalog",
+    "repo_name": "Makhuta/truecharts-archive-scale-catalog",
+    "chart_path": "E:\\helm_clones\\Makhuta__truecharts-archive-scale-catalog\\incubator\\archivebox\\0.7.2",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente."
+  },
+  {
+    "repo_url": "https://github.com/cnieg/helm-charts",
+    "repo_name": "cnieg/helm-charts",
+    "chart_path": "E:\\helm_clones\\cnieg__helm-charts\\charts\\clamapi",
+    "error": "Error: no repository definition for https://wiremind.github.io/wiremind-helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/dynatrace-wwse/enablement-kubernetes-opentelemetry-openpipeline",
+    "repo_name": "dynatrace-wwse/enablement-kubernetes-opentelemetry-openpipeline",
+    "chart_path": "E:\\helm_clones\\dynatrace-wwse__enablement-kubernetes-opentelemetry-openpipeline\\.devcontainer\\astroshop\\helm\\dt-otel-demo-helm",
+    "error": "Error: no repository definition for https://open-telemetry.github.io/opentelemetry-helm-charts, https://open-telemetry.github.io/opentelemetry-helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/helxplatform/translator-devops",
+    "repo_name": "helxplatform/translator-devops",
+    "chart_path": "E:\\helm_clones\\helxplatform__translator-devops\\helm\\answer-appraiser",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/kast-spells/kast-system",
+    "repo_name": "kast-spells/kast-system",
+    "chart_path": "E:\\helm_clones\\kast-spells__kast-system\\librarian",
+    "error": "Error: error unpacking subchart common in librarian: Chart.yaml file is missing"
+  },
+  {
+    "repo_url": "https://github.com/opspresso/argocd-env-addons",
+    "repo_name": "opspresso/argocd-env-addons",
+    "chart_path": "E:\\helm_clones\\opspresso__argocd-env-addons\\charts\\dashboard",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://kubernetes.github.io/dashboard\" chart repository:\n\tfailed to fetch https://kubernetes.github.io/dashboard/index.yaml : 404 Not Found\n...Successfully got an update from the \"https://charts.helm.sh/incubator\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-fc08c6c0f466a809ed2b24637e970ca3cd7bc1d7524efc4832f2405812f07ab0 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-fc08c6c0f466a809ed2b24637e970ca3cd7bc1d7524efc4832f2405812f07ab0-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/pluralsh/plural-helm-charts",
+    "repo_name": "pluralsh/plural-helm-charts",
+    "chart_path": "E:\\helm_clones\\pluralsh__plural-helm-charts\\charts\\airbyte",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts, https://pluralsh.github.io/plural-helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/AchillesChan/memo",
+    "repo_name": "AchillesChan/memo",
+    "chart_path": "E:\\helm_clones\\AchillesChan__memo\\helm-demo\\prometheus-charts\\charts\\kube-prometheus-stack",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/AntSan813/react-hasura-keycloak-app",
+    "repo_name": "AntSan813/react-hasura-keycloak-app",
+    "chart_path": "E:\\helm_clones\\AntSan813__react-hasura-keycloak-app\\api\\hasura",
+    "error": "Error: no repository definition for https://hasura.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/KevMCarp/truecharts-catalog-fork",
+    "repo_name": "KevMCarp/truecharts-catalog-fork",
+    "chart_path": "E:\\helm_clones\\KevMCarp__truecharts-catalog-fork\\dependency\\clickhouse\\5.0.54",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://library-charts.truecharts.org\" chart repository:\n\tGet \"https://library-charts.truecharts.org/index.yaml\": dial tcp: lookup library-charts.truecharts.org: no such host\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-024b189b59f6c6ccf0de6e5148db1578caf551c511f4eb220ece14cef00f80e0 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-024b189b59f6c6ccf0de6e5148db1578caf551c511f4eb220ece14cef00f80e0-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/NeuraLegion/helmcharts",
+    "repo_name": "NeuraLegion/helmcharts",
+    "chart_path": "E:\\helm_clones\\NeuraLegion__helmcharts\\charts\\altoroj",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nSave error occurred:  can't get a valid version for dependency simple-service\nError: can't get a valid version for dependency simple-service"
+  },
+  {
+    "repo_url": "https://github.com/Sureya/airflow_k8s_executor",
+    "repo_name": "Sureya/airflow_k8s_executor",
+    "chart_path": "E:\\helm_clones\\Sureya__airflow_k8s_executor\\helm_charts\\official\\charts\\incubator\\distribution",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com/, https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/TheOpsDev/homelab",
+    "repo_name": "TheOpsDev/homelab",
+    "chart_path": "E:\\helm_clones\\TheOpsDev__homelab\\charts\\k8s-dashboard",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://kubernetes.github.io/dashboard/\" chart repository:\n\tfailed to fetch https://kubernetes.github.io/dashboard/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-602693e8f5d1a68dc0300eb544f8e9829d89b7af15ee517b5231c07768425e69 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-602693e8f5d1a68dc0300eb544f8e9829d89b7af15ee517b5231c07768425e69-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/devops4solutions/guestbook",
+    "repo_name": "devops4solutions/guestbook",
+    "chart_path": "E:\\helm_clones\\devops4solutions__guestbook",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/dima1203oleg/predator-analytics",
+    "repo_name": "dima1203oleg/predator-analytics",
+    "chart_path": "E:\\helm_clones\\dima1203oleg__predator-analytics\\apps\\predator-analytics-ui\\helm",
+    "error": "Error: cannot load Chart.yaml: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal array into Go struct field Metadata.annotations of type string"
+  },
+  {
+    "repo_url": "https://github.com/edixos/ekp-helm",
+    "repo_name": "edixos/ekp-helm",
+    "chart_path": "E:\\helm_clones\\edixos__ekp-helm\\charts\\alertmanager",
+    "error": "Error: no repository definition for https://oauth2-proxy.github.io/manifests. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/elastic/k8s-integration-infra",
+    "repo_name": "elastic/k8s-integration-infra",
+    "chart_path": "E:\\helm_clones\\elastic__k8s-integration-infra\\infra\\charts\\elastic-agent",
+    "error": "Error: no repository definition for @stable. Please add them via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ishtiaqhimel/oms",
+    "repo_name": "ishtiaqhimel/oms",
+    "chart_path": "E:\\helm_clones\\ishtiaqhimel__oms\\charts\\oms-server",
+    "error": "Error: no repository definition for https://charts.konghq.com. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/kalavai-net/helm-charts",
+    "repo_name": "kalavai-net/helm-charts",
+    "chart_path": "E:\\helm_clones\\kalavai-net__helm-charts\\deployments\\monitoring",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts, https://ckotzbauer.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/lucidworks/ocp-fusion-helm-charts",
+    "repo_name": "lucidworks/ocp-fusion-helm-charts",
+    "chart_path": "E:\\helm_clones\\lucidworks__ocp-fusion-helm-charts\\5.3.4\\fusion\\charts\\admin-ui",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://charts.lucidworks.com/\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: can't get a valid version for 1 subchart(s): \"fusion-common-utils\" (repository \"https://charts.lucidworks.com/\", version \"1.5.1\"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml"
+  },
+  {
+    "repo_url": "https://github.com/rancher/ob-team-charts",
+    "repo_name": "rancher/ob-team-charts",
+    "chart_path": "E:\\helm_clones\\rancher__ob-team-charts\\charts\\prometheus-federator\\0.0.1",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: dependency \"helmProjectOperator\" has an invalid version/constraint format: improper constraint:"
+  },
+  {
+    "repo_url": "https://github.com/shelleg/ac-k8s",
+    "repo_name": "shelleg/ac-k8s",
+    "chart_path": "E:\\helm_clones\\shelleg__ac-k8s\\helm\\ant-umbrella",
+    "error": "Error: no repository definition for @incubator, @ac-charts, @ac-charts, @ac-charts, @ac-charts. Please add them via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/shini4i/charts",
+    "repo_name": "shini4i/charts",
+    "chart_path": "E:\\helm_clones\\shini4i__charts\\charts\\app",
+    "error": "Error: no repository definition for https://shini4i.github.io/charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/tetratelabs/charts",
+    "repo_name": "tetratelabs/charts",
+    "chart_path": "E:\\helm_clones\\tetratelabs__charts\\charts\\demos\\istio-monitoring-demo",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/thelande/charts",
+    "repo_name": "thelande/charts",
+    "chart_path": "E:\\helm_clones\\thelande__charts\\charts\\csmm",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 2 charts\nDownloading mariadb from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/mariadb: failed to resolve registry-1.docker.io/bitnamicharts/mariadb:19.0.4: GET \"https://registry-1.docker.io/v2/bitnamicharts/mariadb/manifests/19.0.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/mariadb: failed to resolve registry-1.docker.io/bitnamicharts/mariadb:19.0.4: GET \"https://registry-1.docker.io/v2/bitnamicharts/mariadb/manifests/19.0.4\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/vlab-research/fly",
+    "repo_name": "vlab-research/fly",
+    "chart_path": "E:\\helm_clones\\vlab-research__fly\\devops\\vlab",
+    "error": "Error: no repository definition for https://vlab-research.github.io/fly, https://vlab-research.github.io/fly, https://vlab-research.github.io/fly, https://charts.cockroachdb.com/, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/yunzck8s/cloudNative",
+    "repo_name": "yunzck8s/cloudNative",
+    "chart_path": "E:\\helm_clones\\yunzck8s__cloudNative\\charts\\deepflow",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/CSCfi/helm-charts",
+    "repo_name": "CSCfi/helm-charts",
+    "chart_path": "E:\\helm_clones\\CSCfi__helm-charts\\charts\\elastic-kibana",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 2 charts\nDownloading common from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.38.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.38.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.38.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.38.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/FIWARE-Ops/fiware-gitops",
+    "repo_name": "FIWARE-Ops/fiware-gitops",
+    "chart_path": "E:\\helm_clones\\FIWARE-Ops__fiware-gitops\\aws\\deployai\\marketplace\\kafka",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading kafka from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/kafka: failed to resolve registry-1.docker.io/bitnamicharts/kafka:26.0.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/kafka/manifests/26.0.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/kafka: failed to resolve registry-1.docker.io/bitnamicharts/kafka:26.0.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/kafka/manifests/26.0.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/Frndo1203/stack_iceberg_starrocks_k8s",
+    "repo_name": "Frndo1203/stack_iceberg_starrocks_k8s",
+    "chart_path": "E:\\helm_clones\\Frndo1203__stack_iceberg_starrocks_k8s\\infra\\src\\helm-charts\\airflow",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/JonasHess/homelab-iac",
+    "repo_name": "JonasHess/homelab-iac",
+    "chart_path": "E:\\helm_clones\\JonasHess__homelab-iac\\apps\\nextcloud",
+    "error": "Error: no repository definition for https://nextcloud.github.io/helm/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Kapil-Bhalodiya/E-Commerce",
+    "repo_name": "Kapil-Bhalodiya/E-Commerce",
+    "chart_path": "E:\\helm_clones\\Kapil-Bhalodiya__E-Commerce\\infra\\addons\\nginx-ingress",
+    "error": "Error: no repository definition for https://kubernetes.github.io/ingress-nginx. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Kapil-Bhalodiya/E-commerce-Platform",
+    "repo_name": "Kapil-Bhalodiya/E-commerce-Platform",
+    "chart_path": "E:\\helm_clones\\Kapil-Bhalodiya__E-commerce-Platform\\infra\\addons\\frontend",
+    "error": "Error: cannot load values.yaml: error converting YAML to JSON: yaml: line 8: could not find expected ':'"
+  },
+  {
+    "repo_url": "https://github.com/LuukHors/homelab",
+    "repo_name": "LuukHors/homelab",
+    "chart_path": "E:\\helm_clones\\LuukHors__homelab\\products\\_base",
+    "error": "Error: validation: chart.metadata.name is required"
+  },
+  {
+    "repo_url": "https://github.com/MrE-Fog/ks-installer2",
+    "repo_name": "MrE-Fog/ks-installer2",
+    "chart_path": "E:\\helm_clones\\MrE-Fog__ks-installer2\\roles\\ks-multicluster\\files\\kubefed\\kubefed",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://localhost/\" chart repository:\n\tGet \"https://localhost/index.yaml\": dial tcp [::1]:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-f2b99ce05b94599549c70dbbe7a891b278e7c3cacad02334fa44682fca36c740 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-f2b99ce05b94599549c70dbbe7a891b278e7c3cacad02334fa44682fca36c740-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/PilotDataPlatform/helm-charts",
+    "repo_name": "PilotDataPlatform/helm-charts",
+    "chart_path": "E:\\helm_clones\\PilotDataPlatform__helm-charts\\argo-cd",
+    "error": "Error: no repository definition for https://dandydeveloper.github.io/charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/SpelmanDevops/retail-store",
+    "repo_name": "SpelmanDevops/retail-store",
+    "chart_path": "E:\\helm_clones\\SpelmanDevops__retail-store\\helm\\monitoring",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/TSMC-NYCU-LAB-13/infrastructures",
+    "repo_name": "TSMC-NYCU-LAB-13/infrastructures",
+    "chart_path": "E:\\helm_clones\\TSMC-NYCU-LAB-13__infrastructures\\argo\\argo-cd",
+    "error": "Error: no repository definition for https://dandydeveloper.github.io/charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/VadimShtukan/otus_homework",
+    "repo_name": "VadimShtukan/otus_homework",
+    "chart_path": "E:\\helm_clones\\VadimShtukan__otus_homework\\architect\\lesson05\\kubernetis\\helm-chart",
+    "error": "Error: no repository definition for https://kubernetes-charts.storage.googleapis.com. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Vaibhav2goyal/alertmanager",
+    "repo_name": "Vaibhav2goyal/alertmanager",
+    "chart_path": "E:\\helm_clones\\Vaibhav2goyal__alertmanager\\scripts\\kube-prometheus-stack",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/WesleyJw/modern-data-stack",
+    "repo_name": "WesleyJw/modern-data-stack",
+    "chart_path": "E:\\helm_clones\\WesleyJw__modern-data-stack\\infra\\src\\helm-charts\\airflow",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Yahya-rabii/soge-plus",
+    "repo_name": "Yahya-rabii/soge-plus",
+    "chart_path": "E:\\helm_clones\\Yahya-rabii__soge-plus\\helm-charts\\kube-prometheus-stack",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/adstanley/archive",
+    "repo_name": "adstanley/archive",
+    "chart_path": "E:\\helm_clones\\adstanley__archive\\scale-catalog\\incubator\\archivebox\\0.7.2",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente."
+  },
+  {
+    "repo_url": "https://github.com/codefuturist/helm-charts",
+    "repo_name": "codefuturist/helm-charts",
+    "chart_path": "E:\\helm_clones\\codefuturist__helm-charts\\charts\\apps\\actualbudget",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: can't get a valid version for 1 subchart(s): \"common\" (repository \"file://../../libs/common\", version \"2.x.x\"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml"
+  },
+  {
+    "repo_url": "https://github.com/dan1dan12345678/Helm_charts",
+    "repo_name": "dan1dan12345678/Helm_charts",
+    "chart_path": "E:\\helm_clones\\dan1dan12345678__Helm_charts\\kube-prometheus-stack",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/davidlesicnik/homelab-argo",
+    "repo_name": "davidlesicnik/homelab-argo",
+    "chart_path": "E:\\helm_clones\\davidlesicnik__homelab-argo\\apps\\grafana",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/dboeckli/spring-6-icecold-micro-service",
+    "repo_name": "dboeckli/spring-6-icecold-micro-service",
+    "chart_path": "E:\\helm_clones\\dboeckli__spring-6-icecold-micro-service\\helm-charts",
+    "error": "Error: cannot load Chart.yaml: error converting YAML to JSON: yaml: line 4: found character that cannot start any token"
+  },
+  {
+    "repo_url": "https://github.com/hey101/scale-catalog",
+    "repo_name": "hey101/scale-catalog",
+    "chart_path": "E:\\helm_clones\\hey101__scale-catalog\\incubator\\archivebox\\0.7.2",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.5.1: Get \"https://tccr.io/v2/truecharts/common/manifests/17.5.1\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.5.1: Get \"https://tccr.io/v2/truecharts/common/manifests/17.5.1\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente."
+  },
+  {
+    "repo_url": "https://github.com/hmcts/hmcts-charts",
+    "repo_name": "hmcts/hmcts-charts",
+    "chart_path": "E:\\helm_clones\\hmcts__hmcts-charts\\stable\\adoption-ccd-definitions",
+    "error": "Error: no repository definition for @hmctspublic. Please add them via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/legion-platform/legion-infrastructure",
+    "repo_name": "legion-platform/legion-infrastructure",
+    "chart_path": "E:\\helm_clones\\legion-platform__legion-infrastructure\\helms\\monitoring",
+    "error": "Error: no repository definition for @stable, @stable. Please add them via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/merlindorin/charts",
+    "repo_name": "merlindorin/charts",
+    "chart_path": "E:\\helm_clones\\merlindorin__charts\\charts\\pinniped",
+    "error": "Error: no repository definition for https://merlindorin.github.io/charts, https://merlindorin.github.io/charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/nwthomas/gitops",
+    "repo_name": "nwthomas/gitops",
+    "chart_path": "E:\\helm_clones\\nwthomas__gitops\\helm\\longhorn",
+    "error": "Error: no repository definition for https://charts.longhorn.io. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/otus-kuber-2019-12/gidmaster_platform",
+    "repo_name": "otus-kuber-2019-12/gidmaster_platform",
+    "chart_path": "E:\\helm_clones\\otus-kuber-2019-12__gidmaster_platform\\kubernetes-gitops\\deploy\\charts\\cartservice",
+    "error": "Error: no repository definition for https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/rtang03/helm-charts",
+    "repo_name": "rtang03/helm-charts",
+    "chart_path": "E:\\helm_clones\\rtang03__helm-charts\\charts\\argocd",
+    "error": "Error: no repository definition for https://argoproj.github.io/argo-helm. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/tetratelabs/helm-charts",
+    "repo_name": "tetratelabs/helm-charts",
+    "chart_path": "E:\\helm_clones\\tetratelabs__helm-charts\\charts\\demos\\istio-monitoring-demo",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/100CallsToEurop/otus",
+    "repo_name": "100CallsToEurop/otus",
+    "chart_path": "E:\\helm_clones\\100CallsToEurop__otus\\k8s\\auth",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/100rd/platform-design",
+    "repo_name": "100rd/platform-design",
+    "chart_path": "E:\\helm_clones\\100rd__platform-design\\apps\\infra\\cilium",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/AdmanTIC/helm-charts",
+    "repo_name": "AdmanTIC/helm-charts",
+    "chart_path": "E:\\helm_clones\\AdmanTIC__helm-charts\\charts\\cremecrm",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Arthur-B-DevOps/old_helm_charts",
+    "repo_name": "Arthur-B-DevOps/old_helm_charts",
+    "chart_path": "E:\\helm_clones\\Arthur-B-DevOps__old_helm_charts\\charts\\Old_charts\\charts\\incubator\\distribution",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com/, https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Avichayef/datateam_calculator",
+    "repo_name": "Avichayef/datateam_calculator",
+    "chart_path": "E:\\helm_clones\\Avichayef__datateam_calculator\\helm\\jenkins",
+    "error": "Error: no repository definition for https://charts.jenkins.io. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Backstage-Epitech/cltest",
+    "repo_name": "Backstage-Epitech/cltest",
+    "chart_path": "E:\\helm_clones\\Backstage-Epitech__cltest\\kustomize\\kube-prometheus-stack\\charts\\kube-prometheus-stack-73.2.2\\kube-prometheus-stack",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Bernardpro/ClusterGCP",
+    "repo_name": "Bernardpro/ClusterGCP",
+    "chart_path": "E:\\helm_clones\\Bernardpro__ClusterGCP\\kustomize\\kube-prometheus-stack\\charts\\kube-prometheus-stack-73.2.2\\kube-prometheus-stack",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Bernardpro/ClusterGKE",
+    "repo_name": "Bernardpro/ClusterGKE",
+    "chart_path": "E:\\helm_clones\\Bernardpro__ClusterGKE\\kustomize\\kube-prometheus-stack\\charts\\kube-prometheus-stack-73.2.2\\kube-prometheus-stack",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Clark1992/ECK1",
+    "repo_name": "Clark1992/ECK1",
+    "chart_path": "E:\\helm_clones\\Clark1992__ECK1\\src\\ECK1.FailedViewRebuilder\\Deploy\\service",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading config-watcher from repo oci://localhost:5000/helm\nSave error occurred:  could not download oci://localhost:5000/helm/config-watcher: failed to resolve localhost:5000/helm/config-watcher:0.1.0: Get \"https://localhost:5000/v2/helm/config-watcher/manifests/0.1.0\": dial tcp [::1]:5000: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nError: could not download oci://localhost:5000/helm/config-watcher: failed to resolve localhost:5000/helm/config-watcher:0.1.0: Get \"https://localhost:5000/v2/helm/config-watcher/manifests/0.1.0\": dial tcp [::1]:5000: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente."
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/Authorization-component",
+    "repo_name": "ConductionNL/Authorization-component",
+    "chart_path": "E:\\helm_clones\\ConductionNL__Authorization-component\\api\\helm",
+    "error": "load.go:138: Warning: Dependency locking is handled in Chart.lock since apiVersion \"v2\". We recommend migrating to Chart.lock.\nError: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/adresservice",
+    "repo_name": "ConductionNL/adresservice",
+    "chart_path": "E:\\helm_clones\\ConductionNL__adresservice\\api\\helm",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/commonground-ui",
+    "repo_name": "ConductionNL/commonground-ui",
+    "chart_path": "E:\\helm_clones\\ConductionNL__commonground-ui\\api\\helm",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/logicservice",
+    "repo_name": "ConductionNL/logicservice",
+    "chart_path": "E:\\helm_clones\\ConductionNL__logicservice\\api\\helm",
+    "error": "load.go:138: Warning: Dependency locking is handled in Chart.lock since apiVersion \"v2\". We recommend migrating to Chart.lock.\nError: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/review-component",
+    "repo_name": "ConductionNL/review-component",
+    "chart_path": "E:\\helm_clones\\ConductionNL__review-component\\api\\helm",
+    "error": "load.go:138: Warning: Dependency locking is handled in Chart.lock since apiVersion \"v2\". We recommend migrating to Chart.lock.\nError: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/user-component",
+    "repo_name": "ConductionNL/user-component",
+    "chart_path": "E:\\helm_clones\\ConductionNL__user-component\\api\\helm",
+    "error": "load.go:138: Warning: Dependency locking is handled in Chart.lock since apiVersion \"v2\". We recommend migrating to Chart.lock.\nError: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/verzoekregistratiecomponent",
+    "repo_name": "ConductionNL/verzoekregistratiecomponent",
+    "chart_path": "E:\\helm_clones\\ConductionNL__verzoekregistratiecomponent\\api\\helm",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ConductionNL/waardepapieren-register",
+    "repo_name": "ConductionNL/waardepapieren-register",
+    "chart_path": "E:\\helm_clones\\ConductionNL__waardepapieren-register\\api\\helm",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Cray-HPE/cray-etcd",
+    "repo_name": "Cray-HPE/cray-etcd",
+    "chart_path": "E:\\helm_clones\\Cray-HPE__cray-etcd\\charts\\cray-etcd-test",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://artifactory.algol60.net/artifactory/csm-helm-charts\" chart repository:\n\tfailed to fetch https://artifactory.algol60.net/artifactory/csm-helm-charts/index.yaml : 401 Unauthorized\n...Unable to get an update from the \"https://artifactory.algol60.net/artifactory/csm-helm-charts\" chart repository:\n\tfailed to fetch https://artifactory.algol60.net/artifactory/csm-helm-charts/index.yaml : 401 Unauthorized\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-2567cc0f94184d1da600646844c4102fcfe47e0b5a948bd5b8f54daabdf4b278 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-2567cc0f94184d1da600646844c4102fcfe47e0b5a948bd5b8f54daabdf4b278-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/DanMadar27/devops-toolkit",
+    "repo_name": "DanMadar27/devops-toolkit",
+    "chart_path": "E:\\helm_clones\\DanMadar27__devops-toolkit\\kubernetes\\url-shortener\\k8s\\apps\\redis",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Dystopian00/truecharts",
+    "repo_name": "Dystopian00/truecharts",
+    "chart_path": "E:\\helm_clones\\Dystopian00__truecharts\\charts\\incubator\\docuseal",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:24.1.5: Get \"https://tccr.io/v2/truecharts/common/manifests/24.1.5\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:24.1.5: Get \"https://tccr.io/v2/truecharts/common/manifests/24.1.5\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente."
+  },
+  {
+    "repo_url": "https://github.com/Fall1ngStar/homelab",
+    "repo_name": "Fall1ngStar/homelab",
+    "chart_path": "E:\\helm_clones\\Fall1ngStar__homelab\\platform\\k8s-dashboard",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://kubernetes.github.io/dashboard/\" chart repository:\n\tfailed to fetch https://kubernetes.github.io/dashboard/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-602693e8f5d1a68dc0300eb544f8e9829d89b7af15ee517b5231c07768425e69 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-602693e8f5d1a68dc0300eb544f8e9829d89b7af15ee517b5231c07768425e69-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/Gin-G/argo-k8s-stuff",
+    "repo_name": "Gin-G/argo-k8s-stuff",
+    "chart_path": "E:\\helm_clones\\Gin-G__argo-k8s-stuff\\helm-charts\\argo-cd",
+    "error": "Error: no repository definition for https://dandydeveloper.github.io/charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/GroomC4/c4ang-infra",
+    "repo_name": "GroomC4/c4ang-infra",
+    "chart_path": "E:\\helm_clones\\GroomC4__c4ang-infra\\charts\\schema-registry",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://confluentinc.github.io/cp-helm-charts/\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: cp-schema-registry chart not found in repo https://confluentinc.github.io/cp-helm-charts/"
+  },
+  {
+    "repo_url": "https://github.com/HereNotThere/kerem-argocd-test",
+    "repo_name": "HereNotThere/kerem-argocd-test",
+    "chart_path": "E:\\helm_clones\\HereNotThere__kerem-argocd-test\\charts\\external-secrets",
+    "error": "Error: no repository definition for https://charts.external-secrets.io. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/IsraelBoka/airbyte-engeem",
+    "repo_name": "IsraelBoka/airbyte-engeem",
+    "chart_path": "E:\\helm_clones\\IsraelBoka__airbyte-engeem\\charts\\airbyte",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Itamar-Ratson/devsecops",
+    "repo_name": "Itamar-Ratson/devsecops",
+    "chart_path": "E:\\helm_clones\\Itamar-Ratson__devsecops\\helm\\argo\\cd",
+    "error": "Error: no repository definition for https://argoproj.github.io/argo-helm. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Jaebytes/TrueCharts",
+    "repo_name": "Jaebytes/TrueCharts",
+    "chart_path": "E:\\helm_clones\\Jaebytes__TrueCharts\\premium\\traefik\\26.10.19",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:20.3.12: Get \"https://tccr.io/v2/truecharts/common/manifests/20.3.12\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:20.3.12: Get \"https://tccr.io/v2/truecharts/common/manifests/20.3.12\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente."
+  },
+  {
+    "repo_url": "https://github.com/JaewonHur/constellation",
+    "repo_name": "JaewonHur/constellation",
+    "chart_path": "E:\\helm_clones\\JaewonHur__constellation\\cli\\internal\\helm\\charts\\edgeless\\constellation-services",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 10 charts\nDependency key-service did not declare a repository. Assuming it exists in the charts directory\nDependency join-service did not declare a repository. Assuming it exists in the charts directory\nDependency ccm did not declare a repository. Assuming it exists in the charts directory\nDependency cnm did not declare a repository. Assuming it exists in the charts directory\nDependency autoscaler did not declare a repository. Assuming it exists in the charts directory\nDependency verification-service did not declare a repository. Assuming it exists in the charts directory\nDependency konnectivity did not declare a repository. Assuming it exists in the charts directory\nDependency gcp-guest-agent did not declare a repository. Assuming it exists in the charts directory\nDependency yawol-config did not declare a repository. Assuming it exists in the charts directory\nDependency yawol-controller did not declare a repository. Assuming it exists in the charts directory\nSave error occurred:  dependency yawol-controller at version 0.14.0 does not satisfy the constraint 0.0.0\nError: dependency yawol-controller at version 0.14.0 does not satisfy the constraint 0.0.0"
+  },
+  {
+    "repo_url": "https://github.com/Josca/k0rdent-catalog-2",
+    "repo_name": "Josca/k0rdent-catalog-2",
+    "chart_path": "E:\\helm_clones\\Josca__k0rdent-catalog-2\\apps\\alloy\\charts\\alloy-1.6.1",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Josca/k0rdent-catalog-3",
+    "repo_name": "Josca/k0rdent-catalog-3",
+    "chart_path": "E:\\helm_clones\\Josca__k0rdent-catalog-3\\apps\\alloy\\charts\\alloy-1.6.1",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Josca/k0rdent-catalog-4",
+    "repo_name": "Josca/k0rdent-catalog-4",
+    "chart_path": "E:\\helm_clones\\Josca__k0rdent-catalog-4\\apps\\alloy\\charts\\alloy-1.6.1",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Kuber-2024-10OTUS/klimenko-sergey_repo",
+    "repo_name": "Kuber-2024-10OTUS/klimenko-sergey_repo",
+    "chart_path": "E:\\helm_clones\\Kuber-2024-10OTUS__klimenko-sergey_repo\\kubernetes-monitoring\\hw8",
+    "error": "Error: directory E:\\helm_clones\\Kuber-2024-10OTUS__klimenko-sergey_repo\\kubernetes-monitoring\\charts\\kube-prometheus not found"
+  },
+  {
+    "repo_url": "https://github.com/Kuber-2025-04OTUS/Septolette_repo",
+    "repo_name": "Kuber-2025-04OTUS/Septolette_repo",
+    "chart_path": "E:\\helm_clones\\Kuber-2025-04OTUS__Septolette_repo\\kubernetes-gitops\\argo-cd",
+    "error": "Error: no repository definition for https://dandydeveloper.github.io/charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/LMOrBits/slmops_infra",
+    "repo_name": "LMOrBits/slmops_infra",
+    "chart_path": "E:\\helm_clones\\LMOrBits__slmops_infra\\cloud\\manifests\\dremio",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading minio from repo oci://registry-1.docker.io/bitnamicharts\nPulled: registry-1.docker.io/bitnamicharts/minio:14.8.6\nDigest: sha256:b435fc537dd83c16d0f610daeaebbcfff765dba7b81940ba93a0fb080470d52b\nDownloading zookeeper from repo oci://registry-1.docker.io/bitnamicharts\nPulled: registry-1.docker.io/bitnamicharts/zookeeper:13.6.1\nDigest: sha256:9d8a0f46054fe2a2d1adf7138d8b9e1242486dad0208bb7567cdd75552dee5ae\nDownloading common from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.28.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.28.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/common: failed to resolve registry-1.docker.io/bitnamicharts/common:2.28.0: GET \"https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.28.0\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/LeeLisker/helm",
+    "repo_name": "LeeLisker/helm",
+    "chart_path": "E:\\helm_clones\\LeeLisker__helm\\community\\artifactory-ha",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/MUST-CLOUD/osh",
+    "repo_name": "MUST-CLOUD/osh",
+    "chart_path": "E:\\helm_clones\\MUST-CLOUD__osh\\openstack-helm\\openstack",
+    "error": "Error: error unpacking subchart libvirt in openstack: Chart.yaml file is missing"
+  },
+  {
+    "repo_url": "https://github.com/Mark4562/Truenas-Scale",
+    "repo_name": "Mark4562/Truenas-Scale",
+    "chart_path": "E:\\helm_clones\\Mark4562__Truenas-Scale\\premium\\authelia\\23.13.13",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 2 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:20.3.11: Get \"https://tccr.io/v2/truecharts/common/manifests/20.3.11\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:20.3.11: Get \"https://tccr.io/v2/truecharts/common/manifests/20.3.11\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente."
+  },
+  {
+    "repo_url": "https://github.com/MiKeLFernandeZz/helm-charts",
+    "repo_name": "MiKeLFernandeZz/helm-charts",
+    "chart_path": "E:\\helm_clones\\MiKeLFernandeZz__helm-charts\\charts\\keops",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://airflow.apache.org, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://twuni.github.io/docker-registry.helm, https://prometheus-community.github.io/helm-charts, https://nvidia.github.io/dcgm-exporter/helm-charts, https://nvidia.github.io/k8s-device-plugin. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/MirahImage/postfacto",
+    "repo_name": "MirahImage/postfacto",
+    "chart_path": "E:\\helm_clones\\MirahImage__postfacto\\tkg\\postfacto",
+    "error": "Error: no repository definition for @bitnami, @bitnami. Please add them via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/MrE-Fog/ks-installerff",
+    "repo_name": "MrE-Fog/ks-installerff",
+    "chart_path": "E:\\helm_clones\\MrE-Fog__ks-installerff\\roles\\ks-multicluster\\files\\kubefed\\kubefed",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://localhost/\" chart repository:\n\tGet \"https://localhost/index.yaml\": dial tcp [::1]:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-f2b99ce05b94599549c70dbbe7a891b278e7c3cacad02334fa44682fca36c740 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-f2b99ce05b94599549c70dbbe7a891b278e7c3cacad02334fa44682fca36c740-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/Otus-DevOps-2018-09/GidMaster_microservices",
+    "repo_name": "Otus-DevOps-2018-09/GidMaster_microservices",
+    "chart_path": "E:\\helm_clones\\Otus-DevOps-2018-09__GidMaster_microservices\\kubernetes\\Charts\\gitlab-omnibus",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://charts.gitlab.io/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Otus-DevOps-2020-02/DmitryKorlas_microservices",
+    "repo_name": "Otus-DevOps-2020-02/DmitryKorlas_microservices",
+    "chart_path": "E:\\helm_clones\\Otus-DevOps-2020-02__DmitryKorlas_microservices\\kubernetes\\Charts\\gitlab-omnibus",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://charts.gitlab.io/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Otus-DevOps-2020-02/j10i2_microservices",
+    "repo_name": "Otus-DevOps-2020-02/j10i2_microservices",
+    "chart_path": "E:\\helm_clones\\Otus-DevOps-2020-02__j10i2_microservices\\kubernetes\\Charts\\gitlab-omnibus",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://charts.gitlab.io/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Otus-DevOps-2022-05/hatterfix_microservices",
+    "repo_name": "Otus-DevOps-2022-05/hatterfix_microservices",
+    "chart_path": "E:\\helm_clones\\Otus-DevOps-2022-05__hatterfix_microservices\\kubernetes\\Charts\\gitlab",
+    "error": "Error: cannot load values.yaml: error converting YAML to JSON: yaml: line 72: did not find expected key"
+  },
+  {
+    "repo_url": "https://github.com/PASBarbari/Transcendence",
+    "repo_name": "PASBarbari/Transcendence",
+    "chart_path": "E:\\helm_clones\\PASBarbari__Transcendence\\helm-charts\\my-umbrella\\charts\\cert-manager-chart",
+    "error": "Error: no repository definition for https://charts.jetstack.io. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Perfect-Art-DOO/kcp-helm-charts",
+    "repo_name": "Perfect-Art-DOO/kcp-helm-charts",
+    "chart_path": "E:\\helm_clones\\Perfect-Art-DOO__kcp-helm-charts\\zally",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/Piwriw/k8s_example_tools",
+    "repo_name": "Piwriw/k8s_example_tools",
+    "chart_path": "E:\\helm_clones\\Piwriw__k8s_example_tools\\loki-setup\\offline\\loki-stack",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts, https://grafana.github.io/helm-charts, https://grafana.github.io/helm-charts, https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://helm.elastic.co, https://helm.elastic.co. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/QumulusTechnology/helm-charts",
+    "repo_name": "QumulusTechnology/helm-charts",
+    "chart_path": "E:\\helm_clones\\QumulusTechnology__helm-charts\\charts\\awx",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/RobertClarke64/k8s-homelab",
+    "repo_name": "RobertClarke64/k8s-homelab",
+    "chart_path": "E:\\helm_clones\\RobertClarke64__k8s-homelab\\alloy",
+    "error": "Error: no repository definition for https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Salazar-99/clusty-dusty",
+    "repo_name": "Salazar-99/clusty-dusty",
+    "chart_path": "E:\\helm_clones\\Salazar-99__clusty-dusty\\flux\\charts\\artifactory\\charts\\artifactory",
+    "error": "Error: no repository definition for https://charts.jfrog.io/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/SirObi/airflow_k8s_executor",
+    "repo_name": "SirObi/airflow_k8s_executor",
+    "chart_path": "E:\\helm_clones\\SirObi__airflow_k8s_executor\\helm_charts\\official\\charts\\incubator\\distribution",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com/, https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/StrahilPeykov/stayhub",
+    "repo_name": "StrahilPeykov/stayhub",
+    "chart_path": "E:\\helm_clones\\StrahilPeykov__stayhub\\deployment\\helm\\stayhub",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\n...Successfully got an update from the \"https://charts.bitnami.com/bitnami\" chart repository\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: can't get a valid version for 1 subchart(s): \"redis\" (repository \"https://charts.bitnami.com/bitnami\", version \"17.3.0\"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml"
+  },
+  {
+    "repo_url": "https://github.com/SubhamPramanik/es-helm-charts",
+    "repo_name": "SubhamPramanik/es-helm-charts",
+    "chart_path": "E:\\helm_clones\\SubhamPramanik__es-helm-charts\\metricbeat",
+    "error": "Error: no repository definition for @stable. Please add them via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Suite5/bitnami-helm-charts",
+    "repo_name": "Suite5/bitnami-helm-charts",
+    "chart_path": "E:\\helm_clones\\Suite5__bitnami-helm-charts\\charts\\PISTIS\\redis",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/SupportTools/GoSQLGuard",
+    "repo_name": "SupportTools/GoSQLGuard",
+    "chart_path": "E:\\helm_clones\\SupportTools__GoSQLGuard\\charts\\gosqlguard",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/SystemConsultantGroup/SCG-Monitoring-Config",
+    "repo_name": "SystemConsultantGroup/SCG-Monitoring-Config",
+    "chart_path": "E:\\helm_clones\\SystemConsultantGroup__SCG-Monitoring-Config\\charts\\kube-prometheus-stack",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/TVN-Quang/istio",
+    "repo_name": "TVN-Quang/istio",
+    "chart_path": "E:\\helm_clones\\TVN-Quang__istio\\main",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/TheRegent/rickandmorty",
+    "repo_name": "TheRegent/rickandmorty",
+    "chart_path": "E:\\helm_clones\\TheRegent__rickandmorty\\kube-prometheus-stack",
+    "error": "Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://grafana.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/UPHRH-platform/sb-devops",
+    "repo_name": "UPHRH-platform/sb-devops",
+    "chart_path": "E:\\helm_clones\\UPHRH-platform__sb-devops\\kubernetes\\helm_charts\\monitoring\\oauth2-proxy",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/VHlushchen/slack-notif",
+    "repo_name": "VHlushchen/slack-notif",
+    "chart_path": "E:\\helm_clones\\VHlushchen__slack-notif\\base\\datagrok-helm-chart",
+    "error": "Error: no repository definition for @datagrok-test, @datagrok-test, @datagrok-test, @datagrok-test. Please add them via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ValeriiVasianovych/argocd-kubernetes-infrastructure",
+    "repo_name": "ValeriiVasianovych/argocd-kubernetes-infrastructure",
+    "chart_path": "E:\\helm_clones\\ValeriiVasianovych__argocd-kubernetes-infrastructure\\icdev-01\\helmCharts\\prometheus-stack",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: the lock file (requirements.lock) is out of sync with the dependencies file (requirements.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/Veronneau-Techno-Conseil/comax-commons",
+    "repo_name": "Veronneau-Techno-Conseil/comax-commons",
+    "chart_path": "E:\\helm_clones\\Veronneau-Techno-Conseil__comax-commons\\helm_referee",
+    "error": "Error: no repository definition for https://mongodb.github.io/helm-charts. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/Yuzu815/TruenasScaleArchive",
+    "repo_name": "Yuzu815/TruenasScaleArchive",
+    "chart_path": "E:\\helm_clones\\Yuzu815__TruenasScaleArchive\\incubator\\archivebox\\0.7.2",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 1 charts\nDownloading common from repo oci://tccr.io/truecharts\nSave error occurred:  could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente.\nError: could not download oci://tccr.io/truecharts/common: failed to resolve tccr.io/truecharts/common:17.2.30: Get \"https://tccr.io/v2/truecharts/common/manifests/17.2.30\": dial tcp 138.68.91.33:443: connectex: Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente."
+  },
+  {
+    "repo_url": "https://github.com/abhilashindulkar/misc",
+    "repo_name": "abhilashindulkar/misc",
+    "chart_path": "E:\\helm_clones\\abhilashindulkar__misc\\helm\\custom-charts\\couponservice",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/abhithakur2/injiweb_Sunbird_RC",
+    "repo_name": "abhithakur2/injiweb_Sunbird_RC",
+    "chart_path": "E:\\helm_clones\\abhithakur2__injiweb_Sunbird_RC\\mimoto\\inji-web\\helm\\inji-web",
+    "error": "Error: cannot load Chart.yaml: error converting YAML to JSON: yaml: line 6: could not find expected ':'"
+  },
+  {
+    "repo_url": "https://github.com/abimaelrsergio/Abimoney",
+    "repo_name": "abimaelrsergio/Abimoney",
+    "chart_path": "E:\\helm_clones\\abimaelrsergio__Abimoney\\charts-main\\bitnami\\airflow",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nPulled: registry-1.docker.io/bitnamicharts/redis:21.0.0\nDigest: sha256:c067bbcb2a958840c883544830ed576b6e0e6691f5f8eaafc79a9480a57a423d\nDownloading postgresql from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to resolve registry-1.docker.io/bitnamicharts/postgresql:16.6.7: GET \"https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/16.6.7\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to resolve registry-1.docker.io/bitnamicharts/postgresql:16.6.7: GET \"https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/16.6.7\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/aemneina/testcatalog",
+    "repo_name": "aemneina/testcatalog",
+    "chart_path": "E:\\helm_clones\\aemneina__testcatalog\\incubator\\gogs",
+    "error": "manager.go:122: warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash...\nError: no repository definition for https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/aicanhelp/ai-cloud",
+    "repo_name": "aicanhelp/ai-cloud",
+    "chart_path": "E:\\helm_clones\\aicanhelp__ai-cloud\\bitnami\\charts\\bitnami-202503\\airflow",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nSaving 3 charts\nDownloading redis from repo oci://registry-1.docker.io/bitnamicharts\nSave error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:20.7.1: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/20.7.1\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit\nError: could not download oci://registry-1.docker.io/bitnamicharts/redis: failed to resolve registry-1.docker.io/bitnamicharts/redis:20.7.1: GET \"https://registry-1.docker.io/v2/bitnamicharts/redis/manifests/20.7.1\": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit"
+  },
+  {
+    "repo_url": "https://github.com/akraino-edge-stack/iec-xconnect",
+    "repo_name": "akraino-edge-stack/iec-xconnect",
+    "chart_path": "E:\\helm_clones\\akraino-edge-stack__iec-xconnect\\src\\helm-charts\\logging",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://kubernetes-charts.storage.googleapis.com/\" chart repository:\n\tfailed to fetch https://kubernetes-charts.storage.googleapis.com/index.yaml : 403 Forbidden\n...Unable to get an update from the \"https://kubernetes-charts.storage.googleapis.com/\" chart repository:\n\tfailed to fetch https://kubernetes-charts.storage.googleapis.com/index.yaml : 403 Forbidden\n...Unable to get an update from the \"https://kubernetes-charts.storage.googleapis.com/\" chart repository:\n\tfailed to fetch https://kubernetes-charts.storage.googleapis.com/index.yaml : 403 Forbidden\n...Unable to get an update from the \"https://kubernetes-charts.storage.googleapis.com/\" chart repository:\n\tfailed to fetch https://kubernetes-charts.storage.googleapis.com/index.yaml : 403 Forbidden\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-1067d9c6027b8c3f27b49e40521d64be96ea412858d8e45064fa44afd3966ddc found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-1067d9c6027b8c3f27b49e40521d64be96ea412858d8e45064fa44afd3966ddc-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/akv-akv/de_research",
+    "repo_name": "akv-akv/de_research",
+    "chart_path": "E:\\helm_clones\\akv-akv__de_research\\kubernetes\\charts\\airbyte",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/, https://airbytehq.github.io/helm-charts/. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/alnav3/argocd-charts",
+    "repo_name": "alnav3/argocd-charts",
+    "chart_path": "E:\\helm_clones\\alnav3__argocd-charts\\charts\\argo-cd",
+    "error": "Error: no repository definition for https://argoproj.github.io/argo-helm. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/ant-ano/yc-courses-ru-devops",
+    "repo_name": "ant-ano/yc-courses-ru-devops",
+    "chart_path": "E:\\helm_clones\\ant-ano__yc-courses-ru-devops\\course2\\infra\\charts\\argo-cd",
+    "error": "Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies"
+  },
+  {
+    "repo_url": "https://github.com/anugram/helm-charts",
+    "repo_name": "anugram/helm-charts",
+    "chart_path": "E:\\helm_clones\\anugram__helm-charts",
+    "error": "Error: error unpacking subchart robots.txt in cdsp: Chart.yaml file is missing"
+  },
+  {
+    "repo_url": "https://github.com/anvega/helm-charts",
+    "repo_name": "anvega/helm-charts",
+    "chart_path": "E:\\helm_clones\\anvega__helm-charts\\greymatter",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://nexus.production.deciphernow.com/repository/helm-hosted\" chart repository:\n\tGet \"https://nexus.production.deciphernow.com/repository/helm-hosted/index.yaml\": dial tcp: lookup nexus.production.deciphernow.com: no such host\n...Unable to get an update from the \"https://nexus.production.deciphernow.com/repository/helm-hosted\" chart repository:\n\tGet \"https://nexus.production.deciphernow.com/repository/helm-hosted/index.yaml\": dial tcp: lookup nexus.production.deciphernow.com: no such host\n...Unable to get an update from the \"https://nexus.production.deciphernow.com/repository/helm-hosted\" chart repository:\n\tGet \"https://nexus.production.deciphernow.com/repository/helm-hosted/index.yaml\": dial tcp: lookup nexus.production.deciphernow.com: no such host\n...Unable to get an update from the \"https://nexus.production.deciphernow.com/repository/helm-hosted\" chart repository:\n\tGet \"https://nexus.production.deciphernow.com/repository/helm-hosted/index.yaml\": dial tcp: lookup nexus.production.deciphernow.com: no such host\n...Unable to get an update from the \"https://nexus.production.deciphernow.com/repository/helm-hosted\" chart repository:\n\tGet \"https://nexus.production.deciphernow.com/repository/helm-hosted/index.yaml\": dial tcp: lookup nexus.production.deciphernow.com: no such host\n...Unable to get an update from the \"https://nexus.production.deciphernow.com/repository/helm-hosted\" chart repository:\n\tGet \"https://nexus.production.deciphernow.com/repository/helm-hosted/index.yaml\": dial tcp: lookup nexus.production.deciphernow.com: no such host\n...Unable to get an update from the \"https://nexus.production.deciphernow.com/repository/helm-hosted\" chart repository:\n\tGet \"https://nexus.production.deciphernow.com/repository/helm-hosted/index.yaml\": dial tcp: lookup nexus.production.deciphernow.com: no such host\n...Unable to get an update from the \"https://nexus.production.deciphernow.com/repository/helm-hosted\" chart repository:\n\tGet \"https://nexus.production.deciphernow.com/repository/helm-hosted/index.yaml\": dial tcp: lookup nexus.production.deciphernow.com: no such host\n...Unable to get an update from the \"https://nexus.production.deciphernow.com/repository/helm-hosted\" chart repository:\n\tGet \"https://nexus.production.deciphernow.com/repository/helm-hosted/index.yaml\": dial tcp: lookup nexus.production.deciphernow.com: no such host\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-7b1dd74ce47e6e00864bf1675c11e3952d38a7ed5ae7af2cff9b652e546ac010 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-7b1dd74ce47e6e00864bf1675c11e3952d38a7ed5ae7af2cff9b652e546ac010-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/banzai-team/marketing_bot",
+    "repo_name": "banzai-team/marketing_bot",
+    "chart_path": "E:\\helm_clones\\banzai-team__marketing_bot\\helm\\charts\\gazprom-mrkt",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"https://gazprom-charts.obs.ru-moscow-1.hc.sbercloud.ru\" chart repository:\n\tfailed to fetch https://gazprom-charts.obs.ru-moscow-1.hc.sbercloud.ru/index.yaml : 404 Not Found\n...Unable to get an update from the \"https://gazprom-charts.obs.ru-moscow-1.hc.sbercloud.ru\" chart repository:\n\tfailed to fetch https://gazprom-charts.obs.ru-moscow-1.hc.sbercloud.ru/index.yaml : 404 Not Found\n...Unable to get an update from the \"https://gazprom-charts.obs.ru-moscow-1.hc.sbercloud.ru\" chart repository:\n\tfailed to fetch https://gazprom-charts.obs.ru-moscow-1.hc.sbercloud.ru/index.yaml : 404 Not Found\n...Unable to get an update from the \"https://gazprom-charts.obs.ru-moscow-1.hc.sbercloud.ru\" chart repository:\n\tfailed to fetch https://gazprom-charts.obs.ru-moscow-1.hc.sbercloud.ru/index.yaml : 404 Not Found\n...Unable to get an update from the \"https://gazprom-charts.obs.ru-moscow-1.hc.sbercloud.ru\" chart repository:\n\tfailed to fetch https://gazprom-charts.obs.ru-moscow-1.hc.sbercloud.ru/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-96d4e618c01f76df162811ba8209e66c592ad47c152651553197baf42d50c26d found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-96d4e618c01f76df162811ba8209e66c592ad47c152651553197baf42d50c26d-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/bps1980/operavia",
+    "repo_name": "bps1980/operavia",
+    "chart_path": "E:\\helm_clones\\bps1980__operavia\\charts\\operavia-worker",
+    "error": "Error: validation: chart.metadata.name is required"
+  },
+  {
+    "repo_url": "https://github.com/caiohmb/kuber_project",
+    "repo_name": "caiohmb/kuber_project",
+    "chart_path": "E:\\helm_clones\\caiohmb__kuber_project\\infra\\src\\helm-charts\\airflow",
+    "error": "Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'"
+  },
+  {
+    "repo_url": "https://github.com/cb-kubecd/bdd-gh-1585039502",
+    "repo_name": "cb-kubecd/bdd-gh-1585039502",
+    "chart_path": "E:\\helm_clones\\cb-kubecd__bdd-gh-1585039502\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/cb-kubecd/bdd-gh-1587408670",
+    "repo_name": "cb-kubecd/bdd-gh-1587408670",
+    "chart_path": "E:\\helm_clones\\cb-kubecd__bdd-gh-1587408670\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/cb-kubecd/bdd-gh-1597486525",
+    "repo_name": "cb-kubecd/bdd-gh-1597486525",
+    "chart_path": "E:\\helm_clones\\cb-kubecd__bdd-gh-1597486525\\charts\\preview",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: dependency \"bdd-gh-1597486525\" has an invalid version/constraint format: improper constraint:"
+  },
+  {
+    "repo_url": "https://github.com/cb-kubecd/bdd-gh-1597841986",
+    "repo_name": "cb-kubecd/bdd-gh-1597841986",
+    "chart_path": "E:\\helm_clones\\cb-kubecd__bdd-gh-1597841986\\charts\\preview",
+    "error": "Hang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: dependency \"bdd-gh-1597841986\" has an invalid version/constraint format: improper constraint:"
+  },
+  {
+    "repo_url": "https://github.com/cb-kubecd/bdd-nh-1582713872",
+    "repo_name": "cb-kubecd/bdd-nh-1582713872",
+    "chart_path": "E:\\helm_clones\\cb-kubecd__bdd-nh-1582713872\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/cb-kubecd/bdd-nh-1587383466",
+    "repo_name": "cb-kubecd/bdd-nh-1587383466",
+    "chart_path": "E:\\helm_clones\\cb-kubecd__bdd-nh-1587383466\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/cb-kubecd/bdd-nh-import-1583025619",
+    "repo_name": "cb-kubecd/bdd-nh-import-1583025619",
+    "chart_path": "E:\\helm_clones\\cb-kubecd__bdd-nh-import-1583025619\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/cb-kubecd/bdd-sbhg-import-1584026808",
+    "repo_name": "cb-kubecd/bdd-sbhg-import-1584026808",
+    "chart_path": "E:\\helm_clones\\cb-kubecd__bdd-sbhg-import-1584026808\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  },
+  {
+    "repo_url": "https://github.com/cb-kubecd/bdd-sbrp-import-1588095438",
+    "repo_name": "cb-kubecd/bdd-sbrp-import-1588095438",
+    "chart_path": "E:\\helm_clones\\cb-kubecd__bdd-sbrp-import-1588095438\\charts\\preview",
+    "error": "Getting updates for unmanaged Helm repositories...\n...Unable to get an update from the \"http://chartmuseum.jenkins-x.io\" chart repository:\n\tfailed to fetch http://chartmuseum.jenkins-x.io/index.yaml : 404 Not Found\nHang tight while we grab the latest from your chart repositories...\n...Successfully got an update from the \"traefik\" chart repository\nUpdate Complete. ⎈Happy Helming!⎈\nError: no cached repository for helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2 found. (try 'helm repo update'): open C:\\Users\\miabs\\AppData\\Local\\Temp\\helm\\repository\\helm-manager-d8c90e93d45e753db0fa4ec457d893e08cd1e0827b77896ee636b714706cbbb2-index.yaml: O sistema não conseguiu localizar o ficheiro especificado."
+  }
+]
