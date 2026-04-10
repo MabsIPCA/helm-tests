@@ -26,6 +26,16 @@ type githubSearchOutput struct {
 	Repos  []git.GitHubRankedRepo `json:"repos"`
 }
 
+type artifactHubSearchRepo struct {
+	RepoURL string `json:"repo_url"`
+}
+
+type artifactHubSearchOutput struct {
+	Source string                  `json:"source"`
+	Top    int                     `json:"top"`
+	Repos  []artifactHubSearchRepo `json:"repos"`
+}
+
 func loadDotEnvIfPresent() {
 	if err := godotenv.Load(); err != nil {
 		if !os.IsNotExist(err) {
@@ -51,8 +61,15 @@ func main() {
 		}
 		return
 	}
+	if selectedMode == "artifacthub-search-json" {
+		searchOnlyErr := runArtifactHubSearchJSONMode(cfg.PageSize, cfg.SearchTop, cfg.SearchOut)
+		if searchOnlyErr != nil {
+			log.Fatal().Err(searchOnlyErr).Msg("artifacthub-search-json mode failed")
+		}
+		return
+	}
 	if selectedMode != "full" {
-		log.Fatal().Str("mode", cfg.Mode).Msg("Invalid mode. Use 'full' or 'github-search-json'")
+		log.Fatal().Str("mode", cfg.Mode).Msg("Invalid mode. Use 'full', 'github-search-json' or 'artifacthub-search-json'")
 	}
 
 	selectedSource := strings.ToLower(strings.TrimSpace(cfg.Source))
@@ -63,7 +80,11 @@ func main() {
 
 	switch selectedSource {
 	case "artifacthub":
-		repos, err = git.SearchTopArtifactHubRepos(cfg.Top, cfg.PageSize)
+		log.Info().
+			Str("search_json", cfg.SearchIn).
+			Int("top", cfg.Top).
+			Msg("Artifact Hub source selected: loading repos from JSON")
+		repos, err = loadArtifactHubReposFromJSON(cfg.SearchIn, cfg.Top)
 	case "github":
 		log.Info().
 			Str("search_json", cfg.SearchIn).
@@ -302,6 +323,88 @@ func runGitHubSearchJSONMode(pageSize, top int, order, outputPath string) error 
 
 	log.Info().Str("output", outputPath).Int("repos", len(repos)).Str("order", normalizedOrder).Msg("GitHub search JSON generated")
 	return err
+}
+
+func runArtifactHubSearchJSONMode(pageSize, top int, outputPath string) error {
+	repos, err := git.SearchTopArtifactHubRepos(top, pageSize)
+	if err != nil {
+		log.Error().Err(err).Msg("Artifact Hub search encountered an error (writing partial results)")
+	}
+	if len(repos) == 0 {
+		return fmt.Errorf("no repos found")
+	}
+
+	entries := make([]artifactHubSearchRepo, 0, len(repos))
+	for _, repoURL := range repos {
+		repoURL = strings.TrimSpace(repoURL)
+		if repoURL == "" {
+			continue
+		}
+		entries = append(entries, artifactHubSearchRepo{RepoURL: repoURL})
+	}
+	if len(entries) == 0 {
+		return fmt.Errorf("artifacthub search output contains only empty repo URLs")
+	}
+
+	payload := artifactHubSearchOutput{
+		Source: "artifacthub",
+		Top:    top,
+		Repos:  entries,
+	}
+
+	data, marshalErr := json.MarshalIndent(payload, "", "  ")
+	if marshalErr != nil {
+		return fmt.Errorf("marshal artifacthub search output: %w", marshalErr)
+	}
+	if writeErr := os.WriteFile(outputPath, data, 0o644); writeErr != nil {
+		return fmt.Errorf("write artifacthub search output: %w", writeErr)
+	}
+
+	log.Info().
+		Str("output", outputPath).
+		Int("repos", len(entries)).
+		Int("requested", top).
+		Msg("Artifact Hub search JSON generated")
+	if top >= 500 && len(entries) < 500 {
+		log.Warn().Int("requested", top).Int("returned", len(entries)).Msg("Artifact Hub JSON contains fewer than 500 repos; continuing with partial list")
+	}
+
+	// Partial results are acceptable as long as we have a non-empty list.
+	return nil
+}
+
+func loadArtifactHubReposFromJSON(path string, top int) ([]string, error) {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return nil, fmt.Errorf("read artifacthub search JSON (%s): %w", path, err)
+	}
+
+	var payload artifactHubSearchOutput
+	if err := json.Unmarshal(data, &payload); err != nil {
+		return nil, fmt.Errorf("decode artifacthub search JSON (%s): %w", path, err)
+	}
+	if len(payload.Repos) == 0 {
+		return nil, fmt.Errorf("artifacthub search JSON has no repos: %s", path)
+	}
+
+	limit := len(payload.Repos)
+	if top > 0 && top < limit {
+		limit = top
+	}
+
+	repos := make([]string, 0, limit)
+	for i := 0; i < limit; i++ {
+		repoURL := strings.TrimSpace(payload.Repos[i].RepoURL)
+		if repoURL == "" {
+			continue
+		}
+		repos = append(repos, repoURL)
+	}
+	if len(repos) == 0 {
+		return nil, fmt.Errorf("artifacthub search JSON contains only empty repo URLs: %s", path)
+	}
+
+	return repos, nil
 }
 
 func loadGitHubReposFromJSON(path string, top int) ([]string, error) {

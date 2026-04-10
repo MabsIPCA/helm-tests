@@ -14,9 +14,11 @@ SEARCH_TOP ?= 1000
 # In github-search-json mode, star ordering: desc or asc
 SEARCH_ORDER ?= desc
 # In full github source mode, input JSON produced by run-github-search-json
-SEARCH_IN ?= github_search.json
+SEARCH_IN ?= artifacthub_search.json
 # In github-search-json mode, output JSON file path
 SEARCH_OUT ?= github_search.json
+# In artifacthub-search-json mode, output JSON file path
+ARTIFACT_SEARCH_OUT ?= artifacthub_search.json
 
 # Plot generation settings
 PLOT_DIR ?= plots
@@ -32,7 +34,7 @@ SEARCH_JSON := github_search.json
 # Cloned repos directory (override per run if needed)
 CLONE_DIR ?= E:/helm_clones_artifacthub
 
-.PHONY: run run-github-search-json plot-problems plot-popularity plot-problems-popularity plot-all clean-cloned clean-output clean help
+.PHONY: run run-github-search-json run-artifacthub-search-json plot-problems plot-popularity plot-problems-popularity plot-all clean-cloned clean-output clean help
 
 ## run: fetch repos from selected source, run helm template on all combinations
 run:
@@ -52,6 +54,14 @@ run-github-search-json:
 		-search-top=$(SEARCH_TOP) \
 		-search-order=$(SEARCH_ORDER) \
 		-search-out=$(SEARCH_OUT)
+
+## run-artifacthub-search-json: generate JSON only from Artifact Hub search (no clone/template)
+run-artifacthub-search-json:
+	go run . \
+		-mode=artifacthub-search-json \
+		-page-size=$(PAGE_SIZE) \
+		-search-top=$(SEARCH_TOP) \
+		-search-out=$(ARTIFACT_SEARCH_OUT)
 
 ## plot-problems: generate SVG chart with problems per project
 plot-problems:
@@ -101,8 +111,9 @@ help:
 	@echo   Usage: make [target] [SOURCE=github] [TOP=400] [PAGE_SIZE=60] [CLONE_DIR=E:/helm_clones]
 	@echo.
 	@echo   Targets:
-	@echo     run                    - run full catalog flow (search, clone, helm template)
+	@echo     run                    - run full catalog flow (load search JSON, clone, helm template)
 	@echo     run-github-search-json - generate GitHub search JSON only
+	@echo     run-artifacthub-search-json - generate Artifact Hub search JSON only
 	@echo     plot-problems          - generate plots/problems_per_project.svg
 	@echo     plot-popularity        - generate plots/repo_popularity_stars.svg
 	@echo     plot-problems-popularity - generate plots/problems_per_popularity.svg
@@ -116,10 +127,11 @@ help:
 	@echo     SOURCE       (default: github) discovery source for run: artifacthub or github
 	@echo     TOP          (default: 400) number of top entries to process in run mode
 	@echo     PAGE_SIZE    (default: 60) entries per API request/page (artifacthub max 60, github max 100)
-	@echo     SEARCH_IN    (default: github_search.json) input JSON for SOURCE=github in run mode
+	@echo     SEARCH_IN    (default: artifacthub_search.json) input JSON for full mode (artifacthub or github)
 	@echo     SEARCH_TOP   (default: 1000) repos fetched in run-github-search-json mode
 	@echo     SEARCH_ORDER (default: desc) star order in run-github-search-json mode: desc or asc
 	@echo     SEARCH_OUT   (default: github_search.json) output JSON path in run-github-search-json mode
+	@echo     ARTIFACT_SEARCH_OUT (default: artifacthub_search.json) output JSON path in run-artifacthub-search-json mode
 	@echo     CLONE_DIR    (default: E:/helm_clones) clone destination for run/clean-cloned
 	@echo     PLOT_DIR     (default: plots) directory where chart SVG files are written
 	@echo     PLOT_TOP_PROBLEMS (default: 40) bars shown in problems-per-project chart

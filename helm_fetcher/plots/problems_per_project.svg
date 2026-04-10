@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1330" viewBox="0 0 1400 1330">
+<style>
+.title { font: 700 22px sans-serif; fill: #111827; }
+.axis { font: 12px sans-serif; fill: #374151; }
+.label { font: 12px sans-serif; fill: #111827; }
+.value { font: 11px sans-serif; fill: #111827; }
+.grid { stroke: #e5e7eb; stroke-width: 1; }
+</style>
+<text class="title" x="24" y="36">Helm Template Problems per Project (Top 40)</text>
+<line class="grid" x1="480.00" y1="70" x2="480.00" y2="1270" />
+<text class="axis" x="480.00" y="1288" text-anchor="middle">0</text>
+<line class="grid" x1="626.67" y1="70" x2="626.67" y2="1270" />
+<text class="axis" x="626.67" y="1288" text-anchor="middle">3</text>
+<line class="grid" x1="773.33" y1="70" x2="773.33" y2="1270" />
+<text class="axis" x="773.33" y="1288" text-anchor="middle">6</text>
+<line class="grid" x1="920.00" y1="70" x2="920.00" y2="1270" />
+<text class="axis" x="920.00" y="1288" text-anchor="middle">8</text>
+<line class="grid" x1="1066.67" y1="70" x2="1066.67" y2="1270" />
+<text class="axis" x="1066.67" y="1288" text-anchor="middle">11</text>
+<line class="grid" x1="1213.33" y1="70" x2="1213.33" y2="1270" />
+<text class="axis" x="1213.33" y="1288" text-anchor="middle">14</text>
+<line class="grid" x1="1360.00" y1="70" x2="1360.00" y2="1270" />
+<text class="axis" x="1360.00" y="1288" text-anchor="middle">17</text>
+<text class="axis" x="920.00" y="1312" text-anchor="middle">Problem count (total_failures + total_dep_failures)</text>
+<text class="label" x="468" y="85.84" text-anchor="end">camunda/camunda-platform-helm</text>
+<rect x="480" y="70" width="880.00" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="1366.00" y="85.84">17</text>
+<text class="label" x="468" y="115.84" text-anchor="end">sysdiglabs/charts</text>
+<rect x="480" y="100" width="828.24" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="1314.24" y="115.84">16</text>
+<text class="label" x="468" y="145.84" text-anchor="end">GluuFederation/cloud-native-edition</text>
+<rect x="480" y="130" width="828.24" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="1314.24" y="145.84">16</text>
+<text class="label" x="468" y="175.84" text-anchor="end">JanssenProject/jans</text>
+<rect x="480" y="160" width="621.18" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="1107.18" y="175.84">12</text>
+<text class="label" x="468" y="205.84" text-anchor="end">codefresh-io/gitops-runtime-helm</text>
+<rect x="480" y="190" width="414.12" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="900.12" y="205.84">8</text>
+<text class="label" x="468" y="235.84" text-anchor="end">elastic/cloud-on-k8s</text>
+<rect x="480" y="220" width="310.59" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="796.59" y="235.84">6</text>
+<text class="label" x="468" y="265.84" text-anchor="end">fosrl/helm-charts</text>
+<rect x="480" y="250" width="310.59" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="796.59" y="265.84">6</text>
+<text class="label" x="468" y="295.84" text-anchor="end">intel/helm-charts</text>
+<rect x="480" y="280" width="310.59" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="796.59" y="295.84">6</text>
+<text class="label" x="468" y="325.84" text-anchor="end">acryldata/datahub-helm</text>
+<rect x="480" y="310" width="258.82" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="744.82" y="325.84">5</text>
+<text class="label" x="468" y="355.84" text-anchor="end">CrowdStrike/falcon-helm</text>
+<rect x="480" y="340" width="258.82" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="744.82" y="355.84">5</text>
+<text class="label" x="468" y="385.84" text-anchor="end">vmware-tanzu/secrets-manager</text>
+<rect x="480" y="370" width="258.82" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="744.82" y="385.84">5</text>
+<text class="label" x="468" y="415.84" text-anchor="end">nginx/kubernetes-ingress</text>
+<rect x="480" y="400" width="207.06" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="693.06" y="415.84">4</text>
+<text class="label" x="468" y="445.84" text-anchor="end">anza-labs/charts</text>
+<rect x="480" y="430" width="207.06" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="693.06" y="445.84">4</text>
+<text class="label" x="468" y="475.84" text-anchor="end">linkerd/linkerd2</text>
+<rect x="480" y="460" width="155.29" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="641.29" y="475.84">3</text>
+<text class="label" x="468" y="505.84" text-anchor="end">coder/coder</text>
+<rect x="480" y="490" width="155.29" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="641.29" y="505.84">3</text>
+<text class="label" x="468" y="535.84" text-anchor="end">icoretech/helm</text>
+<rect x="480" y="520" width="155.29" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="641.29" y="535.84">3</text>
+<text class="label" x="468" y="565.84" text-anchor="end">bitnami/charts</text>
+<rect x="480" y="550" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="565.84">2</text>
+<text class="label" x="468" y="595.84" text-anchor="end">community-charts/helm-charts</text>
+<rect x="480" y="580" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="595.84">2</text>
+<text class="label" x="468" y="625.84" text-anchor="end">rook/rook</text>
+<rect x="480" y="610" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="625.84">2</text>
+<text class="label" x="468" y="655.84" text-anchor="end">actions/actions-runner-controller</text>
+<rect x="480" y="640" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="655.84">2</text>
+<text class="label" x="468" y="685.84" text-anchor="end">piraeusdatastore/helm-charts</text>
+<rect x="480" y="670" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="685.84">2</text>
+<text class="label" x="468" y="715.84" text-anchor="end">mattermost/mattermost-helm</text>
+<rect x="480" y="700" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="715.84">2</text>
+<text class="label" x="468" y="745.84" text-anchor="end">kubitodev/helm</text>
+<rect x="480" y="730" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="745.84">2</text>
+<text class="label" x="468" y="775.84" text-anchor="end">mysql/mysql-operator</text>
+<rect x="480" y="760" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="775.84">2</text>
+<text class="label" x="468" y="805.84" text-anchor="end">codefresh-io/venona</text>
+<rect x="480" y="790" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="805.84">2</text>
+<text class="label" x="468" y="835.84" text-anchor="end">kubernetes/helm</text>
+<rect x="480" y="820" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="835.84">2</text>
+<text class="label" x="468" y="865.84" text-anchor="end">helm/helm</text>
+<rect x="480" y="850" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="865.84">2</text>
+<text class="label" x="468" y="895.84" text-anchor="end">keptn/lifecycle-toolkit</text>
+<rect x="480" y="880" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="895.84">2</text>
+<text class="label" x="468" y="925.84" text-anchor="end">StrangeBeeCorp/helm-charts</text>
+<rect x="480" y="910" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="925.84">2</text>
+<text class="label" x="468" y="955.84" text-anchor="end">bjw-s/helm-charts</text>
+<rect x="480" y="940" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="955.84">2</text>
+<text class="label" x="468" y="985.84" text-anchor="end">port-labs/helm-charts</text>
+<rect x="480" y="970" width="103.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="589.53" y="985.84">2</text>
+<text class="label" x="468" y="1015.84" text-anchor="end">prometheus-community/helm-charts</text>
+<rect x="480" y="1000" width="51.76" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="537.76" y="1015.84">1</text>
+<text class="label" x="468" y="1045.84" text-anchor="end">argoproj/argo-helm</text>
+<rect x="480" y="1030" width="51.76" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="537.76" y="1045.84">1</text>
+<text class="label" x="468" y="1075.84" text-anchor="end">kubernetes/dashboard</text>
+<rect x="480" y="1060" width="51.76" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="537.76" y="1075.84">1</text>
+<text class="label" x="468" y="1105.84" text-anchor="end">grafana/helm-charts</text>
+<rect x="480" y="1090" width="51.76" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="537.76" y="1105.84">1</text>
+<text class="label" x="468" y="1135.84" text-anchor="end">goharbor/harbor</text>
+<rect x="480" y="1120" width="51.76" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="537.76" y="1135.84">1</text>
+<text class="label" x="468" y="1165.84" text-anchor="end">aws/eks-charts</text>
+<rect x="480" y="1150" width="51.76" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="537.76" y="1165.84">1</text>
+<text class="label" x="468" y="1195.84" text-anchor="end">apache/airflow</text>
+<rect x="480" y="1180" width="51.76" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="537.76" y="1195.84">1</text>
+<text class="label" x="468" y="1225.84" text-anchor="end">elastic/helm-charts</text>
+<rect x="480" y="1210" width="51.76" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="537.76" y="1225.84">1</text>
+<text class="label" x="468" y="1255.84" text-anchor="end">nextcloud/helm</text>
+<rect x="480" y="1240" width="51.76" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="537.76" y="1255.84">1</text>
+</svg>

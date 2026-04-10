@@ -63,15 +63,18 @@ type ArtifactHubSearchResponse struct {
 
 // ArtifactHubPackage contains the fields needed to resolve a source repository.
 type ArtifactHubPackage struct {
-	Name       string             `json:"name"`
-	Version    string             `json:"version"`
-	Repository ArtifactRepository `json:"repository"`
-	Links      []ArtifactLink     `json:"links"`
+	PackageID      string             `json:"package_id"`
+	Name           string             `json:"name"`
+	NormalizedName string             `json:"normalized_name"`
+	Version        string             `json:"version"`
+	Repository     ArtifactRepository `json:"repository"`
+	Links          []ArtifactLink     `json:"links"`
 }
 
 type ArtifactRepository struct {
 	Name string `json:"name"`
 	URL  string `json:"url"`
+	Kind int    `json:"kind"`
 }
 
 type ArtifactLink struct {

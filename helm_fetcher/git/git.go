@@ -44,6 +44,25 @@ func normalizeGitHubRepoURL(raw string) string {
 	if raw == "" {
 		return ""
 	}
+
+	raw = strings.ReplaceAll(raw, `\/`, "/")
+
+	if strings.HasPrefix(raw, "git@github.com:") {
+		raw = "https://github.com/" + strings.TrimPrefix(raw, "git@github.com:")
+	}
+	if strings.HasPrefix(raw, "ssh://git@github.com/") {
+		raw = "https://github.com/" + strings.TrimPrefix(raw, "ssh://git@github.com/")
+	}
+	if strings.HasPrefix(raw, "github.com/") {
+		raw = "https://" + raw
+	}
+	if strings.HasPrefix(raw, "www.github.com/") {
+		raw = "https://" + raw
+	}
+	if strings.HasPrefix(raw, "//github.com/") || strings.HasPrefix(raw, "//www.github.com/") {
+		raw = "https:" + raw
+	}
+
 	u, err := neturl.Parse(raw)
 	if err != nil || u.Host == "" {
 		return ""

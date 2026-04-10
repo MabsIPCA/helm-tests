@@ -1,0 +1,3006 @@
+{
+  "source": "artifacthub",
+  "top": 1000,
+  "repos": [
+    {
+      "repo_url": "https://github.com/prometheus-community/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/cert-manager/cert-manager"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/ingress-nginx"
+    },
+    {
+      "repo_url": "https://github.com/argoproj/argo-helm"
+    },
+    {
+      "repo_url": "https://github.com/bitnami/containers"
+    },
+    {
+      "repo_url": "https://github.com/bitnami/charts"
+    },
+    {
+      "repo_url": "https://github.com/traefik/traefik-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/dashboard"
+    },
+    {
+      "repo_url": "https://github.com/grafana/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/metrics-server"
+    },
+    {
+      "repo_url": "https://github.com/hashicorp/vault"
+    },
+    {
+      "repo_url": "https://github.com/goharbor/harbor"
+    },
+    {
+      "repo_url": "https://github.com/jenkinsci/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/external-secrets/external-secrets"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/external-dns"
+    },
+    {
+      "repo_url": "https://github.com/longhorn/longhorn-engine"
+    },
+    {
+      "repo_url": "https://github.com/aws/eks-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-incubator/external-dns"
+    },
+    {
+      "repo_url": "https://github.com/apache/airflow"
+    },
+    {
+      "repo_url": "https://github.com/elastic/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/nextcloud/helm"
+    },
+    {
+      "repo_url": "https://github.com/vmware-tanzu/velero"
+    },
+    {
+      "repo_url": "https://github.com/cilium/cilium"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/autoscaler"
+    },
+    {
+      "repo_url": "https://github.com/metallb/metallb"
+    },
+    {
+      "repo_url": "https://github.com/istio/istio"
+    },
+    {
+      "repo_url": "https://github.com/argoproj/argo-workflows"
+    },
+    {
+      "repo_url": "https://github.com/rancher/ui"
+    },
+    {
+      "repo_url": "https://github.com/SonarSource/helm-chart-sonarqube"
+    },
+    {
+      "repo_url": "https://github.com/go-gitea/gitea"
+    },
+    {
+      "repo_url": "https://github.com/kyverno/kyverno"
+    },
+    {
+      "repo_url": "https://github.com/fluent/fluent-bit"
+    },
+    {
+      "repo_url": "https://github.com/cloudnative-pg/charts"
+    },
+    {
+      "repo_url": "https://github.com/DataDog/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/rowanruseler/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/oauth2-proxy/manifests"
+    },
+    {
+      "repo_url": "https://github.com/goauthentik/authentik"
+    },
+    {
+      "repo_url": "https://github.com/bitnami-labs/sealed-secrets"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner"
+    },
+    {
+      "repo_url": "https://github.com/nginx/kubernetes-ingress"
+    },
+    {
+      "repo_url": "https://github.com/artifacthub/hub"
+    },
+    {
+      "repo_url": "https://github.com/norwoodj/helm-docs"
+    },
+    {
+      "repo_url": "https://github.com/MoJo2600/pihole-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/hashicorp/consul-k8s"
+    },
+    {
+      "repo_url": "https://github.com/elastic/cloud-on-k8s"
+    },
+    {
+      "repo_url": "https://github.com/elastic/kibana"
+    },
+    {
+      "repo_url": "https://github.com/community-charts/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/descheduler"
+    },
+    {
+      "repo_url": "https://github.com/argoproj/argo-rollouts"
+    },
+    {
+      "repo_url": "https://github.com/jupyterhub/zero-to-jupyterhub-k8s"
+    },
+    {
+      "repo_url": "https://github.com/jaegertracing/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/stakater/Reloader"
+    },
+    {
+      "repo_url": "https://github.com/nats-io/k8s"
+    },
+    {
+      "repo_url": "https://github.com/metabase/metabase"
+    },
+    {
+      "repo_url": "https://github.com/8gears/n8n-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/dexidp/dex"
+    },
+    {
+      "repo_url": "https://github.com/benc-uk/kubeview"
+    },
+    {
+      "repo_url": "https://github.com/airflow-helm/charts"
+    },
+    {
+      "repo_url": "https://github.com/dirsigler/uptime-kuma-helm"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/nfs-ganesha-server-and-external-provisioner"
+    },
+    {
+      "repo_url": "https://github.com/renovatebot/renovate"
+    },
+    {
+      "repo_url": "https://github.com/jimmidyson/configmap-reload"
+    },
+    {
+      "repo_url": "https://github.com/otwld/ollama-helm"
+    },
+    {
+      "repo_url": "https://github.com/chartmuseum/charts"
+    },
+    {
+      "repo_url": "https://github.com/apache/superset"
+    },
+    {
+      "repo_url": "https://github.com/falcosecurity/charts"
+    },
+    {
+      "repo_url": "https://github.com/minio/operator"
+    },
+    {
+      "repo_url": "https://github.com/prometheus/node_exporter"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/headlamp"
+    },
+    {
+      "repo_url": "https://github.com/Kong/kubernetes-ingress-controller"
+    },
+    {
+      "repo_url": "https://github.com/open-telemetry/opentelemetry-collector"
+    },
+    {
+      "repo_url": "https://github.com/DandyDeveloper/charts"
+    },
+    {
+      "repo_url": "https://github.com/rook/rook"
+    },
+    {
+      "repo_url": "https://github.com/docker/distribution-library-image"
+    },
+    {
+      "repo_url": "https://github.com/codecentric/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/aquasecurity/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/opensearch-project/OpenSearch"
+    },
+    {
+      "repo_url": "https://github.com/itzg/minecraft-server-charts"
+    },
+    {
+      "repo_url": "https://github.com/prometheus-community/postgres_exporter"
+    },
+    {
+      "repo_url": "https://github.com/aws/aws-node-termination-handler"
+    },
+    {
+      "repo_url": "https://github.com/kubereboot/charts"
+    },
+    {
+      "repo_url": "https://github.com/VictoriaMetrics/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/rabbitmq/cluster-operator"
+    },
+    {
+      "repo_url": "https://github.com/backstage/charts"
+    },
+    {
+      "repo_url": "https://github.com/openebs/openebs"
+    },
+    {
+      "repo_url": "https://github.com/open-webui/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/pajikos/home-assistant-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/grafana/k8s-monitoring-helm"
+    },
+    {
+      "repo_url": "https://github.com/kafbat/kafka-ui"
+    },
+    {
+      "repo_url": "https://github.com/actions/actions-runner-controller"
+    },
+    {
+      "repo_url": "https://github.com/projectcalico/vpp-dataplane"
+    },
+    {
+      "repo_url": "https://github.com/FairwindsOps/goldilocks"
+    },
+    {
+      "repo_url": "https://github.com/aws/aws-for-fluent-bit"
+    },
+    {
+      "repo_url": "https://github.com/CloudPirates-io/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/atlassian/data-center-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/node-problem-detector"
+    },
+    {
+      "repo_url": "https://github.com/fluxcd-community/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/Enapter/charts"
+    },
+    {
+      "repo_url": "https://github.com/minio/minio"
+    },
+    {
+      "repo_url": "https://github.com/strimzi/strimzi-kafka-operator"
+    },
+    {
+      "repo_url": "https://github.com/drone/drone"
+    },
+    {
+      "repo_url": "https://github.com/hashicorp/vault-secrets-operator"
+    },
+    {
+      "repo_url": "https://github.com/mongodb/mongodb-kubernetes-operator"
+    },
+    {
+      "repo_url": "https://github.com/open-metadata/OpenMetadata"
+    },
+    {
+      "repo_url": "https://github.com/prometheus-operator/prometheus-operator"
+    },
+    {
+      "repo_url": "https://github.com/haproxytech/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/linkerd/linkerd2"
+    },
+    {
+      "repo_url": "https://github.com/gissilabs/charts"
+    },
+    {
+      "repo_url": "https://github.com/ottoyiu/django-cors-headers"
+    },
+    {
+      "repo_url": "https://github.com/opencost/opencost-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/redpanda-data/redpanda-operator"
+    },
+    {
+      "repo_url": "https://github.com/zitadel/zitadel-charts"
+    },
+    {
+      "repo_url": "https://github.com/open-policy-agent/gatekeeper"
+    },
+    {
+      "repo_url": "https://github.com/grafana/grafana"
+    },
+    {
+      "repo_url": "https://github.com/projectcontour/contour"
+    },
+    {
+      "repo_url": "https://github.com/jp-gouin/helm-openldap"
+    },
+    {
+      "repo_url": "https://github.com/influxdata/influxdb"
+    },
+    {
+      "repo_url": "https://github.com/zammad/zammad"
+    },
+    {
+      "repo_url": "https://github.com/Mailu/Mailu"
+    },
+    {
+      "repo_url": "https://github.com/piraeusdatastore/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/ceph/ceph-csi"
+    },
+    {
+      "repo_url": "https://github.com/kyverno/policies"
+    },
+    {
+      "repo_url": "https://github.com/apache/solr-operator"
+    },
+    {
+      "repo_url": "https://github.com/acryldata/datahub-helm"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/kube-state-metrics"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/kind"
+    },
+    {
+      "repo_url": "https://github.com/fluxcd/flux2"
+    },
+    {
+      "repo_url": "https://github.com/portainer/k8s"
+    },
+    {
+      "repo_url": "https://github.com/cert-manager/trust-manager"
+    },
+    {
+      "repo_url": "https://github.com/chaos-mesh/chaos-mesh"
+    },
+    {
+      "repo_url": "https://github.com/Cisco-Talos/clamav-devel"
+    },
+    {
+      "repo_url": "https://github.com/cockroachdb/cockroach"
+    },
+    {
+      "repo_url": "https://github.com/bootc/netbox-chart"
+    },
+    {
+      "repo_url": "https://github.com/OpsMx/spinnaker-helm"
+    },
+    {
+      "repo_url": "https://github.com/valkey-io/valkey-helm"
+    },
+    {
+      "repo_url": "https://github.com/runatlantis/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/mariadb-operator/mariadb-operator"
+    },
+    {
+      "repo_url": "https://github.com/milvus-io/milvus-helm"
+    },
+    {
+      "repo_url": "https://github.com/camunda/camunda-platform-helm"
+    },
+    {
+      "repo_url": "https://github.com/cloudflare/cloudflared"
+    },
+    {
+      "repo_url": "https://github.com/rancher/local-path-provisioner"
+    },
+    {
+      "repo_url": "https://github.com/prometheus/mysqld_exporter"
+    },
+    {
+      "repo_url": "https://github.com/loft-sh/vcluster"
+    },
+    {
+      "repo_url": "https://github.com/fluxcd/flagger"
+    },
+    {
+      "repo_url": "https://github.com/clearml/clearml"
+    },
+    {
+      "repo_url": "https://github.com/codefresh-io/gitops-runtime-helm"
+    },
+    {
+      "repo_url": "https://github.com/WeblateOrg/helm"
+    },
+    {
+      "repo_url": "https://github.com/opensearch-project/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/coder/coder"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/sig-storage-local-static-provisioner"
+    },
+    {
+      "repo_url": "https://github.com/openfga/openfga"
+    },
+    {
+      "repo_url": "https://github.com/semaphoreui/semaphore"
+    },
+    {
+      "repo_url": "https://github.com/cowboysysop/charts"
+    },
+    {
+      "repo_url": "https://github.com/deliveryhero/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/api"
+    },
+    {
+      "repo_url": "https://github.com/danielqsj/kafka_exporter"
+    },
+    {
+      "repo_url": "https://github.com/percona/mongodb_exporter"
+    },
+    {
+      "repo_url": "https://github.com/webhookrelay/webhook-demo"
+    },
+    {
+      "repo_url": "https://github.com/groundhog2k/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/fission/fission"
+    },
+    {
+      "repo_url": "https://github.com/meshery/meshery-istio"
+    },
+    {
+      "repo_url": "https://github.com/zalando/patroni"
+    },
+    {
+      "repo_url": "https://github.com/bitcoin/bitcoin"
+    },
+    {
+      "repo_url": "https://github.com/jouve/charts"
+    },
+    {
+      "repo_url": "https://github.com/mongo-express/mongo-express"
+    },
+    {
+      "repo_url": "https://github.com/alibaba/nacos"
+    },
+    {
+      "repo_url": "https://github.com/emqx/emqx"
+    },
+    {
+      "repo_url": "https://github.com/seaweedfs/seaweedfs"
+    },
+    {
+      "repo_url": "https://github.com/pravega/zookeeper-operator"
+    },
+    {
+      "repo_url": "https://github.com/nicholaswilde/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/langgenius/dify"
+    },
+    {
+      "repo_url": "https://github.com/dragonflyoss/dragonfly"
+    },
+    {
+      "repo_url": "https://github.com/mattermost/mattermost-helm"
+    },
+    {
+      "repo_url": "https://github.com/emberstack/kubernetes-reflector"
+    },
+    {
+      "repo_url": "https://github.com/jfrog/charts"
+    },
+    {
+      "repo_url": "https://github.com/AdWerx/charts"
+    },
+    {
+      "repo_url": "https://github.com/cetic/helm-nifi"
+    },
+    {
+      "repo_url": "https://github.com/SigNoz/charts"
+    },
+    {
+      "repo_url": "https://github.com/DependencyTrack/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubeshark/kubeshark.github.io"
+    },
+    {
+      "repo_url": "https://github.com/enix/kube-image-keeper"
+    },
+    {
+      "repo_url": "https://github.com/FairwindsOps/polaris"
+    },
+    {
+      "repo_url": "https://github.com/gabe565/charts"
+    },
+    {
+      "repo_url": "https://github.com/rundeck/rundeck"
+    },
+    {
+      "repo_url": "https://github.com/meilisearch/meilisearch-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/SumoLogic/sumologic-kubernetes-collection"
+    },
+    {
+      "repo_url": "https://github.com/kubeshop/botkube"
+    },
+    {
+      "repo_url": "https://github.com/democratic-csi/charts"
+    },
+    {
+      "repo_url": "https://github.com/eclipse-che/che-operator"
+    },
+    {
+      "repo_url": "https://github.com/jitsi-contrib/jitsi-helm"
+    },
+    {
+      "repo_url": "https://github.com/verdaccio/charts"
+    },
+    {
+      "repo_url": "https://github.com/gocd/gocd"
+    },
+    {
+      "repo_url": "https://github.com/k8sgpt-ai/k8sgpt-operator"
+    },
+    {
+      "repo_url": "https://github.com/k8tz/k8tz"
+    },
+    {
+      "repo_url": "https://github.com/enix/san-iscsi-csi"
+    },
+    {
+      "repo_url": "https://github.com/drakkan/sftpgo"
+    },
+    {
+      "repo_url": "https://github.com/backube/volsync"
+    },
+    {
+      "repo_url": "https://github.com/concourse/concourse-chart"
+    },
+    {
+      "repo_url": "https://github.com/Dynatrace/dynatrace-operator"
+    },
+    {
+      "repo_url": "https://github.com/grafana-community/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/charts"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/community"
+    },
+    {
+      "repo_url": "https://github.com/aws/amazon-vpc-cni-k8s"
+    },
+    {
+      "repo_url": "https://github.com/gadsme/charts"
+    },
+    {
+      "repo_url": "https://github.com/frappe/frappe"
+    },
+    {
+      "repo_url": "https://github.com/pfisterer/apache-hadoop-helm"
+    },
+    {
+      "repo_url": "https://github.com/ory/hydra"
+    },
+    {
+      "repo_url": "https://github.com/prometheus-msteams/prometheus-msteams"
+    },
+    {
+      "repo_url": "https://github.com/elastic/apm"
+    },
+    {
+      "repo_url": "https://github.com/inspektor-gadget/inspektor-gadget"
+    },
+    {
+      "repo_url": "https://github.com/homarr-labs/homarr"
+    },
+    {
+      "repo_url": "https://github.com/hpe-storage/csi-driver"
+    },
+    {
+      "repo_url": "https://github.com/kestra-io/kestra"
+    },
+    {
+      "repo_url": "https://github.com/abahmed/kwatch"
+    },
+    {
+      "repo_url": "https://github.com/langfuse/langfuse-k8s"
+    },
+    {
+      "repo_url": "https://github.com/prometheus/snmp_exporter"
+    },
+    {
+      "repo_url": "https://github.com/chatwoot/chatwoot"
+    },
+    {
+      "repo_url": "https://github.com/kubitodev/helm"
+    },
+    {
+      "repo_url": "https://github.com/home-assistant/home-assistant"
+    },
+    {
+      "repo_url": "https://github.com/wiremind/wiremind-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/paperless-ngx/paperless-ngx"
+    },
+    {
+      "repo_url": "https://github.com/hirosystems/stacks-blockchain-api"
+    },
+    {
+      "repo_url": "https://github.com/morgoved/wazuh-helm"
+    },
+    {
+      "repo_url": "https://github.com/apache/apisix-ingress-controller"
+    },
+    {
+      "repo_url": "https://github.com/datawire/ambassador"
+    },
+    {
+      "repo_url": "https://github.com/rimusz/hostpath-provisioner"
+    },
+    {
+      "repo_url": "https://github.com/imgproxy/imgproxy"
+    },
+    {
+      "repo_url": "https://github.com/influxdata/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/zalando/postgres-operator"
+    },
+    {
+      "repo_url": "https://github.com/cetic/helm-postgresql"
+    },
+    {
+      "repo_url": "https://github.com/getredash/contrib-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/matrix-org/synapse"
+    },
+    {
+      "repo_url": "https://github.com/guerzon/vaultwarden"
+    },
+    {
+      "repo_url": "https://github.com/zabbix-community/helm-zabbix"
+    },
+    {
+      "repo_url": "https://github.com/project-zot/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/ngrok/ngrok-operator"
+    },
+    {
+      "repo_url": "https://github.com/open-feature/open-feature-operator"
+    },
+    {
+      "repo_url": "https://github.com/telepresenceio/telepresence"
+    },
+    {
+      "repo_url": "https://github.com/NetApp/trident"
+    },
+    {
+      "repo_url": "https://github.com/weaviate/weaviate"
+    },
+    {
+      "repo_url": "https://github.com/evryfs/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/SQLJames/factorio-server-charts"
+    },
+    {
+      "repo_url": "https://github.com/CrowdStrike/falcon-helm"
+    },
+    {
+      "repo_url": "https://github.com/linuxserver/docker-jellyfin"
+    },
+    {
+      "repo_url": "https://github.com/k8gb-io/k8gb"
+    },
+    {
+      "repo_url": "https://github.com/k8up-io/k8up"
+    },
+    {
+      "repo_url": "https://github.com/neo4j/neo4j"
+    },
+    {
+      "repo_url": "https://github.com/stenic/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/prometheus/cloudwatch_exporter"
+    },
+    {
+      "repo_url": "https://github.com/yugabyte/yugabyte-db"
+    },
+    {
+      "repo_url": "https://github.com/smallstep/certificates"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/aws-ebs-csi-driver"
+    },
+    {
+      "repo_url": "https://github.com/dask/helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/dgraph-io/charts"
+    },
+    {
+      "repo_url": "https://github.com/rimusz/charts"
+    },
+    {
+      "repo_url": "https://github.com/localstack/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/banzaicloud/logging-operator"
+    },
+    {
+      "repo_url": "https://github.com/outline/outline"
+    },
+    {
+      "repo_url": "https://github.com/percona/percona-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/jetstack/kube-lego"
+    },
+    {
+      "repo_url": "https://github.com/ROCm/k8s-device-plugin"
+    },
+    {
+      "repo_url": "https://github.com/redpanda-data/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/Flagsmith/flagsmith-charts"
+    },
+    {
+      "repo_url": "https://github.com/glasskube/operator"
+    },
+    {
+      "repo_url": "https://github.com/StarRocks/starrocks-kubernetes-operator"
+    },
+    {
+      "repo_url": "https://github.com/nginx/nginx-gateway-fabric"
+    },
+    {
+      "repo_url": "https://github.com/makeplane/plane"
+    },
+    {
+      "repo_url": "https://github.com/backube/scribe"
+    },
+    {
+      "repo_url": "https://github.com/apache/camel-k"
+    },
+    {
+      "repo_url": "https://github.com/neuvector/neuvector"
+    },
+    {
+      "repo_url": "https://github.com/gobwas/glob"
+    },
+    {
+      "repo_url": "https://github.com/MaikuMori/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/oauth2-proxy/oauth2-proxy"
+    },
+    {
+      "repo_url": "https://github.com/aws/karpenter"
+    },
+    {
+      "repo_url": "https://github.com/netbirdio/netbird"
+    },
+    {
+      "repo_url": "https://github.com/oobeyaio/oobeya-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/open-policy-agent/opa"
+    },
+    {
+      "repo_url": "https://github.com/bedag/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/oxyno-zeta/helm-charts-v2"
+    },
+    {
+      "repo_url": "https://github.com/bryopsida/wireguard-chart"
+    },
+    {
+      "repo_url": "https://github.com/docker-mailserver/docker-mailserver-helm"
+    },
+    {
+      "repo_url": "https://github.com/falcosecurity/falcosidekick"
+    },
+    {
+      "repo_url": "https://github.com/mvisonneau/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/NVIDIA/gpu-operator"
+    },
+    {
+      "repo_url": "https://github.com/morpheus65535/homeassistant"
+    },
+    {
+      "repo_url": "https://github.com/zilliztech/milvus-helm"
+    },
+    {
+      "repo_url": "https://github.com/AdguardTeam/AdGuardHome"
+    },
+    {
+      "repo_url": "https://github.com/haugene/docker-transmission-openvpn"
+    },
+    {
+      "repo_url": "https://github.com/otwld/velero-ui"
+    },
+    {
+      "repo_url": "https://github.com/wekan/wekan"
+    },
+    {
+      "repo_url": "https://github.com/bytebase/bytebase"
+    },
+    {
+      "repo_url": "https://github.com/uber/cadence"
+    },
+    {
+      "repo_url": "https://github.com/projectcontour/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/controlplaneio-fluxcd/flux-operator"
+    },
+    {
+      "repo_url": "https://github.com/Kurt108/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubescape/kubescape"
+    },
+    {
+      "repo_url": "https://github.com/kube-vip/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/NaPs/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/juice-shop/multi-juicer"
+    },
+    {
+      "repo_url": "https://github.com/mysql/mysql-operator"
+    },
+    {
+      "repo_url": "https://github.com/thanos-io/thanos"
+    },
+    {
+      "repo_url": "https://github.com/ot-container-kit/redis-operator"
+    },
+    {
+      "repo_url": "https://github.com/itboon/rocketmq-helm"
+    },
+    {
+      "repo_url": "https://github.com/sentry-kubernetes/charts"
+    },
+    {
+      "repo_url": "https://github.com/smallstep/step-issuer"
+    },
+    {
+      "repo_url": "https://github.com/apache/incubator-superset"
+    },
+    {
+      "repo_url": "https://github.com/woodpecker-ci/woodpecker"
+    },
+    {
+      "repo_url": "https://github.com/openzipkin/zipkin"
+    },
+    {
+      "repo_url": "https://github.com/authelia/chartrepo"
+    },
+    {
+      "repo_url": "https://github.com/codefresh-io/venona"
+    },
+    {
+      "repo_url": "https://github.com/hivemq/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/element-hq/synapse"
+    },
+    {
+      "repo_url": "https://github.com/SumoLogic/tailing-sidecar"
+    },
+    {
+      "repo_url": "https://github.com/hashicorp/waypoint"
+    },
+    {
+      "repo_url": "https://github.com/aklivity/zilla"
+    },
+    {
+      "repo_url": "https://github.com/kubelauncher/charts"
+    },
+    {
+      "repo_url": "https://github.com/Aureum-Cloud/Cloudflare-DDNS"
+    },
+    {
+      "repo_url": "https://github.com/Azure/secrets-store-csi-driver-provider-azure"
+    },
+    {
+      "repo_url": "https://github.com/mintel/dex-k8s-authenticator"
+    },
+    {
+      "repo_url": "https://github.com/Joxit/docker-registry-ui"
+    },
+    {
+      "repo_url": "https://github.com/apache/doris"
+    },
+    {
+      "repo_url": "https://github.com/asdf2014/druid-helm"
+    },
+    {
+      "repo_url": "https://github.com/kubelauncher/docker"
+    },
+    {
+      "repo_url": "https://github.com/excalidraw/excalidraw"
+    },
+    {
+      "repo_url": "https://github.com/grafana/tempo"
+    },
+    {
+      "repo_url": "https://github.com/hansehe/jaeger-all-in-one"
+    },
+    {
+      "repo_url": "https://github.com/apecloud/kubeblocks"
+    },
+    {
+      "repo_url": "https://github.com/kumahq/kuma"
+    },
+    {
+      "repo_url": "https://github.com/lakekeeper/lakekeeper"
+    },
+    {
+      "repo_url": "https://github.com/one-acre-fund/oaf-public-charts"
+    },
+    {
+      "repo_url": "https://github.com/PaperMC/Waterfall"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/helm"
+    },
+    {
+      "repo_url": "https://github.com/openbao/openbao-helm"
+    },
+    {
+      "repo_url": "https://github.com/linuxserver/docker-plex"
+    },
+    {
+      "repo_url": "https://github.com/anza-labs/charts"
+    },
+    {
+      "repo_url": "https://github.com/arldka/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/prometheus-community/stackdriver_exporter"
+    },
+    {
+      "repo_url": "https://github.com/pree/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/artur9010/charts"
+    },
+    {
+      "repo_url": "https://github.com/stevehipwell/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/Altinity/clickhouse-operator"
+    },
+    {
+      "repo_url": "https://github.com/grafana/beyla"
+    },
+    {
+      "repo_url": "https://github.com/helm/charts"
+    },
+    {
+      "repo_url": "https://github.com/helm/helm"
+    },
+    {
+      "repo_url": "https://github.com/cube-js/cube.js"
+    },
+    {
+      "repo_url": "https://github.com/vector-im/element-web"
+    },
+    {
+      "repo_url": "https://github.com/blakeblackshear/frigate"
+    },
+    {
+      "repo_url": "https://github.com/Gradiant/charts"
+    },
+    {
+      "repo_url": "https://github.com/MaastrichtU-IDS/dsri-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/akuity/kargo"
+    },
+    {
+      "repo_url": "https://github.com/coreos/kube-prometheus"
+    },
+    {
+      "repo_url": "https://github.com/n8n-io/n8n"
+    },
+    {
+      "repo_url": "https://github.com/neo4j-contrib/neo4j-helm"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-incubator/external-storage"
+    },
+    {
+      "repo_url": "https://github.com/banzaicloud/banzai-charts"
+    },
+    {
+      "repo_url": "https://github.com/beeinventor/charts"
+    },
+    {
+      "repo_url": "https://github.com/fmjstudios/helm"
+    },
+    {
+      "repo_url": "https://github.com/questdb/questdb-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/temporalio/temporal"
+    },
+    {
+      "repo_url": "https://github.com/improbable-eng/thanos"
+    },
+    {
+      "repo_url": "https://github.com/drone-runners/drone-runner-kube"
+    },
+    {
+      "repo_url": "https://github.com/cloudfoundry/korifi"
+    },
+    {
+      "repo_url": "https://github.com/kube-green/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubewarden/community"
+    },
+    {
+      "repo_url": "https://github.com/superstreamlabs/memphis"
+    },
+    {
+      "repo_url": "https://github.com/microcks/microcks"
+    },
+    {
+      "repo_url": "https://github.com/monicahq/helm"
+    },
+    {
+      "repo_url": "https://github.com/nautobot/nautobot"
+    },
+    {
+      "repo_url": "https://github.com/ortelius/ortelius-charts"
+    },
+    {
+      "repo_url": "https://github.com/thingsboard/tbmq"
+    },
+    {
+      "repo_url": "https://github.com/dotnet/aspnetcore"
+    },
+    {
+      "repo_url": "https://github.com/snowplow-devops/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/caddyserver/caddy"
+    },
+    {
+      "repo_url": "https://github.com/dbeaver/cloudbeaver"
+    },
+    {
+      "repo_url": "https://github.com/enix/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/sse-secure-systems/connaisseur"
+    },
+    {
+      "repo_url": "https://github.com/pgautoupgrade/docker-pgautoupgrade"
+    },
+    {
+      "repo_url": "https://github.com/Jamesits/docker-dst-server"
+    },
+    {
+      "repo_url": "https://github.com/Stirling-Tools/Stirling-PDF"
+    },
+    {
+      "repo_url": "https://github.com/sorintlab/stolon"
+    },
+    {
+      "repo_url": "https://github.com/umami-software/umami"
+    },
+    {
+      "repo_url": "https://github.com/jacobalberty/unifi-docker"
+    },
+    {
+      "repo_url": "https://github.com/valkey-io/valkey"
+    },
+    {
+      "repo_url": "https://github.com/cloudhippie/charts"
+    },
+    {
+      "repo_url": "https://github.com/andrenarchy/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/logdna/logdna-cli"
+    },
+    {
+      "repo_url": "https://github.com/code-server-boilerplates/charts"
+    },
+    {
+      "repo_url": "https://github.com/hackmdio/codimd"
+    },
+    {
+      "repo_url": "https://github.com/Ealenn/Echo-Server"
+    },
+    {
+      "repo_url": "https://github.com/grafana/grafana-operator"
+    },
+    {
+      "repo_url": "https://github.com/gchq/gaffer-docker"
+    },
+    {
+      "repo_url": "https://github.com/spiffe/spiffe"
+    },
+    {
+      "repo_url": "https://github.com/itboon/kafka-helm"
+    },
+    {
+      "repo_url": "https://github.com/litmuschaos/litmus"
+    },
+    {
+      "repo_url": "https://github.com/nacos-group/nacos-k8s"
+    },
+    {
+      "repo_url": "https://github.com/netrisai/charts"
+    },
+    {
+      "repo_url": "https://github.com/nuclio/nuclio"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/cloud-provider-openstack"
+    },
+    {
+      "repo_url": "https://github.com/cloudposse/github-pam"
+    },
+    {
+      "repo_url": "https://github.com/secureCodeBox/secureCodeBox"
+    },
+    {
+      "repo_url": "https://github.com/quickwit-oss/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/sysdiglabs/charts"
+    },
+    {
+      "repo_url": "https://github.com/Azure/api-management-self-hosted-gateway"
+    },
+    {
+      "repo_url": "https://github.com/cert-manager/istio-csr"
+    },
+    {
+      "repo_url": "https://github.com/cdr/enterprise-helm"
+    },
+    {
+      "repo_url": "https://github.com/epinio/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/GluuFederation/cloud-native-edition"
+    },
+    {
+      "repo_url": "https://github.com/JanssenProject/jans"
+    },
+    {
+      "repo_url": "https://github.com/keptn/lifecycle-toolkit"
+    },
+    {
+      "repo_url": "https://github.com/postfinance/kubelet-csr-approver"
+    },
+    {
+      "repo_url": "https://github.com/lightrun-platform/lightrun-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/dunglas/mercure"
+    },
+    {
+      "repo_url": "https://github.com/kuoss/myip"
+    },
+    {
+      "repo_url": "https://github.com/fosrl/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/RedisLabs/redis-enterprise-k8s-docs"
+    },
+    {
+      "repo_url": "https://github.com/open-telemetry/opentelemetry-collector-contrib"
+    },
+    {
+      "repo_url": "https://github.com/StrangeBeeCorp/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/redhat-developer/rhdh-chart"
+    },
+    {
+      "repo_url": "https://github.com/adfinis/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/BookStackApp/BookStack"
+    },
+    {
+      "repo_url": "https://github.com/google/cadvisor"
+    },
+    {
+      "repo_url": "https://github.com/cerbos/cerbos"
+    },
+    {
+      "repo_url": "https://github.com/ebrianne/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/containeroo/cloudflare-operator"
+    },
+    {
+      "repo_url": "https://github.com/zakkg3/ClusterSecret"
+    },
+    {
+      "repo_url": "https://github.com/kubeops/config-syncer"
+    },
+    {
+      "repo_url": "https://github.com/coturn/coturn"
+    },
+    {
+      "repo_url": "https://github.com/yutianaiqingtian/bigdata-platfrom-charts"
+    },
+    {
+      "repo_url": "https://github.com/apache/doris-operator"
+    },
+    {
+      "repo_url": "https://github.com/machine424/kube-hpa-scale-to-zero"
+    },
+    {
+      "repo_url": "https://github.com/coreos/etcd"
+    },
+    {
+      "repo_url": "https://github.com/FairwindsOps/gemini"
+    },
+    {
+      "repo_url": "https://github.com/ethereum/go-ethereum"
+    },
+    {
+      "repo_url": "https://github.com/pmoscode-helm/gotify"
+    },
+    {
+      "repo_url": "https://github.com/apache/hadoop"
+    },
+    {
+      "repo_url": "https://github.com/hasura/graphql-engine"
+    },
+    {
+      "repo_url": "https://github.com/instana/instana-agent-operator"
+    },
+    {
+      "repo_url": "https://github.com/instana/instana-autotrace-webhook"
+    },
+    {
+      "repo_url": "https://github.com/intel/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/k8s-at-home/charts"
+    },
+    {
+      "repo_url": "https://github.com/bjw-s/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/javimox/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/yonahd/kor"
+    },
+    {
+      "repo_url": "https://github.com/kubitodev/kubernetes-cloudflare-ddns"
+    },
+    {
+      "repo_url": "https://github.com/GoogleChrome/lighthouse-ci"
+    },
+    {
+      "repo_url": "https://github.com/kube-logging/logging-operator"
+    },
+    {
+      "repo_url": "https://github.com/cloudeteer/m365-exporter"
+    },
+    {
+      "repo_url": "https://github.com/netbox-community/netbox-chart"
+    },
+    {
+      "repo_url": "https://github.com/obeone/charts"
+    },
+    {
+      "repo_url": "https://github.com/suda/charts"
+    },
+    {
+      "repo_url": "https://github.com/icoretech/helm"
+    },
+    {
+      "repo_url": "https://github.com/caas-team/py-kube-downscaler"
+    },
+    {
+      "repo_url": "https://github.com/mrnim94/redisinsight"
+    },
+    {
+      "repo_url": "https://github.com/heywood8/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/liranme/redisinsight-secure"
+    },
+    {
+      "repo_url": "https://github.com/kir4h/charts"
+    },
+    {
+      "repo_url": "https://github.com/ectobit/charts"
+    },
+    {
+      "repo_url": "https://github.com/rstudio/helm"
+    },
+    {
+      "repo_url": "https://github.com/peak-scale/sops-operator"
+    },
+    {
+      "repo_url": "https://github.com/olehrgf/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/TechnitiumSoftware/DnsServer"
+    },
+    {
+      "repo_url": "https://github.com/hpe-storage/truenas-csp"
+    },
+    {
+      "repo_url": "https://github.com/christianhuth/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/sitewhere/sitewhere-k8s"
+    },
+    {
+      "repo_url": "https://github.com/wazuh/wazuh-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/AvistoTelecom/charts"
+    },
+    {
+      "repo_url": "https://github.com/traefik/whoami"
+    },
+    {
+      "repo_url": "https://github.com/rancher/system-upgrade-controller"
+    },
+    {
+      "repo_url": "https://github.com/tailscale/tailscale"
+    },
+    {
+      "repo_url": "https://github.com/mvisonneau/tailscale-relay-over-k8s"
+    },
+    {
+      "repo_url": "https://github.com/UffizziCloud/uffizzi_controller"
+    },
+    {
+      "repo_url": "https://github.com/louislam/uptime-kuma"
+    },
+    {
+      "repo_url": "https://github.com/weaveworks/scope"
+    },
+    {
+      "repo_url": "https://github.com/Koenkk/zigbee2mqtt"
+    },
+    {
+      "repo_url": "https://github.com/abcdesktopio/helm"
+    },
+    {
+      "repo_url": "https://github.com/projectcapsule/capsule"
+    },
+    {
+      "repo_url": "https://github.com/truecharts/containers"
+    },
+    {
+      "repo_url": "https://github.com/weka/csi-wekafs"
+    },
+    {
+      "repo_url": "https://github.com/epam/ai-dial-helm"
+    },
+    {
+      "repo_url": "https://github.com/Kong/charts"
+    },
+    {
+      "repo_url": "https://github.com/argoproj-labs/gitops-promoter-helm"
+    },
+    {
+      "repo_url": "https://github.com/apache/hertzbeat"
+    },
+    {
+      "repo_url": "https://github.com/sustainable-computing-io/kepler"
+    },
+    {
+      "repo_url": "https://github.com/factorhouse/kpow"
+    },
+    {
+      "repo_url": "https://github.com/kubewarden/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/netscaler/netscaler-k8s-ingress-controller"
+    },
+    {
+      "repo_url": "https://github.com/containers/nri-plugins"
+    },
+    {
+      "repo_url": "https://github.com/nutanix/helm"
+    },
+    {
+      "repo_url": "https://github.com/OpenVPN/as-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/port-labs/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/prometheus-community/json_exporter"
+    },
+    {
+      "repo_url": "https://github.com/relution-io/relution-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/s3gw-tech/s3gw-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubewarden/sbomscanner"
+    },
+    {
+      "repo_url": "https://github.com/SonarSource/docker-sonarqube"
+    },
+    {
+      "repo_url": "https://github.com/apache/spark-kubernetes-operator"
+    },
+    {
+      "repo_url": "https://github.com/superstreamlabs/superstream-engine"
+    },
+    {
+      "repo_url": "https://github.com/vmware-tanzu/secrets-manager"
+    },
+    {
+      "repo_url": "https://github.com/shini4i/charts"
+    },
+    {
+      "repo_url": "https://github.com/backstage/backstage"
+    },
+    {
+      "repo_url": "https://github.com/baserow/baserow"
+    },
+    {
+      "repo_url": "https://github.com/UnxWares/helm"
+    },
+    {
+      "repo_url": "https://github.com/lib42/charts"
+    },
+    {
+      "repo_url": "https://github.com/lippertmarkus/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/xuyun-io/charts"
+    },
+    {
+      "repo_url": "https://github.com/carbonetes/carbonetes-analyzer"
+    },
+    {
+      "repo_url": "https://github.com/celestiaorg/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/deyaeddin/cert-manager-webhook-hetzner"
+    },
+    {
+      "repo_url": "https://github.com/startxfr/helm-repository"
+    },
+    {
+      "repo_url": "https://github.com/kode-lib/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/crossplane/crossplane"
+    },
+    {
+      "repo_url": "https://github.com/apecloud/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/dagster-io/dagster"
+    },
+    {
+      "repo_url": "https://github.com/zekker6/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/Dolibarr/dolibarr"
+    },
+    {
+      "repo_url": "https://github.com/elastic/curator"
+    },
+    {
+      "repo_url": "https://github.com/hugoprudente/charts"
+    },
+    {
+      "repo_url": "https://github.com/GeoNodeUserGroup-DE/geonode-k8s"
+    },
+    {
+      "repo_url": "https://github.com/olli-ai/glusterfs-subdir-external-provisioner"
+    },
+    {
+      "repo_url": "https://github.com/bloomberg/goldpinger"
+    },
+    {
+      "repo_url": "https://github.com/hansehe/graphql-gateway"
+    },
+    {
+      "repo_url": "https://github.com/haproxy-ingress/charts"
+    },
+    {
+      "repo_url": "https://github.com/djjudas21/charts"
+    },
+    {
+      "repo_url": "https://github.com/huginn/huginn"
+    },
+    {
+      "repo_url": "https://github.com/codenotary/immudb"
+    },
+    {
+      "repo_url": "https://github.com/opsmill/infrahub-helm"
+    },
+    {
+      "repo_url": "https://github.com/sharevb/it-tools"
+    },
+    {
+      "repo_url": "https://github.com/beluga-cloud/charts"
+    },
+    {
+      "repo_url": "https://github.com/MOHIT-JANGIR/K8S_HELM_CHART"
+    },
+    {
+      "repo_url": "https://github.com/estahn/charts"
+    },
+    {
+      "repo_url": "https://github.com/danuk/k8s-telegram-sender"
+    },
+    {
+      "repo_url": "https://github.com/kamu-data/kamu-node"
+    },
+    {
+      "repo_url": "https://github.com/kamu-data/kamu-web-ui"
+    },
+    {
+      "repo_url": "https://github.com/froz42/kerbernetes"
+    },
+    {
+      "repo_url": "https://github.com/kbumsik/keycloak-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/larakube/larakube"
+    },
+    {
+      "repo_url": "https://github.com/self-hosters-by-night/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/meilisearch/meilisearch"
+    },
+    {
+      "repo_url": "https://github.com/roertel/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/misskey-dev/misskey"
+    },
+    {
+      "repo_url": "https://github.com/k8sonlab/publiccharts"
+    },
+    {
+      "repo_url": "https://github.com/musicociel/musicociel"
+    },
+    {
+      "repo_url": "https://github.com/bitpoke/mysql-operator"
+    },
+    {
+      "repo_url": "https://github.com/netbirdio/dashboard"
+    },
+    {
+      "repo_url": "https://github.com/startechnica/apps"
+    },
+    {
+      "repo_url": "https://github.com/sonatype/nexus-public"
+    },
+    {
+      "repo_url": "https://github.com/gradiant/5g-charts"
+    },
+    {
+      "repo_url": "https://github.com/devops-ia/helm-opencti"
+    },
+    {
+      "repo_url": "https://github.com/phpipam/phpipam"
+    },
+    {
+      "repo_url": "https://github.com/SavePointSam/charts"
+    },
+    {
+      "repo_url": "https://github.com/sigstore/policy-controller"
+    },
+    {
+      "repo_url": "https://github.com/prometheus/consul_exporter"
+    },
+    {
+      "repo_url": "https://github.com/nginxinc/nginx-prometheus-exporter"
+    },
+    {
+      "repo_url": "https://github.com/SolaceProducts/pubsubplus-kubernetes-helm-quickstart"
+    },
+    {
+      "repo_url": "https://github.com/loeken/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/notaryproject/specifications"
+    },
+    {
+      "repo_url": "https://github.com/sigstore/rekor"
+    },
+    {
+      "repo_url": "https://github.com/atmoz/sftp"
+    },
+    {
+      "repo_url": "https://github.com/cnieg/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/cetic/fadi"
+    },
+    {
+      "repo_url": "https://github.com/flannel-io/flannel"
+    },
+    {
+      "repo_url": "https://github.com/GoogleCloudPlatform/flink-on-k8s-operator"
+    },
+    {
+      "repo_url": "https://github.com/databus23/helm-diff"
+    },
+    {
+      "repo_url": "https://github.com/TwiN/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/quantumsheep/godbox-helm"
+    },
+    {
+      "repo_url": "https://github.com/graphite-project/docker-graphite-statsd"
+    },
+    {
+      "repo_url": "https://github.com/groundcover-com/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/sstarcher/helm-exporter"
+    },
+    {
+      "repo_url": "https://github.com/signoz/charts"
+    },
+    {
+      "repo_url": "https://github.com/banzaicloud/koperator"
+    },
+    {
+      "repo_url": "https://github.com/alauda/kubeflow-chart"
+    },
+    {
+      "repo_url": "https://github.com/lucky-sideburn/KubeInvaders"
+    },
+    {
+      "repo_url": "https://github.com/nickytd/kubernetes-logging-helm"
+    },
+    {
+      "repo_url": "https://github.com/bat-bs/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/maximilianoPizarro/librechat"
+    },
+    {
+      "repo_url": "https://github.com/quintush/helm-unittest"
+    },
+    {
+      "repo_url": "https://github.com/lightningnetwork/lnd"
+    },
+    {
+      "repo_url": "https://github.com/go-skynet/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/appuio/charts"
+    },
+    {
+      "repo_url": "https://github.com/SimCubeLtd/simcube-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/HomeEnterpriseInc/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/netrisai/netris-operator"
+    },
+    {
+      "repo_url": "https://github.com/ptnglobalcorp/charts"
+    },
+    {
+      "repo_url": "https://github.com/openelb/openelb"
+    },
+    {
+      "repo_url": "https://github.com/PaddlePaddle/PaddleCloud"
+    },
+    {
+      "repo_url": "https://github.com/kfirfer/charts"
+    },
+    {
+      "repo_url": "https://github.com/home-operations/containers"
+    },
+    {
+      "repo_url": "https://github.com/halkeye-docker/powerdns"
+    },
+    {
+      "repo_url": "https://github.com/sergelogvinov/proxmox-cloud-controller-manager"
+    },
+    {
+      "repo_url": "https://github.com/pypiserver/pypiserver"
+    },
+    {
+      "repo_url": "https://github.com/inspur-iop/charts"
+    },
+    {
+      "repo_url": "https://github.com/spotahome/redis-operator"
+    },
+    {
+      "repo_url": "https://github.com/dzikoysk/reposilite"
+    },
+    {
+      "repo_url": "https://github.com/reposilite-playground/reposilite-helm"
+    },
+    {
+      "repo_url": "https://github.com/k8snetworkplumbingwg/multus-cni"
+    },
+    {
+      "repo_url": "https://github.com/containers/image"
+    },
+    {
+      "repo_url": "https://github.com/hyness/spring-cloud-config-server"
+    },
+    {
+      "repo_url": "https://github.com/storageos/cluster-operator"
+    },
+    {
+      "repo_url": "https://github.com/kaleidos-ventures/taiga-docker"
+    },
+    {
+      "repo_url": "https://github.com/Aguafrommars/TheIdServer"
+    },
+    {
+      "repo_url": "https://github.com/SimonMisencik/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/UffizziCloud/uffizzi"
+    },
+    {
+      "repo_url": "https://github.com/vdaas/vald"
+    },
+    {
+      "repo_url": "https://github.com/banzaicloud/bank-vaults"
+    },
+    {
+      "repo_url": "https://github.com/AlexanderBabel/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/vsphere-csi-driver"
+    },
+    {
+      "repo_url": "https://github.com/brannondorsey/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/zenml-io/zenml"
+    },
+    {
+      "repo_url": "https://github.com/cloudscript-technology/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/gravitee-io/gravitee-api-management"
+    },
+    {
+      "repo_url": "https://github.com/gomods/athens-charts"
+    },
+    {
+      "repo_url": "https://github.com/srl-labs/clabernetes"
+    },
+    {
+      "repo_url": "https://github.com/cloudprober/cloudprober"
+    },
+    {
+      "repo_url": "https://github.com/instill-ai/instill-core"
+    },
+    {
+      "repo_url": "https://github.com/wundergraph/cosmo"
+    },
+    {
+      "repo_url": "https://github.com/crossplane-contrib/crossview"
+    },
+    {
+      "repo_url": "https://github.com/DataDog/datadog-operator"
+    },
+    {
+      "repo_url": "https://github.com/defensia/agent"
+    },
+    {
+      "repo_url": "https://github.com/depscloud/depscloud"
+    },
+    {
+      "repo_url": "https://github.com/drone/drone-gc"
+    },
+    {
+      "repo_url": "https://github.com/Keyfactor/ejbca-ce"
+    },
+    {
+      "repo_url": "https://github.com/factorhouse/flex"
+    },
+    {
+      "repo_url": "https://github.com/contane/charts"
+    },
+    {
+      "repo_url": "https://github.com/graylog2/graylog-helm"
+    },
+    {
+      "repo_url": "https://github.com/mitre/heimdall2-helm"
+    },
+    {
+      "repo_url": "https://github.com/hpe-storage/co-deployments"
+    },
+    {
+      "repo_url": "https://github.com/tomkerkhove/k8s-event-grid-bridge"
+    },
+    {
+      "repo_url": "https://github.com/stenic/k8status"
+    },
+    {
+      "repo_url": "https://github.com/Kuadrant/kuadrant-operator"
+    },
+    {
+      "repo_url": "https://github.com/kubewarden/allow-privilege-escalation-psp-policy"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/kwok"
+    },
+    {
+      "repo_url": "https://github.com/lumigo-io/opentelemetry-python-distro"
+    },
+    {
+      "repo_url": "https://github.com/containous/maesh"
+    },
+    {
+      "repo_url": "https://github.com/airlock/microgateway"
+    },
+    {
+      "repo_url": "https://github.com/NVIDIA/nvidia-container-toolkit"
+    },
+    {
+      "repo_url": "https://github.com/nutanix-cloud-native/ndb-operator"
+    },
+    {
+      "repo_url": "https://github.com/netscaler/netscaler-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/Knetic/govaluate"
+    },
+    {
+      "repo_url": "https://github.com/OliveTin/OliveTin"
+    },
+    {
+      "repo_url": "https://github.com/TrianaLab/pacto-operator"
+    },
+    {
+      "repo_url": "https://github.com/paradedb/charts"
+    },
+    {
+      "repo_url": "https://github.com/aehrc/pathling"
+    },
+    {
+      "repo_url": "https://github.com/perses/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/RequestNetwork/request-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/RequestNetwork/requestNetwork"
+    },
+    {
+      "repo_url": "https://github.com/rqlite/rqlite"
+    },
+    {
+      "repo_url": "https://github.com/strongdm/charts"
+    },
+    {
+      "repo_url": "https://github.com/skypilot-org/skypilot"
+    },
+    {
+      "repo_url": "https://github.com/backube/snapscheduler"
+    },
+    {
+      "repo_url": "https://github.com/snowplow-incubator/iglu-server"
+    },
+    {
+      "repo_url": "https://github.com/traefik/mesh-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/wallarm/sidecar"
+    },
+    {
+      "repo_url": "https://github.com/wger-project/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/moby/buildkit"
+    },
+    {
+      "repo_url": "https://github.com/eshepelyuk/cmak-operator"
+    },
+    {
+      "repo_url": "https://github.com/Cosmo-Tech/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/WyriHaximusNet/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/jespernohr/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/orgs/veecode-platform"
+    },
+    {
+      "repo_url": "https://github.com/sickcodes/docker-osx"
+    },
+    {
+      "repo_url": "https://github.com/thelande/charts"
+    },
+    {
+      "repo_url": "https://github.com/soerenmetje/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/L3st86/HelmCharts"
+    },
+    {
+      "repo_url": "https://github.com/Lotto24/aws-ecr-http-proxy"
+    },
+    {
+      "repo_url": "https://github.com/edgelesssys/edgelessdb"
+    },
+    {
+      "repo_url": "https://github.com/thm-mni-ii/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/apache/fineract"
+    },
+    {
+      "repo_url": "https://github.com/rancher/fleet"
+    },
+    {
+      "repo_url": "https://github.com/stakater/Forecastle"
+    },
+    {
+      "repo_url": "https://github.com/FreshRSS/FreshRSS"
+    },
+    {
+      "repo_url": "https://github.com/pascaliske/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/Aureum-Cloud/frp-Operator"
+    },
+    {
+      "repo_url": "https://github.com/sigstore/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/wittdennis/charts"
+    },
+    {
+      "repo_url": "https://github.com/geth/geth"
+    },
+    {
+      "repo_url": "https://github.com/sredevopsorg/ghost-on-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/cncf/gitvote"
+    },
+    {
+      "repo_url": "https://github.com/jobtome-labs/google-tag-manager"
+    },
+    {
+      "repo_url": "https://github.com/hetznercloud/csi-driver"
+    },
+    {
+      "repo_url": "https://github.com/snapp-cab/health-exporter"
+    },
+    {
+      "repo_url": "https://github.com/RobertoBochet/hedgedoc-chart"
+    },
+    {
+      "repo_url": "https://github.com/cloudecho/hello-world-go"
+    },
+    {
+      "repo_url": "https://github.com/buttahtoast/helmize"
+    },
+    {
+      "repo_url": "https://github.com/Gradiant/bigdata-charts"
+    },
+    {
+      "repo_url": "https://github.com/apache/hive"
+    },
+    {
+      "repo_url": "https://github.com/gethomepage/homepage"
+    },
+    {
+      "repo_url": "https://github.com/hoppscotch/hoppscotch"
+    },
+    {
+      "repo_url": "https://github.com/stakater/IngressMonitorController"
+    },
+    {
+      "repo_url": "https://github.com/paradeum-team/ipfs-cluster-chart"
+    },
+    {
+      "repo_url": "https://github.com/gradiant/charts"
+    },
+    {
+      "repo_url": "https://github.com/danuk/k8s-sftp-gcs"
+    },
+    {
+      "repo_url": "https://github.com/KusionStack/karpor"
+    },
+    {
+      "repo_url": "https://github.com/aquasecurity/trivy"
+    },
+    {
+      "repo_url": "https://github.com/finkinfridom/charts"
+    },
+    {
+      "repo_url": "https://github.com/Ahhhh-man/charts"
+    },
+    {
+      "repo_url": "https://github.com/Kraken-CI/kraken"
+    },
+    {
+      "repo_url": "https://github.com/riftbit/charts"
+    },
+    {
+      "repo_url": "https://github.com/explorium-ai/kube-auto-puller"
+    },
+    {
+      "repo_url": "https://github.com/aquasecurity/kube-bench"
+    },
+    {
+      "repo_url": "https://github.com/bedag/kubernetes-dbaas"
+    },
+    {
+      "repo_url": "https://github.com/kubeservice-stack/lxcfs-webhook"
+    },
+    {
+      "repo_url": "https://github.com/kubewall/kubewall"
+    },
+    {
+      "repo_url": "https://github.com/buttahtoast/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/area-42/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/knadh/listmonk"
+    },
+    {
+      "repo_url": "https://github.com/bbdsoftware/litellm-operator"
+    },
+    {
+      "repo_url": "https://github.com/loft-sh/loft"
+    },
+    {
+      "repo_url": "https://github.com/predibase/lorax"
+    },
+    {
+      "repo_url": "https://github.com/HollowMan6/LZU-Auto-COVID-Health-Report"
+    },
+    {
+      "repo_url": "https://github.com/MADANA-IO/madana-core-attestationservice"
+    },
+    {
+      "repo_url": "https://github.com/MariaDB/server"
+    },
+    {
+      "repo_url": "https://github.com/itzg/mc-router"
+    },
+    {
+      "repo_url": "https://github.com/memgraph/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/duck1123/me.untethr.nostr-relay"
+    },
+    {
+      "repo_url": "https://github.com/solidcharts/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/getindata/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/mlflow-oidc/mlflow-oidc-auth"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/ingress-gce"
+    },
+    {
+      "repo_url": "https://github.com/arktec-quant/agentic-fabric-mongodb"
+    },
+    {
+      "repo_url": "https://github.com/haukitech/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/deluan/navidrome"
+    },
+    {
+      "repo_url": "https://github.com/matanbaruch/netbird-api-exporter"
+    },
+    {
+      "repo_url": "https://github.com/hardbyte/netchecks"
+    },
+    {
+      "repo_url": "https://github.com/raphaelmonrouzeau/nfs-server-provisioner-chart"
+    },
+    {
+      "repo_url": "https://github.com/prometheus-community/pgbouncer_exporter"
+    },
+    {
+      "repo_url": "https://github.com/kubeservice-stack/pingmesh-agent"
+    },
+    {
+      "repo_url": "https://github.com/PrefectHQ/prefect-helm"
+    },
+    {
+      "repo_url": "https://github.com/prometheus-community/systemd_exporter"
+    },
+    {
+      "repo_url": "https://github.com/dysnix/charts"
+    },
+    {
+      "repo_url": "https://github.com/topolvm/pvc-autoresizer"
+    },
+    {
+      "repo_url": "https://github.com/radondb/radondb-mysql-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/massdriver-cloud/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/Szpadel/public-charts"
+    },
+    {
+      "repo_url": "https://github.com/datarhei/restreamer"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/cluster-api"
+    },
+    {
+      "repo_url": "https://github.com/verwilst/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/ckotzbauer/sbom-operator"
+    },
+    {
+      "repo_url": "https://github.com/searxng/searxng"
+    },
+    {
+      "repo_url": "https://github.com/devops-ia/helm-simple-krr-dashboard"
+    },
+    {
+      "repo_url": "https://github.com/apache/skywalking-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/Sonarr/Sonarr"
+    },
+    {
+      "repo_url": "https://github.com/squid-cache/squid"
+    },
+    {
+      "repo_url": "https://github.com/stashed/stash"
+    },
+    {
+      "repo_url": "https://github.com/geek-cookbook/charts"
+    },
+    {
+      "repo_url": "https://github.com/virtualroot/charts"
+    },
+    {
+      "repo_url": "https://github.com/supabase-community/supabase-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes/git-sync"
+    },
+    {
+      "repo_url": "https://github.com/tellery/charts"
+    },
+    {
+      "repo_url": "https://github.com/thanos-community/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/tigera/operator"
+    },
+    {
+      "repo_url": "https://github.com/fjogeleit/trivy-operator-polr-adapter"
+    },
+    {
+      "repo_url": "https://github.com/TwiN/k8s-ttl-controller"
+    },
+    {
+      "repo_url": "https://github.com/hmphu/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/pixelfederation/unbound"
+    },
+    {
+      "repo_url": "https://github.com/kubevault/operator"
+    },
+    {
+      "repo_url": "https://github.com/lrstanley/vault-unseal"
+    },
+    {
+      "repo_url": "https://github.com/jetstack/version-checker"
+    },
+    {
+      "repo_url": "https://github.com/arktec-quant/public-charts"
+    },
+    {
+      "repo_url": "https://github.com/william86370/rancher-vmware-chart"
+    },
+    {
+      "repo_url": "https://github.com/vngcloud/vks-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/vouch/vouch-proxy"
+    },
+    {
+      "repo_url": "https://github.com/vrijBRP/kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/wallarm/ingress-nextgen"
+    },
+    {
+      "repo_url": "https://github.com/wasmCloud/wasmCloud"
+    },
+    {
+      "repo_url": "https://github.com/danuk/k8s-webdav"
+    },
+    {
+      "repo_url": "https://github.com/whitesource/renovate-on-prem"
+    },
+    {
+      "repo_url": "https://github.com/slydlake/slymetrics"
+    },
+    {
+      "repo_url": "https://github.com/bentoml/yatai"
+    },
+    {
+      "repo_url": "https://github.com/djerfy/zabbix-kubernetes-discovery"
+    },
+    {
+      "repo_url": "https://github.com/proompteng/charts"
+    },
+    {
+      "repo_url": "https://github.com/ctripcorp/apollo"
+    },
+    {
+      "repo_url": "https://github.com/saidsef/argocd-applicationsets-services"
+    },
+    {
+      "repo_url": "https://github.com/astarte-platform/astarte-kubernetes-operator"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-sigs/aws-alb-ingress-controller"
+    },
+    {
+      "repo_url": "https://github.com/projectcalico/calico"
+    },
+    {
+      "repo_url": "https://github.com/architectminds/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/ansible-community/awx-operator-helm"
+    },
+    {
+      "repo_url": "https://github.com/microsoft/Docker-Provider"
+    },
+    {
+      "repo_url": "https://github.com/rezachalak/backup-zen"
+    },
+    {
+      "repo_url": "https://github.com/maximhq/bifrost"
+    },
+    {
+      "repo_url": "https://github.com/clemlesne/blue-agent"
+    },
+    {
+      "repo_url": "https://github.com/caddyserver/ingress"
+    },
+    {
+      "repo_url": "https://github.com/janeczku/calibre-web"
+    },
+    {
+      "repo_url": "https://github.com/barracuda-cloudgen-access/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/lablabs/cloudflare-exporter"
+    },
+    {
+      "repo_url": "https://github.com/en/apps"
+    },
+    {
+      "repo_url": "https://github.com/llmariner/llmariner"
+    },
+    {
+      "repo_url": "https://github.com/cisco-open/cluster-registry-controller"
+    },
+    {
+      "repo_url": "https://github.com/CodeTogether-Inc/CodeTogether-Deployment"
+    },
+    {
+      "repo_url": "https://github.com/chrisingenhaag/helm"
+    },
+    {
+      "repo_url": "https://github.com/k8s-at-home/library-charts"
+    },
+    {
+      "repo_url": "https://github.com/CommunitySolidServer/css-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/IBM/core-dump-handler"
+    },
+    {
+      "repo_url": "https://github.com/crate/crate"
+    },
+    {
+      "repo_url": "https://github.com/dask/dask-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/db-operator/db-operator"
+    },
+    {
+      "repo_url": "https://github.com/deepflowys/deepflow"
+    },
+    {
+      "repo_url": "https://github.com/apache/incubator-devlake-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/phntom/charts"
+    },
+    {
+      "repo_url": "https://github.com/volker-raschek/drone-charts"
+    },
+    {
+      "repo_url": "https://github.com/keyporttech/helm-dynamodb"
+    },
+    {
+      "repo_url": "https://github.com/FiloSottile/mkcert"
+    },
+    {
+      "repo_url": "https://github.com/heptiolabs/eventrouter"
+    },
+    {
+      "repo_url": "https://github.com/flowable/helm"
+    },
+    {
+      "repo_url": "https://github.com/fluent/fluentbit"
+    },
+    {
+      "repo_url": "https://github.com/Jackett/Jackett"
+    },
+    {
+      "repo_url": "https://github.com/saikatharryc/helm"
+    },
+    {
+      "repo_url": "https://github.com/rustrial/k8s-object-syncer"
+    },
+    {
+      "repo_url": "https://github.com/Soluto/Kamus"
+    },
+    {
+      "repo_url": "https://github.com/kanisterio/kanister"
+    },
+    {
+      "repo_url": "https://github.com/MGlants/charts"
+    },
+    {
+      "repo_url": "https://github.com/newsaktuell/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/kiali/kiali"
+    },
+    {
+      "repo_url": "https://github.com/nicolargo/klances"
+    },
+    {
+      "repo_url": "https://github.com/softonic/knative-serving-chart"
+    },
+    {
+      "repo_url": "https://github.com/kubearmor/KubeArmor"
+    },
+    {
+      "repo_url": "https://github.com/kubecost/docs"
+    },
+    {
+      "repo_url": "https://github.com/kubepattern/registry"
+    },
+    {
+      "repo_url": "https://github.com/ray-project/kuberay"
+    },
+    {
+      "repo_url": "https://github.com/kubefarm/kubernetes-in-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/kubenetworks/kubevpn"
+    },
+    {
+      "repo_url": "https://github.com/renoki-co/charts"
+    },
+    {
+      "repo_url": "https://github.com/SBRG/lifelike"
+    },
+    {
+      "repo_url": "https://github.com/lightstep/lightstep-satellite-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/TheLunarCompany/proxy-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/cndoit18/lxcfs-on-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/MakairaIO/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/linuxserver/docker-couchpotato"
+    },
+    {
+      "repo_url": "https://github.com/micro/helm"
+    },
+    {
+      "repo_url": "https://github.com/bitnami/bitnami-docker-minio"
+    },
+    {
+      "repo_url": "https://github.com/jetstack/cert-manager"
+    },
+    {
+      "repo_url": "https://github.com/mongodb/mongodb-atlas-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/konveyor/move2kube-ui"
+    },
+    {
+      "repo_url": "https://github.com/kiwigrid/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/flatcar/nebraska"
+    },
+    {
+      "repo_url": "https://github.com/newrelic/newrelic-pixie-integration"
+    },
+    {
+      "repo_url": "https://github.com/robjuz/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/NVIDIA/k8s-device-plugin"
+    },
+    {
+      "repo_url": "https://github.com/theotherp/nzbhydra2"
+    },
+    {
+      "repo_url": "https://github.com/sighupio/opa-notary-connector"
+    },
+    {
+      "repo_url": "https://github.com/openobserve/openobserve-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/itTrident/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/open-zaak/charts"
+    },
+    {
+      "repo_url": "https://github.com/pachyderm/pachyderm"
+    },
+    {
+      "repo_url": "https://github.com/Qovery/pleco"
+    },
+    {
+      "repo_url": "https://github.com/angelnu/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/pomerium/pomerium-helm"
+    },
+    {
+      "repo_url": "https://github.com/EugenMayer/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/Zooz/predator"
+    },
+    {
+      "repo_url": "https://github.com/prometheus/alertmanager"
+    },
+    {
+      "repo_url": "https://github.com/coreos/prometheus-operator"
+    },
+    {
+      "repo_url": "https://github.com/ivx/yet-another-cloudwatch-exporter"
+    },
+    {
+      "repo_url": "https://github.com/flachesis/proxysql"
+    },
+    {
+      "repo_url": "https://github.com/percona/percona-server-mongodb-operator"
+    },
+    {
+      "repo_url": "https://github.com/hmdmph/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/genuinetools/reg"
+    },
+    {
+      "repo_url": "https://github.com/mKeRix/room-assistant"
+    },
+    {
+      "repo_url": "https://github.com/roundcube/roundcubemail"
+    },
+    {
+      "repo_url": "https://github.com/rustrial/aws-eks-iam-auth-controller"
+    },
+    {
+      "repo_url": "https://github.com/container-storage-interface/spec"
+    },
+    {
+      "repo_url": "https://github.com/1Password/connect-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/SeldonIO/seldon-core"
+    },
+    {
+      "repo_url": "https://github.com/evilgn0me/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/athalabs/sleepyservice"
+    },
+    {
+      "repo_url": "https://github.com/streamnative/charts"
+    },
+    {
+      "repo_url": "https://github.com/soketi/charts"
+    },
+    {
+      "repo_url": "https://github.com/soneta/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/source-field/quick-start"
+    },
+    {
+      "repo_url": "https://github.com/banzaicloud/spark"
+    },
+    {
+      "repo_url": "https://github.com/InseeFrLab/jupyter-datascience"
+    },
+    {
+      "repo_url": "https://github.com/spartan-stratos/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/alibaba/SREWorks"
+    },
+    {
+      "repo_url": "https://github.com/statping/statping"
+    },
+    {
+      "repo_url": "https://github.com/evertrust/stream-helm"
+    },
+    {
+      "repo_url": "https://github.com/cetic/helm-thingsboard"
+    },
+    {
+      "repo_url": "https://github.com/aserto-dev/helm"
+    },
+    {
+      "repo_url": "https://github.com/tt-rss/tt-rss"
+    },
+    {
+      "repo_url": "https://github.com/unifi-poller/unifi-poller"
+    },
+    {
+      "repo_url": "https://github.com/heptio/velero"
+    },
+    {
+      "repo_url": "https://github.com/verik-systems/charts"
+    },
+    {
+      "repo_url": "https://github.com/cdr/code-server"
+    },
+    {
+      "repo_url": "https://github.com/vsphere-tmm/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/windmill-labs/windmill-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/shesselink81/wordpress-apache"
+    },
+    {
+      "repo_url": "https://github.com/nginx-proxy/nginx-proxy"
+    },
+    {
+      "repo_url": "https://github.com/nerdswords/yet-another-cloudwatch-exporter"
+    },
+    {
+      "repo_url": "https://github.com/elmanytas/zabbix-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/ferro-labs/ai-gateway"
+    },
+    {
+      "repo_url": "https://github.com/hpe-storage/cosi-driver"
+    },
+    {
+      "repo_url": "https://github.com/kuoss/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/jd-opensource/joylive-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/rapidfort/k8s-scanner"
+    },
+    {
+      "repo_url": "https://github.com/Kong/kong-operator"
+    },
+    {
+      "repo_url": "https://github.com/factorhouse/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/manishchaudhary101/kube-argus"
+    },
+    {
+      "repo_url": "https://github.com/devopstales/kubedash"
+    },
+    {
+      "repo_url": "https://github.com/Nan0C0de/kure-monitor"
+    },
+    {
+      "repo_url": "https://github.com/uselagoon/remote-controller"
+    },
+    {
+      "repo_url": "https://github.com/uselagoon/lagoon-charts"
+    },
+    {
+      "repo_url": "https://github.com/amazeeio/charts"
+    },
+    {
+      "repo_url": "https://github.com/amazeeio/lagoon"
+    },
+    {
+      "repo_url": "https://github.com/lightrun-platform/lightrun-k8s-operator"
+    },
+    {
+      "repo_url": "https://github.com/linode/linode-cosi-driver"
+    },
+    {
+      "repo_url": "https://github.com/piraeusdatastore/linstor-affinity-controller"
+    },
+    {
+      "repo_url": "https://github.com/lucenia/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/maptiler/maptiler-server-kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/marmotdata/marmot"
+    },
+    {
+      "repo_url": "https://github.com/buehler/dotnet-operator-sdk"
+    },
+    {
+      "repo_url": "https://github.com/netobserv/netobserv-operator"
+    },
+    {
+      "repo_url": "https://github.com/nginxinc/nap-dos-arbitrator-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/kubernetes-csi/external-snapshotter"
+    },
+    {
+      "repo_url": "https://github.com/Obsyk/obsyk-operator"
+    },
+    {
+      "repo_url": "https://github.com/o7studios/octopus"
+    },
+    {
+      "repo_url": "https://github.com/ahmetb/kubectx"
+    },
+    {
+      "repo_url": "https://github.com/grycap/oscar"
+    },
+    {
+      "repo_url": "https://github.com/hoverkraft-tech/ovh-snapshoter"
+    },
+    {
+      "repo_url": "https://github.com/makeplane/plane-ee"
+    },
+    {
+      "repo_url": "https://github.com/zystem-io/zymtrace-charts"
+    },
+    {
+      "repo_url": "https://github.com/SergioFernandezCordero/raponchi"
+    },
+    {
+      "repo_url": "https://github.com/ravendb/ravendb-operator"
+    },
+    {
+      "repo_url": "https://github.com/thomaspoignant/go-feature-flag"
+    },
+    {
+      "repo_url": "https://github.com/reportportal/kubernetes"
+    },
+    {
+      "repo_url": "https://github.com/cs3org/reva"
+    },
+    {
+      "repo_url": "https://github.com/rocketadmin/rocketadmin"
+    },
+    {
+      "repo_url": "https://github.com/sablierapp/sablier"
+    },
+    {
+      "repo_url": "https://github.com/Keyfactor/signserver-community-helm"
+    },
+    {
+      "repo_url": "https://github.com/sigscale/cse"
+    },
+    {
+      "repo_url": "https://github.com/sigscale/ocs"
+    },
+    {
+      "repo_url": "https://github.com/smarter-project/documentation"
+    },
+    {
+      "repo_url": "https://github.com/burningalchemist/sql_exporter"
+    },
+    {
+      "repo_url": "https://github.com/stenic/sql-operator"
+    },
+    {
+      "repo_url": "https://github.com/switcherapi/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/wallarm/sysbindings"
+    },
+    {
+      "repo_url": "https://github.com/dollarshaveclub/thermite"
+    },
+    {
+      "repo_url": "https://github.com/traefik/traefikee-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/traefik/traefik-hub-helm-chart"
+    },
+    {
+      "repo_url": "https://github.com/zazuko/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/vultr/vultr-cloud-controller-manager"
+    },
+    {
+      "repo_url": "https://github.com/stenic/well-known"
+    },
+    {
+      "repo_url": "https://github.com/zulip/docker-zulip"
+    },
+    {
+      "repo_url": "https://github.com/mjpitz/mjpitz"
+    },
+    {
+      "repo_url": "https://github.com/WGBH-MLA/dream-aapb"
+    },
+    {
+      "repo_url": "https://github.com/ckotzbauer/access-manager"
+    },
+    {
+      "repo_url": "https://github.com/aceobservability/ace"
+    },
+    {
+      "repo_url": "https://github.com/actualbudget/actual"
+    },
+    {
+      "repo_url": "https://github.com/agola-io/agola"
+    },
+    {
+      "repo_url": "https://github.com/danchev/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/f3k-tech/helm"
+    },
+    {
+      "repo_url": "https://github.com/akeylesslabs/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/getanteon/alaz"
+    },
+    {
+      "repo_url": "https://github.com/julb/alertmanager-gchat-integration"
+    },
+    {
+      "repo_url": "https://github.com/alexbakker/alertmanager-ntfy"
+    },
+    {
+      "repo_url": "https://github.com/IvanJosipovic/alertmanager-receiver-azdo"
+    },
+    {
+      "repo_url": "https://github.com/getanteon/anteon"
+    },
+    {
+      "repo_url": "https://github.com/antrea-io/antrea"
+    },
+    {
+      "repo_url": "https://github.com/Labs64/labs64.io-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/synkube/charts"
+    },
+    {
+      "repo_url": "https://github.com/scholtz/AlgorandNodes"
+    },
+    {
+      "repo_url": "https://github.com/hhyo/Archery"
+    },
+    {
+      "repo_url": "https://github.com/ntppool/archiver"
+    },
+    {
+      "repo_url": "https://github.com/oguzhan-yilmaz/argocd-backup-s3"
+    },
+    {
+      "repo_url": "https://github.com/acidsugarx/helm-open"
+    },
+    {
+      "repo_url": "https://github.com/logicmonitor/k8s-argus"
+    },
+    {
+      "repo_url": "https://github.com/SickHub/ark-server-charts"
+    },
+    {
+      "repo_url": "https://github.com/ark-7/arkLB"
+    },
+    {
+      "repo_url": "https://github.com/ParminCloud/arvancloud-certmanager-issuer"
+    },
+    {
+      "repo_url": "https://github.com/astradns/astradns-operator"
+    },
+    {
+      "repo_url": "https://github.com/ellie/atuin"
+    },
+    {
+      "repo_url": "https://github.com/emberstack/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/mohammadv184/cert-manager-webhook-arvancloud"
+    },
+    {
+      "repo_url": "https://github.com/tazthemaniac/cert-manager-webhook-infoblox"
+    },
+    {
+      "repo_url": "https://github.com/ionos-cloud/cert-manager-webhook-ionos-cloud"
+    },
+    {
+      "repo_url": "https://github.com/chronicleprotocol/challenger"
+    },
+    {
+      "repo_url": "https://github.com/cotzo/chartpack"
+    },
+    {
+      "repo_url": "https://github.com/diillson/chatcli"
+    },
+    {
+      "repo_url": "https://github.com/chibisafe/chibisafe"
+    },
+    {
+      "repo_url": "https://github.com/amikos-tech/chromadb-chart"
+    },
+    {
+      "repo_url": "https://github.com/wenisch-tech/ChronoReaper"
+    },
+    {
+      "repo_url": "https://github.com/LeoColomb/charts"
+    },
+    {
+      "repo_url": "https://github.com/backbay-labs/clawdstrike"
+    },
+    {
+      "repo_url": "https://github.com/clearml/clearml-helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/clearml/clearml-serving"
+    },
+    {
+      "repo_url": "https://github.com/ClickHouse/ClickHouse"
+    },
+    {
+      "repo_url": "https://github.com/Altinity/clickhouse-backup"
+    },
+    {
+      "repo_url": "https://github.com/codechem/helm"
+    },
+    {
+      "repo_url": "https://github.com/livepeer/cloudflared-ingress-operator"
+    },
+    {
+      "repo_url": "https://github.com/heathcliff26/cloudflare-dyndns"
+    },
+    {
+      "repo_url": "https://github.com/lexfrei/charts"
+    },
+    {
+      "repo_url": "https://github.com/clowder-framework/clowder2"
+    },
+    {
+      "repo_url": "https://github.com/CloudNativeWorks/clustereye"
+    },
+    {
+      "repo_url": "https://github.com/encircle360-oss/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/cloudnative-pg/cnpg-sandbox"
+    },
+    {
+      "repo_url": "https://github.com/coder/observability"
+    },
+    {
+      "repo_url": "https://github.com/logicmonitor/k8s-collectorset-controller"
+    },
+    {
+      "repo_url": "https://github.com/wasilak/common-chart"
+    },
+    {
+      "repo_url": "https://github.com/concourse/concourse"
+    },
+    {
+      "repo_url": "https://github.com/cloudfoundry/stratos"
+    },
+    {
+      "repo_url": "https://github.com/foomo/helm-charts"
+    },
+    {
+      "repo_url": "https://github.com/firasmosbehi/continuous-monitoring-chart"
+    }
+  ]
+}
