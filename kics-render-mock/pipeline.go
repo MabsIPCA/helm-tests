@@ -72,12 +72,48 @@ func updateName(files []*chart.File, c *chart.Chart, name string) []*chart.File 
 	return files
 }
 
-// runOnce and splitManifestYAML will be added in Tasks 4 and 5.
-// Add placeholder references to suppress unused import errors:
-var _ = action.NewInstall
-var _ = loader.Load
-var _ chartutil.VersionSet
-var _ getter.Providers
-var _ = values.Options{}
-var _ = log.SetOutput
-var _ = io.Discard
+// runOnce runs the KICS-faithful Helm pipeline once for the given chart path
+// and values options. When debugMode is true, cfg.Log is wired to collect log
+// lines and helmSettings.Debug is set to true for the duration of the call.
+//
+// Even when err != nil, rel may be non-nil (partial render before failure).
+func runOnce(chartPath string, valOpts *values.Options, debugMode bool) renderResult {
+	var logs []string
+
+	cfg := new(action.Configuration)
+	if debugMode {
+		cfg.Log = func(format string, v ...interface{}) {
+			logs = append(logs, fmt.Sprintf(format, v...))
+		}
+		helmSettings.Debug = true
+		defer func() { helmSettings.Debug = false }()
+	}
+
+	client := action.NewInstall(cfg)
+	client.DryRun = true
+	client.ReleaseName = "kics-helm"
+	client.Replace = true
+	client.ClientOnly = true
+	client.APIVersions = chartutil.VersionSet([]string{})
+	client.IncludeCRDs = false
+	client.Namespace = "kics-namespace"
+
+	log.SetOutput(io.Discard)
+	defer log.SetOutput(nil)
+
+	p := getter.All(helmSettings)
+	vals, err := valOpts.MergeValues(p)
+	if err != nil {
+		return renderResult{err: err, logs: logs}
+	}
+
+	chartReq, err := loader.Load(chartPath)
+	if err != nil {
+		return renderResult{err: err, logs: logs}
+	}
+
+	chartReq = setID(chartReq)
+
+	rel, runErr := client.Run(chartReq, vals)
+	return renderResult{rel: rel, err: runErr, logs: logs}
+}
