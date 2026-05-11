@@ -1,0 +1,146 @@
+{
+  "suite": "render_problems",
+  "testNumber": 14,
+  "testName": "Helper Template Errors",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-14-helper-template",
+  "renders": [
+    {
+      "toggle": "helperNilPointer",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testHelperNilPointer=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-14-helper-template/templates/helper-template-test.yaml:14:22: executing \"test-14-helper-template/templates/helper-template-test.yaml\" at \u003cinclude \"helpers.nilPointer\" .\u003e: error calling include: template: test-14-helper-template/templates/_helpers.tpl:11:10: executing \"helpers.nilPointer\" at \u003c.Values.nilHelper.nested.value\u003e: nil pointer evaluating interface {}.nested",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-14-helper-template/templates/helper-template-test.yaml:14:22: executing \"test-14-helper-template/templates/helper-template-test.yaml\" at \u003cinclude \"helpers.nilPointer\" .\u003e: error calling include: template: test-14-helper-template/templates/_helpers.tpl:11:10: executing \"helpers.nilPointer\" at \u003c.Values.nilHelper.nested.value\u003e: nil pointer evaluating interface {}.nested",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "helperRequired",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testHelperRequired=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "execution error at (test-14-helper-template/templates/helper-template-test.yaml:19:20): missingRequiredField is required but was not provided",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "execution error at (test-14-helper-template/templates/helper-template-test.yaml:19:20): missingRequiredField is required but was not provided",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "helperRangeOverScalar",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testHelperRangeOverScalar=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-14-helper-template/templates/helper-template-test.yaml:24:27: executing \"test-14-helper-template/templates/helper-template-test.yaml\" at \u003cinclude \"helpers.rangeOverScalar\" .\u003e: error calling include: template: test-14-helper-template/templates/_helpers.tpl:25:17: executing \"helpers.rangeOverScalar\" at \u003c.Values.port\u003e: range can't iterate over 8080",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-14-helper-template/templates/helper-template-test.yaml:24:27: executing \"test-14-helper-template/templates/helper-template-test.yaml\" at \u003cinclude \"helpers.rangeOverScalar\" .\u003e: error calling include: template: test-14-helper-template/templates/_helpers.tpl:25:17: executing \"helpers.rangeOverScalar\" at \u003c.Values.port\u003e: range can't iterate over 8080",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "helperDivZero",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testHelperDivZero=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-14-helper-template/templates/helper-template-test.yaml:29:19: executing \"test-14-helper-template/templates/helper-template-test.yaml\" at \u003cinclude \"helpers.divZero\" .\u003e: error calling include: template: test-14-helper-template/templates/_helpers.tpl:34:11: executing \"helpers.divZero\" at \u003cdiv 100 0\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-14-helper-template/templates/helper-template-test.yaml:29:19: executing \"test-14-helper-template/templates/helper-template-test.yaml\" at \u003cinclude \"helpers.divZero\" .\u003e: error calling include: template: test-14-helper-template/templates/_helpers.tpl:34:11: executing \"helpers.divZero\" at \u003cdiv 100 0\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "helperMissingInclude",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testHelperMissingInclude=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-14-helper-template/templates/helper-template-test.yaml:34:26: executing \"test-14-helper-template/templates/helper-template-test.yaml\" at \u003cinclude \"helpers.missingInclude\" .\u003e: error calling include: template: test-14-helper-template/templates/_helpers.tpl:41:3: executing \"helpers.missingInclude\" at \u003cinclude \"non.existent.helper.template\" .\u003e: error calling include: template: no template \"non.existent.helper.template\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-14-helper-template/templates/helper-template-test.yaml:34:26: executing \"test-14-helper-template/templates/helper-template-test.yaml\" at \u003cinclude \"helpers.missingInclude\" .\u003e: error calling include: template: test-14-helper-template/templates/_helpers.tpl:41:3: executing \"helpers.missingInclude\" at \u003cinclude \"non.existent.helper.template\" .\u003e: error calling include: template: no template \"non.existent.helper.template\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "helperExplicitFail",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testHelperExplicitFail=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "execution error at (test-14-helper-template/templates/helper-template-test.yaml:39:24): This helper explicitly fails with a custom message",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "execution error at (test-14-helper-template/templates/helper-template-test.yaml:39:24): This helper explicitly fails with a custom message",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    }
+  ]
+}

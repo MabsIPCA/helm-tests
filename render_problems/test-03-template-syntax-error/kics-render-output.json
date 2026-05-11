@@ -1,0 +1,7 @@
+{
+  "suite": "render_problems",
+  "testNumber": 6,
+  "testName": "Template Syntax Errors",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-03-template-syntax-error",
+  "renders": []
+}

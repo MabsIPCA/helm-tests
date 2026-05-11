@@ -1,0 +1,868 @@
+{
+  "suite": "render_problems",
+  "testNumber": 8,
+  "testName": "Division by Zero Errors",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-05-division-by-zero",
+  "renders": [
+    {
+      "toggle": "divByZero",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByZero=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "divByZero",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByZero=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "divByZero",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByZero=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "divByZero",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByZero=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "divByZero",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByZero=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "divByZero",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByZero=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:14:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv $testData 0\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "modByZero",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testModByZero=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "modByZero",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testModByZero=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "modByZero",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testModByZero=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "modByZero",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testModByZero=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "modByZero",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testModByZero=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "modByZero",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testModByZero=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:22:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod $testData 0\u003e: error calling mod: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "divByData",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByData=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:30:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv 100 $testData\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:30:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv 100 $testData\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "divByData",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByData=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:30:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv 100 $testData\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:30:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv 100 $testData\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "divByData",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByData=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n  divByDataResult: \"2\"\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  divByDataResult: \"2\"\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n  divByDataResult: \"2\"\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  divByDataResult: \"2\"\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "divByData",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByData=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n  divByDataResult: \"100\"\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  divByDataResult: \"100\"\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n  divByDataResult: \"100\"\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  divByDataResult: \"100\"\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "divByData",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByData=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:30:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv 100 $testData\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:30:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv 100 $testData\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "divByData",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testDivByData=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:30:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv 100 $testData\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:30:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cdiv 100 $testData\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "modByData",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testModByData=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:38:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod 100 $testData\u003e: error calling mod: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:38:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod 100 $testData\u003e: error calling mod: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "modByData",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testModByData=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:38:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod 100 $testData\u003e: error calling mod: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:38:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod 100 $testData\u003e: error calling mod: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "modByData",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testModByData=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n  modByDataResult: \"16\"\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  modByDataResult: \"16\"\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n  modByDataResult: \"16\"\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  modByDataResult: \"16\"\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "modByData",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testModByData=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n  modByDataResult: \"0\"\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  modByDataResult: \"0\"\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n  modByDataResult: \"0\"\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  modByDataResult: \"0\"\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "modByData",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testModByData=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:38:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod 100 $testData\u003e: error calling mod: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:38:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod 100 $testData\u003e: error calling mod: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "modByData",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testModByData=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:38:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod 100 $testData\u003e: error calling mod: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-08-division-by-zero/templates/division-by-zero-test.yaml:38:22: executing \"test-08-division-by-zero/templates/division-by-zero-test.yaml\" at \u003cmod 100 $testData\u003e: error calling mod: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "divDataByTwo",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testDivDataByTwo=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"0\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"0\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "divDataByTwo",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testDivDataByTwo=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"0\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"0\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "divDataByTwo",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testDivDataByTwo=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"21\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"21\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"21\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"21\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "divDataByTwo",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testDivDataByTwo=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"0\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"0\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "divDataByTwo",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testDivDataByTwo=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"0\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"0\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "divDataByTwo",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testDivDataByTwo=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"0\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-division-test\r\ndata:\r\n  # ==========================================\r\n  # Division by zero\r\n  # ==========================================\r\n  # Test: divByZero - dividing data by zero\r\n\r\n  # ==========================================\r\n  # Modulo by zero\r\n  # ==========================================\r\n  # Test: modByZero - modulo data by zero\r\n\r\n  # ==========================================\r\n  # Division of data by data (self-division)\r\n  # ==========================================\r\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\r\n\r\n  # ==========================================\r\n  # Modulo of data by data\r\n  # ==========================================\r\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\r\n\r\n  # ==========================================\r\n  # Division with data as dividend\r\n  # ==========================================\r\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\r\n  divDataByTwoResult: \"0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-08-division-by-zero/templates/division-by-zero-test.yaml",
+            "content": "\n# Source: test-08-division-by-zero/templates/division-by-zero-test.yaml\n# Test: Division by zero - math errors with different data types\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  divDataByTwoResult: \"0\"\n",
+            "originalContent": "# Test: Division by zero - math errors with different data types\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-division-test\ndata:\n  # ==========================================\n  # Division by zero\n  # ==========================================\n  # Test: divByZero - dividing data by zero\n  {{- if .Values.testDivByZero }}\n  divByZeroResult: {{ div $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo by zero\n  # ==========================================\n  # Test: modByZero - modulo data by zero\n  {{- if .Values.testModByZero }}\n  modByZeroResult: {{ mod $testData 0 | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division of data by data (self-division)\n  # ==========================================\n  # Test: divByData - dividing a constant by data (zero data = div by zero)\n  {{- if .Values.testDivByData }}\n  divByDataResult: {{ div 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Modulo of data by data\n  # ==========================================\n  # Test: modByData - modulo a constant by data (zero data = mod by zero)\n  {{- if .Values.testModByData }}\n  modByDataResult: {{ mod 100 $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Division with data as dividend\n  # ==========================================\n  # Test: divDataByTwo - dividing data by 2 (type mismatch for non-numbers)\n  {{- if .Values.testDivDataByTwo }}\n  divDataByTwoResult: {{ div $testData 2 | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    }
+  ]
+}

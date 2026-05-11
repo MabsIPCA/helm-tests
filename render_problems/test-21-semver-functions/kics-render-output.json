@@ -1,0 +1,1272 @@
+{
+  "suite": "render_problems",
+  "testNumber": 21,
+  "testName": "Semver Function Errors",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-21-semver-functions",
+  "renders": [
+    {
+      "toggle": "semver",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testSemver=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:14:25: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:14:25: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semver",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testSemver=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n  semverValue: \"\\\"1.2.3\\\"\"\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  semverValue: \"\\\"1.2.3\\\"\"\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n  semverValue: \"\\\"1.2.3\\\"\"\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  semverValue: \"\\\"1.2.3\\\"\"\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "semver",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testSemver=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:14:25: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:14:25: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semver",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testSemver=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:14:25: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:14:25: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semver",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testSemver=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:14:25: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:14:25: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semver",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testSemver=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:14:25: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:14:25: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompare",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompare=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:22:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:22:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompare",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompare=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n  semverCompareValue: \"true\"\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  semverCompareValue: \"true\"\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n  semverCompareValue: \"true\"\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  semverCompareValue: \"true\"\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "semverCompare",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompare=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:22:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:22:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompare",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompare=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:22:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:22:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompare",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompare=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:22:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:22:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompare",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompare=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:22:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:22:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareBasic",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareBasic=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:30:57: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:30:57: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareBasic",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareBasic=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n  semverCompareBasic: \"true\"\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  semverCompareBasic: \"true\"\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n  semverCompareBasic: \"true\"\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  semverCompareBasic: \"true\"\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "semverCompareBasic",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareBasic=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:30:57: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:30:57: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareBasic",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareBasic=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:30:57: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:30:57: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareBasic",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareBasic=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:30:57: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:30:57: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareBasic",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareBasic=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:30:57: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:30:57: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverComparePrerelease",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverComparePrerelease=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:38:59: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:38:59: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverComparePrerelease",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverComparePrerelease=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n  semverComparePrerelease: \"true\"\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  semverComparePrerelease: \"true\"\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n  semverComparePrerelease: \"true\"\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  semverComparePrerelease: \"true\"\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "semverComparePrerelease",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverComparePrerelease=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:38:59: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:38:59: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverComparePrerelease",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverComparePrerelease=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:38:59: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:38:59: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverComparePrerelease",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverComparePrerelease=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:38:59: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:38:59: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverComparePrerelease",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverComparePrerelease=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:38:59: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:38:59: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareHyphen",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareHyphen=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:46:56: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:46:56: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareHyphen",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareHyphen=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n  semverCompareHyphen: \"true\"\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  semverCompareHyphen: \"true\"\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n  semverCompareHyphen: \"true\"\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  semverCompareHyphen: \"true\"\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "semverCompareHyphen",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareHyphen=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:46:56: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:46:56: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareHyphen",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareHyphen=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:46:56: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:46:56: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareHyphen",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareHyphen=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:46:56: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:46:56: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareHyphen",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareHyphen=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:46:56: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:46:56: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareWildcard",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareWildcard=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:54:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:54:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareWildcard",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareWildcard=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n  semverCompareWildcard: \"true\"\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  semverCompareWildcard: \"true\"\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n  semverCompareWildcard: \"true\"\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  semverCompareWildcard: \"true\"\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "semverCompareWildcard",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareWildcard=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:54:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:54:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareWildcard",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareWildcard=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:54:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:54:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareWildcard",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareWildcard=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:54:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:54:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareWildcard",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareWildcard=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:54:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:54:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareTilde",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareTilde=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:62:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:62:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareTilde",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareTilde=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n  semverCompareTilde: \"true\"\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  semverCompareTilde: \"true\"\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n  semverCompareTilde: \"true\"\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  semverCompareTilde: \"true\"\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "semverCompareTilde",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareTilde=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:62:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:62:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareTilde",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareTilde=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:62:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:62:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareTilde",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareTilde=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:62:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:62:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareTilde",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareTilde=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:62:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:62:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareCaret",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareCaret=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:70:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:70:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareCaret",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareCaret=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\r\n  semverCompareCaret: \"true\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  semverCompareCaret: \"true\"\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-semver-test\r\ndata:\r\n  # ==========================================\r\n  # Semver parsing\r\n  # ==========================================\r\n  # Test: semver - parses a semver string\r\n\r\n  # ==========================================\r\n  # Basic semverCompare\r\n  # ==========================================\r\n  # Test: semverCompare - basic comparison\r\n\r\n  # ==========================================\r\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\r\n  # ==========================================\r\n  # Test: semverCompare with basic operators\r\n\r\n  # ==========================================\r\n  # Prerelease Versions\r\n  # ==========================================\r\n  # Test: semverCompare with prerelease\r\n\r\n  # ==========================================\r\n  # Hyphen Range Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\r\n\r\n  # ==========================================\r\n  # Wildcards In Comparisons\r\n  # ==========================================\r\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\r\n\r\n  # ==========================================\r\n  # Tilde Range Comparisons (Patch)\r\n  # ==========================================\r\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\r\n\r\n  # ==========================================\r\n  # Caret Range Comparisons (Major)\r\n  # ==========================================\r\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\r\n  semverCompareCaret: \"true\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-semver/templates/semver-test.yaml",
+            "content": "\n# Source: test-semver/templates/semver-test.yaml\n# Test: Semver function errors - comprehensive testing of semantic versioning functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  semverCompareCaret: \"true\"\n",
+            "originalContent": "# Test: Semver function errors - comprehensive testing of semantic versioning functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-semver-test\ndata:\n  # ==========================================\n  # Semver parsing\n  # ==========================================\n  # Test: semver - parses a semver string\n  {{- if .Values.testSemver }}\n  semverValue: {{ semver $testData | toJson | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic semverCompare\n  # ==========================================\n  # Test: semverCompare - basic comparison\n  {{- if .Values.testSemverCompare }}\n  semverCompareValue: {{ semverCompare \"\u003e1.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Basic Comparisons (=, !=, \u003e, \u003c, \u003e=, \u003c=)\n  # ==========================================\n  # Test: semverCompare with basic operators\n  {{- if .Values.testSemverCompareBasic }}\n  semverCompareBasic: {{ semverCompare \"\u003e=1.0.0, \u003c2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Prerelease Versions\n  # ==========================================\n  # Test: semverCompare with prerelease\n  {{- if .Values.testSemverComparePrerelease }}\n  semverComparePrerelease: {{ semverCompare \"\u003e1.0.0-alpha\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Hyphen Range Comparisons\n  # ==========================================\n  # Test: semverCompare with hyphen range (1.0.0 - 2.0.0)\n  {{- if .Values.testSemverCompareHyphen }}\n  semverCompareHyphen: {{ semverCompare \"1.0.0 - 2.0.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Wildcards In Comparisons\n  # ==========================================\n  # Test: semverCompare with wildcards (1.x, 1.2.x, *)\n  {{- if .Values.testSemverCompareWildcard }}\n  semverCompareWildcard: {{ semverCompare \"1.x\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Tilde Range Comparisons (Patch)\n  # ==========================================\n  # Test: semverCompare with tilde (~1.2.3 allows patch changes)\n  {{- if .Values.testSemverCompareTilde }}\n  semverCompareTilde: {{ semverCompare \"~1.2.0\" $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Caret Range Comparisons (Major)\n  # ==========================================\n  # Test: semverCompare with caret (^1.2.3 allows minor and patch changes)\n  {{- if .Values.testSemverCompareCaret }}\n  semverCompareCaret: {{ semverCompare \"^1.0.0\" $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "semverCompareCaret",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareCaret=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:70:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:70:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareCaret",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareCaret=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:70:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:70:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareCaret",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareCaret=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:70:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:70:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "semverCompareCaret",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testSemverCompareCaret=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-semver/templates/semver-test.yaml:70:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-semver/templates/semver-test.yaml:70:48: executing \"test-semver/templates/semver-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "suite": "override_tests_suite",
+  "testNumber": 4,
+  "testName": "Type Changes During Override",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-04-type-changes",
+  "renders": [
+    {
+      "caseName": "scalar-type-changes",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-04-type-changes\\values-type-change-1.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    booleanValue: \"yes\"\n    floatValue: 3.14\n    integerValue: forty-two\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue:\n      key: now-has-value\n    stringValue: 12345\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-type-changes/templates/values-display.yaml",
+            "content": "\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    booleanValue: \"yes\"\n    floatValue: 3.14\n    integerValue: forty-two\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue:\n      key: now-has-value\n    stringValue: 12345\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    booleanValue: \"yes\"\n    floatValue: 3.14\n    integerValue: forty-two\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue:\n      key: now-has-value\n    stringValue: 12345\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-type-changes/templates/values-display.yaml",
+            "content": "\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    booleanValue: \"yes\"\n    floatValue: 3.14\n    integerValue: forty-two\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue:\n      key: now-has-value\n    stringValue: 12345\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "collection-type-changes",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-04-type-changes\\values-type-change-2.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    booleanValue: true\n    floatValue: 3.14\n    integerValue: 42\n    listValue:\n      first: item1\n      second: item2\n    mapValue:\n    - key1-value1\n    - key2-value2\n    nestedMap: flattened-value\n    nullValue: null\n    stringValue: original-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-type-changes/templates/values-display.yaml",
+            "content": "\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    booleanValue: true\n    floatValue: 3.14\n    integerValue: 42\n    listValue:\n      first: item1\n      second: item2\n    mapValue:\n    - key1-value1\n    - key2-value2\n    nestedMap: flattened-value\n    nullValue: null\n    stringValue: original-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    booleanValue: true\n    floatValue: 3.14\n    integerValue: 42\n    listValue:\n      first: item1\n      second: item2\n    mapValue:\n    - key1-value1\n    - key2-value2\n    nestedMap: flattened-value\n    nullValue: null\n    stringValue: original-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-type-changes/templates/values-display.yaml",
+            "content": "\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    booleanValue: true\n    floatValue: 3.14\n    integerValue: 42\n    listValue:\n      first: item1\n      second: item2\n    mapValue:\n    - key1-value1\n    - key2-value2\n    nestedMap: flattened-value\n    nullValue: null\n    stringValue: original-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "null-override-all",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-04-type-changes\\values-null-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue: null\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-type-changes/templates/values-display.yaml",
+            "content": "\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue: null\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue: null\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-type-changes/templates/values-display.yaml",
+            "content": "\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue: null\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "chained-type-changes",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-04-type-changes\\values-type-change-1.yaml",
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-04-type-changes\\values-null-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue:\n      key: now-has-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-type-changes/templates/values-display.yaml",
+            "content": "\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue:\n      key: now-has-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue:\n      key: now-has-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-type-changes/templates/values-display.yaml",
+            "content": "\n# Source: test-type-changes/templates/values-display.yaml\nall-values: |\n    nestedMap:\n      level1:\n        level2: nested-value\n    nullValue:\n      key: now-has-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    }
+  ]
+}
