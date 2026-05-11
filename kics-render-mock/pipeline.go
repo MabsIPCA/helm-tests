@@ -117,3 +117,60 @@ func runOnce(chartPath string, valOpts *values.Options, debugMode bool) renderRe
 	rel, runErr := client.Run(chartReq, vals)
 	return renderResult{rel: rel, err: runErr, logs: logs}
 }
+
+// splitManifestYAML mirrors KICS's splitManifestYAML: splits rel.Manifest by
+// "---" separators, maps each section back to its source template file, and
+// returns structured entries. originalContent is the post-setID template source.
+func splitManifestYAML(rel *release.Release) []SplitManifestEntry {
+	// Build path→originalContent map using the same updateName logic as KICS.
+	sources := updateName(nil, rel.Chart, rel.Chart.Name())
+	origData := make(map[string][]byte, len(sources))
+	for _, f := range sources {
+		key := filepath.ToSlash(f.Name) // manifest uses forward slashes
+		origData[key] = []byte(strings.ReplaceAll(string(f.Data), "\r", ""))
+	}
+
+	var entries []SplitManifestEntry
+	for _, section := range strings.Split(rel.Manifest, "---") {
+		section = strings.ReplaceAll(section, "\r", "")
+		if strings.TrimSpace(section) == "" {
+			continue
+		}
+
+		lines := strings.Split(section, "\n")
+
+		// Extract # Source: path
+		path := ""
+		for _, l := range lines {
+			if strings.HasPrefix(l, "# Source: ") {
+				path = strings.TrimSpace(strings.TrimPrefix(l, "# Source: "))
+				break
+			}
+		}
+		if path == "" {
+			continue
+		}
+
+		orig, ok := origData[path]
+		if !ok {
+			continue
+		}
+
+		// Extract KICS split ID if present
+		splitID := ""
+		for _, l := range lines {
+			if strings.Contains(l, kicsHelmID) {
+				splitID = strings.TrimSpace(l)
+				break
+			}
+		}
+
+		entries = append(entries, SplitManifestEntry{
+			Path:            path,
+			Content:         section,
+			OriginalContent: string(orig),
+			SplitID:         splitID,
+		})
+	}
+	return entries
+}

@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	"helm.sh/helm/v3/pkg/chart"
+	"helm.sh/helm/v3/pkg/release"
 )
 
 func TestAddID_InjectsMarkerBeforeAPIVersion(t *testing.T) {
@@ -42,5 +43,48 @@ func TestAddID_MultipleAPIVersions(t *testing.T) {
 	}
 	if !strings.Contains(content, kicsHelmID) {
 		t.Error("missing additional KICS_HELM_ID marker")
+	}
+}
+
+func TestSplitManifestYAML_SingleTemplate(t *testing.T) {
+	templateSrc := "# KICS_HELM_ID_0:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: test"
+	rel := &release.Release{
+		Manifest: "---\n# Source: mychart/templates/test.yaml\n# KICS_HELM_ID_0:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: test\n",
+		Chart: &chart.Chart{
+			Metadata: &chart.Metadata{Name: "mychart"},
+			Templates: []*chart.File{
+				{Name: "templates/test.yaml", Data: []byte(templateSrc)},
+			},
+		},
+	}
+
+	entries := splitManifestYAML(rel)
+
+	if len(entries) != 1 {
+		t.Fatalf("expected 1 entry, got %d", len(entries))
+	}
+	e := entries[0]
+	if e.Path != "mychart/templates/test.yaml" {
+		t.Errorf("Path: got %q", e.Path)
+	}
+	if e.SplitID != "# KICS_HELM_ID_0:" {
+		t.Errorf("SplitID: got %q", e.SplitID)
+	}
+	if !strings.Contains(e.OriginalContent, "KICS_HELM_ID_0:") {
+		t.Errorf("OriginalContent should contain ID marker, got: %q", e.OriginalContent)
+	}
+}
+
+func TestSplitManifestYAML_EmptyManifest(t *testing.T) {
+	rel := &release.Release{
+		Manifest: "",
+		Chart: &chart.Chart{
+			Metadata:  &chart.Metadata{Name: "mychart"},
+			Templates: []*chart.File{},
+		},
+	}
+	entries := splitManifestYAML(rel)
+	if len(entries) != 0 {
+		t.Errorf("expected 0 entries, got %d", len(entries))
 	}
 }
