@@ -100,3 +100,89 @@ func buildOverrideTestsInvocations(cfg *testConfig, testDir string) []invocation
 	}
 	return invs
 }
+
+func toStandardResult(res renderResult) RunResult {
+	r := RunResult{SplitManifests: []SplitManifestEntry{}}
+	if res.err != nil {
+		errStr := res.err.Error()
+		r.Error = &errStr
+		if res.rel != nil && res.rel.Manifest != "" {
+			r.PartialManifest = &res.rel.Manifest
+		}
+		return r
+	}
+	if res.rel != nil {
+		r.RawManifest = &res.rel.Manifest
+		r.SplitManifests = splitManifestYAML(res.rel)
+	}
+	return r
+}
+
+func toDebugResult(res renderResult) DebugRunResult {
+	logs := res.logs
+	if logs == nil {
+		logs = []string{}
+	}
+	r := DebugRunResult{DebugLogs: logs, SplitManifests: []SplitManifestEntry{}}
+	if res.err != nil {
+		errStr := res.err.Error()
+		r.Error = &errStr
+		if res.rel != nil && res.rel.Manifest != "" {
+			r.PartialManifest = &res.rel.Manifest
+		}
+		return r
+	}
+	if res.rel != nil {
+		r.RawManifest = &res.rel.Manifest
+		r.SplitManifests = splitManifestYAML(res.rel)
+	}
+	return r
+}
+
+func buildRenderEntry(inv invocation, stdRes, dbgRes renderResult) RenderEntry {
+	vf := inv.valOpts.ValueFiles
+	if vf == nil {
+		vf = []string{}
+	}
+	vals := inv.valOpts.Values
+	if vals == nil {
+		vals = []string{}
+	}
+	return RenderEntry{
+		Toggle:   inv.toggle,
+		DataType: inv.dataType,
+		CaseName: inv.caseName,
+		ValuesOptions: ValuesOptionsSummary{
+			Values:       vals,
+			ValueFiles:   vf,
+			StringValues: inv.valOpts.StringValues,
+		},
+		Standard: toStandardResult(stdRes),
+		Debug:    toDebugResult(dbgRes),
+	}
+}
+
+func runTestDir(testDir, suite string) (RenderOutput, error) {
+	cfg, err := loadConfig(testDir)
+	if err != nil {
+		return RenderOutput{}, err
+	}
+
+	invocations := buildInvocations(cfg, testDir)
+
+	out := RenderOutput{
+		Suite:      suite,
+		TestNumber: cfg.TestNumber,
+		TestName:   cfg.TestName,
+		ChartPath:  testDir,
+		Renders:    make([]RenderEntry, 0, len(invocations)),
+	}
+
+	for _, inv := range invocations {
+		stdRes := runOnce(testDir, inv.valOpts, false)
+		dbgRes := runOnce(testDir, inv.valOpts, true)
+		out.Renders = append(out.Renders, buildRenderEntry(inv, stdRes, dbgRes))
+	}
+
+	return out, nil
+}
