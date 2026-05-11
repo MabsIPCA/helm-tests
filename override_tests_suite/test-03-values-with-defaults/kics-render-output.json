@@ -1,0 +1,178 @@
+{
+  "suite": "override_tests_suite",
+  "testNumber": 3,
+  "testName": "Multiple Values Files with Default Values",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults",
+  "renders": [
+    {
+      "caseName": "chart-defaults-only",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: chart-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: chart-default-db\n      port: 5432\n      username: chart_user\n    enabled: false\n    environment: default\n    replicas: 1\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 100m\n        memory: 128Mi\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-values-with-defaults/templates/values-display.yaml",
+            "content": "\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: chart-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: chart-default-db\n      port: 5432\n      username: chart_user\n    enabled: false\n    environment: default\n    replicas: 1\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 100m\n        memory: 128Mi\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: chart-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: chart-default-db\n      port: 5432\n      username: chart_user\n    enabled: false\n    environment: default\n    replicas: 1\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 100m\n        memory: 128Mi\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-values-with-defaults/templates/values-display.yaml",
+            "content": "\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: chart-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: chart-default-db\n      port: 5432\n      username: chart_user\n    enabled: false\n    environment: default\n    replicas: 1\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 100m\n        memory: 128Mi\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "external-defaults",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-external-defaults.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: external-default-db\n      name: external_db\n      port: 5432\n      username: chart_user\n    enabled: true\n    environment: base\n    externalOnlyValue: exists-only-in-external\n    replicas: 2\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 100m\n        memory: 128Mi\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-values-with-defaults/templates/values-display.yaml",
+            "content": "\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: external-default-db\n      name: external_db\n      port: 5432\n      username: chart_user\n    enabled: true\n    environment: base\n    externalOnlyValue: exists-only-in-external\n    replicas: 2\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 100m\n        memory: 128Mi\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: external-default-db\n      name: external_db\n      port: 5432\n      username: chart_user\n    enabled: true\n    environment: base\n    externalOnlyValue: exists-only-in-external\n    replicas: 2\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 100m\n        memory: 128Mi\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-values-with-defaults/templates/values-display.yaml",
+            "content": "\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: external-default-db\n      name: external_db\n      port: 5432\n      username: chart_user\n    enabled: true\n    environment: base\n    externalOnlyValue: exists-only-in-external\n    replicas: 2\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 100m\n        memory: 128Mi\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "external-then-dev",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-external-defaults.yaml",
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-dev.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: dev-db.local\n      name: dev_db\n      port: 5432\n      username: chart_user\n    enabled: true\n    environment: development\n    externalOnlyValue: exists-only-in-external\n    replicas: 3\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 200m\n        memory: 128Mi\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-values-with-defaults/templates/values-display.yaml",
+            "content": "\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: dev-db.local\n      name: dev_db\n      port: 5432\n      username: chart_user\n    enabled: true\n    environment: development\n    externalOnlyValue: exists-only-in-external\n    replicas: 3\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 200m\n        memory: 128Mi\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: dev-db.local\n      name: dev_db\n      port: 5432\n      username: chart_user\n    enabled: true\n    environment: development\n    externalOnlyValue: exists-only-in-external\n    replicas: 3\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 200m\n        memory: 128Mi\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-values-with-defaults/templates/values-display.yaml",
+            "content": "\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: dev-db.local\n      name: dev_db\n      port: 5432\n      username: chart_user\n    enabled: true\n    environment: development\n    externalOnlyValue: exists-only-in-external\n    replicas: 3\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 200m\n        memory: 128Mi\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "dev-only",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-dev.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: chart-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: dev-db.local\n      name: dev_db\n      port: 5432\n      username: chart_user\n    enabled: false\n    environment: development\n    replicas: 3\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 200m\n        memory: 128Mi\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-values-with-defaults/templates/values-display.yaml",
+            "content": "\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: chart-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: dev-db.local\n      name: dev_db\n      port: 5432\n      username: chart_user\n    enabled: false\n    environment: development\n    replicas: 3\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 200m\n        memory: 128Mi\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: chart-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: dev-db.local\n      name: dev_db\n      port: 5432\n      username: chart_user\n    enabled: false\n    environment: development\n    replicas: 3\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 200m\n        memory: 128Mi\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-values-with-defaults/templates/values-display.yaml",
+            "content": "\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: chart-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: dev-db.local\n      name: dev_db\n      port: 5432\n      username: chart_user\n    enabled: false\n    environment: development\n    replicas: 3\n    resources:\n      limits:\n        cpu: 200m\n        memory: 256Mi\n      requests:\n        cpu: 200m\n        memory: 128Mi\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "external-then-prod",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-external-defaults.yaml",
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-prod.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: prod-db.example.com\n      name: external_db\n      password: secure_prod_password\n      port: 5433\n      username: prod_user\n    enabled: true\n    environment: production\n    externalOnlyValue: exists-only-in-external\n    replicas: 10\n    resources:\n      limits:\n        cpu: 2000m\n        memory: 2Gi\n      requests:\n        cpu: 1000m\n        memory: 1Gi\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-values-with-defaults/templates/values-display.yaml",
+            "content": "\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: prod-db.example.com\n      name: external_db\n      password: secure_prod_password\n      port: 5433\n      username: prod_user\n    enabled: true\n    environment: production\n    externalOnlyValue: exists-only-in-external\n    replicas: 10\n    resources:\n      limits:\n        cpu: 2000m\n        memory: 2Gi\n      requests:\n        cpu: 1000m\n        memory: 1Gi\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: prod-db.example.com\n      name: external_db\n      password: secure_prod_password\n      port: 5433\n      username: prod_user\n    enabled: true\n    environment: production\n    externalOnlyValue: exists-only-in-external\n    replicas: 10\n    resources:\n      limits:\n        cpu: 2000m\n        memory: 2Gi\n      requests:\n        cpu: 1000m\n        memory: 1Gi\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-values-with-defaults/templates/values-display.yaml",
+            "content": "\n# Source: test-values-with-defaults/templates/values-display.yaml\nall-values: |\n    appName: external-default\n    chartOnlyValue: exists-only-in-chart\n    database:\n      host: prod-db.example.com\n      name: external_db\n      password: secure_prod_password\n      port: 5433\n      username: prod_user\n    enabled: true\n    environment: production\n    externalOnlyValue: exists-only-in-external\n    replicas: 10\n    resources:\n      limits:\n        cpu: 2000m\n        memory: 2Gi\n      requests:\n        cpu: 1000m\n        memory: 1Gi\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,640 @@
+{
+  "suite": "render_problems",
+  "testNumber": 19,
+  "testName": "Encoding Function Errors",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-19-encoding-functions",
+  "renders": [
+    {
+      "toggle": "b64enc",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testB64enc=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:14:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:14:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b64enc",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testB64enc=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-encoding-test\r\ndata:\r\n  # ==========================================\r\n  # Base64 functions\r\n  # ==========================================\r\n  # Test: b64enc - encode to Base64\r\n  b64encValue: \"aGVsbG8gd29ybGQ=\"\r\n  # Test: b64dec - decode from Base64\r\n\r\n  # ==========================================\r\n  # Base32 functions\r\n  # ==========================================\r\n  # Test: b32enc - encode to Base32\r\n  # Test: b32dec - decode from Base32\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-encoding/templates/encoding-test.yaml",
+            "content": "\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  b64encValue: \"aGVsbG8gd29ybGQ=\"\n  # Test: b64dec - decode from Base64\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  # Test: b32dec - decode from Base32\n",
+            "originalContent": "# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  {{- if .Values.testB64enc }}\n  b64encValue: {{ b64enc $testData | quote }}\n  {{- end }}\n  # Test: b64dec - decode from Base64\n  {{- if .Values.testB64dec }}\n  b64decValue: {{ b64dec $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  {{- if .Values.testB32enc }}\n  b32encValue: {{ b32enc $testData | quote }}\n  {{- end }}\n  # Test: b32dec - decode from Base32\n  {{- if .Values.testB32dec }}\n  b32decValue: {{ b32dec $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-encoding-test\r\ndata:\r\n  # ==========================================\r\n  # Base64 functions\r\n  # ==========================================\r\n  # Test: b64enc - encode to Base64\r\n  b64encValue: \"aGVsbG8gd29ybGQ=\"\r\n  # Test: b64dec - decode from Base64\r\n\r\n  # ==========================================\r\n  # Base32 functions\r\n  # ==========================================\r\n  # Test: b32enc - encode to Base32\r\n  # Test: b32dec - decode from Base32\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-encoding/templates/encoding-test.yaml",
+            "content": "\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  b64encValue: \"aGVsbG8gd29ybGQ=\"\n  # Test: b64dec - decode from Base64\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  # Test: b32dec - decode from Base32\n",
+            "originalContent": "# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  {{- if .Values.testB64enc }}\n  b64encValue: {{ b64enc $testData | quote }}\n  {{- end }}\n  # Test: b64dec - decode from Base64\n  {{- if .Values.testB64dec }}\n  b64decValue: {{ b64dec $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  {{- if .Values.testB32enc }}\n  b32encValue: {{ b32enc $testData | quote }}\n  {{- end }}\n  # Test: b32dec - decode from Base32\n  {{- if .Values.testB32dec }}\n  b32decValue: {{ b32dec $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "b64enc",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testB64enc=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:14:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:14:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b64enc",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testB64enc=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:14:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:14:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b64enc",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testB64enc=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:14:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:14:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b64enc",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testB64enc=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:14:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:14:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b64dec",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testB64dec=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:18:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:18:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b64dec",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testB64dec=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-encoding-test\r\ndata:\r\n  # ==========================================\r\n  # Base64 functions\r\n  # ==========================================\r\n  # Test: b64enc - encode to Base64\r\n  # Test: b64dec - decode from Base64\r\n  b64decValue: \"illegal base64 data at input byte 5\"\r\n\r\n  # ==========================================\r\n  # Base32 functions\r\n  # ==========================================\r\n  # Test: b32enc - encode to Base32\r\n  # Test: b32dec - decode from Base32\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-encoding/templates/encoding-test.yaml",
+            "content": "\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  # Test: b64dec - decode from Base64\n  b64decValue: \"illegal base64 data at input byte 5\"\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  # Test: b32dec - decode from Base32\n",
+            "originalContent": "# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  {{- if .Values.testB64enc }}\n  b64encValue: {{ b64enc $testData | quote }}\n  {{- end }}\n  # Test: b64dec - decode from Base64\n  {{- if .Values.testB64dec }}\n  b64decValue: {{ b64dec $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  {{- if .Values.testB32enc }}\n  b32encValue: {{ b32enc $testData | quote }}\n  {{- end }}\n  # Test: b32dec - decode from Base32\n  {{- if .Values.testB32dec }}\n  b32decValue: {{ b32dec $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-encoding-test\r\ndata:\r\n  # ==========================================\r\n  # Base64 functions\r\n  # ==========================================\r\n  # Test: b64enc - encode to Base64\r\n  # Test: b64dec - decode from Base64\r\n  b64decValue: \"illegal base64 data at input byte 5\"\r\n\r\n  # ==========================================\r\n  # Base32 functions\r\n  # ==========================================\r\n  # Test: b32enc - encode to Base32\r\n  # Test: b32dec - decode from Base32\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-encoding/templates/encoding-test.yaml",
+            "content": "\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  # Test: b64dec - decode from Base64\n  b64decValue: \"illegal base64 data at input byte 5\"\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  # Test: b32dec - decode from Base32\n",
+            "originalContent": "# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  {{- if .Values.testB64enc }}\n  b64encValue: {{ b64enc $testData | quote }}\n  {{- end }}\n  # Test: b64dec - decode from Base64\n  {{- if .Values.testB64dec }}\n  b64decValue: {{ b64dec $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  {{- if .Values.testB32enc }}\n  b32encValue: {{ b32enc $testData | quote }}\n  {{- end }}\n  # Test: b32dec - decode from Base32\n  {{- if .Values.testB32dec }}\n  b32decValue: {{ b32dec $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "b64dec",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testB64dec=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:18:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:18:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b64dec",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testB64dec=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:18:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:18:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b64dec",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testB64dec=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:18:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:18:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b64dec",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testB64dec=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:18:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:18:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b32enc",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testB32enc=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:26:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:26:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b32enc",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testB32enc=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-encoding-test\r\ndata:\r\n  # ==========================================\r\n  # Base64 functions\r\n  # ==========================================\r\n  # Test: b64enc - encode to Base64\r\n  # Test: b64dec - decode from Base64\r\n\r\n  # ==========================================\r\n  # Base32 functions\r\n  # ==========================================\r\n  # Test: b32enc - encode to Base32\r\n  b32encValue: \"NBSWY3DPEB3W64TMMQ======\"\r\n  # Test: b32dec - decode from Base32\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-encoding/templates/encoding-test.yaml",
+            "content": "\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  # Test: b64dec - decode from Base64\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  b32encValue: \"NBSWY3DPEB3W64TMMQ======\"\n  # Test: b32dec - decode from Base32\n",
+            "originalContent": "# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  {{- if .Values.testB64enc }}\n  b64encValue: {{ b64enc $testData | quote }}\n  {{- end }}\n  # Test: b64dec - decode from Base64\n  {{- if .Values.testB64dec }}\n  b64decValue: {{ b64dec $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  {{- if .Values.testB32enc }}\n  b32encValue: {{ b32enc $testData | quote }}\n  {{- end }}\n  # Test: b32dec - decode from Base32\n  {{- if .Values.testB32dec }}\n  b32decValue: {{ b32dec $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-encoding-test\r\ndata:\r\n  # ==========================================\r\n  # Base64 functions\r\n  # ==========================================\r\n  # Test: b64enc - encode to Base64\r\n  # Test: b64dec - decode from Base64\r\n\r\n  # ==========================================\r\n  # Base32 functions\r\n  # ==========================================\r\n  # Test: b32enc - encode to Base32\r\n  b32encValue: \"NBSWY3DPEB3W64TMMQ======\"\r\n  # Test: b32dec - decode from Base32\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-encoding/templates/encoding-test.yaml",
+            "content": "\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  # Test: b64dec - decode from Base64\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  b32encValue: \"NBSWY3DPEB3W64TMMQ======\"\n  # Test: b32dec - decode from Base32\n",
+            "originalContent": "# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  {{- if .Values.testB64enc }}\n  b64encValue: {{ b64enc $testData | quote }}\n  {{- end }}\n  # Test: b64dec - decode from Base64\n  {{- if .Values.testB64dec }}\n  b64decValue: {{ b64dec $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  {{- if .Values.testB32enc }}\n  b32encValue: {{ b32enc $testData | quote }}\n  {{- end }}\n  # Test: b32dec - decode from Base32\n  {{- if .Values.testB32dec }}\n  b32decValue: {{ b32dec $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "b32enc",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testB32enc=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:26:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:26:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b32enc",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testB32enc=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:26:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:26:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b32enc",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testB32enc=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:26:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:26:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b32enc",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testB32enc=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:26:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:26:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b32dec",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testB32dec=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:30:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:30:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b32dec",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testB32dec=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-encoding-test\r\ndata:\r\n  # ==========================================\r\n  # Base64 functions\r\n  # ==========================================\r\n  # Test: b64enc - encode to Base64\r\n  # Test: b64dec - decode from Base64\r\n\r\n  # ==========================================\r\n  # Base32 functions\r\n  # ==========================================\r\n  # Test: b32enc - encode to Base32\r\n  # Test: b32dec - decode from Base32\r\n  b32decValue: \"illegal base32 data at input byte 0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-encoding/templates/encoding-test.yaml",
+            "content": "\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  # Test: b64dec - decode from Base64\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  # Test: b32dec - decode from Base32\n  b32decValue: \"illegal base32 data at input byte 0\"\n",
+            "originalContent": "# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  {{- if .Values.testB64enc }}\n  b64encValue: {{ b64enc $testData | quote }}\n  {{- end }}\n  # Test: b64dec - decode from Base64\n  {{- if .Values.testB64dec }}\n  b64decValue: {{ b64dec $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  {{- if .Values.testB32enc }}\n  b32encValue: {{ b32enc $testData | quote }}\n  {{- end }}\n  # Test: b32dec - decode from Base32\n  {{- if .Values.testB32dec }}\n  b32decValue: {{ b32dec $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-encoding-test\r\ndata:\r\n  # ==========================================\r\n  # Base64 functions\r\n  # ==========================================\r\n  # Test: b64enc - encode to Base64\r\n  # Test: b64dec - decode from Base64\r\n\r\n  # ==========================================\r\n  # Base32 functions\r\n  # ==========================================\r\n  # Test: b32enc - encode to Base32\r\n  # Test: b32dec - decode from Base32\r\n  b32decValue: \"illegal base32 data at input byte 0\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-encoding/templates/encoding-test.yaml",
+            "content": "\n# Source: test-encoding/templates/encoding-test.yaml\n# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  # Test: b64dec - decode from Base64\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  # Test: b32dec - decode from Base32\n  b32decValue: \"illegal base32 data at input byte 0\"\n",
+            "originalContent": "# Test: Encoding function errors - comprehensive testing of Base64/Base32 functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-encoding-test\ndata:\n  # ==========================================\n  # Base64 functions\n  # ==========================================\n  # Test: b64enc - encode to Base64\n  {{- if .Values.testB64enc }}\n  b64encValue: {{ b64enc $testData | quote }}\n  {{- end }}\n  # Test: b64dec - decode from Base64\n  {{- if .Values.testB64dec }}\n  b64decValue: {{ b64dec $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Base32 functions\n  # ==========================================\n  # Test: b32enc - encode to Base32\n  {{- if .Values.testB32enc }}\n  b32encValue: {{ b32enc $testData | quote }}\n  {{- end }}\n  # Test: b32dec - decode from Base32\n  {{- if .Values.testB32dec }}\n  b32decValue: {{ b32dec $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "b32dec",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testB32dec=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:30:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:30:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b32dec",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testB32dec=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:30:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:30:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b32dec",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testB32dec=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:30:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:30:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "b32dec",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testB32dec=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:30:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-encoding/templates/encoding-test.yaml:30:25: executing \"test-encoding/templates/encoding-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    }
+  ]
+}

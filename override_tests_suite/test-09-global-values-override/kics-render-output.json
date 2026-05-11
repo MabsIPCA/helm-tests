@@ -1,0 +1,227 @@
+{
+  "suite": "override_tests_suite",
+  "testNumber": 9,
+  "testName": "Global Values Override",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override",
+  "renders": [
+    {
+      "caseName": "default-globals",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    region: us-east-1\n---\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: us-east-1\n    parentValue: parent-specific\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-global-values/charts/child/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    region: us-east-1\n",
+            "originalContent": "child-values: |\n{{ .Values | toYaml | indent 4 }}\nchild-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-global-values/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: us-east-1\n    parentValue: parent-specific\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    region: us-east-1\n---\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: us-east-1\n    parentValue: parent-specific\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-global-values/charts/child/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    region: us-east-1\n",
+            "originalContent": "child-values: |\n{{ .Values | toYaml | indent 4 }}\nchild-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-global-values/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: us-east-1\n    parentValue: parent-specific\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "override-globals",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override\\values-global-prod.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: true\n        logLevel: info\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: eu-west-1\n    port: 8080\nchild-global: |\n    config:\n      debug: true\n      logLevel: info\n    environment: production\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    region: eu-west-1\n---\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: true\n          logLevel: info\n        environment: production\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        region: eu-west-1\n      port: 8080\n    global:\n      config:\n        debug: true\n        logLevel: info\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: eu-west-1\n    parentValue: parent-specific\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-global-values/charts/child/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: true\n        logLevel: info\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: eu-west-1\n    port: 8080\nchild-global: |\n    config:\n      debug: true\n      logLevel: info\n    environment: production\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    region: eu-west-1\n",
+            "originalContent": "child-values: |\n{{ .Values | toYaml | indent 4 }}\nchild-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-global-values/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: true\n          logLevel: info\n        environment: production\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        region: eu-west-1\n      port: 8080\n    global:\n      config:\n        debug: true\n        logLevel: info\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: eu-west-1\n    parentValue: parent-specific\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: true\n        logLevel: info\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: eu-west-1\n    port: 8080\nchild-global: |\n    config:\n      debug: true\n      logLevel: info\n    environment: production\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    region: eu-west-1\n---\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: true\n          logLevel: info\n        environment: production\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        region: eu-west-1\n      port: 8080\n    global:\n      config:\n        debug: true\n        logLevel: info\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: eu-west-1\n    parentValue: parent-specific\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-global-values/charts/child/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: true\n        logLevel: info\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: eu-west-1\n    port: 8080\nchild-global: |\n    config:\n      debug: true\n      logLevel: info\n    environment: production\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    region: eu-west-1\n",
+            "originalContent": "child-values: |\n{{ .Values | toYaml | indent 4 }}\nchild-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-global-values/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: true\n          logLevel: info\n        environment: production\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        region: eu-west-1\n      port: 8080\n    global:\n      config:\n        debug: true\n        logLevel: info\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      region: eu-west-1\n    parentValue: parent-specific\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "add-globals",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override\\values-global-add.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n        newConfig: added-config\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n      newConfig: added-config\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    newValue: added-via-override\n    region: us-east-1\n---\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n          newConfig: added-config\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        newValue: added-via-override\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n        newConfig: added-config\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: us-east-1\n    parentValue: parent-specific\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-global-values/charts/child/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n        newConfig: added-config\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n      newConfig: added-config\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    newValue: added-via-override\n    region: us-east-1\n",
+            "originalContent": "child-values: |\n{{ .Values | toYaml | indent 4 }}\nchild-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-global-values/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n          newConfig: added-config\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        newValue: added-via-override\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n        newConfig: added-config\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: us-east-1\n    parentValue: parent-specific\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n        newConfig: added-config\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n      newConfig: added-config\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    newValue: added-via-override\n    region: us-east-1\n---\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n          newConfig: added-config\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        newValue: added-via-override\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n        newConfig: added-config\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: us-east-1\n    parentValue: parent-specific\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-global-values/charts/child/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n        newConfig: added-config\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n      newConfig: added-config\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    newValue: added-via-override\n    region: us-east-1\n",
+            "originalContent": "child-values: |\n{{ .Values | toYaml | indent 4 }}\nchild-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-global-values/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n          newConfig: added-config\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        newValue: added-via-override\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n        newConfig: added-config\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: us-east-1\n    parentValue: parent-specific\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "override-nested-globals",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override\\values-global-labels.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        environment: staging\n        newLabel: added\n        team: devops\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      environment: staging\n      newLabel: added\n      team: devops\n    region: us-east-1\n---\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          environment: staging\n          newLabel: added\n          team: devops\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        environment: staging\n        newLabel: added\n        team: devops\n      region: us-east-1\n    parentValue: parent-specific\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-global-values/charts/child/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        environment: staging\n        newLabel: added\n        team: devops\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      environment: staging\n      newLabel: added\n      team: devops\n    region: us-east-1\n",
+            "originalContent": "child-values: |\n{{ .Values | toYaml | indent 4 }}\nchild-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-global-values/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          environment: staging\n          newLabel: added\n          team: devops\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        environment: staging\n        newLabel: added\n        team: devops\n      region: us-east-1\n    parentValue: parent-specific\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        environment: staging\n        newLabel: added\n        team: devops\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      environment: staging\n      newLabel: added\n      team: devops\n    region: us-east-1\n---\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          environment: staging\n          newLabel: added\n          team: devops\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        environment: staging\n        newLabel: added\n        team: devops\n      region: us-east-1\n    parentValue: parent-specific\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-global-values/charts/child/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        environment: staging\n        newLabel: added\n        team: devops\n      region: us-east-1\n    port: 8080\nchild-global: |\n    config:\n      debug: false\n      logLevel: info\n    environment: default\n    imageTag: latest\n    labels:\n      app: test\n      environment: staging\n      newLabel: added\n      team: devops\n    region: us-east-1\n",
+            "originalContent": "child-values: |\n{{ .Values | toYaml | indent 4 }}\nchild-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-global-values/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: false\n          logLevel: info\n        environment: default\n        imageTag: latest\n        labels:\n          app: test\n          environment: staging\n          newLabel: added\n          team: devops\n        region: us-east-1\n      port: 8080\n    global:\n      config:\n        debug: false\n        logLevel: info\n      environment: default\n      imageTag: latest\n      labels:\n        app: test\n        environment: staging\n        newLabel: added\n        team: devops\n      region: us-east-1\n    parentValue: parent-specific\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "chained-global-override",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override\\values-global-prod.yaml",
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override\\values-global-add.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: true\n        logLevel: info\n        newConfig: added-config\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: eu-west-1\n    port: 8080\nchild-global: |\n    config:\n      debug: true\n      logLevel: info\n      newConfig: added-config\n    environment: production\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    newValue: added-via-override\n    region: eu-west-1\n---\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: true\n          logLevel: info\n          newConfig: added-config\n        environment: production\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        newValue: added-via-override\n        region: eu-west-1\n      port: 8080\n    global:\n      config:\n        debug: true\n        logLevel: info\n        newConfig: added-config\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: eu-west-1\n    parentValue: parent-specific\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-global-values/charts/child/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: true\n        logLevel: info\n        newConfig: added-config\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: eu-west-1\n    port: 8080\nchild-global: |\n    config:\n      debug: true\n      logLevel: info\n      newConfig: added-config\n    environment: production\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    newValue: added-via-override\n    region: eu-west-1\n",
+            "originalContent": "child-values: |\n{{ .Values | toYaml | indent 4 }}\nchild-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-global-values/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: true\n          logLevel: info\n          newConfig: added-config\n        environment: production\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        newValue: added-via-override\n        region: eu-west-1\n      port: 8080\n    global:\n      config:\n        debug: true\n        logLevel: info\n        newConfig: added-config\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: eu-west-1\n    parentValue: parent-specific\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: true\n        logLevel: info\n        newConfig: added-config\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: eu-west-1\n    port: 8080\nchild-global: |\n    config:\n      debug: true\n      logLevel: info\n      newConfig: added-config\n    environment: production\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    newValue: added-via-override\n    region: eu-west-1\n---\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: true\n          logLevel: info\n          newConfig: added-config\n        environment: production\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        newValue: added-via-override\n        region: eu-west-1\n      port: 8080\n    global:\n      config:\n        debug: true\n        logLevel: info\n        newConfig: added-config\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: eu-west-1\n    parentValue: parent-specific\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-global-values/charts/child/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/charts/child/templates/values-display.yaml\nchild-values: |\n    childValue: child-specific\n    global:\n      config:\n        debug: true\n        logLevel: info\n        newConfig: added-config\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: eu-west-1\n    port: 8080\nchild-global: |\n    config:\n      debug: true\n      logLevel: info\n      newConfig: added-config\n    environment: production\n    imageTag: latest\n    labels:\n      app: test\n      team: platform\n    newValue: added-via-override\n    region: eu-west-1\n",
+            "originalContent": "child-values: |\n{{ .Values | toYaml | indent 4 }}\nchild-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-global-values/templates/values-display.yaml",
+            "content": "\n# Source: test-global-values/templates/values-display.yaml\nall-values: |\n    child:\n      childValue: child-specific\n      global:\n        config:\n          debug: true\n          logLevel: info\n          newConfig: added-config\n        environment: production\n        imageTag: latest\n        labels:\n          app: test\n          team: platform\n        newValue: added-via-override\n        region: eu-west-1\n      port: 8080\n    global:\n      config:\n        debug: true\n        logLevel: info\n        newConfig: added-config\n      environment: production\n      imageTag: latest\n      labels:\n        app: test\n        team: platform\n      newValue: added-via-override\n      region: eu-west-1\n    parentValue: parent-specific\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    }
+  ]
+}

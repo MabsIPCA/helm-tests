@@ -1,0 +1,223 @@
+{
+  "suite": "override_tests_suite",
+  "testNumber": 8,
+  "testName": "Subchart Override",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-08-subchart-override",
+  "renders": [
+    {
+      "caseName": "parent-defaults",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 30\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart1-from-parent\n    port: 8080\n    replicas: 3\nsubchart1-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: localhost\n      port: 5432\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart2-from-parent\n    port: 9090\nsubchart2-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 30\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart1-from-parent\n      port: 8080\n      replicas: 3\n    subchart2:\n      database:\n        host: localhost\n        port: 5432\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart2-from-parent\n      port: 9090\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-subchart-override/charts/subchart1/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 30\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart1-from-parent\n    port: 8080\n    replicas: 3\nsubchart1-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart1-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart1-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/charts/subchart2/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: localhost\n      port: 5432\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart2-from-parent\n    port: 9090\nsubchart2-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart2-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart2-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 30\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart1-from-parent\n      port: 8080\n      replicas: 3\n    subchart2:\n      database:\n        host: localhost\n        port: 5432\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart2-from-parent\n      port: 9090\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 30\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart1-from-parent\n    port: 8080\n    replicas: 3\nsubchart1-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: localhost\n      port: 5432\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart2-from-parent\n    port: 9090\nsubchart2-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 30\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart1-from-parent\n      port: 8080\n      replicas: 3\n    subchart2:\n      database:\n        host: localhost\n        port: 5432\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart2-from-parent\n      port: 9090\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-subchart-override/charts/subchart1/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 30\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart1-from-parent\n    port: 8080\n    replicas: 3\nsubchart1-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart1-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart1-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/charts/subchart2/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: localhost\n      port: 5432\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart2-from-parent\n    port: 9090\nsubchart2-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart2-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart2-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 30\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart1-from-parent\n      port: 8080\n      replicas: 3\n    subchart2:\n      database:\n        host: localhost\n        port: 5432\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart2-from-parent\n      port: 9090\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "subchart-override",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-08-subchart-override\\values-subchart-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 60\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart1-external-override\n    port: 8080\n    replicas: 5\nsubchart1-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: external-db.local\n      port: 5432\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart2-external-override\n    port: 9090\nsubchart2-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 60\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart1-external-override\n      port: 8080\n      replicas: 5\n    subchart2:\n      database:\n        host: external-db.local\n        port: 5432\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart2-external-override\n      port: 9090\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-subchart-override/charts/subchart1/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 60\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart1-external-override\n    port: 8080\n    replicas: 5\nsubchart1-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart1-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart1-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/charts/subchart2/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: external-db.local\n      port: 5432\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart2-external-override\n    port: 9090\nsubchart2-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart2-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart2-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 60\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart1-external-override\n      port: 8080\n      replicas: 5\n    subchart2:\n      database:\n        host: external-db.local\n        port: 5432\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart2-external-override\n      port: 9090\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 60\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart1-external-override\n    port: 8080\n    replicas: 5\nsubchart1-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: external-db.local\n      port: 5432\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart2-external-override\n    port: 9090\nsubchart2-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 60\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart1-external-override\n      port: 8080\n      replicas: 5\n    subchart2:\n      database:\n        host: external-db.local\n        port: 5432\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart2-external-override\n      port: 9090\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-subchart-override/charts/subchart1/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 60\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart1-external-override\n    port: 8080\n    replicas: 5\nsubchart1-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart1-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart1-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/charts/subchart2/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: external-db.local\n      port: 5432\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    name: subchart2-external-override\n    port: 9090\nsubchart2-global: |\n    domain: example.com\n    environment: development\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart2-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart2-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: development\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 60\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart1-external-override\n      port: 8080\n      replicas: 5\n    subchart2:\n      database:\n        host: external-db.local\n        port: 5432\n      global:\n        domain: example.com\n        environment: development\n        imageRegistry: docker.io\n      name: subchart2-external-override\n      port: 9090\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "global-override",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-08-subchart-override\\values-global-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 30\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    name: subchart1-from-parent\n    port: 8080\n    replicas: 3\nsubchart1-global: |\n    domain: prod.example.com\n    environment: production\n    imageRegistry: registry.prod.local\n    newGlobal: added-global\n---\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: localhost\n      port: 5432\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    name: subchart2-from-parent\n    port: 9090\nsubchart2-global: |\n    domain: prod.example.com\n    environment: production\n    imageRegistry: registry.prod.local\n    newGlobal: added-global\n---\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 30\n      global:\n        domain: prod.example.com\n        environment: production\n        imageRegistry: registry.prod.local\n        newGlobal: added-global\n      name: subchart1-from-parent\n      port: 8080\n      replicas: 3\n    subchart2:\n      database:\n        host: localhost\n        port: 5432\n      global:\n        domain: prod.example.com\n        environment: production\n        imageRegistry: registry.prod.local\n        newGlobal: added-global\n      name: subchart2-from-parent\n      port: 9090\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-subchart-override/charts/subchart1/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 30\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    name: subchart1-from-parent\n    port: 8080\n    replicas: 3\nsubchart1-global: |\n    domain: prod.example.com\n    environment: production\n    imageRegistry: registry.prod.local\n    newGlobal: added-global\n",
+            "originalContent": "subchart1-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart1-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/charts/subchart2/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: localhost\n      port: 5432\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    name: subchart2-from-parent\n    port: 9090\nsubchart2-global: |\n    domain: prod.example.com\n    environment: production\n    imageRegistry: registry.prod.local\n    newGlobal: added-global\n",
+            "originalContent": "subchart2-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart2-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 30\n      global:\n        domain: prod.example.com\n        environment: production\n        imageRegistry: registry.prod.local\n        newGlobal: added-global\n      name: subchart1-from-parent\n      port: 8080\n      replicas: 3\n    subchart2:\n      database:\n        host: localhost\n        port: 5432\n      global:\n        domain: prod.example.com\n        environment: production\n        imageRegistry: registry.prod.local\n        newGlobal: added-global\n      name: subchart2-from-parent\n      port: 9090\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 30\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    name: subchart1-from-parent\n    port: 8080\n    replicas: 3\nsubchart1-global: |\n    domain: prod.example.com\n    environment: production\n    imageRegistry: registry.prod.local\n    newGlobal: added-global\n---\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: localhost\n      port: 5432\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    name: subchart2-from-parent\n    port: 9090\nsubchart2-global: |\n    domain: prod.example.com\n    environment: production\n    imageRegistry: registry.prod.local\n    newGlobal: added-global\n---\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 30\n      global:\n        domain: prod.example.com\n        environment: production\n        imageRegistry: registry.prod.local\n        newGlobal: added-global\n      name: subchart1-from-parent\n      port: 8080\n      replicas: 3\n    subchart2:\n      database:\n        host: localhost\n        port: 5432\n      global:\n        domain: prod.example.com\n        environment: production\n        imageRegistry: registry.prod.local\n        newGlobal: added-global\n      name: subchart2-from-parent\n      port: 9090\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-subchart-override/charts/subchart1/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 30\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    name: subchart1-from-parent\n    port: 8080\n    replicas: 3\nsubchart1-global: |\n    domain: prod.example.com\n    environment: production\n    imageRegistry: registry.prod.local\n    newGlobal: added-global\n",
+            "originalContent": "subchart1-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart1-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/charts/subchart2/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: localhost\n      port: 5432\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    name: subchart2-from-parent\n    port: 9090\nsubchart2-global: |\n    domain: prod.example.com\n    environment: production\n    imageRegistry: registry.prod.local\n    newGlobal: added-global\n",
+            "originalContent": "subchart2-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart2-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: prod.example.com\n      environment: production\n      imageRegistry: registry.prod.local\n      newGlobal: added-global\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 30\n      global:\n        domain: prod.example.com\n        environment: production\n        imageRegistry: registry.prod.local\n        newGlobal: added-global\n      name: subchart1-from-parent\n      port: 8080\n      replicas: 3\n    subchart2:\n      database:\n        host: localhost\n        port: 5432\n      global:\n        domain: prod.example.com\n        environment: production\n        imageRegistry: registry.prod.local\n        newGlobal: added-global\n      name: subchart2-from-parent\n      port: 9090\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "combined-override",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-08-subchart-override\\values-subchart-override.yaml",
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-08-subchart-override\\values-combined-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 60\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    name: subchart1-external-override\n    port: 8080\n    replicas: 10\nsubchart1-global: |\n    domain: example.com\n    environment: staging\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: external-db.local\n      port: 5432\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    name: subchart2-external-override\n    port: 443\nsubchart2-global: |\n    domain: example.com\n    environment: staging\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 60\n      global:\n        domain: example.com\n        environment: staging\n        imageRegistry: docker.io\n      name: subchart1-external-override\n      port: 8080\n      replicas: 10\n    subchart2:\n      database:\n        host: external-db.local\n        port: 5432\n      global:\n        domain: example.com\n        environment: staging\n        imageRegistry: docker.io\n      name: subchart2-external-override\n      port: 443\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-subchart-override/charts/subchart1/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 60\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    name: subchart1-external-override\n    port: 8080\n    replicas: 10\nsubchart1-global: |\n    domain: example.com\n    environment: staging\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart1-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart1-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/charts/subchart2/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: external-db.local\n      port: 5432\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    name: subchart2-external-override\n    port: 443\nsubchart2-global: |\n    domain: example.com\n    environment: staging\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart2-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart2-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 60\n      global:\n        domain: example.com\n        environment: staging\n        imageRegistry: docker.io\n      name: subchart1-external-override\n      port: 8080\n      replicas: 10\n    subchart2:\n      database:\n        host: external-db.local\n        port: 5432\n      global:\n        domain: example.com\n        environment: staging\n        imageRegistry: docker.io\n      name: subchart2-external-override\n      port: 443\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 60\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    name: subchart1-external-override\n    port: 8080\n    replicas: 10\nsubchart1-global: |\n    domain: example.com\n    environment: staging\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: external-db.local\n      port: 5432\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    name: subchart2-external-override\n    port: 443\nsubchart2-global: |\n    domain: example.com\n    environment: staging\n    imageRegistry: docker.io\n---\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 60\n      global:\n        domain: example.com\n        environment: staging\n        imageRegistry: docker.io\n      name: subchart1-external-override\n      port: 8080\n      replicas: 10\n    subchart2:\n      database:\n        host: external-db.local\n        port: 5432\n      global:\n        domain: example.com\n        environment: staging\n        imageRegistry: docker.io\n      name: subchart2-external-override\n      port: 443\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-subchart-override/charts/subchart1/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart1/templates/values-display.yaml\nsubchart1-values: |\n    config:\n      enabled: true\n      timeout: 60\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    name: subchart1-external-override\n    port: 8080\n    replicas: 10\nsubchart1-global: |\n    domain: example.com\n    environment: staging\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart1-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart1-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/charts/subchart2/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/charts/subchart2/templates/values-display.yaml\nsubchart2-values: |\n    database:\n      host: external-db.local\n      port: 5432\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    name: subchart2-external-override\n    port: 443\nsubchart2-global: |\n    domain: example.com\n    environment: staging\n    imageRegistry: docker.io\n",
+            "originalContent": "subchart2-values: |\n{{ .Values | toYaml | indent 4 }}\nsubchart2-global: |\n{{ .Values.global | toYaml | indent 4 }}\n"
+          },
+          {
+            "path": "test-subchart-override/templates/values-display.yaml",
+            "content": "\n# Source: test-subchart-override/templates/values-display.yaml\nall-values: |\n    global:\n      domain: example.com\n      environment: staging\n      imageRegistry: docker.io\n    parentName: parent-chart\n    parentVersion: 1.0.0\n    subchart1:\n      config:\n        enabled: true\n        timeout: 60\n      global:\n        domain: example.com\n        environment: staging\n        imageRegistry: docker.io\n      name: subchart1-external-override\n      port: 8080\n      replicas: 10\n    subchart2:\n      database:\n        host: external-db.local\n        port: 5432\n      global:\n        domain: example.com\n        environment: staging\n        imageRegistry: docker.io\n      name: subchart2-external-override\n      port: 443\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    }
+  ]
+}

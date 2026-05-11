@@ -1,0 +1,145 @@
+{
+  "suite": "override_tests_suite",
+  "testNumber": 7,
+  "testName": "Null Value Override",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-07-null-value-override",
+  "renders": [
+    {
+      "caseName": "null-to-value",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-07-null-value-override\\values-null-to-value.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: true\n    nullList:\n    - new-item\n    nullMap:\n      newKey: new-value\n    nullNumber: 100\n    nullString: now-has-string\n    numberValue: 42\n    stringValue: has-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-null-override/templates/values-display.yaml",
+            "content": "\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: true\n    nullList:\n    - new-item\n    nullMap:\n      newKey: new-value\n    nullNumber: 100\n    nullString: now-has-string\n    numberValue: 42\n    stringValue: has-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: true\n    nullList:\n    - new-item\n    nullMap:\n      newKey: new-value\n    nullNumber: 100\n    nullString: now-has-string\n    numberValue: 42\n    stringValue: has-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-null-override/templates/values-display.yaml",
+            "content": "\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: true\n    nullList:\n    - new-item\n    nullMap:\n      newKey: new-value\n    nullNumber: 100\n    nullString: now-has-string\n    numberValue: 42\n    stringValue: has-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "value-to-null",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-07-null-value-override\\values-value-to-null.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: null\n    nullList: null\n    nullMap: null\n    nullNumber: null\n    nullString: null\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-null-override/templates/values-display.yaml",
+            "content": "\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: null\n    nullList: null\n    nullMap: null\n    nullNumber: null\n    nullString: null\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: null\n    nullList: null\n    nullMap: null\n    nullNumber: null\n    nullString: null\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-null-override/templates/values-display.yaml",
+            "content": "\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: null\n    nullList: null\n    nullMap: null\n    nullNumber: null\n    nullString: null\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "nested-null",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-07-null-value-override\\values-nested-null.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: also-has-value\n      hasValue: exists\n      nullChild: now-has-value\n    nullBool: null\n    nullList: null\n    nullMap: null\n    nullNumber: null\n    nullString: null\n    numberValue: 42\n    stringValue: has-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-null-override/templates/values-display.yaml",
+            "content": "\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: also-has-value\n      hasValue: exists\n      nullChild: now-has-value\n    nullBool: null\n    nullList: null\n    nullMap: null\n    nullNumber: null\n    nullString: null\n    numberValue: 42\n    stringValue: has-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: also-has-value\n      hasValue: exists\n      nullChild: now-has-value\n    nullBool: null\n    nullList: null\n    nullMap: null\n    nullNumber: null\n    nullString: null\n    numberValue: 42\n    stringValue: has-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-null-override/templates/values-display.yaml",
+            "content": "\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    listValue:\n    - item1\n    - item2\n    mapValue:\n      key1: value1\n      key2: value2\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: also-has-value\n      hasValue: exists\n      nullChild: now-has-value\n    nullBool: null\n    nullList: null\n    nullMap: null\n    nullNumber: null\n    nullString: null\n    numberValue: 42\n    stringValue: has-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "round-trip",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-07-null-value-override\\values-null-to-value.yaml",
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-07-null-value-override\\values-value-to-null.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: true\n    nullList:\n    - new-item\n    nullMap:\n      newKey: new-value\n    nullNumber: 100\n    nullString: now-has-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-null-override/templates/values-display.yaml",
+            "content": "\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: true\n    nullList:\n    - new-item\n    nullMap:\n      newKey: new-value\n    nullNumber: 100\n    nullString: now-has-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: true\n    nullList:\n    - new-item\n    nullMap:\n      newKey: new-value\n    nullNumber: 100\n    nullString: now-has-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-null-override/templates/values-display.yaml",
+            "content": "\n# Source: test-null-override/templates/values-display.yaml\nall-values: |\n    nested:\n      deepNested:\n        alsoHasValue: deep-exists\n        alsoNull: null\n      hasValue: exists\n      nullChild: null\n    nullBool: true\n    nullList:\n    - new-item\n    nullMap:\n      newKey: new-value\n    nullNumber: 100\n    nullString: now-has-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    }
+  ]
+}

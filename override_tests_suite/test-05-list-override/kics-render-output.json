@@ -1,0 +1,179 @@
+{
+  "suite": "override_tests_suite",
+  "testNumber": 5,
+  "testName": "List Override Behavior",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override",
+  "renders": [
+    {
+      "caseName": "fewer-items",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-fewer-items.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 100\n    - 200\n    objectList:\n    - enabled: true\n      name: obj1\n      value: value1\n    - enabled: false\n      name: obj2\n      value: value2\n    simpleList:\n    - override1\n    - override2\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-list-override/templates/values-display.yaml",
+            "content": "\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 100\n    - 200\n    objectList:\n    - enabled: true\n      name: obj1\n      value: value1\n    - enabled: false\n      name: obj2\n      value: value2\n    simpleList:\n    - override1\n    - override2\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 100\n    - 200\n    objectList:\n    - enabled: true\n      name: obj1\n      value: value1\n    - enabled: false\n      name: obj2\n      value: value2\n    simpleList:\n    - override1\n    - override2\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-list-override/templates/values-display.yaml",
+            "content": "\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 100\n    - 200\n    objectList:\n    - enabled: true\n      name: obj1\n      value: value1\n    - enabled: false\n      name: obj2\n      value: value2\n    simpleList:\n    - override1\n    - override2\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "more-items",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-more-items.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 1\n    - 2\n    - 3\n    objectList:\n    - enabled: true\n      name: newObj1\n      value: newValue1\n    - enabled: true\n      name: newObj2\n      value: newValue2\n    - enabled: false\n      name: newObj3\n      value: newValue3\n    simpleList:\n    - new1\n    - new2\n    - new3\n    - new4\n    - new5\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-list-override/templates/values-display.yaml",
+            "content": "\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 1\n    - 2\n    - 3\n    objectList:\n    - enabled: true\n      name: newObj1\n      value: newValue1\n    - enabled: true\n      name: newObj2\n      value: newValue2\n    - enabled: false\n      name: newObj3\n      value: newValue3\n    simpleList:\n    - new1\n    - new2\n    - new3\n    - new4\n    - new5\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 1\n    - 2\n    - 3\n    objectList:\n    - enabled: true\n      name: newObj1\n      value: newValue1\n    - enabled: true\n      name: newObj2\n      value: newValue2\n    - enabled: false\n      name: newObj3\n      value: newValue3\n    simpleList:\n    - new1\n    - new2\n    - new3\n    - new4\n    - new5\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-list-override/templates/values-display.yaml",
+            "content": "\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 1\n    - 2\n    - 3\n    objectList:\n    - enabled: true\n      name: newObj1\n      value: newValue1\n    - enabled: true\n      name: newObj2\n      value: newValue2\n    - enabled: false\n      name: newObj3\n      value: newValue3\n    simpleList:\n    - new1\n    - new2\n    - new3\n    - new4\n    - new5\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "empty-lists",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-empty-lists.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList: []\n    objectList: []\n    simpleList: []\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-list-override/templates/values-display.yaml",
+            "content": "\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList: []\n    objectList: []\n    simpleList: []\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList: []\n    objectList: []\n    simpleList: []\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-list-override/templates/values-display.yaml",
+            "content": "\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList: []\n    objectList: []\n    simpleList: []\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "nested-list",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-nested-list.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - replaced1\n      - replaced2\n      - replaced3\n      level2:\n      - new-nested\n    numberList:\n    - 1\n    - 2\n    - 3\n    objectList:\n    - enabled: true\n      name: obj1\n      value: value1\n    - enabled: false\n      name: obj2\n      value: value2\n    simpleList:\n    - item1\n    - item2\n    - item3\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-list-override/templates/values-display.yaml",
+            "content": "\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - replaced1\n      - replaced2\n      - replaced3\n      level2:\n      - new-nested\n    numberList:\n    - 1\n    - 2\n    - 3\n    objectList:\n    - enabled: true\n      name: obj1\n      value: value1\n    - enabled: false\n      name: obj2\n      value: value2\n    simpleList:\n    - item1\n    - item2\n    - item3\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - replaced1\n      - replaced2\n      - replaced3\n      level2:\n      - new-nested\n    numberList:\n    - 1\n    - 2\n    - 3\n    objectList:\n    - enabled: true\n      name: obj1\n      value: value1\n    - enabled: false\n      name: obj2\n      value: value2\n    simpleList:\n    - item1\n    - item2\n    - item3\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-list-override/templates/values-display.yaml",
+            "content": "\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - replaced1\n      - replaced2\n      - replaced3\n      level2:\n      - new-nested\n    numberList:\n    - 1\n    - 2\n    - 3\n    objectList:\n    - enabled: true\n      name: obj1\n      value: value1\n    - enabled: false\n      name: obj2\n      value: value2\n    simpleList:\n    - item1\n    - item2\n    - item3\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    },
+    {
+      "caseName": "sequential-list-override",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-fewer-items.yaml",
+          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-more-items.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 100\n    - 200\n    objectList:\n    - enabled: true\n      name: newObj1\n      value: newValue1\n    - enabled: true\n      name: newObj2\n      value: newValue2\n    - enabled: false\n      name: newObj3\n      value: newValue3\n    simpleList:\n    - new1\n    - new2\n    - new3\n    - new4\n    - new5\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-list-override/templates/values-display.yaml",
+            "content": "\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 100\n    - 200\n    objectList:\n    - enabled: true\n      name: newObj1\n      value: newValue1\n    - enabled: true\n      name: newObj2\n      value: newValue2\n    - enabled: false\n      name: newObj3\n      value: newValue3\n    simpleList:\n    - new1\n    - new2\n    - new3\n    - new4\n    - new5\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 100\n    - 200\n    objectList:\n    - enabled: true\n      name: newObj1\n      value: newValue1\n    - enabled: true\n      name: newObj2\n      value: newValue2\n    - enabled: false\n      name: newObj3\n      value: newValue3\n    simpleList:\n    - new1\n    - new2\n    - new3\n    - new4\n    - new5\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-list-override/templates/values-display.yaml",
+            "content": "\n# Source: test-list-override/templates/values-display.yaml\nall-values: |\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    - key: value\n    nestedLists:\n      level1:\n      - nested1\n      - nested2\n    numberList:\n    - 100\n    - 200\n    objectList:\n    - enabled: true\n      name: newObj1\n      value: newValue1\n    - enabled: true\n      name: newObj2\n      value: newValue2\n    - enabled: false\n      name: newObj3\n      value: newValue3\n    simpleList:\n    - new1\n    - new2\n    - new3\n    - new4\n    - new5\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      }
+    }
+  ]
+}

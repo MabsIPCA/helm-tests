@@ -1,0 +1,1904 @@
+{
+  "suite": "render_problems",
+  "testNumber": 9,
+  "testName": "Regex Operation Errors",
+  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-06-invalid-regex",
+  "renders": [
+    {
+      "toggle": "regexMatch",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexMatch=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:14:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:14:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexMatch",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexMatch=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  regexMatch: \"true\"\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  regexMatch: \"true\"\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  regexMatch: \"true\"\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  regexMatch: \"true\"\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "regexMatch",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexMatch=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:14:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:14:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexMatch",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexMatch=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:14:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:14:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexMatch",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexMatch=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:14:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:14:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexMatch",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexMatch=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:14:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:14:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexMatch",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexMatch=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:18:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:18:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexMatch",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexMatch=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n  mustRegexMatch: \"true\"\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n  mustRegexMatch: \"true\"\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n  mustRegexMatch: \"true\"\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n  mustRegexMatch: \"true\"\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "mustRegexMatch",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexMatch=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:18:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:18:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexMatch",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexMatch=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:18:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:18:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexMatch",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexMatch=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:18:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:18:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexMatch",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexMatch=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:18:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:18:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexFindAll",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFindAll=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:26:53: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:26:53: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexFindAll",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFindAll=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  regexFindAll: [\"test\",\"sample\",\"text\"]\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  regexFindAll: [\"test\",\"sample\",\"text\"]\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  regexFindAll: [\"test\",\"sample\",\"text\"]\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  regexFindAll: [\"test\",\"sample\",\"text\"]\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "regexFindAll",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFindAll=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:26:53: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:26:53: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexFindAll",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFindAll=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:26:53: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:26:53: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexFindAll",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFindAll=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:26:53: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:26:53: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexFindAll",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFindAll=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:26:53: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:26:53: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexFindAll",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFindAll=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:30:61: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:30:61: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexFindAll",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFindAll=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  mustRegexFindAll: [\"test\",\"sample\",\"text\"]\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  mustRegexFindAll: [\"test\",\"sample\",\"text\"]\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  mustRegexFindAll: [\"test\",\"sample\",\"text\"]\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  mustRegexFindAll: [\"test\",\"sample\",\"text\"]\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "mustRegexFindAll",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFindAll=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:30:61: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:30:61: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexFindAll",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFindAll=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:30:61: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:30:61: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexFindAll",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFindAll=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:30:61: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:30:61: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexFindAll",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFindAll=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:30:61: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:30:61: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexFind",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFind=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:34:47: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:34:47: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexFind",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFind=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  regexFind: \"test\"\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  regexFind: \"test\"\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  regexFind: \"test\"\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  regexFind: \"test\"\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "regexFind",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFind=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:34:47: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:34:47: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexFind",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFind=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:34:47: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:34:47: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexFind",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFind=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:34:47: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:34:47: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexFind",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexFind=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:34:47: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:34:47: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexFind",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFind=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:38:55: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:38:55: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexFind",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFind=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n  mustRegexFind: \"test\"\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n  mustRegexFind: \"test\"\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n  mustRegexFind: \"test\"\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n  mustRegexFind: \"test\"\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "mustRegexFind",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFind=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:38:55: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:38:55: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexFind",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFind=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:38:55: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:38:55: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexFind",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFind=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:38:55: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:38:55: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexFind",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexFind=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:38:55: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:38:55: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexReplaceAll",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAll=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:46:79: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:46:79: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexReplaceAll",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAll=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  regexReplaceAll: \"REPLACED\"\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  regexReplaceAll: \"REPLACED\"\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  regexReplaceAll: \"REPLACED\"\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  regexReplaceAll: \"REPLACED\"\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "regexReplaceAll",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAll=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:46:79: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:46:79: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexReplaceAll",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAll=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:46:79: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:46:79: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexReplaceAll",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAll=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:46:79: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:46:79: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexReplaceAll",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAll=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:46:79: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:46:79: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAll",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAll=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:50:87: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:50:87: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAll",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAll=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  mustRegexReplaceAll: \"REPLACED\"\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  mustRegexReplaceAll: \"REPLACED\"\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  mustRegexReplaceAll: \"REPLACED\"\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  mustRegexReplaceAll: \"REPLACED\"\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAll",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAll=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:50:87: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:50:87: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAll",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAll=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:50:87: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:50:87: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAll",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAll=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:50:87: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:50:87: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAll",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAll=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:50:87: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:50:87: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexReplaceAllLiteral",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAllLiteral=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:54:93: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:54:93: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexReplaceAllLiteral",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAllLiteral=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  regexReplaceAllLiteral: \"REPLACED\"\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  regexReplaceAllLiteral: \"REPLACED\"\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  regexReplaceAllLiteral: \"REPLACED\"\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  regexReplaceAllLiteral: \"REPLACED\"\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "regexReplaceAllLiteral",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAllLiteral=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:54:93: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:54:93: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexReplaceAllLiteral",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAllLiteral=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:54:93: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:54:93: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexReplaceAllLiteral",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAllLiteral=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:54:93: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:54:93: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexReplaceAllLiteral",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexReplaceAllLiteral=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:54:93: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:54:93: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAllLiteral",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAllLiteral=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:58:101: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:58:101: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAllLiteral",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAllLiteral=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n  mustRegexReplaceAllLiteral: \"REPLACED\"\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n  mustRegexReplaceAllLiteral: \"REPLACED\"\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n  mustRegexReplaceAllLiteral: \"REPLACED\"\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n  mustRegexReplaceAllLiteral: \"REPLACED\"\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAllLiteral",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAllLiteral=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:58:101: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:58:101: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAllLiteral",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAllLiteral=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:58:101: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:58:101: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAllLiteral",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAllLiteral=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:58:101: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:58:101: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexReplaceAllLiteral",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexReplaceAllLiteral=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:58:101: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:58:101: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexSplit",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexSplit=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:66:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:66:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexSplit",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexSplit=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  regexSplit: [\"\",\"123 \",\" \",\"\"]\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  regexSplit: [\"\",\"123 \",\" \",\"\"]\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  regexSplit: [\"\",\"123 \",\" \",\"\"]\r\n  # Test: mustRegexSplit\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  regexSplit: [\"\",\"123 \",\" \",\"\"]\n  # Test: mustRegexSplit\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "regexSplit",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexSplit=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:66:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:66:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexSplit",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexSplit=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:66:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:66:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexSplit",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexSplit=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:66:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:66:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "regexSplit",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testRegexSplit=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:66:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:66:49: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexSplit",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexSplit=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:70:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:70:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexSplit",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexSplit=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\r\n  mustRegexSplit: [\"\",\"123 \",\" \",\"\"]\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n  mustRegexSplit: [\"\",\"123 \",\" \",\"\"]\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-regex-test\r\ndata:\r\n  # ==========================================\r\n  # Match functions\r\n  # ==========================================\r\n  # Test: regexMatch\r\n  # Test: mustRegexMatch\r\n\r\n  # ==========================================\r\n  # Find functions\r\n  # ==========================================\r\n  # Test: regexFindAll\r\n  # Test: mustRegexFindAll\r\n  # Test: regexFind\r\n  # Test: mustRegexFind\r\n\r\n  # ==========================================\r\n  # Replace functions\r\n  # ==========================================\r\n  # Test: regexReplaceAll\r\n  # Test: mustRegexReplaceAll\r\n  # Test: regexReplaceAllLiteral\r\n  # Test: mustRegexReplaceAllLiteral\r\n\r\n  # ==========================================\r\n  # Split functions\r\n  # ==========================================\r\n  # Test: regexSplit\r\n  # Test: mustRegexSplit\r\n  mustRegexSplit: [\"\",\"123 \",\" \",\"\"]\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-regex/templates/invalid-regex-test.yaml",
+            "content": "\n# Source: test-regex/templates/invalid-regex-test.yaml\n# Test: Regex operation errors - comprehensive testing of all regex functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  # Test: mustRegexMatch\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  # Test: mustRegexFindAll\n  # Test: regexFind\n  # Test: mustRegexFind\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  # Test: mustRegexReplaceAll\n  # Test: regexReplaceAllLiteral\n  # Test: mustRegexReplaceAllLiteral\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  # Test: mustRegexSplit\n  mustRegexSplit: [\"\",\"123 \",\" \",\"\"]\n",
+            "originalContent": "# Test: Regex operation errors - comprehensive testing of all regex functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-regex-test\ndata:\n  # ==========================================\n  # Match functions\n  # ==========================================\n  # Test: regexMatch\n  {{- if .Values.testRegexMatch }}\n  regexMatch: {{ regexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexMatch\n  {{- if .Values.testMustRegexMatch }}\n  mustRegexMatch: {{ mustRegexMatch .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Find functions\n  # ==========================================\n  # Test: regexFindAll\n  {{- if .Values.testRegexFindAll }}\n  regexFindAll: {{ regexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexFindAll\n  {{- if .Values.testMustRegexFindAll }}\n  mustRegexFindAll: {{ mustRegexFindAll .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: regexFind\n  {{- if .Values.testRegexFind }}\n  regexFind: {{ regexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n  # Test: mustRegexFind\n  {{- if .Values.testMustRegexFind }}\n  mustRegexFind: {{ mustRegexFind .Values.validPattern $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Replace functions\n  # ==========================================\n  # Test: regexReplaceAll\n  {{- if .Values.testRegexReplaceAll }}\n  regexReplaceAll: {{ regexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAll\n  {{- if .Values.testMustRegexReplaceAll }}\n  mustRegexReplaceAll: {{ mustRegexReplaceAll .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: regexReplaceAllLiteral\n  {{- if .Values.testRegexReplaceAllLiteral }}\n  regexReplaceAllLiteral: {{ regexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n  # Test: mustRegexReplaceAllLiteral\n  {{- if .Values.testMustRegexReplaceAllLiteral }}\n  mustRegexReplaceAllLiteral: {{ mustRegexReplaceAllLiteral .Values.validPattern .Values.replacement $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # Split functions\n  # ==========================================\n  # Test: regexSplit\n  {{- if .Values.testRegexSplit }}\n  regexSplit: {{ regexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n  # Test: mustRegexSplit\n  {{- if .Values.testMustRegexSplit }}\n  mustRegexSplit: {{ mustRegexSplit .Values.validPattern $testData -1 | toJson }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "mustRegexSplit",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexSplit=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:70:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:70:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexSplit",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexSplit=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:70:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:70:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexSplit",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexSplit=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:70:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:70:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    },
+    {
+      "toggle": "mustRegexSplit",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testMustRegexSplit=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:70:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-regex/templates/invalid-regex-test.yaml:70:57: executing \"test-regex/templates/invalid-regex-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      }
+    }
+  ]
+}
