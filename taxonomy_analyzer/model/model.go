@@ -2,16 +2,36 @@ package model
 
 import "time"
 
-// RunResult holds a single helm template execution result.
-type RunResult struct {
-	ChartPath    string   `json:"chart_path"`
-	ValuesFiles  []string `json:"values_files,omitempty"`
-	HelmCommand  string   `json:"helm_command"`
-	Success      bool     `json:"success"`
-	ErrorMessage string   `json:"error_message,omitempty"`
+type FixAttempt struct {
+	Attempt       int    `json:"attempt"`
+	ErrorSeen     string `json:"error_seen"`
+	Kind          string `json:"kind"`
+	ValuePath     string `json:"value_path"`
+	ValueInjected string `json:"value_injected"`
 }
 
-// ChartSummary groups all runs for a single chart.
+type FixedResult struct {
+	Resolved   bool         `json:"resolved"`
+	StopReason string       `json:"stop_reason"`
+	FixChain   []FixAttempt `json:"fix_chain"`
+}
+
+type FixOutcome struct {
+	Attempted    int            `json:"attempted"`
+	Resolved     int            `json:"resolved"`
+	Unresolved   int            `json:"unresolved"`
+	ByStopReason map[string]int `json:"by_stop_reason"`
+}
+
+type RunResult struct {
+	ChartPath    string       `json:"chart_path"`
+	ValuesFiles  []string     `json:"values_files,omitempty"`
+	HelmCommand  string       `json:"helm_command"`
+	Success      bool         `json:"success"`
+	ErrorMessage string       `json:"error_message,omitempty"`
+	Fixed        *FixedResult `json:"fixed,omitempty"`
+}
+
 type ChartSummary struct {
 	ChartPath       string      `json:"chart_path"`
 	TotalRuns       int         `json:"total_runs"`
@@ -22,7 +42,6 @@ type ChartSummary struct {
 	Runs            []RunResult `json:"runs"`
 }
 
-// RepoResult holds all results for a single repository.
 type RepoResult struct {
 	RepoURL          string         `json:"repo_url"`
 	RepoName         string         `json:"repo_name"`
@@ -37,26 +56,25 @@ type RepoResult struct {
 	DepFailed        bool           `json:"dep_failed"`
 }
 
-// ErrorOccurrence is a single failed run/dependency build enriched with taxonomy fields.
 type ErrorOccurrence struct {
-	RepoURL      string   `json:"repo_url"`
-	RepoName     string   `json:"repo_name"`
-	ChartPath    string   `json:"chart_path"`
-	ValuesFiles  []string `json:"values_files,omitempty"`
-	HelmCommand  string   `json:"helm_command,omitempty"`
-	ErrorSource  string   `json:"error_source"` // template | dependency
-	ErrorKind    string   `json:"error_kind"`
-	ErrorSubKind string   `json:"error_sub_kind"`
-	ErrorMessage string   `json:"error_message"`
+	RepoURL      string       `json:"repo_url"`
+	RepoName     string       `json:"repo_name"`
+	ChartPath    string       `json:"chart_path"`
+	ValuesFiles  []string     `json:"values_files,omitempty"`
+	HelmCommand  string       `json:"helm_command,omitempty"`
+	ErrorSource  string       `json:"error_source"`
+	ErrorKind    string       `json:"error_kind"`
+	ErrorSubKind string       `json:"error_sub_kind"`
+	ErrorMessage string       `json:"error_message"`
+	Fixed        *FixedResult `json:"fixed,omitempty"`
 }
 
-// TaxonomyBucket groups occurrences by classification.
 type TaxonomyBucket struct {
-	Count    int               `json:"count"`
-	Examples []ErrorOccurrence `json:"examples"`
+	Count      int               `json:"count"`
+	Examples   []ErrorOccurrence `json:"examples"`
+	FixOutcome FixOutcome        `json:"fix_outcome"`
 }
 
-// ReportTotals contains high-level scan totals.
 type ReportTotals struct {
 	Repos             int `json:"repos"`
 	Runs              int `json:"runs"`
@@ -64,12 +82,15 @@ type ReportTotals struct {
 	DependencyErrors  int `json:"dependency_failures"`
 	ClassifiedErrors  int `json:"classified_errors"`
 	UnclassifiedError int `json:"unclassified_errors"`
+	FixAttempted      int `json:"fix_attempted,omitempty"`
+	FixResolved       int `json:"fix_resolved,omitempty"`
+	FixUnresolved     int `json:"fix_unresolved,omitempty"`
 }
 
-// TaxonomyReport is the final analyzer output.
 type TaxonomyReport struct {
 	GeneratedAt   time.Time                 `json:"generated_at"`
 	SourceCatalog string                    `json:"source_catalog"`
+	FixedCatalog  string                    `json:"fixed_catalog,omitempty"`
 	Totals        ReportTotals              `json:"totals"`
 	ByKind        map[string]TaxonomyBucket `json:"by_kind"`
 	BySubKind     map[string]TaxonomyBucket `json:"by_sub_kind"`
