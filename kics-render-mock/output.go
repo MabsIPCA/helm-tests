@@ -58,3 +58,35 @@ func writeOutput(testDir string, out RenderOutput) error {
 	}
 	return os.WriteFile(filepath.Join(testDir, "kics-render-output.json"), data, 0644)
 }
+
+type FixStep struct {
+	Attempt       int    `json:"attempt"`
+	ErrorSeen     string `json:"errorSeen"`
+	Kind          string `json:"kind"`
+	ValuePath     string `json:"valuePath"`
+	ValueInjected string `json:"valueInjected"`
+}
+
+type FixedRenderEntry struct {
+	RenderEntry
+	Resolved    bool       `json:"resolved"`
+	StopReason  string     `json:"stopReason"`
+	FixChain    []FixStep  `json:"fixChain"`
+	FixedResult *RunResult `json:"fixedResult,omitempty"`
+}
+
+type FixedRenderOutput struct {
+	Suite      string             `json:"suite"`
+	TestNumber int                `json:"testNumber"`
+	TestName   string             `json:"testName"`
+	ChartPath  string             `json:"chartPath"`
+	Renders    []FixedRenderEntry `json:"renders"`
+}
+
+func writeFixedOutput(testDir string, out FixedRenderOutput) error {
+	data, err := json.MarshalIndent(out, "", "  ")
+	if err != nil {
+		return err
+	}
+	return os.WriteFile(filepath.Join(testDir, "kics-fixed-output.json"), data, 0644)
+}
