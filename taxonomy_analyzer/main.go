@@ -16,6 +16,7 @@ func main() {
 	defaultCatalog := filepath.Join("..", "helm_fetcher", "backup", "run_002_274", "catalog_by_project.json")
 
 	catalogPath := flag.String("input", defaultCatalog, "Path to catalog_by_project.json")
+	fixedPath := flag.String("fixed", "", "Optional path to catalog_fixed.json")
 	outputDir := flag.String("out", "out", "Output directory for taxonomy reports")
 	flag.Parse()
 
@@ -25,7 +26,23 @@ func main() {
 		os.Exit(1)
 	}
 
-	collector := analyzer.New(absCatalog)
+	var absFixed string
+	var fixedIndex map[string]*model.FixedResult
+	if *fixedPath != "" {
+		absFixed, err = filepath.Abs(*fixedPath)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "failed to resolve fixed path: %v\n", err)
+			os.Exit(1)
+		}
+		fixedIndex, err = loader.LoadFixedIndex(absFixed)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "failed to load fixed catalog: %v\n", err)
+			os.Exit(1)
+		}
+		fmt.Printf("Loaded fixed catalog: %d runs indexed\n", len(fixedIndex))
+	}
+
+	collector := analyzer.New(absCatalog, absFixed, fixedIndex)
 	err = loader.StreamCatalog(absCatalog, func(repo model.RepoResult) error {
 		collector.ConsumeRepo(repo)
 		return nil
@@ -43,4 +60,7 @@ func main() {
 
 	fmt.Printf("Taxonomy analysis complete. Output directory: %s\n", *outputDir)
 	fmt.Printf("Classified errors: %d | Unclassified errors: %d\n", report.Totals.ClassifiedErrors, report.Totals.UnclassifiedError)
+	if report.Totals.FixAttempted > 0 {
+		fmt.Printf("Fix attempts: %d | Resolved: %d | Unresolved: %d\n", report.Totals.FixAttempted, report.Totals.FixResolved, report.Totals.FixUnresolved)
+	}
 }
