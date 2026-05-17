@@ -56,6 +56,17 @@ func TestParseError_NilPointerWithoutAtClause(t *testing.T) {
 	}
 }
 
+func TestParseError_NilPointerWithPipeFilter(t *testing.T) {
+	errStr := `template: mychart/templates/deploy.yaml:5:8: executing "mychart/templates/deploy.yaml" at <.Values.foo | quote>: nil pointer evaluating interface {}.foo`
+	fix, ok := parseError(errStr)
+	if !ok {
+		t.Fatal("expected parseable, got false")
+	}
+	if fix.path != "foo" {
+		t.Errorf("path: got %q, want %q", fix.path, "foo")
+	}
+}
+
 func TestApplyPatch_AppendsToOriginalValues(t *testing.T) {
 	orig := &values.Options{
 		Values:     []string{"foo=bar"},
