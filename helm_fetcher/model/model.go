@@ -81,3 +81,52 @@ type ArtifactLink struct {
 	Name string `json:"name"`
 	URL  string `json:"url"`
 }
+
+// FixStep records one iteration of the fix loop.
+type FixStep struct {
+	Attempt       int    `json:"attempt"`
+	ErrorSeen     string `json:"error_seen"`
+	Kind          string `json:"kind"`           // "nil_pointer" | "required_value"
+	ValuePath     string `json:"value_path"`
+	ValueInjected string `json:"value_injected"`
+}
+
+// FixedRunResult holds the fixer outcome for a single helm template run.
+type FixedRunResult struct {
+	Resolved     bool      `json:"resolved"`
+	StopReason   string    `json:"stop_reason"` // "" | "loop_detected" | "unfixable_error_kind" | "max_iterations"
+	FixChain     []FixStep `json:"fix_chain"`
+	FinalCommand string    `json:"final_command,omitempty"`
+}
+
+// RunResultWithFix embeds RunResult and adds the fixer output.
+type RunResultWithFix struct {
+	RunResult
+	Fixed *FixedRunResult `json:"fixed,omitempty"`
+}
+
+// ChartSummaryFixed is ChartSummary with RunResultWithFix entries.
+type ChartSummaryFixed struct {
+	ChartPath       string             `json:"chart_path"`
+	TotalRuns       int                `json:"total_runs"`
+	Successes       int                `json:"successes"`
+	Failures        int                `json:"failures"`
+	DepBuildFailure bool               `json:"dep_build_failure,omitempty"`
+	DepBuildError   string             `json:"dep_build_error,omitempty"`
+	Runs            []RunResultWithFix `json:"runs"`
+}
+
+// RepoResultFixed is RepoResult with ChartSummaryFixed entries.
+type RepoResultFixed struct {
+	RepoURL          string              `json:"repo_url"`
+	RepoName         string              `json:"repo_name"`
+	ClonedDir        string              `json:"cloned_dir"`
+	TotalCharts      int                 `json:"total_charts"`
+	TotalRuns        int                 `json:"total_runs"`
+	TotalSuccesses   int                 `json:"total_successes"`
+	TotalFailures    int                 `json:"total_failures"`
+	TotalDepFailures int                 `json:"total_dep_failures"`
+	Charts           []ChartSummaryFixed `json:"charts"`
+	Kept             bool                `json:"kept"`
+	DepFailed        bool                `json:"dep_failed"`
+}
