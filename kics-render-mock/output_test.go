@@ -2,6 +2,8 @@ package main
 
 import (
 	"encoding/json"
+	"os"
+	"path/filepath"
 	"testing"
 )
 
@@ -63,5 +65,65 @@ func TestRenderOutputMarshal(t *testing.T) {
 	}
 	if len(r.Debug.DebugLogs) != 1 {
 		t.Errorf("Debug.DebugLogs len: got %d", len(r.Debug.DebugLogs))
+	}
+}
+
+func TestFixedRenderEntryMarshal_EmbeddedFieldsInlined(t *testing.T) {
+	errStr := "nil pointer"
+	entry := FixedRenderEntry{
+		RenderEntry: RenderEntry{
+			Toggle:   "nil-test",
+			DataType: "nilMap",
+			ValuesOptions: ValuesOptionsSummary{
+				Values:     []string{"testNilMapAccess=true"},
+				ValueFiles: []string{},
+			},
+			Standard: RunResult{Error: &errStr, SplitManifests: []SplitManifestEntry{}},
+			Debug:    DebugRunResult{Error: &errStr, DebugLogs: []string{}, SplitManifests: []SplitManifestEntry{}},
+		},
+		Resolved:   false,
+		StopReason: "unfixable_error_kind",
+		FixChain:   []FixStep{},
+	}
+	data, err := json.Marshal(entry)
+	if err != nil {
+		t.Fatalf("marshal: %v", err)
+	}
+	var m map[string]interface{}
+	if err := json.Unmarshal(data, &m); err != nil {
+		t.Fatal(err)
+	}
+	for _, key := range []string{"toggle", "dataType", "standard", "debug", "resolved", "stopReason", "fixChain"} {
+		if _, ok := m[key]; !ok {
+			t.Errorf("key %q missing from JSON", key)
+		}
+	}
+}
+
+func TestWriteFixedOutput_CreatesFile(t *testing.T) {
+	dir := t.TempDir()
+	out := FixedRenderOutput{
+		Suite:      "render_problems",
+		TestNumber: 1,
+		TestName:   "Test",
+		ChartPath:  dir,
+		Renders:    []FixedRenderEntry{},
+	}
+	if err := writeFixedOutput(dir, out); err != nil {
+		t.Fatalf("writeFixedOutput: %v", err)
+	}
+	data, err := os.ReadFile(filepath.Join(dir, "kics-fixed-output.json"))
+	if err != nil {
+		t.Fatalf("ReadFile: %v", err)
+	}
+	var got FixedRenderOutput
+	if err := json.Unmarshal(data, &got); err != nil {
+		t.Fatalf("Unmarshal: %v", err)
+	}
+	if got.Suite != "render_problems" {
+		t.Errorf("Suite: got %q", got.Suite)
+	}
+	if got.Renders == nil {
+		t.Error("Renders must not be nil")
 	}
 }
