@@ -56,7 +56,7 @@ New function, existing `StreamCatalog` unchanged:
 func LoadFixedIndex(path string) (map[string]*model.FixedResult, error)
 ```
 
-Streams `catalog_fixed.json` using the same decoder pattern. For each run with a non-nil `fixed` field, inserts `run.HelmCommand → &run.Fixed` into the map. Join key is `helm_command` (a fully-qualified CLI string, unique per run).
+Streams `catalog_fixed.json` using the same decoder pattern. For each run with a non-nil `fixed` field, inserts `run.HelmCommand → run.Fixed` into the map. Join key is `helm_command` (a fully-qualified CLI string, unique per run).
 
 ## Analyzer changes (`analyzer/analyzer.go`)
 
