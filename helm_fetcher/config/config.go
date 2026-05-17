@@ -4,7 +4,7 @@ import "flag"
 
 const (
 	modeFlag           = "mode"
-	modeUsage          = "Execution mode: full, github-search-json, or artifacthub-search-json"
+	modeUsage          = "Execution mode: full, github-search-json, artifacthub-search-json, or fixer"
 	modeDefault        = "full"
 	sourceFlag         = "source"
 	sourceUsage        = "Discovery source: artifacthub or github (full mode loads repos from -search-in JSON)"
@@ -30,6 +30,9 @@ const (
 	cloneDirFlag       = "clone-dir"
 	cloneDirUsage      = "Directory where repositories are cloned"
 	cloneDirDefault    = "cloned"
+	catalogInFlag      = "catalog-in"
+	catalogInUsage     = "In fixer mode, input catalog JSON (e.g. catalog_kept.json)"
+	catalogInDefault   = "catalog_kept.json"
 )
 
 // Config groups all runtime settings parsed from CLI flags.
@@ -43,6 +46,7 @@ type Config struct {
 	SearchIn    string
 	SearchOut   string
 	CloneDir    string
+	CatalogIn   string
 }
 
 func Parse() Config {
@@ -55,6 +59,7 @@ func Parse() Config {
 	searchIn := flag.String(searchInFlag, searchInDefault, searchInUsage)
 	searchOut := flag.String(searchOutFlag, searchOutDefault, searchOutUsage)
 	cloneDir := flag.String(cloneDirFlag, cloneDirDefault, cloneDirUsage)
+	catalogIn := flag.String(catalogInFlag, catalogInDefault, catalogInUsage)
 	flag.Parse()
 
 	return Config{
@@ -67,5 +72,6 @@ func Parse() Config {
 		SearchIn:    *searchIn,
 		SearchOut:   *searchOut,
 		CloneDir:    *cloneDir,
+		CatalogIn:   *catalogIn,
 	}
 }
