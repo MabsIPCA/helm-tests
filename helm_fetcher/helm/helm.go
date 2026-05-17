@@ -104,3 +104,20 @@ func RunHelmTemplate(chartPath string, valuesFiles []string) (cmdStr, output str
 	out, runErr := cmd.CombinedOutput()
 	return cmdStr, string(out), runErr
 }
+
+// RunHelmTemplateWithSets runs "helm template test <chartPath> [-f vf...] [--set k=v...]"
+// and returns the command string, combined output, and any exec error.
+func RunHelmTemplateWithSets(chartPath string, valFiles, setFlags []string) (cmdStr, output string, err error) {
+	args := []string{"template", "test", chartPath}
+	for _, vf := range valFiles {
+		args = append(args, "-f", vf)
+	}
+	for _, sf := range setFlags {
+		args = append(args, "--set", sf)
+	}
+	cmdStr = "helm " + strings.Join(args, " ")
+
+	cmd := exec.Command("helm", args...)
+	out, runErr := cmd.CombinedOutput()
+	return cmdStr, string(out), runErr
+}
