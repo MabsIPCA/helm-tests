@@ -124,6 +124,7 @@ func runFixerMode(catalogIn, cloneDir string) {
 	}
 
 	var fixedRepos []model.RepoResultFixed
+	var skipped int
 
 	for i, repo := range repos {
 		destDir := resolveDestDir(repo.RepoURL, cloneDir)
@@ -136,12 +137,14 @@ func runFixerMode(catalogIn, cloneDir string) {
 
 		if cloneErr := git.CloneRepo(repo.RepoURL, destDir); cloneErr != nil {
 			log.Warn().Err(cloneErr).Str("repo", repo.RepoName).Msg("Clone failed – skipping")
+			skipped++
 			continue
 		}
 
 		freshCharts := helm.FindCharts(destDir)
 		if len(freshCharts) == 0 {
 			log.Warn().Str("repo", repo.RepoName).Msg("No charts found – skipping")
+			skipped++
 			continue
 		}
 
@@ -250,6 +253,9 @@ func runFixerMode(catalogIn, cloneDir string) {
 	}
 	fmt.Printf("\nCatalog Fixer complete.\n")
 	fmt.Printf("  Repos processed: %d\n", len(fixedRepos))
+	if skipped > 0 {
+		fmt.Printf("  Repos skipped:   %d (clone failed or no charts)\n", skipped)
+	}
 	fmt.Printf("  Failing runs:    %d\n", totalFailing)
 	fmt.Printf("  Resolved:        %d\n", totalResolved)
 	fmt.Printf("  Resolution rate: %d%%\n", pct)
@@ -293,10 +299,16 @@ func writeFixerReport(catalogIn string, repos []model.RepoResultFixed) error {
 				// Classify by first fix step kind; if no steps, it was immediately unfixable.
 				if len(run.Fixed.FixChain) == 0 {
 					stats["other"].before++
+					if run.Fixed.Resolved {
+						stats["other"].resolved++
+					}
 				} else {
 					k := run.Fixed.FixChain[0].Kind
 					if _, known := stats[k]; !known {
 						stats["other"].before++
+						if run.Fixed.Resolved {
+							stats["other"].resolved++
+						}
 					} else {
 						stats[k].before++
 						if run.Fixed.Resolved {
