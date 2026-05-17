@@ -52,7 +52,7 @@ func fixRun(chartPath string, orig model.RunResult) model.FixedRunResult {
 
 	patch := map[string]string{}
 	seenErrs := map[string]bool{}
-	var chain []model.FixStep
+	chain := []model.FixStep{}
 
 	for attempt := 1; attempt <= maxFixIterations; attempt++ {
 		setFlags := make([]string, 0, len(patch))
