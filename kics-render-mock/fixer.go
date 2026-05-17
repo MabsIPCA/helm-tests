@@ -15,7 +15,7 @@ const (
 )
 
 var (
-	nilPtrRe   = regexp.MustCompile(`at <(\.Values\.[^>]+)>`)
+	nilPtrRe   = regexp.MustCompile(`at <(\.Values\.[^ |>]+)`)
 	requiredRe = regexp.MustCompile(`required (\.Values\.[^ "]+)`)
 )
 
@@ -51,5 +51,7 @@ func applyPatch(orig *values.Options, patch map[string]string) *values.Options {
 		Values:       append(append([]string{}, orig.Values...), extra...),
 		StringValues: orig.StringValues,
 		FileValues:   orig.FileValues,
+		JSONValues:   orig.JSONValues,
+		LiteralValues: orig.LiteralValues,
 	}
 }
