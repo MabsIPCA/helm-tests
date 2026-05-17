@@ -74,8 +74,7 @@ func LoadFixedIndex(path string) (map[string]*model.FixedResult, error) {
 		for _, chart := range repo.Charts {
 			for _, run := range chart.Runs {
 				if run.Fixed != nil && run.HelmCommand != "" {
-					fixed := run.Fixed
-					index[run.HelmCommand] = fixed
+					index[run.HelmCommand] = run.Fixed
 				}
 			}
 		}
