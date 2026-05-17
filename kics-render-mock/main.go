@@ -82,6 +82,7 @@ func main() {
 	for _, suite := range suites {
 		totalInvocations := 0
 		totalErrors := 0
+		totalResolved := 0
 
 		for _, dirName := range suite.dirs {
 			testDir := filepath.Join(suite.path, dirName)
@@ -107,11 +108,30 @@ func main() {
 			if err := writeOutput(testDir, out); err != nil {
 				fmt.Fprintf(os.Stderr, "[%s/%s] write error: %v\n", suite.name, dirName, err)
 			}
+
+			fixedOut, err := runFixDir(testDir, suite.name, out)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "[%s/%s] fixer error: %v\n", suite.name, dirName, err)
+			} else {
+				for _, r := range fixedOut.Renders {
+					if r.Resolved && len(r.FixChain) > 0 {
+						totalResolved++
+					}
+				}
+				if err := writeFixedOutput(testDir, fixedOut); err != nil {
+					fmt.Fprintf(os.Stderr, "[%s/%s] fixed write error: %v\n", suite.name, dirName, err)
+				}
+			}
 		}
 
-		fmt.Printf("%-25s %2d dirs   %4d invocations   %4d errors\n",
-			suite.name, len(suite.dirs), totalInvocations, totalErrors)
+		resolved := ""
+		if totalErrors > 0 {
+			pct := totalResolved * 100 / totalErrors
+			resolved = fmt.Sprintf(" → %d resolved (%d%%)", totalResolved, pct)
+		}
+		fmt.Printf("%-25s %2d dirs   %4d invocations   %4d errors%s\n",
+			suite.name, len(suite.dirs), totalInvocations, totalErrors, resolved)
 	}
 
-	fmt.Println("JSON files written to each test directory.")
+	fmt.Println("JSON + fixed files written to each test directory.")
 }
