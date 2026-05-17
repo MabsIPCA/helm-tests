@@ -13,20 +13,24 @@ const maxExamplesPerBucket = 5
 
 // Analyzer keeps running aggregation state while catalog entries are streamed.
 type Analyzer struct {
-	report model.TaxonomyReport
+	report     model.TaxonomyReport
+	fixedIndex map[string]*model.FixedResult
 }
 
 // New creates a new analyzer report collector.
-func New(sourceCatalog string) *Analyzer {
-	return &Analyzer{
-		report: model.TaxonomyReport{
-			GeneratedAt:   time.Now().UTC(),
-			SourceCatalog: sourceCatalog,
-			ByKind:        map[string]model.TaxonomyBucket{},
-			BySubKind:     map[string]model.TaxonomyBucket{},
-			ByRepo:        map[string]map[string]int{},
-		},
+// fixedCatalog and fixedIndex may be empty/nil when --fixed is not provided.
+func New(sourceCatalog, fixedCatalog string, fixedIndex map[string]*model.FixedResult) *Analyzer {
+	r := model.TaxonomyReport{
+		GeneratedAt:   time.Now().UTC(),
+		SourceCatalog: sourceCatalog,
+		ByKind:        map[string]model.TaxonomyBucket{},
+		BySubKind:     map[string]model.TaxonomyBucket{},
+		ByRepo:        map[string]map[string]int{},
 	}
+	if fixedCatalog != "" {
+		r.FixedCatalog = fixedCatalog
+	}
+	return &Analyzer{report: r, fixedIndex: fixedIndex}
 }
 
 // ConsumeRepo feeds one repo result into the taxonomy analyzer.
@@ -51,7 +55,7 @@ func (a *Analyzer) ConsumeRepo(repo model.RepoResult) {
 			if run.Success || run.ErrorMessage == "" {
 				continue
 			}
-			a.consumeOccurrence(model.ErrorOccurrence{
+			occ := model.ErrorOccurrence{
 				RepoURL:      repo.RepoURL,
 				RepoName:     repo.RepoName,
 				ChartPath:    run.ChartPath,
@@ -59,7 +63,11 @@ func (a *Analyzer) ConsumeRepo(repo model.RepoResult) {
 				HelmCommand:  run.HelmCommand,
 				ErrorSource:  "template",
 				ErrorMessage: run.ErrorMessage,
-			})
+			}
+			if a.fixedIndex != nil {
+				occ.Fixed = a.fixedIndex[run.HelmCommand]
+			}
+			a.consumeOccurrence(occ)
 		}
 	}
 }
@@ -81,6 +89,17 @@ func (a *Analyzer) consumeOccurrence(occ model.ErrorOccurrence) {
 	a.bumpBucket(a.report.ByKind, kindKey, occ)
 	a.bumpBucket(a.report.BySubKind, subKindKey, occ)
 
+	if occ.Fixed != nil {
+		a.report.Totals.FixAttempted++
+		if occ.Fixed.Resolved {
+			a.report.Totals.FixResolved++
+		} else {
+			a.report.Totals.FixUnresolved++
+		}
+		a.bumpFixOutcome(a.report.ByKind, kindKey, occ.Fixed)
+		a.bumpFixOutcome(a.report.BySubKind, subKindKey, occ.Fixed)
+	}
+
 	if _, ok := a.report.ByRepo[occ.RepoName]; !ok {
 		a.report.ByRepo[occ.RepoName] = map[string]int{}
 	}
@@ -97,6 +116,25 @@ func (a *Analyzer) bumpBucket(buckets map[string]model.TaxonomyBucket, key strin
 	buckets[key] = bucket
 }
 
+func (a *Analyzer) bumpFixOutcome(buckets map[string]model.TaxonomyBucket, key string, fixed *model.FixedResult) {
+	bucket := buckets[key]
+	fo := bucket.FixOutcome
+	fo.Attempted++
+	if fixed.Resolved {
+		fo.Resolved++
+	} else {
+		fo.Unresolved++
+		if fixed.StopReason != "" {
+			if fo.ByStopReason == nil {
+				fo.ByStopReason = map[string]int{}
+			}
+			fo.ByStopReason[fixed.StopReason]++
+		}
+	}
+	bucket.FixOutcome = fo
+	buckets[key] = bucket
+}
+
 // Report returns a normalized copy of the report for exporting.
 func (a *Analyzer) Report() model.TaxonomyReport {
 	report := a.report
@@ -106,8 +144,6 @@ func (a *Analyzer) Report() model.TaxonomyReport {
 	return report
 }
 
-// map order is not guaranteed in JSON output, so we recreate maps in sorted order
-// to get deterministic marshal output for tests and diffs.
 func sortBucketsByCount(src map[string]model.TaxonomyBucket) map[string]model.TaxonomyBucket {
 	type pair struct {
 		key   string
