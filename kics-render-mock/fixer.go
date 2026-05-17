@@ -55,3 +55,86 @@ func applyPatch(orig *values.Options, patch map[string]string) *values.Options {
 		LiteralValues: orig.LiteralValues,
 	}
 }
+
+func fixInvocation(chartPath string, inv invocation) FixedRenderEntry {
+	entry := FixedRenderEntry{FixChain: []FixStep{}}
+
+	patch := map[string]string{}
+	seenErrs := map[string]bool{}
+
+	for attempt := 1; attempt <= maxFixIterations; attempt++ {
+		patchedOpts := applyPatch(inv.valOpts, patch)
+		res := runOnce(chartPath, patchedOpts, false)
+
+		if res.err == nil {
+			entry.Resolved = true
+			fixed := toStandardResult(res)
+			entry.FixedResult = &fixed
+			return entry
+		}
+
+		errStr := res.err.Error()
+		if seenErrs[errStr] {
+			entry.StopReason = "loop_detected"
+			return entry
+		}
+		seenErrs[errStr] = true
+
+		fix, ok := parseError(errStr)
+		if !ok {
+			entry.StopReason = "unfixable_error_kind"
+			return entry
+		}
+
+		entry.FixChain = append(entry.FixChain, FixStep{
+			Attempt:       attempt,
+			ErrorSeen:     errStr,
+			Kind:          fix.kind,
+			ValuePath:     fix.path,
+			ValueInjected: fix.value,
+		})
+		patch[fix.path] = fix.value
+	}
+
+	entry.StopReason = "max_iterations"
+	return entry
+}
+
+func runFixDir(testDir, suite string, base RenderOutput) (FixedRenderOutput, error) {
+	cfg, err := loadConfig(testDir)
+	if err != nil {
+		return FixedRenderOutput{}, err
+	}
+	invocations := buildInvocations(cfg, testDir)
+
+	out := FixedRenderOutput{
+		Suite:      suite,
+		TestNumber: base.TestNumber,
+		TestName:   base.TestName,
+		ChartPath:  base.ChartPath,
+		Renders:    make([]FixedRenderEntry, 0, len(base.Renders)),
+	}
+
+	for i, inv := range invocations {
+		baseEntry := base.Renders[i]
+		fixed := FixedRenderEntry{
+			RenderEntry: baseEntry,
+			FixChain:    []FixStep{},
+		}
+
+		if baseEntry.Standard.Error == nil {
+			fixed.Resolved = true
+			out.Renders = append(out.Renders, fixed)
+			continue
+		}
+
+		loopResult := fixInvocation(testDir, inv)
+		fixed.Resolved = loopResult.Resolved
+		fixed.StopReason = loopResult.StopReason
+		fixed.FixChain = loopResult.FixChain
+		fixed.FixedResult = loopResult.FixedResult
+		out.Renders = append(out.Renders, fixed)
+	}
+
+	return out, nil
+}
