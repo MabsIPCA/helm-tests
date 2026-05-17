@@ -109,6 +109,8 @@ clean-output:
 	@if exist $(ALL_JSON) del /q $(ALL_JSON)
 	@if exist $(FAIL_CSV)  del /q $(FAIL_CSV)
 	@if exist $(SEARCH_JSON) del /q $(SEARCH_JSON)
+	@if exist catalog_fixed.json del /q catalog_fixed.json
+	@if exist catalog_fixer_report.md del /q catalog_fixer_report.md
 	@echo "Done."
 
 ## clean: remove cloned repos AND output files
