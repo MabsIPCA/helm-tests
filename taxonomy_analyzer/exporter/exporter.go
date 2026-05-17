@@ -93,7 +93,12 @@ func writeMarkdown(path string, report model.TaxonomyReport) error {
 		fmt.Fprintln(f, "|---|---:|---:|---:|")
 		for _, key := range sortedKeysByCount(report.BySubKind) {
 			b := report.BySubKind[key]
-			fmt.Fprintf(f, "| `%s` | %d | %d | %d |\n", key, b.Count, b.FixOutcome.Resolved, b.FixOutcome.Unresolved)
+			var fixResolved, fixUnresolved int
+			if b.FixOutcome != nil {
+				fixResolved = b.FixOutcome.Resolved
+				fixUnresolved = b.FixOutcome.Unresolved
+			}
+			fmt.Fprintf(f, "| `%s` | %d | %d | %d |\n", key, b.Count, fixResolved, fixUnresolved)
 		}
 	} else {
 		fmt.Fprintln(f, "| SubKind | Count |")

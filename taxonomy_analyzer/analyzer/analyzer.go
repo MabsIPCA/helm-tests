@@ -119,6 +119,9 @@ func (a *Analyzer) bumpBucket(buckets map[string]model.TaxonomyBucket, key strin
 func (a *Analyzer) bumpFixOutcome(buckets map[string]model.TaxonomyBucket, key string, fixed *model.FixedResult) {
 	bucket := buckets[key]
 	fo := bucket.FixOutcome
+	if fo == nil {
+		fo = &model.FixOutcome{}
+	}
 	fo.Attempted++
 	if fixed.Resolved {
 		fo.Resolved++
@@ -144,6 +147,8 @@ func (a *Analyzer) Report() model.TaxonomyReport {
 	return report
 }
 
+// map order is not guaranteed in JSON output, so we recreate maps in sorted order
+// to get deterministic marshal output for tests and diffs.
 func sortBucketsByCount(src map[string]model.TaxonomyBucket) map[string]model.TaxonomyBucket {
 	type pair struct {
 		key   string
