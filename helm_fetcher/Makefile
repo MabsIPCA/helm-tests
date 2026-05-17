@@ -33,8 +33,10 @@ SEARCH_JSON := github_search.json
 
 # Cloned repos directory (override per run if needed)
 CLONE_DIR ?= E:/helm_clones_artifacthub
+# In fixer mode, the catalog JSON to read (produced by a previous 'run' invocation)
+CATALOG_IN ?= catalog_kept.json
 
-.PHONY: run run-github-search-json run-artifacthub-search-json plot-problems plot-popularity plot-problems-popularity plot-all clean-cloned clean-output clean help
+.PHONY: run run-github-search-json run-artifacthub-search-json run-fixer plot-problems plot-popularity plot-problems-popularity plot-all clean-cloned clean-output clean help
 
 ## run: fetch repos from selected source, run helm template on all combinations
 run:
@@ -62,6 +64,13 @@ run-artifacthub-search-json:
 		-page-size=$(PAGE_SIZE) \
 		-search-top=$(SEARCH_TOP) \
 		-search-out=$(ARTIFACT_SEARCH_OUT)
+
+## run-fixer: read catalog_kept.json, clone repos, run fix loop, write catalog_fixed.json
+run-fixer:
+	go run . \
+		-mode=fixer \
+		-catalog-in=$(CATALOG_IN) \
+		-clone-dir=$(CLONE_DIR)
 
 ## plot-problems: generate SVG chart with problems per project
 plot-problems:
@@ -114,6 +123,7 @@ help:
 	@echo     run                    - run full catalog flow (load search JSON, clone, helm template)
 	@echo     run-github-search-json - generate GitHub search JSON only
 	@echo     run-artifacthub-search-json - generate Artifact Hub search JSON only
+	@echo     run-fixer              - read catalog and apply fix loop (writes catalog_fixed.json)
 	@echo     plot-problems          - generate plots/problems_per_project.svg
 	@echo     plot-popularity        - generate plots/repo_popularity_stars.svg
 	@echo     plot-problems-popularity - generate plots/problems_per_popularity.svg
@@ -132,6 +142,7 @@ help:
 	@echo     SEARCH_ORDER (default: desc) star order in run-github-search-json mode: desc or asc
 	@echo     SEARCH_OUT   (default: github_search.json) output JSON path in run-github-search-json mode
 	@echo     ARTIFACT_SEARCH_OUT (default: artifacthub_search.json) output JSON path in run-artifacthub-search-json mode
+	@echo     CATALOG_IN   (default: catalog_kept.json) input catalog for run-fixer mode
 	@echo     CLONE_DIR    (default: E:/helm_clones) clone destination for run/clean-cloned
 	@echo     PLOT_DIR     (default: plots) directory where chart SVG files are written
 	@echo     PLOT_TOP_PROBLEMS (default: 40) bars shown in problems-per-project chart

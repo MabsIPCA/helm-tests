@@ -68,8 +68,12 @@ func main() {
 		}
 		return
 	}
+	if selectedMode == "fixer" {
+		runFixerMode(cfg.CatalogIn, cfg.CloneDir)
+		return
+	}
 	if selectedMode != "full" {
-		log.Fatal().Str("mode", cfg.Mode).Msg("Invalid mode. Use 'full', 'github-search-json' or 'artifacthub-search-json'")
+		log.Fatal().Str("mode", cfg.Mode).Msg("Invalid mode. Use 'full', 'github-search-json', 'artifacthub-search-json', or 'fixer'")
 	}
 
 	selectedSource := strings.ToLower(strings.TrimSpace(cfg.Source))
