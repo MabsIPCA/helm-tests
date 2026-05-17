@@ -56,6 +56,9 @@ func writeMarkdown(path string, report model.TaxonomyReport) error {
 	fmt.Fprintln(f)
 	fmt.Fprintf(f, "Generated at: `%s`\n\n", report.GeneratedAt.Format("2006-01-02 15:04:05 MST"))
 	fmt.Fprintf(f, "Source catalog: `%s`\n\n", report.SourceCatalog)
+	if report.FixedCatalog != "" {
+		fmt.Fprintf(f, "Fixed catalog: `%s`\n\n", report.FixedCatalog)
+	}
 
 	fmt.Fprintln(f, "## Totals")
 	fmt.Fprintln(f)
@@ -67,6 +70,11 @@ func writeMarkdown(path string, report model.TaxonomyReport) error {
 	fmt.Fprintf(f, "| Dependency failures | %d |\n", report.Totals.DependencyErrors)
 	fmt.Fprintf(f, "| Classified errors | %d |\n", report.Totals.ClassifiedErrors)
 	fmt.Fprintf(f, "| Unclassified errors | %d |\n", report.Totals.UnclassifiedError)
+	if report.Totals.FixAttempted > 0 {
+		fmt.Fprintf(f, "| Fix attempts | %d |\n", report.Totals.FixAttempted)
+		fmt.Fprintf(f, "| Fix resolved | %d |\n", report.Totals.FixResolved)
+		fmt.Fprintf(f, "| Fix unresolved | %d |\n", report.Totals.FixUnresolved)
+	}
 	fmt.Fprintln(f)
 
 	fmt.Fprintln(f, "## Taxonomy by Kind")
@@ -80,10 +88,19 @@ func writeMarkdown(path string, report model.TaxonomyReport) error {
 
 	fmt.Fprintln(f, "## Taxonomy by SubKind")
 	fmt.Fprintln(f)
-	fmt.Fprintln(f, "| SubKind | Count |")
-	fmt.Fprintln(f, "|---|---:|")
-	for _, key := range sortedKeysByCount(report.BySubKind) {
-		fmt.Fprintf(f, "| `%s` | %d |\n", key, report.BySubKind[key].Count)
+	if report.Totals.FixAttempted > 0 {
+		fmt.Fprintln(f, "| SubKind | Count | Fix Resolved | Fix Unresolved |")
+		fmt.Fprintln(f, "|---|---:|---:|---:|")
+		for _, key := range sortedKeysByCount(report.BySubKind) {
+			b := report.BySubKind[key]
+			fmt.Fprintf(f, "| `%s` | %d | %d | %d |\n", key, b.Count, b.FixOutcome.Resolved, b.FixOutcome.Unresolved)
+		}
+	} else {
+		fmt.Fprintln(f, "| SubKind | Count |")
+		fmt.Fprintln(f, "|---|---:|")
+		for _, key := range sortedKeysByCount(report.BySubKind) {
+			fmt.Fprintf(f, "| `%s` | %d |\n", key, report.BySubKind[key].Count)
+		}
 	}
 	fmt.Fprintln(f)
 
@@ -118,12 +135,22 @@ func writeCSV(path string, occurrences []model.ErrorOccurrence) error {
 	w := csv.NewWriter(f)
 	defer w.Flush()
 
-	header := []string{"repo_url", "repo_name", "chart_path", "values_files", "helm_command", "error_source", "error_kind", "error_sub_kind", "error_message"}
+	header := []string{"repo_url", "repo_name", "chart_path", "values_files", "helm_command", "error_source", "error_kind", "error_sub_kind", "error_message", "fix_resolved", "fix_stop_reason"}
 	if err := w.Write(header); err != nil {
 		return fmt.Errorf("write csv header: %w", err)
 	}
 
 	for _, occ := range occurrences {
+		fixResolved := ""
+		fixStopReason := ""
+		if occ.Fixed != nil {
+			if occ.Fixed.Resolved {
+				fixResolved = "true"
+			} else {
+				fixResolved = "false"
+			}
+			fixStopReason = occ.Fixed.StopReason
+		}
 		if err := w.Write([]string{
 			occ.RepoURL,
 			occ.RepoName,
@@ -134,6 +161,8 @@ func writeCSV(path string, occurrences []model.ErrorOccurrence) error {
 			occ.ErrorKind,
 			occ.ErrorSubKind,
 			occ.ErrorMessage,
+			fixResolved,
+			fixStopReason,
 		}); err != nil {
 			return fmt.Errorf("write csv row: %w", err)
 		}
