@@ -30,7 +30,7 @@ func buildReportWithFix() model.TaxonomyReport {
 	bucket := model.TaxonomyBucket{
 		Count:    1,
 		Examples: []model.ErrorOccurrence{occ},
-		FixOutcome: model.FixOutcome{
+		FixOutcome: &model.FixOutcome{
 			Attempted:    1,
 			Unresolved:   1,
 			ByStopReason: map[string]int{"unfixable_error_kind": 1},

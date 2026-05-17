@@ -74,6 +74,9 @@ func LoadFixedIndex(path string) (map[string]*model.FixedResult, error) {
 		for _, chart := range repo.Charts {
 			for _, run := range chart.Runs {
 				if run.Fixed != nil && run.HelmCommand != "" {
+					if _, exists := index[run.HelmCommand]; exists {
+						fmt.Fprintf(os.Stderr, "warning: duplicate helm_command in fixed catalog, overwriting: %s\n", run.HelmCommand)
+					}
 					index[run.HelmCommand] = run.Fixed
 				}
 			}

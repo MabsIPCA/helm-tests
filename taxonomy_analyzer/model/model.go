@@ -20,7 +20,7 @@ type FixOutcome struct {
 	Attempted    int            `json:"attempted"`
 	Resolved     int            `json:"resolved"`
 	Unresolved   int            `json:"unresolved"`
-	ByStopReason map[string]int `json:"by_stop_reason"`
+	ByStopReason map[string]int `json:"by_stop_reason,omitempty"`
 }
 
 type RunResult struct {
@@ -72,7 +72,7 @@ type ErrorOccurrence struct {
 type TaxonomyBucket struct {
 	Count      int               `json:"count"`
 	Examples   []ErrorOccurrence `json:"examples"`
-	FixOutcome FixOutcome        `json:"fix_outcome"`
+	FixOutcome *FixOutcome       `json:"fix_outcome,omitempty"`
 }
 
 type ReportTotals struct {

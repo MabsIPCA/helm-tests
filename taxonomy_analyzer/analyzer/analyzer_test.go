@@ -69,6 +69,9 @@ func TestConsumeRepo_WithFixedIndex_AccumulatesFixStats(t *testing.T) {
 	}
 
 	subBucket := report.BySubKind["template.nil_pointer"]
+	if subBucket.FixOutcome == nil {
+		t.Fatal("expected non-nil FixOutcome")
+	}
 	if subBucket.FixOutcome.Attempted != 2 {
 		t.Errorf("nil_pointer FixOutcome.Attempted: got %d, want 2", subBucket.FixOutcome.Attempted)
 	}
@@ -83,6 +86,9 @@ func TestConsumeRepo_WithFixedIndex_AccumulatesFixStats(t *testing.T) {
 	}
 
 	kindBucket := report.ByKind["template"]
+	if kindBucket.FixOutcome == nil {
+		t.Fatal("expected non-nil FixOutcome for kind bucket")
+	}
 	if kindBucket.FixOutcome.Attempted != 2 {
 		t.Errorf("template FixOutcome.Attempted: got %d, want 2", kindBucket.FixOutcome.Attempted)
 	}
@@ -96,8 +102,8 @@ func TestConsumeRepo_WithoutFixedIndex_NoFixStats(t *testing.T) {
 	if report.Totals.FixAttempted != 0 {
 		t.Errorf("FixAttempted: got %d, want 0", report.Totals.FixAttempted)
 	}
-	if report.BySubKind["template.nil_pointer"].FixOutcome.Attempted != 0 {
-		t.Errorf("bucket FixOutcome.Attempted: got %d, want 0", report.BySubKind["template.nil_pointer"].FixOutcome.Attempted)
+	if report.BySubKind["template.nil_pointer"].FixOutcome != nil {
+		t.Errorf("expected nil FixOutcome when no fix index")
 	}
 }
 
