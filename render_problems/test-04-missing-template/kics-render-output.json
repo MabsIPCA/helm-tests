@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 7,
   "testName": "Missing Template Errors",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-04-missing-template",
+  "chartPath": "..\\render_problems\\test-04-missing-template",
   "renders": [
     {
       "toggle": "missingInclude",

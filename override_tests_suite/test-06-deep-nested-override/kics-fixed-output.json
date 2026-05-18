@@ -1,0 +1,119 @@
+{
+  "suite": "override_tests_suite",
+  "testNumber": 6,
+  "testName": "Deep Nested Structure Override",
+  "chartPath": "..\\override_tests_suite\\test-06-deep-nested-override",
+  "renders": [
+    {
+      "caseName": "deepest-level",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-06-deep-nested-override\\values-deep-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: false\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: secret\n              username: admin\n            host: primary-db\n            port: 5432\n          replicas:\n          - host: replica1\n            port: 5432\n          - host: replica2\n            port: 5432\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: overridden-deepest\n              newKey: added-at-deepest\n              value: l5-value\n            value: l4-value\n          value: l3-value\n        value: l2-value\n      value: l1-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-deep-nested/templates/values-display.yaml",
+            "content": "\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: false\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: secret\n              username: admin\n            host: primary-db\n            port: 5432\n          replicas:\n          - host: replica1\n            port: 5432\n          - host: replica2\n            port: 5432\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: overridden-deepest\n              newKey: added-at-deepest\n              value: l5-value\n            value: l4-value\n          value: l3-value\n        value: l2-value\n      value: l1-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: false\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: secret\n              username: admin\n            host: primary-db\n            port: 5432\n          replicas:\n          - host: replica1\n            port: 5432\n          - host: replica2\n            port: 5432\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: overridden-deepest\n              newKey: added-at-deepest\n              value: l5-value\n            value: l4-value\n          value: l3-value\n        value: l2-value\n      value: l1-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-deep-nested/templates/values-display.yaml",
+            "content": "\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: false\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: secret\n              username: admin\n            host: primary-db\n            port: 5432\n          replicas:\n          - host: replica1\n            port: 5432\n          - host: replica2\n            port: 5432\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: overridden-deepest\n              newKey: added-at-deepest\n              value: l5-value\n            value: l4-value\n          value: l3-value\n        value: l2-value\n      value: l1-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "multi-level",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-06-deep-nested-override\\values-multi-level.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: false\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: secret\n              username: admin\n            host: primary-db\n            port: 5432\n          replicas:\n          - host: replica1\n            port: 5432\n          - host: replica2\n            port: 5432\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: original-deepest\n              value: l5-value\n            value: l4-overridden\n          value: l3-value\n        value: l2-overridden\n      value: l1-overridden\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-deep-nested/templates/values-display.yaml",
+            "content": "\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: false\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: secret\n              username: admin\n            host: primary-db\n            port: 5432\n          replicas:\n          - host: replica1\n            port: 5432\n          - host: replica2\n            port: 5432\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: original-deepest\n              value: l5-value\n            value: l4-overridden\n          value: l3-value\n        value: l2-overridden\n      value: l1-overridden\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: false\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: secret\n              username: admin\n            host: primary-db\n            port: 5432\n          replicas:\n          - host: replica1\n            port: 5432\n          - host: replica2\n            port: 5432\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: original-deepest\n              value: l5-value\n            value: l4-overridden\n          value: l3-value\n        value: l2-overridden\n      value: l1-overridden\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-deep-nested/templates/values-display.yaml",
+            "content": "\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: false\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: secret\n              username: admin\n            host: primary-db\n            port: 5432\n          replicas:\n          - host: replica1\n            port: 5432\n          - host: replica2\n            port: 5432\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: original-deepest\n              value: l5-value\n            value: l4-overridden\n          value: l3-value\n        value: l2-overridden\n      value: l1-overridden\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "complex-nested",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-06-deep-nested-override\\values-complex-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: true\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: new-secret\n              username: admin\n            host: new-primary-db\n            port: 5432\n          replicas:\n          - host: new-replica1\n            port: 5433\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: original-deepest\n              value: l5-value\n            value: l4-value\n          value: l3-value\n        value: l2-value\n      value: l1-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-deep-nested/templates/values-display.yaml",
+            "content": "\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: true\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: new-secret\n              username: admin\n            host: new-primary-db\n            port: 5432\n          replicas:\n          - host: new-replica1\n            port: 5433\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: original-deepest\n              value: l5-value\n            value: l4-value\n          value: l3-value\n        value: l2-value\n      value: l1-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: true\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: new-secret\n              username: admin\n            host: new-primary-db\n            port: 5432\n          replicas:\n          - host: new-replica1\n            port: 5433\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: original-deepest\n              value: l5-value\n            value: l4-value\n          value: l3-value\n        value: l2-value\n      value: l1-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-deep-nested/templates/values-display.yaml",
+            "content": "\n# Source: test-deep-nested/templates/values-display.yaml\nall-values: |\n    complex:\n      name: complex-structure\n      settings:\n        cache:\n          enabled: true\n          ttl: 3600\n        database:\n          primary:\n            credentials:\n              password: new-secret\n              username: admin\n            host: new-primary-db\n            port: 5432\n          replicas:\n          - host: new-replica1\n            port: 5433\n    level1:\n      level2:\n        level3:\n          level4:\n            level5:\n              deepest: original-deepest\n              value: l5-value\n            value: l4-value\n          value: l3-value\n        value: l2-value\n      value: l1-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    }
+  ]
+}

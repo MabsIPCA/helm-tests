@@ -1,0 +1,2000 @@
+{
+  "suite": "render_problems",
+  "testNumber": 7,
+  "testName": "File Read, Path, and Advanced Files Errors",
+  "chartPath": "..\\render_problems\\test-07-file-read-error",
+  "renders": [
+    {
+      "toggle": "base",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testBase=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:14:21: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:14:21: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "base",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testBase=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  baseValue: \"file.txt\"\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  baseValue: \"file.txt\"\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  baseValue: \"file.txt\"\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  baseValue: \"file.txt\"\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "base",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testBase=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:14:21: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:14:21: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "base",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testBase=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:14:21: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:14:21: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "base",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testBase=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:14:21: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:14:21: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "base",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testBase=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:14:21: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:14:21: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "dir",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testDir=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:18:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:18:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "dir",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testDir=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  dirValue: \"/path/to\"\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  dirValue: \"/path/to\"\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  dirValue: \"/path/to\"\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  dirValue: \"/path/to\"\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "dir",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testDir=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:18:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:18:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "dir",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testDir=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:18:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:18:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "dir",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testDir=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:18:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:18:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "dir",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testDir=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:18:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:18:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "clean",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testClean=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:22:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:22:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "clean",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testClean=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  cleanValue: \"/path/to/file.txt\"\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  cleanValue: \"/path/to/file.txt\"\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  cleanValue: \"/path/to/file.txt\"\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  cleanValue: \"/path/to/file.txt\"\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "clean",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testClean=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:22:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:22:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "clean",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testClean=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:22:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:22:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "clean",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testClean=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:22:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:22:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "clean",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testClean=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:22:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:22:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "ext",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testExt=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:26:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:26:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "ext",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testExt=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  extValue: \".txt\"\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  extValue: \".txt\"\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  extValue: \".txt\"\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  extValue: \".txt\"\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "ext",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testExt=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:26:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:26:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "ext",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testExt=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:26:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:26:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "ext",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testExt=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:26:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:26:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "ext",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testExt=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:26:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:26:19: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "isAbs",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testIsAbs=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:30:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:30:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "isAbs",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testIsAbs=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n  isAbsValue: \"true\"\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n  isAbsValue: \"true\"\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n  isAbsValue: \"true\"\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n  isAbsValue: \"true\"\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "isAbs",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testIsAbs=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:30:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:30:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "isAbs",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testIsAbs=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:30:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:30:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "isAbs",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testIsAbs=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:30:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:30:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "isAbs",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testIsAbs=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:30:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:30:23: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "globRequired",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testGlobRequired=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:38:28: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:38:28: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "globRequired",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testGlobRequired=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:40:12): No files matched the pattern",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:40:12): No files matched the pattern",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "globRequired",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testGlobRequired=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:38:28: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:38:28: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "globRequired",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testGlobRequired=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:38:28: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:38:28: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "globRequired",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testGlobRequired=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:38:28: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:38:28: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "globRequired",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testGlobRequired=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:38:28: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:38:28: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "asConfigEmpty",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testAsConfigEmpty=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:45:30: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:45:30: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "asConfigEmpty",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testAsConfigEmpty=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "asConfigEmpty",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testAsConfigEmpty=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:45:30: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:45:30: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "asConfigEmpty",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testAsConfigEmpty=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:45:30: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:45:30: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "asConfigEmpty",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testAsConfigEmpty=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:45:30: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:45:30: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "asConfigEmpty",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testAsConfigEmpty=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:45:30: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:45:30: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesMissingRequired",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesMissingRequired=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesMissingRequired",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesMissingRequired=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesMissingRequired",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesMissingRequired=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesMissingRequired",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesMissingRequired=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesMissingRequired",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesMissingRequired=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesMissingRequired",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesMissingRequired=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "execution error at (test-07-file-read-error/templates/file-read-error-test.yaml:56:21): File content is required",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesEmptyRequired",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesEmptyRequired=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesEmptyRequired",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesEmptyRequired=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesEmptyRequired",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesEmptyRequired=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesEmptyRequired",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesEmptyRequired=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesEmptyRequired",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesEmptyRequired=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesEmptyRequired",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesEmptyRequired=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:62:61: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003cb64enc\u003e: wrong type for value; expected string; got []uint8",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesNilPath",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesNilPath=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesNilPath",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesNilPath=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesNilPath",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesNilPath=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesNilPath",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesNilPath=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesNilPath",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesNilPath=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesNilPath",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesNilPath=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:67:36: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003c.Values.nilFilePath\u003e: wrong type for value; expected string; got interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "filesTplError",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesTplError=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": [
+        {
+          "attempt": 1,
+          "errorSeen": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+          "kind": "nil_pointer",
+          "valuePath": "missing.nested",
+          "valueInjected": ""
+        }
+      ],
+      "fixedResult": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\r\n  tplErrorValue: \"\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n  tplErrorValue: \"\"\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "filesTplError",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesTplError=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": [
+        {
+          "attempt": 1,
+          "errorSeen": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+          "kind": "nil_pointer",
+          "valuePath": "missing.nested",
+          "valueInjected": ""
+        }
+      ],
+      "fixedResult": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\r\n  tplErrorValue: \"\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n  tplErrorValue: \"\"\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "filesTplError",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesTplError=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": [
+        {
+          "attempt": 1,
+          "errorSeen": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+          "kind": "nil_pointer",
+          "valuePath": "missing.nested",
+          "valueInjected": ""
+        }
+      ],
+      "fixedResult": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\r\n  tplErrorValue: \"\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n  tplErrorValue: \"\"\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "filesTplError",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesTplError=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": [
+        {
+          "attempt": 1,
+          "errorSeen": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+          "kind": "nil_pointer",
+          "valuePath": "missing.nested",
+          "valueInjected": ""
+        }
+      ],
+      "fixedResult": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\r\n  tplErrorValue: \"\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n  tplErrorValue: \"\"\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "filesTplError",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesTplError=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": [
+        {
+          "attempt": 1,
+          "errorSeen": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+          "kind": "nil_pointer",
+          "valuePath": "missing.nested",
+          "valueInjected": ""
+        }
+      ],
+      "fixedResult": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\r\n  tplErrorValue: \"\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n  tplErrorValue: \"\"\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "filesTplError",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testFilesTplError=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": [
+        {
+          "attempt": 1,
+          "errorSeen": "template: test-07-file-read-error/templates/file-read-error-test.yaml:73:20: executing \"test-07-file-read-error/templates/file-read-error-test.yaml\" at \u003ctpl .Values.tplErrorContent .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.missing.nested }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.missing.nested\u003e: nil pointer evaluating interface {}.nested",
+          "kind": "nil_pointer",
+          "valuePath": "missing.nested",
+          "valueInjected": ""
+        }
+      ],
+      "fixedResult": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-file-path-test\r\ndata:\r\n  # ==========================================\r\n  # Path functions\r\n  # ==========================================\r\n  # Test: base - returns the last element of path\r\n  # Test: dir - returns all but the last element of path\r\n  # Test: clean - cleans up a path\r\n  # Test: ext - returns the file extension\r\n  # Test: isAbs - checks if path is absolute\r\n\r\n  # ==========================================\r\n  # File functions\r\n  # ==========================================\r\n  # Test: Glob with required match\r\n  # Test: AsConfig on empty glob result\r\n\r\n  # ==========================================\r\n  # Advanced Files operations (merged from test-16)\r\n  # ==========================================\r\n  # Test: Required file content that doesn't exist\r\n\r\n  # Test: Required file bytes that doesn't exist\r\n\r\n  # Test: Nil path passed to Files.Get\r\n\r\n  # Test: Template error in file content processed with tpl\r\n  tplErrorValue: \"\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-07-file-read-error/templates/file-read-error-test.yaml",
+            "content": "\n# Source: test-07-file-read-error/templates/file-read-error-test.yaml\n# Test: File and path function errors - comprehensive testing\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  # Test: dir - returns all but the last element of path\n  # Test: clean - cleans up a path\n  # Test: ext - returns the file extension\n  # Test: isAbs - checks if path is absolute\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  # Test: AsConfig on empty glob result\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n\n  # Test: Required file bytes that doesn't exist\n\n  # Test: Nil path passed to Files.Get\n\n  # Test: Template error in file content processed with tpl\n  tplErrorValue: \"\"\n",
+            "originalContent": "# Test: File and path function errors - comprehensive testing\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-file-path-test\ndata:\n  # ==========================================\n  # Path functions\n  # ==========================================\n  # Test: base - returns the last element of path\n  {{- if .Values.testBase }}\n  baseValue: {{ base $testData | quote }}\n  {{- end }}\n  # Test: dir - returns all but the last element of path\n  {{- if .Values.testDir }}\n  dirValue: {{ dir $testData | quote }}\n  {{- end }}\n  # Test: clean - cleans up a path\n  {{- if .Values.testClean }}\n  cleanValue: {{ clean $testData | quote }}\n  {{- end }}\n  # Test: ext - returns the file extension\n  {{- if .Values.testExt }}\n  extValue: {{ ext $testData | quote }}\n  {{- end }}\n  # Test: isAbs - checks if path is absolute\n  {{- if .Values.testIsAbs }}\n  isAbsValue: {{ isAbs $testData | quote }}\n  {{- end }}\n\n  # ==========================================\n  # File functions\n  # ==========================================\n  # Test: Glob with required match\n  {{- if .Values.testGlobRequired }}\n  {{- $files := .Files.Glob $testData }}\n  {{- if not $files }}\n  error: {{ fail \"No files matched the pattern\" }}\n  {{- end }}\n  {{- end }}\n  # Test: AsConfig on empty glob result\n  {{- if .Values.testAsConfigEmpty }}\n  {{- $config := (.Files.Glob $testData).AsConfig }}\n  {{- if not $config }}\n  error: {{ fail \"No config files found\" }}\n  {{- end }}\n  {{- end }}\n\n  # ==========================================\n  # Advanced Files operations (merged from test-16)\n  # ==========================================\n  # Test: Required file content that doesn't exist\n  {{- if .Values.testFilesMissingRequired }}\n  missingContent: {{ required \"File content is required\" (.Files.Get \"non-existent-file.txt\") | quote }}\n  {{- end }}\n\n  # Test: Required file bytes that doesn't exist\n  {{- if .Values.testFilesEmptyRequired }}\n  {{- $bytes := .Files.GetBytes \"another-missing-file.bin\" }}\n  emptyBytes: {{ required \"File bytes are required\" $bytes | b64enc | quote }}\n  {{- end }}\n\n  # Test: Nil path passed to Files.Get\n  {{- if .Values.testFilesNilPath }}\n  {{- $content := .Files.Get .Values.nilFilePath }}\n  nilPathValue: {{ required \"File path cannot be nil\" $content | quote }}\n  {{- end }}\n\n  # Test: Template error in file content processed with tpl\n  {{- if .Values.testFilesTplError }}\n  tplErrorValue: {{ tpl .Values.tplErrorContent . | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      }
+    }
+  ]
+}

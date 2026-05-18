@@ -2,14 +2,14 @@
   "suite": "override_tests_suite",
   "testNumber": 6,
   "testName": "Deep Nested Structure Override",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-06-deep-nested-override",
+  "chartPath": "..\\override_tests_suite\\test-06-deep-nested-override",
   "renders": [
     {
       "caseName": "deepest-level",
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-06-deep-nested-override\\values-deep-override.yaml"
+          "..\\override_tests_suite\\test-06-deep-nested-override\\values-deep-override.yaml"
         ]
       },
       "standard": {
@@ -43,7 +43,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-06-deep-nested-override\\values-multi-level.yaml"
+          "..\\override_tests_suite\\test-06-deep-nested-override\\values-multi-level.yaml"
         ]
       },
       "standard": {
@@ -77,7 +77,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-06-deep-nested-override\\values-complex-override.yaml"
+          "..\\override_tests_suite\\test-06-deep-nested-override\\values-complex-override.yaml"
         ]
       },
       "standard": {

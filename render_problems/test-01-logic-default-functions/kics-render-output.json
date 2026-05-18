@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 1,
   "testName": "Logic and Default Functions",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-01-logic-default-functions",
+  "chartPath": "..\\render_problems\\test-01-logic-default-functions",
   "renders": [
     {
       "toggle": "and",

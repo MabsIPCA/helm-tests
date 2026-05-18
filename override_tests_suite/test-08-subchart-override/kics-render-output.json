@@ -2,7 +2,7 @@
   "suite": "override_tests_suite",
   "testNumber": 8,
   "testName": "Subchart Override",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-08-subchart-override",
+  "chartPath": "..\\override_tests_suite\\test-08-subchart-override",
   "renders": [
     {
       "caseName": "parent-defaults",
@@ -61,7 +61,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-08-subchart-override\\values-subchart-override.yaml"
+          "..\\override_tests_suite\\test-08-subchart-override\\values-subchart-override.yaml"
         ]
       },
       "standard": {
@@ -115,7 +115,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-08-subchart-override\\values-global-override.yaml"
+          "..\\override_tests_suite\\test-08-subchart-override\\values-global-override.yaml"
         ]
       },
       "standard": {
@@ -169,8 +169,8 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-08-subchart-override\\values-subchart-override.yaml",
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-08-subchart-override\\values-combined-override.yaml"
+          "..\\override_tests_suite\\test-08-subchart-override\\values-subchart-override.yaml",
+          "..\\override_tests_suite\\test-08-subchart-override\\values-combined-override.yaml"
         ]
       },
       "standard": {

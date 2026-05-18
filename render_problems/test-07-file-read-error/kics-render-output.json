@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 7,
   "testName": "File Read, Path, and Advanced Files Errors",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-07-file-read-error",
+  "chartPath": "..\\render_problems\\test-07-file-read-error",
   "renders": [
     {
       "toggle": "base",

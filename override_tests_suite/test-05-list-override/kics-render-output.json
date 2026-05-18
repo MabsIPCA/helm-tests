@@ -2,14 +2,14 @@
   "suite": "override_tests_suite",
   "testNumber": 5,
   "testName": "List Override Behavior",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override",
+  "chartPath": "..\\override_tests_suite\\test-05-list-override",
   "renders": [
     {
       "caseName": "fewer-items",
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-fewer-items.yaml"
+          "..\\override_tests_suite\\test-05-list-override\\values-fewer-items.yaml"
         ]
       },
       "standard": {
@@ -43,7 +43,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-more-items.yaml"
+          "..\\override_tests_suite\\test-05-list-override\\values-more-items.yaml"
         ]
       },
       "standard": {
@@ -77,7 +77,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-empty-lists.yaml"
+          "..\\override_tests_suite\\test-05-list-override\\values-empty-lists.yaml"
         ]
       },
       "standard": {
@@ -111,7 +111,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-nested-list.yaml"
+          "..\\override_tests_suite\\test-05-list-override\\values-nested-list.yaml"
         ]
       },
       "standard": {
@@ -145,8 +145,8 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-fewer-items.yaml",
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-05-list-override\\values-more-items.yaml"
+          "..\\override_tests_suite\\test-05-list-override\\values-fewer-items.yaml",
+          "..\\override_tests_suite\\test-05-list-override\\values-more-items.yaml"
         ]
       },
       "standard": {

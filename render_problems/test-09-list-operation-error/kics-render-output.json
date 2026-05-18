@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 9,
   "testName": "List Operation Errors",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-09-list-operation-error",
+  "chartPath": "..\\render_problems\\test-09-list-operation-error",
   "renders": [
     {
       "toggle": "first",

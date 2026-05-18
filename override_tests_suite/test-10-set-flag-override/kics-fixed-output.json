@@ -1,0 +1,385 @@
+{
+  "suite": "override_tests_suite",
+  "testNumber": 10,
+  "testName": "Set Flag Override",
+  "chartPath": "..\\override_tests_suite\\test-10-set-flag-override",
+  "renders": [
+    {
+      "caseName": "simple-set",
+      "valuesOptions": {
+        "values": [
+          "stringValue=set-value"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: set-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: set-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: set-value\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: set-value\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "set-number",
+      "valuesOptions": {
+        "values": [
+          "numberValue=999"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 999\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 999\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 999\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 999\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "set-boolean",
+      "valuesOptions": {
+        "values": [
+          "boolValue=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: true\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "set-nested",
+      "valuesOptions": {
+        "values": [
+          "nested.level1.value=set-nested-value",
+          "nested.level1.number=999"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 999\n        value: set-nested-value\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 999\n        value: set-nested-value\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 999\n        value: set-nested-value\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 999\n        value: set-nested-value\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "set-string-number",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [],
+        "stringValues": [
+          "numberValue=123"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: \"123\"\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: \"123\"\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: \"123\"\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: \"123\"\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "set-string-bool",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [],
+        "stringValues": [
+          "boolValue=true"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: \"true\"\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: \"true\"\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: \"true\"\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: \"true\"\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "set-over-file",
+      "valuesOptions": {
+        "values": [
+          "stringValue=set-wins"
+        ],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-10-set-flag-override\\values-base.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: from-values-file\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: set-wins\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: from-values-file\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: set-wins\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: from-values-file\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: set-wins\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: from-values-file\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: set-wins\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "multiple-set",
+      "valuesOptions": {
+        "values": [
+          "stringValue=first",
+          "numberValue=111",
+          "config.enabled=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: true\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 111\n    stringValue: first\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: true\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 111\n    stringValue: first\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: true\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 111\n    stringValue: first\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: true\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 111\n    stringValue: first\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "set-list-index",
+      "valuesOptions": {
+        "values": [
+          "list[0]=new-item1"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - new-item1\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - new-item1\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - new-item1\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - new-item1\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n    stringValue: default-string\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "set-null",
+      "valuesOptions": {
+        "values": [
+          "stringValue=null"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-set-flag/templates/values-display.yaml",
+            "content": "\n# Source: test-set-flag/templates/values-display.yaml\nall-values: |\n    boolValue: false\n    config:\n      enabled: false\n      name: default-config\n    list:\n    - item1\n    - item2\n    nested:\n      level1:\n        number: 50\n        value: nested-default\n    nullValue: null\n    numberValue: 100\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    }
+  ]
+}

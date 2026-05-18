@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(Get-Content *)",
+      "Bash(go get *)",
+      "Bash(go mod *)",
+      "Bash(go build *)",
+      "Bash(echo \"Exit code: $?\")",
+      "Bash(git restore *)",
+      "Bash(git commit -m ' *)",
+      "Bash(Get-ChildItem *)",
+      "Bash(go list *)",
+      "PowerShell(cd C:\\\\Users\\\\miabs\\\\GolandProjects\\\\helm-tests\\\\kics-render-mock; \\(Get-Content go.sum | Measure-Object -Line\\).Lines)",
+      "Bash(go test *)",
+      "Bash(go vet *)",
+      "Bash(git commit *)",
+      "Bash(go run *)",
+      "Bash(powershell -Command '@ *)",
+      "Bash(go doc *)",
+      "Bash(dir *)",
+      "Bash(powershell -command \"Get-ChildItem helm_fetcher\\\\cloned | Measure-Object | Select-Object -ExpandProperty Count\")",
+      "Bash(powershell -command \"Get-Content helm_fetcher\\\\backup\\\\run_002_274\\\\catalog_kept.json | ConvertFrom-Json | Measure-Object | Select-Object -ExpandProperty Count\")",
+      "Bash(powershell *)",
+      "Bash(cd /tmp)",
+      "Bash(cat)",
+      "Read(//tmp/**)",
+      "Bash(make help *)",
+      "Bash(xargs grep -l \"runFixerMode\")",
+      "Bash(./test.exe -help)"
+    ]
+  }
+}

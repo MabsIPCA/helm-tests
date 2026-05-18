@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 20,
   "testName": "Reflection Function Errors",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-20-reflection-functions",
+  "chartPath": "..\\render_problems\\test-20-reflection-functions",
   "renders": [
     {
       "toggle": "kindOf",

@@ -1,0 +1,48 @@
+{
+  "suite": "render_problems",
+  "testNumber": 17,
+  "testName": "UUID Function Errors",
+  "chartPath": "..\\render_problems\\test-17-uuid-functions",
+  "renders": [
+    {
+      "toggle": "uuidv4",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testUuidv4=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-uuid/templates/uuid-test.yaml\n# Test: UUID function - test if uuidv4 works\r\n# KICS_HELM_ID_1:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-uuid-test\r\ndata:\r\n  # Test: uuidv4 - generates a random UUID v4\r\n  uuidv4Value: \"0271591b-1e7e-4359-a277-125e3719ace3\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-uuid/templates/uuid-test.yaml",
+            "content": "\n# Source: test-uuid/templates/uuid-test.yaml\n# Test: UUID function - test if uuidv4 works\n# KICS_HELM_ID_1:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-uuid-test\ndata:\n  # Test: uuidv4 - generates a random UUID v4\n  uuidv4Value: \"0271591b-1e7e-4359-a277-125e3719ace3\"\n",
+            "originalContent": "# Test: UUID function - test if uuidv4 works\n# KICS_HELM_ID_1:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-uuid-test\ndata:\n  # Test: uuidv4 - generates a random UUID v4\n  {{- if .Values.testUuidv4 }}\n  uuidv4Value: {{ uuidv4 | quote }}\n  {{- end }}\n\n\n\n\n",
+            "splitID": "# KICS_HELM_ID_1:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-uuid/templates/uuid-test.yaml\n# Test: UUID function - test if uuidv4 works\r\n# KICS_HELM_ID_1:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-uuid-test\r\ndata:\r\n  # Test: uuidv4 - generates a random UUID v4\r\n  uuidv4Value: \"c78455b7-0645-472a-9767-2f8061e6f01b\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-uuid/templates/uuid-test.yaml",
+            "content": "\n# Source: test-uuid/templates/uuid-test.yaml\n# Test: UUID function - test if uuidv4 works\n# KICS_HELM_ID_1:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-uuid-test\ndata:\n  # Test: uuidv4 - generates a random UUID v4\n  uuidv4Value: \"c78455b7-0645-472a-9767-2f8061e6f01b\"\n",
+            "originalContent": "# Test: UUID function - test if uuidv4 works\n# KICS_HELM_ID_1:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-uuid-test\ndata:\n  # Test: uuidv4 - generates a random UUID v4\n  {{- if .Values.testUuidv4 }}\n  uuidv4Value: {{ uuidv4 | quote }}\n  {{- end }}\n\n\n\n\n",
+            "splitID": "# KICS_HELM_ID_1:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 14,
   "testName": "Helper Template Errors",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-14-helper-template",
+  "chartPath": "..\\render_problems\\test-14-helper-template",
   "renders": [
     {
       "toggle": "helperNilPointer",

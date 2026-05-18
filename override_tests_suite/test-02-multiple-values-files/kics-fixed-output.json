@@ -1,0 +1,161 @@
+{
+  "suite": "override_tests_suite",
+  "testNumber": 2,
+  "testName": "Multiple Values Files Precedence",
+  "chartPath": "..\\override_tests_suite\\test-02-multiple-values-files",
+  "renders": [
+    {
+      "caseName": "single-override",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: false\n        monitoring: false\n      logLevel: debug\n      timeout: 30\n    database:\n      host: override1-db.local\n      name: override1_db\n      port: 5432\n    environment: override-1\n    replicas: 2\n    version: 1.0.0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-multiple-values/templates/values-display.yaml",
+            "content": "\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: false\n        monitoring: false\n      logLevel: debug\n      timeout: 30\n    database:\n      host: override1-db.local\n      name: override1_db\n      port: 5432\n    environment: override-1\n    replicas: 2\n    version: 1.0.0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: false\n        monitoring: false\n      logLevel: debug\n      timeout: 30\n    database:\n      host: override1-db.local\n      name: override1_db\n      port: 5432\n    environment: override-1\n    replicas: 2\n    version: 1.0.0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-multiple-values/templates/values-display.yaml",
+            "content": "\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: false\n        monitoring: false\n      logLevel: debug\n      timeout: 30\n    database:\n      host: override1-db.local\n      name: override1_db\n      port: 5432\n    environment: override-1\n    replicas: 2\n    version: 1.0.0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "two-overrides",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml",
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-2.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: false\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override2-db.local\n      name: override1_db\n      port: 5433\n    environment: override-2\n    replicas: 2\n    version: 2.0.0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-multiple-values/templates/values-display.yaml",
+            "content": "\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: false\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override2-db.local\n      name: override1_db\n      port: 5433\n    environment: override-2\n    replicas: 2\n    version: 2.0.0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: false\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override2-db.local\n      name: override1_db\n      port: 5433\n    environment: override-2\n    replicas: 2\n    version: 2.0.0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-multiple-values/templates/values-display.yaml",
+            "content": "\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: false\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override2-db.local\n      name: override1_db\n      port: 5433\n    environment: override-2\n    replicas: 2\n    version: 2.0.0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "three-overrides",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml",
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-2.yaml",
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-3.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: true\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override2-db.local\n      name: override3_db\n      port: 5433\n    environment: override-3\n    replicas: 5\n    version: 2.0.0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-multiple-values/templates/values-display.yaml",
+            "content": "\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: true\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override2-db.local\n      name: override3_db\n      port: 5433\n    environment: override-3\n    replicas: 5\n    version: 2.0.0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: true\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override2-db.local\n      name: override3_db\n      port: 5433\n    environment: override-3\n    replicas: 5\n    version: 2.0.0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-multiple-values/templates/values-display.yaml",
+            "content": "\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: true\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override2-db.local\n      name: override3_db\n      port: 5433\n    environment: override-3\n    replicas: 5\n    version: 2.0.0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "reverse-order",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-3.yaml",
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-2.yaml",
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: true\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override1-db.local\n      name: override1_db\n      port: 5433\n    environment: override-1\n    replicas: 2\n    version: 2.0.0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-multiple-values/templates/values-display.yaml",
+            "content": "\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: true\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override1-db.local\n      name: override1_db\n      port: 5433\n    environment: override-1\n    replicas: 2\n    version: 2.0.0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: true\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override1-db.local\n      name: override1_db\n      port: 5433\n    environment: override-1\n    replicas: 2\n    version: 2.0.0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-multiple-values/templates/values-display.yaml",
+            "content": "\n# Source: test-multiple-values/templates/values-display.yaml\nall-values: |\n    config:\n      features:\n        caching: true\n        monitoring: true\n      logLevel: debug\n      timeout: 60\n    database:\n      host: override1-db.local\n      name: override1_db\n      port: 5433\n    environment: override-1\n    replicas: 2\n    version: 2.0.0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "suite": "override_tests_suite",
   "testNumber": 10,
   "testName": "Set Flag Override",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-10-set-flag-override",
+  "chartPath": "..\\override_tests_suite\\test-10-set-flag-override",
   "renders": [
     {
       "caseName": "simple-set",
@@ -218,7 +218,7 @@
           "stringValue=set-wins"
         ],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-10-set-flag-override\\values-base.yaml"
+          "..\\override_tests_suite\\test-10-set-flag-override\\values-base.yaml"
         ]
       },
       "standard": {

@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 11,
   "testName": "Type Conversion Errors",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-08-invalid-types",
+  "chartPath": "..\\render_problems\\test-08-invalid-types",
   "renders": [
     {
       "toggle": "toStrings",
