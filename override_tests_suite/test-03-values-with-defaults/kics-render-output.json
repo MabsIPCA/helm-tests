@@ -2,7 +2,7 @@
   "suite": "override_tests_suite",
   "testNumber": 3,
   "testName": "Multiple Values Files with Default Values",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults",
+  "chartPath": "..\\override_tests_suite\\test-03-values-with-defaults",
   "renders": [
     {
       "caseName": "chart-defaults-only",
@@ -41,7 +41,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-external-defaults.yaml"
+          "..\\override_tests_suite\\test-03-values-with-defaults\\values-external-defaults.yaml"
         ]
       },
       "standard": {
@@ -75,8 +75,8 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-external-defaults.yaml",
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-dev.yaml"
+          "..\\override_tests_suite\\test-03-values-with-defaults\\values-external-defaults.yaml",
+          "..\\override_tests_suite\\test-03-values-with-defaults\\values-dev.yaml"
         ]
       },
       "standard": {
@@ -110,7 +110,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-dev.yaml"
+          "..\\override_tests_suite\\test-03-values-with-defaults\\values-dev.yaml"
         ]
       },
       "standard": {
@@ -144,8 +144,8 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-external-defaults.yaml",
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-03-values-with-defaults\\values-prod.yaml"
+          "..\\override_tests_suite\\test-03-values-with-defaults\\values-external-defaults.yaml",
+          "..\\override_tests_suite\\test-03-values-with-defaults\\values-prod.yaml"
         ]
       },
       "standard": {

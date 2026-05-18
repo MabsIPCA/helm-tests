@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(go build *)",
+      "Bash(findstr /s \"FixAttempt\\\\|FixedResult\\\\|FixOutcome\" *.go *\\\\*.go)",
+      "Bash(Get-ChildItem -Recurse -Filter \"*.go\")",
+      "Bash(Select-String \"FixAttempt|FixedResult|FixOutcome\")",
+      "Bash(Select-Object Path, LineNumber, Line)",
+      "Bash(go vet *)",
+      "Bash(go fmt *)",
+      "Bash(go test *)",
+      "Bash(cat)",
+      "Read(//tmp/**)",
+      "Bash(gofmt -l exporter/exporter.go exporter/exporter_test.go)",
+      "Bash(go tool *)",
+      "Bash(go run *)"
+    ]
+  }
+}

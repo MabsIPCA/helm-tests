@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 21,
   "testName": "Semver Function Errors",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-21-semver-functions",
+  "chartPath": "..\\render_problems\\test-21-semver-functions",
   "renders": [
     {
       "toggle": "semver",

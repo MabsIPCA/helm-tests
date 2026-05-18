@@ -1,0 +1,494 @@
+{
+  "suite": "render_problems",
+  "testNumber": 7,
+  "testName": "Missing Template Errors",
+  "chartPath": "..\\render_problems\\test-04-missing-template",
+  "renders": [
+    {
+      "toggle": "missingInclude",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingInclude=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingInclude",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingInclude=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingInclude",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingInclude=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingInclude",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingInclude=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingInclude",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingInclude=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingInclude",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingInclude=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:14:20: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"non.existent.template\" $testData\u003e: error calling include: template: no template \"non.existent.template\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingTemplate",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingTemplate=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingTemplate",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingTemplate=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingTemplate",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingTemplate=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingTemplate",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingTemplate=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingTemplate",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingTemplate=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingTemplate",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingTemplate=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:22:29: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003c{{template \"undefined.template\" $testData}}\u003e: template \"undefined.template\" not defined",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingSubchart",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingSubchart=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingSubchart",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingSubchart=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingSubchart",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingSubchart=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingSubchart",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingSubchart=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingSubchart",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingSubchart=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "missingSubchart",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testMissingSubchart=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-04-missing-template/templates/missing-template-test.yaml:30:21: executing \"test-04-missing-template/templates/missing-template-test.yaml\" at \u003cinclude \"missing-subchart.fullname\" $testData\u003e: error calling include: template: no template \"missing-subchart.fullname\" associated with template \"gotpl\"",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    }
+  ]
+}

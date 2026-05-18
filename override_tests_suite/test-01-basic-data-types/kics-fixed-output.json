@@ -1,0 +1,228 @@
+{
+  "suite": "override_tests_suite",
+  "testNumber": 1,
+  "testName": "Basic Data Types Override",
+  "chartPath": "..\\override_tests_suite\\test-01-basic-data-types",
+  "renders": [
+    {
+      "caseName": "default-values",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "string-override",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-01-basic-data-types\\values-string-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: no-longer-empty\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: was-null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: override1\n      key2: override2\n      key3: override3\n      key4: new-key\n    stringValue: overridden-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: no-longer-empty\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: was-null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: override1\n      key2: override2\n      key3: override3\n      key4: new-key\n    stringValue: overridden-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: no-longer-empty\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: was-null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: override1\n      key2: override2\n      key3: override3\n      key4: new-key\n    stringValue: overridden-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: no-longer-empty\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: was-null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: override1\n      key2: override2\n      key3: override3\n      key4: new-key\n    stringValue: overridden-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "number-override",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-01-basic-data-types\\values-number-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 99.99\n    integerValue: 999\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: 0.001\n    negativeInteger: 100\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 10\n    - 20\n    - 30\n    - 40\n    - 50\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 1.5\n    zeroInteger: 42\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 99.99\n    integerValue: 999\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: 0.001\n    negativeInteger: 100\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 10\n    - 20\n    - 30\n    - 40\n    - 50\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 1.5\n    zeroInteger: 42\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 99.99\n    integerValue: 999\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: 0.001\n    negativeInteger: 100\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 10\n    - 20\n    - 30\n    - 40\n    - 50\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 1.5\n    zeroInteger: 42\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 99.99\n    integerValue: 999\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: 0.001\n    negativeInteger: 100\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 10\n    - 20\n    - 30\n    - 40\n    - 50\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 1.5\n    zeroInteger: 42\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "boolean-override",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-01-basic-data-types\\values-boolean-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: true\n    boolTrue: false\n    config:\n      enabled: true\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: true\n    boolTrue: false\n    config:\n      enabled: true\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: true\n    boolTrue: false\n    config:\n      enabled: true\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: true\n    boolTrue: false\n    config:\n      enabled: true\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "list-override",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-01-basic-data-types\\values-list-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - all\n    - strings\n    - now\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - override1\n    - override2\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - all\n    - strings\n    - now\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - override1\n    - override2\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - all\n    - strings\n    - now\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - override1\n    - override2\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - all\n    - strings\n    - now\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: deep-value\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - override1\n    - override2\n    simpleMap:\n      key1: value1\n      key2: value2\n      key3: value3\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "caseName": "map-override",
+      "valuesOptions": {
+        "values": [],
+        "valueFiles": [
+          "..\\override_tests_suite\\test-01-basic-data-types\\values-map-override.yaml"
+        ]
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: overridden-deep\n          newLevel3: added-nested\n        newLevel2: added-at-level2\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: new-value1\n      key2: value2\n      key3: value3\n      newKey: added-key\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: overridden-deep\n          newLevel3: added-nested\n        newLevel2: added-at-level2\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: new-value1\n      key2: value2\n      key3: value3\n      newKey: added-key\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: overridden-deep\n          newLevel3: added-nested\n        newLevel2: added-at-level2\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: new-value1\n      key2: value2\n      key3: value3\n      newKey: added-key\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-basic-data-types/templates/values-display.yaml",
+            "content": "\n# Source: test-basic-data-types/templates/values-display.yaml\nall-values: |\n    boolFalse: false\n    boolTrue: true\n    config:\n      enabled: false\n      name: default-config\n      settings:\n        features:\n        - feature-a\n        - feature-b\n        retries: 3\n        timeout: 30\n    emptyString: \"\"\n    floatValue: 3.14\n    integerValue: 100\n    mixedList:\n    - string\n    - 123\n    - true\n    - null\n    negativeFloat: -2.5\n    negativeInteger: -50\n    nestedMap:\n      level1:\n        level2:\n          level3: overridden-deep\n          newLevel3: added-nested\n        newLevel2: added-at-level2\n    nullValue: null\n    numberList:\n    - 1\n    - 2\n    - 3\n    simpleList:\n    - item1\n    - item2\n    - item3\n    simpleMap:\n      key1: new-value1\n      key2: value2\n      key3: value3\n      newKey: added-key\n    stringValue: default-string\n    zeroFloat: 0\n    zeroInteger: 0\n",
+            "originalContent": "all-values: |\n{{ .Values | toYaml | indent 4 }}\n\n"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "suite": "render_problems",
+  "testNumber": 15,
+  "testName": "tpl Function Errors",
+  "chartPath": "..\\render_problems\\test-15-tpl-function",
+  "renders": [
+    {
+      "toggle": "tplSyntaxError",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testTplSyntaxError=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-15-tpl-function/templates/tpl-function-test.yaml:14:23: executing \"test-15-tpl-function/templates/tpl-function-test.yaml\" at \u003ctpl .Values.tplSyntaxError .\u003e: error calling tpl: cannot parse template \"{{ .Values.someValue\": template: gotpl:1: unclosed action",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-15-tpl-function/templates/tpl-function-test.yaml:14:23: executing \"test-15-tpl-function/templates/tpl-function-test.yaml\" at \u003ctpl .Values.tplSyntaxError .\u003e: error calling tpl: cannot parse template \"{{ .Values.someValue\": template: gotpl:1: unclosed action",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "tplNilPointer",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testTplNilPointer=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-15-tpl-function/templates/tpl-function-test.yaml:19:22: executing \"test-15-tpl-function/templates/tpl-function-test.yaml\" at \u003ctpl .Values.tplNilPointer .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.nilValue.nested.field }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.nilValue.nested.field\u003e: nil pointer evaluating interface {}.nested",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-15-tpl-function/templates/tpl-function-test.yaml:19:22: executing \"test-15-tpl-function/templates/tpl-function-test.yaml\" at \u003ctpl .Values.tplNilPointer .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.nilValue.nested.field }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.nilValue.nested.field\u003e: nil pointer evaluating interface {}.nested",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": [
+        {
+          "attempt": 1,
+          "errorSeen": "template: test-15-tpl-function/templates/tpl-function-test.yaml:19:22: executing \"test-15-tpl-function/templates/tpl-function-test.yaml\" at \u003ctpl .Values.tplNilPointer .\u003e: error calling tpl: error during tpl function execution for \"{{ .Values.nilValue.nested.field }}\": template: gotpl:1:10: executing \"gotpl\" at \u003c.Values.nilValue.nested.field\u003e: nil pointer evaluating interface {}.nested",
+          "kind": "nil_pointer",
+          "valuePath": "nilValue.nested.field",
+          "valueInjected": ""
+        }
+      ],
+      "fixedResult": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-15-tpl-function/templates/tpl-function-test.yaml\n# Test: tpl function errors - runtime errors in tpl function calls\r\n# KICS_HELM_ID_1:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-tpl-test\r\ndata:\r\n  # ==========================================\r\n  # tpl function error tests\r\n  # ==========================================\r\n\r\n  # Test: Syntax error in tpl string (unclosed action)\r\n\r\n  # Test: Nil pointer in tpl string\r\n  nilPointerValue: \"\"\r\n\r\n  # Test: Required value missing in tpl string\r\n\r\n  # Test: Division by zero in tpl string\r\n\r\n  # Test: Type mismatch (range over scalar) in tpl string\r\n\r\n  # Test: Invalid function in tpl string\r\n\r\n  # Test: Explicit fail in tpl string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-15-tpl-function/templates/tpl-function-test.yaml",
+            "content": "\n# Source: test-15-tpl-function/templates/tpl-function-test.yaml\n# Test: tpl function errors - runtime errors in tpl function calls\n# KICS_HELM_ID_1:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-tpl-test\ndata:\n  # ==========================================\n  # tpl function error tests\n  # ==========================================\n\n  # Test: Syntax error in tpl string (unclosed action)\n\n  # Test: Nil pointer in tpl string\n  nilPointerValue: \"\"\n\n  # Test: Required value missing in tpl string\n\n  # Test: Division by zero in tpl string\n\n  # Test: Type mismatch (range over scalar) in tpl string\n\n  # Test: Invalid function in tpl string\n\n  # Test: Explicit fail in tpl string\n",
+            "originalContent": "# Test: tpl function errors - runtime errors in tpl function calls\n# KICS_HELM_ID_1:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-tpl-test\ndata:\n  # ==========================================\n  # tpl function error tests\n  # ==========================================\n\n  # Test: Syntax error in tpl string (unclosed action)\n  {{- if .Values.testTplSyntaxError }}\n  syntaxErrorValue: {{ tpl .Values.tplSyntaxError . | quote }}\n  {{- end }}\n\n  # Test: Nil pointer in tpl string\n  {{- if .Values.testTplNilPointer }}\n  nilPointerValue: {{ tpl .Values.tplNilPointer . | quote }}\n  {{- end }}\n\n  # Test: Required value missing in tpl string\n  {{- if .Values.testTplRequired }}\n  requiredValue: {{ tpl .Values.tplRequired . | quote }}\n  {{- end }}\n\n  # Test: Division by zero in tpl string\n  {{- if .Values.testTplDivZero }}\n  divZeroValue: {{ tpl .Values.tplDivZero . | quote }}\n  {{- end }}\n\n  # Test: Type mismatch (range over scalar) in tpl string\n  {{- if .Values.testTplTypeMismatch }}\n  typeMismatchValue: {{ tpl .Values.tplTypeMismatch . | quote }}\n  {{- end }}\n\n  # Test: Invalid function in tpl string\n  {{- if .Values.testTplInvalidFunc }}\n  invalidFuncValue: {{ tpl .Values.tplInvalidFunc . | quote }}\n  {{- end }}\n\n  # Test: Explicit fail in tpl string\n  {{- if .Values.testTplFail }}\n  failValue: {{ tpl .Values.tplFail . | quote }}\n  {{- end }}\n",
+            "splitID": "# KICS_HELM_ID_1:"
+          }
+        ]
+      }
+    },
+    {
+      "toggle": "tplRequired",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testTplRequired=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "execution error at (test-15-tpl-function/templates/tpl-function-test.yaml:24:20): tpl required value",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "execution error at (test-15-tpl-function/templates/tpl-function-test.yaml:24:20): tpl required value",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "tplDivZero",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testTplDivZero=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-15-tpl-function/templates/tpl-function-test.yaml:29:19: executing \"test-15-tpl-function/templates/tpl-function-test.yaml\" at \u003ctpl .Values.tplDivZero .\u003e: error calling tpl: error during tpl function execution for \"{{ div 100 0 }}\": template: gotpl:1:3: executing \"gotpl\" at \u003cdiv 100 0\u003e: error calling div: runtime error: integer divide by zero",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-15-tpl-function/templates/tpl-function-test.yaml:29:19: executing \"test-15-tpl-function/templates/tpl-function-test.yaml\" at \u003ctpl .Values.tplDivZero .\u003e: error calling tpl: error during tpl function execution for \"{{ div 100 0 }}\": template: gotpl:1:3: executing \"gotpl\" at \u003cdiv 100 0\u003e: error calling div: runtime error: integer divide by zero",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "tplTypeMismatch",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testTplTypeMismatch=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-15-tpl-function/templates/tpl-function-test.yaml:34:24: executing \"test-15-tpl-function/templates/tpl-function-test.yaml\" at \u003ctpl .Values.tplTypeMismatch .\u003e: error calling tpl: error during tpl function execution for \"{{ range .Values.port }}item{{ end }}\": template: gotpl:1:16: executing \"gotpl\" at \u003c.Values.port\u003e: range can't iterate over 8080",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-15-tpl-function/templates/tpl-function-test.yaml:34:24: executing \"test-15-tpl-function/templates/tpl-function-test.yaml\" at \u003ctpl .Values.tplTypeMismatch .\u003e: error calling tpl: error during tpl function execution for \"{{ range .Values.port }}item{{ end }}\": template: gotpl:1:16: executing \"gotpl\" at \u003c.Values.port\u003e: range can't iterate over 8080",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "tplInvalidFunc",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testTplInvalidFunc=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-15-tpl-function/templates/tpl-function-test.yaml:39:23: executing \"test-15-tpl-function/templates/tpl-function-test.yaml\" at \u003ctpl .Values.tplInvalidFunc .\u003e: error calling tpl: cannot parse template \"{{ invalidFunc \\\"arg\\\" }}\": template: gotpl:1: function \"invalidFunc\" not defined",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-15-tpl-function/templates/tpl-function-test.yaml:39:23: executing \"test-15-tpl-function/templates/tpl-function-test.yaml\" at \u003ctpl .Values.tplInvalidFunc .\u003e: error calling tpl: cannot parse template \"{{ invalidFunc \\\"arg\\\" }}\": template: gotpl:1: function \"invalidFunc\" not defined",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "tplFail",
+      "dataType": "default",
+      "valuesOptions": {
+        "values": [
+          "testTplFail=true"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "execution error at (test-15-tpl-function/templates/tpl-function-test.yaml:44:16): tpl triggered failure",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "execution error at (test-15-tpl-function/templates/tpl-function-test.yaml:44:16): tpl triggered failure",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    }
+  ]
+}

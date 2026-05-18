@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 16,
   "testName": "Math Operation Errors",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-16-math-operations",
+  "chartPath": "..\\render_problems\\test-16-math-operations",
   "renders": [
     {
       "toggle": "add",

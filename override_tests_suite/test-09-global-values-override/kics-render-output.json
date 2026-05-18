@@ -2,7 +2,7 @@
   "suite": "override_tests_suite",
   "testNumber": 9,
   "testName": "Global Values Override",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override",
+  "chartPath": "..\\override_tests_suite\\test-09-global-values-override",
   "renders": [
     {
       "caseName": "default-globals",
@@ -51,7 +51,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override\\values-global-prod.yaml"
+          "..\\override_tests_suite\\test-09-global-values-override\\values-global-prod.yaml"
         ]
       },
       "standard": {
@@ -95,7 +95,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override\\values-global-add.yaml"
+          "..\\override_tests_suite\\test-09-global-values-override\\values-global-add.yaml"
         ]
       },
       "standard": {
@@ -139,7 +139,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override\\values-global-labels.yaml"
+          "..\\override_tests_suite\\test-09-global-values-override\\values-global-labels.yaml"
         ]
       },
       "standard": {
@@ -183,8 +183,8 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override\\values-global-prod.yaml",
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-09-global-values-override\\values-global-add.yaml"
+          "..\\override_tests_suite\\test-09-global-values-override\\values-global-prod.yaml",
+          "..\\override_tests_suite\\test-09-global-values-override\\values-global-add.yaml"
         ]
       },
       "standard": {

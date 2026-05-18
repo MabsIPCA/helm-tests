@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 15,
   "testName": "tpl Function Errors",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-15-tpl-function",
+  "chartPath": "..\\render_problems\\test-15-tpl-function",
   "renders": [
     {
       "toggle": "tplSyntaxError",

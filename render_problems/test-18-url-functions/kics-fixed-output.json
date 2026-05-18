@@ -1,0 +1,606 @@
+{
+  "suite": "render_problems",
+  "testNumber": 18,
+  "testName": "URL Function Errors",
+  "chartPath": "..\\render_problems\\test-18-url-functions",
+  "renders": [
+    {
+      "toggle": "urlParse",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlParse=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-url/templates/url-test.yaml:14:29: executing \"test-url/templates/url-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-url/templates/url-test.yaml:14:29: executing \"test-url/templates/url-test.yaml\" at \u003c$testData\u003e: invalid value; expected string",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlParse",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlParse=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  urlParseValue: \"{\\\"fragment\\\":\\\"\\\",\\\"host\\\":\\\"example.com\\\",\\\"hostname\\\":\\\"example.com\\\",\\\"opaque\\\":\\\"\\\",\\\"path\\\":\\\"/path\\\",\\\"query\\\":\\\"\\\",\\\"scheme\\\":\\\"https\\\",\\\"userinfo\\\":\\\"\\\"}\"\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  urlParseValue: \"{\\\"fragment\\\":\\\"\\\",\\\"host\\\":\\\"example.com\\\",\\\"hostname\\\":\\\"example.com\\\",\\\"opaque\\\":\\\"\\\",\\\"path\\\":\\\"/path\\\",\\\"query\\\":\\\"\\\",\\\"scheme\\\":\\\"https\\\",\\\"userinfo\\\":\\\"\\\"}\"\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  urlParseValue: \"{\\\"fragment\\\":\\\"\\\",\\\"host\\\":\\\"example.com\\\",\\\"hostname\\\":\\\"example.com\\\",\\\"opaque\\\":\\\"\\\",\\\"path\\\":\\\"/path\\\",\\\"query\\\":\\\"\\\",\\\"scheme\\\":\\\"https\\\",\\\"userinfo\\\":\\\"\\\"}\"\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  urlParseValue: \"{\\\"fragment\\\":\\\"\\\",\\\"host\\\":\\\"example.com\\\",\\\"hostname\\\":\\\"example.com\\\",\\\"opaque\\\":\\\"\\\",\\\"path\\\":\\\"/path\\\",\\\"query\\\":\\\"\\\",\\\"scheme\\\":\\\"https\\\",\\\"userinfo\\\":\\\"\\\"}\"\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlParse",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlParse=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-url/templates/url-test.yaml:14:29: executing \"test-url/templates/url-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-url/templates/url-test.yaml:14:29: executing \"test-url/templates/url-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got float64",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlParse",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlParse=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-url/templates/url-test.yaml:14:29: executing \"test-url/templates/url-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-url/templates/url-test.yaml:14:29: executing \"test-url/templates/url-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got bool",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlParse",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlParse=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-url/templates/url-test.yaml:14:29: executing \"test-url/templates/url-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-url/templates/url-test.yaml:14:29: executing \"test-url/templates/url-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got []interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlParse",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlParse=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-url/templates/url-test.yaml:14:29: executing \"test-url/templates/url-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-url/templates/url-test.yaml:14:29: executing \"test-url/templates/url-test.yaml\" at \u003c$testData\u003e: wrong type for value; expected string; got map[string]interface {}",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlJoin",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlJoin=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-url/templates/url-test.yaml:18:19: executing \"test-url/templates/url-test.yaml\" at \u003curlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData)\u003e: error calling urlJoin: runtime error: invalid memory address or nil pointer dereference",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-url/templates/url-test.yaml:18:19: executing \"test-url/templates/url-test.yaml\" at \u003curlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData)\u003e: error calling urlJoin: runtime error: invalid memory address or nil pointer dereference",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlJoin",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlJoin=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  urlJoinValue: \"https://example.com/https://example.com/path\"\r\n  # Test: urlquery - URL encodes a string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  urlJoinValue: \"https://example.com/https://example.com/path\"\n  # Test: urlquery - URL encodes a string\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  urlJoinValue: \"https://example.com/https://example.com/path\"\r\n  # Test: urlquery - URL encodes a string\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  urlJoinValue: \"https://example.com/https://example.com/path\"\n  # Test: urlquery - URL encodes a string\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlJoin",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlJoin=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-url/templates/url-test.yaml:18:19: executing \"test-url/templates/url-test.yaml\" at \u003curlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData)\u003e: error calling urlJoin: unable to parse path key, must be of type string, but float64 found",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-url/templates/url-test.yaml:18:19: executing \"test-url/templates/url-test.yaml\" at \u003curlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData)\u003e: error calling urlJoin: unable to parse path key, must be of type string, but float64 found",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlJoin",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlJoin=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-url/templates/url-test.yaml:18:19: executing \"test-url/templates/url-test.yaml\" at \u003curlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData)\u003e: error calling urlJoin: unable to parse path key, must be of type string, but bool found",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-url/templates/url-test.yaml:18:19: executing \"test-url/templates/url-test.yaml\" at \u003curlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData)\u003e: error calling urlJoin: unable to parse path key, must be of type string, but bool found",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlJoin",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlJoin=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-url/templates/url-test.yaml:18:19: executing \"test-url/templates/url-test.yaml\" at \u003curlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData)\u003e: error calling urlJoin: unable to parse path key, must be of type string, but slice found",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-url/templates/url-test.yaml:18:19: executing \"test-url/templates/url-test.yaml\" at \u003curlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData)\u003e: error calling urlJoin: unable to parse path key, must be of type string, but slice found",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlJoin",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlJoin=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": "template: test-url/templates/url-test.yaml:18:19: executing \"test-url/templates/url-test.yaml\" at \u003curlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData)\u003e: error calling urlJoin: unable to parse path key, must be of type string, but map found",
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "debug": {
+        "error": "template: test-url/templates/url-test.yaml:18:19: executing \"test-url/templates/url-test.yaml\" at \u003curlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData)\u003e: error calling urlJoin: unable to parse path key, must be of type string, but map found",
+        "debugLogs": [],
+        "rawManifest": null,
+        "partialManifest": null,
+        "splitManifests": []
+      },
+      "resolved": false,
+      "stopReason": "unfixable_error_kind",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlquery",
+      "dataType": "nilValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlquery=true",
+          "testDataType=nilValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"%3Cno+value%3E\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"%3Cno+value%3E\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"%3Cno+value%3E\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"%3Cno+value%3E\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlquery",
+      "dataType": "stringValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlquery=true",
+          "testDataType=stringValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"https%3A%2F%2Fexample.com%2Fpath\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"https%3A%2F%2Fexample.com%2Fpath\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"https%3A%2F%2Fexample.com%2Fpath\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"https%3A%2F%2Fexample.com%2Fpath\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlquery",
+      "dataType": "numberValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlquery=true",
+          "testDataType=numberValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"42\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"42\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"42\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"42\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlquery",
+      "dataType": "boolValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlquery=true",
+          "testDataType=boolValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"true\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"true\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"true\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"true\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlquery",
+      "dataType": "listValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlquery=true",
+          "testDataType=listValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"%5B1+2+3%5D\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"%5B1+2+3%5D\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"%5B1+2+3%5D\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"%5B1+2+3%5D\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    },
+    {
+      "toggle": "urlquery",
+      "dataType": "dictValue",
+      "valuesOptions": {
+        "values": [
+          "testUrlquery=true",
+          "testDataType=dictValue"
+        ],
+        "valueFiles": []
+      },
+      "standard": {
+        "error": null,
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"map%5Bkey%3Avalue%5D\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"map%5Bkey%3Avalue%5D\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "debug": {
+        "error": null,
+        "debugLogs": [],
+        "rawManifest": "---\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\r\n# KICS_HELM_ID_2:\napiVersion: v1\r\nkind: ConfigMap\r\nmetadata:\r\n  name: kics-helm-url-test\r\ndata:\r\n  # ==========================================\r\n  # URL functions\r\n  # ==========================================\r\n  # Test: urlParse - parses a URL string into components\r\n  # Test: urlJoin - joins URL components\r\n  # Test: urlquery - URL encodes a string\r\n  urlqueryValue: \"map%5Bkey%3Avalue%5D\"\n",
+        "partialManifest": null,
+        "splitManifests": [
+          {
+            "path": "test-url/templates/url-test.yaml",
+            "content": "\n# Source: test-url/templates/url-test.yaml\n# Test: URL function errors - comprehensive testing of URL functions\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: kics-helm-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  # Test: urlJoin - joins URL components\n  # Test: urlquery - URL encodes a string\n  urlqueryValue: \"map%5Bkey%3Avalue%5D\"\n",
+            "originalContent": "# Test: URL function errors - comprehensive testing of URL functions\n{{- $testData := index .Values .Values.testDataType }}\n# KICS_HELM_ID_2:\napiVersion: v1\nkind: ConfigMap\nmetadata:\n  name: {{ .Release.Name }}-url-test\ndata:\n  # ==========================================\n  # URL functions\n  # ==========================================\n  # Test: urlParse - parses a URL string into components\n  {{- if .Values.testUrlParse }}\n  urlParseValue: {{ urlParse $testData | toJson | quote }}\n  {{- end }}\n  # Test: urlJoin - joins URL components\n  {{- if .Values.testUrlJoin }}\n  urlJoinValue: {{ urlJoin (dict \"scheme\" \"https\" \"host\" \"example.com\" \"path\" $testData) | quote }}\n  {{- end }}\n  # Test: urlquery - URL encodes a string\n  {{- if .Values.testUrlquery }}\n  urlqueryValue: {{ urlquery $testData | quote }}\n  {{- end }}\n\n",
+            "splitID": "# KICS_HELM_ID_2:"
+          }
+        ]
+      },
+      "resolved": true,
+      "stopReason": "",
+      "fixChain": []
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "suite": "override_tests_suite",
   "testNumber": 1,
   "testName": "Basic Data Types Override",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-01-basic-data-types",
+  "chartPath": "..\\override_tests_suite\\test-01-basic-data-types",
   "renders": [
     {
       "caseName": "default-values",
@@ -41,7 +41,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-01-basic-data-types\\values-string-override.yaml"
+          "..\\override_tests_suite\\test-01-basic-data-types\\values-string-override.yaml"
         ]
       },
       "standard": {
@@ -75,7 +75,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-01-basic-data-types\\values-number-override.yaml"
+          "..\\override_tests_suite\\test-01-basic-data-types\\values-number-override.yaml"
         ]
       },
       "standard": {
@@ -109,7 +109,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-01-basic-data-types\\values-boolean-override.yaml"
+          "..\\override_tests_suite\\test-01-basic-data-types\\values-boolean-override.yaml"
         ]
       },
       "standard": {
@@ -143,7 +143,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-01-basic-data-types\\values-list-override.yaml"
+          "..\\override_tests_suite\\test-01-basic-data-types\\values-list-override.yaml"
         ]
       },
       "standard": {
@@ -177,7 +177,7 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-01-basic-data-types\\values-map-override.yaml"
+          "..\\override_tests_suite\\test-01-basic-data-types\\values-map-override.yaml"
         ]
       },
       "standard": {

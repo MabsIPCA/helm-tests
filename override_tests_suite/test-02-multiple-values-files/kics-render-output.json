@@ -2,14 +2,14 @@
   "suite": "override_tests_suite",
   "testNumber": 2,
   "testName": "Multiple Values Files Precedence",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-02-multiple-values-files",
+  "chartPath": "..\\override_tests_suite\\test-02-multiple-values-files",
   "renders": [
     {
       "caseName": "single-override",
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml"
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml"
         ]
       },
       "standard": {
@@ -43,8 +43,8 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml",
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-02-multiple-values-files\\values-override-2.yaml"
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml",
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-2.yaml"
         ]
       },
       "standard": {
@@ -78,9 +78,9 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml",
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-02-multiple-values-files\\values-override-2.yaml",
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-02-multiple-values-files\\values-override-3.yaml"
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml",
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-2.yaml",
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-3.yaml"
         ]
       },
       "standard": {
@@ -114,9 +114,9 @@
       "valuesOptions": {
         "values": [],
         "valueFiles": [
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-02-multiple-values-files\\values-override-3.yaml",
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-02-multiple-values-files\\values-override-2.yaml",
-          "C:\\Users\\miabs\\GolandProjects\\helm-tests\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml"
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-3.yaml",
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-2.yaml",
+          "..\\override_tests_suite\\test-02-multiple-values-files\\values-override-1.yaml"
         ]
       },
       "standard": {

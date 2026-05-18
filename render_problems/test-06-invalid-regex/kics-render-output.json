@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 9,
   "testName": "Regex Operation Errors",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-06-invalid-regex",
+  "chartPath": "..\\render_problems\\test-06-invalid-regex",
   "renders": [
     {
       "toggle": "regexMatch",

@@ -2,7 +2,7 @@
   "suite": "render_problems",
   "testNumber": 19,
   "testName": "Encoding Function Errors",
-  "chartPath": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\render_problems\\test-19-encoding-functions",
+  "chartPath": "..\\render_problems\\test-19-encoding-functions",
   "renders": [
     {
       "toggle": "b64enc",
