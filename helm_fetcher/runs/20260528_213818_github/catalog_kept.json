@@ -1,0 +1,1564 @@
+[
+  {
+    "repo_url": "https://github.com/bitnami/charts",
+    "repo_name": "bitnami/charts",
+    "cloned_dir": "D:\\helm_clones_github\\bitnami__charts",
+    "total_charts": 119,
+    "total_runs": 119,
+    "total_successes": 118,
+    "total_failures": 1,
+    "total_dep_failures": 0,
+    "charts": [
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\airflow",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\airflow",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\airflow",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\apache",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\apache",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\apache",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\apisix",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\apisix",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\apisix",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\appsmith",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\appsmith",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\appsmith",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\argo-cd",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\argo-cd",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\argo-cd",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\argo-workflows",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\argo-workflows",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\argo-workflows",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\aspnet-core",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\aspnet-core",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\aspnet-core",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\cadvisor",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\cadvisor",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\cadvisor",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\cassandra",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\cassandra",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\cassandra",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\cert-manager",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\cert-manager",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\cert-manager",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\chainloop",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\chainloop",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\chainloop",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\cilium",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\cilium",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\cilium",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\clickhouse",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\clickhouse",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\clickhouse",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\clickhouse-operator",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\clickhouse-operator",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\clickhouse-operator",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\cloudnative-pg",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\cloudnative-pg",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\cloudnative-pg",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\common",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\common",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\common",
+            "success": false,
+            "error_message": "Error: library charts are not installable\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\concourse",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\concourse",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\concourse",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\consul",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\consul",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\consul",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\contour",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\contour",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\contour",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\deepspeed",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\deepspeed",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\deepspeed",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\discourse",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\discourse",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\discourse",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\dremio",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\dremio",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\dremio",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\drupal",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\drupal",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\drupal",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\ejbca",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\ejbca",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\ejbca",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\elasticsearch",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\elasticsearch",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\elasticsearch",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\envoy-gateway",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\envoy-gateway",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\envoy-gateway",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\etcd",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\etcd",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\etcd",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\external-dns",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\external-dns",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\external-dns",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\flink",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\flink",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\flink",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\fluent-bit",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\fluent-bit",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\fluent-bit",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\fluentd",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\fluentd",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\fluentd",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\flux",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\flux",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\flux",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\ghost",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\ghost",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\ghost",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\gitea",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\gitea",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\gitea",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\gitlab-runner",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\gitlab-runner",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\gitlab-runner",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-alloy",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-alloy",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-alloy",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-k6-operator",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-k6-operator",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-k6-operator",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-loki",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-loki",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-loki",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-mimir",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-mimir",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-mimir",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-operator",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-operator",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-operator",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-tempo",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-tempo",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\grafana-tempo",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\haproxy",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\haproxy",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\haproxy",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\harbor",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\harbor",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\harbor",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\influxdb",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\influxdb",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\influxdb",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\jaeger",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\jaeger",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\jaeger",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\janusgraph",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\janusgraph",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\janusgraph",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\jenkins",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\jenkins",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\jenkins",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\jupyterhub",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\jupyterhub",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\jupyterhub",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kafka",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kafka",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\kafka",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\keycloak",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\keycloak",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\keycloak",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\keydb",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\keydb",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\keydb",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kiam",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kiam",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\kiam",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kibana",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kibana",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\kibana",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kong",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kong",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\kong",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-arangodb",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-arangodb",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-arangodb",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-prometheus",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-prometheus",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-prometheus",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-prometheus\\charts\\kube-prometheus-crds",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-prometheus\\charts\\kube-prometheus-crds",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-prometheus\\charts\\kube-prometheus-crds",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-state-metrics",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-state-metrics",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\kube-state-metrics",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kuberay",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kuberay",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\kuberay",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kubernetes-event-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\kubernetes-event-exporter",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\kubernetes-event-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\logstash",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\logstash",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\logstash",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mariadb",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mariadb",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\mariadb",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mariadb-galera",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mariadb-galera",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\mariadb-galera",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mastodon",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mastodon",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\mastodon",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\matomo",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\matomo",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\matomo",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\memcached",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\memcached",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\memcached",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\metallb",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\metallb",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\metallb",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\metrics-server",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\metrics-server",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\metrics-server",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\milvus",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\milvus",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\milvus",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\minio",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\minio",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\minio",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\minio-operator",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\minio-operator",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\minio-operator",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mlflow",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mlflow",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\mlflow",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mongodb",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mongodb",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\mongodb",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mongodb-sharded",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mongodb-sharded",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\mongodb-sharded",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\moodle",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\moodle",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\moodle",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\multus-cni",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\multus-cni",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\multus-cni",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mysql",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mysql",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\mysql",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\nats",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\nats",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\nats",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\neo4j",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\neo4j",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\neo4j",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\nessie",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\nessie",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\nessie",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\nginx",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\nginx",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\nginx",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\nginx-ingress-controller",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\nginx-ingress-controller",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\nginx-ingress-controller",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\node-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\node-exporter",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\node-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\oauth2-proxy",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\oauth2-proxy",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\oauth2-proxy",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\odoo",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\odoo",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\odoo",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\opensearch",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\opensearch",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\opensearch",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\parse",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\parse",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\parse",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\phpmyadmin",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\phpmyadmin",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\phpmyadmin",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\pinniped",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\pinniped",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\pinniped",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\postgresql",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\postgresql",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\postgresql",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\postgresql-ha",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\postgresql-ha",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\postgresql-ha",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\prometheus",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\prometheus",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\prometheus",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\pytorch",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\pytorch",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\pytorch",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\rabbitmq",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\rabbitmq",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\rabbitmq",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\rabbitmq-cluster-operator",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\rabbitmq-cluster-operator",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\rabbitmq-cluster-operator",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\redis",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\redis",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\redis",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\redis-cluster",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\redis-cluster",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\redis-cluster",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\redmine",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\redmine",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\redmine",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\schema-registry",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\schema-registry",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\schema-registry",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\scylladb",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\scylladb",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\scylladb",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\sealed-secrets",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\sealed-secrets",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\sealed-secrets",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\seaweedfs",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\seaweedfs",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\seaweedfs",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\solr",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\solr",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\solr",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\sonarqube",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\sonarqube",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\sonarqube",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\spark",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\spark",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\spark",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\superset",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\superset",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\superset",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\tensorflow-resnet",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\tensorflow-resnet",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\tensorflow-resnet",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\thanos",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\thanos",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\thanos",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\tomcat",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\tomcat",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\tomcat",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\valkey",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\valkey",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\valkey",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\valkey-cluster",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\valkey-cluster",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\valkey-cluster",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\vault",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\vault",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\vault",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\victoriametrics",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\victoriametrics",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\victoriametrics",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\whereabouts",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\whereabouts",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\whereabouts",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\wildfly",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\wildfly",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\wildfly",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\wordpress",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\wordpress",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\wordpress",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\zipkin",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\zipkin",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\zipkin",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\zookeeper",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\zookeeper",
+            "helm_command": "helm template test D:\\helm_clones_github\\bitnami__charts\\bitnami\\zookeeper",
+            "success": true
+          }
+        ]
+      }
+    ],
+    "kept": true,
+    "dep_failed": false
+  }
+]

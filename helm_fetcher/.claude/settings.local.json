@@ -13,7 +13,13 @@
       "Read(//tmp/**)",
       "Bash(gofmt -l exporter/exporter.go exporter/exporter_test.go)",
       "Bash(go tool *)",
-      "Bash(go run *)"
+      "Bash(go run *)",
+      "Bash(go mod *)",
+      "Bash(make get-token *)",
+      "Bash(powershell -Command \"Format-Hex .env | Select-Object -First 3\")",
+      "Bash(git config *)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(echo \"exit: $?\")"
     ]
   }
 }

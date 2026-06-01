@@ -158,10 +158,14 @@ func SearchGitHubRepos(pageSize, limit int, order string) ([]GitHubRankedRepo, e
 			}
 			if !seen[repoURL] {
 				seen[repoURL] = true
+				log.Info().
+					Str("repo", repoURL).
+					Int("candidate_n", len(candidates)+1).
+					Msg("Fetching star count")
 				stars, starErr := fetchRepoStars(repoURL)
 				if starErr != nil {
 					starLookupFailures++
-					log.Warn().Err(starErr).Str("repo", repoURL).Msg("Failed to fetch repo stars; using 0")
+					log.Warn().Err(starErr).Str("repo", repoURL).Msg("Star lookup failed – using 0")
 					stars = 0
 				}
 

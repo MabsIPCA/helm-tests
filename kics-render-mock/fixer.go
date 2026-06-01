@@ -2,44 +2,11 @@ package main
 
 import (
 	"fmt"
-	"regexp"
-	"strings"
 
 	"helm.sh/helm/v3/pkg/cli/values"
+
+	"github.com/MabsIPCA/helm-tests/helmfix"
 )
-
-const (
-	kindNilPointer    = "nil_pointer"
-	kindRequiredValue = "required_value"
-	maxFixIterations  = 10
-)
-
-var (
-	nilPtrRe   = regexp.MustCompile(`at <(\.Values\.[^ |>]+)`)
-	requiredRe = regexp.MustCompile(`required (\.Values\.[^ "]+)`)
-)
-
-type parsedFix struct {
-	kind  string
-	path  string
-	value string
-}
-
-func parseError(errStr string) (parsedFix, bool) {
-	if strings.Contains(errStr, "nil pointer") {
-		if m := nilPtrRe.FindStringSubmatch(errStr); m != nil {
-			path := strings.TrimPrefix(m[1], ".Values.")
-			return parsedFix{kind: kindNilPointer, path: path, value: ""}, true
-		}
-	}
-	if strings.Contains(errStr, "error calling required") {
-		if m := requiredRe.FindStringSubmatch(errStr); m != nil {
-			path := strings.TrimPrefix(m[1], ".Values.")
-			return parsedFix{kind: kindRequiredValue, path: path, value: "kics-placeholder"}, true
-		}
-	}
-	return parsedFix{}, false
-}
 
 func applyPatch(orig *values.Options, patch map[string]string) *values.Options {
 	extra := make([]string, 0, len(patch))
@@ -47,11 +14,11 @@ func applyPatch(orig *values.Options, patch map[string]string) *values.Options {
 		extra = append(extra, fmt.Sprintf("%s=%s", k, v))
 	}
 	return &values.Options{
-		ValueFiles:   orig.ValueFiles,
-		Values:       append(append([]string{}, orig.Values...), extra...),
-		StringValues: orig.StringValues,
-		FileValues:   orig.FileValues,
-		JSONValues:   orig.JSONValues,
+		ValueFiles:    orig.ValueFiles,
+		Values:        append(append([]string{}, orig.Values...), extra...),
+		StringValues:  orig.StringValues,
+		FileValues:    orig.FileValues,
+		JSONValues:    orig.JSONValues,
 		LiteralValues: orig.LiteralValues,
 	}
 }
@@ -62,7 +29,7 @@ func fixInvocation(chartPath string, inv invocation) FixedRenderEntry {
 	patch := map[string]string{}
 	seenErrs := map[string]bool{}
 
-	for attempt := 1; attempt <= maxFixIterations; attempt++ {
+	for attempt := 1; attempt <= helmfix.MaxFixIterations; attempt++ {
 		patchedOpts := applyPatch(inv.valOpts, patch)
 		res := runOnce(chartPath, patchedOpts, false)
 
@@ -80,7 +47,7 @@ func fixInvocation(chartPath string, inv invocation) FixedRenderEntry {
 		}
 		seenErrs[errStr] = true
 
-		fix, ok := parseError(errStr)
+		kind, path, value, ok := helmfix.ParseError(errStr)
 		if !ok {
 			entry.StopReason = "unfixable_error_kind"
 			return entry
@@ -89,15 +56,51 @@ func fixInvocation(chartPath string, inv invocation) FixedRenderEntry {
 		entry.FixChain = append(entry.FixChain, FixStep{
 			Attempt:       attempt,
 			ErrorSeen:     errStr,
-			Kind:          fix.kind,
-			ValuePath:     fix.path,
-			ValueInjected: fix.value,
+			Kind:          kind,
+			ValuePath:     path,
+			ValueInjected: value,
 		})
-		patch[fix.path] = fix.value
+		patch[path] = value
 	}
 
 	entry.StopReason = "max_iterations"
 	return entry
+}
+
+// fixFromInvocations executes the fix loop for pre-built invocations matched
+// against their corresponding base RenderOutput entries. Used by runFixDir
+// (test-suite mode) and runCatalogMode (catalog mode).
+func fixFromInvocations(chartPath string, base RenderOutput, invocations []invocation) FixedRenderOutput {
+	out := FixedRenderOutput{
+		Suite:      base.Suite,
+		TestNumber: base.TestNumber,
+		TestName:   base.TestName,
+		ChartPath:  base.ChartPath,
+		Renders:    make([]FixedRenderEntry, 0, len(base.Renders)),
+	}
+
+	for i, inv := range invocations {
+		baseEntry := base.Renders[i]
+		fixed := FixedRenderEntry{
+			RenderEntry: baseEntry,
+			FixChain:    []FixStep{},
+		}
+
+		if baseEntry.Standard.Error == nil {
+			fixed.Resolved = true
+			out.Renders = append(out.Renders, fixed)
+			continue
+		}
+
+		loopResult := fixInvocation(chartPath, inv)
+		fixed.Resolved = loopResult.Resolved
+		fixed.StopReason = loopResult.StopReason
+		fixed.FixChain = loopResult.FixChain
+		fixed.FixedResult = loopResult.FixedResult
+		out.Renders = append(out.Renders, fixed)
+	}
+
+	return out
 }
 
 func runFixDir(testDir, suite string, base RenderOutput) (FixedRenderOutput, error) {

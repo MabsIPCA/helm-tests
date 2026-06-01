@@ -72,8 +72,12 @@ func main() {
 		runFixerMode(cfg.CatalogIn, cfg.CloneDir)
 		return
 	}
+	if selectedMode == "merge" {
+		exporter.MergeCumulative("runs")
+		return
+	}
 	if selectedMode != "full" {
-		log.Fatal().Str("mode", cfg.Mode).Msg("Invalid mode. Use 'full', 'github-search-json', 'artifacthub-search-json', or 'fixer'")
+		log.Fatal().Str("mode", cfg.Mode).Msg("Invalid mode. Use 'full', 'github-search-json', 'artifacthub-search-json', 'fixer', or 'merge'")
 	}
 
 	selectedSource := strings.ToLower(strings.TrimSpace(cfg.Source))
@@ -106,30 +110,61 @@ func main() {
 		log.Fatal().Msg("No repos found – nothing to do")
 	}
 
-	// Prepare output files and clone base dir
+	// Prepare clone base dir
 	cloneBase := strings.TrimSpace(cfg.CloneDir)
 	if cloneBase == "" {
 		cloneBase = "cloned"
 	}
 	cloneBase = filepath.Clean(cloneBase)
 	_ = os.MkdirAll(cloneBase, 0o755)
-	// Remove old output files
-	for _, f := range []string{
-		"catalog_by_project.json", "catalog_kept.json", "catalog_removed.json", "catalog_dep_failures.json",
-		"catalog_results.md", "catalog_kept.md", "catalog_removed.md", "catalog_dep_failures.md",
-		"catalog_failures.csv", "catalog_kept_failures.csv", "catalog_dep_failures.csv",
-	} {
-		_ = os.Remove(f)
+
+	// Determine run output directory; auto-generate when not supplied.
+	runDir := strings.TrimSpace(cfg.RunDir)
+	if runDir == "" {
+		ts := time.Now().Format("20060102_150405")
+		runDir = filepath.Join("runs", ts+"_"+selectedSource)
 	}
+	_ = os.MkdirAll(runDir, 0o755)
+	log.Info().Str("run_dir", runDir).Msg("Run outputs directory")
+
+	// Snapshot the search input into the run folder so each run is self-contained.
+	if raw, readErr := os.ReadFile(cfg.SearchIn); readErr == nil {
+		dest := filepath.Join(runDir, filepath.Base(cfg.SearchIn))
+		if writeErr := os.WriteFile(dest, raw, 0o644); writeErr != nil {
+			log.Warn().Err(writeErr).Str("dest", dest).Msg("Could not snapshot search input into run dir")
+		} else {
+			log.Info().Str("src", cfg.SearchIn).Str("dest", dest).Msg("Search input snapshotted")
+		}
+	}
+
+	// Cross-reference against the cumulative catalog so repos processed in any
+	// previous run are skipped immediately without re-cloning or re-templating.
+	existingCatalog := loadExistingCatalog("catalog_cumulative.json")
+	existingDepFails := loadExistingDepFailures("catalog_cumulative_dep_failures.json")
 
 	var allRepos []model.RepoResult
 	var allDepFailures []model.DepFailureEntry
+	newlyProcessed := 0
 
 	// iterate over repos
 	for i, repoURL := range repos {
 		repoName := strings.TrimPrefix(repoURL, "https://github.com/")
 		safeName := strings.ReplaceAll(repoName, "/", "__")
 		destDir := filepath.Join(cloneBase, safeName)
+
+		// Reuse existing result when the repo was already cataloged.
+		if existing, ok := existingCatalog[repoURL]; ok {
+			log.Info().
+				Int("repo_index", i+1).
+				Int("total_repos", len(repos)).
+				Str("repo", repoName).
+				Msg("Already cataloged – reusing existing result")
+			allRepos = append(allRepos, existing)
+			if deps, ok := existingDepFails[repoURL]; ok {
+				allDepFailures = append(allDepFailures, deps...)
+			}
+			continue
+		}
 
 		log.Info().
 			Int("repo_index", i+1).
@@ -247,13 +282,18 @@ func main() {
 			log.Info().Str("repo", repoName).Msg("Keeping cloned repo (has template failures)")
 		} else {
 			repoResult.Kept = false
-			exporter.RemoveDir(destDir)
+			if !cfg.KeepClones {
+				exporter.RemoveDir(destDir)
+			} else {
+				log.Info().Str("repo", repoName).Msg("No failures – keeping clone for reuse (-keep-clones)")
+			}
 		}
 
 		allRepos = append(allRepos, repoResult)
+		newlyProcessed++
 
 		// write continuous output after each repo to avoid losing data on crashes
-		exporter.FlushAll(allRepos, allDepFailures)
+		exporter.FlushAll(allRepos, allDepFailures, runDir)
 
 		log.Info().
 			Int("total_runs", repoResult.TotalRuns).
@@ -262,8 +302,24 @@ func main() {
 			Msg("Repo processing complete – output flushed")
 	}
 
-	// export final results
-	exporter.FlushAll(allRepos, allDepFailures)
+	// All repos were already in the cumulative catalog – nothing new to write.
+	if newlyProcessed == 0 {
+		_ = os.RemoveAll(runDir)
+		log.Info().
+			Int("reused", len(allRepos)).
+			Str("run_dir", runDir).
+			Msg("All repos already cataloged – run folder suppressed")
+		fmt.Println()
+		fmt.Printf("ℹ️  All %d repos already in cumulative catalog – no new run folder created.\n", len(allRepos))
+		fmt.Println("   Use 'make plot-all' to generate plots from the existing cumulative data.")
+		return
+	}
+
+	// export final results for this run
+	exporter.FlushAll(allRepos, allDepFailures, runDir)
+
+	// rebuild cumulative catalog from all run subfolders
+	exporter.MergeCumulative("runs")
 
 	totalRuns := 0
 	totalFailures := 0
@@ -276,6 +332,8 @@ func main() {
 
 	log.Info().
 		Int("repos", len(allRepos)).
+		Int("newly_processed", newlyProcessed).
+		Int("reused_from_cumulative", len(allRepos)-newlyProcessed).
 		Int("total_runs", totalRuns).
 		Int("failures", totalFailures).
 		Int("dep_failures", totalDepFails).
@@ -283,21 +341,59 @@ func main() {
 		Msg("Done")
 
 	fmt.Println()
-	fmt.Printf("✅  %d repos processed, %d total runs, %d template failures, %d dep-build failures.\n",
-		len(allRepos), totalRuns, totalFailures, totalDepFails)
+	fmt.Printf("✅  %d repos total (%d new, %d from cumulative), %d helm runs, %d failures, %d dep-build failures.\n",
+		len(allRepos), newlyProcessed, len(allRepos)-newlyProcessed, totalRuns, totalFailures, totalDepFails)
 	fmt.Println()
-	fmt.Println("Output files:")
-	fmt.Println("  catalog_by_project.json      — all results")
-	fmt.Println("  catalog_kept.json            — repos with template failures (kept)")
-	fmt.Println("  catalog_removed.json         — repos with no failures (removed)")
-	fmt.Println("  catalog_dep_failures.json    — repos with dep-build failures")
-	fmt.Println("  catalog_results.md           — full markdown summary")
-	fmt.Println("  catalog_kept.md              — kept repos markdown")
-	fmt.Println("  catalog_removed.md           — removed repos markdown")
-	fmt.Println("  catalog_dep_failures.md      — dep-failure details markdown")
-	fmt.Println("  catalog_failures.csv         — all template failures (CSV)")
-	fmt.Println("  catalog_kept_failures.csv    — kept repos template failures (CSV)")
-	fmt.Println("  catalog_dep_failures.csv     — dep-build failures (CSV)")
+	fmt.Printf("Run output:  %s/\n", runDir)
+	fmt.Printf("  %-36s — top-500 list used for this run\n", filepath.Base(cfg.SearchIn))
+	fmt.Println("  catalog_by_project.json              — this run, all results")
+	fmt.Println("  catalog_kept.json                    — this run, repos with template failures")
+	fmt.Println("  catalog_removed.json                 — this run, repos with no failures")
+	fmt.Println("  catalog_dep_failures.json            — this run, dep-build failures")
+	fmt.Println()
+	fmt.Println("Cumulative (all runs merged):")
+	fmt.Println("  catalog_cumulative.json              — all repos ever processed")
+	fmt.Println("  catalog_cumulative_dep_failures.json — all dep-build failures ever")
+}
+
+// loadExistingCatalog reads catalog_by_project.json and returns a map of repoURL → RepoResult.
+// Returns nil (no-op) when the file is absent or unparseable.
+func loadExistingCatalog(path string) map[string]model.RepoResult {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return nil
+	}
+	var repos []model.RepoResult
+	if err := json.Unmarshal(data, &repos); err != nil {
+		log.Warn().Err(err).Str("file", path).Msg("Could not parse existing catalog – starting fresh")
+		return nil
+	}
+	m := make(map[string]model.RepoResult, len(repos))
+	for _, r := range repos {
+		m[r.RepoURL] = r
+	}
+	log.Info().Str("file", path).Int("repos", len(m)).Msg("Loaded existing catalog for cross-reference")
+	return m
+}
+
+// loadExistingDepFailures reads catalog_dep_failures.json and returns a map of repoURL → []DepFailureEntry.
+// Returns nil (no-op) when the file is absent or unparseable.
+func loadExistingDepFailures(path string) map[string][]model.DepFailureEntry {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return nil
+	}
+	var entries []model.DepFailureEntry
+	if err := json.Unmarshal(data, &entries); err != nil {
+		log.Warn().Err(err).Str("file", path).Msg("Could not parse existing dep failures – starting fresh")
+		return nil
+	}
+	m := make(map[string][]model.DepFailureEntry)
+	for _, e := range entries {
+		m[e.RepoURL] = append(m[e.RepoURL], e)
+	}
+	log.Info().Str("file", path).Int("entries", len(entries)).Msg("Loaded existing dep failures for cross-reference")
+	return m
 }
 
 func runGitHubSearchJSONMode(pageSize, top int, order, outputPath string) error {

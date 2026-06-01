@@ -52,7 +52,13 @@ type suiteSpec struct {
 
 func main() {
 	root := flag.String("root", "", "path to helm-tests repo root (default: parent of working directory)")
+	catalog := flag.String("catalog", "", "path to helm_fetcher catalog_kept.json; runs KICS-faithful SDK pipeline on catalog charts")
 	flag.Parse()
+
+	if *catalog != "" {
+		runCatalogMode(*catalog)
+		return
+	}
 
 	repoRoot := *root
 	if repoRoot == "" {

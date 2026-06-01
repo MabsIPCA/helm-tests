@@ -27,7 +27,14 @@
       "Read(//tmp/**)",
       "Bash(make help *)",
       "Bash(xargs grep -l \"runFixerMode\")",
-      "Bash(./test.exe -help)"
+      "Bash(./test.exe -help)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(go list *)",
+      "PowerShell(cd C:\\\\Users\\\\miabs\\\\GolandProjects\\\\helm-tests\\\\helm_fetcher; if \\(Test-Path .env\\) { Get-Content .env } else { \"no .env file\" }; echo \"---\"; $env:GITHUB_TOKEN | ForEach-Object { if \\($_\\) { \"GITHUB_TOKEN is set \\(length=$\\($_.Length\\)\\)\" } else { \"GITHUB_TOKEN not set\" } })",
+      "PowerShell(gh *)",
+      "PowerShell(git credential *)",
+      "PowerShell(winget install *)"
     ]
   }
 }

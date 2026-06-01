@@ -4,45 +4,47 @@ import (
 	"testing"
 
 	"helm.sh/helm/v3/pkg/cli/values"
+
+	"github.com/MabsIPCA/helm-tests/helmfix"
 )
 
 func TestParseError_NilPointer(t *testing.T) {
 	errStr := `template: mychart/templates/deploy.yaml:12:8: executing "mychart/templates/deploy.yaml" at <.Values.ingress.hosts>: nil pointer evaluating interface {}.hosts`
-	fix, ok := parseError(errStr)
+	kind, path, value, ok := helmfix.ParseError(errStr)
 	if !ok {
 		t.Fatal("expected parseable, got false")
 	}
-	if fix.kind != kindNilPointer {
-		t.Errorf("kind: got %q, want %q", fix.kind, kindNilPointer)
+	if kind != helmfix.KindNilPointer {
+		t.Errorf("kind: got %q, want %q", kind, helmfix.KindNilPointer)
 	}
-	if fix.path != "ingress.hosts" {
-		t.Errorf("path: got %q, want %q", fix.path, "ingress.hosts")
+	if path != "ingress.hosts" {
+		t.Errorf("path: got %q, want %q", path, "ingress.hosts")
 	}
-	if fix.value != "" {
-		t.Errorf("value: got %q, want empty string", fix.value)
+	if value != "" {
+		t.Errorf("value: got %q, want empty string", value)
 	}
 }
 
 func TestParseError_RequiredValue(t *testing.T) {
 	errStr := `template: mychart/templates/deploy.yaml:5:15: executing "mychart/templates/deploy.yaml" at <required .Values.db.host "db.host is required">: error calling required: db.host is required`
-	fix, ok := parseError(errStr)
+	kind, path, value, ok := helmfix.ParseError(errStr)
 	if !ok {
 		t.Fatal("expected parseable, got false")
 	}
-	if fix.kind != kindRequiredValue {
-		t.Errorf("kind: got %q, want %q", fix.kind, kindRequiredValue)
+	if kind != helmfix.KindRequiredValue {
+		t.Errorf("kind: got %q, want %q", kind, helmfix.KindRequiredValue)
 	}
-	if fix.path != "db.host" {
-		t.Errorf("path: got %q, want %q", fix.path, "db.host")
+	if path != "db.host" {
+		t.Errorf("path: got %q, want %q", path, "db.host")
 	}
-	if fix.value != "kics-placeholder" {
-		t.Errorf("value: got %q, want %q", fix.value, "kics-placeholder")
+	if value != helmfix.KicsPlaceholder {
+		t.Errorf("value: got %q, want %q", value, helmfix.KicsPlaceholder)
 	}
 }
 
 func TestParseError_Unfixable(t *testing.T) {
 	errStr := `template: mychart/templates/deploy.yaml:1:1: executing "..." at <.Values.foo>: error calling fail: chart cannot be installed directly`
-	_, ok := parseError(errStr)
+	_, _, _, ok := helmfix.ParseError(errStr)
 	if ok {
 		t.Fatal("expected unfixable, got parseable")
 	}
@@ -50,7 +52,7 @@ func TestParseError_Unfixable(t *testing.T) {
 
 func TestParseError_NilPointerWithoutAtClause(t *testing.T) {
 	errStr := `template: mychart/templates/deploy.yaml:12: nil pointer evaluating something that has no at clause`
-	_, ok := parseError(errStr)
+	_, _, _, ok := helmfix.ParseError(errStr)
 	if ok {
 		t.Fatal("expected unfixable without at <.Values.x> clause, got parseable")
 	}
@@ -58,12 +60,12 @@ func TestParseError_NilPointerWithoutAtClause(t *testing.T) {
 
 func TestParseError_NilPointerWithPipeFilter(t *testing.T) {
 	errStr := `template: mychart/templates/deploy.yaml:5:8: executing "mychart/templates/deploy.yaml" at <.Values.foo | quote>: nil pointer evaluating interface {}.foo`
-	fix, ok := parseError(errStr)
+	_, path, _, ok := helmfix.ParseError(errStr)
 	if !ok {
 		t.Fatal("expected parseable, got false")
 	}
-	if fix.path != "foo" {
-		t.Errorf("path: got %q, want %q", fix.path, "foo")
+	if path != "foo" {
+		t.Errorf("path: got %q, want %q", path, "foo")
 	}
 }
 
@@ -72,7 +74,7 @@ func TestApplyPatch_AppendsToOriginalValues(t *testing.T) {
 		Values:     []string{"foo=bar"},
 		ValueFiles: []string{"/some/values.yaml"},
 	}
-	patch := map[string]string{"db.host": "kics-placeholder"}
+	patch := map[string]string{"db.host": helmfix.KicsPlaceholder}
 	patched := applyPatch(orig, patch)
 
 	if len(patched.ValueFiles) != 1 || patched.ValueFiles[0] != "/some/values.yaml" {
@@ -84,7 +86,7 @@ func TestApplyPatch_AppendsToOriginalValues(t *testing.T) {
 	if patched.Values[0] != "foo=bar" {
 		t.Errorf("original value not at index 0: got %q", patched.Values[0])
 	}
-	if patched.Values[1] != "db.host=kics-placeholder" {
+	if patched.Values[1] != "db.host="+helmfix.KicsPlaceholder {
 		t.Errorf("patch not appended correctly: got %q", patched.Values[1])
 	}
 }
