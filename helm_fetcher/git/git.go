@@ -15,6 +15,7 @@ import (
 func curlAPI(url string, headers ...string) ([]byte, error) {
 	args := []string{
 		"-s", "-S",
+		"--connect-timeout", "10", // fail fast on DNS / connection stalls
 		"--max-time", "30",
 		"-H", "User-Agent: helm-fetcher/1.0",
 		"-H", "Accept: application/json",
@@ -95,7 +96,13 @@ func CloneRepo(repoURL, destDir string) error {
 		return nil
 	}
 	log.Info().Str("repo", repoURL).Str("dest", destDir).Msg("Cloning (depth=1)")
-	cmd := exec.Command("git", "clone", "--depth", "1", repoURL+".git", destDir)
+	cloneURL := repoURL + ".git"
+	// Embed token in the URL so git uses HTTPS auth regardless of any global
+	// url.insteadOf rules that would redirect https://github.com/ to SSH.
+	if token := os.Getenv("GITHUB_TOKEN"); token != "" && strings.HasPrefix(repoURL, "https://github.com/") {
+		cloneURL = "https://x-access-token:" + token + "@github.com/" + strings.TrimPrefix(repoURL, "https://github.com/") + ".git"
+	}
+	cmd := exec.Command("git", "clone", "--depth", "1", cloneURL, destDir)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	return cmd.Run()

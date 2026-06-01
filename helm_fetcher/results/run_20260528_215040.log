@@ -1,0 +1,18 @@
+﻿[2026-05-28 21:50:40] ================================================================
+[2026-05-28 21:50:40] helm_fetcher overnight run   top=500   started=20260528_215040
+[2026-05-28 21:50:40] ================================================================
+[2026-05-28 21:50:40] 
+[2026-05-28 21:50:40] >>> [1/2  GitHub]  source=github  search_in=github_search.json  top=500  clone_dir=D:/helm_clones_github
+[2026-05-29 13:58:54] <<< [1/2  GitHub] DONE  exit=0  elapsed=16:08:14
+[2026-05-29 13:58:55]     Catalog files saved to: C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\results\github
+[2026-05-29 13:58:55] 
+[2026-05-29 13:58:55] >>> [2/2  ArtifactHub]  source=artifacthub  search_in=artifacthub_search.json  top=500  clone_dir=D:/helm_clones_artifacthub
+[2026-05-29 19:56:55] <<< [2/2  ArtifactHub] DONE  exit=0  elapsed=05:58:00
+[2026-05-29 19:56:55]     Catalog files saved to: C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\results\artifacthub
+[2026-05-29 19:56:55] 
+[2026-05-29 19:56:55] ================================================================
+[2026-05-29 19:56:55] All done.  Total elapsed: 22:06:15
+[2026-05-29 19:56:55]   GitHub results:      C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\results\github
+[2026-05-29 19:56:55]   ArtifactHub results: C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\results\artifacthub
+[2026-05-29 19:56:55]   This log:            C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\results\run_20260528_215040.log
+[2026-05-29 19:56:55] ================================================================

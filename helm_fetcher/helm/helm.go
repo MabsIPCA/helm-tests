@@ -6,8 +6,15 @@ import (
 	"os/exec"
 	"path/filepath"
 	"strings"
+	"time"
 
 	"github.com/rs/zerolog/log"
+)
+
+const (
+	depBuildMaxRetries     = 4
+	depBuildInitialBackoff = 15 * time.Second
+	depBuildBackoffFactor  = 2.0
 )
 
 // FindCharts recursively searches for Chart.yaml files starting from baseDir and returns the directories containing them.
@@ -76,20 +83,51 @@ func Combinations(items []string) [][]string {
 }
 
 // RunHelmDependencyBuild executes "helm dependency build" for the given chart path and logs the result.
-// On failure, the returned error message contains the combined stdout+stderr output.
+// It retries up to depBuildMaxRetries times with exponential backoff for transient failures.
+// On permanent failure, the returned error contains the combined stdout+stderr output.
 func RunHelmDependencyBuild(chartPath string) error {
-	cmd := exec.Command("helm", "dependency", "build", chartPath)
-	out, err := cmd.CombinedOutput()
-	if err != nil {
+	var lastErr error
+	backoff := depBuildInitialBackoff
+	maxAttempts := depBuildMaxRetries + 1
+
+	for attempt := 1; attempt <= maxAttempts; attempt++ {
+		if attempt > 1 {
+			log.Info().
+				Str("chart", chartPath).
+				Int("attempt", attempt).
+				Int("max_attempts", maxAttempts).
+				Dur("backoff", backoff).
+				Msg("Retrying helm dependency build after backoff")
+			time.Sleep(backoff)
+			backoff = time.Duration(float64(backoff) * depBuildBackoffFactor)
+		}
+
+		cmd := exec.Command("helm", "dependency", "build", chartPath)
+		out, err := cmd.CombinedOutput()
+		if err == nil {
+			if attempt > 1 {
+				log.Info().Str("chart", chartPath).Int("attempt", attempt).Msg("helm dependency build succeeded on retry")
+			} else {
+				log.Info().Str("chart", chartPath).Msg("helm dependency build succeeded")
+			}
+			return nil
+		}
+
 		msg := strings.TrimSpace(string(out))
 		if msg == "" {
 			msg = err.Error()
 		}
-		log.Warn().Str("chart", chartPath).Str("output", msg).Msg("helm dependency build failed (continuing)")
-		return fmt.Errorf("%s", msg)
+		lastErr = fmt.Errorf("%s", msg)
+		log.Warn().
+			Str("chart", chartPath).
+			Str("output", msg).
+			Int("attempt", attempt).
+			Int("max_attempts", maxAttempts).
+			Msg("helm dependency build failed")
 	}
-	log.Info().Str("chart", chartPath).Msg("helm dependency build succeeded")
-	return nil
+
+	log.Warn().Str("chart", chartPath).Int("attempts", maxAttempts).Msg("helm dependency build failed after all retries (continuing)")
+	return lastErr
 }
 
 // RunHelmTemplate executes "helm template" for the given chart path and values files, returning the command string, output, and any error.

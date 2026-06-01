@@ -1,0 +1,15 @@
+
+✅  0 repos processed, 0 total runs, 0 template failures, 0 dep-build failures.
+
+Output files:
+  catalog_by_project.json      — all results
+  catalog_kept.json            — repos with template failures (kept)
+  catalog_removed.json         — repos with no failures (removed)
+  catalog_dep_failures.json    — repos with dep-build failures
+  catalog_results.md           — full markdown summary
+  catalog_kept.md              — kept repos markdown
+  catalog_removed.md           — removed repos markdown
+  catalog_dep_failures.md      — dep-failure details markdown
+  catalog_failures.csv         — all template failures (CSV)
+  catalog_kept_failures.csv    — kept repos template failures (CSV)
+  catalog_dep_failures.csv     — dep-build failures (CSV)

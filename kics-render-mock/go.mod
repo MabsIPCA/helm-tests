@@ -2,7 +2,12 @@ module kics-render-mock
 
 go 1.25.3
 
-require helm.sh/helm/v3 v3.20.2
+require (
+	github.com/MabsIPCA/helm-tests/helmfix v0.0.0
+	helm.sh/helm/v3 v3.20.2
+)
+
+replace github.com/MabsIPCA/helm-tests/helmfix v0.0.0 => ../helmfix
 
 require (
 	dario.cat/mergo v1.0.1 // indirect

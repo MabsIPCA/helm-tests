@@ -33,6 +33,12 @@ const (
 	catalogInFlag      = "catalog-in"
 	catalogInUsage     = "In fixer mode, input catalog JSON (e.g. catalog_kept.json)"
 	catalogInDefault   = "catalog_kept.json"
+	keepClonesFlag     = "keep-clones"
+	keepClonesUsage    = "Keep cloned repos even when they have no template failures (avoids re-cloning on reruns)"
+	keepClonesDefault  = false
+	runDirFlag         = "run-dir"
+	runDirUsage        = "Output subdirectory for this run; auto-generated as runs/<timestamp>_<source> when empty"
+	runDirDefault      = ""
 )
 
 // Config groups all runtime settings parsed from CLI flags.
@@ -47,6 +53,8 @@ type Config struct {
 	SearchOut   string
 	CloneDir    string
 	CatalogIn   string
+	KeepClones  bool
+	RunDir      string
 }
 
 func Parse() Config {
@@ -60,6 +68,8 @@ func Parse() Config {
 	searchOut := flag.String(searchOutFlag, searchOutDefault, searchOutUsage)
 	cloneDir := flag.String(cloneDirFlag, cloneDirDefault, cloneDirUsage)
 	catalogIn := flag.String(catalogInFlag, catalogInDefault, catalogInUsage)
+	keepClones := flag.Bool(keepClonesFlag, keepClonesDefault, keepClonesUsage)
+	runDir := flag.String(runDirFlag, runDirDefault, runDirUsage)
 	flag.Parse()
 
 	return Config{
@@ -73,5 +83,7 @@ func Parse() Config {
 		SearchOut:   *searchOut,
 		CloneDir:    *cloneDir,
 		CatalogIn:   *catalogIn,
+		KeepClones:  *keepClones,
+		RunDir:      *runDir,
 	}
 }

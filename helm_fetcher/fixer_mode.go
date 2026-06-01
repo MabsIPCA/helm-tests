@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"regexp"
 	"strings"
 	"time"
 
@@ -14,34 +13,8 @@ import (
 	"github.com/MabsIPCA/helm-tests/helm_fetcher/git"
 	"github.com/MabsIPCA/helm-tests/helm_fetcher/helm"
 	"github.com/MabsIPCA/helm-tests/helm_fetcher/model"
+	"github.com/MabsIPCA/helm-tests/helmfix"
 )
-
-const maxFixIterations = 10
-
-var (
-	nilPtrRe   = regexp.MustCompile(`at <(\.Values\.[^ >|]+)>`)
-	requiredRe = regexp.MustCompile(`required (\.Values\.[^ "]+)`)
-)
-
-// parseHelmCLIError parses a helm CLI error string and returns fix instructions.
-// ok is false for errors that cannot be fixed by value injection.
-func parseHelmCLIError(errMsg string) (kind, valuePath, injectedValue string, ok bool) {
-	s := strings.TrimPrefix(errMsg, "Error: ")
-
-	if strings.Contains(s, "nil pointer") {
-		if m := nilPtrRe.FindStringSubmatch(s); len(m) == 2 {
-			path := strings.TrimPrefix(m[1], ".Values.")
-			return "nil_pointer", path, "", true
-		}
-	}
-	if strings.Contains(s, "error calling required") {
-		if m := requiredRe.FindStringSubmatch(s); len(m) == 2 {
-			path := strings.TrimPrefix(m[1], ".Values.")
-			return "required_value", path, "kics-placeholder", true
-		}
-	}
-	return "", "", "", false
-}
 
 // fixRun runs the fix loop for a single failing RunResult.
 // If orig.Success is true, it returns immediately with Resolved=true and an empty chain.
@@ -54,7 +27,7 @@ func fixRun(chartPath string, orig model.RunResult) model.FixedRunResult {
 	seenErrs := map[string]bool{}
 	chain := []model.FixStep{}
 
-	for attempt := 1; attempt <= maxFixIterations; attempt++ {
+	for attempt := 1; attempt <= helmfix.MaxFixIterations; attempt++ {
 		setFlags := make([]string, 0, len(patch))
 		for k, v := range patch {
 			setFlags = append(setFlags, k+"="+v)
@@ -79,7 +52,7 @@ func fixRun(chartPath string, orig model.RunResult) model.FixedRunResult {
 		}
 		seenErrs[errStr] = true
 
-		kind, path, val, ok := parseHelmCLIError(errStr)
+		kind, path, val, ok := helmfix.ParseError(errStr)
 		if !ok {
 			return model.FixedRunResult{
 				StopReason: "unfixable_error_kind",

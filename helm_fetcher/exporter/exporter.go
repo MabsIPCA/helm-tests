@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"path/filepath"
 	"strings"
 
 	"github.com/MabsIPCA/helm-tests/helm_fetcher/model"
@@ -58,26 +59,82 @@ func depFailedRepos(repos []model.RepoResult) []model.RepoResult {
 
 // ---- per-type flush helpers ------------------------------------------------
 
-// FlushAll writes all three type-specific sets of JSON, MD, and CSV files.
-func FlushAll(allRepos []model.RepoResult, depFailures []model.DepFailureEntry) {
-	// full catalog
-	FlushJSON("catalog_by_project.json", allRepos)
+// FlushAll writes all catalog files into dir (the run-specific subdirectory).
+func FlushAll(allRepos []model.RepoResult, depFailures []model.DepFailureEntry, dir string) {
+	p := func(name string) string { return filepath.Join(dir, name) }
 
-	// per-type JSON
-	FlushJSON("catalog_kept.json", keptRepos(allRepos))
-	FlushJSON("catalog_removed.json", removedRepos(allRepos))
-	FlushDepFailuresJSON("catalog_dep_failures.json", depFailures)
+	FlushJSON(p("catalog_by_project.json"), allRepos)
+	FlushJSON(p("catalog_kept.json"), keptRepos(allRepos))
+	FlushJSON(p("catalog_removed.json"), removedRepos(allRepos))
+	FlushDepFailuresJSON(p("catalog_dep_failures.json"), depFailures)
 
-	// per-type MD
-	_ = WriteMarkdownTable("catalog_results.md", allRepos)
-	_ = WriteMarkdownTable("catalog_kept.md", keptRepos(allRepos))
-	_ = WriteMarkdownTable("catalog_removed.md", removedRepos(allRepos))
-	_ = WriteDepFailuresMarkdown("catalog_dep_failures.md", depFailures)
+	_ = WriteMarkdownTable(p("catalog_results.md"), allRepos)
+	_ = WriteMarkdownTable(p("catalog_kept.md"), keptRepos(allRepos))
+	_ = WriteMarkdownTable(p("catalog_removed.md"), removedRepos(allRepos))
+	_ = WriteDepFailuresMarkdown(p("catalog_dep_failures.md"), depFailures)
 
-	// per-type CSV
-	_ = WriteFailuresCSV("catalog_failures.csv", allRepos)
-	_ = WriteFailuresCSV("catalog_kept_failures.csv", keptRepos(allRepos))
-	_ = WriteDepFailuresCSV("catalog_dep_failures.csv", depFailures)
+	_ = WriteFailuresCSV(p("catalog_failures.csv"), allRepos)
+	_ = WriteFailuresCSV(p("catalog_kept_failures.csv"), keptRepos(allRepos))
+	_ = WriteDepFailuresCSV(p("catalog_dep_failures.csv"), depFailures)
+}
+
+// MergeCumulative scans all runs/<*>/catalog_by_project.json files under runsDir,
+// deduplicates entries by RepoURL (first-seen wins), and writes catalog_cumulative.json
+// and catalog_cumulative_dep_failures.json in the current directory.
+func MergeCumulative(runsDir string) {
+	// --- repos ---
+	repoMatches, _ := filepath.Glob(filepath.Join(runsDir, "*", "catalog_by_project.json"))
+	seenURL := make(map[string]struct{})
+	var repos []model.RepoResult
+	for _, path := range repoMatches {
+		data, err := os.ReadFile(path)
+		if err != nil {
+			log.Warn().Err(err).Str("file", path).Msg("MergeCumulative: skipping unreadable file")
+			continue
+		}
+		var batch []model.RepoResult
+		if err := json.Unmarshal(data, &batch); err != nil {
+			log.Warn().Err(err).Str("file", path).Msg("MergeCumulative: skipping unparseable file")
+			continue
+		}
+		for _, r := range batch {
+			if _, ok := seenURL[r.RepoURL]; !ok {
+				seenURL[r.RepoURL] = struct{}{}
+				repos = append(repos, r)
+			}
+		}
+	}
+	FlushJSON("catalog_cumulative.json", repos)
+
+	// --- dep failures ---
+	depMatches, _ := filepath.Glob(filepath.Join(runsDir, "*", "catalog_dep_failures.json"))
+	type depKey struct{ repoURL, chartPath string }
+	seenDep := make(map[depKey]struct{})
+	var deps []model.DepFailureEntry
+	for _, path := range depMatches {
+		data, err := os.ReadFile(path)
+		if err != nil {
+			continue
+		}
+		var batch []model.DepFailureEntry
+		if err := json.Unmarshal(data, &batch); err != nil {
+			continue
+		}
+		for _, e := range batch {
+			k := depKey{e.RepoURL, e.ChartPath}
+			if _, ok := seenDep[k]; !ok {
+				seenDep[k] = struct{}{}
+				deps = append(deps, e)
+			}
+		}
+	}
+	FlushDepFailuresJSON("catalog_cumulative_dep_failures.json", deps)
+
+	log.Info().
+		Str("runs_dir", runsDir).
+		Int("repos", len(repos)).
+		Int("dep_failures", len(deps)).
+		Msg("Cumulative catalog rebuilt")
 }
 
 // ---- markdown writers ------------------------------------------------------
