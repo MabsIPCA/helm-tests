@@ -19,7 +19,25 @@
       "Bash(powershell -Command \"Format-Hex .env | Select-Object -First 3\")",
       "Bash(git config *)",
       "Bash(ssh -T git@github.com)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Bash(awk '/^## `template.required_value`/{f=1} /^## `template.runtime_eval`/{if\\(f\\)exit} f' taxonomy_errors_by_bucket.md)",
+      "Bash(awk '/^## `template.runtime_eval`/{f=1} /^## `template.yaml_render`/{if\\(f\\)exit} f' taxonomy_errors_by_bucket.md)",
+      "Bash(awk '/^## `template.type_mismatch`/{f=1} /^## `template.invalid_value`/{if\\(f\\)exit} f' taxonomy_errors_by_bucket.md)",
+      "Read(//d/helm_clones_github/**)",
+      "Read(//d/helm_clones_artifacthub/**)",
+      "Read(//d//**)",
+      "Bash(python -c \"import json;d=json.load\\(open\\('results/github/catalog_by_project.json'\\)\\);f=sum\\(1 for r in d for c in r['charts'] for run in c['runs'] if not run['success']\\);print\\('repos',len\\(d\\),'failing runs',f\\)\")",
+      "Bash(echo \"kics build rc=$?\")",
+      "Bash(echo \"fetcher build rc=$?\")",
+      "Bash(echo \"fetcher main rc=$?\")",
+      "Bash(echo \"kics main rc=$?\")",
+      "Bash(echo \"rc=$?\")",
+      "Bash(command -v helm)",
+      "Bash(helm version *)",
+      "Bash(./helm_fetcher.exe -mode fixer -catalog-in results/github/catalog_by_project.json -clone-dir \"D:\\\\helm_clones_github\")",
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(tail -5 fixer_github_new.log)",
+      "Bash(grep -c \"Processing repo\" fixer_github_new.log)"
     ]
   }
 }

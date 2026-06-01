@@ -250,6 +250,7 @@ func writeFixerReport(catalogIn string, repos []model.RepoResultFixed) error {
 	stats := map[string]*kindStats{
 		"nil_pointer":    {},
 		"required_value": {},
+		"type_mismatch":  {},
 		"other":          {},
 	}
 	stopReasons := map[string]int{}
@@ -314,7 +315,7 @@ func writeFixerReport(catalogIn string, repos []model.RepoResultFixed) error {
 
 	fmt.Fprintf(&sb, "## By Error Kind\n\n")
 	fmt.Fprintf(&sb, "| Kind | Before | Resolved | Still failing |\n|---|---:|---:|---:|\n")
-	for _, k := range []string{"nil_pointer", "required_value", "other"} {
+	for _, k := range []string{"nil_pointer", "required_value", "type_mismatch", "other"} {
 		s := stats[k]
 		fmt.Fprintf(&sb, "| %s | %d | %d | %d |\n", k, s.before, s.resolved, s.before-s.resolved)
 	}
