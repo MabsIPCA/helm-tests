@@ -37,7 +37,30 @@
       "Bash(./helm_fetcher.exe -mode fixer -catalog-in results/github/catalog_by_project.json -clone-dir \"D:\\\\helm_clones_github\")",
       "Bash(echo \"EXIT=$?\")",
       "Bash(tail -5 fixer_github_new.log)",
-      "Bash(grep -c \"Processing repo\" fixer_github_new.log)"
+      "Bash(grep -c \"Processing repo\" fixer_github_new.log)",
+      "Bash(ls vendor/github.com/MabsIPCA/helm-tests/helmfix/)",
+      "Bash(grep -c \"extractRequiredPath\\\\|KindTypeMismatch\" vendor/github.com/MabsIPCA/helm-tests/helmfix/fix.go)",
+      "Bash(cp catalog_fixed.json catalog_fixed_BEFORE.json)",
+      "Bash(cp catalog_fixer_report.md catalog_fixer_report_BEFORE.md)",
+      "Bash(echo \"vendor rc=$?\")",
+      "Bash(cp helmfix/fix.go helm_fetcher/vendor/github.com/MabsIPCA/helm-tests/helmfix/fix.go)",
+      "Bash(cp helmfix/fix.go kics-render-mock/vendor/github.com/MabsIPCA/helm-tests/helmfix/fix.go)",
+      "Bash(ls kics-render-mock/vendor/github.com/MabsIPCA/helm-tests/helmfix/fix.go)",
+      "Bash(grep -c \"Processing repo\" fixer_github_after.log)",
+      "Bash(tail -2 fixer_github_after.log)",
+      "Bash(cp catalog_fixed.json catalog_fixed_github_after.json)",
+      "Bash(./helm_fetcher.exe -mode fixer -catalog-in runs/20260529_135859_artifacthub/catalog_by_project.json -clone-dir \"D:\\\\helm_clones_artifacthub\")",
+      "Bash(cp ../helmfix/fix.go vendor/github.com/MabsIPCA/helm-tests/helmfix/fix.go)",
+      "Bash(cp ../helmfix/fix.go ../kics-render-mock/vendor/github.com/MabsIPCA/helm-tests/helmfix/fix.go)",
+      "Bash(grep -c \"required|mandatory\\)\\\\\\\\\\\\\\\\b\" vendor/github.com/MabsIPCA/helm-tests/helmfix/fix.go)",
+      "Bash(echo \"build rc=$?\")",
+      "Bash(cp catalog_fixed.json catalog_fixed_github_final.json)",
+      "Bash(grep -q \"Catalog Fixer complete\" fixer_github_final.log)",
+      "Bash(sed -n '/## By Error Kind/,/## Stop/p' catalog_fixer_report.md)",
+      "Bash(awk '{print $5}')",
+      "Bash(grep -q \"Catalog Fixer complete\" fixer_ah_final.log)",
+      "Bash(command -v jq)",
+      "Bash(make analyze-cumulative *)"
     ]
   }
 }

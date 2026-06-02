@@ -6,7 +6,7 @@
 
 The default input file is:
 
-`../helm_fetcher/backup/run_002_274/catalog_by_project.json`
+`../helm_fetcher/catalog_cumulative.json`
 
 You can override it with `-input`.
 
@@ -26,14 +26,19 @@ go run .
 ```
 
 ```sh
-go run . -input ../helm_fetcher/backup/run_002_274/catalog_by_project.json -out out/run_002_274
+# Fix-correlation report. Use a matched input+fixed pair (here the merged
+# github+artifacthub catalogs) so every failure correlates by helm_command and
+# Fix attempts == Template failures.
+go run . -input ../helm_fetcher/catalog_sources_merged.json --fixed ../helm_fetcher/catalog_fixed_cumulative.json -out out/cumulative_final
 ```
 
 ## Make targets
 
 - `make run`
 - `make test`
-- `make analyze-run-002-274`
+- `make analyze-cumulative`
+- `make analyze-github`
+- `make analyze-artifacthub`
 
 ## Package structure
 
