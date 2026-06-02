@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	defaultCatalog := filepath.Join("..", "helm_fetcher", "backup", "run_002_274", "catalog_by_project.json")
+	defaultCatalog := filepath.Join("..", "helm_fetcher", "catalog_cumulative.json")
 
 	catalogPath := flag.String("input", defaultCatalog, "Path to catalog_by_project.json")
 	fixedPath := flag.String("fixed", "", "Optional path to catalog_fixed.json")

@@ -29,6 +29,9 @@ var (
 		regexp.MustCompile(`(?i)please (?:define|specify|provide|set)\s+\.?([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+)`),
 		regexp.MustCompile(`(?i)--set(?:-string|-file)?\s+\.?([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+)\s*=`),
 		regexp.MustCompile(`\.?([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+)\s+is\s+(?:required|mandatory)`),
+		// Dotted path immediately (or one word, e.g. "entry") before a bare
+		// "required"/"mandatory", covering "x.y required!" / "x.y entry required".
+		regexp.MustCompile(`\.?([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+)(?:\s+\w+)?\s+(?:required|mandatory)\b`),
 		regexp.MustCompile(`\.([A-Za-z_]\w*)\s+is\s+(?:required|mandatory)`),
 	}
 
@@ -36,8 +39,8 @@ var (
 	// (the Helm `required` builtin or a hand-written `fail` guard).
 	requiredMarkers = []string{
 		"error calling required",
-		"is required",
-		"is mandatory",
+		"required",
+		"mandatory",
 		"please define",
 		"please specify",
 		"please provide",

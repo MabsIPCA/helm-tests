@@ -67,6 +67,8 @@ func TestParseError_RequiredMessagePaths(t *testing.T) {
 		{"set hint", `Error: execution error at (fume/templates/configmap.yaml:1:4): CANONICAL_BASE_URL is required. Set via --set configMap.CANONICAL_BASE_URL="https://fume.your-company.com"`, "configMap.CANONICAL_BASE_URL"},
 		{"explicit values path", `Error: execution error at (powerdns-admin/templates/deployment.yaml:47:63): .Values.powerdnsAdmin.config.secretKey or .Values.powerdnsAdmin.config.secretKeySecret is required!`, "powerdnsAdmin.config.secretKey"},
 		{"required when clause", `Error: execution error at (wireguard/templates/secret.yaml:2:11): wireguard.privateKey is required when wireguard.existingSecret is not set`, "wireguard.privateKey"},
+		{"bare required values path", `Error: execution error at (jupyter/templates/jupyter.yaml:27:7): .Values.global.source_cidr required!`, "global.source_cidr"},
+		{"bare required with entry word", `Error: execution error at (aqua-enforcer/templates/enforcer-token-secret.yaml:14:13): A valid .Values.enforcerToken entry required!`, "enforcerToken"},
 	}
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {
