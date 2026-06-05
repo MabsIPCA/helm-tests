@@ -42,10 +42,22 @@ RUN_DIR     ?=
 # Cumulative catalog used by plot targets (rebuilt automatically after each run)
 CATALOG_CUMULATIVE ?= catalog_cumulative.json
 
+# refix-all: per-source input catalogs, clone dirs, and output fixed catalogs
+GITHUB_CATALOG     ?= results/github/catalog_by_project.json
+GITHUB_CLONE_DIR   ?= D:/helm_clones_github
+ARTIFACT_CATALOG   ?= runs/20260529_135859_artifacthub/catalog_by_project.json
+ARTIFACT_CLONE_DIR ?= D:/helm_clones_artifacthub
+FIXED_GITHUB       ?= catalog_fixed_github_final.json
+FIXED_ARTIFACT     ?= catalog_fixed_ah_final.json
+FIXED_CUMULATIVE   ?= catalog_fixed_cumulative.json
+# Taxonomy regen at the end of refix-all (input sources catalog + output dir)
+SOURCES_CATALOG    ?= catalog_sources_merged.json
+ANALYZE_OUT        ?= out/cumulative_final
+
 ## GH_USER: GitHub username used by setup-token
 GH_USER ?=
 
-.PHONY: run run-both run-github-search-json run-artifacthub-search-json get-github get-artifact run-fixer merge setup-token gen-token plot-problems plot-popularity plot-problems-popularity plot-all clean-cloned clean-output clean help
+.PHONY: run run-both run-github-search-json run-artifacthub-search-json get-github get-artifact run-fixer refix-all merge setup-token gen-token plot-problems plot-popularity plot-problems-popularity plot-all clean-cloned clean-output clean help
 
 ## run: fetch repos from selected source, run helm template on all combinations
 run:
@@ -121,6 +133,18 @@ run-fixer:
 		-catalog-in=$(CATALOG_IN) \
 		-clone-dir=$(CLONE_DIR)
 
+## refix-all: re-run the fixer over BOTH sources, rebuild catalog_fixed_cumulative.json,
+##   and regenerate the taxonomy report + viewer in one shot.
+##   Chains: github fixer -> artifacthub fixer -> merge -> taxonomy analyze-cumulative.
+##   Pass SKIP_ANALYZE=1 to stop after the merge. If you edited helmfix/fix.go, refresh
+##   the vendored copies first (see scripts/refix_all.ps1 header).
+refix-all:
+	powershell -ExecutionPolicy Bypass -File scripts/refix_all.ps1 \
+		-GithubCatalog $(GITHUB_CATALOG) -GithubCloneDir $(GITHUB_CLONE_DIR) \
+		-ArtifactCatalog $(ARTIFACT_CATALOG) -ArtifactCloneDir $(ARTIFACT_CLONE_DIR) \
+		-GithubFixed $(FIXED_GITHUB) -ArtifactFixed $(FIXED_ARTIFACT) -Cumulative $(FIXED_CUMULATIVE) \
+		-SourcesCatalog $(SOURCES_CATALOG) -AnalyzeOut $(ANALYZE_OUT) $(if $(SKIP_ANALYZE),-SkipAnalyze,)
+
 ## plot-problems: generate SVG chart with problems per project
 plot-problems:
 	python scripts/plot_problems_per_project.py \
@@ -181,6 +205,7 @@ help:
 	@echo     setup-token            - store GitHub PAT in .env and Windows Credential Manager
 	@echo     merge                  - rebuild catalog_cumulative.json from all runs/ subfolders
 	@echo     run-fixer              - read catalog and apply fix loop (writes catalog_fixed.json)
+	@echo     refix-all              - re-run fixer for BOTH sources, rebuild fixed catalog, regen report (SKIP_ANALYZE=1 to stop after merge)
 	@echo     plot-problems          - generate plots/problems_per_project.svg
 	@echo     plot-popularity        - generate plots/repo_popularity_stars.svg
 	@echo     plot-problems-popularity - generate plots/problems_per_popularity.svg
@@ -204,6 +229,9 @@ help:
 	@echo     KEEP_CLONES        (default: true) keep cloned repos with no failures so reruns skip re-cloning
 	@echo     RUN_DIR            (default: auto) per-run output dir, auto-generated as runs/TIMESTAMP_SOURCE
 	@echo     CATALOG_CUMULATIVE (default: catalog_cumulative.json) catalog used by plot targets
+	@echo     GITHUB_CATALOG / ARTIFACT_CATALOG   (refix-all) per-source input catalogs
+	@echo     GITHUB_CLONE_DIR / ARTIFACT_CLONE_DIR (refix-all) per-source clone dirs
+	@echo     FIXED_CUMULATIVE   (default: catalog_fixed_cumulative.json) refix-all merged output
 	@echo     PLOT_DIR     (default: plots) directory where chart SVG files are written
 	@echo     PLOT_TOP_PROBLEMS (default: 40) bars shown in problems-per-project chart
 	@echo     PLOT_TOP_STARS    (default: 50) bars shown in repo-popularity chart

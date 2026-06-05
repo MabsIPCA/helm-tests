@@ -1,7 +1,10 @@
 package helmfix
 
 import (
+	"fmt"
 	"regexp"
+	"sort"
+	"strconv"
 	"strings"
 )
 
@@ -9,8 +12,9 @@ const (
 	KindNilPointer    = "nil_pointer"
 	KindRequiredValue = "required_value"
 	KindTypeMismatch  = "type_mismatch"
+	KindKubeVersion   = "kube_version"
 	KicsPlaceholder   = "kics-placeholder"
-	MaxFixIterations  = 10
+	MaxFixIterations  = 50
 )
 
 var (
@@ -21,18 +25,38 @@ var (
 	// valuesPathRe matches an explicit ".Values.x.y" path anywhere in a message.
 	valuesPathRe = regexp.MustCompile(`\.Values\.([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*)`)
 
+	// kubeVersionReqRe captures the constraint from a kubeVersion incompatibility,
+	// e.g. "chart requires kubeVersion: >= 1.30.0 < 1.34.0 which is incompatible ...".
+	kubeVersionReqRe = regexp.MustCompile(`requires kubeVersion:\s*(.+?)\s+which is incompatible`)
+
+	// clauseRe matches one "<op> <version>" clause of a semver constraint;
+	// the operator is optional (a bare version means an exact match).
+	clauseRe = regexp.MustCompile(`(>=|<=|==|!=|>|<|=)?\s*v?(\d+)\.(\d+)(?:\.(\d+))?(?:-([0-9A-Za-z.-]+))?`)
+
+	// requiredValueForRe matches charts that demand a specific sub-field of a
+	// values entry, e.g. the acuvity mcp-server secrets pattern:
+	//   required value for secrets.FOO either as .value or .valueFrom.name and .valueFrom.key
+	// The chart reads <entry>.value, so the placeholder must be injected at
+	// "<path>.value" rather than at "<path>" itself (handled in ParseError).
+	requiredValueForRe = regexp.MustCompile(`required value for ([A-Za-z_][\w.-]*) either as`)
+
 	// requiredPathRes recover a value path embedded in a custom required/fail
 	// message, tried in priority order. All but the last require a dotted
-	// (>=2 segment) path so we don't guess from a bare English word.
+	// (>=2 segment) path so we don't guess from a bare English word. Path
+	// segments allow hyphens so subchart aliases (e.g. op-geth.secrets.x) match.
 	requiredPathRes = []*regexp.Regexp{
-		regexp.MustCompile(`(?i)missing required value\s+\.?([A-Za-z_][\w.]*)`),
-		regexp.MustCompile(`(?i)please (?:define|specify|provide|set)\s+\.?([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+)`),
-		regexp.MustCompile(`(?i)--set(?:-string|-file)?\s+\.?([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+)\s*=`),
-		regexp.MustCompile(`\.?([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+)\s+is\s+(?:required|mandatory)`),
+		regexp.MustCompile(`(?i)missing required value\s+\.?([A-Za-z_][\w.-]*)`),
+		regexp.MustCompile(`(?i)please (?:define|specify|provide|set)\s+\.?([A-Za-z_][\w-]*(?:\.[A-Za-z_][\w-]*)+)`),
+		regexp.MustCompile(`(?i)--set(?:-string|-file)?\s+\.?([A-Za-z_][\w-]*(?:\.[A-Za-z_][\w-]*)+)\s*=`),
+		regexp.MustCompile(`\.?([A-Za-z_][\w-]*(?:\.[A-Za-z_][\w-]*)+)\s+is\s+(?:required|mandatory)`),
 		// Dotted path immediately (or one word, e.g. "entry") before a bare
 		// "required"/"mandatory", covering "x.y required!" / "x.y entry required".
-		regexp.MustCompile(`\.?([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+)(?:\s+\w+)?\s+(?:required|mandatory)\b`),
-		regexp.MustCompile(`\.([A-Za-z_]\w*)\s+is\s+(?:required|mandatory)`),
+		regexp.MustCompile(`\.?([A-Za-z_][\w-]*(?:\.[A-Za-z_][\w-]*)+)(?:\s+\w+)?\s+(?:required|mandatory)\b`),
+		// "<path> must be set/provided/specified/defined".
+		regexp.MustCompile(`(?i)\.?([A-Za-z_][\w-]*(?:\.[A-Za-z_][\w-]*)+)\s+must\s+be\s+(?:set|provided|specified|defined)`),
+		// A dotted path wrapped in quotes, e.g. value 'sysdig.secureAPIToken' is required.
+		regexp.MustCompile(`['"]\.?([A-Za-z_][\w-]*(?:\.[A-Za-z_][\w-]*)+)['"]`),
+		regexp.MustCompile(`\.([A-Za-z_][\w-]*)\s+is\s+(?:required|mandatory)`),
 	}
 
 	// requiredMarkers identify a custom "this value must be provided" failure
@@ -46,10 +70,33 @@ var (
 		"please provide",
 		"missing required value",
 		"must be set",
+		"must be provided",
 		"must specify",
 		"must provide",
 	}
 )
+
+// unparseableYAMLMarkers identify a chart/values file Helm cannot parse at all
+// (malformed YAML or a JSON unmarshal mismatch). No value injection can fix
+// these, so the fix loop short-circuits them as their own non-fixable class.
+var unparseableYAMLMarkers = []string{
+	"cannot unmarshal",
+	"error unmarshaling json",
+	"error converting yaml to json",
+	"error reading yaml document",
+}
+
+// IsUnparseableYAML reports whether errStr is a malformed-YAML / unmarshal
+// failure — an inherently non-fixable error (the chart can't be parsed).
+func IsUnparseableYAML(errStr string) bool {
+	low := strings.ToLower(errStr)
+	for _, m := range unparseableYAMLMarkers {
+		if strings.Contains(low, m) {
+			return true
+		}
+	}
+	return false
+}
 
 // ParseError parses a Helm error string (CLI "Error: ..." or raw SDK error)
 // and returns the fix kind, value path, and value to inject.
@@ -76,12 +123,134 @@ func ParseError(errStr string) (kind, path, value string, ok bool) {
 	// 3. required/fail guards: recover the value path from the message text and
 	//    inject a placeholder.
 	if isRequiredMessage(s) {
+		// "required value for <path> either as .value ..." needs the placeholder
+		// at <path>.value, since the chart reads the .value sub-field.
+		if m := requiredValueForRe.FindStringSubmatch(s); m != nil {
+			return KindRequiredValue, m[1] + ".value", KicsPlaceholder, true
+		}
 		if p := extractRequiredPath(s); p != "" {
 			return KindRequiredValue, p, KicsPlaceholder, true
 		}
 	}
 
+	// 4. kubeVersion incompatibility: the chart's Chart.yaml constrains the
+	//    Kubernetes version. Pick the highest version satisfying the constraint
+	//    and re-render with --kube-version (value carries the picked version,
+	//    path is empty since this is not a --set injection).
+	if m := kubeVersionReqRe.FindStringSubmatch(s); m != nil {
+		if v := pickKubeVersion(m[1]); v != "" {
+			return KindKubeVersion, "", v, true
+		}
+	}
+
 	return "", "", "", false
+}
+
+// ver is a minimal semver triple (prerelease kept only for comparison).
+type ver struct {
+	maj, min, pat int
+	pre           string
+}
+
+func (v ver) String() string { return fmt.Sprintf("%d.%d.%d", v.maj, v.min, v.pat) }
+
+// cmpVer orders two versions. A version WITHOUT a prerelease outranks the same
+// triple WITH one (semver rule); two prereleases compare lexically.
+func cmpVer(a, b ver) int {
+	for _, d := range []int{a.maj - b.maj, a.min - b.min, a.pat - b.pat} {
+		if d != 0 {
+			if d < 0 {
+				return -1
+			}
+			return 1
+		}
+	}
+	if a.pre == b.pre {
+		return 0
+	}
+	if a.pre == "" {
+		return 1
+	}
+	if b.pre == "" {
+		return -1
+	}
+	return strings.Compare(a.pre, b.pre)
+}
+
+func parseClause(m []string) (op string, v ver) {
+	pat := 0
+	if m[4] != "" {
+		pat, _ = strconv.Atoi(m[4])
+	}
+	maj, _ := strconv.Atoi(m[2])
+	min, _ := strconv.Atoi(m[3])
+	return m[1], ver{maj, min, pat, m[5]}
+}
+
+func satisfiesClause(c ver, op string, v ver) bool {
+	switch op {
+	case "", "=", "==":
+		return cmpVer(c, v) == 0
+	case "!=":
+		return cmpVer(c, v) != 0
+	case ">=":
+		return cmpVer(c, v) >= 0
+	case ">":
+		return cmpVer(c, v) > 0
+	case "<=":
+		return cmpVer(c, v) <= 0
+	case "<":
+		return cmpVer(c, v) < 0
+	}
+	return false
+}
+
+// pickKubeVersion returns the highest Kubernetes version satisfying the chart's
+// kubeVersion constraint, or "" if none can be derived. A bad guess is safe:
+// the render just fails again and the fix loop dedups it (loop_detected).
+func pickKubeVersion(constraint string) string {
+	// Candidates: explicit (non-prerelease) versions named in the constraint,
+	// plus a descending sweep of plausible minors. Highest satisfying wins.
+	seen := map[string]bool{}
+	var cands []ver
+	add := func(v ver) {
+		if !seen[v.String()] {
+			seen[v.String()] = true
+			cands = append(cands, v)
+		}
+	}
+	for _, m := range clauseRe.FindAllStringSubmatch(constraint, -1) {
+		if _, v := parseClause(m); v.pre == "" {
+			add(v)
+		}
+	}
+	for minor := 34; minor >= 10; minor-- {
+		add(ver{1, minor, 0, ""})
+	}
+	sort.Slice(cands, func(i, j int) bool { return cmpVer(cands[i], cands[j]) > 0 })
+
+	// "||" separates OR-groups; within a group every clause must hold (AND).
+	groups := strings.Split(constraint, "||")
+	for _, c := range cands {
+		for _, g := range groups {
+			clauses := clauseRe.FindAllStringSubmatch(g, -1)
+			if len(clauses) == 0 {
+				continue
+			}
+			ok := true
+			for _, m := range clauses {
+				op, v := parseClause(m)
+				if !satisfiesClause(c, op, v) {
+					ok = false
+					break
+				}
+			}
+			if ok {
+				return c.String()
+			}
+		}
+	}
+	return ""
 }
 
 // isRequiredMessage reports whether s reads like a "value must be provided"
@@ -102,17 +271,31 @@ func extractRequiredPath(s string) string {
 	// Explicit .Values.x.y references are unambiguous, so try them first on the
 	// whole error string (covers `required .Values.x "msg"` SDK errors).
 	if m := valuesPathRe.FindStringSubmatch(s); m != nil {
-		return m[1]
+		return normalizeValuePath(m[1])
 	}
 	// Otherwise inspect only the human message, stripping the SDK location
 	// envelope so we don't mistake a "templates/foo.yaml" path for a value path.
 	body := messageBody(s)
 	for _, re := range requiredPathRes {
 		if m := re.FindStringSubmatch(body); m != nil {
-			return strings.TrimPrefix(m[1], ".")
+			return normalizeValuePath(m[1])
 		}
 	}
 	return ""
+}
+
+// normalizeValuePath strips a leading dot and a redundant "Values."/"values."
+// prefix that hand-written messages sometimes include (e.g. a chart that writes
+// ".values.loadBalancer" really means the value loadBalancer).
+func normalizeValuePath(p string) string {
+	p = strings.TrimPrefix(p, ".")
+	if strings.HasPrefix(p, "Values.") {
+		return p[len("Values."):]
+	}
+	if strings.HasPrefix(p, "values.") {
+		return p[len("values."):]
+	}
+	return p
 }
 
 // messageBody strips the "execution error at (PATH:line:col): " envelope that

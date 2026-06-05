@@ -14,6 +14,10 @@ type FixedResult struct {
 	Resolved   bool         `json:"resolved"`
 	StopReason string       `json:"stop_reason"`
 	FixChain   []FixAttempt `json:"fix_chain"`
+	// FinalError is the error the chart was still failing with when the fixer
+	// gave up — the real blocker, which can differ from the run's original
+	// error_message once injections have changed the failure.
+	FinalError string `json:"final_error,omitempty"`
 }
 
 type FixOutcome struct {

@@ -60,7 +60,20 @@
       "Bash(awk '{print $5}')",
       "Bash(grep -q \"Catalog Fixer complete\" fixer_ah_final.log)",
       "Bash(command -v jq)",
-      "Bash(make analyze-cumulative *)"
+      "Bash(make analyze-cumulative *)",
+      "Bash(start \"\" \"out/cumulative_final/viewer.html\")",
+      "Bash(helm template *)",
+      "Bash(echo \"build exit: $?\")",
+      "Bash(python -c ' *)",
+      "Bash(awk '/^## `unknown.unclassified`/{f=1} f&&/^## /&&!/unknown.unclassified/{if\\(seen\\)exit} {if\\(f\\)print} /^## `unknown.unclassified`/{seen=1}' out/cumulative_final/taxonomy_errors_by_bucket.md)",
+      "Bash(grep -oE \": [^:]+$\")",
+      "Read(//c/Users/miabs/GolandProjects/helm-tests/**)",
+      "PowerShell(Out-Null *)",
+      "Bash(powershell -ExecutionPolicy Bypass -File scripts/refix_all.ps1)",
+      "Bash(grep -n -A30 \"charts.gitops-runtime.,$\\\\|gitops-runtime/templates/hooks\" catalog_fixed_cumulative.json)",
+      "Bash(awk '/^## `unknown.unclassified`/{f=1} f' out/cumulative_final/taxonomy_errors_by_bucket.md)",
+      "Bash(awk '/^## `unknown.unclassified`/{f=1} f&&/^## /&&!/unknown.unclassified/{exit} f' out/cumulative_final/taxonomy_errors_by_bucket.md)",
+      "Bash(awk '/^## `template.enum_constraint`/{f=1} f&&/^## /&&!/enum_constraint/{exit} f' out/cumulative_final/taxonomy_errors_by_bucket.md)"
     ]
   }
 }

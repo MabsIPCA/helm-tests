@@ -89,6 +89,123 @@ func TestParseError_RequiredMessagePaths(t *testing.T) {
 	}
 }
 
+// TestParseError_RequiredValueForSubField covers the "required value for
+// <path> either as .value ..." pattern, where the placeholder must be injected
+// at <path>.value (the chart reads the .value sub-field).
+func TestParseError_RequiredValueForSubField(t *testing.T) {
+	cases := []struct {
+		name   string
+		errStr string
+		want   string
+	}{
+		{"secrets key", `Error: execution error at (mcp-server-21st-dev-magic/templates/secrets.yaml:10:9): required value for secrets.TWENTY_FIRST_API_KEY either as .value or .valueFrom.name and .valueFrom.key`, "secrets.TWENTY_FIRST_API_KEY.value"},
+		{"key with digits", `Error: execution error at (mcp-server-aws-s3/templates/secrets.yaml:10:9): required value for secrets.AWS_S3_BUCKET either as .value or .valueFrom.name and .valueFrom.key`, "secrets.AWS_S3_BUCKET.value"},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			kind, path, value, ok := ParseError(tc.errStr)
+			if !ok {
+				t.Fatalf("expected parseable, got false")
+			}
+			if kind != KindRequiredValue {
+				t.Errorf("kind: got %q, want %q", kind, KindRequiredValue)
+			}
+			if path != tc.want {
+				t.Errorf("path: got %q, want %q", path, tc.want)
+			}
+			if value != KicsPlaceholder {
+				t.Errorf("value: got %q, want %q", value, KicsPlaceholder)
+			}
+		})
+	}
+}
+
+// TestParseError_MustBeSetAndQuoted covers the newer "<path> must be set" and
+// quoted-dotted-path required shapes.
+func TestParseError_MustBeSetAndQuoted(t *testing.T) {
+	cases := []struct {
+		name   string
+		errStr string
+		want   string
+	}{
+		{"must be set", `Error: execution error at (envoy-gateway/templates/oidc-security-policy.yaml:21:15): global.domain must be set`, "global.domain"},
+		{"must be set deep", `Error: execution error at (couchdb/templates/statefulset.yaml:25:28): A value for couchdbConfig.couchdb.uuid must be set`, "couchdbConfig.couchdb.uuid"},
+		{"quoted is required", `Error: execution error at (cloud-connector/templates/secret.yaml:20:23): value 'sysdig.secureAPIToken' is required, but is not set`, "sysdig.secureAPIToken"},
+		{"hyphenated subchart alias via --set hint", `Error: execution error at (sync-test/charts/op-geth/templates/x.yaml:1:4): op-geth.secrets.nodeKey.value is required: --set op-geth.secrets.nodeKey.value=foo`, "op-geth.secrets.nodeKey.value"},
+		{"lowercase values prefix", `Error: execution error at (dp-cluster-proxies/templates/spark-master.yml:62:13): A valid .values.loadBalancer entry required!`, "loadBalancer"},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			kind, path, _, ok := ParseError(tc.errStr)
+			if !ok {
+				t.Fatalf("expected parseable, got false")
+			}
+			if kind != KindRequiredValue {
+				t.Errorf("kind: got %q, want %q", kind, KindRequiredValue)
+			}
+			if path != tc.want {
+				t.Errorf("path: got %q, want %q", path, tc.want)
+			}
+		})
+	}
+}
+
+// TestParseError_KubeVersion covers picking the highest compatible Kubernetes
+// version from a chart's kubeVersion constraint.
+func TestParseError_KubeVersion(t *testing.T) {
+	cases := []struct {
+		name   string
+		errStr string
+		want   string
+	}{
+		{"upper bound range", `Error: chart requires kubeVersion: >= 1.30.0 < 1.34.0 which is incompatible with Kubernetes v1.36.0`, "1.33.0"},
+		{"prerelease upper bound", `Error: chart requires kubeVersion: <= 1.22.5-x which is incompatible with Kubernetes v1.36.0`, "1.22.0"},
+		{"exact version", `Error: chart requires kubeVersion: 1.20.0 which is incompatible with Kubernetes v1.36.0`, "1.20.0"},
+		{"lower bound above default", `Error: chart requires kubeVersion: >= 1.40.0 which is incompatible with Kubernetes v1.36.0`, "1.40.0"},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			kind, path, value, ok := ParseError(tc.errStr)
+			if !ok {
+				t.Fatalf("expected parseable, got false")
+			}
+			if kind != KindKubeVersion {
+				t.Errorf("kind: got %q, want %q", kind, KindKubeVersion)
+			}
+			if path != "" {
+				t.Errorf("path: got %q, want empty (kube-version is not a --set)", path)
+			}
+			if value != tc.want {
+				t.Errorf("version: got %q, want %q", value, tc.want)
+			}
+		})
+	}
+}
+
+// TestIsUnparseableYAML covers the malformed-YAML / unmarshal class that must
+// be recognized as inherently non-fixable.
+func TestIsUnparseableYAML(t *testing.T) {
+	nonFixable := []string{
+		`Error: failed to parse values_ovms.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}`,
+		`Error: cannot load Chart.yaml: error converting YAML to JSON: yaml: line 4: found character that cannot start any token`,
+		`Error: cannot load values.yaml: error reading yaml document: invalid Yaml document separator`,
+	}
+	for _, e := range nonFixable {
+		if !IsUnparseableYAML(e) {
+			t.Errorf("expected unparseable-YAML for %q", e)
+		}
+		// And it must NOT be mistaken for a fixable error.
+		if _, _, _, ok := ParseError(e); ok {
+			t.Errorf("malformed YAML should be unfixable, got parseable: %q", e)
+		}
+	}
+
+	fixable := `Error: execution error at (a/templates/x.yaml:1:2): agent.identifier is required!`
+	if IsUnparseableYAML(fixable) {
+		t.Errorf("a normal required error must not be flagged unparseable-YAML")
+	}
+}
+
 // Required-style messages with no recoverable value path must stay unfixable.
 func TestParseError_RequiredMessageNoPath(t *testing.T) {
 	cases := []string{

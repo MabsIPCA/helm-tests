@@ -18,6 +18,17 @@ The analyzer writes these files to the output folder (`out` by default):
 - `taxonomy_summary.md` (human-readable summary)
 - `taxonomy_occurrences.csv` (one row per failure occurrence)
 - `taxonomy_errors_by_bucket.md` (complete error messages grouped by taxonomy bucket)
+- `viewer.html` (self-contained interactive viewer — open directly in a browser)
+
+### Viewer
+
+`viewer.html` embeds the classified failures (with each fix chain) so you can
+open it with no server. It defaults to the **Still to fix** failures, has a
+subkind sidebar (showing unresolved/total per bucket), a free-text search over
+repo/chart/command/error, and per-failure cards that expand to show the helm
+command, the full error message, and the iteration-by-iteration fix chain
+(`kind`, `value_path`, injected value, error seen) plus the stop reason — i.e.
+exactly why the fixer gave up on the ones that are still failing.
 
 ## Run
 

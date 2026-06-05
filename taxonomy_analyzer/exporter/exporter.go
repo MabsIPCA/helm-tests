@@ -30,6 +30,9 @@ func WriteAll(outputDir string, report model.TaxonomyReport) error {
 	if err := writeErrorsByBucketMarkdown(filepath.Join(outputDir, "taxonomy_errors_by_bucket.md"), report); err != nil {
 		return err
 	}
+	if err := writeViewerHTML(filepath.Join(outputDir, "viewer.html"), report); err != nil {
+		return err
+	}
 
 	return nil
 }

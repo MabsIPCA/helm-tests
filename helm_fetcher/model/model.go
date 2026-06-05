@@ -86,7 +86,7 @@ type ArtifactLink struct {
 type FixStep struct {
 	Attempt       int    `json:"attempt"`
 	ErrorSeen     string `json:"error_seen"`
-	Kind          string `json:"kind"`           // "nil_pointer" | "required_value"
+	Kind          string `json:"kind"` // "nil_pointer" | "required_value"
 	ValuePath     string `json:"value_path"`
 	ValueInjected string `json:"value_injected"`
 }
@@ -97,6 +97,10 @@ type FixedRunResult struct {
 	StopReason   string    `json:"stop_reason"` // "" | "loop_detected" | "unfixable_error_kind" | "max_iterations"
 	FixChain     []FixStep `json:"fix_chain"`
 	FinalCommand string    `json:"final_command,omitempty"`
+	// FinalError is the helm error the chart was STILL failing with when the
+	// fixer gave up (the real blocker). It differs from the run's original
+	// error_message once one or more injections have changed the failure.
+	FinalError string `json:"final_error,omitempty"`
 }
 
 // RunResultWithFix embeds RunResult and adds the fixer output.
