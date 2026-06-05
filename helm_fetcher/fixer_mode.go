@@ -26,6 +26,7 @@ func fixRun(chartPath string, orig model.RunResult) model.FixedRunResult {
 	patch := map[string]string{}
 	seenErrs := map[string]bool{}
 	chain := []model.FixStep{}
+	kubeVersion := "" // --kube-version override, set when a kubeVersion error is seen
 
 	for attempt := 1; attempt <= helmfix.MaxFixIterations; attempt++ {
 		setFlags := make([]string, 0, len(patch))
@@ -33,7 +34,7 @@ func fixRun(chartPath string, orig model.RunResult) model.FixedRunResult {
 			setFlags = append(setFlags, k+"="+v)
 		}
 
-		cmdStr, output, err := helm.RunHelmTemplateWithSets(chartPath, orig.ValuesFiles, setFlags)
+		cmdStr, output, err := helm.RunHelmTemplateFix(chartPath, orig.ValuesFiles, setFlags, kubeVersion)
 
 		if err == nil {
 			return model.FixedRunResult{
@@ -48,15 +49,27 @@ func fixRun(chartPath string, orig model.RunResult) model.FixedRunResult {
 			return model.FixedRunResult{
 				StopReason: "loop_detected",
 				FixChain:   chain,
+				FinalError: errStr,
 			}
 		}
 		seenErrs[errStr] = true
+
+		// Malformed/unparseable YAML can never be fixed by value injection;
+		// stop immediately and tag it as its own non-fixable class.
+		if helmfix.IsUnparseableYAML(errStr) {
+			return model.FixedRunResult{
+				StopReason: "non_fixable_yaml",
+				FixChain:   chain,
+				FinalError: errStr,
+			}
+		}
 
 		kind, path, val, ok := helmfix.ParseError(errStr)
 		if !ok {
 			return model.FixedRunResult{
 				StopReason: "unfixable_error_kind",
 				FixChain:   chain,
+				FinalError: errStr,
 			}
 		}
 
@@ -67,12 +80,33 @@ func fixRun(chartPath string, orig model.RunResult) model.FixedRunResult {
 			ValuePath:     path,
 			ValueInjected: val,
 		})
-		patch[path] = val
+		// kubeVersion is a render-wide --kube-version override, not a --set.
+		if kind == helmfix.KindKubeVersion {
+			kubeVersion = val
+		} else {
+			patch[path] = val
+		}
 	}
 
+	// Iteration budget exhausted. The fix applied in the final iteration was
+	// never verified, so render once more: it may now pass, otherwise capture
+	// the error the chart is still failing with as the real blocker.
+	setFlags := make([]string, 0, len(patch))
+	for k, v := range patch {
+		setFlags = append(setFlags, k+"="+v)
+	}
+	cmdStr, output, err := helm.RunHelmTemplateFix(chartPath, orig.ValuesFiles, setFlags, kubeVersion)
+	if err == nil {
+		return model.FixedRunResult{
+			Resolved:     true,
+			FixChain:     chain,
+			FinalCommand: cmdStr,
+		}
+	}
 	return model.FixedRunResult{
 		StopReason: "max_iterations",
 		FixChain:   chain,
+		FinalError: output,
 	}
 }
 
@@ -251,6 +285,7 @@ func writeFixerReport(catalogIn string, repos []model.RepoResultFixed) error {
 		"nil_pointer":    {},
 		"required_value": {},
 		"type_mismatch":  {},
+		"kube_version":   {},
 		"other":          {},
 	}
 	stopReasons := map[string]int{}
@@ -315,14 +350,14 @@ func writeFixerReport(catalogIn string, repos []model.RepoResultFixed) error {
 
 	fmt.Fprintf(&sb, "## By Error Kind\n\n")
 	fmt.Fprintf(&sb, "| Kind | Before | Resolved | Still failing |\n|---|---:|---:|---:|\n")
-	for _, k := range []string{"nil_pointer", "required_value", "type_mismatch", "other"} {
+	for _, k := range []string{"nil_pointer", "required_value", "type_mismatch", "kube_version", "other"} {
 		s := stats[k]
 		fmt.Fprintf(&sb, "| %s | %d | %d | %d |\n", k, s.before, s.resolved, s.before-s.resolved)
 	}
 
 	fmt.Fprintf(&sb, "\n## Stop Reasons\n\n")
 	fmt.Fprintf(&sb, "| Reason | Count |\n|---|---:|\n")
-	for _, reason := range []string{"resolved", "unfixable_error_kind", "loop_detected", "max_iterations"} {
+	for _, reason := range []string{"resolved", "unfixable_error_kind", "non_fixable_yaml", "loop_detected", "max_iterations"} {
 		fmt.Fprintf(&sb, "| %s | %d |\n", reason, stopReasons[reason])
 	}
 

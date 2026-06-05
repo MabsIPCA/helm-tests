@@ -5,6 +5,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"regexp"
 	"strings"
 	"time"
 
@@ -18,18 +19,90 @@ const (
 )
 
 // FindCharts recursively searches for Chart.yaml files starting from baseDir and returns the directories containing them.
+//
+// Two classes of non-standalone charts are skipped because rendering them on
+// their own yields false failures (missing parent globals / shared named
+// templates / coalesced values):
+//   - vendored subcharts under a parent's "charts/" directory (IsVendoredSubchart), and
+//   - relative components referenced via a "file://" dependency by a sibling
+//     chart in the same tree (RelativeComponentDirs) — the umbrella that owns
+//     them is still discovered and renders them inline.
 func FindCharts(baseDir string) []string {
+	components := RelativeComponentDirs(baseDir)
 	var charts []string
 	_ = filepath.Walk(baseDir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return nil
 		}
-		if info.Name() == "Chart.yaml" {
-			charts = append(charts, filepath.Dir(path))
+		if info.IsDir() || info.Name() != "Chart.yaml" {
+			return nil
 		}
+		chartDir := filepath.Dir(path)
+		if IsVendoredSubchart(chartDir) || components[filepath.Clean(chartDir)] {
+			return nil
+		}
+		charts = append(charts, chartDir)
 		return nil
 	})
 	return charts
+}
+
+// fileDepRe captures the target of a "file://" Helm dependency repository.
+var fileDepRe = regexp.MustCompile(`file://(\S+)`)
+
+// RelativeComponentDirs scans every Chart.yaml under baseDir for dependencies
+// declared with a "file://" repository and returns the set of chart directories
+// those point at (cleaned, absolute). Such a chart is a component of the
+// referencing umbrella and must be rendered through it, not standalone.
+func RelativeComponentDirs(baseDir string) map[string]bool {
+	out := map[string]bool{}
+	_ = filepath.Walk(baseDir, func(path string, info os.FileInfo, err error) error {
+		if err != nil || info.IsDir() || info.Name() != "Chart.yaml" {
+			return nil
+		}
+		data, readErr := os.ReadFile(path)
+		if readErr != nil {
+			return nil
+		}
+		ownerDir := filepath.Dir(path)
+		for _, m := range fileDepRe.FindAllStringSubmatch(string(data), -1) {
+			rel := strings.Trim(m[1], `"'`)
+			target := rel
+			if !filepath.IsAbs(target) {
+				target = filepath.Join(ownerDir, rel)
+			}
+			out[filepath.Clean(target)] = true
+		}
+		return nil
+	})
+	return out
+}
+
+// IsVendoredSubchart reports whether chartDir is a subchart vendored under a
+// parent chart's "charts/" directory, i.e. the Helm dependency layout
+// <parent>/charts/<subchart> where <parent> has its own Chart.yaml. Such a
+// chart must be rendered through its parent, not on its own.
+//
+// A "charts/" directory whose parent is NOT itself a chart (e.g. a monorepo
+// that simply stores independent charts under charts/) is not treated as a
+// vendoring boundary, so those charts are still discovered.
+func IsVendoredSubchart(chartDir string) bool {
+	dir := filepath.Clean(chartDir)
+	for {
+		parent := filepath.Dir(dir)
+		if parent == dir {
+			return false // reached filesystem root
+		}
+		if filepath.Base(dir) == "charts" && fileExists(filepath.Join(parent, "Chart.yaml")) {
+			return true
+		}
+		dir = parent
+	}
+}
+
+func fileExists(path string) bool {
+	info, err := os.Stat(path)
+	return err == nil && info.Mode().IsRegular()
 }
 
 // FindValuesFiles looks for .yaml/.yml files in the given chartDir, excluding Chart*.yaml/yml and values.yaml/yml.
@@ -135,6 +208,28 @@ func RunHelmTemplate(chartPath string, valuesFiles []string) (cmdStr, output str
 	args := []string{"template", "test", chartPath}
 	for _, vf := range valuesFiles {
 		args = append(args, "-f", vf)
+	}
+	cmdStr = "helm " + strings.Join(args, " ")
+
+	cmd := exec.Command("helm", args...)
+	out, runErr := cmd.CombinedOutput()
+	return cmdStr, string(out), runErr
+}
+
+// RunHelmTemplateFix runs "helm template test <chartPath> [-f vf...] [--set k=v...]
+// [--kube-version v]" and returns the command string, combined output, and any
+// exec error. kubeVersion is omitted when empty. Used by the fix loop so it can
+// override both values (--set) and the Kubernetes version in one render.
+func RunHelmTemplateFix(chartPath string, valFiles, setFlags []string, kubeVersion string) (cmdStr, output string, err error) {
+	args := []string{"template", "test", chartPath}
+	for _, vf := range valFiles {
+		args = append(args, "-f", vf)
+	}
+	for _, sf := range setFlags {
+		args = append(args, "--set", sf)
+	}
+	if kubeVersion != "" {
+		args = append(args, "--kube-version", kubeVersion)
 	}
 	cmdStr = "helm " + strings.Join(args, " ")
 
