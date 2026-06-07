@@ -15,6 +15,9 @@ type viewerSubKind struct {
 	Count      int    `json:"count"`
 	Resolved   int    `json:"resolved"`
 	Unresolved int    `json:"unresolved"`
+	// Final is how many unresolved fixes ended on this taxonomy as the final
+	// blocker (the destination counter, distinct from Count which is start).
+	Final int `json:"final"`
 }
 
 // viewerPayload is the JSON blob embedded into viewer.html.
@@ -24,6 +27,7 @@ type viewerPayload struct {
 	FixedCatalog  string                  `json:"fixed_catalog,omitempty"`
 	Totals        model.ReportTotals      `json:"totals"`
 	SubKinds      []viewerSubKind         `json:"sub_kinds"`
+	Transitions   []model.TransitionStat  `json:"transitions,omitempty"`
 	Occurrences   []model.ErrorOccurrence `json:"occurrences"`
 }
 
@@ -36,11 +40,12 @@ func writeViewerHTML(path string, report model.TaxonomyReport) error {
 		SourceCatalog: report.SourceCatalog,
 		FixedCatalog:  report.FixedCatalog,
 		Totals:        report.Totals,
+		Transitions:   report.Transitions,
 		Occurrences:   report.AllClassified,
 	}
 
 	for key, b := range report.BySubKind {
-		row := viewerSubKind{Key: key, Count: b.Count}
+		row := viewerSubKind{Key: key, Count: b.Count, Final: b.FinalCount}
 		if b.FixOutcome != nil {
 			row.Resolved = b.FixOutcome.Resolved
 			row.Unresolved = b.FixOutcome.Unresolved
@@ -108,7 +113,7 @@ const viewerTemplate = `<!DOCTYPE html>
   .totals .stat.red b { color: var(--red); }
   .totals .stat.green b { color: var(--green); }
   .layout { display: flex; align-items: flex-start; }
-  aside { width: 320px; flex: none; border-right: 1px solid var(--border);
+  aside { width: 440px; flex: none; border-right: 1px solid var(--border);
     height: calc(100vh - 92px); overflow-y: auto; position: sticky; top: 92px;
     background: var(--panel); }
   aside h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .05em;
@@ -117,9 +122,25 @@ const viewerTemplate = `<!DOCTYPE html>
     cursor: pointer; border-left: 3px solid transparent; font-size: 13px; }
   .skrow:hover { background: var(--panel2); }
   .skrow.active { background: var(--panel2); border-left-color: var(--accent); }
-  .skrow .name { flex: 1; font-family: var(--mono); font-size: 12px; }
-  .skrow .badge { font-size: 11px; color: var(--muted); }
+  .skrow .name { flex: 1; min-width: 0; font-family: var(--mono); font-size: 12px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .skrow .badge { flex: none; font-size: 11px; color: var(--muted); width: 34px;
+    text-align: right; font-family: var(--mono); }
   .skrow .badge.red { color: var(--red); }
+  .skrow .badge.fin { color: var(--amber); }
+  .skrow .badge.zero { color: var(--border); }
+  aside h2 { display: flex; align-items: baseline; }
+  aside h2 .leg { margin-left: auto; display: flex; gap: 8px; text-transform: none;
+    letter-spacing: 0; font-family: var(--mono); font-size: 10px; }
+  aside h2 .leg span { width: 34px; text-align: right; }
+  aside h2 .leg .u { color: var(--red); }
+  aside h2 .leg .f { color: var(--amber); }
+  /* highlight the active filter column: start dims the ->fin col, final dims tot/unfix */
+  aside:not(.dim-final) .skrow .badge.fin,
+  aside:not(.dim-final) .leg .f { opacity: .45; }
+  aside.dim-final .skrow .badge:not(.fin),
+  aside.dim-final .leg span:not(.f) { opacity: .45; }
+  aside.dim-final h2 .leg .f { text-decoration: underline; }
   main { flex: 1; padding: 16px 20px; min-width: 0; }
   .controls { display: flex; gap: 10px; align-items: center; margin-bottom: 14px;
     flex-wrap: wrap; }
@@ -157,6 +178,18 @@ const viewerTemplate = `<!DOCTYPE html>
   .pill { font-size: 11px; padding: 2px 8px; border-radius: 999px; flex: none;
     font-family: var(--mono); }
   .pill.sk { background: #1f2937; color: var(--accent); }
+  .pill.sk.shifted { background: rgba(210,153,34,.15); color: var(--amber); }
+  .transitions { margin-bottom: 16px; }
+  .transitions table { border-collapse: collapse; font-size: 12px; }
+  .transitions th, .transitions td { text-align: left; padding: 5px 10px;
+    border: 1px solid var(--border); }
+  .transitions th { background: var(--panel2); color: var(--muted); font-weight: 600; }
+  .transitions td.mono { font-family: var(--mono); }
+  .transitions td.n { text-align: right; color: var(--text); }
+  .transitions .same { color: var(--muted); }
+  .transitions .shift { color: var(--amber); }
+  .transitions summary { cursor: pointer; color: var(--muted); font-size: 12px;
+    padding: 6px 0; user-select: none; }
   .pill.resolved { background: rgba(63,185,80,.15); color: var(--green); }
   .pill.unresolved { background: rgba(248,81,73,.15); color: var(--red); }
   .pill.noattempt { background: rgba(210,153,34,.15); color: var(--amber); }
@@ -188,6 +221,14 @@ const viewerTemplate = `<!DOCTYPE html>
   .ovr .kv .v.empty { color: var(--muted); font-style: italic; }
   .empty { color: var(--muted); padding: 40px; text-align: center; }
   code { font-family: var(--mono); }
+  .dimtoggle { display: inline-flex; align-items: center; gap: 6px; }
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 6px;
+    overflow: hidden; }
+  .seg button { background: var(--panel2); color: var(--muted); border: none;
+    padding: 7px 11px; font: inherit; font-size: 12px; cursor: pointer; }
+  .seg button + button { border-left: 1px solid var(--border); }
+  .seg button.on { background: var(--accent); color: #fff; }
+  .seg button[data-dim="final"].on { background: var(--amber); color: #1a1206; }
 </style>
 </head>
 <body>
@@ -209,15 +250,22 @@ const viewerTemplate = `<!DOCTYPE html>
           <option value="noattempt">No fix attempt</option>
         </select>
       </label>
+      <label class="dimtoggle" title="Filter the selected subkind by the original error, or by the final blocker the fixer ended on">
+        Match on
+        <span class="seg" id="dim">
+          <button data-dim="start" class="on">original</button><button data-dim="final">final&nbsp;error</button>
+        </span>
+      </label>
       <span class="count" id="count"></span>
     </div>
+    <div id="transitions"></div>
     <div id="list"></div>
   </main>
 </div>
 <script id="data" type="application/json">/*__DATA__*/</script>
 <script>
   const DATA = JSON.parse(document.getElementById('data').textContent);
-  const state = { subkind: null, status: 'unresolved', q: '' };
+  const state = { subkind: null, status: 'unresolved', q: '', dim: 'start' };
 
   function statusOf(o) {
     if (!o.fixed) return 'noattempt';
@@ -243,12 +291,18 @@ const viewerTemplate = `<!DOCTYPE html>
 
   function renderSidebar() {
     const total = DATA.occurrences.length;
-    let html = '<h2>Subkinds</h2>';
-    html += skRow({ key: '(all)', count: total, unresolved: DATA.totals.fix_unresolved || 0 }, state.subkind === null);
+    const finalTotal = DATA.sub_kinds.reduce((s, sk) => s + (sk.final || 0), 0);
+    let html = '<h2>Subkinds <span class="leg">' +
+      '<span title="occurrences as start error">tot</span>' +
+      '<span class="u" title="still to fix">unfix</span>' +
+      '<span class="f" title="still failing here at the end (cumulative: unresolved + not-attempted)">&rarr;fin</span></span></h2>';
+    html += skRow({ key: '(all)', count: total, unresolved: DATA.totals.fix_unresolved || 0, final: finalTotal }, state.subkind === null);
     for (const sk of DATA.sub_kinds) {
       html += skRow(sk, state.subkind === sk.key);
     }
     const aside = document.getElementById('sidebar');
+    // dim-final emphasizes the column the selected subkind currently filters on.
+    aside.classList.toggle('dim-final', state.dim === 'final');
     aside.innerHTML = html;
     aside.querySelectorAll('.skrow').forEach(el => {
       el.onclick = () => { state.subkind = el.dataset.key === '(all)' ? null : el.dataset.key; render(); };
@@ -256,16 +310,24 @@ const viewerTemplate = `<!DOCTYPE html>
   }
 
   function skRow(sk, active) {
-    const badge = sk.unresolved
-      ? '<span class="badge red">' + sk.unresolved + ' / ' + sk.count + '</span>'
-      : '<span class="badge">' + sk.count + '</span>';
+    // Three separate columns: total occurrences as the START error, how many of
+    // those are still unresolved, and how many fixes end HERE as the final blocker.
+    const tot = '<span class="badge" title="occurrences as start error">' + sk.count + '</span>';
+    const unr = '<span class="badge ' + (sk.unresolved ? 'red' : 'zero') +
+      '" title="still to fix">' + (sk.unresolved || 0) + '</span>';
+    const fin = '<span class="badge fin' + (sk.final ? '' : ' zero') +
+      '" title="still failing here at the end (cumulative: unresolved + not-attempted)">&rarr;' + (sk.final || 0) + '</span>';
     return '<div class="skrow ' + (active ? 'active' : '') + '" data-key="' + esc(sk.key) + '">' +
-      '<span class="name">' + esc(sk.key) + '</span>' + badge + '</div>';
+      '<span class="name">' + esc(sk.key) + '</span>' + tot + unr + fin + '</div>';
   }
 
   function matches(o) {
     if (state.subkind) {
-      const key = o.error_kind + '.' + o.error_sub_kind;
+      // 'start' matches the original error's taxonomy; 'final' matches the
+      // blocker the fixer ended on (only present on unresolved fixes).
+      const key = state.dim === 'final'
+        ? (o.final_error_kind ? o.final_error_kind + '.' + o.final_error_sub_kind : '')
+        : o.error_kind + '.' + o.error_sub_kind;
       if (key !== state.subkind) return false;
     }
     if (state.status !== 'all' && statusOf(o) !== state.status) return false;
@@ -303,16 +365,28 @@ const viewerTemplate = `<!DOCTYPE html>
       '<div class="ovr">' + items + '</div></div>';
   }
 
-  function blockerBlock(fixed) {
+  function blockerBlock(o) {
     // The error the chart was STILL failing with when the fixer gave up. This
-    // is the real blocker and often differs from the original error_message.
+    // is the real blocker and often differs from the original error_message —
+    // including landing in a different taxonomy, shown as the final-error pill.
+    const fixed = o.fixed;
     if (!fixed || fixed.resolved || !fixed.final_error) return '';
-    return '<div class="field"><div class="lbl">Blocking error when fixer gave up</div>' +
+    let tag = '';
+    if (o.final_error_kind) {
+      const fk = o.final_error_kind + '.' + o.final_error_sub_kind;
+      const start = o.error_kind + '.' + o.error_sub_kind;
+      const shifted = fk !== start;
+      tag = ' <span class="pill sk' + (shifted ? ' shifted' : '') + '" title="' +
+        (shifted ? 'final taxonomy differs from start ' + esc(start) : 'same taxonomy as start') +
+        '">' + esc(fk) + (shifted ? ' ≠ start' : '') + '</span>';
+    }
+    return '<div class="field"><div class="lbl">Blocking error when fixer gave up' + tag + '</div>' +
       '<pre class="blocker">' + esc(fixed.final_error) + '</pre></div>';
   }
 
-  function chainTable(fixed) {
-    const blocker = blockerBlock(fixed);
+  function chainTable(o) {
+    const fixed = o.fixed;
+    const blocker = blockerBlock(o);
     if (!fixed || !fixed.fix_chain || !fixed.fix_chain.length) {
       // No injections were applied, but a blocker may still exist (immediately
       // unfixable). The stop reason is still worth surfacing.
@@ -344,7 +418,7 @@ const viewerTemplate = `<!DOCTYPE html>
     if (o.values_files && o.values_files.length) body += '<div class="field"><div class="lbl">Values files</div><pre>' + esc(o.values_files.join('\n')) + '</pre></div>';
     body += '<div class="field"><div class="lbl">Error message</div><pre>' + esc(o.error_message) + '</pre></div>';
     body += overridesBlock(o.fixed);
-    body += chainTable(o.fixed);
+    body += chainTable(o);
     return '<div class="card" data-idx="' + idx + '">' +
       '<div class="head">' +
         '<span class="pill sk">' + esc(sk) + '</span>' +
@@ -369,8 +443,27 @@ const viewerTemplate = `<!DOCTYPE html>
     return groups;
   }
 
+  function renderTransitions() {
+    const el = document.getElementById('transitions');
+    const tr = DATA.transitions || [];
+    if (!tr.length) { el.innerHTML = ''; return; }
+    const rows = tr.map(t => {
+      const shift = t.from !== t.to;
+      return '<tr><td class="mono">' + esc(t.from) + '</td>' +
+        '<td class="mono ' + (shift ? 'shift' : 'same') + '">' +
+          (shift ? '&rarr; ' : '= ') + esc(t.to) + '</td>' +
+        '<td class="n">' + t.count + '</td></tr>';
+    }).join('');
+    const shifts = tr.filter(t => t.from !== t.to).reduce((s, t) => s + t.count, 0);
+    el.innerHTML = '<details class="transitions"><summary>Start &rarr; final taxonomy shifts ' +
+      '(' + shifts + ' of ' + tr.reduce((s, t) => s + t.count, 0) +
+      ' unresolved fixes changed taxonomy after injection)</summary>' +
+      '<table><tr><th>start</th><th>final blocker</th><th>count</th></tr>' + rows + '</table></details>';
+  }
+
   function render() {
     renderSidebar();
+    renderTransitions();
     const filtered = DATA.occurrences.filter(matches);
     document.getElementById('count').textContent = filtered.length + ' failures in ' +
       new Set(filtered.map(o => o.repo_name)).size + ' projects';
@@ -407,6 +500,23 @@ const viewerTemplate = `<!DOCTYPE html>
 
   document.getElementById('search').addEventListener('input', e => { state.q = e.target.value.toLowerCase().trim(); render(); });
   document.getElementById('status').addEventListener('change', e => { state.status = e.target.value; render(); });
+  document.getElementById('dim').addEventListener('click', e => {
+    const btn = e.target.closest('button[data-dim]');
+    if (!btn || btn.dataset.dim === state.dim) return;
+    state.dim = btn.dataset.dim;
+    document.querySelectorAll('#dim button').forEach(b => b.classList.toggle('on', b.dataset.dim === state.dim));
+    // Final error is cumulative over every still-broken run (unresolved AND
+    // not-attempted). The default 'unresolved' status would hide not-attempted
+    // runs, so widen to 'all' when entering final mode; restore on the way back.
+    if (state.dim === 'final' && state.status === 'unresolved') {
+      state.status = 'all';
+      document.getElementById('status').value = 'all';
+    } else if (state.dim === 'start' && state.status === 'all') {
+      state.status = 'unresolved';
+      document.getElementById('status').value = 'unresolved';
+    }
+    render();
+  });
 
   renderHeader();
   render();

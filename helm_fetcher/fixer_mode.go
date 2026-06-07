@@ -64,6 +64,17 @@ func fixRun(chartPath string, orig model.RunResult) model.FixedRunResult {
 			}
 		}
 
+		// Nil pointer on a Helm built-in (.Release.Time, .Capabilities, ...) is
+		// not a value at all, so --set cannot fix it (e.g. .Release.Time was
+		// removed in Helm 3). Tag it as its own non-fixable class.
+		if helmfix.IsUnsupportedBuiltin(errStr) {
+			return model.FixedRunResult{
+				StopReason: "non_fixable_builtin",
+				FixChain:   chain,
+				FinalError: errStr,
+			}
+		}
+
 		kind, path, val, ok := helmfix.ParseError(errStr)
 		if !ok {
 			return model.FixedRunResult{
@@ -357,7 +368,7 @@ func writeFixerReport(catalogIn string, repos []model.RepoResultFixed) error {
 
 	fmt.Fprintf(&sb, "\n## Stop Reasons\n\n")
 	fmt.Fprintf(&sb, "| Reason | Count |\n|---|---:|\n")
-	for _, reason := range []string{"resolved", "unfixable_error_kind", "non_fixable_yaml", "loop_detected", "max_iterations"} {
+	for _, reason := range []string{"resolved", "unfixable_error_kind", "non_fixable_yaml", "non_fixable_builtin", "loop_detected", "max_iterations"} {
 		fmt.Fprintf(&sb, "| %s | %d |\n", reason, stopReasons[reason])
 	}
 

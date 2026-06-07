@@ -1,10 +1,10 @@
 # Complete Errors By Taxonomy Bucket
 
-Generated at: `2026-06-05 07:27:58 UTC`
+Generated at: `2026-06-07 21:12:05 UTC`
 
 Source catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_sources_merged.json`
 
-## `template.nil_pointer` (449)
+## `template.nil_pointer` (440)
 
 ### 1. `labring/sealos`
 
@@ -72,91 +72,7 @@ Error: cht-chart/templates/sentinel/deployment.yaml:34:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 5. `WeBankFinTech/Prophecis`
-
-- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\custom-serving`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\custom-serving`
-
-```text
-Error: custom-serving/templates/deployment.yaml:17:34
-  executing "custom-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
-    nil pointer evaluating interface {}.Seconds
-
-Use --debug flag to render out invalid YAML
-```
-
-### 6. `WeBankFinTech/Prophecis`
-
-- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\tfserving`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\tfserving`
-
-```text
-Error: tensorflow-serving/templates/deployment.yaml:17:34
-  executing "tensorflow-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
-    nil pointer evaluating interface {}.Seconds
-
-Use --debug flag to render out invalid YAML
-```
-
-### 7. `WeBankFinTech/Prophecis`
-
-- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\trtserving`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\trtserving`
-
-```text
-Error: tensorrt-serving/templates/deployment.yaml:16:34
-  executing "tensorrt-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
-    nil pointer evaluating interface {}.Seconds
-
-Use --debug flag to render out invalid YAML
-```
-
-### 8. `WeBankFinTech/Prophecis`
-
-- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\custom-serving`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\custom-serving`
-
-```text
-Error: custom-serving/templates/deployment.yaml:17:34
-  executing "custom-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
-    nil pointer evaluating interface {}.Seconds
-
-Use --debug flag to render out invalid YAML
-```
-
-### 9. `WeBankFinTech/Prophecis`
-
-- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\tfserving`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\tfserving`
-
-```text
-Error: tensorflow-serving/templates/deployment.yaml:17:34
-  executing "tensorflow-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
-    nil pointer evaluating interface {}.Seconds
-
-Use --debug flag to render out invalid YAML
-```
-
-### 10. `WeBankFinTech/Prophecis`
-
-- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\trtserving`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\trtserving`
-
-```text
-Error: tensorrt-serving/templates/deployment.yaml:16:34
-  executing "tensorrt-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
-    nil pointer evaluating interface {}.Seconds
-
-Use --debug flag to render out invalid YAML
-```
-
-### 11. `open-edge-platform/geti`
+### 5. `open-edge-platform/geti`
 
 - Chart: `D:\helm_clones_github\open-edge-platform__geti\deploy\charts\impt\chart\charts\xpu-manager`
 - Source: `template`
@@ -170,7 +86,7 @@ Error: xpu-manager/templates/serviceaccount.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 12. `Thakurvaibhav/k8s`
+### 6. `Thakurvaibhav/k8s`
 
 - Chart: `D:\helm_clones_github\Thakurvaibhav__k8s\charts\envoy-gateway`
 - Source: `template`
@@ -184,7 +100,7 @@ Error: envoy-gateway/templates/gatewayAPI/gateway-infra-shared-01.yaml:23:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 13. `Thakurvaibhav/k8s`
+### 7. `Thakurvaibhav/k8s`
 
 - Chart: `D:\helm_clones_github\Thakurvaibhav__k8s\charts\sealed-secrets`
 - Source: `template`
@@ -198,7 +114,7 @@ Error: sealed-secrets/templates/sealed-my-global-secret.yaml:11:24
 Use --debug flag to render out invalid YAML
 ```
 
-### 14. `hyperledger-bevel/bevel-operator-fabric`
+### 8. `hyperledger-bevel/bevel-operator-fabric`
 
 - Chart: `D:\helm_clones_github\hyperledger-bevel__bevel-operator-fabric\charts\hlf-ca`
 - Source: `template`
@@ -212,7 +128,7 @@ Error: hlf-ca/templates/traefikroute.yaml:1:13
 Use --debug flag to render out invalid YAML
 ```
 
-### 15. `hyperledger-bevel/bevel-operator-fabric`
+### 9. `hyperledger-bevel/bevel-operator-fabric`
 
 - Chart: `D:\helm_clones_github\hyperledger-bevel__bevel-operator-fabric\charts\hlf-ordnode`
 - Source: `template`
@@ -226,7 +142,7 @@ Error: hlf-ordnode/templates/traefikroute.yaml:1:13
 Use --debug flag to render out invalid YAML
 ```
 
-### 16. `aws-samples/amazon-eks-machine-learning-with-terraform-and-kubeflow`
+### 10. `aws-samples/amazon-eks-machine-learning-with-terraform-and-kubeflow`
 
 - Chart: `D:\helm_clones_github\aws-samples__amazon-eks-machine-learning-with-terraform-and-kubeflow\charts\pv-efs`
 - Source: `template`
@@ -240,7 +156,7 @@ Error: pv-efs/templates/storage-class.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 17. `aws-samples/amazon-eks-machine-learning-with-terraform-and-kubeflow`
+### 11. `aws-samples/amazon-eks-machine-learning-with-terraform-and-kubeflow`
 
 - Chart: `D:\helm_clones_github\aws-samples__amazon-eks-machine-learning-with-terraform-and-kubeflow\charts\pv-fsx`
 - Source: `template`
@@ -254,7 +170,7 @@ Error: pv-fsx/templates/storage-class.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 18. `project-sunbird/sunbird-devops`
+### 12. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\adminutils`
 - Source: `template`
@@ -268,7 +184,7 @@ Error: adminutils/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 19. `project-sunbird/sunbird-devops`
+### 13. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\analytics`
 - Source: `template`
@@ -282,7 +198,7 @@ Error: analytics/templates/serviceMonitor.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 20. `project-sunbird/sunbird-devops`
+### 14. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\apimanager`
 - Source: `template`
@@ -296,7 +212,7 @@ Error: apimanager/templates/recordingRules.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 21. `project-sunbird/sunbird-devops`
+### 15. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\apimanagerecho`
 - Source: `template`
@@ -310,7 +226,7 @@ Error: apimanagerecho/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 22. `project-sunbird/sunbird-devops`
+### 16. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\assessment`
 - Source: `template`
@@ -324,7 +240,7 @@ Error: assessment/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 23. `project-sunbird/sunbird-devops`
+### 17. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\cert`
 - Source: `template`
@@ -338,7 +254,7 @@ Error: cert/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 24. `project-sunbird/sunbird-devops`
+### 18. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\certregistry`
 - Source: `template`
@@ -352,7 +268,7 @@ Error: certregistry/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 25. `project-sunbird/sunbird-devops`
+### 19. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\content`
 - Source: `template`
@@ -366,7 +282,7 @@ Error: content/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 26. `project-sunbird/sunbird-devops`
+### 20. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\dhiti`
 - Source: `template`
@@ -380,7 +296,7 @@ Error: dhiti/templates/deployment.yaml:13:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 27. `project-sunbird/sunbird-devops`
+### 21. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\dial`
 - Source: `template`
@@ -394,7 +310,7 @@ Error: dial/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 28. `project-sunbird/sunbird-devops`
+### 22. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\discussionsmw`
 - Source: `template`
@@ -408,7 +324,7 @@ Error: discussionsmw/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 29. `project-sunbird/sunbird-devops`
+### 23. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\enc`
 - Source: `template`
@@ -422,7 +338,7 @@ Error: enc/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 30. `project-sunbird/sunbird-devops`
+### 24. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\gotenberg`
 - Source: `template`
@@ -436,7 +352,7 @@ Error: gotenberg/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 31. `project-sunbird/sunbird-devops`
+### 25. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\gql`
 - Source: `template`
@@ -450,7 +366,7 @@ Error: gql/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 32. `project-sunbird/sunbird-devops`
+### 26. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\groups`
 - Source: `template`
@@ -464,7 +380,7 @@ Error: groups/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 33. `project-sunbird/sunbird-devops`
+### 27. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\hawkeyesuperset`
 - Source: `template`
@@ -478,7 +394,7 @@ Error: superset/templates/service.yaml:15:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 34. `project-sunbird/sunbird-devops`
+### 28. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\inbound`
 - Source: `template`
@@ -492,7 +408,7 @@ Error: inbound/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 35. `project-sunbird/sunbird-devops`
+### 29. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\knowledgemw`
 - Source: `template`
@@ -506,7 +422,7 @@ Error: knowledgemw/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 36. `project-sunbird/sunbird-devops`
+### 30. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\learner`
 - Source: `template`
@@ -520,7 +436,7 @@ Error: learner/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 37. `project-sunbird/sunbird-devops`
+### 31. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\lms`
 - Source: `template`
@@ -534,7 +450,7 @@ Error: lms/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 38. `project-sunbird/sunbird-devops`
+### 32. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\ml-core-service`
 - Source: `template`
@@ -548,7 +464,7 @@ Error: ml-core-service/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 39. `project-sunbird/sunbird-devops`
+### 33. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\ml-projects-service`
 - Source: `template`
@@ -562,7 +478,7 @@ Error: ml-projects-service/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 40. `project-sunbird/sunbird-devops`
+### 34. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\ml-reports-service`
 - Source: `template`
@@ -576,7 +492,7 @@ Error: ml-reports-service/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 41. `project-sunbird/sunbird-devops`
+### 35. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\ml-survey-service`
 - Source: `template`
@@ -590,7 +506,7 @@ Error: ml-survey-service/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 42. `project-sunbird/sunbird-devops`
+### 36. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\nginx-public-ingress`
 - Source: `template`
@@ -604,7 +520,7 @@ Error: nginx-public-ingress/templates/serviceMonitor.yml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 43. `project-sunbird/sunbird-devops`
+### 37. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\nodebb`
 - Source: `template`
@@ -618,7 +534,7 @@ Error: nodebb/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 44. `project-sunbird/sunbird-devops`
+### 38. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\notification`
 - Source: `template`
@@ -632,7 +548,7 @@ Error: notification/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 45. `project-sunbird/sunbird-devops`
+### 39. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\odk`
 - Source: `template`
@@ -646,7 +562,7 @@ Error: odk/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 46. `project-sunbird/sunbird-devops`
+### 40. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\orchestrator`
 - Source: `template`
@@ -660,7 +576,7 @@ Error: orchestrator/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 47. `project-sunbird/sunbird-devops`
+### 41. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\outbound`
 - Source: `template`
@@ -674,7 +590,7 @@ Error: outbound/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 48. `project-sunbird/sunbird-devops`
+### 42. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\player`
 - Source: `template`
@@ -688,7 +604,7 @@ Error: player/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 49. `project-sunbird/sunbird-devops`
+### 43. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\print`
 - Source: `template`
@@ -702,7 +618,7 @@ Error: print/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 50. `project-sunbird/sunbird-devops`
+### 44. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\report`
 - Source: `template`
@@ -716,7 +632,7 @@ Error: report/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 51. `project-sunbird/sunbird-devops`
+### 45. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\search`
 - Source: `template`
@@ -730,7 +646,7 @@ Error: search/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 52. `project-sunbird/sunbird-devops`
+### 46. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\taxonomy`
 - Source: `template`
@@ -744,7 +660,7 @@ Error: taxonomy/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 53. `project-sunbird/sunbird-devops`
+### 47. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\telemetry`
 - Source: `template`
@@ -758,7 +674,7 @@ Error: telemetry/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 54. `project-sunbird/sunbird-devops`
+### 48. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\telemetry-dp-logstash`
 - Source: `template`
@@ -772,7 +688,7 @@ Error: telemetry-logstash-dock/templates/deployment.yaml:13:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 55. `project-sunbird/sunbird-devops`
+### 49. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\transformer`
 - Source: `template`
@@ -786,7 +702,7 @@ Error: transformer/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 56. `project-sunbird/sunbird-devops`
+### 50. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\uci`
 - Source: `template`
@@ -800,7 +716,7 @@ Error: uci/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 57. `project-sunbird/sunbird-devops`
+### 51. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\core\userorg`
 - Source: `template`
@@ -814,7 +730,7 @@ Error: userorg/templates/hpa.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 58. `project-sunbird/sunbird-devops`
+### 52. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\logging\filebeat`
 - Source: `template`
@@ -828,7 +744,7 @@ Error: filebeat/templates/graylog-service.yaml:23:21
 Use --debug flag to render out invalid YAML
 ```
 
-### 59. `project-sunbird/sunbird-devops`
+### 53. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\monitoring\azure-ambari-prometheus-exporter`
 - Source: `template`
@@ -842,7 +758,7 @@ Error: azure-ambari-prometheus-exporter/templates/deployment.yaml:28:30
 Use --debug flag to render out invalid YAML
 ```
 
-### 60. `project-sunbird/sunbird-devops`
+### 54. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\monitoring\kafka-lag-exporter`
 - Source: `template`
@@ -856,7 +772,7 @@ Error: kafka-lag-exporter/templates/serviceMonitor.yml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 61. `project-sunbird/sunbird-devops`
+### 55. `project-sunbird/sunbird-devops`
 
 - Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\monitoring\kafka-topic-exporter`
 - Source: `template`
@@ -870,7 +786,7 @@ Error: kafka-topic-exporter/templates/deployment.yaml:28:30
 Use --debug flag to render out invalid YAML
 ```
 
-### 62. `Borjis131/docker-open5gs`
+### 56. `Borjis131/docker-open5gs`
 
 - Chart: `D:\helm_clones_github\Borjis131__docker-open5gs\helm\open5gs`
 - Source: `template`
@@ -882,7 +798,7 @@ Error: template: open5gs/charts/upf/templates/_helpers.tpl:15:3: executing "upf.
 Use --debug flag to render out invalid YAML
 ```
 
-### 63. `tmforum-oda/oda-canvas`
+### 57. `tmforum-oda/oda-canvas`
 
 - Chart: `D:\helm_clones_github\tmforum-oda__oda-canvas\charts\apigee-gateway`
 - Source: `template`
@@ -896,7 +812,7 @@ Error: api-operator-apigee/templates/Deployment.yaml:17:20
 Use --debug flag to render out invalid YAML
 ```
 
-### 64. `boozallen/aissemble`
+### 58. `boozallen/aissemble`
 
 - Chart: `D:\helm_clones_github\boozallen__aissemble\extensions\extensions-helm\aissemble-spark-operator-chart`
 - Source: `template`
@@ -910,7 +826,7 @@ Error: aissemble-spark-operator-chart/templates/ivy-pvc.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 65. `ODIM-Project/ODIM`
+### 59. `ODIM-Project/ODIM`
 
 - Chart: `D:\helm_clones_github\ODIM-Project__ODIM\odim-controller\helmcharts\reloader`
 - Source: `template`
@@ -924,7 +840,7 @@ Error: reloader/templates/deployment.yaml:56:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 66. `YAKEcloud/yake`
+### 60. `YAKEcloud/yake`
 
 - Chart: `D:\helm_clones_github\YAKEcloud__yake\configuration\configuration`
 - Source: `template`
@@ -941,7 +857,7 @@ configuration/templates/_domains.tpl:28:15
 Use --debug flag to render out invalid YAML
 ```
 
-### 67. `YAKEcloud/yake`
+### 61. `YAKEcloud/yake`
 
 - Chart: `D:\helm_clones_github\YAKEcloud__yake\gardener\garden-content`
 - Source: `template`
@@ -958,7 +874,7 @@ garden-content/templates/secret-openvpn-diffie-hellman.yaml:3:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 68. `Loongson-Cloud-Community/dockerfiles`
+### 62. `Loongson-Cloud-Community/dockerfiles`
 
 - Chart: `D:\helm_clones_github\Loongson-Cloud-Community__dockerfiles\kubesphere\ks-installer\v3.2.1\roles\common\files\openldap-ha`
 - Source: `template`
@@ -972,7 +888,7 @@ Error: openldap-ha/templates/statefulset.yaml:144:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 69. `Loongson-Cloud-Community/dockerfiles`
+### 63. `Loongson-Cloud-Community/dockerfiles`
 
 - Chart: `D:\helm_clones_github\Loongson-Cloud-Community__dockerfiles\kubesphere\ks-installer\v3.2.1\roles\ks-auditing\files\kube-auditing`
 - Source: `template`
@@ -986,7 +902,7 @@ Error: kube-auditing/templates/webhook.yaml:6:16
 Use --debug flag to render out invalid YAML
 ```
 
-### 70. `Loongson-Cloud-Community/dockerfiles`
+### 64. `Loongson-Cloud-Community/dockerfiles`
 
 - Chart: `D:\helm_clones_github\Loongson-Cloud-Community__dockerfiles\kubesphere\ks-installer\v3.2.1\roles\ks-monitor\files\notification-manager`
 - Source: `template`
@@ -1000,7 +916,7 @@ Error: notification-manager/templates/operator.yaml:23:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 71. `FIWARE-Ops/marinera`
+### 65. `FIWARE-Ops/marinera`
 
 - Chart: `D:\helm_clones_github\FIWARE-Ops__marinera\applications\grafana-metrics\chart`
 - Source: `template`
@@ -1014,7 +930,7 @@ Error: grafana-metrics/templates/tests/test-config.yaml:23:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 72. `oneconcern/datamon`
+### 66. `oneconcern/datamon`
 
 - Chart: `D:\helm_clones_github\oneconcern__datamon\k8s\purge\gsutil`
 - Source: `template`
@@ -1028,7 +944,7 @@ Error: datamon-gsutil/templates/job.yaml:28:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 73. `mrybas/k8s-bootstrap`
+### 67. `mrybas/k8s-bootstrap`
 
 - Chart: `D:\helm_clones_github\mrybas__k8s-bootstrap\backend\definitions\charts\kubevirt-operator`
 - Source: `template`
@@ -1042,7 +958,7 @@ Error: kubevirt-operator/templates/servicemonitor.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 74. `mrybas/k8s-bootstrap`
+### 68. `mrybas/k8s-bootstrap`
 
 - Chart: `D:\helm_clones_github\mrybas__k8s-bootstrap\backend\definitions\charts\piraeus-operator`
 - Source: `template`
@@ -1056,7 +972,7 @@ Error: piraeus-operator/templates/servicemonitor.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 75. `DOME-Marketplace/dome-gitops`
+### 69. `DOME-Marketplace/dome-gitops`
 
 - Chart: `D:\helm_clones_github\DOME-Marketplace__dome-gitops\ionos_common\cert-manager`
 - Source: `template`
@@ -1070,7 +986,7 @@ Error: cert-manager/templates/issuer.yaml:4:30
 Use --debug flag to render out invalid YAML
 ```
 
-### 76. `DOME-Marketplace/dome-gitops`
+### 70. `DOME-Marketplace/dome-gitops`
 
 - Chart: `D:\helm_clones_github\DOME-Marketplace__dome-gitops\ionos_common\external-dns-ionos`
 - Source: `template`
@@ -1084,7 +1000,7 @@ Error: external-dns-ionos/templates/ionos-token-sealed-secret.yaml:9:21
 Use --debug flag to render out invalid YAML
 ```
 
-### 77. `cmgoffena13/etl-watcher`
+### 71. `cmgoffena13/etl-watcher`
 
 - Chart: `D:\helm_clones_github\cmgoffena13__etl-watcher\watcher`
 - Source: `template`
@@ -1098,7 +1014,7 @@ Error: watcher/templates/serviceaccount.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 78. `cmgoffena13/etl-watcher`
+### 72. `cmgoffena13/etl-watcher`
 
 - Chart: `D:\helm_clones_github\cmgoffena13__etl-watcher\watcher`
 - Source: `template`
@@ -1113,7 +1029,7 @@ Error: watcher/templates/serviceaccount.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 79. `thoughtworks/byor-voting-infrastructure`
+### 73. `thoughtworks/byor-voting-infrastructure`
 
 - Chart: `D:\helm_clones_github\thoughtworks__byor-voting-infrastructure\src\byor-voting-cert`
 - Source: `template`
@@ -1127,7 +1043,7 @@ Error: byor-voting-cert/templates/cluster-issuer.yaml:8:22
 Use --debug flag to render out invalid YAML
 ```
 
-### 80. `SAP/component-operator-runtime`
+### 74. `SAP/component-operator-runtime`
 
 - Chart: `D:\helm_clones_github\SAP__component-operator-runtime\internal\helm\testdata\main`
 - Source: `template`
@@ -1141,7 +1057,7 @@ Error: main/templates/configmap.yaml:20:24
 Use --debug flag to render out invalid YAML
 ```
 
-### 81. `batleforc/weebo-si`
+### 75. `batleforc/weebo-si`
 
 - Chart: `D:\helm_clones_github\batleforc__weebo-si\all-in-one.argo\helm\cluster-tpl-object`
 - Source: `template`
@@ -1155,21 +1071,7 @@ Error: cluster-tpl-object/templates/monitoring/coroot/secret-value.yaml:1:17
 Use --debug flag to render out invalid YAML
 ```
 
-### 82. `celo-org/charts`
-
-- Chart: `D:\helm_clones_github\celo-org__charts\charts\clean-pvcs`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\celo-org__charts\charts\clean-pvcs`
-
-```text
-Error: clean-pvcs/templates/cronjob.yaml:53:59
-  executing "clean-pvcs/templates/cronjob.yaml" at <.Release.Namespace>:
-    nil pointer evaluating interface {}.Namespace
-
-Use --debug flag to render out invalid YAML
-```
-
-### 83. `dungdm93/shipyard`
+### 76. `dungdm93/shipyard`
 
 - Chart: `D:\helm_clones_github\dungdm93__shipyard\helm\airflow`
 - Source: `template`
@@ -1189,7 +1091,7 @@ airflow/charts/postgresql/charts/common/templates/_names.tpl:6:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 84. `Above-Os/terminus-apps`
+### 77. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\acestepv3\acestepv3server`
 - Source: `template`
@@ -1203,7 +1105,7 @@ Error: acestepv3server/templates/deployment.yaml:78:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 85. `Above-Os/terminus-apps`
+### 78. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\affine`
 - Source: `template`
@@ -1217,7 +1119,7 @@ Error: affine/templates/redis/deployment.yaml:67:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 86. `Above-Os/terminus-apps`
+### 79. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\agentzero`
 - Source: `template`
@@ -1231,7 +1133,7 @@ Error: agentzero/templates/agentzero.yaml:71:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 87. `Above-Os/terminus-apps`
+### 80. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\alist`
 - Source: `template`
@@ -1245,7 +1147,7 @@ Error: alist/templates/alist.yaml:70:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 88. `Above-Os/terminus-apps`
+### 81. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\answer`
 - Source: `template`
@@ -1259,7 +1161,7 @@ Error: answer/templates/answer.yaml:1:43
 Use --debug flag to render out invalid YAML
 ```
 
-### 89. `Above-Os/terminus-apps`
+### 82. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\anythingllm`
 - Source: `template`
@@ -1273,7 +1175,7 @@ Error: anythingllm/templates/configmap.yaml:1:46
 Use --debug flag to render out invalid YAML
 ```
 
-### 90. `Above-Os/terminus-apps`
+### 83. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\appsmith`
 - Source: `template`
@@ -1287,7 +1189,7 @@ Error: appsmith/templates/appsmith.yaml:73:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 91. `Above-Os/terminus-apps`
+### 84. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\astrbot`
 - Source: `template`
@@ -1301,7 +1203,7 @@ Error: astrbot/templates/deployment.yaml:55:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 92. `Above-Os/terminus-apps`
+### 85. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\audiobookshelf`
 - Source: `template`
@@ -1315,7 +1217,7 @@ Error: audiobookshelf/templates/deployment.yaml:163:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 93. `Above-Os/terminus-apps`
+### 86. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\awesomedigitalhuman`
 - Source: `template`
@@ -1329,7 +1231,7 @@ Error: awesomedigitalhuman/templates/deployment.yaml:1:41
 Use --debug flag to render out invalid YAML
 ```
 
-### 94. `Above-Os/terminus-apps`
+### 87. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\bazarr`
 - Source: `template`
@@ -1343,7 +1245,7 @@ Error: bazarr/templates/deployment.yaml:74:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 95. `Above-Os/terminus-apps`
+### 88. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\bifrost`
 - Source: `template`
@@ -1357,7 +1259,7 @@ Error: bifrost/templates/configmap.yaml:18:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 96. `Above-Os/terminus-apps`
+### 89. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\bisheng`
 - Source: `template`
@@ -1371,7 +1273,7 @@ Error: bisheng/templates/redis.yaml:66:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 97. `Above-Os/terminus-apps`
+### 90. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\blinko`
 - Source: `template`
@@ -1385,7 +1287,7 @@ Error: blinko/templates/deployment.yaml:33:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 98. `Above-Os/terminus-apps`
+### 91. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\bytebase`
 - Source: `template`
@@ -1399,7 +1301,7 @@ Error: bytebase/templates/bytebase.yaml:1:45
 Use --debug flag to render out invalid YAML
 ```
 
-### 99. `Above-Os/terminus-apps`
+### 92. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\calendar`
 - Source: `template`
@@ -1413,7 +1315,7 @@ Error: calendar/templates/calendar_deploy.yaml:91:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 100. `Above-Os/terminus-apps`
+### 93. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\calibre`
 - Source: `template`
@@ -1427,7 +1329,7 @@ Error: calibre/templates/deployment.yaml:61:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 101. `Above-Os/terminus-apps`
+### 94. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\calibreweb`
 - Source: `template`
@@ -1441,7 +1343,7 @@ Error: calibreweb/templates/deployment.yaml:49:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 102. `Above-Os/terminus-apps`
+### 95. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\chinesesubfinder`
 - Source: `template`
@@ -1455,7 +1357,7 @@ Error: chinesesubfinder/templates/chinesesubfinder.yaml:84:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 103. `Above-Os/terminus-apps`
+### 96. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\chromium`
 - Source: `template`
@@ -1469,7 +1371,7 @@ Error: chromium/templates/chromium.yaml:139:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 104. `Above-Os/terminus-apps`
+### 97. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\claudecode`
 - Source: `template`
@@ -1483,7 +1385,7 @@ Error: claudecode/templates/deployment.yaml:157:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 105. `Above-Os/terminus-apps`
+### 98. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\clawdbot`
 - Source: `template`
@@ -1497,7 +1399,7 @@ Error: clawdbot/templates/deployment.yaml:368:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 106. `Above-Os/terminus-apps`
+### 99. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\cloudreve`
 - Source: `template`
@@ -1511,7 +1413,7 @@ Error: cloudreve/templates/redis/deployment.yaml:68:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 107. `Above-Os/terminus-apps`
+### 100. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\coder`
 - Source: `template`
@@ -1525,7 +1427,7 @@ Error: coder/templates/coder.yaml:1:40
 Use --debug flag to render out invalid YAML
 ```
 
-### 108. `Above-Os/terminus-apps`
+### 101. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\codeserver`
 - Source: `template`
@@ -1539,7 +1441,7 @@ Error: codeserver/templates/codeserver.yaml:70:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 109. `Above-Os/terminus-apps`
+### 102. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\codex`
 - Source: `template`
@@ -1553,7 +1455,7 @@ Error: codex/templates/deployment.yaml:174:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 110. `Above-Os/terminus-apps`
+### 103. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\comfyuishare`
 - Source: `template`
@@ -1567,7 +1469,7 @@ Error: comfyuishare/templates/clientproxy.yaml:22:46
 Use --debug flag to render out invalid YAML
 ```
 
-### 111. `Above-Os/terminus-apps`
+### 104. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\comfyuisharev2\comfyuisharev2`
 - Source: `template`
@@ -1581,7 +1483,7 @@ Error: comfyuisharev2/templates/clientproxy.yaml:22:46
 Use --debug flag to render out invalid YAML
 ```
 
-### 112. `Above-Os/terminus-apps`
+### 105. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\context7`
 - Source: `template`
@@ -1595,7 +1497,7 @@ Error: context7/templates/context7.yaml:56:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 113. `Above-Os/terminus-apps`
+### 106. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\deepseekocrwebuiv2\deepseekocrwebuiv2server`
 - Source: `template`
@@ -1609,7 +1511,7 @@ Error: deepseekocrwebuiv2server/templates/download.yaml:83:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 114. `Above-Os/terminus-apps`
+### 107. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\deerflow`
 - Source: `template`
@@ -1623,7 +1525,7 @@ Error: deerflow/templates/frontend.yaml:1:43
 Use --debug flag to render out invalid YAML
 ```
 
-### 115. `Above-Os/terminus-apps`
+### 108. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\deerflowv2`
 - Source: `template`
@@ -1637,7 +1539,7 @@ Error: deerflowv2/templates/deployment.yaml:326:45
 Use --debug flag to render out invalid YAML
 ```
 
-### 116. `Above-Os/terminus-apps`
+### 109. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\deluge`
 - Source: `template`
@@ -1651,7 +1553,7 @@ Error: deluge/templates/deployment.yaml:63:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 117. `Above-Os/terminus-apps`
+### 110. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\didgate`
 - Source: `template`
@@ -1665,7 +1567,7 @@ Error: didgate/templates/pg-client.yaml:31:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 118. `Above-Os/terminus-apps`
+### 111. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\dify`
 - Source: `template`
@@ -1679,7 +1581,7 @@ Error: dify/templates/client/client.yaml:22:46
 Use --debug flag to render out invalid YAML
 ```
 
-### 119. `Above-Os/terminus-apps`
+### 112. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\difyv2\difyv2server`
 - Source: `template`
@@ -1693,7 +1595,7 @@ Error: difyv2server/templates/api/configmap.yaml:1:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 120. `Above-Os/terminus-apps`
+### 113. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\directus`
 - Source: `template`
@@ -1707,7 +1609,7 @@ Error: directus/templates/directus.yaml:49:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 121. `Above-Os/terminus-apps`
+### 114. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\dman`
 - Source: `template`
@@ -1721,7 +1623,7 @@ Error: dman/templates/signalling.yaml:117:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 122. `Above-Os/terminus-apps`
+### 115. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\docmost`
 - Source: `template`
@@ -1735,7 +1637,7 @@ Error: docmost/templates/docmost.yaml:33:60
 Use --debug flag to render out invalid YAML
 ```
 
-### 123. `Above-Os/terminus-apps`
+### 116. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\documenso`
 - Source: `template`
@@ -1749,7 +1651,7 @@ Error: documenso/templates/documenso.yaml:49:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 124. `Above-Os/terminus-apps`
+### 117. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\duplicati`
 - Source: `template`
@@ -1763,7 +1665,7 @@ Error: duplicati/templates/deployment.yaml:23:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 125. `Above-Os/terminus-apps`
+### 118. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\facefusion`
 - Source: `template`
@@ -1777,7 +1679,7 @@ Error: facefusion/templates/facefusion.yaml:1:45
 Use --debug flag to render out invalid YAML
 ```
 
-### 126. `Above-Os/terminus-apps`
+### 119. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\farcasterhubble`
 - Source: `template`
@@ -1791,7 +1693,7 @@ Error: farcasterhubble/templates/deployment.yaml:1:52
 Use --debug flag to render out invalid YAML
 ```
 
-### 127. `Above-Os/terminus-apps`
+### 120. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\fastgpt`
 - Source: `template`
@@ -1805,7 +1707,7 @@ Error: fastgpt/templates/baseconfig.yaml:1:42
 Use --debug flag to render out invalid YAML
 ```
 
-### 128. `Above-Os/terminus-apps`
+### 121. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\filebrowser`
 - Source: `template`
@@ -1819,7 +1721,7 @@ Error: filebrowser/templates/deployment.yaml:59:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 129. `Above-Os/terminus-apps`
+### 122. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\firecrawl`
 - Source: `template`
@@ -1833,7 +1735,7 @@ Error: firecrawl/templates/redis/deployment.yaml:69:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 130. `Above-Os/terminus-apps`
+### 123. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\fireflyiii`
 - Source: `template`
@@ -1847,7 +1749,7 @@ Error: fireflyiii/templates/fireflyiii.yaml:1:47
 Use --debug flag to render out invalid YAML
 ```
 
-### 131. `Above-Os/terminus-apps`
+### 124. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\firefox`
 - Source: `template`
@@ -1861,7 +1763,7 @@ Error: firefox/templates/firefox.yaml:102:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 132. `Above-Os/terminus-apps`
+### 125. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\flowise`
 - Source: `template`
@@ -1875,7 +1777,7 @@ Error: flowise/templates/configmap.yaml:24:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 133. `Above-Os/terminus-apps`
+### 126. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\focalboard`
 - Source: `template`
@@ -1889,7 +1791,7 @@ Error: focalboard/templates/deployment.yaml:41:50
 Use --debug flag to render out invalid YAML
 ```
 
-### 134. `Above-Os/terminus-apps`
+### 127. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\formbricks`
 - Source: `template`
@@ -1903,7 +1805,7 @@ Error: formbricks/templates/formbricks.yaml:1:47
 Use --debug flag to render out invalid YAML
 ```
 
-### 135. `Above-Os/terminus-apps`
+### 128. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\freshrss`
 - Source: `template`
@@ -1917,7 +1819,7 @@ Error: freshrss/templates/freshrss.yaml:1:45
 Use --debug flag to render out invalid YAML
 ```
 
-### 136. `Above-Os/terminus-apps`
+### 129. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\geth`
 - Source: `template`
@@ -1931,7 +1833,7 @@ Error: geth/templates/website.yaml:26:57
 Use --debug flag to render out invalid YAML
 ```
 
-### 137. `Above-Os/terminus-apps`
+### 130. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\ghost`
 - Source: `template`
@@ -1945,7 +1847,7 @@ Error: ghost/templates/deployment.yaml:1:42
 Use --debug flag to render out invalid YAML
 ```
 
-### 138. `Above-Os/terminus-apps`
+### 131. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\gitea`
 - Source: `template`
@@ -1959,7 +1861,7 @@ Error: gitea/templates/deployment.yaml:39:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 139. `Above-Os/terminus-apps`
+### 132. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\gitlab`
 - Source: `template`
@@ -1973,7 +1875,7 @@ Error: gitlab/templates/gitlab.yaml:7756:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 140. `Above-Os/terminus-apps`
+### 133. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\gitlab`
 - Source: `template`
@@ -1988,7 +1890,7 @@ Error: gitlab/templates/gitlab.yaml:7756:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 141. `Above-Os/terminus-apps`
+### 134. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\gitlabpure`
 - Source: `template`
@@ -2002,7 +1904,7 @@ Error: gitlabpure/templates/gitlab.yaml:3:43
 Use --debug flag to render out invalid YAML
 ```
 
-### 142. `Above-Os/terminus-apps`
+### 135. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\grafana`
 - Source: `template`
@@ -2016,7 +1918,7 @@ Error: grafana/templates/granafa.yaml:51:31
 Use --debug flag to render out invalid YAML
 ```
 
-### 143. `Above-Os/terminus-apps`
+### 136. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\halo`
 - Source: `template`
@@ -2030,7 +1932,7 @@ Error: halo/templates/deployment.yaml:1:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 144. `Above-Os/terminus-apps`
+### 137. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\hasura`
 - Source: `template`
@@ -2044,7 +1946,7 @@ Error: hasura/templates/hasura.yaml:140:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 145. `Above-Os/terminus-apps`
+### 138. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\hermesagent`
 - Source: `template`
@@ -2058,7 +1960,7 @@ Error: hermesagent/templates/deployment.yaml:424:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 146. `Above-Os/terminus-apps`
+### 139. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\homeassistant`
 - Source: `template`
@@ -2072,7 +1974,7 @@ Error: homeassistant/templates/deployment.yaml:198:92
 Use --debug flag to render out invalid YAML
 ```
 
-### 147. `Above-Os/terminus-apps`
+### 140. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\homebox`
 - Source: `template`
@@ -2086,7 +1988,7 @@ Error: homebox/templates/homebox.yaml:62:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 148. `Above-Os/terminus-apps`
+### 141. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\hoppscotch`
 - Source: `template`
@@ -2100,7 +2002,7 @@ Error: hoppscotch/templates/configmap.yaml:1:45
 Use --debug flag to render out invalid YAML
 ```
 
-### 149. `Above-Os/terminus-apps`
+### 142. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\immich`
 - Source: `template`
@@ -2114,7 +2016,7 @@ Error: immich/templates/redis/deployment.yaml:67:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 150. `Above-Os/terminus-apps`
+### 143. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\indexttsv2\indexttsv2server`
 - Source: `template`
@@ -2128,7 +2030,7 @@ Error: indexttsv2server/templates/deployment.yaml:36:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 151. `Above-Os/terminus-apps`
+### 144. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\ipfs`
 - Source: `template`
@@ -2142,7 +2044,7 @@ Error: ipfs/templates/deployment.yaml:1:41
 Use --debug flag to render out invalid YAML
 ```
 
-### 152. `Above-Os/terminus-apps`
+### 145. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\isaaclab`
 - Source: `template`
@@ -2156,7 +2058,7 @@ Error: isaaclab/templates/isaaclab.yaml:98:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 153. `Above-Os/terminus-apps`
+### 146. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\jackett`
 - Source: `template`
@@ -2170,7 +2072,7 @@ Error: jackett/templates/jackett.yaml:62:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 154. `Above-Os/terminus-apps`
+### 147. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\jdownloader2`
 - Source: `template`
@@ -2184,7 +2086,7 @@ Error: jdownloader2/templates/deployment.yaml:104:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 155. `Above-Os/terminus-apps`
+### 148. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\jellyfin`
 - Source: `template`
@@ -2198,7 +2100,7 @@ Error: jellyfin/templates/deployment.yaml:46:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 156. `Above-Os/terminus-apps`
+### 149. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\jupyterhub`
 - Source: `template`
@@ -2212,7 +2114,7 @@ Error: jupyterhub/templates/ingress.yaml:29:44
 Use --debug flag to render out invalid YAML
 ```
 
-### 157. `Above-Os/terminus-apps`
+### 150. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\karakeep`
 - Source: `template`
@@ -2226,7 +2128,7 @@ Error: karakeep/templates/deployment.yaml:1:43
 Use --debug flag to render out invalid YAML
 ```
 
-### 158. `Above-Os/terminus-apps`
+### 151. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\koboldcpp\koboldcppserver`
 - Source: `template`
@@ -2240,7 +2142,7 @@ Error: koboldcppserver/templates/download.yaml:23:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 159. `Above-Os/terminus-apps`
+### 152. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\komga`
 - Source: `template`
@@ -2254,7 +2156,7 @@ Error: komga/templates/deployment.yaml:57:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 160. `Above-Os/terminus-apps`
+### 153. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\langbot`
 - Source: `template`
@@ -2268,7 +2170,7 @@ Error: langbot/templates/langbot.yaml:58:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 161. `Above-Os/terminus-apps`
+### 154. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\langfuse`
 - Source: `template`
@@ -2282,7 +2184,7 @@ Error: langfuse/templates/redis/deployment.yaml:87:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 162. `Above-Os/terminus-apps`
+### 155. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\larescompanion`
 - Source: `template`
@@ -2296,7 +2198,7 @@ Error: larescompanion/templates/deployment.yaml:30:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 163. `Above-Os/terminus-apps`
+### 156. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\leantime`
 - Source: `template`
@@ -2310,7 +2212,7 @@ Error: leantime/templates/leantime.yaml:46:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 164. `Above-Os/terminus-apps`
+### 157. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\librechat`
 - Source: `template`
@@ -2324,7 +2226,7 @@ Error: librechat/templates/configmap.yaml:1:38
 Use --debug flag to render out invalid YAML
 ```
 
-### 165. `Above-Os/terminus-apps`
+### 158. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\lidarr`
 - Source: `template`
@@ -2338,7 +2240,7 @@ Error: lidarr/templates/deployment.yaml:106:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 166. `Above-Os/terminus-apps`
+### 159. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\listmonk`
 - Source: `template`
@@ -2352,7 +2254,7 @@ Error: listmonk/templates/listmonk.yaml:44:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 167. `Above-Os/terminus-apps`
+### 160. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\litellm`
 - Source: `template`
@@ -2366,7 +2268,7 @@ Error: litellm/templates/deployment.yaml:33:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 168. `Above-Os/terminus-apps`
+### 161. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\llamafactory`
 - Source: `template`
@@ -2380,7 +2282,7 @@ Error: llamafactory/templates/deployment.yaml:88:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 169. `Above-Os/terminus-apps`
+### 162. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\llmgateway`
 - Source: `template`
@@ -2394,7 +2296,7 @@ Error: llmgateway/templates/configmap.yaml:25:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 170. `Above-Os/terminus-apps`
+### 163. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\lobechat`
 - Source: `template`
@@ -2408,7 +2310,7 @@ Error: lobechat/templates/postgres.yaml:74:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 171. `Above-Os/terminus-apps`
+### 164. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\macos`
 - Source: `template`
@@ -2422,7 +2324,7 @@ Error: macos/templates/deployment.yaml:101:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 172. `Above-Os/terminus-apps`
+### 165. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\magicpig`
 - Source: `template`
@@ -2436,7 +2338,7 @@ Error: magicpig/templates/deployment.yaml:28:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 173. `Above-Os/terminus-apps`
+### 166. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\mastodon`
 - Source: `template`
@@ -2450,7 +2352,7 @@ Error: mastodon/templates/redis/statefulset.yaml:166:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 174. `Above-Os/terminus-apps`
+### 167. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\mattermost`
 - Source: `template`
@@ -2464,7 +2366,7 @@ Error: mattermost/templates/mattermost.yaml:1:47
 Use --debug flag to render out invalid YAML
 ```
 
-### 175. `Above-Os/terminus-apps`
+### 168. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\mealie`
 - Source: `template`
@@ -2478,7 +2380,7 @@ Error: mealie/templates/mealie.yaml:1:43
 Use --debug flag to render out invalid YAML
 ```
 
-### 176. `Above-Os/terminus-apps`
+### 169. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\medusa`
 - Source: `template`
@@ -2492,7 +2394,7 @@ Error: medusa/templates/deployment.yaml:113:40
 Use --debug flag to render out invalid YAML
 ```
 
-### 177. `Above-Os/terminus-apps`
+### 170. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\memos`
 - Source: `template`
@@ -2506,7 +2408,7 @@ Error: memos/templates/memos.yaml:39:117
 Use --debug flag to render out invalid YAML
 ```
 
-### 178. `Above-Os/terminus-apps`
+### 171. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\merchant`
 - Source: `template`
@@ -2520,7 +2422,7 @@ Error: merchant/templates/vc-system.yaml:48:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 179. `Above-Os/terminus-apps`
+### 172. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\metabase`
 - Source: `template`
@@ -2534,7 +2436,7 @@ Error: metabase/templates/configmap.yaml:1:43
 Use --debug flag to render out invalid YAML
 ```
 
-### 180. `Above-Os/terminus-apps`
+### 173. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\migpt`
 - Source: `template`
@@ -2548,7 +2450,7 @@ Error: migpt/templates/configmap.yaml:8:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 181. `Above-Os/terminus-apps`
+### 174. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\miniflux`
 - Source: `template`
@@ -2562,7 +2464,7 @@ Error: miniflux/templates/miniflux-deployment.yaml:28:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 182. `Above-Os/terminus-apps`
+### 175. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\n8n`
 - Source: `template`
@@ -2576,7 +2478,7 @@ Error: n8n/templates/n8n.yaml:45:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 183. `Above-Os/terminus-apps`
+### 176. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\navidrome`
 - Source: `template`
@@ -2590,7 +2492,7 @@ Error: navidrome/templates/deployment.yaml:70:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 184. `Above-Os/terminus-apps`
+### 177. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\nemoclaw`
 - Source: `template`
@@ -2604,7 +2506,7 @@ Error: nemoclaw/templates/deployment.yaml:2094:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 185. `Above-Os/terminus-apps`
+### 178. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\netdata`
 - Source: `template`
@@ -2618,7 +2520,7 @@ Error: netdata/templates/configmap.yaml:15:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 186. `Above-Os/terminus-apps`
+### 179. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\nextcloud`
 - Source: `template`
@@ -2632,7 +2534,7 @@ Error: nextcloud/templates/deployment.yaml:1:44
 Use --debug flag to render out invalid YAML
 ```
 
-### 187. `Above-Os/terminus-apps`
+### 180. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\nocobase`
 - Source: `template`
@@ -2646,7 +2548,7 @@ Error: nocobase/templates/deployment.yaml:40:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 188. `Above-Os/terminus-apps`
+### 181. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\nocodb`
 - Source: `template`
@@ -2660,7 +2562,7 @@ Error: nocodb/templates/deployment.yaml:53:37
 Use --debug flag to render out invalid YAML
 ```
 
-### 189. `Above-Os/terminus-apps`
+### 182. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\nomad`
 - Source: `template`
@@ -2674,7 +2576,7 @@ Error: nomad/templates/deployment.yaml:154:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 190. `Above-Os/terminus-apps`
+### 183. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\nostream`
 - Source: `template`
@@ -2688,7 +2590,7 @@ Error: nostream/templates/deployment.yaml:33:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 191. `Above-Os/terminus-apps`
+### 184. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\novella`
 - Source: `template`
@@ -2702,7 +2604,7 @@ Error: novella/templates/deployment.yaml:9:43
 Use --debug flag to render out invalid YAML
 ```
 
-### 192. `Above-Os/terminus-apps`
+### 185. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\ntfy`
 - Source: `template`
@@ -2716,7 +2618,7 @@ Error: ntfy/templates/ntfy.yaml:73:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 193. `Above-Os/terminus-apps`
+### 186. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\nzbget`
 - Source: `template`
@@ -2730,7 +2632,7 @@ Error: nzbget/templates/deployment.yaml:75:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 194. `Above-Os/terminus-apps`
+### 187. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\obsidian`
 - Source: `template`
@@ -2744,7 +2646,7 @@ Error: obsidian/templates/deployment.yaml:1:35
 Use --debug flag to render out invalid YAML
 ```
 
-### 195. `Above-Os/terminus-apps`
+### 188. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\odoo`
 - Source: `template`
@@ -2758,7 +2660,7 @@ Error: odoo/templates/odoo.yaml:42:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 196. `Above-Os/terminus-apps`
+### 189. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\onlyoffice`
 - Source: `template`
@@ -2772,7 +2674,7 @@ Error: onlyoffice/templates/proxy.yaml:18:44
 Use --debug flag to render out invalid YAML
 ```
 
-### 197. `Above-Os/terminus-apps`
+### 190. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\onlyofficev2\onlyofficev2`
 - Source: `template`
@@ -2786,7 +2688,7 @@ Error: onlyofficev2/templates/clientproxy.yaml:23:44
 Use --debug flag to render out invalid YAML
 ```
 
-### 198. `Above-Os/terminus-apps`
+### 191. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\opencode`
 - Source: `template`
@@ -2800,7 +2702,7 @@ Error: opencode/templates/opencode.yaml:1:45
 Use --debug flag to render out invalid YAML
 ```
 
-### 199. `Above-Os/terminus-apps`
+### 192. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\openedaispeech`
 - Source: `template`
@@ -2814,7 +2716,7 @@ Error: openedaispeech/templates/deployment.yaml:95:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 200. `Above-Os/terminus-apps`
+### 193. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\openllm`
 - Source: `template`
@@ -2828,7 +2730,7 @@ Error: openllm/templates/traefik.yaml:296:59
 Use --debug flag to render out invalid YAML
 ```
 
-### 201. `Above-Os/terminus-apps`
+### 194. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\opennotebook`
 - Source: `template`
@@ -2842,7 +2744,7 @@ Error: opennotebook/templates/deployment.yaml:113:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 202. `Above-Os/terminus-apps`
+### 195. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\openwebui`
 - Source: `template`
@@ -2856,7 +2758,7 @@ Error: openwebui/templates/deployment.yaml:1:38
 Use --debug flag to render out invalid YAML
 ```
 
-### 203. `Above-Os/terminus-apps`
+### 196. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\otmoiclp`
 - Source: `template`
@@ -2870,7 +2772,7 @@ Error: otmoiclp/templates/traefik.yaml:1:44
 Use --debug flag to render out invalid YAML
 ```
 
-### 204. `Above-Os/terminus-apps`
+### 197. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\otmoicrelay`
 - Source: `template`
@@ -2884,7 +2786,7 @@ Error: otmoicrelay/templates/traefik.yaml:1:44
 Use --debug flag to render out invalid YAML
 ```
 
-### 205. `Above-Os/terminus-apps`
+### 198. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\paperclip`
 - Source: `template`
@@ -2898,7 +2800,7 @@ Error: paperclip/templates/deployment.yaml:1:46
 Use --debug flag to render out invalid YAML
 ```
 
-### 206. `Above-Os/terminus-apps`
+### 199. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\pdfmathtranslate`
 - Source: `template`
@@ -2912,7 +2814,7 @@ Error: pdfmathtranslate/templates/deployment.yaml:46:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 207. `Above-Os/terminus-apps`
+### 200. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\pds`
 - Source: `template`
@@ -2926,7 +2828,7 @@ Error: pds/templates/deployment.yaml:1:38
 Use --debug flag to render out invalid YAML
 ```
 
-### 208. `Above-Os/terminus-apps`
+### 201. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\penpot`
 - Source: `template`
@@ -2940,7 +2842,7 @@ Error: penpot/templates/redis/deployment.yaml:62:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 209. `Above-Os/terminus-apps`
+### 202. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\perplexica`
 - Source: `template`
@@ -2954,7 +2856,7 @@ Error: perplexica/templates/deployment.yaml:1:38
 Use --debug flag to render out invalid YAML
 ```
 
-### 210. `Above-Os/terminus-apps`
+### 203. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\photoprism`
 - Source: `template`
@@ -2968,7 +2870,7 @@ Error: photoprism/templates/deployment.yaml:64:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 211. `Above-Os/terminus-apps`
+### 204. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\photoview`
 - Source: `template`
@@ -2982,7 +2884,7 @@ Error: photoview/templates/deployment.yaml:59:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 212. `Above-Os/terminus-apps`
+### 205. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\plane`
 - Source: `template`
@@ -2996,7 +2898,7 @@ Error: plane/templates/deployment.yaml:1:42
 Use --debug flag to render out invalid YAML
 ```
 
-### 213. `Above-Os/terminus-apps`
+### 206. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\prometheusclient`
 - Source: `template`
@@ -3010,7 +2912,7 @@ Error: prometheusclient/templates/deployment.yaml:66:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 214. `Above-Os/terminus-apps`
+### 207. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\prowlarr`
 - Source: `template`
@@ -3024,7 +2926,7 @@ Error: prowlarr/templates/deployment.yaml:57:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 215. `Above-Os/terminus-apps`
+### 208. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\qbittorrent`
 - Source: `template`
@@ -3038,7 +2940,7 @@ Error: qbittorrent/templates/deployment.yaml:82:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 216. `Above-Os/terminus-apps`
+### 209. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\qinglong`
 - Source: `template`
@@ -3052,7 +2954,7 @@ Error: qinglong/templates/qinglong.yaml:62:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 217. `Above-Os/terminus-apps`
+### 210. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\radarr`
 - Source: `template`
@@ -3066,7 +2968,7 @@ Error: radarr/templates/deployment.yaml:111:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 218. `Above-Os/terminus-apps`
+### 211. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\radicale`
 - Source: `template`
@@ -3080,7 +2982,7 @@ Error: radicale/templates/all.yaml:131:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 219. `Above-Os/terminus-apps`
+### 212. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\ragflow`
 - Source: `template`
@@ -3094,7 +2996,7 @@ Error: ragflow/templates/redis.yaml:60:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 220. `Above-Os/terminus-apps`
+### 213. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\rallly`
 - Source: `template`
@@ -3108,7 +3010,7 @@ Error: rallly/templates/rallly.yaml:34:165
 Use --debug flag to render out invalid YAML
 ```
 
-### 221. `Above-Os/terminus-apps`
+### 214. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\rembgv2\rembgv2server`
 - Source: `template`
@@ -3122,7 +3024,7 @@ Error: rembgv2server/templates/deployment.yaml:63:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 222. `Above-Os/terminus-apps`
+### 215. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\rnasequencing`
 - Source: `template`
@@ -3136,7 +3038,7 @@ Error: rnasequencing/templates/rnasequencing.yaml:88:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 223. `Above-Os/terminus-apps`
+### 216. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\rssubscribe\rsserver`
 - Source: `template`
@@ -3150,7 +3052,7 @@ Error: rsserver/templates/rssubscribe.yaml:124:30
 Use --debug flag to render out invalid YAML
 ```
 
-### 224. `Above-Os/terminus-apps`
+### 217. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\rssubscribe\rssubscribe`
 - Source: `template`
@@ -3164,7 +3066,7 @@ Error: rssubscribe/templates/deployment.yaml:22:46
 Use --debug flag to render out invalid YAML
 ```
 
-### 225. `Above-Os/terminus-apps`
+### 218. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\sdwebuisharev2\sdwebuisharev2server`
 - Source: `template`
@@ -3178,7 +3080,7 @@ Error: sdwebuisharev2server/templates/deployment.yaml:206:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 226. `Above-Os/terminus-apps`
+### 219. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\searxngv2\searxngv2server`
 - Source: `template`
@@ -3192,7 +3094,7 @@ Error: searxngv2server/templates/searxng-config.yaml:91:30
 Use --debug flag to render out invalid YAML
 ```
 
-### 227. `Above-Os/terminus-apps`
+### 220. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\seatable`
 - Source: `template`
@@ -3206,7 +3108,7 @@ Error: seatable/templates/mariadb/deployment.yaml:87:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 228. `Above-Os/terminus-apps`
+### 221. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\secondme`
 - Source: `template`
@@ -3220,7 +3122,7 @@ Error: secondme/templates/secondme.yaml:130:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 229. `Above-Os/terminus-apps`
+### 222. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\showdoc`
 - Source: `template`
@@ -3234,7 +3136,7 @@ Error: showdoc/templates/showdoc.yaml:3:16
 Use --debug flag to render out invalid YAML
 ```
 
-### 230. `Above-Os/terminus-apps`
+### 223. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\sickchill`
 - Source: `template`
@@ -3248,7 +3150,7 @@ Error: sickchill/templates/deployment.yaml:82:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 231. `Above-Os/terminus-apps`
+### 224. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\sillytavern`
 - Source: `template`
@@ -3262,7 +3164,7 @@ Error: sillytavern/templates/deployment.yaml:1:42
 Use --debug flag to render out invalid YAML
 ```
 
-### 232. `Above-Os/terminus-apps`
+### 225. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\solidtime`
 - Source: `template`
@@ -3276,7 +3178,7 @@ Error: solidtime/templates/solidtime.yaml:1:46
 Use --debug flag to render out invalid YAML
 ```
 
-### 233. `Above-Os/terminus-apps`
+### 226. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\sonarr`
 - Source: `template`
@@ -3290,7 +3192,7 @@ Error: sonarr/templates/deployment.yaml:106:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 234. `Above-Os/terminus-apps`
+### 227. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\steamheadless`
 - Source: `template`
@@ -3304,7 +3206,7 @@ Error: steamheadless/templates/steam.yaml:70:31
 Use --debug flag to render out invalid YAML
 ```
 
-### 235. `Above-Os/terminus-apps`
+### 228. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\stirlingpdf`
 - Source: `template`
@@ -3318,7 +3220,7 @@ Error: stirlingpdf/templates/stirlingpdf.yaml:83:105
 Use --debug flag to render out invalid YAML
 ```
 
-### 236. `Above-Os/terminus-apps`
+### 229. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\studio\studio`
 - Source: `template`
@@ -3332,7 +3234,7 @@ Error: studio/templates/front.yaml:294:71
 Use --debug flag to render out invalid YAML
 ```
 
-### 237. `Above-Os/terminus-apps`
+### 230. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\studio\studioserver`
 - Source: `template`
@@ -3346,7 +3248,7 @@ Error: studioserver/templates/studio_server_deploy.yaml:268:31
 Use --debug flag to render out invalid YAML
 ```
 
-### 238. `Above-Os/terminus-apps`
+### 231. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\teable`
 - Source: `template`
@@ -3360,7 +3262,7 @@ Error: teable/templates/redis/deployment.yaml:83:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 239. `Above-Os/terminus-apps`
+### 232. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\tensorzero`
 - Source: `template`
@@ -3374,7 +3276,7 @@ Error: tensorzero/templates/tensorzero.yaml:203:43
 Use --debug flag to render out invalid YAML
 ```
 
-### 240. `Above-Os/terminus-apps`
+### 233. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\testapp1`
 - Source: `template`
@@ -3388,7 +3290,7 @@ Error: testapp1/templates/testapp1.yaml:62:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 241. `Above-Os/terminus-apps`
+### 234. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\testapp5`
 - Source: `template`
@@ -3402,7 +3304,7 @@ Error: testapp5/templates/testapp5.yaml:62:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 242. `Above-Os/terminus-apps`
+### 235. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\testenv`
 - Source: `template`
@@ -3416,7 +3318,7 @@ Error: testenv/templates/firefox.yaml:63:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 243. `Above-Os/terminus-apps`
+### 236. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\testnsfw`
 - Source: `template`
@@ -3430,7 +3332,7 @@ Error: testnsfw/templates/homebox.yaml:62:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 244. `Above-Os/terminus-apps`
+### 237. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\testpayment`
 - Source: `template`
@@ -3444,7 +3346,7 @@ Error: testpayment/templates/firefox.yaml:59:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 245. `Above-Os/terminus-apps`
+### 238. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\testpid`
 - Source: `template`
@@ -3458,7 +3360,7 @@ Error: testpid/templates/firefox.yaml:95:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 246. `Above-Os/terminus-apps`
+### 239. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\texttoimagesearch`
 - Source: `template`
@@ -3472,7 +3374,7 @@ Error: texttoimagesearch/templates/service.yaml:25:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 247. `Above-Os/terminus-apps`
+### 240. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\tradingagents`
 - Source: `template`
@@ -3486,7 +3388,7 @@ Error: tradingagents/templates/tradingagents.yaml:150:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 248. `Above-Os/terminus-apps`
+### 241. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\transmission`
 - Source: `template`
@@ -3500,7 +3402,7 @@ Error: transmission/templates/deployment.yaml:91:26
 Use --debug flag to render out invalid YAML
 ```
 
-### 249. `Above-Os/terminus-apps`
+### 242. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\trek`
 - Source: `template`
@@ -3514,7 +3416,7 @@ Error: trek/templates/deployment.yaml:1:41
 Use --debug flag to render out invalid YAML
 ```
 
-### 250. `Above-Os/terminus-apps`
+### 243. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\twenty`
 - Source: `template`
@@ -3528,7 +3430,7 @@ Error: twenty/templates/worker-deployment.yaml:1:38
 Use --debug flag to render out invalid YAML
 ```
 
-### 251. `Above-Os/terminus-apps`
+### 244. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\twitter\twitter`
 - Source: `template`
@@ -3542,7 +3444,7 @@ Error: twitter/templates/deployment.yaml:22:46
 Use --debug flag to render out invalid YAML
 ```
 
-### 252. `Above-Os/terminus-apps`
+### 245. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\uptimekuma`
 - Source: `template`
@@ -3556,7 +3458,7 @@ Error: uptimekuma/templates/uptimekuma.yaml:50:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 253. `Above-Os/terminus-apps`
+### 246. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\vane`
 - Source: `template`
@@ -3570,7 +3472,7 @@ Error: vane/templates/deployment.yaml:1:38
 Use --debug flag to render out invalid YAML
 ```
 
-### 254. `Above-Os/terminus-apps`
+### 247. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\vllmdeepseekocr3bv2\vllmserver`
 - Source: `template`
@@ -3584,7 +3486,7 @@ Error: vllmserver/templates/deployment.yaml:1:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 255. `Above-Os/terminus-apps`
+### 248. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\vllmgemma312bitv2\vllmgemma312bitv2server`
 - Source: `template`
@@ -3598,7 +3500,7 @@ Error: vllmgemma312bitv2server/templates/download.yaml:1:40
 Use --debug flag to render out invalid YAML
 ```
 
-### 256. `Above-Os/terminus-apps`
+### 249. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\vllmgemma327bqatv2\vllmgemma327bqatv2server`
 - Source: `template`
@@ -3612,7 +3514,7 @@ Error: vllmgemma327bqatv2server/templates/download.yaml:1:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 257. `Above-Os/terminus-apps`
+### 250. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\vllmgptoss20bv2\vllmgptoss20bv2server`
 - Source: `template`
@@ -3626,7 +3528,7 @@ Error: vllmgptoss20bv2server/templates/download.yaml:1:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 258. `Above-Os/terminus-apps`
+### 251. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\vllmhymt1518bv2\vllmhymt1518bv2server`
 - Source: `template`
@@ -3640,7 +3542,7 @@ Error: vllmhymt1518bv2server/templates/download.yaml:1:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 259. `Above-Os/terminus-apps`
+### 252. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\vllmhymt157bv2\vllmhymt157bv2server`
 - Source: `template`
@@ -3654,7 +3556,7 @@ Error: vllmhymt157bv2server/templates/download.yaml:1:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 260. `Above-Os/terminus-apps`
+### 253. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\vllmqwen330ba3binstruct4bitv2\vllmqwen330ba3bv2server`
 - Source: `template`
@@ -3668,7 +3570,7 @@ Error: vllmqwen330ba3bv2server/templates/download.yaml:1:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 261. `Above-Os/terminus-apps`
+### 254. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\wewerss`
 - Source: `template`
@@ -3682,7 +3584,7 @@ Error: wewerss/templates/wewerss.yaml:36:31
 Use --debug flag to render out invalid YAML
 ```
 
-### 262. `Above-Os/terminus-apps`
+### 255. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\windows`
 - Source: `template`
@@ -3696,7 +3598,7 @@ Error: windows/templates/deployment.yaml:103:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 263. `Above-Os/terminus-apps`
+### 256. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\windowsarm`
 - Source: `template`
@@ -3710,7 +3612,7 @@ Error: windowsarm/templates/deployment.yaml:102:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 264. `Above-Os/terminus-apps`
+### 257. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\wise\knowledge`
 - Source: `template`
@@ -3724,7 +3626,7 @@ Error: knowledge/templates/knowledge_deployment.yaml:127:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 265. `Above-Os/terminus-apps`
+### 258. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\wise\wise`
 - Source: `template`
@@ -3738,7 +3640,7 @@ Error: wise/templates/front.yaml:61:35
 Use --debug flag to render out invalid YAML
 ```
 
-### 266. `Above-Os/terminus-apps`
+### 259. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\wordpresspure`
 - Source: `template`
@@ -3752,7 +3654,7 @@ Error: wordpresspure/templates/wordpress.yaml:246:31
 Use --debug flag to render out invalid YAML
 ```
 
-### 267. `Above-Os/terminus-apps`
+### 260. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\xinference`
 - Source: `template`
@@ -3766,7 +3668,7 @@ Error: xinference/templates/deployment.yaml:63:30
 Use --debug flag to render out invalid YAML
 ```
 
-### 268. `Above-Os/terminus-apps`
+### 261. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\xybotv2`
 - Source: `template`
@@ -3780,7 +3682,7 @@ Error: xybotv2/templates/xybotv2.yaml:73:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 269. `Above-Os/terminus-apps`
+### 262. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\ytdlp\ytdlp`
 - Source: `template`
@@ -3794,7 +3696,7 @@ Error: ytdlp/templates/deployment.yaml:22:46
 Use --debug flag to render out invalid YAML
 ```
 
-### 270. `Above-Os/terminus-apps`
+### 263. `Above-Os/terminus-apps`
 
 - Chart: `D:\helm_clones_github\Above-Os__terminus-apps\ytnavigator`
 - Source: `template`
@@ -3808,7 +3710,7 @@ Error: ytnavigator/templates/deployment.yaml:28:28
 Use --debug flag to render out invalid YAML
 ```
 
-### 271. `CDCgov/NEDSS-Helm`
+### 264. `CDCgov/NEDSS-Helm`
 
 - Chart: `D:\helm_clones_github\CDCgov__NEDSS-Helm\argocd`
 - Source: `template`
@@ -3823,7 +3725,7 @@ Error: NBS7/templates/rtr.yaml:30:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 272. `cap-js/cap-operator-plugin`
+### 265. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -3837,7 +3739,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 273. `cap-js/cap-operator-plugin`
+### 266. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -3852,7 +3754,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 274. `cap-js/cap-operator-plugin`
+### 267. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -3867,7 +3769,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 275. `cap-js/cap-operator-plugin`
+### 268. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -3882,7 +3784,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 276. `cap-js/cap-operator-plugin`
+### 269. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -3897,7 +3799,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 277. `cap-js/cap-operator-plugin`
+### 270. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -3912,7 +3814,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 278. `cap-js/cap-operator-plugin`
+### 271. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -3927,7 +3829,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 279. `cap-js/cap-operator-plugin`
+### 272. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -3942,7 +3844,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 280. `cap-js/cap-operator-plugin`
+### 273. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -3957,7 +3859,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 281. `cap-js/cap-operator-plugin`
+### 274. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -3972,7 +3874,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 282. `cap-js/cap-operator-plugin`
+### 275. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -3987,7 +3889,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 283. `cap-js/cap-operator-plugin`
+### 276. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4002,7 +3904,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 284. `cap-js/cap-operator-plugin`
+### 277. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4017,7 +3919,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 285. `cap-js/cap-operator-plugin`
+### 278. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4032,7 +3934,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 286. `cap-js/cap-operator-plugin`
+### 279. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4047,7 +3949,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 287. `cap-js/cap-operator-plugin`
+### 280. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4062,7 +3964,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 288. `cap-js/cap-operator-plugin`
+### 281. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4077,7 +3979,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 289. `cap-js/cap-operator-plugin`
+### 282. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4092,7 +3994,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 290. `cap-js/cap-operator-plugin`
+### 283. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4107,7 +4009,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 291. `cap-js/cap-operator-plugin`
+### 284. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4122,7 +4024,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 292. `cap-js/cap-operator-plugin`
+### 285. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4137,7 +4039,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 293. `cap-js/cap-operator-plugin`
+### 286. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4152,7 +4054,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 294. `cap-js/cap-operator-plugin`
+### 287. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4167,7 +4069,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 295. `cap-js/cap-operator-plugin`
+### 288. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4182,7 +4084,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 296. `cap-js/cap-operator-plugin`
+### 289. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4197,7 +4099,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 297. `cap-js/cap-operator-plugin`
+### 290. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4212,7 +4114,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 298. `cap-js/cap-operator-plugin`
+### 291. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4227,7 +4129,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 299. `cap-js/cap-operator-plugin`
+### 292. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4242,7 +4144,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 300. `cap-js/cap-operator-plugin`
+### 293. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4257,7 +4159,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 301. `cap-js/cap-operator-plugin`
+### 294. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4272,7 +4174,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 302. `cap-js/cap-operator-plugin`
+### 295. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4287,7 +4189,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 303. `cap-js/cap-operator-plugin`
+### 296. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4302,7 +4204,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 304. `cap-js/cap-operator-plugin`
+### 297. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4317,7 +4219,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 305. `cap-js/cap-operator-plugin`
+### 298. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4332,7 +4234,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 306. `cap-js/cap-operator-plugin`
+### 299. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4347,7 +4249,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 307. `cap-js/cap-operator-plugin`
+### 300. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4362,7 +4264,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 308. `cap-js/cap-operator-plugin`
+### 301. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4377,7 +4279,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 309. `cap-js/cap-operator-plugin`
+### 302. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4392,7 +4294,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 310. `cap-js/cap-operator-plugin`
+### 303. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4407,7 +4309,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 311. `cap-js/cap-operator-plugin`
+### 304. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4422,7 +4324,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 312. `cap-js/cap-operator-plugin`
+### 305. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4437,7 +4339,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 313. `cap-js/cap-operator-plugin`
+### 306. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4452,7 +4354,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 314. `cap-js/cap-operator-plugin`
+### 307. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4467,7 +4369,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 315. `cap-js/cap-operator-plugin`
+### 308. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4482,7 +4384,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 316. `cap-js/cap-operator-plugin`
+### 309. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4497,7 +4399,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 317. `cap-js/cap-operator-plugin`
+### 310. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4512,7 +4414,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 318. `cap-js/cap-operator-plugin`
+### 311. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4527,7 +4429,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 319. `cap-js/cap-operator-plugin`
+### 312. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4542,7 +4444,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 320. `cap-js/cap-operator-plugin`
+### 313. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4557,7 +4459,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 321. `cap-js/cap-operator-plugin`
+### 314. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4572,7 +4474,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 322. `cap-js/cap-operator-plugin`
+### 315. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4587,7 +4489,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 323. `cap-js/cap-operator-plugin`
+### 316. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4602,7 +4504,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 324. `cap-js/cap-operator-plugin`
+### 317. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4617,7 +4519,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 325. `cap-js/cap-operator-plugin`
+### 318. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4632,7 +4534,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 326. `cap-js/cap-operator-plugin`
+### 319. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4647,7 +4549,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 327. `cap-js/cap-operator-plugin`
+### 320. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4662,7 +4564,7 @@ Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 328. `cap-js/cap-operator-plugin`
+### 321. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4677,7 +4579,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 329. `cap-js/cap-operator-plugin`
+### 322. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4692,7 +4594,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 330. `cap-js/cap-operator-plugin`
+### 323. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4707,7 +4609,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 331. `cap-js/cap-operator-plugin`
+### 324. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4722,7 +4624,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 332. `cap-js/cap-operator-plugin`
+### 325. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4737,7 +4639,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 333. `cap-js/cap-operator-plugin`
+### 326. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4752,7 +4654,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 334. `cap-js/cap-operator-plugin`
+### 327. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4767,7 +4669,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 335. `cap-js/cap-operator-plugin`
+### 328. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4782,7 +4684,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 336. `cap-js/cap-operator-plugin`
+### 329. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4797,7 +4699,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 337. `cap-js/cap-operator-plugin`
+### 330. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4812,7 +4714,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 338. `cap-js/cap-operator-plugin`
+### 331. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4827,7 +4729,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 339. `cap-js/cap-operator-plugin`
+### 332. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4842,7 +4744,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 340. `cap-js/cap-operator-plugin`
+### 333. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4857,7 +4759,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 341. `cap-js/cap-operator-plugin`
+### 334. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4872,7 +4774,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 342. `cap-js/cap-operator-plugin`
+### 335. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4887,7 +4789,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 343. `cap-js/cap-operator-plugin`
+### 336. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4902,7 +4804,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 344. `cap-js/cap-operator-plugin`
+### 337. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4917,7 +4819,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 345. `cap-js/cap-operator-plugin`
+### 338. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4932,7 +4834,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 346. `cap-js/cap-operator-plugin`
+### 339. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4947,7 +4849,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 347. `cap-js/cap-operator-plugin`
+### 340. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4962,7 +4864,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 348. `cap-js/cap-operator-plugin`
+### 341. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4977,7 +4879,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 349. `cap-js/cap-operator-plugin`
+### 342. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -4992,7 +4894,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 350. `cap-js/cap-operator-plugin`
+### 343. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5007,7 +4909,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 351. `cap-js/cap-operator-plugin`
+### 344. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5022,7 +4924,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 352. `cap-js/cap-operator-plugin`
+### 345. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5037,7 +4939,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 353. `cap-js/cap-operator-plugin`
+### 346. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5052,7 +4954,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 354. `cap-js/cap-operator-plugin`
+### 347. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5067,7 +4969,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 355. `cap-js/cap-operator-plugin`
+### 348. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5082,7 +4984,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 356. `cap-js/cap-operator-plugin`
+### 349. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5097,7 +4999,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 357. `cap-js/cap-operator-plugin`
+### 350. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5112,7 +5014,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 358. `cap-js/cap-operator-plugin`
+### 351. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5127,7 +5029,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 359. `cap-js/cap-operator-plugin`
+### 352. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5142,7 +5044,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 360. `cap-js/cap-operator-plugin`
+### 353. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5157,7 +5059,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 361. `cap-js/cap-operator-plugin`
+### 354. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5172,7 +5074,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 362. `cap-js/cap-operator-plugin`
+### 355. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5187,7 +5089,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 363. `cap-js/cap-operator-plugin`
+### 356. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5202,7 +5104,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 364. `cap-js/cap-operator-plugin`
+### 357. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5217,7 +5119,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 365. `cap-js/cap-operator-plugin`
+### 358. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5232,7 +5134,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 366. `cap-js/cap-operator-plugin`
+### 359. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5247,7 +5149,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 367. `cap-js/cap-operator-plugin`
+### 360. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5262,7 +5164,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 368. `cap-js/cap-operator-plugin`
+### 361. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5277,7 +5179,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 369. `cap-js/cap-operator-plugin`
+### 362. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5292,7 +5194,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 370. `cap-js/cap-operator-plugin`
+### 363. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5307,7 +5209,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 371. `cap-js/cap-operator-plugin`
+### 364. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5322,7 +5224,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 372. `cap-js/cap-operator-plugin`
+### 365. `cap-js/cap-operator-plugin`
 
 - Chart: `D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart`
 - Source: `template`
@@ -5337,7 +5239,7 @@ Error: bookshop/templates/cap-operator-cros-mta.yaml:69:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 373. `punchplatform/punch-helm`
+### 366. `punchplatform/punch-helm`
 
 - Chart: `D:\helm_clones_github\punchplatform__punch-helm\injector`
 - Source: `template`
@@ -5351,7 +5253,7 @@ Error: log-injector/templates/deployment.yaml:21:22
 Use --debug flag to render out invalid YAML
 ```
 
-### 374. `CloudFitSoftware/PubSec-Info-Assistant`
+### 367. `CloudFitSoftware/PubSec-Info-Assistant`
 
 - Chart: `D:\helm_clones_github\CloudFitSoftware__PubSec-Info-Assistant\charts\cert-manager-chart`
 - Source: `template`
@@ -5368,7 +5270,7 @@ cert-manager/templates/_helpers.tpl:159:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 375. `CloudFitSoftware/PubSec-Info-Assistant`
+### 368. `CloudFitSoftware/PubSec-Info-Assistant`
 
 - Chart: `D:\helm_clones_github\CloudFitSoftware__PubSec-Info-Assistant\charts\cert-manager-chart`
 - Source: `template`
@@ -5383,7 +5285,7 @@ Error: cert-manager/templates/webhook-validating-webhook.yaml:13:20
 Use --debug flag to render out invalid YAML
 ```
 
-### 376. `CloudFitSoftware/PubSec-Info-Assistant`
+### 369. `CloudFitSoftware/PubSec-Info-Assistant`
 
 - Chart: `D:\helm_clones_github\CloudFitSoftware__PubSec-Info-Assistant\charts\infoasst-enrichment`
 - Source: `template`
@@ -5397,7 +5299,7 @@ Error: infoasst-enrichment/templates/enrichment-deployment.yaml:18:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 377. `CloudFitSoftware/PubSec-Info-Assistant`
+### 370. `CloudFitSoftware/PubSec-Info-Assistant`
 
 - Chart: `D:\helm_clones_github\CloudFitSoftware__PubSec-Info-Assistant\charts\infoasst-llm`
 - Source: `template`
@@ -5411,7 +5313,7 @@ Error: infoasst-llm/templates/llm-deployment.yaml:18:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 378. `CloudFitSoftware/PubSec-Info-Assistant`
+### 371. `CloudFitSoftware/PubSec-Info-Assistant`
 
 - Chart: `D:\helm_clones_github\CloudFitSoftware__PubSec-Info-Assistant\charts\infoasst-reranker`
 - Source: `template`
@@ -5425,7 +5327,7 @@ Error: infoasst-reranker/templates/reranker-deployment.yaml:18:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 379. `CloudFitSoftware/PubSec-Info-Assistant`
+### 372. `CloudFitSoftware/PubSec-Info-Assistant`
 
 - Chart: `D:\helm_clones_github\CloudFitSoftware__PubSec-Info-Assistant\charts\infoasst-t2v`
 - Source: `template`
@@ -5439,7 +5341,7 @@ Error: infoasst-enrichment/templates/t2v-deployment.yaml:18:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 380. `CloudFitSoftware/PubSec-Info-Assistant`
+### 373. `CloudFitSoftware/PubSec-Info-Assistant`
 
 - Chart: `D:\helm_clones_github\CloudFitSoftware__PubSec-Info-Assistant\charts\infoasst-weaviate-container`
 - Source: `template`
@@ -5453,7 +5355,7 @@ Error: infoasst-weaviate/templates/weaviate-container-deployment.yaml:18:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 381. `CloudFitSoftware/PubSec-Info-Assistant`
+### 374. `CloudFitSoftware/PubSec-Info-Assistant`
 
 - Chart: `D:\helm_clones_github\CloudFitSoftware__PubSec-Info-Assistant\charts\infoasst-webapp`
 - Source: `template`
@@ -5467,7 +5369,7 @@ Error: infoasst-webapp/templates/webapp-deployment.yaml:18:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 382. `CloudFitSoftware/PubSec-Info-Assistant`
+### 375. `CloudFitSoftware/PubSec-Info-Assistant`
 
 - Chart: `D:\helm_clones_github\CloudFitSoftware__PubSec-Info-Assistant\charts\istio-controlplane-chart`
 - Source: `template`
@@ -5481,7 +5383,7 @@ Error: istio-controlplane/templates/readyjob.yaml:16:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 383. `CloudFitSoftware/PubSec-Info-Assistant`
+### 376. `CloudFitSoftware/PubSec-Info-Assistant`
 
 - Chart: `D:\helm_clones_github\CloudFitSoftware__PubSec-Info-Assistant\charts\istio-operator-chart`
 - Source: `template`
@@ -5495,35 +5397,7 @@ Error: istio-operator/templates/deployment.yaml:50:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 384. `cheyang/arena-spark`
-
-- Chart: `D:\helm_clones_github\cheyang__arena-spark\charts\tfserving`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\cheyang__arena-spark\charts\tfserving`
-
-```text
-Error: tensorflow-serving/templates/deployment.yaml:16:34
-  executing "tensorflow-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
-    nil pointer evaluating interface {}.Seconds
-
-Use --debug flag to render out invalid YAML
-```
-
-### 385. `cheyang/arena-spark`
-
-- Chart: `D:\helm_clones_github\cheyang__arena-spark\charts\trtserving`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\cheyang__arena-spark\charts\trtserving`
-
-```text
-Error: tensorrt-serving/templates/deployment.yaml:15:34
-  executing "tensorrt-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
-    nil pointer evaluating interface {}.Seconds
-
-Use --debug flag to render out invalid YAML
-```
-
-### 386. `kalavai-net/helm-charts`
+### 377. `kalavai-net/helm-charts`
 
 - Chart: `D:\helm_clones_github\kalavai-net__helm-charts\charts\kalavai-api`
 - Source: `template`
@@ -5537,7 +5411,7 @@ Error: kalavai-api/templates/secrets.yaml:9:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 387. `lucidworks/ocp-fusion-helm-charts`
+### 378. `lucidworks/ocp-fusion-helm-charts`
 
 - Chart: `D:\helm_clones_github\lucidworks__ocp-fusion-helm-charts\5.3.4\fusion`
 - Source: `template`
@@ -5555,7 +5429,7 @@ fusion/charts/admin-ui/charts/fusion-common-utils/templates/_helpers.tpl:342:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 388. `ministryofjustice/cloud-platform-how-out-of-date-are-we`
+### 379. `ministryofjustice/cloud-platform-how-out-of-date-are-we`
 
 - Chart: `D:\helm_clones_github\ministryofjustice__cloud-platform-how-out-of-date-are-we\cloud-platform-reports-cronjobs`
 - Source: `template`
@@ -5572,7 +5446,7 @@ cloud-platform-reports-cronjobs/templates/_helpers.tpl:25:20
 Use --debug flag to render out invalid YAML
 ```
 
-### 389. `ministryofjustice/cloud-platform-how-out-of-date-are-we`
+### 380. `ministryofjustice/cloud-platform-how-out-of-date-are-we`
 
 - Chart: `D:\helm_clones_github\ministryofjustice__cloud-platform-how-out-of-date-are-we\cloud-platform-reports-cronjobs`
 - Source: `template`
@@ -5590,7 +5464,7 @@ cloud-platform-reports-cronjobs/templates/_helpers.tpl:25:20
 Use --debug flag to render out invalid YAML
 ```
 
-### 390. `onasunnymorning/domain-os`
+### 381. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\dos`
 - Source: `template`
@@ -5604,7 +5478,7 @@ Error: dos/templates/sync-worker-deployment.yaml:6:22
 Use --debug flag to render out invalid YAML
 ```
 
-### 391. `onasunnymorning/domain-os`
+### 382. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\echo`
 - Source: `template`
@@ -5618,7 +5492,7 @@ Error: streamclient/templates/secrets.yaml:6:22
 Use --debug flag to render out invalid YAML
 ```
 
-### 392. `onasunnymorning/domain-os`
+### 383. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\metabase`
 - Source: `template`
@@ -5632,7 +5506,7 @@ Error: metabase-helm-chart/templates/metabase-service.yaml:8:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 393. `onasunnymorning/domain-os`
+### 384. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\traefik`
 - Source: `template`
@@ -5646,7 +5520,7 @@ Error: traefik-helm/templates/traefik-service.yaml:9:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 394. `onasunnymorning/domain-os`
+### 385. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\v2\admin-api`
 - Source: `template`
@@ -5660,7 +5534,7 @@ Error: admin-api/templates/admin-api-service.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 395. `onasunnymorning/domain-os`
+### 386. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\v2\jump`
 - Source: `template`
@@ -5674,7 +5548,7 @@ Error: bastion-host/templates/junp-service.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 396. `onasunnymorning/domain-os`
+### 387. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\v2\metabase`
 - Source: `template`
@@ -5688,7 +5562,7 @@ Error: metabase-helm-chart/templates/metabase-service.yaml:8:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 397. `onasunnymorning/domain-os`
+### 388. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\v2\sftp`
 - Source: `template`
@@ -5702,7 +5576,7 @@ Error: sftp/templates/serviceaccount.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 398. `onasunnymorning/domain-os`
+### 389. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\v2\workers`
 - Source: `template`
@@ -5716,7 +5590,7 @@ Error: dos-workers/templates/domain-os-worker-deployment.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 399. `vlab-research/fly`
+### 390. `vlab-research/fly`
 
 - Chart: `D:\helm_clones_github\vlab-research__fly\dashboard-server\chart`
 - Source: `template`
@@ -5730,7 +5604,7 @@ Error: dashboard/templates/service.yaml:7:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 400. `JonasHess/homelab-iac`
+### 391. `JonasHess/homelab-iac`
 
 - Chart: `D:\helm_clones_github\JonasHess__homelab-iac\apps\argocd`
 - Source: `template`
@@ -5744,7 +5618,7 @@ Error: argocd/templates/argocd-httproute.yaml:1:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 401. `JonasHess/homelab-iac`
+### 392. `JonasHess/homelab-iac`
 
 - Chart: `D:\helm_clones_github\JonasHess__homelab-iac\apps\crossplane`
 - Source: `template`
@@ -5758,7 +5632,7 @@ Error: crossplane/templates/external-secret-aws-creds.yaml:9:20
 Use --debug flag to render out invalid YAML
 ```
 
-### 402. `JonasHess/homelab-iac`
+### 393. `JonasHess/homelab-iac`
 
 - Chart: `D:\helm_clones_github\JonasHess__homelab-iac\apps\mosquitto`
 - Source: `template`
@@ -5772,7 +5646,7 @@ Error: mosquitto/charts/generic/templates/external-secrets.yaml:14:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 403. `Kapil-Bhalodiya/E-Commerce`
+### 394. `Kapil-Bhalodiya/E-Commerce`
 
 - Chart: `D:\helm_clones_github\Kapil-Bhalodiya__E-Commerce\infra\addons\backend`
 - Source: `template`
@@ -5786,7 +5660,7 @@ Error: backend/templates/ingress.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 404. `Kapil-Bhalodiya/E-Commerce`
+### 395. `Kapil-Bhalodiya/E-Commerce`
 
 - Chart: `D:\helm_clones_github\Kapil-Bhalodiya__E-Commerce\infra\addons\frontend`
 - Source: `template`
@@ -5800,7 +5674,7 @@ Error: frontend/templates/ingress.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 405. `Kapil-Bhalodiya/E-Commerce`
+### 396. `Kapil-Bhalodiya/E-Commerce`
 
 - Chart: `D:\helm_clones_github\Kapil-Bhalodiya__E-Commerce\infra\addons\gateway-api`
 - Source: `template`
@@ -5814,7 +5688,7 @@ Error: gateway-api/templates/httproute-backend.yaml:29:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 406. `LasseRapo/fabric-cti-sharing`
+### 397. `LasseRapo/fabric-cti-sharing`
 
 - Chart: `D:\helm_clones_github\LasseRapo__fabric-cti-sharing\bevel-operator-fabric\charts\hlf-ca`
 - Source: `template`
@@ -5828,7 +5702,7 @@ Error: hlf-ca/templates/traefikroute.yaml:1:13
 Use --debug flag to render out invalid YAML
 ```
 
-### 407. `LasseRapo/fabric-cti-sharing`
+### 398. `LasseRapo/fabric-cti-sharing`
 
 - Chart: `D:\helm_clones_github\LasseRapo__fabric-cti-sharing\bevel-operator-fabric\charts\hlf-ordnode`
 - Source: `template`
@@ -5842,7 +5716,7 @@ Error: hlf-ordnode/templates/traefikroute.yaml:1:13
 Use --debug flag to render out invalid YAML
 ```
 
-### 408. `MrE-Fog/ks-installer2`
+### 399. `MrE-Fog/ks-installer2`
 
 - Chart: `D:\helm_clones_github\MrE-Fog__ks-installer2\roles\common\files\openldap-ha`
 - Source: `template`
@@ -5856,7 +5730,7 @@ Error: openldap-ha/templates/statefulset.yaml:144:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 409. `MrE-Fog/ks-installer2`
+### 400. `MrE-Fog/ks-installer2`
 
 - Chart: `D:\helm_clones_github\MrE-Fog__ks-installer2\roles\edgeruntime\files\kubeedge\cloudcore`
 - Source: `template`
@@ -5870,7 +5744,7 @@ Error: cloudcore/templates/service_edgeservice.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 410. `MrE-Fog/ks-installer2`
+### 401. `MrE-Fog/ks-installer2`
 
 - Chart: `D:\helm_clones_github\MrE-Fog__ks-installer2\roles\ks-auditing\files\kube-auditing`
 - Source: `template`
@@ -5884,7 +5758,7 @@ Error: kube-auditing/templates/webhook.yaml:6:16
 Use --debug flag to render out invalid YAML
 ```
 
-### 411. `MrE-Fog/ks-installer2`
+### 402. `MrE-Fog/ks-installer2`
 
 - Chart: `D:\helm_clones_github\MrE-Fog__ks-installer2\roles\ks-monitor\files\notification-manager`
 - Source: `template`
@@ -5898,7 +5772,7 @@ Error: notification-manager/templates/operator.yaml:23:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 412. `PilotDataPlatform/helm-charts`
+### 403. `PilotDataPlatform/helm-charts`
 
 - Chart: `D:\helm_clones_github\PilotDataPlatform__helm-charts\ai-chat-service`
 - Source: `template`
@@ -5912,7 +5786,7 @@ Error: ai-chat-service/templates/deployment.yaml:51:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 413. `cisco-open/appdynamics-k8s-webhook-instrumentor`
+### 404. `cisco-open/appdynamics-k8s-webhook-instrumentor`
 
 - Chart: `D:\helm_clones_github\cisco-open__appdynamics-k8s-webhook-instrumentor\buildEnv\helm\webhook-instrumentor`
 - Source: `template`
@@ -5926,7 +5800,7 @@ Error: webhook-instrumentor/templates/d-webhook-instrumentor.yaml:31:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 414. `cisco-open/appdynamics-k8s-webhook-instrumentor`
+### 405. `cisco-open/appdynamics-k8s-webhook-instrumentor`
 
 - Chart: `D:\helm_clones_github\cisco-open__appdynamics-k8s-webhook-instrumentor\webhook\helm\instrumentor`
 - Source: `template`
@@ -5940,7 +5814,7 @@ Error: webhook-instrumentor/templates/d-webhook-instrumentor.yaml:31:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 415. `codefuturist/helm-charts`
+### 406. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\actualbudget`
 - Source: `template`
@@ -5954,7 +5828,7 @@ Error: actualbudget/templates/statefulset.yaml:1:17
 Use --debug flag to render out invalid YAML
 ```
 
-### 416. `codefuturist/helm-charts`
+### 407. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\bitwarden-eso-provider`
 - Source: `template`
@@ -5968,7 +5842,7 @@ Error: bitwarden-eso-provider/templates/serviceaccount.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 417. `codefuturist/helm-charts`
+### 408. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\homarr`
 - Source: `template`
@@ -5982,7 +5856,7 @@ Error: homarr/templates/deployment.yaml:222:22
 Use --debug flag to render out invalid YAML
 ```
 
-### 418. `codefuturist/helm-charts`
+### 409. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\home-assistant`
 - Source: `template`
@@ -5999,7 +5873,7 @@ home-assistant/templates/_helpers.tpl:130:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 419. `codefuturist/helm-charts`
+### 410. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\metube`
 - Source: `template`
@@ -6013,7 +5887,7 @@ Error: metube/templates/statefulset.yaml:1:17
 Use --debug flag to render out invalid YAML
 ```
 
-### 420. `codefuturist/helm-charts`
+### 411. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\paperless-ngx`
 - Source: `template`
@@ -6027,7 +5901,7 @@ Error: paperless-ngx/templates/worker-deployment.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 421. `codefuturist/helm-charts`
+### 412. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\shlink`
 - Source: `template`
@@ -6044,7 +5918,7 @@ shlink/templates/_helpers.tpl:153:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 422. `stfc/cloud-helm-charts`
+### 413. `stfc/cloud-helm-charts`
 
 - Chart: `D:\helm_clones_github\stfc__cloud-helm-charts\old\stfc-cloud-chatops`
 - Source: `template`
@@ -6058,7 +5932,7 @@ Error: stfc-cloud-chatops/templates/secrets.yaml:9:31
 Use --debug flag to render out invalid YAML
 ```
 
-### 423. `AlexanderBabel/helm-charts`
+### 414. `AlexanderBabel/helm-charts`
 
 - Chart: `D:\helm_clones_github\AlexanderBabel__helm-charts\charts\matrix`
 - Source: `template`
@@ -6078,7 +5952,7 @@ matrix/templates/synapse/_homeserver.yaml:421:16
 Use --debug flag to render out invalid YAML
 ```
 
-### 424. `Bahmni/helm-umbrella-chart`
+### 415. `Bahmni/helm-umbrella-chart`
 
 - Chart: `D:\helm_clones_github\Bahmni__helm-umbrella-chart`
 - Source: `template`
@@ -6092,7 +5966,7 @@ Error: bahmni/templates/ingress.yaml:6:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 425. `Clark1992/ECK1`
+### 416. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\analytics\clickhouse`
 - Source: `template`
@@ -6106,7 +5980,7 @@ Error: clickhouse/templates/stateful-set.yaml:60:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 426. `Clark1992/ECK1`
+### 417. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\cert`
 - Source: `template`
@@ -6120,7 +5994,7 @@ Error: elasticsearch-certs/templates/renew-cert-job-once.yaml:17:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 427. `Clark1992/ECK1`
+### 418. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\cluster`
 - Source: `template`
@@ -6134,7 +6008,7 @@ Error: elasticsearch/templates/statefulset-master.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 428. `Clark1992/ECK1`
+### 419. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\cluster`
 - Source: `template`
@@ -6149,7 +6023,7 @@ Error: elasticsearch/templates/statefulset-master.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 429. `Clark1992/ECK1`
+### 420. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\cluster`
 - Source: `template`
@@ -6164,7 +6038,7 @@ Error: elasticsearch/templates/statefulset-master.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 430. `Clark1992/ECK1`
+### 421. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\cluster`
 - Source: `template`
@@ -6179,7 +6053,7 @@ Error: elasticsearch/templates/statefulset-master.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 431. `Clark1992/ECK1`
+### 422. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\external-access`
 - Source: `template`
@@ -6193,7 +6067,7 @@ Error: elasticsearch-external-access/templates/ingress.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 432. `Clark1992/ECK1`
+### 423. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\external-access`
 - Source: `template`
@@ -6208,7 +6082,7 @@ Error: elasticsearch-external-access/templates/ingress.yaml:28:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 433. `Clark1992/ECK1`
+### 424. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\internal-access`
 - Source: `template`
@@ -6222,7 +6096,7 @@ Error: elasticsearch-internal-access/templates/service.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 434. `Clark1992/ECK1`
+### 425. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\internal-access`
 - Source: `template`
@@ -6237,7 +6111,7 @@ Error: elasticsearch-internal-access/templates/service.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 435. `Clark1992/ECK1`
+### 426. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\global-vars`
 - Source: `template`
@@ -6251,7 +6125,7 @@ Error: global-config/templates/configmap.yaml:13:48
 Use --debug flag to render out invalid YAML
 ```
 
-### 436. `Clark1992/ECK1`
+### 427. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\global-vars`
 - Source: `template`
@@ -6266,7 +6140,7 @@ Error: global-config/templates/configmap.yaml:13:48
 Use --debug flag to render out invalid YAML
 ```
 
-### 437. `Clark1992/ECK1`
+### 428. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\kafka\cluster`
 - Source: `template`
@@ -6280,7 +6154,7 @@ Error: strimzi-kafka/templates/user.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 438. `Clark1992/ECK1`
+### 429. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\kafka\schema-registry\apicurio`
 - Source: `template`
@@ -6294,7 +6168,7 @@ Error: apicurio-registry/templates/service-topics.yaml:8:34
 Use --debug flag to render out invalid YAML
 ```
 
-### 439. `Clark1992/ECK1`
+### 430. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\kafka\schema-registry\apicurio`
 - Source: `template`
@@ -6309,7 +6183,7 @@ Error: apicurio-registry/templates/registry-cr.yaml:13:34
 Use --debug flag to render out invalid YAML
 ```
 
-### 440. `Clark1992/ECK1`
+### 431. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\namespace`
 - Source: `template`
@@ -6323,7 +6197,7 @@ Error: namespaces/templates/namespace.yaml:8:19
 Use --debug flag to render out invalid YAML
 ```
 
-### 441. `Clark1992/ECK1`
+### 432. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\integration-manifests`
 - Source: `template`
@@ -6337,7 +6211,7 @@ Error: eck1-commands-integration-manifests/templates/elasticsearch/es-mappings-j
 Use --debug flag to render out invalid YAML
 ```
 
-### 442. `Clark1992/ECK1`
+### 433. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\integration-manifests`
 - Source: `template`
@@ -6352,7 +6226,7 @@ Error: eck1-commands-integration-manifests/templates/elasticsearch/es-mappings-j
 Use --debug flag to render out invalid YAML
 ```
 
-### 443. `Clark1992/ECK1`
+### 434. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\service`
 - Source: `template`
@@ -6366,7 +6240,7 @@ Error: eck1-commandsapi/templates/deployment.yaml:80:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 444. `Clark1992/ECK1`
+### 435. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\service`
 - Source: `template`
@@ -6381,7 +6255,7 @@ Error: eck1-commandsapi/templates/deployment.yaml:80:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 445. `Clark1992/ECK1`
+### 436. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.FE\Deploy`
 - Source: `template`
@@ -6395,7 +6269,7 @@ Error: eck1-fe/templates/service.yaml:8:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 446. `Clark1992/ECK1`
+### 437. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.Gateway\Deploy`
 - Source: `template`
@@ -6409,7 +6283,7 @@ Error: eck1-gateway/templates/service.yaml:8:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 447. `Microsoft/mssql-docker`
+### 438. `Microsoft/mssql-docker`
 
 - Chart: `D:\helm_clones_artifacthub\Microsoft__mssql-docker\linux\rancher`
 - Source: `template`
@@ -6423,7 +6297,7 @@ Error: sql-server-rancher/templates/secret.yaml:9:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 448. `gchq/gaffer-docker`
+### 439. `gchq/gaffer-docker`
 
 - Chart: `D:\helm_clones_artifacthub\gchq__gaffer-docker\kubernetes\gaffer-jhub`
 - Source: `template`
@@ -6437,7 +6311,7 @@ Error: gaffer-jhub/templates/tests/notebook-tests/pod.yaml:38:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 449. `rhdh-bot/openshift-helm-charts`
+### 440. `rhdh-bot/openshift-helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\redhat\redhat\redhat-httpd-template\0.0.2\src`
 - Source: `template`
@@ -36172,6 +36046,134 @@ Getting updates for unmanaged Helm repositories...
 ...Successfully got an update from the "https://library-charts.k8s-at-home.com" chart repository
 ...Successfully got an update from the "https://charts.bitnami.com/bitnami" chart repository
 Error: can't get a valid version for 1 subchart(s): "mariadb" (repository "https://charts.bitnami.com/bitnami", version "11.0.2"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml
+```
+
+## `template.unsupported_builtin` (9)
+
+### 1. `WeBankFinTech/Prophecis`
+
+- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\custom-serving`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\custom-serving`
+
+```text
+Error: custom-serving/templates/deployment.yaml:17:34
+  executing "custom-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
+    nil pointer evaluating interface {}.Seconds
+
+Use --debug flag to render out invalid YAML
+```
+
+### 2. `WeBankFinTech/Prophecis`
+
+- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\tfserving`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\tfserving`
+
+```text
+Error: tensorflow-serving/templates/deployment.yaml:17:34
+  executing "tensorflow-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
+    nil pointer evaluating interface {}.Seconds
+
+Use --debug flag to render out invalid YAML
+```
+
+### 3. `WeBankFinTech/Prophecis`
+
+- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\trtserving`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\trtserving`
+
+```text
+Error: tensorrt-serving/templates/deployment.yaml:16:34
+  executing "tensorrt-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
+    nil pointer evaluating interface {}.Seconds
+
+Use --debug flag to render out invalid YAML
+```
+
+### 4. `WeBankFinTech/Prophecis`
+
+- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\custom-serving`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\custom-serving`
+
+```text
+Error: custom-serving/templates/deployment.yaml:17:34
+  executing "custom-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
+    nil pointer evaluating interface {}.Seconds
+
+Use --debug flag to render out invalid YAML
+```
+
+### 5. `WeBankFinTech/Prophecis`
+
+- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\tfserving`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\tfserving`
+
+```text
+Error: tensorflow-serving/templates/deployment.yaml:17:34
+  executing "tensorflow-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
+    nil pointer evaluating interface {}.Seconds
+
+Use --debug flag to render out invalid YAML
+```
+
+### 6. `WeBankFinTech/Prophecis`
+
+- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\trtserving`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\trtserving`
+
+```text
+Error: tensorrt-serving/templates/deployment.yaml:16:34
+  executing "tensorrt-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
+    nil pointer evaluating interface {}.Seconds
+
+Use --debug flag to render out invalid YAML
+```
+
+### 7. `celo-org/charts`
+
+- Chart: `D:\helm_clones_github\celo-org__charts\charts\clean-pvcs`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\celo-org__charts\charts\clean-pvcs`
+
+```text
+Error: clean-pvcs/templates/cronjob.yaml:53:59
+  executing "clean-pvcs/templates/cronjob.yaml" at <.Release.Namespace>:
+    nil pointer evaluating interface {}.Namespace
+
+Use --debug flag to render out invalid YAML
+```
+
+### 8. `cheyang/arena-spark`
+
+- Chart: `D:\helm_clones_github\cheyang__arena-spark\charts\tfserving`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\cheyang__arena-spark\charts\tfserving`
+
+```text
+Error: tensorflow-serving/templates/deployment.yaml:16:34
+  executing "tensorflow-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
+    nil pointer evaluating interface {}.Seconds
+
+Use --debug flag to render out invalid YAML
+```
+
+### 9. `cheyang/arena-spark`
+
+- Chart: `D:\helm_clones_github\cheyang__arena-spark\charts\trtserving`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\cheyang__arena-spark\charts\trtserving`
+
+```text
+Error: tensorrt-serving/templates/deployment.yaml:15:34
+  executing "tensorrt-serving/templates/deployment.yaml" at <.Release.Time.Seconds>:
+    nil pointer evaluating interface {}.Seconds
+
+Use --debug flag to render out invalid YAML
 ```
 
 ## `dependency.network_dns` (7)

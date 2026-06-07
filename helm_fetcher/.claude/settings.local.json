@@ -73,7 +73,10 @@
       "Bash(grep -n -A30 \"charts.gitops-runtime.,$\\\\|gitops-runtime/templates/hooks\" catalog_fixed_cumulative.json)",
       "Bash(awk '/^## `unknown.unclassified`/{f=1} f' out/cumulative_final/taxonomy_errors_by_bucket.md)",
       "Bash(awk '/^## `unknown.unclassified`/{f=1} f&&/^## /&&!/unknown.unclassified/{exit} f' out/cumulative_final/taxonomy_errors_by_bucket.md)",
-      "Bash(awk '/^## `template.enum_constraint`/{f=1} f&&/^## /&&!/enum_constraint/{exit} f' out/cumulative_final/taxonomy_errors_by_bucket.md)"
+      "Bash(awk '/^## `template.enum_constraint`/{f=1} f&&/^## /&&!/enum_constraint/{exit} f' out/cumulative_final/taxonomy_errors_by_bucket.md)",
+      "Bash(python3 -c ' *)",
+      "Bash(node -e ' *)",
+      "PowerShell(.\\\\scripts\\\\refix_all.ps1)"
     ]
   }
 }

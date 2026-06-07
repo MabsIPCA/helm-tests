@@ -1,6 +1,6 @@
 # Helm Error Taxonomy Report
 
-Generated at: `2026-06-05 07:27:58 UTC`
+Generated at: `2026-06-07 21:12:05 UTC`
 
 Source catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_sources_merged.json`
 
@@ -17,8 +17,8 @@ Fixed catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_fi
 | Classified errors | 1295 |
 | Unclassified errors | 22 |
 | Fix attempts | 1103 |
-| Fix resolved | 691 |
-| Fix unresolved | 412 |
+| Fix resolved | 693 |
+| Fix unresolved | 410 |
 
 ## Taxonomy by Kind
 
@@ -32,7 +32,7 @@ Fixed catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_fi
 
 | SubKind | Count | Fix Resolved | Fix Unresolved |
 |---|---:|---:|---:|
-| `template.nil_pointer` | 449 | 397 | 52 |
+| `template.nil_pointer` | 440 | 399 | 41 |
 | `template.required_value` | 222 | 162 | 60 |
 | `template.kube_version_incompatible` | 134 | 131 | 3 |
 | `dependency.missing_repository` | 126 | 0 | 0 |
@@ -47,6 +47,7 @@ Fixed catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_fi
 | `dependency.chart_validation` | 11 | 0 | 0 |
 | `dependency.lock_file_out_of_sync` | 11 | 0 | 0 |
 | `dependency.repo_update` | 9 | 0 | 0 |
+| `template.unsupported_builtin` | 9 | 0 | 9 |
 | `dependency.network_dns` | 7 | 0 | 0 |
 | `template.type_mismatch` | 7 | 1 | 6 |
 | `dependency.malformed_yaml` | 6 | 0 | 0 |

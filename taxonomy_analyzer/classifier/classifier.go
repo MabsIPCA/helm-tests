@@ -33,6 +33,14 @@ var templateRules = []Rule{
 	// malformed_yaml is checked first: the chart can't be parsed, so it is a
 	// distinct non-fixable class (not a render/value problem).
 	{Kind: "template", SubKind: "malformed_yaml", Patterns: nonFixableYAMLPatterns},
+	// unsupported_builtin: nil pointer on a Helm built-in object (.Release.Time,
+	// .Capabilities, ...) — not a value, so --set cannot fix it. Checked before
+	// the generic nil_pointer rule so it isn't mistaken for a fixable case. The
+	// classic case is .Release.Time, removed in Helm 3 (Helm-2-only charts).
+	{Kind: "template", SubKind: "unsupported_builtin", Patterns: []string{
+		"at <.release.", "at <$.release.",
+		"at <.capabilities.", "at <$.capabilities.",
+	}},
 	{Kind: "template", SubKind: "nil_pointer", Patterns: []string{"nil pointer evaluating"}},
 	{Kind: "template", SubKind: "parse_error", Patterns: []string{"parse error at", "unexpected \"=\" in operand", "unexpected end"}},
 	{Kind: "template", SubKind: "missing_template", Patterns: []string{"no template", "error calling include"}},

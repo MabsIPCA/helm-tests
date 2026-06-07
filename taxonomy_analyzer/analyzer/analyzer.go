@@ -3,6 +3,7 @@ package analyzer
 import (
 	"fmt"
 	"sort"
+	"strings"
 	"time"
 
 	"github.com/MabsIPCA/helm-tests/taxonomy_analyzer/classifier"
@@ -13,8 +14,9 @@ const maxExamplesPerBucket = 5
 
 // Analyzer keeps running aggregation state while catalog entries are streamed.
 type Analyzer struct {
-	report     model.TaxonomyReport
-	fixedIndex map[string]*model.FixedResult
+	report      model.TaxonomyReport
+	fixedIndex  map[string]*model.FixedResult
+	transitions map[string]int // "start.sub -> final.sub" -> count
 }
 
 // New creates a new analyzer report collector.
@@ -30,7 +32,7 @@ func New(sourceCatalog, fixedCatalog string, fixedIndex map[string]*model.FixedR
 	if fixedCatalog != "" {
 		r.FixedCatalog = fixedCatalog
 	}
-	return &Analyzer{report: r, fixedIndex: fixedIndex}
+	return &Analyzer{report: r, fixedIndex: fixedIndex, transitions: map[string]int{}}
 }
 
 // ConsumeRepo feeds one repo result into the taxonomy analyzer.
@@ -86,6 +88,40 @@ func (a *Analyzer) consumeOccurrence(occ model.ErrorOccurrence) {
 
 	kindKey := occ.ErrorKind
 	subKindKey := fmt.Sprintf("%s.%s", occ.ErrorKind, occ.ErrorSubKind)
+
+	// Classify the FINAL error cumulatively: the error the chart is STILL failing
+	// with at the end. This covers every run that is not resolved — unresolved
+	// fixes (use the recorded blocker, or the original error if none was
+	// captured) AND runs that were never attempted (the original error stands as
+	// the final). Resolved runs have no final error. Done before the buckets are
+	// bumped so examples carry the final-error fields too.
+	resolved := occ.Fixed != nil && occ.Fixed.Resolved
+	if !resolved {
+		// The recorded FinalError is only a genuine, different blocker when the
+		// fixer actually injected something (non-empty fix chain). With an empty
+		// chain nothing changed, so the chart still has its ORIGINAL error — any
+		// captured FinalError is a fixer-environment artifact (e.g. deps not built
+		// producing a dependency error). Unfixable kinds we never attempt
+		// (values_schema_validation, custom_validation, ...) thus keep
+		// final == start, and not-attempted runs (Fixed == nil) likewise.
+		injected := occ.Fixed != nil && len(occ.Fixed.FixChain) > 0
+		finalText := occ.ErrorMessage
+		if injected && occ.Fixed.FinalError != "" {
+			finalText = occ.Fixed.FinalError
+		}
+		fres := classifier.Classify(finalText, occ.ErrorSource)
+		occ.FinalErrorKind = fres.Kind
+		occ.FinalErrorSubKind = fres.SubKind
+		finalSubKey := fres.Kind + "." + fres.SubKind
+		a.bumpFinalCount(a.report.ByKind, fres.Kind)
+		a.bumpFinalCount(a.report.BySubKind, finalSubKey)
+		// Transitions track the journey of an actual fix attempt — only record
+		// when injection happened, so the panel stays about post-injection movement.
+		if injected {
+			a.transitions[subKindKey+" -> "+finalSubKey]++
+		}
+	}
+
 	a.bumpBucket(a.report.ByKind, kindKey, occ)
 	a.bumpBucket(a.report.BySubKind, subKindKey, occ)
 
@@ -105,6 +141,15 @@ func (a *Analyzer) consumeOccurrence(occ model.ErrorOccurrence) {
 	}
 	a.report.ByRepo[occ.RepoName][subKindKey]++
 	a.report.AllClassified = append(a.report.AllClassified, occ)
+}
+
+// bumpFinalCount increments the destination counter for a taxonomy bucket. The
+// bucket may not yet exist (a taxonomy that only ever appears as a final blocker,
+// never as a start) — that is the point, and it surfaces with Count 0.
+func (a *Analyzer) bumpFinalCount(buckets map[string]model.TaxonomyBucket, key string) {
+	bucket := buckets[key]
+	bucket.FinalCount++
+	buckets[key] = bucket
 }
 
 func (a *Analyzer) bumpBucket(buckets map[string]model.TaxonomyBucket, key string, occ model.ErrorOccurrence) {
@@ -144,7 +189,31 @@ func (a *Analyzer) Report() model.TaxonomyReport {
 	report.ByKind = sortBucketsByCount(report.ByKind)
 	report.BySubKind = sortBucketsByCount(report.BySubKind)
 	report.ByRepo = sortRepoKinds(report.ByRepo)
+	report.Transitions = sortTransitions(a.transitions)
 	return report
+}
+
+// sortTransitions flattens the start->final transition counter into a slice
+// sorted by count desc (then key) for deterministic, readable output.
+func sortTransitions(src map[string]int) []model.TransitionStat {
+	if len(src) == 0 {
+		return nil
+	}
+	out := make([]model.TransitionStat, 0, len(src))
+	for k, c := range src {
+		from, to, _ := strings.Cut(k, " -> ")
+		out = append(out, model.TransitionStat{From: from, To: to, Count: c})
+	}
+	sort.SliceStable(out, func(i, j int) bool {
+		if out[i].Count == out[j].Count {
+			if out[i].From == out[j].From {
+				return out[i].To < out[j].To
+			}
+			return out[i].From < out[j].From
+		}
+		return out[i].Count > out[j].Count
+	})
+	return out
 }
 
 // map order is not guaranteed in JSON output, so we recreate maps in sorted order
