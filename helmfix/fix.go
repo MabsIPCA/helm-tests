@@ -19,8 +19,10 @@ const (
 
 var (
 	// atValuesRe captures the offending value path from a Go-template error's
-	// "at <.Values.x.y ...>" clause (nil-pointer and wrong-type errors).
-	atValuesRe = regexp.MustCompile(`at <(\.Values\.[^ |>]+)`)
+	// "at <.Values.x.y ...>" clause (nil-pointer and wrong-type errors). The
+	// optional "$" handles templates that reference the root context explicitly,
+	// e.g. "at <$.Values.global.security>" — $ is Go-template's root data ref.
+	atValuesRe = regexp.MustCompile(`at <\$?(\.Values\.[^ |>]+)`)
 
 	// valuesPathRe matches an explicit ".Values.x.y" path anywhere in a message.
 	valuesPathRe = regexp.MustCompile(`\.Values\.([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*)`)
@@ -84,6 +86,20 @@ var unparseableYAMLMarkers = []string{
 	"error unmarshaling json",
 	"error converting yaml to json",
 	"error reading yaml document",
+}
+
+// builtinNilRe matches a nil-pointer error whose at-clause targets a Helm
+// built-in object that cannot be set via --set: .Release, .Capabilities, .Chart,
+// .Template, .Files (optional "$" root ref). The classic case is .Release.Time,
+// removed in Helm 3 — charts written for Helm 2 hit a nil pointer that no value
+// injection can repair.
+var builtinNilRe = regexp.MustCompile(`at <\$?\.(Release|Capabilities|Chart|Template|Files)\.`)
+
+// IsUnsupportedBuiltin reports whether errStr is a nil-pointer on a Helm
+// built-in object — inherently non-fixable by value injection (the data comes
+// from Helm itself, not from values). e.g. ".Release.Time.Seconds".
+func IsUnsupportedBuiltin(errStr string) bool {
+	return strings.Contains(errStr, "nil pointer") && builtinNilRe.MatchString(errStr)
 }
 
 // IsUnparseableYAML reports whether errStr is a malformed-YAML / unmarshal

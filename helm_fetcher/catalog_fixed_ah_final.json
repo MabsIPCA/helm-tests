@@ -14937,7 +14937,7 @@
               "resolved": false,
               "stop_reason": "unfixable_error_kind",
               "fix_chain": [],
-              "final_error": "Error: values don't meet the specifications of the schema(s) in the following chart(s):\nfalcon-image-analyzer:\n- at '': 'allOf' failed\n  - at '/crowdstrikeConfig': missing property 'cid'\n  - at '/crowdstrikeConfig': 'allOf' failed\n    - at '/crowdstrikeConfig': validation failed\n      - at '/crowdstrikeConfig/clientID': '' does not match pattern '^[a-zA-Z0-9]{32}$'\n      - at '/crowdstrikeConfig/clientSecret': '' does not match pattern '^[a-zA-Z0-9]{40}$'\n- at '': 'oneOf' failed, none matched\n  - at '/deployment/enabled': value must be true\n  - at '/daemonset/enabled': value must be true\n\n"
+              "final_error": "Error: values don't meet the specifications of the schema(s) in the following chart(s):\nfalcon-image-analyzer:\n- at '': 'allOf' failed\n  - at '/crowdstrikeConfig': missing property 'cid'\n  - at '/crowdstrikeConfig': 'allOf' failed\n    - at '/crowdstrikeConfig': validation failed\n      - at '/crowdstrikeConfig/clientSecret': '' does not match pattern '^[a-zA-Z0-9]{40}$'\n      - at '/crowdstrikeConfig/clientID': '' does not match pattern '^[a-zA-Z0-9]{32}$'\n- at '': 'oneOf' failed, none matched\n  - at '/deployment/enabled': value must be true\n  - at '/daemonset/enabled': value must be true\n\n"
             }
           }
         ]
@@ -15194,7 +15194,7 @@
                   "value_injected": "kics-placeholder"
                 }
               ],
-              "final_command": "helm template test D:\\helm_clones_artifacthub\\neo4j__helm-charts\\neo4j-persistent-volume --set data.capacity.storage=kics-placeholder --set data.driver=kics-placeholder --set data.volumeHandle=kics-placeholder --set neo4j.name=kics-placeholder"
+              "final_command": "helm template test D:\\helm_clones_artifacthub\\neo4j__helm-charts\\neo4j-persistent-volume --set neo4j.name=kics-placeholder --set data.capacity.storage=kics-placeholder --set data.driver=kics-placeholder --set data.volumeHandle=kics-placeholder"
             }
           }
         ]
@@ -18027,7 +18027,7 @@
               "resolved": false,
               "stop_reason": "unfixable_error_kind",
               "fix_chain": [],
-              "final_error": "Error: values don't meet the specifications of the schema(s) in the following chart(s):\ncode-server:\n\"file:///values.schema.json#\" is not valid against metaschema: jsonschema validation failed with 'https://json-schema.org/draft/2020-12/schema#'\n- at '': 'allOf' failed\n  - at '': validation failed\n    - at '/properties/imagePullSecrets': 'allOf' failed\n      - at '/properties/imagePullSecrets/items': 'allOf' failed\n        - at '/properties/imagePullSecrets/items/$id': '#/properties/imagePullSecrets/items' does not match pattern '^[^#]*#?$'\n    - at '/properties/tolerations': 'allOf' failed\n      - at '/properties/tolerations/items': 'allOf' failed\n        - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'\n"
+              "final_error": "Error: values don't meet the specifications of the schema(s) in the following chart(s):\ncode-server:\n\"file:///values.schema.json#\" is not valid against metaschema: jsonschema validation failed with 'https://json-schema.org/draft/2020-12/schema#'\n- at '': 'allOf' failed\n  - at '': validation failed\n    - at '/properties/tolerations': 'allOf' failed\n      - at '/properties/tolerations/items': 'allOf' failed\n        - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'\n    - at '/properties/imagePullSecrets': 'allOf' failed\n      - at '/properties/imagePullSecrets/items': 'allOf' failed\n        - at '/properties/imagePullSecrets/items/$id': '#/properties/imagePullSecrets/items' does not match pattern '^[^#]*#?$'\n"
             }
           }
         ]
@@ -18047,7 +18047,7 @@
               "resolved": false,
               "stop_reason": "unfixable_error_kind",
               "fix_chain": [],
-              "final_error": "Error: values don't meet the specifications of the schema(s) in the following chart(s):\njupyterlab:\n\"file:///values.schema.json#\" is not valid against metaschema: jsonschema validation failed with 'https://json-schema.org/draft/2020-12/schema#'\n- at '': 'allOf' failed\n  - at '': validation failed\n    - at '/properties/tolerations': 'allOf' failed\n      - at '/properties/tolerations/items': 'allOf' failed\n        - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'\n    - at '/properties/imagePullSecrets': 'allOf' failed\n      - at '/properties/imagePullSecrets/items': 'allOf' failed\n        - at '/properties/imagePullSecrets/items/$id': '#/properties/imagePullSecrets/items' does not match pattern '^[^#]*#?$'\n"
+              "final_error": "Error: values don't meet the specifications of the schema(s) in the following chart(s):\njupyterlab:\n\"file:///values.schema.json#\" is not valid against metaschema: jsonschema validation failed with 'https://json-schema.org/draft/2020-12/schema#'\n- at '': 'allOf' failed\n  - at '': validation failed\n    - at '/properties/imagePullSecrets': 'allOf' failed\n      - at '/properties/imagePullSecrets/items': 'allOf' failed\n        - at '/properties/imagePullSecrets/items/$id': '#/properties/imagePullSecrets/items' does not match pattern '^[^#]*#?$'\n    - at '/properties/tolerations': 'allOf' failed\n      - at '/properties/tolerations/items': 'allOf' failed\n        - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'\n"
             }
           }
         ]
@@ -18087,7 +18087,7 @@
               "resolved": false,
               "stop_reason": "unfixable_error_kind",
               "fix_chain": [],
-              "final_error": "Error: values don't meet the specifications of the schema(s) in the following chart(s):\nrstudio:\n\"file:///values.schema.json#\" is not valid against metaschema: jsonschema validation failed with 'https://json-schema.org/draft/2020-12/schema#'\n- at '': 'allOf' failed\n  - at '': validation failed\n    - at '/properties/tolerations': 'allOf' failed\n      - at '/properties/tolerations/items': 'allOf' failed\n        - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'\n    - at '/properties/imagePullSecrets': 'allOf' failed\n      - at '/properties/imagePullSecrets/items': 'allOf' failed\n        - at '/properties/imagePullSecrets/items/$id': '#/properties/imagePullSecrets/items' does not match pattern '^[^#]*#?$'\n"
+              "final_error": "Error: values don't meet the specifications of the schema(s) in the following chart(s):\nrstudio:\n\"file:///values.schema.json#\" is not valid against metaschema: jsonschema validation failed with 'https://json-schema.org/draft/2020-12/schema#'\n- at '': 'allOf' failed\n  - at '': validation failed\n    - at '/properties/imagePullSecrets': 'allOf' failed\n      - at '/properties/imagePullSecrets/items': 'allOf' failed\n        - at '/properties/imagePullSecrets/items/$id': '#/properties/imagePullSecrets/items' does not match pattern '^[^#]*#?$'\n    - at '/properties/tolerations': 'allOf' failed\n      - at '/properties/tolerations/items': 'allOf' failed\n        - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'\n"
             }
           }
         ]
@@ -18484,7 +18484,7 @@
               "resolved": false,
               "stop_reason": "unfixable_error_kind",
               "fix_chain": [],
-              "final_error": "Error: values don't meet the specifications of the schema(s) in the following chart(s):\nkorifi:\n- at '': missing properties 'adminUserName', 'defaultAppDomainName'\n- at '/networking': missing property 'gatewayClass'\n- at '/containerRepositoryPrefix': '' does not match pattern '^[a-z0-9]+([._-][a-z0-9]+)*(:[0-9]+)?(/[a-z0-9]+([._-][a-z0-9]+)*)*/?$'\n\n"
+              "final_error": "Error: values don't meet the specifications of the schema(s) in the following chart(s):\nkorifi:\n- at '': missing properties 'adminUserName', 'defaultAppDomainName'\n- at '/containerRepositoryPrefix': '' does not match pattern '^[a-z0-9]+([._-][a-z0-9]+)*(:[0-9]+)?(/[a-z0-9]+([._-][a-z0-9]+)*)*/?$'\n- at '/networking': missing property 'gatewayClass'\n\n"
             }
           }
         ]

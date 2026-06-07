@@ -61,20 +61,41 @@ type RepoResult struct {
 }
 
 type ErrorOccurrence struct {
-	RepoURL      string       `json:"repo_url"`
-	RepoName     string       `json:"repo_name"`
-	ChartPath    string       `json:"chart_path"`
-	ValuesFiles  []string     `json:"values_files,omitempty"`
-	HelmCommand  string       `json:"helm_command,omitempty"`
-	ErrorSource  string       `json:"error_source"`
-	ErrorKind    string       `json:"error_kind"`
-	ErrorSubKind string       `json:"error_sub_kind"`
-	ErrorMessage string       `json:"error_message"`
-	Fixed        *FixedResult `json:"fixed,omitempty"`
+	RepoURL     string   `json:"repo_url"`
+	RepoName    string   `json:"repo_name"`
+	ChartPath   string   `json:"chart_path"`
+	ValuesFiles []string `json:"values_files,omitempty"`
+	HelmCommand string   `json:"helm_command,omitempty"`
+	ErrorSource string   `json:"error_source"`
+	// ErrorKind/ErrorSubKind classify the START error (the run's original
+	// error_message) — what the fixer first set out to fix.
+	ErrorKind    string `json:"error_kind"`
+	ErrorSubKind string `json:"error_sub_kind"`
+	ErrorMessage string `json:"error_message"`
+	// FinalErrorKind/FinalErrorSubKind classify the FINAL error (the blocker the
+	// fixer gave up on). After value injection the failure often shifts to a
+	// different taxonomy than the start, so it is classified independently. Set
+	// only for unresolved fixes that recorded a final_error.
+	FinalErrorKind    string       `json:"final_error_kind,omitempty"`
+	FinalErrorSubKind string       `json:"final_error_sub_kind,omitempty"`
+	Fixed             *FixedResult `json:"fixed,omitempty"`
+}
+
+// TransitionStat counts unresolved fixes whose START taxonomy "From" shifted to
+// FINAL taxonomy "To" once injections changed the failure (To may equal From
+// when the kind is unchanged, or be unknown.unclassified for a new blocker).
+type TransitionStat struct {
+	From  string `json:"from"`
+	To    string `json:"to"`
+	Count int    `json:"count"`
 }
 
 type TaxonomyBucket struct {
-	Count      int               `json:"count"`
+	Count int `json:"count"`
+	// FinalCount is how many unresolved fixes ended on this taxonomy as their
+	// FINAL blocker (regardless of what they started as). A bucket can have a
+	// high FinalCount but low Count when it is mostly a destination, not a start.
+	FinalCount int               `json:"final_count,omitempty"`
 	Examples   []ErrorOccurrence `json:"examples"`
 	FixOutcome *FixOutcome       `json:"fix_outcome,omitempty"`
 }
@@ -99,6 +120,9 @@ type TaxonomyReport struct {
 	ByKind        map[string]TaxonomyBucket `json:"by_kind"`
 	BySubKind     map[string]TaxonomyBucket `json:"by_sub_kind"`
 	ByRepo        map[string]map[string]int `json:"by_repo"`
-	Unclassified  []ErrorOccurrence         `json:"unclassified"`
-	AllClassified []ErrorOccurrence         `json:"all_classified"`
+	// Transitions records how the START taxonomy shifted to the FINAL taxonomy
+	// across unresolved fixes (sorted by count desc).
+	Transitions   []TransitionStat  `json:"transitions,omitempty"`
+	Unclassified  []ErrorOccurrence `json:"unclassified"`
+	AllClassified []ErrorOccurrence `json:"all_classified"`
 }

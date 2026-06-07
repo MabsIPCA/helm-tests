@@ -883,12 +883,12 @@ https://github.com/medic/cht-core,medic/cht-core,D:\helm_clones_github\medic__ch
 
 Use --debug flag to render out invalid YAML
 ",false,unfixable_error_kind
-https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\custom-serving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\custom-serving,template,template,nil_pointer,"Error: custom-serving/templates/deployment.yaml:17:34
+https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\custom-serving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\custom-serving,template,template,unsupported_builtin,"Error: custom-serving/templates/deployment.yaml:17:34
   executing ""custom-serving/templates/deployment.yaml"" at <.Release.Time.Seconds>:
     nil pointer evaluating interface {}.Seconds
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
+",false,non_fixable_builtin
 https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\mpijob,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\mpijob,template,template,runtime_eval,"Error: template: mpijob/templates/mpijob.yaml:37:17: executing ""mpijob/templates/mpijob.yaml"" at <len .Values.nodeSelectors>: error calling len: len of nil pointer
 
 Use --debug flag to render out invalid YAML
@@ -897,24 +897,24 @@ https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clone
 
 Use --debug flag to render out invalid YAML
 ",false,unfixable_error_kind
-https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\tfserving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\tfserving,template,template,nil_pointer,"Error: tensorflow-serving/templates/deployment.yaml:17:34
+https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\tfserving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\tfserving,template,template,unsupported_builtin,"Error: tensorflow-serving/templates/deployment.yaml:17:34
   executing ""tensorflow-serving/templates/deployment.yaml"" at <.Release.Time.Seconds>:
     nil pointer evaluating interface {}.Seconds
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
-https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\trtserving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\trtserving,template,template,nil_pointer,"Error: tensorrt-serving/templates/deployment.yaml:16:34
+",false,non_fixable_builtin
+https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\trtserving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\trtserving,template,template,unsupported_builtin,"Error: tensorrt-serving/templates/deployment.yaml:16:34
   executing ""tensorrt-serving/templates/deployment.yaml"" at <.Release.Time.Seconds>:
     nil pointer evaluating interface {}.Seconds
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
-https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\custom-serving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\custom-serving,template,template,nil_pointer,"Error: custom-serving/templates/deployment.yaml:17:34
+",false,non_fixable_builtin
+https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\custom-serving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\custom-serving,template,template,unsupported_builtin,"Error: custom-serving/templates/deployment.yaml:17:34
   executing ""custom-serving/templates/deployment.yaml"" at <.Release.Time.Seconds>:
     nil pointer evaluating interface {}.Seconds
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
+",false,non_fixable_builtin
 https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\mpijob,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\mpijob,template,template,runtime_eval,"Error: template: mpijob/templates/mpijob.yaml:37:17: executing ""mpijob/templates/mpijob.yaml"" at <len .Values.nodeSelectors>: error calling len: len of nil pointer
 
 Use --debug flag to render out invalid YAML
@@ -923,18 +923,18 @@ https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clone
 
 Use --debug flag to render out invalid YAML
 ",false,unfixable_error_kind
-https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\tfserving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\tfserving,template,template,nil_pointer,"Error: tensorflow-serving/templates/deployment.yaml:17:34
+https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\tfserving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\tfserving,template,template,unsupported_builtin,"Error: tensorflow-serving/templates/deployment.yaml:17:34
   executing ""tensorflow-serving/templates/deployment.yaml"" at <.Release.Time.Seconds>:
     nil pointer evaluating interface {}.Seconds
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
-https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\trtserving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\trtserving,template,template,nil_pointer,"Error: tensorrt-serving/templates/deployment.yaml:16:34
+",false,non_fixable_builtin
+https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\trtserving,,helm template test D:\helm_clones_github\WeBankFinTech__Prophecis\di\lcm\charts\trtserving,template,template,unsupported_builtin,"Error: tensorrt-serving/templates/deployment.yaml:16:34
   executing ""tensorrt-serving/templates/deployment.yaml"" at <.Release.Time.Seconds>:
     nil pointer evaluating interface {}.Seconds
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
+",false,non_fixable_builtin
 https://github.com/WeBankFinTech/Prophecis,WeBankFinTech/Prophecis,D:\helm_clones_github\WeBankFinTech__Prophecis\install\Prophecis,,,dependency,dependency,malformed_yaml,"Error: cannot load values.yaml: error reading yaml document: invalid Yaml document separator: --END RSA PRIVATE KEY-----""",,
 https://github.com/open-edge-platform/geti,open-edge-platform/geti,D:\helm_clones_github\open-edge-platform__geti\deploy\charts\control-plane\chart\charts\control-plane-common,,helm template test D:\helm_clones_github\open-edge-platform__geti\deploy\charts\control-plane\chart\charts\control-plane-common,template,template,library_chart_not_installable,"Error: library charts are not installable
 ",false,unfixable_error_kind
@@ -2381,12 +2381,12 @@ https://github.com/batleforc/weebo-si,batleforc/weebo-si,D:\helm_clones_github\b
 
 Use --debug flag to render out invalid YAML
 ",true,
-https://github.com/celo-org/charts,celo-org/charts,D:\helm_clones_github\celo-org__charts\charts\clean-pvcs,,helm template test D:\helm_clones_github\celo-org__charts\charts\clean-pvcs,template,template,nil_pointer,"Error: clean-pvcs/templates/cronjob.yaml:53:59
+https://github.com/celo-org/charts,celo-org/charts,D:\helm_clones_github\celo-org__charts\charts\clean-pvcs,,helm template test D:\helm_clones_github\celo-org__charts\charts\clean-pvcs,template,template,unsupported_builtin,"Error: clean-pvcs/templates/cronjob.yaml:53:59
   executing ""clean-pvcs/templates/cronjob.yaml"" at <.Release.Namespace>:
     nil pointer evaluating interface {}.Namespace
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
+",false,non_fixable_builtin
 https://github.com/celo-org/charts,celo-org/charts,D:\helm_clones_github\celo-org__charts\charts\common,,helm template test D:\helm_clones_github\celo-org__charts\charts\common,template,template,library_chart_not_installable,"Error: library charts are not installable
 ",false,unfixable_error_kind
 https://github.com/celo-org/charts,celo-org/charts,D:\helm_clones_github\celo-org__charts\charts\sync-test,,helm template test D:\helm_clones_github\celo-org__charts\charts\sync-test,template,template,required_value,"Error: execution error at (sync-test/templates/NOTES.txt:1:4): op-geth.secrets.nodeKey.value is required: --set op-geth.secrets.nodeKey.value=0x$(openssl rand -hex 32)
@@ -2406,7 +2406,7 @@ airflow/charts/postgresql/charts/common/templates/_names.tpl:6:18
     nil pointer evaluating interface {}.Name
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
+",false,non_fixable_builtin
 https://github.com/dungdm93/shipyard,dungdm93/shipyard,D:\helm_clones_github\dungdm93__shipyard\helm\cloudflared,,helm template test D:\helm_clones_github\dungdm93__shipyard\helm\cloudflared,template,unknown,unclassified,"Error: execution error at (cloudflared/templates/deployment.yaml:50:41): Missing .Values.token
 
 Use --debug flag to render out invalid YAML
@@ -4342,18 +4342,18 @@ https://github.com/bakseter/whpah,bakseter/whpah,D:\helm_clones_github\bakseter_
 
 Use --debug flag to render out invalid YAML
 ",false,loop_detected
-https://github.com/cheyang/arena-spark,cheyang/arena-spark,D:\helm_clones_github\cheyang__arena-spark\charts\tfserving,,helm template test D:\helm_clones_github\cheyang__arena-spark\charts\tfserving,template,template,nil_pointer,"Error: tensorflow-serving/templates/deployment.yaml:16:34
+https://github.com/cheyang/arena-spark,cheyang/arena-spark,D:\helm_clones_github\cheyang__arena-spark\charts\tfserving,,helm template test D:\helm_clones_github\cheyang__arena-spark\charts\tfserving,template,template,unsupported_builtin,"Error: tensorflow-serving/templates/deployment.yaml:16:34
   executing ""tensorflow-serving/templates/deployment.yaml"" at <.Release.Time.Seconds>:
     nil pointer evaluating interface {}.Seconds
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
-https://github.com/cheyang/arena-spark,cheyang/arena-spark,D:\helm_clones_github\cheyang__arena-spark\charts\trtserving,,helm template test D:\helm_clones_github\cheyang__arena-spark\charts\trtserving,template,template,nil_pointer,"Error: tensorrt-serving/templates/deployment.yaml:15:34
+",false,non_fixable_builtin
+https://github.com/cheyang/arena-spark,cheyang/arena-spark,D:\helm_clones_github\cheyang__arena-spark\charts\trtserving,,helm template test D:\helm_clones_github\cheyang__arena-spark\charts\trtserving,template,template,unsupported_builtin,"Error: tensorrt-serving/templates/deployment.yaml:15:34
   executing ""tensorrt-serving/templates/deployment.yaml"" at <.Release.Time.Seconds>:
     nil pointer evaluating interface {}.Seconds
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
+",false,non_fixable_builtin
 https://github.com/devops4solutions/guestbook,devops4solutions/guestbook,D:\helm_clones_github\devops4solutions__guestbook,,,dependency,dependency,missing_repository,Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add',,
 https://github.com/edixos/ekp-helm,edixos/ekp-helm,D:\helm_clones_github\edixos__ekp-helm\charts\alertmanager,,,dependency,dependency,missing_repository,Error: no repository definition for https://oauth2-proxy.github.io/manifests. Please add the missing repos via 'helm repo add',,
 https://github.com/elastic/k8s-integration-infra,elastic/k8s-integration-infra,D:\helm_clones_github\elastic__k8s-integration-infra\infra\charts\elastic-agent,,,dependency,dependency,missing_repository,Error: no repository definition for @stable. Please add them via 'helm repo add',,
@@ -5141,7 +5141,7 @@ https://github.com/JonasHess/homelab-iac,JonasHess/homelab-iac,D:\helm_clones_gi
     nil pointer evaluating interface {}.security
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
+",true,
 https://github.com/JonasHess/homelab-iac,JonasHess/homelab-iac,D:\helm_clones_github\JonasHess__homelab-iac\apps\asn,,helm template test D:\helm_clones_github\JonasHess__homelab-iac\apps\asn,template,template,values_schema_validation,"Error: values don't meet the specifications of the schema(s) in the following chart(s):
 generic:
 - at '': missing property 'appName'
@@ -5548,7 +5548,7 @@ https://github.com/Clark1992/ECK1,Clark1992/ECK1,D:\helm_clones_github\Clark1992
     nil pointer evaluating interface {}.size
 
 Use --debug flag to render out invalid YAML
-",false,unfixable_error_kind
+",true,
 https://github.com/Clark1992/ECK1,Clark1992/ECK1,D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\cert,,helm template test D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\cert,template,template,nil_pointer,"Error: elasticsearch-certs/templates/renew-cert-job-once.yaml:17:27
   executing ""elasticsearch-certs/templates/renew-cert-job-once.yaml"" at <.Values.elasticsearch.image>:
     nil pointer evaluating interface {}.image

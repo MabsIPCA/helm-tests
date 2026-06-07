@@ -1,7 +1,7 @@
 # Catalog Fixer Report
 
 **Source:** runs/20260529_135859_artifacthub/catalog_by_project.json
-**Date:** 2026-06-05
+**Date:** 2026-06-07
 
 ## Summary
 
@@ -29,5 +29,6 @@
 | resolved | 27 |
 | unfixable_error_kind | 155 |
 | non_fixable_yaml | 3 |
+| non_fixable_builtin | 0 |
 | loop_detected | 2 |
 | max_iterations | 0 |

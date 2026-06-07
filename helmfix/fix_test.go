@@ -261,6 +261,72 @@ func TestParseError_NilPointerWithoutAtClause(t *testing.T) {
 	}
 }
 
+func TestIsUnsupportedBuiltin(t *testing.T) {
+	cases := []struct {
+		name    string
+		errStr  string
+		builtin bool
+	}{
+		{
+			name:    "release_time_removed_in_helm3",
+			errStr:  `Error: tensorflow-serving/templates/deployment.yaml:16:34: executing "tensorflow-serving/templates/deployment.yaml" at <.Release.Time.Seconds>: nil pointer evaluating interface {}.Seconds`,
+			builtin: true,
+		},
+		{
+			name:    "release_root_context_dollar",
+			errStr:  `template: x/templates/a.yaml:1:1: executing "x" at <$.Release.Time>: nil pointer evaluating interface {}.Time`,
+			builtin: true,
+		},
+		{
+			name:    "capabilities_builtin",
+			errStr:  `template: x/templates/a.yaml:1:1: executing "x" at <.Capabilities.KubeVersion.Minor>: nil pointer evaluating interface {}.Minor`,
+			builtin: true,
+		},
+		{
+			name:    "values_nil_pointer_is_fixable_not_builtin",
+			errStr:  `template: x/templates/a.yaml:1:1: executing "x" at <.Values.ingress.hosts>: nil pointer evaluating interface {}.hosts`,
+			builtin: false,
+		},
+		{
+			name:    "release_name_without_nil_pointer_is_not_builtin_error",
+			errStr:  `something mentioning .Release.Name but no nil pointer`,
+			builtin: false,
+		},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := IsUnsupportedBuiltin(tc.errStr); got != tc.builtin {
+				t.Errorf("IsUnsupportedBuiltin = %v, want %v", got, tc.builtin)
+			}
+		})
+	}
+
+	// A built-in nil pointer must NOT be reported as a fixable kind by ParseError.
+	relErr := `Error: x/templates/a.yaml:16:34: executing "x" at <.Release.Time.Seconds>: nil pointer evaluating interface {}.Seconds`
+	if _, _, _, ok := ParseError(relErr); ok {
+		t.Error("ParseError reported a built-in nil pointer as fixable; want ok=false")
+	}
+}
+
+func TestParseError_NilPointerRootContextDollar(t *testing.T) {
+	// Templates that reference the root context use "$.Values..." — the "$" must
+	// not defeat path extraction. Real case: argocd-httproute.yaml.
+	errStr := `Error: argocd/templates/argocd-httproute.yaml:1:18: executing "argocd/templates/argocd-httproute.yaml" at <$.Values.global.security>: nil pointer evaluating interface {}.security`
+	kind, path, value, ok := ParseError(errStr)
+	if !ok {
+		t.Fatal("expected parseable, got false")
+	}
+	if kind != KindNilPointer {
+		t.Errorf("kind: got %q, want %q", kind, KindNilPointer)
+	}
+	if path != "global.security" {
+		t.Errorf("path: got %q, want %q", path, "global.security")
+	}
+	if value != "" {
+		t.Errorf("value: got %q, want empty string", value)
+	}
+}
+
 func TestParseError_NilPointerWithPipeFilter(t *testing.T) {
 	errStr := `template: mychart/templates/deploy.yaml:5:8: executing "mychart/templates/deploy.yaml" at <.Values.foo | quote>: nil pointer evaluating interface {}.foo`
 	kind, path, _, ok := ParseError(errStr)
