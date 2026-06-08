@@ -1,10 +1,10 @@
 # Complete Errors By Taxonomy Bucket
 
-Generated at: `2026-06-07 21:12:20 UTC`
+Generated at: `2026-06-08 21:34:29 UTC`
 
 Source catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\runs\20260529_135859_artifacthub\catalog_by_project.json`
 
-## `template.values_schema_validation` (76)
+## `template.values_schema_validation` (79)
 
 ### 1. `nginx/kubernetes-ingress`
 
@@ -19,46 +19,7 @@ nginx-ingress:
 - at '/controller/nodeSelector/proxy': got boolean, want string
 ```
 
-### 2. `nginx/kubernetes-ingress`
-
-- Chart: `D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-icp.yaml`, `D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-nsm.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress -f D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-icp.yaml -f D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-nsm.yaml`
-
-```text
-Error: values don't meet the specifications of the schema(s) in the following chart(s):
-nginx-ingress:
-- at '/controller/nodeSelector/proxy': got boolean, want string
-```
-
-### 3. `nginx/kubernetes-ingress`
-
-- Chart: `D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-icp.yaml`, `D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-plus.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress -f D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-icp.yaml -f D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-plus.yaml`
-
-```text
-Error: values don't meet the specifications of the schema(s) in the following chart(s):
-nginx-ingress:
-- at '/controller/nodeSelector/proxy': got boolean, want string
-```
-
-### 4. `nginx/kubernetes-ingress`
-
-- Chart: `D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-icp.yaml`, `D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-nsm.yaml`, `D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-plus.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress -f D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-icp.yaml -f D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-nsm.yaml -f D:\helm_clones_artifacthub\nginx__kubernetes-ingress\charts\nginx-ingress\values-plus.yaml`
-
-```text
-Error: values don't meet the specifications of the schema(s) in the following chart(s):
-nginx-ingress:
-- at '/controller/nodeSelector/proxy': got boolean, want string
-```
-
-### 5. `nicholaswilde/helm-charts`
+### 2. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\audacity`
 - Source: `template`
@@ -386,7 +347,7 @@ audacity:
       - at '/properties/affinity/$id': '#/properties/affinity' does not match pattern '^[^#]*#?$'
 ```
 
-### 6. `nicholaswilde/helm-charts`
+### 3. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\babybuddy`
 - Source: `template`
@@ -677,7 +638,7 @@ common:
       - at '/properties/hostNetwork/$id': '#/properties/hostNetwork' does not match pattern '^[^#]*#?$'
 ```
 
-### 7. `nicholaswilde/helm-charts`
+### 4. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\beets`
 - Source: `template`
@@ -1032,7 +993,7 @@ beets:
       - at '/properties/hostNetwork/$id': '#/properties/hostNetwork' does not match pattern '^[^#]*#?$'
 ```
 
-### 8. `nicholaswilde/helm-charts`
+### 5. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\blog`
 - Source: `template`
@@ -1378,7 +1339,7 @@ blog:
       - at '/properties/env/$id': '#/properties/env' does not match pattern '^[^#]*#?$'
 ```
 
-### 9. `nicholaswilde/helm-charts`
+### 6. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\boinc-client`
 - Source: `template`
@@ -1669,7 +1630,7 @@ common:
       - at '/properties/replicas/$id': '#/properties/replicas' does not match pattern '^[^#]*#?$'
 ```
 
-### 10. `nicholaswilde/helm-charts`
+### 7. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\booksonic`
 - Source: `template`
@@ -2035,7 +1996,7 @@ booksonic:
               - at '/properties/persistence/properties/shared/properties/mountPath/$id': '#/properties/persistence/properties/shared/properties/mountPath' does not match pattern '^[^#]*#?$'
 ```
 
-### 11. `nicholaswilde/helm-charts`
+### 8. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\bookstack`
 - Source: `template`
@@ -2327,7 +2288,7 @@ common:
         - at '/properties/additionalVolumeMounts/items/$id': '#/properties/additionalVolumeMounts/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 12. `nicholaswilde/helm-charts`
+### 9. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\chyrp-lite`
 - Source: `template`
@@ -2673,7 +2634,7 @@ chyrp-lite:
       - at '/properties/fullnameOverride/$id': '#/properties/fullnameOverride' does not match pattern '^[^#]*#?$'
 ```
 
-### 13. `nicholaswilde/helm-charts`
+### 10. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\clarkson`
 - Source: `template`
@@ -2994,7 +2955,7 @@ clarkson:
         - at '/properties/additionalVolumes/items/$id': '#/properties/additionalVolumes/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 14. `nicholaswilde/helm-charts`
+### 11. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\cloud9`
 - Source: `template`
@@ -3326,7 +3287,7 @@ cloud9:
               - at '/properties/persistence/properties/shared/properties/mountPath/$id': '#/properties/persistence/properties/shared/properties/mountPath' does not match pattern '^[^#]*#?$'
 ```
 
-### 15. `nicholaswilde/helm-charts`
+### 12. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\code-server`
 - Source: `template`
@@ -3654,7 +3615,7 @@ code-server:
             - at '/properties/ingress/properties/additionalIngresses/items/$id': '#/properties/ingress/properties/additionalIngresses/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 16. `nicholaswilde/helm-charts`
+### 13. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\cryptpad`
 - Source: `template`
@@ -4048,7 +4009,7 @@ cryptpad:
         - at '/properties/envFrom/items/$id': '#/properties/envFrom/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 17. `nicholaswilde/helm-charts`
+### 14. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\davos`
 - Source: `template`
@@ -4388,7 +4349,7 @@ davos:
       - at '/properties/dnsPolicy/$id': '#/properties/dnsPolicy' does not match pattern '^[^#]*#?$'
 ```
 
-### 18. `nicholaswilde/helm-charts`
+### 15. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\digikam`
 - Source: `template`
@@ -4714,7 +4675,7 @@ digikam:
                 - at '/properties/addons/properties/vpn/properties/networkPolicy/properties/egress/$id': '#/properties/addons/properties/vpn/properties/networkPolicy/properties/egress' does not match pattern '^[^#]*#?$'
 ```
 
-### 19. `nicholaswilde/helm-charts`
+### 16. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\diun`
 - Source: `template`
@@ -5005,7 +4966,7 @@ common:
             - at '/properties/addons/properties/vpn/properties/configFile/$id': '#/properties/addons/properties/vpn/properties/configFile' does not match pattern '^[^#]*#?$'
 ```
 
-### 20. `nicholaswilde/helm-charts`
+### 17. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\doublecommander`
 - Source: `template`
@@ -5347,7 +5308,7 @@ doublecommander:
       - at '/properties/replicas/$id': '#/properties/replicas' does not match pattern '^[^#]*#?$'
 ```
 
-### 21. `nicholaswilde/helm-charts`
+### 18. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\etherpad`
 - Source: `template`
@@ -5638,7 +5599,7 @@ common:
       - at '/properties/controllerAnnotations/$id': '#/properties/controllerAnnotations' does not match pattern '^[^#]*#?$'
 ```
 
-### 22. `nicholaswilde/helm-charts`
+### 19. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\filezilla`
 - Source: `template`
@@ -5964,7 +5925,7 @@ filezilla:
         - at '/properties/envFrom/items/$id': '#/properties/envFrom/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 23. `nicholaswilde/helm-charts`
+### 20. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\firefox-syncserver`
 - Source: `template`
@@ -6255,7 +6216,7 @@ common:
         - at '/properties/envFrom/items/$id': '#/properties/envFrom/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 24. `nicholaswilde/helm-charts`
+### 21. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\formalms`
 - Source: `template`
@@ -6546,7 +6507,7 @@ common:
                     - at '/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/properties/add/items/anyOf/0/$id': '#/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/properties/add/items/anyOf/0' does not match pattern '^[^#]*#?$'
 ```
 
-### 25. `nicholaswilde/helm-charts`
+### 22. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\fossil`
 - Source: `template`
@@ -6837,7 +6798,7 @@ common:
       - at '/properties/controllerAnnotations/$id': '#/properties/controllerAnnotations' does not match pattern '^[^#]*#?$'
 ```
 
-### 26. `nicholaswilde/helm-charts`
+### 23. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\friendica`
 - Source: `template`
@@ -7128,7 +7089,7 @@ common:
       - at '/properties/hostNetwork/$id': '#/properties/hostNetwork' does not match pattern '^[^#]*#?$'
 ```
 
-### 27. `nicholaswilde/helm-charts`
+### 24. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\golinks`
 - Source: `template`
@@ -7474,7 +7435,7 @@ golinks:
       - at '/properties/hostNetwork/$id': '#/properties/hostNetwork' does not match pattern '^[^#]*#?$'
 ```
 
-### 28. `nicholaswilde/helm-charts`
+### 25. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\gotify`
 - Source: `template`
@@ -7765,7 +7726,7 @@ common:
         - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 29. `nicholaswilde/helm-charts`
+### 26. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\grav`
 - Source: `template`
@@ -8091,7 +8052,7 @@ grav:
         - at '/properties/args/items/$id': '#/properties/args/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 30. `nicholaswilde/helm-charts`
+### 27. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\haste`
 - Source: `template`
@@ -8383,7 +8344,7 @@ common:
       - at '/properties/nameOverride/$id': '#/properties/nameOverride' does not match pattern '^[^#]*#?$'
 ```
 
-### 31. `nicholaswilde/helm-charts`
+### 28. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\headphones`
 - Source: `template`
@@ -8736,7 +8697,7 @@ headphones:
           - at '/properties/serviceAccount/properties/name/$id': '#/properties/serviceAccount/properties/name' does not match pattern '^[^#]*#?$'
 ```
 
-### 32. `nicholaswilde/helm-charts`
+### 29. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\hedgedoc`
 - Source: `template`
@@ -9085,7 +9046,7 @@ hedgedoc:
             - at '/properties/ingress/properties/additionalIngresses/items/$id': '#/properties/ingress/properties/additionalIngresses/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 33. `nicholaswilde/helm-charts`
+### 30. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\installer`
 - Source: `template`
@@ -9402,7 +9363,7 @@ installer:
         - at '/properties/additionalVolumeMounts/items/$id': '#/properties/additionalVolumeMounts/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 34. `nicholaswilde/helm-charts`
+### 31. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\kanboard`
 - Source: `template`
@@ -9694,7 +9655,7 @@ common:
       - at '/properties/rbac/$id': '#/properties/rbac' does not match pattern '^[^#]*#?$'
 ```
 
-### 35. `nicholaswilde/helm-charts`
+### 32. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\leantime`
 - Source: `template`
@@ -9985,7 +9946,7 @@ common:
       - at '/properties/hostNetwork/$id': '#/properties/hostNetwork' does not match pattern '^[^#]*#?$'
 ```
 
-### 36. `nicholaswilde/helm-charts`
+### 33. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\mariadb`
 - Source: `template`
@@ -10331,7 +10292,7 @@ mariadb:
       - at '/properties/rbac/$id': '#/properties/rbac' does not match pattern '^[^#]*#?$'
 ```
 
-### 37. `nicholaswilde/helm-charts`
+### 34. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\medusa`
 - Source: `template`
@@ -10686,7 +10647,7 @@ medusa:
       - at '/properties/affinity/$id': '#/properties/affinity' does not match pattern '^[^#]*#?$'
 ```
 
-### 38. `nicholaswilde/helm-charts`
+### 35. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\mstream`
 - Source: `template`
@@ -11028,7 +10989,7 @@ mstream:
       - at '/properties/resources/$id': '#/properties/resources' does not match pattern '^[^#]*#?$'
 ```
 
-### 39. `nicholaswilde/helm-charts`
+### 36. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\muximux`
 - Source: `template`
@@ -11354,7 +11315,7 @@ muximux:
       - at '/properties/controllerType/$id': '#/properties/controllerType' does not match pattern '^[^#]*#?$'
 ```
 
-### 40. `nicholaswilde/helm-charts`
+### 37. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\notes`
 - Source: `template`
@@ -11686,7 +11647,7 @@ notes:
       - at '/properties/rbac/$id': '#/properties/rbac' does not match pattern '^[^#]*#?$'
 ```
 
-### 41. `nicholaswilde/helm-charts`
+### 38. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\novnc`
 - Source: `template`
@@ -12018,7 +11979,7 @@ novnc:
       - at '/properties/podSecurityContext/$id': '#/properties/podSecurityContext' does not match pattern '^[^#]*#?$'
 ```
 
-### 42. `nicholaswilde/helm-charts`
+### 39. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\odoo`
 - Source: `template`
@@ -12309,7 +12270,7 @@ common:
         - at '/properties/command/items/$id': '#/properties/command/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 43. `nicholaswilde/helm-charts`
+### 40. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\olivetin`
 - Source: `template`
@@ -12637,7 +12598,7 @@ olivetin:
         - at '/properties/hostAliases/items/$id': '#/properties/hostAliases/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 44. `nicholaswilde/helm-charts`
+### 41. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\papermerge`
 - Source: `template`
@@ -12977,7 +12938,7 @@ papermerge:
       - at '/properties/controllerType/$id': '#/properties/controllerType' does not match pattern '^[^#]*#?$'
 ```
 
-### 45. `nicholaswilde/helm-charts`
+### 42. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\photoshow`
 - Source: `template`
@@ -13330,7 +13291,7 @@ photoshow:
         - at '/properties/hostAliases/items/$id': '#/properties/hostAliases/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 46. `nicholaswilde/helm-charts`
+### 43. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\piwigo`
 - Source: `template`
@@ -13672,7 +13633,7 @@ piwigo:
         - at '/properties/additionalVolumeMounts/items/$id': '#/properties/additionalVolumeMounts/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 47. `nicholaswilde/helm-charts`
+### 44. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\pixapop`
 - Source: `template`
@@ -13963,7 +13924,7 @@ common:
             - at '/properties/ingress/properties/additionalIngresses/items/$id': '#/properties/ingress/properties/additionalIngresses/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 48. `nicholaswilde/helm-charts`
+### 45. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\podgrab`
 - Source: `template`
@@ -14254,7 +14215,7 @@ common:
       - at '/properties/rbac/$id': '#/properties/rbac' does not match pattern '^[^#]*#?$'
 ```
 
-### 49. `nicholaswilde/helm-charts`
+### 46. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\postgres`
 - Source: `template`
@@ -14545,7 +14506,7 @@ common:
         - at '/properties/hostAliases/items/$id': '#/properties/hostAliases/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 50. `nicholaswilde/helm-charts`
+### 47. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\projectsend`
 - Source: `template`
@@ -14906,7 +14867,7 @@ projectsend:
       - at '/properties/resources/$id': '#/properties/resources' does not match pattern '^[^#]*#?$'
 ```
 
-### 51. `nicholaswilde/helm-charts`
+### 48. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\remmina`
 - Source: `template`
@@ -15234,7 +15195,7 @@ remmina:
         - at '/properties/envFrom/items/$id': '#/properties/envFrom/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 52. `nicholaswilde/helm-charts`
+### 49. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\shiori`
 - Source: `template`
@@ -15605,7 +15566,7 @@ shiori:
         - at '/properties/envFrom/items/$id': '#/properties/envFrom/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 53. `nicholaswilde/helm-charts`
+### 50. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\shorturl`
 - Source: `template`
@@ -15951,7 +15912,7 @@ shorturl:
         - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 54. `nicholaswilde/helm-charts`
+### 51. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\sickchill`
 - Source: `template`
@@ -16242,7 +16203,7 @@ common:
         - at '/properties/initContainers/items/$id': '#/properties/initContainers/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 55. `nicholaswilde/helm-charts`
+### 52. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\sickgear`
 - Source: `template`
@@ -16597,7 +16558,7 @@ sickgear:
           - at '/properties/ingress/properties/annotations/$id': '#/properties/ingress/properties/annotations' does not match pattern '^[^#]*#?$'
 ```
 
-### 56. `nicholaswilde/helm-charts`
+### 53. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\smokeping`
 - Source: `template`
@@ -16937,7 +16898,7 @@ smokeping:
               - at '/properties/service/properties/port/properties/targetPort/$id': '#/properties/service/properties/port/properties/targetPort' does not match pattern '^[^#]*#?$'
 ```
 
-### 57. `nicholaswilde/helm-charts`
+### 54. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\snipe-it`
 - Source: `template`
@@ -17265,7 +17226,7 @@ snipe-it:
       - at '/properties/resources/$id': '#/properties/resources' does not match pattern '^[^#]*#?$'
 ```
 
-### 58. `nicholaswilde/helm-charts`
+### 55. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\sqlitebrowser`
 - Source: `template`
@@ -17591,7 +17552,7 @@ sqlitebrowser:
       - at '/properties/nameOverride/$id': '#/properties/nameOverride' does not match pattern '^[^#]*#?$'
 ```
 
-### 59. `nicholaswilde/helm-charts`
+### 56. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\static`
 - Source: `template`
@@ -17921,7 +17882,7 @@ static:
         - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 60. `nicholaswilde/helm-charts`
+### 57. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\syncthing`
 - Source: `template`
@@ -18213,7 +18174,7 @@ common:
             - at '/properties/addons/properties/vpn/properties/livenessProbe/$id': '#/properties/addons/properties/vpn/properties/livenessProbe' does not match pattern '^[^#]*#?$'
 ```
 
-### 61. `nicholaswilde/helm-charts`
+### 58. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\todo`
 - Source: `template`
@@ -18504,7 +18465,7 @@ common:
       - at '/properties/secret/$id': '#/properties/secret' does not match pattern '^[^#]*#?$'
 ```
 
-### 62. `nicholaswilde/helm-charts`
+### 59. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\transmission`
 - Source: `template`
@@ -18796,7 +18757,7 @@ common:
               - at '/properties/probes/properties/startup/properties/enabled/$id': '#/properties/probes/properties/startup/properties/enabled' does not match pattern '^[^#]*#?$'
 ```
 
-### 63. `nicholaswilde/helm-charts`
+### 60. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\twtxt`
 - Source: `template`
@@ -19138,7 +19099,7 @@ twtxt:
         - at '/properties/additionalContainers/items/$id': '#/properties/additionalContainers/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 64. `nicholaswilde/helm-charts`
+### 61. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\wiki`
 - Source: `template`
@@ -19470,7 +19431,7 @@ wiki:
               - at '/properties/probes/properties/startup/properties/periodSeconds/$id': '#/properties/probes/properties/startup/properties/periodSeconds' does not match pattern '^[^#]*#?$'
 ```
 
-### 65. `nicholaswilde/helm-charts`
+### 62. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\wikijs`
 - Source: `template`
@@ -19762,7 +19723,7 @@ common:
       - at '/properties/podSecurityContext/$id': '#/properties/podSecurityContext' does not match pattern '^[^#]*#?$'
 ```
 
-### 66. `nicholaswilde/helm-charts`
+### 63. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\writefreely`
 - Source: `template`
@@ -20053,7 +20014,7 @@ common:
       - at '/properties/podAnnotations/$id': '#/properties/podAnnotations' does not match pattern '^[^#]*#?$'
 ```
 
-### 67. `abahmed/kwatch`
+### 64. `abahmed/kwatch`
 
 - Chart: `D:\helm_clones_artifacthub\abahmed__kwatch\deploy\chart`
 - Source: `template`
@@ -20065,7 +20026,7 @@ kwatch:
 - at '': missing property 'config'
 ```
 
-### 68. `CrowdStrike/falcon-helm`
+### 65. `CrowdStrike/falcon-helm`
 
 - Chart: `D:\helm_clones_artifacthub\CrowdStrike__falcon-helm\helm-charts\falcon-platform`
 - Source: `template`
@@ -20085,7 +20046,7 @@ falcon-image-analyzer:
   - at '/daemonset/enabled': value must be true
 ```
 
-### 69. `MaastrichtU-IDS/dsri-helm-charts`
+### 66. `MaastrichtU-IDS/dsri-helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\MaastrichtU-IDS__dsri-helm-charts\charts\code-server`
 - Source: `template`
@@ -20105,7 +20066,7 @@ code-server:
         - at '/properties/imagePullSecrets/items/$id': '#/properties/imagePullSecrets/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 70. `MaastrichtU-IDS/dsri-helm-charts`
+### 67. `MaastrichtU-IDS/dsri-helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\MaastrichtU-IDS__dsri-helm-charts\charts\jupyterlab`
 - Source: `template`
@@ -20125,7 +20086,7 @@ jupyterlab:
         - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 71. `MaastrichtU-IDS/dsri-helm-charts`
+### 68. `MaastrichtU-IDS/dsri-helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\MaastrichtU-IDS__dsri-helm-charts\charts\libre-chat`
 - Source: `template`
@@ -20145,7 +20106,7 @@ libre-chat:
         - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 72. `MaastrichtU-IDS/dsri-helm-charts`
+### 69. `MaastrichtU-IDS/dsri-helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\MaastrichtU-IDS__dsri-helm-charts\charts\rstudio`
 - Source: `template`
@@ -20165,7 +20126,7 @@ rstudio:
         - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 73. `MaastrichtU-IDS/dsri-helm-charts`
+### 70. `MaastrichtU-IDS/dsri-helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\MaastrichtU-IDS__dsri-helm-charts\charts\webapp`
 - Source: `template`
@@ -20185,7 +20146,7 @@ webapp:
         - at '/properties/imagePullSecrets/items/$id': '#/properties/imagePullSecrets/items' does not match pattern '^[^#]*#?$'
 ```
 
-### 74. `fmjstudios/helm`
+### 71. `fmjstudios/helm`
 
 - Chart: `D:\helm_clones_artifacthub\fmjstudios__helm\charts\cachet`
 - Source: `template`
@@ -20198,7 +20159,7 @@ cachet:
 - at '/cachet/database/port': got number, want string
 ```
 
-### 75. `cloudfoundry/korifi`
+### 72. `cloudfoundry/korifi`
 
 - Chart: `D:\helm_clones_artifacthub\cloudfoundry__korifi\helm\korifi`
 - Source: `template`
@@ -20212,7 +20173,7 @@ korifi:
 - at '/networking': missing property 'gatewayClass'
 ```
 
-### 76. `sysdiglabs/charts`
+### 73. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\shield`
 - Source: `template`
@@ -20233,580 +20194,229 @@ shield:
 - at '/cluster_config': missing property 'name'
 ```
 
-## `dependency.missing_repository` (63)
+### 74. `loeken/helm-charts`
 
-### 1. `argoproj/argo-helm`
-
-- Chart: `D:\helm_clones_artifacthub\argoproj__argo-helm\charts\argo-cd`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://dandydeveloper.github.io/charts/. Please add the missing repos via 'helm repo add'
-```
-
-### 2. `prometheus-community/helm-charts`
-
-- Chart: `D:\helm_clones_github\prometheus-community__helm-charts\charts\prometheus`
-- Source: `dependency`
+- Chart: `D:\helm_clones_artifacthub\loeken__helm-charts\charts\jellyseerr`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\loeken__helm-charts\charts\jellyseerr`
 
 ```text
-Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts, https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'
+Error: values don't meet the specifications of the schema(s) in the following chart(s):
+jellyseerr:
+- at '/persistence/config': 'oneOf' failed, subschemas 5, 6 matched
 ```
 
-### 3. `kubernetes/dashboard`
+### 75. `loeken/helm-charts`
 
-- Chart: `D:\helm_clones_artifacthub\kubernetes__dashboard\charts\kubernetes-dashboard`
-- Source: `dependency`
+- Chart: `D:\helm_clones_artifacthub\loeken__helm-charts\charts\nzbget`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\loeken__helm-charts\charts\nzbget`
 
 ```text
-Error: no repository definition for https://kubernetes.github.io/ingress-nginx, https://charts.jetstack.io, https://kubernetes-sigs.github.io/metrics-server/, https://charts.konghq.com. Please add the missing repos via 'helm repo add'
+Error: values don't meet the specifications of the schema(s) in the following chart(s):
+nzbget:
+- at '/persistence/config': 'oneOf' failed, subschemas 5, 6 matched
+- at '/persistence/downloads': 'oneOf' failed, subschemas 5, 6 matched
+- at '/persistence/media': 'oneOf' failed, subschemas 5, 6 matched
 ```
 
-### 4. `grafana/helm-charts`
+### 76. `loeken/helm-charts`
 
-- Chart: `D:\helm_clones_github\grafana__helm-charts\charts\enterprise-logs`
-- Source: `dependency`
+- Chart: `D:\helm_clones_artifacthub\loeken__helm-charts\charts\prowlarr`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\loeken__helm-charts\charts\prowlarr`
 
 ```text
-Error: no repository definition for https://grafana.github.io/helm-charts, https://charts.min.io/. Please add the missing repos via 'helm repo add'
+Error: values don't meet the specifications of the schema(s) in the following chart(s):
+prowlarr:
+- at '/persistence/config': 'oneOf' failed, subschemas 5, 6 matched
 ```
 
-### 5. `apache/airflow`
+### 77. `loeken/helm-charts`
 
-- Chart: `D:\helm_clones_artifacthub\apache__airflow\chart`
-- Source: `dependency`
+- Chart: `D:\helm_clones_artifacthub\loeken__helm-charts\charts\sinusbot`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\loeken__helm-charts\charts\sinusbot`
 
 ```text
-Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
+Error: values don't meet the specifications of the schema(s) in the following chart(s):
+sinusbot:
+- at '/persistence/sinusbot': 'oneOf' failed, subschemas 5, 6 matched
 ```
 
-### 6. `elastic/helm-charts`
+### 78. `loeken/helm-charts`
 
-- Chart: `D:\helm_clones_artifacthub\elastic__helm-charts\metricbeat`
-- Source: `dependency`
+- Chart: `D:\helm_clones_artifacthub\loeken__helm-charts\charts\vaultwarden`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\loeken__helm-charts\charts\vaultwarden`
 
 ```text
-Error: no repository definition for https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'
+Error: values don't meet the specifications of the schema(s) in the following chart(s):
+vaultwarden:
+- at '/persistence/config': 'oneOf' failed, none matched
+  - at '/persistence/config': 'allOf' failed
+    - at '/persistence/config': missing property 'size'
+  - at '/persistence/config': validation failed
+    - at '/persistence/config': missing property 'existingClaim'
+    - at '/persistence/config': additional properties 'accessMode' not allowed
+  - at '/persistence/config': validation failed
+    - at '/persistence/config': additional properties 'accessMode' not allowed
+    - at '/persistence/config': 'oneOf' failed, none matched
+      - at '/persistence/config': missing property 'name'
+      - at '/persistence/config': missing property 'identifier'
+  - at '/persistence/config': validation failed
+    - at '/persistence/config': additional properties 'accessMode' not allowed
+    - at '/persistence/config': 'oneOf' failed, none matched
+      - at '/persistence/config': missing property 'name'
+      - at '/persistence/config': missing property 'identifier'
+  - at '/persistence/config': validation failed
+    - at '/persistence/config': missing properties 'server', 'path'
+    - at '/persistence/config': additional properties 'accessMode' not allowed
+  - at '/persistence/config': additional properties 'accessMode' not allowed
+  - at '/persistence/config': additional properties 'accessMode' not allowed
+  - at '/persistence/config': validation failed
+    - at '/persistence/config': missing property 'volumeSpec'
+    - at '/persistence/config': additional properties 'accessMode' not allowed
 ```
 
-### 7. `nextcloud/helm`
+### 79. `obeone/charts`
 
-- Chart: `D:\helm_clones_artifacthub\nextcloud__helm\charts\nextcloud`
-- Source: `dependency`
+- Chart: `D:\helm_clones_artifacthub\obeone__charts\charts\libretranslate`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\obeone__charts\charts\libretranslate`
 
 ```text
-Error: no repository definition for https://collaboraonline.github.io/online. Please add the missing repos via 'helm repo add'
+Error: values don't meet the specifications of the schema(s) in the following chart(s):
+libretranslate:
+- at '': validation failed
+  - at '/persistence/cache': 'oneOf' failed, none matched
+    - at '/persistence/cache': validation failed
+      - at '/persistence/cache': missing properties 'accessMode', 'size'
+      - at '/persistence/cache/type': value must be 'persistentVolumeClaim'
+      - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed
+    - at '/persistence/cache': validation failed
+      - at '/persistence/cache': missing property 'existingClaim'
+      - at '/persistence/cache/type': value must be 'persistentVolumeClaim'
+      - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed
+    - at '/persistence/cache': validation failed
+      - at '/persistence/cache/type': value must be 'configMap'
+      - at '/persistence/cache': additional properties 'gpuPath', 'cpuPath' not allowed
+      - at '/persistence/cache': 'oneOf' failed, none matched
+        - at '/persistence/cache': missing property 'name'
+        - at '/persistence/cache': missing property 'identifier'
+    - at '/persistence/cache': validation failed
+      - at '/persistence/cache/type': value must be 'secret'
+      - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed
+      - at '/persistence/cache': 'oneOf' failed, none matched
+        - at '/persistence/cache': missing property 'name'
+        - at '/persistence/cache': missing property 'identifier'
+    - at '/persistence/cache': validation failed
+      - at '/persistence/cache': missing properties 'server', 'path'
+      - at '/persistence/cache/type': value must be 'nfs'
+      - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed
+    - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed
+    - at '/persistence/cache': validation failed
+      - at '/persistence/cache/type': value must be 'hostPath'
+      - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed
+    - at '/persistence/cache': validation failed
+      - at '/persistence/cache': missing property 'volumeSpec'
+      - at '/persistence/cache/type': value must be 'custom'
+      - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed
+  - at '/persistence/db': 'oneOf' failed, none matched
+    - at '/persistence/db': additional properties 'gpuPath', 'cpuPath' not allowed
+    - at '/persistence/db': validation failed
+      - at '/persistence/db': missing property 'existingClaim'
+      - at '/persistence/db': additional properties 'size', 'accessMode', 'annotations', 'cpuPath', 'gpuPath' not allowed
+    - at '/persistence/db': validation failed
+      - at '/persistence/db': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed
+      - at '/persistence/db': 'oneOf' failed, none matched
+        - at '/persistence/db': missing property 'name'
+        - at '/persistence/db': missing property 'identifier'
+    - at '/persistence/db': validation failed
+      - at '/persistence/db': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed
+      - at '/persistence/db': 'oneOf' failed, none matched
+        - at '/persistence/db': missing property 'name'
+        - at '/persistence/db': missing property 'identifier'
+    - at '/persistence/db': validation failed
+      - at '/persistence/db': missing properties 'server', 'path'
+      - at '/persistence/db': additional properties 'size', 'accessMode', 'annotations', 'cpuPath', 'gpuPath' not allowed
+    - at '/persistence/db': additional properties 'annotations', 'cpuPath', 'gpuPath', 'size', 'accessMode' not allowed
+    - at '/persistence/db': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed
+    - at '/persistence/db': validation failed
+      - at '/persistence/db': missing property 'volumeSpec'
+      - at '/persistence/db': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed
+  - at '/persistence/files-translate': 'oneOf' failed, none matched
+    - at '/persistence/files-translate': validation failed
+      - at '/persistence/files-translate': missing properties 'accessMode', 'size'
+      - at '/persistence/files-translate/type': value must be 'persistentVolumeClaim'
+      - at '/persistence/files-translate': additional properties 'path' not allowed
+    - at '/persistence/files-translate': validation failed
+      - at '/persistence/files-translate': missing property 'existingClaim'
+      - at '/persistence/files-translate/type': value must be 'persistentVolumeClaim'
+      - at '/persistence/files-translate': additional properties 'path' not allowed
+    - at '/persistence/files-translate': validation failed
+      - at '/persistence/files-translate/type': value must be 'configMap'
+      - at '/persistence/files-translate': additional properties 'path' not allowed
+      - at '/persistence/files-translate': 'oneOf' failed, none matched
+        - at '/persistence/files-translate': missing property 'name'
+        - at '/persistence/files-translate': missing property 'identifier'
+    - at '/persistence/files-translate': validation failed
+      - at '/persistence/files-translate/type': value must be 'secret'
+      - at '/persistence/files-translate': additional properties 'path' not allowed
+      - at '/persistence/files-translate': 'oneOf' failed, none matched
+        - at '/persistence/files-translate': missing property 'name'
+        - at '/persistence/files-translate': missing property 'identifier'
+    - at '/persistence/files-translate': validation failed
+      - at '/persistence/files-translate': missing property 'server'
+      - at '/persistence/files-translate/type': value must be 'nfs'
+    - at '/persistence/files-translate': additional properties 'path' not allowed
+    - at '/persistence/files-translate': validation failed
+      - at '/persistence/files-translate/type': value must be 'hostPath'
+      - at '/persistence/files-translate': additional properties 'path' not allowed
+    - at '/persistence/files-translate': validation failed
+      - at '/persistence/files-translate': missing property 'volumeSpec'
+      - at '/persistence/files-translate/type': value must be 'custom'
+      - at '/persistence/files-translate': additional properties 'path' not allowed
+  - at '/persistence/share': 'oneOf' failed, none matched
+    - at '/persistence/share': additional properties 'cpuPath', 'gpuPath' not allowed
+    - at '/persistence/share': validation failed
+      - at '/persistence/share': missing property 'existingClaim'
+      - at '/persistence/share': additional properties 'size', 'accessMode', 'annotations', 'cpuPath', 'gpuPath' not allowed
+    - at '/persistence/share': validation failed
+      - at '/persistence/share': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed
+      - at '/persistence/share': 'oneOf' failed, none matched
+        - at '/persistence/share': missing property 'name'
+        - at '/persistence/share': missing property 'identifier'
+    - at '/persistence/share': validation failed
+      - at '/persistence/share': additional properties 'annotations', 'cpuPath', 'gpuPath', 'size', 'accessMode' not allowed
+      - at '/persistence/share': 'oneOf' failed, none matched
+        - at '/persistence/share': missing property 'name'
+        - at '/persistence/share': missing property 'identifier'
+    - at '/persistence/share': validation failed
+      - at '/persistence/share': missing properties 'server', 'path'
+      - at '/persistence/share': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed
+    - at '/persistence/share': additional properties 'size', 'accessMode', 'annotations', 'cpuPath', 'gpuPath' not allowed
+    - at '/persistence/share': additional properties 'size', 'accessMode', 'annotations', 'cpuPath', 'gpuPath' not allowed
+    - at '/persistence/share': validation failed
+      - at '/persistence/share': missing property 'volumeSpec'
+      - at '/persistence/share': additional properties 'cpuPath', 'gpuPath', 'size', 'accessMode', 'annotations' not allowed
 ```
 
-### 8. `metallb/metallb`
+## `template.required_value` (44)
 
-- Chart: `D:\helm_clones_artifacthub\metallb__metallb\charts\metallb`
-- Source: `dependency`
+### 1. `prometheus-community/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\prometheus-postgres-exporter`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\prometheus-postgres-exporter`
 
 ```text
-Error: no repository definition for https://metallb.github.io/frr-k8s. Please add the missing repos via 'helm repo add'
+Error: execution error at (prometheus-postgres-exporter/templates/secrets.yaml:2:9): config.datasource.password is required when not using config.datasource.passwordSecret, config.datasource.passwordFile, or config.datasourceSecret
+
+Use --debug flag to render out invalid YAML
 ```
 
-### 9. `kyverno/kyverno`
-
-- Chart: `D:\helm_clones_artifacthub\kyverno__kyverno\charts\kyverno`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://kyverno.github.io/api, https://openreports.github.io/reports-api, https://kyverno.github.io/reports-server/. Please add the missing repos via 'helm repo add'
-```
-
-### 10. `cloudnative-pg/charts`
-
-- Chart: `D:\helm_clones_artifacthub\cloudnative-pg__charts\charts\cloudnative-pg`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://cloudnative-pg.github.io/grafana-dashboards. Please add the missing repos via 'helm repo add'
-```
-
-### 11. `oauth2-proxy/manifests`
-
-- Chart: `D:\helm_clones_artifacthub\oauth2-proxy__manifests\helm\oauth2-proxy`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://dandydeveloper.github.io/charts. Please add the missing repos via 'helm repo add'
-```
-
-### 12. `community-charts/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\community-charts__helm-charts\charts\kserve`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.jetstack.io. Please add the missing repos via 'helm repo add'
-```
-
-### 13. `jaegertracing/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\jaegertracing__helm-charts\charts\jaeger`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 14. `8gears/n8n-helm-chart`
-
-- Chart: `D:\helm_clones_artifacthub\8gears__n8n-helm-chart\charts\n8n`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://valkey.io/valkey-helm/. Please add the missing repos via 'helm repo add'
-```
-
-### 15. `airflow-helm/charts`
-
-- Chart: `D:\helm_clones_artifacthub\airflow-helm__charts\charts\airflow`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.helm.sh/stable, https://charts.helm.sh/stable. Please add the missing repos via 'helm repo add'
-```
-
-### 16. `Kong/charts`
-
-- Chart: `D:\helm_clones_artifacthub\Kong__charts\charts\ingress`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.konghq.com, https://charts.konghq.com. Please add the missing repos via 'helm repo add'
-```
-
-### 17. `codecentric/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\codecentric__helm-charts\charts\keycloak`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 18. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-cluster`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://helm.vector.dev. Please add the missing repos via 'helm repo add'
-```
-
-### 19. `atlassian/data-center-helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\bamboo`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://atlassian.github.io/data-center-helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 20. `grafana/loki`
-
-- Chart: `D:\helm_clones_artifacthub\grafana__loki\production\helm\loki`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.min.io/, https://grafana.github.io/helm-charts, https://grafana.github.io/helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 21. `jp-gouin/helm-openldap`
-
-- Chart: `D:\helm_clones_artifacthub\jp-gouin__helm-openldap`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 22. `wiremind/wiremind-helm-charts`
-
-- Chart: `D:\helm_clones_github\wiremind__wiremind-helm-charts\charts\druid`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://machine424.github.io/kube-hpa-scale-to-zero, https://wiremind.github.io/wiremind-helm-charts, https://wiremind.github.io/wiremind-helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 23. `OpsMx/spinnaker-helm`
-
-- Chart: `D:\helm_clones_artifacthub\OpsMx__spinnaker-helm\charts\spinnaker`
-- Source: `dependency`
-
-```text
-level=INFO msg="Warning: Dependency locking is handled in Chart.lock since apiVersion \"v2\". We recommend migrating to Chart.lock."
-level=INFO msg="Warning: Dependencies are handled in Chart.yaml since apiVersion \"v2\". We recommend migrating dependencies to Chart.yaml."
-Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 24. `milvus-io/milvus-helm`
-
-- Chart: `D:\helm_clones_artifacthub\milvus-io__milvus-helm\charts\milvus`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://raw.githubusercontent.com/bitnami/charts/pre-2022/bitnami, https://milvus-io.github.io/milvus-helm, https://pulsar.apache.org/charts, https://raw.githubusercontent.com/bitnami/charts/pre-2022/bitnami, https://raw.githubusercontent.com/bitnami/charts/pre-2022/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 25. `clearml/clearml-helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\clearml__clearml-helm-charts\charts\clearml`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://helm.elastic.co. Please add the missing repos via 'helm repo add'
-```
-
-### 26. `DataDog/helm-charts`
-
-- Chart: `D:\helm_clones_github\DataDog__helm-charts\charts\datadog`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://helm.datadoghq.com, https://prometheus-community.github.io/helm-charts, https://helm.datadoghq.com, https://helm.datadoghq.com. Please add the missing repos via 'helm repo add'
-```
-
-### 27. `WeblateOrg/helm`
-
-- Chart: `D:\helm_clones_artifacthub\WeblateOrg__helm\charts\weblate`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 28. `groundhog2k/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\ghost`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://groundhog2k.github.io/helm-charts, https://groundhog2k.github.io/helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 29. `jfrog/charts`
-
-- Chart: `D:\helm_clones_artifacthub\jfrog__charts\stable\artifactory`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.jfrog.io/. Please add the missing repos via 'helm repo add'
-```
-
-### 30. `SigNoz/charts`
-
-- Chart: `D:\helm_clones_artifacthub\SigNoz__charts\charts\signoz`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.signoz.io, https://charts.signoz.io, https://charts.redpanda.com, https://charts.signoz.io. Please add the missing repos via 'helm repo add'
-```
-
-### 31. `gabe565/charts`
-
-- Chart: `D:\helm_clones_artifacthub\gabe565__charts\charts\adguard-home`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://bjw-s.github.io/helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 32. `k8sgpt-ai/k8sgpt-operator`
-
-- Chart: `D:\helm_clones_artifacthub\k8sgpt-ai__k8sgpt-operator\chart\operator`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.k8sgpt.ai/. Please add the missing repos via 'helm repo add'
-```
-
-### 33. `norwoodj/helm-docs`
-
-- Chart: `D:\helm_clones_artifacthub\norwoodj__helm-docs\example-charts\custom-template`
-- Source: `dependency`
-
-```text
-Error: no repository definition for @stable. Please add them via 'helm repo add'
-```
-
-### 34. `chatwoot/charts`
-
-- Chart: `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 35. `hirosystems/charts`
-
-- Chart: `D:\helm_clones_artifacthub\hirosystems__charts\hirosystems\bitcoin-core`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 36. `evryfs/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\evryfs__helm-charts\charts\dependency-track`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://raw.githubusercontent.com/bitnami/charts/eb5f9a9513d987b519f0ecd732e7031241c50328/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 37. `k8gb-io/k8gb`
-
-- Chart: `D:\helm_clones_artifacthub\k8gb-io__k8gb\chart\k8gb`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://coredns.github.io/helm, https://kubernetes-sigs.github.io/external-dns. Please add the missing repos via 'helm repo add'
-```
-
-### 38. `Flagsmith/flagsmith-charts`
-
-- Chart: `D:\helm_clones_artifacthub\Flagsmith__flagsmith-charts\charts\flagsmith`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 39. `glasskube/operator`
-
-- Chart: `D:\helm_clones_artifacthub\glasskube__operator\charts\glasskube-operator`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.jetstack.io, https://prometheus-community.github.io/helm-charts, https://mariadb-operator.github.io/mariadb-operator, https://cloudnative-pg.io/charts/, https://charts.min.io/. Please add the missing repos via 'helm repo add'
-```
-
-### 40. `oauth2-proxy/oauth2-proxy`
-
-- Chart: `D:\helm_clones_artifacthub\oauth2-proxy__oauth2-proxy\contrib\local-environment\kubernetes`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.dexidp.io, https://oauth2-proxy.github.io/manifests, https://conservis.github.io/helm-charts, https://conservis.github.io/helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 41. `mogenius/renovate-operator`
-
-- Chart: `D:\helm_clones_artifacthub\mogenius__renovate-operator\charts\renovate-operator`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://valkey.io/valkey-helm/. Please add the missing repos via 'helm repo add'
-```
-
-### 42. `hivemq/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\hivemq__helm-charts\charts\hivemq-operator`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 43. `Azure/secrets-store-csi-driver-provider-azure`
-
-- Chart: `D:\helm_clones_artifacthub\Azure__secrets-store-csi-driver-provider-azure\charts\csi-secrets-store-provider-azure`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts. Please add the missing repos via 'helm repo add'
-```
-
-### 44. `asdf2014/druid-helm`
-
-- Chart: `D:\helm_clones_artifacthub\asdf2014__druid-helm\charts\druid`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.helm.sh/stable, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 45. `one-acre-fund/oaf-public-charts`
-
-- Chart: `D:\helm_clones_artifacthub\one-acre-fund__oaf-public-charts\archive\geonode`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 46. `beeinventor/charts`
-
-- Chart: `D:\helm_clones_artifacthub\beeinventor__charts\beeinventor\keycloak`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami, https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 47. `snowplow-devops/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\snowplow-devops__helm-charts\charts\avalanche`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://snowplow-devops.github.io/helm-charts, https://snowplow-devops.github.io/helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 48. `enix/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\enix__helm-charts\charts\cnpg-monitoring`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://prometheus-community.github.io/helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 49. `andrenarchy/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\andrenarchy__helm-charts\charts\home-assistant`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://library-charts.k8s-at-home.com, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://andrenarchy.github.io/helm-charts/. Please add the missing repos via 'helm repo add'
-```
-
-### 50. `litmuschaos/litmus-helm`
-
-- Chart: `D:\helm_clones_artifacthub\litmuschaos__litmus-helm\charts\litmus`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://raw.githubusercontent.com/bitnami/charts/archive-full-index/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 51. `k8s-home-lab/helm-charts`
-
-- Chart: `D:\helm_clones_github\k8s-home-lab__helm-charts\charts\stable\bazarr`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://k8s-home-lab.github.io/helm-charts/. Please add the missing repos via 'helm repo add'
-```
-
-### 52. `fosrl/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\pangolin`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://cloudnative-pg.github.io/charts, https://cloudnative-pg.github.io/charts. Please add the missing repos via 'helm repo add'
-```
-
-### 53. `relution-io/relution-kubernetes`
-
-- Chart: `D:\helm_clones_artifacthub\relution-io__relution-kubernetes\charts\relution`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 54. `solarwinds/swi-k8s-opentelemetry-collector`
-
-- Chart: `D:\helm_clones_artifacthub\solarwinds__swi-k8s-opentelemetry-collector\deploy\helm`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://prometheus-community.github.io/helm-charts, https://open-telemetry.github.io/opentelemetry-helm-charts, https://charts.jetstack.io, https://aquasecurity.github.io/helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 55. `loeken/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\loeken__helm-charts\charts\home-assistant`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://bjw-s-labs.github.io/helm-charts, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami, https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
-```
-
-### 56. `kube-logging/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\kube-logging__helm-charts\charts\logging-demo`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://helm.min.io/, https://kube-logging.github.io/helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 57. `obeone/charts`
-
-- Chart: `D:\helm_clones_artifacthub\obeone__charts\charts\cyberchef`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://library-charts.k8s-at-home.com. Please add the missing repos via 'helm repo add'
-```
-
-### 58. `liranme/redisinsight-secure`
-
-- Chart: `D:\helm_clones_artifacthub\liranme__redisinsight-secure\helm\redisinsight-secure`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://oauth2-proxy.github.io/manifests. Please add the missing repos via 'helm repo add'
-```
-
-### 59. `cnieg/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\cnieg__helm-charts\charts\clamapi`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://wiremind.github.io/wiremind-helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-### 60. `kubewarden/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\kubewarden__helm-charts\charts\kubewarden-controller`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://kyverno.github.io/policy-reporter. Please add the missing repos via 'helm repo add'
-```
-
-### 61. `openmeterio/openmeter`
-
-- Chart: `D:\helm_clones_artifacthub\openmeterio__openmeter\deploy\charts\openmeter`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://docs.altinity.com/clickhouse-operator/. Please add the missing repos via 'helm repo add'
-```
-
-### 62. `kubewarden/sbomscanner`
-
-- Chart: `D:\helm_clones_artifacthub\kubewarden__sbomscanner\charts\sbomscanner`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://nats-io.github.io/k8s/helm/charts/. Please add the missing repos via 'helm repo add'
-```
-
-### 63. `kuoss/venti`
-
-- Chart: `D:\helm_clones_artifacthub\kuoss__venti\hack\venti-stack-dev`
-- Source: `dependency`
-
-```text
-Error: no repository definition for https://kuoss.github.io/helm-charts, https://kuoss.github.io/helm-charts. Please add the missing repos via 'helm repo add'
-```
-
-## `template.required_value` (50)
-
-### 1. `community-charts/helm-charts`
+### 2. `community-charts/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\community-charts__helm-charts\charts\cloudflared`
 - Source: `template`
@@ -20818,7 +20428,19 @@ Error: execution error at (cloudflared/templates/secret.yaml:9:23): Base64 encod
 Use --debug flag to render out invalid YAML
 ```
 
-### 2. `VictoriaMetrics/helm-charts`
+### 3. `community-charts/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\community-charts__helm-charts\charts\outline`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\community-charts__helm-charts\charts\outline`
+
+```text
+Error: execution error at (outline/templates/secret.yaml:14:24): PostgreSQL password is required
+
+Use --debug flag to render out invalid YAML
+```
+
+### 4. `VictoriaMetrics/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-agent`
 - Source: `template`
@@ -20830,7 +20452,31 @@ Error: execution error at (victoria-logs-agent/templates/server.yaml:64:20): at 
 Use --debug flag to render out invalid YAML
 ```
 
-### 3. `actions/actions-runner-controller`
+### 5. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-collector`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-collector`
+
+```text
+Error: execution error at (victoria-logs-collector/templates/server.yaml:67:24): at least one remoteWrite configuration must be provided
+
+Use --debug flag to render out invalid YAML
+```
+
+### 6. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-agent`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-agent`
+
+```text
+Error: execution error at (victoria-metrics-agent/templates/server.yaml:80:19): Please define at least one remoteWrite
+
+Use --debug flag to render out invalid YAML
+```
+
+### 7. `actions/actions-runner-controller`
 
 - Chart: `D:\helm_clones_artifacthub\actions__actions-runner-controller\charts\gha-runner-scale-set-experimental`
 - Source: `template`
@@ -20842,7 +20488,7 @@ Error: execution error at (gha-runner-scale-set-experimental/templates/manager_r
 Use --debug flag to render out invalid YAML
 ```
 
-### 4. `CloudPirates-io/helm-charts`
+### 8. `CloudPirates-io/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\CloudPirates-io__helm-charts\charts\clusterpirate`
 - Source: `template`
@@ -20854,7 +20500,7 @@ Error: execution error at (clusterpirate/templates/secret.yaml:24:4): ERROR: aut
 Use --debug flag to render out invalid YAML
 ```
 
-### 5. `linkerd/linkerd2`
+### 9. `linkerd/linkerd2`
 
 - Chart: `D:\helm_clones_artifacthub\linkerd__linkerd2\charts\linkerd-control-plane`
 - Source: `template`
@@ -20866,20 +20512,19 @@ Error: execution error at (linkerd-control-plane/templates/identity.yaml:19:21):
 Use --debug flag to render out invalid YAML
 ```
 
-### 6. `linkerd/linkerd2`
+### 10. `grafana/loki`
 
-- Chart: `D:\helm_clones_artifacthub\linkerd__linkerd2\charts\linkerd-control-plane`
+- Chart: `D:\helm_clones_artifacthub\grafana__loki\production\helm\loki`
 - Source: `template`
-- Values files: `D:\helm_clones_artifacthub\linkerd__linkerd2\charts\linkerd-control-plane\values-ha.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\linkerd__linkerd2\charts\linkerd-control-plane -f D:\helm_clones_artifacthub\linkerd__linkerd2\charts\linkerd-control-plane\values-ha.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\grafana__loki\production\helm\loki`
 
 ```text
-Error: execution error at (linkerd-control-plane/templates/identity.yaml:19:21): Please provide the identity issuer certificate
+Error: execution error at (loki/templates/write/statefulset-write.yaml:50:28): Please define loki.storage.bucketNames.chunks
 
 Use --debug flag to render out invalid YAML
 ```
 
-### 7. `piraeusdatastore/helm-charts`
+### 11. `piraeusdatastore/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\piraeusdatastore__helm-charts\charts\linstor-affinity-controller`
 - Source: `template`
@@ -20892,7 +20537,7 @@ Error: execution error at (linstor-affinity-controller/templates/deployment.yaml
 Use --debug flag to render out invalid YAML
 ```
 
-### 8. `piraeusdatastore/helm-charts`
+### 12. `piraeusdatastore/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\piraeusdatastore__helm-charts\charts\linstor-scheduler`
 - Source: `template`
@@ -20905,7 +20550,7 @@ Error: execution error at (linstor-scheduler/templates/deployment.yaml:91:24): P
 Use --debug flag to render out invalid YAML
 ```
 
-### 9. `coder/coder`
+### 13. `coder/coder`
 
 - Chart: `D:\helm_clones_artifacthub\coder__coder\helm\coder`
 - Source: `template`
@@ -20917,7 +20562,7 @@ Error: execution error at (coder/templates/coder.yaml:7:3): You must specify the
 Use --debug flag to render out invalid YAML
 ```
 
-### 10. `coder/coder`
+### 14. `coder/coder`
 
 - Chart: `D:\helm_clones_artifacthub\coder__coder\helm\provisioner`
 - Source: `template`
@@ -20929,7 +20574,7 @@ Error: execution error at (coder-provisioner/templates/coder.yaml:7:3): You must
 Use --debug flag to render out invalid YAML
 ```
 
-### 11. `codefresh-io/gitops-runtime-helm`
+### 15. `codefresh-io/gitops-runtime-helm`
 
 - Chart: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime`
 - Source: `template`
@@ -20942,105 +20587,7 @@ Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-r
 Use --debug flag to render out invalid YAML
 ```
 
-### 12. `codefresh-io/gitops-runtime-helm`
-
-- Chart: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml`
-
-```text
-level=INFO msg="warning: destination for argo-cd.redis.env is a table. Ignoring non-table value ([])"
-Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-runtime-from-platform.yaml:22:12): global.codefresh.userToken is mandatory. Set token or secretKeyRef!
-
-Use --debug flag to render out invalid YAML
-```
-
-### 13. `codefresh-io/gitops-runtime-helm`
-
-- Chart: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml`
-
-```text
-level=INFO msg="warning: destination for argo-cd.redis.env is a table. Ignoring non-table value ([])"
-Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-runtime-from-platform.yaml:22:12): global.codefresh.userToken is mandatory. Set token or secretKeyRef!
-
-Use --debug flag to render out invalid YAML
-```
-
-### 14. `codefresh-io/gitops-runtime-helm`
-
-- Chart: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml`, `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml`
-
-```text
-level=INFO msg="warning: destination for argo-cd.redis.env is a table. Ignoring non-table value ([])"
-Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-runtime-from-platform.yaml:22:12): global.codefresh.userToken is mandatory. Set token or secretKeyRef!
-
-Use --debug flag to render out invalid YAML
-```
-
-### 15. `codefresh-io/gitops-runtime-helm`
-
-- Chart: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml`
-
-```text
-level=INFO msg="warning: destination for argo-cd.redis.env is a table. Ignoring non-table value ([])"
-Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-runtime-from-platform.yaml:22:12): global.codefresh.userToken is mandatory. Set token or secretKeyRef!
-
-Use --debug flag to render out invalid YAML
-```
-
-### 16. `codefresh-io/gitops-runtime-helm`
-
-- Chart: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml`, `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml`
-
-```text
-level=INFO msg="warning: destination for argo-cd.redis.env is a table. Ignoring non-table value ([])"
-Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-runtime-from-platform.yaml:22:12): global.codefresh.userToken is mandatory. Set token or secretKeyRef!
-
-Use --debug flag to render out invalid YAML
-```
-
-### 17. `codefresh-io/gitops-runtime-helm`
-
-- Chart: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml`, `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml`
-
-```text
-level=INFO msg="warning: destination for argo-cd.redis.env is a table. Ignoring non-table value ([])"
-Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-runtime-from-platform.yaml:22:12): global.codefresh.userToken is mandatory. Set token or secretKeyRef!
-
-Use --debug flag to render out invalid YAML
-```
-
-### 18. `codefresh-io/gitops-runtime-helm`
-
-- Chart: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml`, `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml`, `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml`
-
-```text
-level=INFO msg="warning: destination for argo-cd.redis.env is a table. Ignoring non-table value ([])"
-Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-runtime-from-platform.yaml:22:12): global.codefresh.userToken is mandatory. Set token or secretKeyRef!
-
-Use --debug flag to render out invalid YAML
-```
-
-### 19. `cetic/helm-nifi`
+### 16. `cetic/helm-nifi`
 
 - Chart: `D:\helm_clones_artifacthub\cetic__helm-nifi`
 - Source: `template`
@@ -21053,7 +20600,7 @@ Error: template: nifi/templates/configmap.yaml:12:4: executing "nifi/templates/c
 Use --debug flag to render out invalid YAML
 ```
 
-### 20. `SumoLogic/sumologic-kubernetes-collection`
+### 17. `SumoLogic/sumologic-kubernetes-collection`
 
 - Chart: `D:\helm_clones_artifacthub\SumoLogic__sumologic-kubernetes-collection\deploy\helm\sumologic`
 - Source: `template`
@@ -21065,7 +20612,7 @@ Error: execution error at (sumologic/templates/setup/secret.yaml:18:25): A valid
 Use --debug flag to render out invalid YAML
 ```
 
-### 21. `neo4j/helm-charts`
+### 18. `neo4j/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\neo4j__helm-charts\neo4j`
 - Source: `template`
@@ -21077,7 +20624,7 @@ Error: execution error at (neo4j/templates/_helpers.tpl:38:8): neo4j.name is req
 Use --debug flag to render out invalid YAML
 ```
 
-### 22. `neo4j/helm-charts`
+### 19. `neo4j/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\neo4j__helm-charts\neo4j-docker-desktop-pv`
 - Source: `template`
@@ -21089,7 +20636,7 @@ Error: execution error at (neo4j-docker-desktop-pv/templates/_helpers.tpl:2:5): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 23. `neo4j/helm-charts`
+### 20. `neo4j/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\neo4j__helm-charts\neo4j-headless-service`
 - Source: `template`
@@ -21101,7 +20648,7 @@ Error: execution error at (neo4j-headless-service/templates/neo4j-svc.yaml:6:12)
 Use --debug flag to render out invalid YAML
 ```
 
-### 24. `neo4j/helm-charts`
+### 21. `neo4j/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\neo4j__helm-charts\neo4j-persistent-volume`
 - Source: `template`
@@ -21113,7 +20660,7 @@ Error: execution error at (neo4j-persistent-volume/templates/_helpers.tpl:2:5): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 25. `PrefectHQ/prefect-helm`
+### 22. `PrefectHQ/prefect-helm`
 
 - Chart: `D:\helm_clones_artifacthub\PrefectHQ__prefect-helm\charts\prefect-worker`
 - Source: `template`
@@ -21125,7 +20672,7 @@ Error: execution error at (prefect-worker/templates/deployment.yaml:193:17): A W
 Use --debug flag to render out invalid YAML
 ```
 
-### 26. `mysql/mysql-operator`
+### 23. `mysql/mysql-operator`
 
 - Chart: `D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-operator`
 - Source: `template`
@@ -21137,7 +20684,7 @@ Error: execution error at (mysql-operator/templates/service_account_operator.yam
 Use --debug flag to render out invalid YAML
 ```
 
-### 27. `codefresh-io/venona`
+### 24. `codefresh-io/venona`
 
 - Chart: `D:\helm_clones_artifacthub\codefresh-io__venona\charts\cf-runtime`
 - Source: `template`
@@ -21149,20 +20696,7 @@ Error: execution error at (cf-runtime/templates/hooks/post-install/cm-update-run
 Use --debug flag to render out invalid YAML
 ```
 
-### 28. `codefresh-io/venona`
-
-- Chart: `D:\helm_clones_artifacthub\codefresh-io__venona\charts\cf-runtime`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\codefresh-io__venona\charts\cf-runtime\values-rootless.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\codefresh-io__venona\charts\cf-runtime -f D:\helm_clones_artifacthub\codefresh-io__venona\charts\cf-runtime\values-rootless.yaml`
-
-```text
-Error: execution error at (cf-runtime/templates/hooks/post-install/cm-update-runtime.yaml:18:7): ERROR: .global.context is required
-
-Use --debug flag to render out invalid YAML
-```
-
-### 29. `apecloud/helm-charts`
+### 25. `apecloud/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\apecloud__helm-charts\charts\redash`
 - Source: `template`
@@ -21174,7 +20708,7 @@ Error: execution error at (redash/templates/secrets.yaml:11:14): A value for one
 Use --debug flag to render out invalid YAML
 ```
 
-### 30. `apache/couchdb-helm`
+### 26. `apache/couchdb-helm`
 
 - Chart: `D:\helm_clones_artifacthub\apache__couchdb-helm\couchdb`
 - Source: `template`
@@ -21186,7 +20720,7 @@ Error: execution error at (couchdb/templates/statefulset.yaml:25:28): A value fo
 Use --debug flag to render out invalid YAML
 ```
 
-### 31. `stevehipwell/helm-charts`
+### 27. `stevehipwell/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\stevehipwell__helm-charts\charts\kube-proxy`
 - Source: `template`
@@ -21198,7 +20732,7 @@ Error: execution error at (kube-proxy/templates/daemonset.yaml:27:28): You must 
 Use --debug flag to render out invalid YAML
 ```
 
-### 32. `sysdiglabs/charts`
+### 28. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cloud-bench`
 - Source: `template`
@@ -21210,7 +20744,7 @@ Error: execution error at (cloud-bench/templates/secret.yaml:10:24): A valid .Va
 Use --debug flag to render out invalid YAML
 ```
 
-### 33. `sysdiglabs/charts`
+### 29. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cloud-connector`
 - Source: `template`
@@ -21222,7 +20756,7 @@ Error: execution error at (cloud-connector/templates/secret.yaml:20:23): value '
 Use --debug flag to render out invalid YAML
 ```
 
-### 34. `sysdiglabs/charts`
+### 30. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cloud-scanning`
 - Source: `template`
@@ -21234,7 +20768,7 @@ Error: execution error at (cloud-scanning/templates/secret.yaml:14:23): value 's
 Use --debug flag to render out invalid YAML
 ```
 
-### 35. `sysdiglabs/charts`
+### 31. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\registry-scanner`
 - Source: `template`
@@ -21246,7 +20780,7 @@ Error: execution error at (registry-scanner/templates/secret.yaml:10:21): A vali
 Use --debug flag to render out invalid YAML
 ```
 
-### 36. `sysdiglabs/charts`
+### 32. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\sysdig`
 - Source: `template`
@@ -21259,7 +20793,7 @@ Error: execution error at (sysdig/templates/secrets.yaml:11:17): A valid .Values
 Use --debug flag to render out invalid YAML
 ```
 
-### 37. `sysdiglabs/charts`
+### 33. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\sysdig-deploy`
 - Source: `template`
@@ -21271,7 +20805,7 @@ Error: execution error at (sysdig-deploy/charts/nodeAnalyzer/templates/secrets.y
 Use --debug flag to render out invalid YAML
 ```
 
-### 38. `sysdiglabs/charts`
+### 34. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\sysdig-mcm-navmenu`
 - Source: `template`
@@ -21283,7 +20817,7 @@ Error: execution error at (sysdig-mcm-navmenu/templates/configmap.yaml:6:99): va
 Use --debug flag to render out invalid YAML
 ```
 
-### 39. `RedisLabs/redis-enterprise-helm`
+### 35. `RedisLabs/redis-enterprise-helm`
 
 - Chart: `D:\helm_clones_artifacthub\RedisLabs__redis-enterprise-helm\ai\charts\redis-agent-memory`
 - Source: `template`
@@ -21295,20 +20829,19 @@ Error: execution error at (redis-agent-memory/templates/deployment.yaml:1:4): li
 Use --debug flag to render out invalid YAML
 ```
 
-### 40. `RedisLabs/redis-enterprise-helm`
+### 36. `relution-io/relution-kubernetes`
 
-- Chart: `D:\helm_clones_artifacthub\RedisLabs__redis-enterprise-helm\ai\charts\redis-agent-memory`
+- Chart: `D:\helm_clones_artifacthub\relution-io__relution-kubernetes\charts\relution`
 - Source: `template`
-- Values files: `D:\helm_clones_artifacthub\RedisLabs__redis-enterprise-helm\ai\charts\redis-agent-memory\values-fips.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\RedisLabs__redis-enterprise-helm\ai\charts\redis-agent-memory -f D:\helm_clones_artifacthub\RedisLabs__redis-enterprise-helm\ai\charts\redis-agent-memory\values-fips.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\relution-io__relution-kubernetes\charts\relution`
 
 ```text
-Error: execution error at (redis-agent-memory/templates/deployment.yaml:1:4): license.existingSecret is required
+Error: execution error at (relution/templates/deployment.yaml:2:3): Please provide at least one of the following values: relution.config, relution.environment, relution.secrets
 
 Use --debug flag to render out invalid YAML
 ```
 
-### 41. `intel/helm-charts`
+### 37. `intel/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\intel__helm-charts\charts\evi-clustering-archiving-0.8.4`
 - Source: `template`
@@ -21320,43 +20853,7 @@ Error: execution error at (evi-clustering-archiving/templates/secret.yaml:21:18)
 Use --debug flag to render out invalid YAML
 ```
 
-### 42. `intel/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\intel__helm-charts\charts\evi-clustering-archiving-2.1.0`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\intel__helm-charts\charts\evi-clustering-archiving-2.1.0`
-
-```text
-Error: execution error at (evi-clustering-archiving/templates/secret.yaml:21:18): A valid secret.auth.password is required!
-
-Use --debug flag to render out invalid YAML
-```
-
-### 43. `intel/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\intel__helm-charts\charts\evi-clustering-archiving-3.0.0`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\intel__helm-charts\charts\evi-clustering-archiving-3.0.0`
-
-```text
-Error: execution error at (evi-clustering-archiving/templates/secret.yaml:21:18): A valid secret.auth.password is required!
-
-Use --debug flag to render out invalid YAML
-```
-
-### 44. `intel/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\intel__helm-charts\charts\evi-clustering-archiving-3.0.3`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\intel__helm-charts\charts\evi-clustering-archiving-3.0.3`
-
-```text
-Error: execution error at (evi-clustering-archiving/templates/secret.yaml:21:18): A valid secret.auth.password is required!
-
-Use --debug flag to render out invalid YAML
-```
-
-### 45. `intel/helm-charts`
+### 38. `intel/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\intel__helm-charts\charts\evi-hbase-0.8.3`
 - Source: `template`
@@ -21368,7 +20865,7 @@ Error: execution error at (evi-hbase/templates/pv-zookeeper.yaml:22:16): A valid
 Use --debug flag to render out invalid YAML
 ```
 
-### 46. `getindata/helm-charts`
+### 39. `getindata/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\getindata__helm-charts\charts\kubeflow-pipelines`
 - Source: `template`
@@ -21380,7 +20877,19 @@ Error: execution error at (kubeflow-pipelines/templates/storage-configs.yaml:17:
 Use --debug flag to render out invalid YAML
 ```
 
-### 47. `icoretech/helm`
+### 40. `obeone/charts`
+
+- Chart: `D:\helm_clones_artifacthub\obeone__charts\charts\fooocus`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\obeone__charts\charts\fooocus`
+
+```text
+Error: execution error at (fooocus/templates/common.yaml:1:3): accessMode is required for PVC test-fooocus-data
+
+Use --debug flag to render out invalid YAML
+```
+
+### 41. `icoretech/helm`
 
 - Chart: `D:\helm_clones_artifacthub\icoretech__helm\charts\airbroke`
 - Source: `template`
@@ -21392,7 +20901,7 @@ Error: execution error at (airbroke/templates/web-env-secret.yaml:9:20): databas
 Use --debug flag to render out invalid YAML
 ```
 
-### 48. `icoretech/helm`
+### 42. `icoretech/helm`
 
 - Chart: `D:\helm_clones_artifacthub\icoretech__helm\charts\pgbouncer`
 - Source: `template`
@@ -21404,7 +20913,7 @@ Error: execution error at (pgbouncer/templates/userlist-secret.yaml:9:19): A val
 Use --debug flag to render out invalid YAML
 ```
 
-### 49. `Warxcell/helm-chart`
+### 43. `Warxcell/helm-chart`
 
 - Chart: `D:\helm_clones_artifacthub\Warxcell__helm-chart\charts\blackfire`
 - Source: `template`
@@ -21416,7 +20925,7 @@ Error: execution error at (blackfire/templates/secret.yaml:9:16): serverId is re
 Use --debug flag to render out invalid YAML
 ```
 
-### 50. `openmeterio/openmeter`
+### 44. `openmeterio/openmeter`
 
 - Chart: `D:\helm_clones_artifacthub\openmeterio__openmeter\deploy\charts\benthos-collector`
 - Source: `template`
@@ -21428,7 +20937,397 @@ Error: execution error at (benthos-collector/templates/statefulset.yaml:41:19): 
 Use --debug flag to render out invalid YAML
 ```
 
-## `template.custom_validation` (21)
+## `unknown.unclassified` (37)
+
+### 1. `grafana/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\grafana__helm-charts\charts\enterprise-metrics`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 2. `goharbor/harbor`
+
+- Chart: `D:\helm_clones_artifacthub\goharbor__harbor\src\pkg\chart\testdata\harbor-schema1`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 3. `rancher/rancher`
+
+- Chart: `D:\helm_clones_artifacthub\rancher__rancher\chart`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 4. `renovatebot/renovate`
+
+- Chart: `D:\helm_clones_artifacthub\renovatebot__renovate\lib\modules\manager\helmv3\__fixtures__`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 5. `rook/rook`
+
+- Chart: `D:\helm_clones_artifacthub\rook__rook\deploy\charts\rook-ceph`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 6. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp`
+
+```text
+Error: execution error at (victoria-logs-mcp/templates/deployment.yaml:54:25): .Values.vl.entrypoint should be set
+
+Use --debug flag to render out invalid YAML
+```
+
+### 7. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert`
+
+```text
+Error: execution error at (victoria-metrics-alert/templates/alert-server.yaml:8:6): server.datasource.url datasource URL must be specified
+
+Use --debug flag to render out invalid YAML
+```
+
+### 8. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly`
+
+```text
+Error: execution error at (victoria-metrics-anomaly/templates/server.yaml:2:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.
+       See https://victoriametrics.com/legal/esa/ for details.
+       Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/
+       for more information, visit https://victoriametrics.com/products/enterprise/
+       To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 9. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway`
+
+```text
+Error: execution error at (victoria-metrics-gateway/templates/server.yaml:1:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.
+       See https://victoriametrics.com/legal/esa/ for details.
+       Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/
+       for more information, visit https://victoriametrics.com/products/enterprise/
+       To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 10. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp`
+
+```text
+Error: execution error at (victoria-metrics-mcp/templates/deployment.yaml:64:25): either .Values.vm.cloudAPIKey or .Values.vm.entrypoint should be set
+
+Use --debug flag to render out invalid YAML
+```
+
+### 11. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common`
+
+```text
+Error: execution error at (victoria-metrics-common/templates/service.yaml:7:14): .style argument should be either `plain` or `managed`
+
+Use --debug flag to render out invalid YAML
+```
+
+### 12. `kubernetes/charts`
+
+- Chart: `D:\helm_clones_artifacthub\kubernetes__charts\incubator\distribution`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 13. `influxdata/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
+
+```text
+Error: execution error at (influxdb3-clustered/templates/app-instance.yml:90:3): missing catalog.dsn.SecretName
+
+Use --debug flag to render out invalid YAML
+```
+
+### 14. `camunda/camunda-platform-helm`
+
+- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+
+```text
+Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 15. `camunda/camunda-platform-helm`
+
+- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9`
+
+```text
+Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 16. `wiremind/wiremind-helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql`
+- Source: `template`
+- Values files: `D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql -f D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml`
+
+```text
+Error: execution error at (postgresql/templates/statefulset.yaml:335:29): In order to enable metrics you need to specify a database (.Values.postgresqlDatabase or .Values.global.postgresql.postgresqlDatabase)
+
+Use --debug flag to render out invalid YAML
+```
+
+### 17. `groundhog2k/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42`
+
+```text
+Error: execution error at (remark42/templates/secureconfig.yaml:9:14): .settings.secretKey must contain value
+
+Use --debug flag to render out invalid YAML
+```
+
+### 18. `jfrog/charts`
+
+- Chart: `D:\helm_clones_artifacthub\jfrog__charts\stable\artifactory-cpp-ce`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 19. `gabe565/charts`
+
+- Chart: `D:\helm_clones_artifacthub\gabe565__charts\charts\adguard-home`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 20. `kestra-io/kestra`
+
+- Chart: `D:\helm_clones_artifacthub\kestra-io__kestra\charts\kestra-starter`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 21. `helm/charts`
+
+- Chart: `D:\helm_clones_artifacthub\helm__charts\incubator\distribution`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 22. `norwoodj/helm-docs`
+
+- Chart: `D:\helm_clones_artifacthub\norwoodj__helm-docs\example-charts\custom-template`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 23. `chatwoot/charts`
+
+- Chart: `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot`
+- Source: `template`
+- Values files: `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml`, `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml`
+
+```text
+Error: execution error at (chatwoot/charts/redis/templates/NOTES.txt:182:4): 
+VALUES VALIDATION:
+
+redis: architecture
+    Using redis sentinel on standalone mode is not supported.
+    To deploy redis sentinel, please select the "replication" mode
+    (--set "architecture=replication,sentinel.enabled=true")
+
+Use --debug flag to render out invalid YAML
+```
+
+### 24. `kiwigrid/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\kiwigrid__helm-charts\charts\ditto-digital-twins`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 25. `mysql/mysql-operator`
+
+- Chart: `D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
+
+```text
+Error: execution error at (mysql-innodbcluster/templates/deployment_cluster.yaml:68:8): tls.routerCertAndPKsecretName: secret 'test-router-tls' not found in namespace 'default'
+
+Use --debug flag to render out invalid YAML
+```
+
+### 26. `one-acre-fund/oaf-public-charts`
+
+- Chart: `D:\helm_clones_artifacthub\one-acre-fund__oaf-public-charts\archive\geonode`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 27. `kubernetes/helm`
+
+- Chart: `D:\helm_clones_artifacthub\kubernetes__helm\internal\chart\v3\lint\rules\testdata\anotherbadchartfile`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 28. `helm/helm`
+
+- Chart: `D:\helm_clones_artifacthub\helm__helm\internal\chart\v3\lint\rules\testdata\anotherbadchartfile`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 29. `banzaicloud/banzai-charts`
+
+- Chart: `D:\helm_clones_artifacthub\banzaicloud__banzai-charts\argo`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 30. `ortelius/ortelius-charts`
+
+- Chart: `D:\helm_clones_artifacthub\ortelius__ortelius-charts\chart\ortelius`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 31. `devtron-labs/charts`
+
+- Chart: `D:\helm_clones_artifacthub\devtron-labs__charts\charts\cluster-essentials`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 32. `netrisai/charts`
+
+- Chart: `D:\helm_clones_artifacthub\netrisai__charts\charts\netris-controller`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 33. `k8s-home-lab/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\k8s-home-lab__helm-charts\unmaintained\audiobookshelf`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 34. `rhdh-bot/openshift-helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\redhat\redhat\redhat-mysql-persistent\0.0.2\src`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 35. `k8s-at-home/charts`
+
+- Chart: `D:\helm_clones_artifacthub\k8s-at-home__charts\charts\stable\firefly-iii`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 36. `kube-logging/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\kube-logging__helm-charts\charts\logging-demo`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 37. `fonzdm/servarr`
+
+- Chart: `D:\helm_clones_artifacthub\fonzdm__servarr\servarr`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+## `template.custom_validation` (17)
 
 ### 1. `aws/eks-charts`
 
@@ -21454,7 +21353,19 @@ Error: execution error at (rcon-web-admin/templates/secrets.yaml:15:10): UI pass
 Use --debug flag to render out invalid YAML
 ```
 
-### 3. `actions/actions-runner-controller`
+### 3. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-multilevel`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-multilevel`
+
+```text
+Error: execution error at (victoria-logs-multilevel/templates/vlselect-server.yaml:61:19): no storageNodes found. Please set at least one storage node using `.Values.storageNodes` property
+
+Use --debug flag to render out invalid YAML
+```
+
+### 4. `actions/actions-runner-controller`
 
 - Chart: `D:\helm_clones_artifacthub\actions__actions-runner-controller\charts\gha-runner-scale-set`
 - Source: `template`
@@ -21466,7 +21377,7 @@ Error: execution error at (gha-runner-scale-set/templates/manager_role_binding.y
 Use --debug flag to render out invalid YAML
 ```
 
-### 4. `EugenMayer/helm-charts`
+### 5. `EugenMayer/helm-charts`
 
 - Chart: `D:\helm_clones_github\EugenMayer__helm-charts\charts\cert-manager-cloudflare-config`
 - Source: `template`
@@ -21478,7 +21389,7 @@ Error: execution error at (cert-manager-cloudflare-config/templates/le_issuer.ya
 Use --debug flag to render out invalid YAML
 ```
 
-### 5. `EugenMayer/helm-charts`
+### 6. `EugenMayer/helm-charts`
 
 - Chart: `D:\helm_clones_github\EugenMayer__helm-charts\charts\cert-manager-external-account-bindings-cloudflare-config`
 - Source: `template`
@@ -21490,7 +21401,7 @@ Error: execution error at (cert-manager-external-account-bindings-cloudflare-con
 Use --debug flag to render out invalid YAML
 ```
 
-### 6. `EugenMayer/helm-charts`
+### 7. `EugenMayer/helm-charts`
 
 - Chart: `D:\helm_clones_github\EugenMayer__helm-charts\charts\openldap-test`
 - Source: `template`
@@ -21502,7 +21413,7 @@ Error: execution error at (openldap-test/templates/common.yaml:1:3): Service - E
 Use --debug flag to render out invalid YAML
 ```
 
-### 7. `EugenMayer/helm-charts`
+### 8. `EugenMayer/helm-charts`
 
 - Chart: `D:\helm_clones_github\EugenMayer__helm-charts\charts\rundeck`
 - Source: `template`
@@ -21514,7 +21425,7 @@ Error: execution error at (rundeck/templates/rundeck-backend-deployment.yaml:78:
 Use --debug flag to render out invalid YAML
 ```
 
-### 8. `kestra-io/kestra`
+### 9. `kestra-io/kestra`
 
 - Chart: `D:\helm_clones_artifacthub\kestra-io__kestra\charts\kestra`
 - Source: `template`
@@ -21526,7 +21437,7 @@ Error: execution error at (kestra/templates/checks.yaml:25:3): At least one of .
 Use --debug flag to render out invalid YAML
 ```
 
-### 9. `neo4j/helm-charts`
+### 10. `neo4j/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\neo4j__helm-charts\neo4j-admin`
 - Source: `template`
@@ -21538,7 +21449,19 @@ Error: execution error at (neo4j-admin/templates/_validation.tpl:68:16): Empty f
 Use --debug flag to render out invalid YAML
 ```
 
-### 10. `kubitodev/helm`
+### 11. `aws/karpenter`
+
+- Chart: `D:\helm_clones_artifacthub\aws__karpenter\charts\karpenter`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\aws__karpenter\charts\karpenter`
+
+```text
+Error: execution error at (karpenter/templates/deployment.yaml:151:25): Chart cannot be installed without a valid settings.clusterName!
+
+Use --debug flag to render out invalid YAML
+```
+
+### 12. `kubitodev/helm`
 
 - Chart: `D:\helm_clones_artifacthub\kubitodev__helm\charts\kubernetes-cloudflare-ddns`
 - Source: `template`
@@ -21550,7 +21473,7 @@ Error: execution error at (kubernetes-cloudflare-ddns/templates/secret.yaml:9:15
 Use --debug flag to render out invalid YAML
 ```
 
-### 11. `kubitodev/helm`
+### 13. `kubitodev/helm`
 
 - Chart: `D:\helm_clones_artifacthub\kubitodev__helm\charts\traefik-cloudflared-source-ip`
 - Source: `template`
@@ -21562,7 +21485,7 @@ Error: execution error at (traefik-cloudflared-source-ip/charts/traefik/template
 Use --debug flag to render out invalid YAML
 ```
 
-### 12. `spiffe/helm-charts-hardened`
+### 14. `spiffe/helm-charts-hardened`
 
 - Chart: `D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spiffe-step-ssh`
 - Source: `template`
@@ -21574,7 +21497,7 @@ Error: execution error at (spiffe-step-ssh/templates/step-config.yaml:29:6): You
 Use --debug flag to render out invalid YAML
 ```
 
-### 13. `fosrl/helm-charts`
+### 15. `fosrl/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt`
 - Source: `template`
@@ -21586,20 +21509,7 @@ Error: execution error at (newt/templates/secret-newt.yaml:44:4): newtInstances:
 Use --debug flag to render out invalid YAML
 ```
 
-### 14. `fosrl/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.default.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt -f D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.default.yaml`
-
-```text
-Error: execution error at (newt/templates/secret-newt.yaml:44:4): newtInstances: Credentials required. Either set inline credentials (pangolinEndpoint/id/secret), newtInstances[].auth.existingSecretName, newtInstances[].provisioningKey, enable auth.envVarsDirect with inline credentials, or provide mtls.secretName/mtls.p12Base64.
-
-Use --debug flag to render out invalid YAML
-```
-
-### 15. `fosrl/helm-charts`
+### 16. `fosrl/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt`
 - Source: `template`
@@ -21612,72 +21522,7 @@ Error: execution error at (newt/templates/secret-newt.yaml:24:4): newtInstances:
 Use --debug flag to render out invalid YAML
 ```
 
-### 16. `fosrl/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.default.yaml`, `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.dev.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt -f D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.default.yaml -f D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.dev.yaml`
-
-```text
-Error: execution error at (newt/templates/secret-newt.yaml:24:4): newtInstances: Inline credentials require pangolinEndpoint, id, and secret to be set together.
-
-Use --debug flag to render out invalid YAML
-```
-
-### 17. `fosrl/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.fulldev.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt -f D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.fulldev.yaml`
-
-```text
-Error: execution error at (newt/templates/secret-newt.yaml:24:4): newtInstances: Inline credentials require pangolinEndpoint, id, and secret to be set together.
-
-Use --debug flag to render out invalid YAML
-```
-
-### 18. `fosrl/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.default.yaml`, `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.fulldev.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt -f D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.default.yaml -f D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.fulldev.yaml`
-
-```text
-Error: execution error at (newt/templates/secret-newt.yaml:24:4): newtInstances: Inline credentials require pangolinEndpoint, id, and secret to be set together.
-
-Use --debug flag to render out invalid YAML
-```
-
-### 19. `fosrl/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.dev.yaml`, `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.fulldev.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt -f D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.dev.yaml -f D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.fulldev.yaml`
-
-```text
-Error: execution error at (newt/templates/secret-newt.yaml:24:4): newtInstances: Inline credentials require pangolinEndpoint, id, and secret to be set together.
-
-Use --debug flag to render out invalid YAML
-```
-
-### 20. `fosrl/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.default.yaml`, `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.dev.yaml`, `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.fulldev.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt -f D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.default.yaml -f D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.dev.yaml -f D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt\values.fulldev.yaml`
-
-```text
-Error: execution error at (newt/templates/secret-newt.yaml:24:4): newtInstances: Inline credentials require pangolinEndpoint, id, and secret to be set together.
-
-Use --debug flag to render out invalid YAML
-```
-
-### 21. `StrangeBeeCorp/helm-charts`
+### 17. `StrangeBeeCorp/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\StrangeBeeCorp__helm-charts\cortex-charts\cortex`
 - Source: `template`
@@ -21689,235 +21534,126 @@ Error: execution error at (cortex/templates/secrets.yaml:1:4): ERROR: You must c
 Use --debug flag to render out invalid YAML
 ```
 
-## `unknown.unclassified` (18)
+## `template.missing_template` (8)
 
-### 1. `influxdata/helm-charts`
+### 1. `atlassian/data-center-helm-charts`
 
-- Chart: `D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
+- Chart: `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\bamboo`
 - Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
+- Command: `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\bamboo`
 
 ```text
-Error: execution error at (influxdb3-clustered/templates/app-instance.yml:90:3): missing catalog.dsn.SecretName
+Error: bamboo/templates/statefulset.yaml:1:4
+  executing "bamboo/templates/statefulset.yaml" at <include "common.gateway.validateConfig" .>:
+    error calling include:
+template: no template "common.gateway.validateConfig" associated with template "gotpl"
 
 Use --debug flag to render out invalid YAML
 ```
 
-### 2. `camunda/camunda-platform-helm`
+### 2. `atlassian/data-center-helm-charts`
 
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+- Chart: `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\bitbucket`
 - Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+- Command: `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\bitbucket`
 
 ```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+Error: bitbucket/templates/statefulset.yaml:4:4
+  executing "bitbucket/templates/statefulset.yaml" at <include "common.gateway.validateConfig" .>:
+    error calling include:
+template: no template "common.gateway.validateConfig" associated with template "gotpl"
 
 Use --debug flag to render out invalid YAML
 ```
 
-### 3. `camunda/camunda-platform-helm`
+### 3. `atlassian/data-center-helm-charts`
 
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+- Chart: `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\confluence`
 - Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\confluence`
 
 ```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+Error: confluence/templates/statefulset.yaml:1:4
+  executing "confluence/templates/statefulset.yaml" at <include "common.gateway.validateConfig" .>:
+    error calling include:
+template: no template "common.gateway.validateConfig" associated with template "gotpl"
 
 Use --debug flag to render out invalid YAML
 ```
 
-### 4. `camunda/camunda-platform-helm`
+### 4. `atlassian/data-center-helm-charts`
 
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+- Chart: `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\crowd`
 - Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\crowd`
 
 ```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+Error: crowd/templates/statefulset.yaml:1:4
+  executing "crowd/templates/statefulset.yaml" at <include "common.gateway.validateConfig" .>:
+    error calling include:
+template: no template "common.gateway.validateConfig" associated with template "gotpl"
 
 Use --debug flag to render out invalid YAML
 ```
 
-### 5. `camunda/camunda-platform-helm`
+### 5. `atlassian/data-center-helm-charts`
 
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+- Chart: `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\jira`
 - Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\jira`
 
 ```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+Error: jira/templates/statefulset.yaml:1:4
+  executing "jira/templates/statefulset.yaml" at <include "common.gateway.validateConfig" .>:
+    error calling include:
+template: no template "common.gateway.validateConfig" associated with template "gotpl"
 
 Use --debug flag to render out invalid YAML
 ```
 
-### 6. `camunda/camunda-platform-helm`
+### 6. `jp-gouin/helm-openldap`
 
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+- Chart: `D:\helm_clones_artifacthub\jp-gouin__helm-openldap`
 - Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\jp-gouin__helm-openldap`
 
 ```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+Error: openldap-stack-ha/charts/phpldapadmin/templates/ingress.yaml:38:30
+  executing "openldap-stack-ha/charts/phpldapadmin/templates/ingress.yaml" at <include "common.ingress.supportsPathType" $>:
+    error calling include:
+template: no template "common.ingress.supportsPathType" associated with template "gotpl"
 
 Use --debug flag to render out invalid YAML
 ```
 
-### 7. `camunda/camunda-platform-helm`
+### 7. `EugenMayer/helm-charts`
 
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+- Chart: `D:\helm_clones_github\EugenMayer__helm-charts\charts\vikunja`
 - Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`
+- Command: `helm template test D:\helm_clones_github\EugenMayer__helm-charts\charts\vikunja`
 
 ```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+Error: vikunja/templates/common.yaml:3:16
+  executing "vikunja/templates/common.yaml" at <include "vikunja.secrets" .>:
+    error calling include:
+vikunja/templates/_secrets.tpl:22:55
+  executing "vikunja.secrets" at <"\"">:
+    invalid value; expected string
 
 Use --debug flag to render out invalid YAML
 ```
 
-### 8. `camunda/camunda-platform-helm`
+### 8. `keptn/lifecycle-toolkit`
 
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+- Chart: `D:\helm_clones_artifacthub\keptn__lifecycle-toolkit\chart`
 - Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\keptn__lifecycle-toolkit\chart`
 
 ```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 9. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 10. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 11. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 12. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 13. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 14. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 15. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 16. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 17. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml`, `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 18. `mysql/mysql-operator`
-
-- Chart: `D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
-
-```text
-Error: execution error at (mysql-innodbcluster/templates/deployment_cluster.yaml:68:8): tls.routerCertAndPKsecretName: secret 'test-router-tls' not found in namespace 'default'
+Error: keptn/charts/metricsOperator/templates/v1beta2.custom.metrics.k8s.io.yaml:7:22
+  executing "keptn/charts/metricsOperator/templates/v1beta2.custom.metrics.k8s.io.yaml" at <include "common.annotations" (dict "context" .)>:
+    error calling include:
+template: no template "common.annotations" associated with template "gotpl"
 
 Use --debug flag to render out invalid YAML
 ```
@@ -21944,7 +21680,17 @@ Error: library charts are not installable
 Error: library charts are not installable
 ```
 
-### 3. `nicholaswilde/helm-charts`
+### 3. `atlassian/data-center-helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\common`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\common`
+
+```text
+Error: library charts are not installable
+```
+
+### 4. `nicholaswilde/helm-charts`
 
 - Chart: `D:\helm_clones_github\nicholaswilde__helm-charts\charts\common`
 - Source: `template`
@@ -21954,7 +21700,7 @@ Error: library charts are not installable
 Error: library charts are not installable
 ```
 
-### 4. `kubevela/kubevela`
+### 5. `kubevela/kubevela`
 
 - Chart: `D:\helm_clones_artifacthub\kubevela__kubevela\pkg\addon\testdata\example`
 - Source: `template`
@@ -21964,27 +21710,7 @@ Error: library charts are not installable
 Error: library charts are not installable
 ```
 
-### 5. `kubevela/kubevela`
-
-- Chart: `D:\helm_clones_artifacthub\kubevela__kubevela\pkg\addon\testdata\example-legacy`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\kubevela__kubevela\pkg\addon\testdata\example-legacy`
-
-```text
-Error: library charts are not installable
-```
-
-### 6. `kubevela/kubevela`
-
-- Chart: `D:\helm_clones_artifacthub\kubevela__kubevela\references\cli\test-data\addon\sample`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\kubevela__kubevela\references\cli\test-data\addon\sample`
-
-```text
-Error: library charts are not installable
-```
-
-### 7. `bedag/helm-charts`
+### 6. `bedag/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\bedag__helm-charts\charts\manifests`
 - Source: `template`
@@ -21994,160 +21720,23 @@ Error: library charts are not installable
 Error: library charts are not installable
 ```
 
-## `dependency.missing_subchart` (5)
+### 7. `snowplow-devops/helm-charts`
 
-### 1. `renovatebot/renovate`
-
-- Chart: `D:\helm_clones_artifacthub\renovatebot__renovate\lib\modules\manager\helmv3\__fixtures__`
-- Source: `dependency`
-
-```text
-Error: directory D:\helm_clones_artifacthub\renovatebot__renovate\lib\modules\manager\helmv3\dependency_chart\dask not found
-```
-
-### 2. `kubernetes/charts`
-
-- Chart: `D:\helm_clones_artifacthub\kubernetes__charts\incubator\distribution`
-- Source: `dependency`
+- Chart: `D:\helm_clones_artifacthub\snowplow-devops__helm-charts\charts\common`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\snowplow-devops__helm-charts\charts\common`
 
 ```text
-level=INFO msg="warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash..."
-Error: no repository definition for https://kubernetes-charts.storage.googleapis.com/, https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'
-```
-
-### 3. `helm/charts`
-
-- Chart: `D:\helm_clones_artifacthub\helm__charts\incubator\distribution`
-- Source: `dependency`
-
-```text
-level=INFO msg="warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash..."
-Error: no repository definition for https://kubernetes-charts.storage.googleapis.com/, https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'
-```
-
-### 4. `rhdh-bot/openshift-helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\redhat\redhat\redhat-mysql-persistent\0.0.2\src`
-- Source: `dependency`
-
-```text
-Getting updates for unmanaged Helm repositories...
-...Unable to get an update from the "https://github.com/openshift-helm-charts/charts" chart repository:
-	failed to fetch https://github.com/openshift-helm-charts/charts/index.yaml : 404 Not Found
-Error: no cached repository for helm-manager-e8a50bb8edab0b7411123ba1d6ccffca210a3cb9ffb119170c254ad301b6b826 found. (try 'helm repo update'): open C:\Users\miabs\AppData\Local\Temp\helm\repository\helm-manager-e8a50bb8edab0b7411123ba1d6ccffca210a3cb9ffb119170c254ad301b6b826-index.yaml: O sistema não conseguiu localizar o ficheiro especificado.
-```
-
-### 5. `fonzdm/servarr`
-
-- Chart: `D:\helm_clones_artifacthub\fonzdm__servarr\servarr`
-- Source: `dependency`
-
-```text
-Saving 7 charts
-Downloading sonarr from repo oci://tccr.io/truecharts
-Save error occurred:  could not download oci://tccr.io/truecharts/sonarr: failed to perform "FetchReference" on source: tccr.io/truecharts/sonarr:21.2.1: not found
-Error: could not download oci://tccr.io/truecharts/sonarr: failed to perform "FetchReference" on source: tccr.io/truecharts/sonarr:21.2.1: not found
-```
-
-## `dependency.lock_file_out_of_sync` (4)
-
-### 1. `open-webui/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\open-webui__helm-charts\charts\open-webui`
-- Source: `dependency`
-
-```text
-Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies with 'helm dependency update'
-```
-
-### 2. `kestra-io/kestra`
-
-- Chart: `D:\helm_clones_artifacthub\kestra-io__kestra\charts\kestra-starter`
-- Source: `dependency`
-
-```text
-Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies with 'helm dependency update'
-```
-
-### 3. `aws/karpenter`
-
-- Chart: `D:\helm_clones_artifacthub\aws__karpenter\charts\karpenter`
-- Source: `dependency`
-
-```text
-Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies with 'helm dependency update'
-```
-
-### 4. `ortelius/ortelius-charts`
-
-- Chart: `D:\helm_clones_artifacthub\ortelius__ortelius-charts\chart\ortelius`
-- Source: `dependency`
-
-```text
-Error: the lock file (Chart.lock) is out of sync with the dependencies file (Chart.yaml). Please update the dependencies with 'helm dependency update'
-```
-
-## `dependency.rate_limit` (4)
-
-### 1. `CloudPirates-io/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\CloudPirates-io__helm-charts\charts\ghost`
-- Source: `dependency`
-
-```text
-Saving 2 charts
-Downloading common from repo oci://registry-1.docker.io/cloudpirates
-Save error occurred:  could not download oci://registry-1.docker.io/cloudpirates/common: failed to perform "FetchReference" on source: GET "https://registry-1.docker.io/v2/cloudpirates/common/manifests/2.2.0": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit
-Error: could not download oci://registry-1.docker.io/cloudpirates/common: failed to perform "FetchReference" on source: GET "https://registry-1.docker.io/v2/cloudpirates/common/manifests/2.2.0": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit
-```
-
-### 2. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3`
-- Source: `dependency`
-
-```text
-Saving 4 charts
-Dependency identity did not declare a repository. Assuming it exists in the charts directory
-Downloading elasticsearch from repo oci://registry-1.docker.io/bitnamicharts
-Pulled: registry-1.docker.io/bitnamicharts/elasticsearch:19.21.2
-Digest: sha256:266b3a787798808763d559b3b45af0a14f741f76510dfaae65862f845491f40d
-Downloading postgresql from repo oci://registry-1.docker.io/bitnamicharts
-Save error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to perform "FetchReference" on source: GET "https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/11.9.13": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit
-Error: could not download oci://registry-1.docker.io/bitnamicharts/postgresql: failed to perform "FetchReference" on source: GET "https://registry-1.docker.io/v2/bitnamicharts/postgresql/manifests/11.9.13": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit
-```
-
-### 3. `bootc/netbox-chart`
-
-- Chart: `D:\helm_clones_artifacthub\bootc__netbox-chart\charts\netbox`
-- Source: `dependency`
-
-```text
-Saving 3 charts
-Downloading common from repo oci://registry-1.docker.io/bitnamicharts
-Save error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/common: failed to perform "FetchReference" on source: GET "https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.40.0": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit
-Error: could not download oci://registry-1.docker.io/bitnamicharts/common: failed to perform "FetchReference" on source: GET "https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.40.0": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit
-```
-
-### 4. `jouve/charts`
-
-- Chart: `D:\helm_clones_artifacthub\jouve__charts\charts\mailpit`
-- Source: `dependency`
-
-```text
-Saving 1 charts
-Downloading common from repo oci://registry-1.docker.io/bitnamicharts
-Save error occurred:  could not download oci://registry-1.docker.io/bitnamicharts/common: failed to perform "FetchReference" on source: GET "https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.39.0": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit
-Error: could not download oci://registry-1.docker.io/bitnamicharts/common: failed to perform "FetchReference" on source: GET "https://registry-1.docker.io/v2/bitnamicharts/common/manifests/2.39.0": response status code 429: toomanyrequests: You have reached your unauthenticated pull rate limit. https://www.docker.com/increase-rate-limit
+Error: library charts are not installable
 ```
 
 ## `template.malformed_yaml` (4)
 
 ### 1. `prometheus-community/helm-charts`
 
-- Chart: `D:\helm_clones_github\prometheus-community__helm-charts\charts\kube-prometheus-stack`
+- Chart: `D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\kube-prometheus-stack`
 - Source: `template`
-- Command: `helm template test D:\helm_clones_github\prometheus-community__helm-charts\charts\kube-prometheus-stack`
+- Command: `helm template test D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\kube-prometheus-stack`
 
 ```text
 Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
@@ -22189,89 +21778,6 @@ Use --debug flag to render out invalid YAML
 Error: YAML parse error on selenium/templates/chrome-node-deployment.yaml: error converting YAML to JSON: yaml: line 32: mapping values are not allowed in this context
 
 Use --debug flag to render out invalid YAML
-```
-
-## `dependency.cache_index_missing` (3)
-
-### 1. `goharbor/harbor`
-
-- Chart: `D:\helm_clones_artifacthub\goharbor__harbor\src\pkg\chart\testdata\harbor-schema1`
-- Source: `dependency`
-
-```text
-Getting updates for unmanaged Helm repositories...
-...Unable to get an update from the "https://kubernetes-charts.storage.googleapis.com/" chart repository:
-	failed to fetch https://kubernetes-charts.storage.googleapis.com/index.yaml : 403 Forbidden
-Error: no cached repository for helm-manager-1067d9c6027b8c3f27b49e40521d64be96ea412858d8e45064fa44afd3966ddc found. (try 'helm repo update'): open C:\Users\miabs\AppData\Local\Temp\helm\repository\helm-manager-1067d9c6027b8c3f27b49e40521d64be96ea412858d8e45064fa44afd3966ddc-index.yaml: O sistema não conseguiu localizar o ficheiro especificado.
-```
-
-### 2. `kiwigrid/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\kiwigrid__helm-charts\charts\ditto-digital-twins`
-- Source: `dependency`
-
-```text
-Getting updates for unmanaged Helm repositories...
-...Unable to get an update from the "https://kubernetes-charts.storage.googleapis.com" chart repository:
-	failed to fetch https://kubernetes-charts.storage.googleapis.com/index.yaml : 403 Forbidden
-Error: no cached repository for helm-manager-f57ac438e6d97e3defb8e0378330d3cde64dcb65ed39e560646a0813a34e0581 found. (try 'helm repo update'): open C:\Users\miabs\AppData\Local\Temp\helm\repository\helm-manager-f57ac438e6d97e3defb8e0378330d3cde64dcb65ed39e560646a0813a34e0581-index.yaml: O sistema não conseguiu localizar o ficheiro especificado.
-```
-
-### 3. `banzaicloud/banzai-charts`
-
-- Chart: `D:\helm_clones_artifacthub\banzaicloud__banzai-charts\argo`
-- Source: `dependency`
-
-```text
-Getting updates for unmanaged Helm repositories...
-...Unable to get an update from the "https://kubernetes-charts.storage.googleapis.com/" chart repository:
-	failed to fetch https://kubernetes-charts.storage.googleapis.com/index.yaml : 403 Forbidden
-Error: no cached repository for helm-manager-1067d9c6027b8c3f27b49e40521d64be96ea412858d8e45064fa44afd3966ddc found. (try 'helm repo update'): open C:\Users\miabs\AppData\Local\Temp\helm\repository\helm-manager-1067d9c6027b8c3f27b49e40521d64be96ea412858d8e45064fa44afd3966ddc-index.yaml: O sistema não conseguiu localizar o ficheiro especificado.
-```
-
-## `dependency.repo_update` (3)
-
-### 1. `devtron-labs/charts`
-
-- Chart: `D:\helm_clones_artifacthub\devtron-labs__charts\charts\cluster-essentials`
-- Source: `dependency`
-
-```text
-Getting updates for unmanaged Helm repositories...
-...Successfully got an update from the "https://kubernetes-sigs.github.io/metrics-server/" chart repository
-...Successfully got an update from the "https://kubernetes.github.io/autoscaler" chart repository
-...Successfully got an update from the "https://helm.devtron.ai" chart repository
-...Successfully got an update from the "https://aws.github.io/eks-charts" chart repository
-...Successfully got an update from the "https://kedacore.github.io/charts" chart repository
-...Successfully got an update from the "https://charts.bitnami.com/bitnami" chart repository
-Error: can't get a valid version for 1 subchart(s): "kubernetes-event-exporter" (repository "https://charts.bitnami.com/bitnami", version "1.2.*"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml
-```
-
-### 2. `netrisai/charts`
-
-- Chart: `D:\helm_clones_artifacthub\netrisai__charts\charts\netris-controller`
-- Source: `dependency`
-
-```text
-Getting updates for unmanaged Helm repositories...
-...Successfully got an update from the "https://raw.githubusercontent.com/rawfilescloud/charts/refs/heads/main" chart repository
-...Successfully got an update from the "https://haproxytech.github.io/helm-charts" chart repository
-...Successfully got an update from the "https://charts.ntppool.org" chart repository
-...Successfully got an update from the "https://raw.githubusercontent.com/bitnami/charts/eb5f9a9513d987b519f0ecd732e7031241c50328/bitnami" chart repository
-...Successfully got an update from the "https://charts.bitnami.com/bitnami" chart repository
-Error: can't get a valid version for 1 subchart(s): "smtp" (repository "https://charts.ntppool.org", version "1.0.1"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml
-```
-
-### 3. `k8s-at-home/charts`
-
-- Chart: `D:\helm_clones_artifacthub\k8s-at-home__charts\charts\stable\firefly-iii`
-- Source: `dependency`
-
-```text
-Getting updates for unmanaged Helm repositories...
-...Successfully got an update from the "https://library-charts.k8s-at-home.com" chart repository
-...Successfully got an update from the "https://charts.bitnami.com/bitnami" chart repository
-Error: can't get a valid version for 1 subchart(s): "mariadb" (repository "https://charts.bitnami.com/bitnami", version "11.0.2"). Make sure a matching chart version exists in the repo, or change the version constraint in Chart.yaml
 ```
 
 ## `template.nil_pointer` (3)
@@ -22318,26 +21824,6 @@ Error: httpd-template/templates/tests/test-httpd-connection.yaml:13:34
 Use --debug flag to render out invalid YAML
 ```
 
-## `dependency.chart_validation` (2)
-
-### 1. `kubernetes/helm`
-
-- Chart: `D:\helm_clones_artifacthub\kubernetes__helm\internal\chart\v3\lint\rules\testdata\anotherbadchartfile`
-- Source: `dependency`
-
-```text
-Error: validation: chart.metadata.version "7.2445e+06" is invalid
-```
-
-### 2. `helm/helm`
-
-- Chart: `D:\helm_clones_artifacthub\helm__helm\internal\chart\v3\lint\rules\testdata\anotherbadchartfile`
-- Source: `dependency`
-
-```text
-Error: validation: chart.metadata.version "7.2445e+06" is invalid
-```
-
 ## `template.chart_metadata` (2)
 
 ### 1. `kubernetes/helm`
@@ -22360,62 +21846,28 @@ Error: invalid chart apiVersion
 Error: invalid chart apiVersion
 ```
 
-## `template.kube_version_incompatible` (2)
+## `template.parse_error` (2)
 
-### 1. `rhdh-bot/openshift-helm-charts`
+### 1. `SigNoz/charts`
 
-- Chart: `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.0\src`
+- Chart: `D:\helm_clones_artifacthub\SigNoz__charts\charts\signoz-otel-gateway`
 - Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.0\src`
+- Command: `helm template test D:\helm_clones_artifacthub\SigNoz__charts\charts\signoz-otel-gateway`
 
 ```text
-Error: chart requires kubeVersion: >= 1.16.0 < 1.22.0 which is incompatible with Kubernetes v1.36.0
+Error: parse error at (signoz-otel-gateway/templates/deployment.yaml:13): bad character U+002D '-'
 
 Use --debug flag to render out invalid YAML
 ```
 
-### 2. `rhdh-bot/openshift-helm-charts`
+### 2. `enix/helm-charts`
 
-- Chart: `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.2-4.6\src`
+- Chart: `D:\helm_clones_artifacthub\enix__helm-charts\charts\swift-exporter`
 - Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.2-4.6\src`
+- Command: `helm template test D:\helm_clones_artifacthub\enix__helm-charts\charts\swift-exporter`
 
 ```text
-Error: chart requires kubeVersion: >= 1.16.0 < 1.22.0 which is incompatible with Kubernetes v1.36.0
-
-Use --debug flag to render out invalid YAML
-```
-
-## `template.missing_template` (2)
-
-### 1. `EugenMayer/helm-charts`
-
-- Chart: `D:\helm_clones_github\EugenMayer__helm-charts\charts\vikunja`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\EugenMayer__helm-charts\charts\vikunja`
-
-```text
-Error: vikunja/templates/common.yaml:3:16
-  executing "vikunja/templates/common.yaml" at <include "vikunja.secrets" .>:
-    error calling include:
-vikunja/templates/_secrets.tpl:22:55
-  executing "vikunja.secrets" at <"\"">:
-    invalid value; expected string
-
-Use --debug flag to render out invalid YAML
-```
-
-### 2. `keptn/lifecycle-toolkit`
-
-- Chart: `D:\helm_clones_artifacthub\keptn__lifecycle-toolkit\chart`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\keptn__lifecycle-toolkit\chart`
-
-```text
-Error: keptn/charts/metricsOperator/templates/v1beta2.custom.metrics.k8s.io.yaml:7:22
-  executing "keptn/charts/metricsOperator/templates/v1beta2.custom.metrics.k8s.io.yaml" at <include "common.annotations" (dict "context" .)>:
-    error calling include:
-template: no template "common.annotations" associated with template "gotpl"
+Error: parse error at (swift-exporter/templates/_helpers.tpl:59): unexpected EOF
 
 Use --debug flag to render out invalid YAML
 ```
@@ -22450,25 +21902,94 @@ Error: kafka-ha/templates/controller/statefulset.yaml:46:70
 Use --debug flag to render out invalid YAML
 ```
 
-## `dependency.malformed_yaml` (1)
+## `template.unsupported_builtin` (2)
 
-### 1. `rancher/rancher`
+### 1. `camunda/camunda-platform-helm`
 
-- Chart: `D:\helm_clones_artifacthub\rancher__rancher\chart`
-- Source: `dependency`
+- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3`
 
 ```text
-Error: cannot load Chart.yaml: error converting YAML to JSON: yaml: line 4: found character that cannot start any token
+Error: camunda-platform/charts/identity/templates/deployment.yaml:187:24
+  executing "camunda-platform/charts/identity/templates/deployment.yaml" at <include "identity.keycloak.url" .>:
+    error calling include:
+camunda-platform/charts/identity/templates/_helpers.tpl:169:9
+  executing "identity.keycloak.url" at <include "identity.keycloak.host" .>:
+    error calling include:
+camunda-platform/charts/identity/templates/_helpers.tpl:137:12
+  executing "identity.keycloak.host" at <include "identity.keycloak.hostDefault" .>:
+    error calling include:
+camunda-platform/charts/common/templates/_names.tpl:31:73
+  executing "common.names.fullname" at <.Release.Name>:
+    invalid value; expected string
+
+Use --debug flag to render out invalid YAML
 ```
 
-## `dependency.unpack_error` (1)
+### 2. `camunda/camunda-platform-helm`
 
-### 1. `rook/rook`
-
-- Chart: `D:\helm_clones_artifacthub\rook__rook\deploy\charts\rook-ceph`
-- Source: `dependency`
+- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4`
 
 ```text
-Error: error unpacking subchart library in rook-ceph: Chart.yaml file is missing
+Error: camunda-platform/charts/identity/templates/deployment.yaml:187:24
+  executing "camunda-platform/charts/identity/templates/deployment.yaml" at <include "identity.keycloak.url" .>:
+    error calling include:
+camunda-platform/charts/identity/templates/_helpers.tpl:200:9
+  executing "identity.keycloak.url" at <include "identity.keycloak.host" .>:
+    error calling include:
+camunda-platform/charts/identity/templates/_helpers.tpl:168:12
+  executing "identity.keycloak.host" at <include "identity.keycloak.hostDefault" .>:
+    error calling include:
+camunda-platform/charts/common/templates/_names.tpl:31:73
+  executing "common.names.fullname" at <.Release.Name>:
+    invalid value; expected string
+
+Use --debug flag to render out invalid YAML
+```
+
+## `template.dependency_check_failed` (1)
+
+### 1. `argoproj/argo-helm`
+
+- Chart: `D:\helm_clones_artifacthub\argoproj__argo-helm\charts\argo-cd`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\argoproj__argo-helm\charts\argo-cd`
+
+```text
+Error: an error occurred while checking for chart dependencies. You may need to run 'helm dependency build' to fetch missing dependencies: found in Chart.yaml, but missing in charts/ directory: redis-ha
+```
+
+## `template.kube_version_incompatible` (1)
+
+### 1. `rhdh-bot/openshift-helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.0\src`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.0\src`
+
+```text
+Error: chart requires kubeVersion: >= 1.16.0 < 1.22.0 which is incompatible with Kubernetes v1.36.0
+
+Use --debug flag to render out invalid YAML
+```
+
+## `template.runtime_eval` (1)
+
+### 1. `Flagsmith/flagsmith-charts`
+
+- Chart: `D:\helm_clones_artifacthub\Flagsmith__flagsmith-charts\charts\flagsmith`
+- Source: `template`
+- Values files: `D:\helm_clones_artifacthub\Flagsmith__flagsmith-charts\charts\flagsmith\openshift-values.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\Flagsmith__flagsmith-charts\charts\flagsmith -f D:\helm_clones_artifacthub\Flagsmith__flagsmith-charts\charts\flagsmith\openshift-values.yaml`
+
+```text
+Error: flagsmith/templates/routes-frontend.yaml:1:41
+  executing "flagsmith/templates/routes-frontend.yaml" at <.Values.openshift.route>:
+    can't evaluate field route in type interface {}
+
+Use --debug flag to render out invalid YAML
 ```
 

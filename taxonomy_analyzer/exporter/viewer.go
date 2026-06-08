@@ -112,6 +112,7 @@ const viewerTemplate = `<!DOCTYPE html>
   .totals .stat b { display: block; font-size: 18px; color: var(--text); }
   .totals .stat.red b { color: var(--red); }
   .totals .stat.green b { color: var(--green); }
+  .totals .stat.muted b { color: var(--muted); }
   .layout { display: flex; align-items: flex-start; }
   aside { width: 440px; flex: none; border-right: 1px solid var(--border);
     height: calc(100vh - 92px); overflow-y: auto; position: sticky; top: 92px;
@@ -281,12 +282,17 @@ const viewerTemplate = `<!DOCTYPE html>
       'Generated <code>' + esc(DATA.generated_at) + '</code> &middot; source <code>' +
       esc(DATA.source_catalog) + '</code>';
     const t = DATA.totals;
-    document.getElementById('totals').innerHTML = [
+    const rows = [
       ['Template failures', t.template_failures || 0, ''],
       ['Fix attempts', t.fix_attempted || 0, ''],
       ['Resolved', t.fix_resolved || 0, 'green'],
       ['Still to fix', t.fix_unresolved || 0, 'red'],
-    ].map(([l, v, c]) => '<div class="stat ' + c + '"><b>' + v + '</b>' + l + '</div>').join('');
+    ];
+    if (t.duplicates_collapsed) {
+      rows.push(['Dupes collapsed', t.duplicates_collapsed, 'muted']);
+    }
+    document.getElementById('totals').innerHTML = rows
+      .map(([l, v, c]) => '<div class="stat ' + c + '"><b>' + v + '</b>' + l + '</div>').join('');
   }
 
   function renderSidebar() {

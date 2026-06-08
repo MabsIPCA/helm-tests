@@ -107,9 +107,14 @@ type ReportTotals struct {
 	DependencyErrors  int `json:"dependency_failures"`
 	ClassifiedErrors  int `json:"classified_errors"`
 	UnclassifiedError int `json:"unclassified_errors"`
-	FixAttempted      int `json:"fix_attempted,omitempty"`
-	FixResolved       int `json:"fix_resolved,omitempty"`
-	FixUnresolved     int `json:"fix_unresolved,omitempty"`
+	// DuplicatesCollapsed counts occurrences dropped because the same error
+	// message already appeared for the same project (value-file combinations and
+	// repeated charts). Raw run counts above (Runs, TemplateFailures) are NOT
+	// deduped; the classified/fix totals and taxonomy buckets ARE.
+	DuplicatesCollapsed int `json:"duplicates_collapsed,omitempty"`
+	FixAttempted        int `json:"fix_attempted,omitempty"`
+	FixResolved         int `json:"fix_resolved,omitempty"`
+	FixUnresolved       int `json:"fix_unresolved,omitempty"`
 }
 
 type TaxonomyReport struct {

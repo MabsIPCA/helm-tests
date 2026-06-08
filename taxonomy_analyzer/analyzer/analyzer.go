@@ -17,6 +17,12 @@ type Analyzer struct {
 	report      model.TaxonomyReport
 	fixedIndex  map[string]*model.FixedResult
 	transitions map[string]int // "start.sub -> final.sub" -> count
+	// seen dedupes occurrences by (repo, error message). The fetcher renders up
+	// to 100 value-file combinations per chart, so one broken chart yields many
+	// near-identical failures (e.g. translator-devops' control-character value
+	// files inflate malformed_yaml). Collapsing identical errors within a project
+	// keeps the taxonomy summary one-row-per-distinct-error.
+	seen map[string]struct{}
 }
 
 // New creates a new analyzer report collector.
@@ -32,7 +38,7 @@ func New(sourceCatalog, fixedCatalog string, fixedIndex map[string]*model.FixedR
 	if fixedCatalog != "" {
 		r.FixedCatalog = fixedCatalog
 	}
-	return &Analyzer{report: r, fixedIndex: fixedIndex, transitions: map[string]int{}}
+	return &Analyzer{report: r, fixedIndex: fixedIndex, transitions: map[string]int{}, seen: map[string]struct{}{}}
 }
 
 // ConsumeRepo feeds one repo result into the taxonomy analyzer.
@@ -75,6 +81,17 @@ func (a *Analyzer) ConsumeRepo(repo model.RepoResult) {
 }
 
 func (a *Analyzer) consumeOccurrence(occ model.ErrorOccurrence) {
+	// Collapse duplicate errors within the same project. The same error message
+	// repeated across value-file combinations (or charts) of one repo counts once,
+	// so combinatorial explosion does not skew the summary. Different projects with
+	// an identical message still count separately (the repo is part of the key).
+	dedupKey := occ.RepoName + "\x00" + occ.ErrorMessage
+	if _, dup := a.seen[dedupKey]; dup {
+		a.report.Totals.DuplicatesCollapsed++
+		return
+	}
+	a.seen[dedupKey] = struct{}{}
+
 	res := classifier.Classify(occ.ErrorMessage, occ.ErrorSource)
 	occ.ErrorKind = res.Kind
 	occ.ErrorSubKind = res.SubKind

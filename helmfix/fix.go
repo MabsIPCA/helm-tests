@@ -102,6 +102,27 @@ func IsUnsupportedBuiltin(errStr string) bool {
 	return strings.Contains(errStr, "nil pointer") && builtinNilRe.MatchString(errStr)
 }
 
+// missingDependencyMarkers identify a render that failed only because the
+// chart's declared subcharts have not been vendored into charts/ yet. Running
+// "helm dependency build/update" fetches them, after which the render can
+// proceed (and often reveals the chart's real, deeper error).
+var missingDependencyMarkers = []string{
+	"missing in charts/ directory",
+	"an error occurred while checking for chart dependencies",
+}
+
+// IsMissingDependency reports whether errStr is an unbuilt-dependencies error
+// that fetching the chart's dependencies could resolve.
+func IsMissingDependency(errStr string) bool {
+	low := strings.ToLower(errStr)
+	for _, m := range missingDependencyMarkers {
+		if strings.Contains(low, m) {
+			return true
+		}
+	}
+	return false
+}
+
 // IsUnparseableYAML reports whether errStr is a malformed-YAML / unmarshal
 // failure — an inherently non-fixable error (the chart can't be parsed).
 func IsUnparseableYAML(errStr string) bool {
