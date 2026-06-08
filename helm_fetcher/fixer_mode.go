@@ -26,7 +26,8 @@ func fixRun(chartPath string, orig model.RunResult) model.FixedRunResult {
 	patch := map[string]string{}
 	seenErrs := map[string]bool{}
 	chain := []model.FixStep{}
-	kubeVersion := "" // --kube-version override, set when a kubeVersion error is seen
+	kubeVersion := ""   // --kube-version override, set when a kubeVersion error is seen
+	depFetched := false // dependencies fetched at most once per run
 
 	for attempt := 1; attempt <= helmfix.MaxFixIterations; attempt++ {
 		setFlags := make([]string, 0, len(patch))
@@ -75,6 +76,27 @@ func fixRun(chartPath string, orig model.RunResult) model.FixedRunResult {
 			}
 		}
 
+		// Missing subcharts: this fresh clone never had its dependencies vendored
+		// into charts/. Fetch them once (build, then update) and re-render — this
+		// resolves the dependency error and unmasks the chart's real, deeper
+		// error. Done at most once per run; a recurring dep error then falls
+		// through to the unfixable path below.
+		if !depFetched && helmfix.IsMissingDependency(errStr) {
+			depFetched = true
+			fetchOut, fetchErr := helm.RunHelmDependencyFetch(chartPath)
+			outcome := "fetched dependencies (build/update)"
+			if fetchErr != nil {
+				outcome = "dependency fetch failed: " + firstLine(fetchOut)
+			}
+			chain = append(chain, model.FixStep{
+				Attempt:       attempt,
+				ErrorSeen:     errStr,
+				Kind:          "dependency_fetch",
+				ValueInjected: outcome,
+			})
+			continue
+		}
+
 		kind, path, val, ok := helmfix.ParseError(errStr)
 		if !ok {
 			return model.FixedRunResult{
@@ -119,6 +141,17 @@ func fixRun(chartPath string, orig model.RunResult) model.FixedRunResult {
 		FixChain:   chain,
 		FinalError: output,
 	}
+}
+
+// firstLine returns the first non-empty line of s, trimmed — a compact summary
+// of a multi-line helm error for the fix chain.
+func firstLine(s string) string {
+	for _, ln := range strings.Split(s, "\n") {
+		if t := strings.TrimSpace(ln); t != "" {
+			return t
+		}
+	}
+	return ""
 }
 
 // resolveDestDir derives the clone destination directory from repoURL and cloneDir,

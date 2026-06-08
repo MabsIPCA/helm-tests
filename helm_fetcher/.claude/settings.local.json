@@ -76,7 +76,9 @@
       "Bash(awk '/^## `template.enum_constraint`/{f=1} f&&/^## /&&!/enum_constraint/{exit} f' out/cumulative_final/taxonomy_errors_by_bucket.md)",
       "Bash(python3 -c ' *)",
       "Bash(node -e ' *)",
-      "PowerShell(.\\\\scripts\\\\refix_all.ps1)"
+      "PowerShell(.\\\\scripts\\\\refix_all.ps1)",
+      "PowerShell(go run *)",
+      "Bash(awk '{print $6, $7}')"
     ]
   }
 }

@@ -308,6 +308,26 @@ func TestIsUnsupportedBuiltin(t *testing.T) {
 	}
 }
 
+func TestIsMissingDependency(t *testing.T) {
+	cases := []struct {
+		name string
+		err  string
+		want bool
+	}{
+		{"missing_in_charts_dir", `Error: found in Chart.yaml, but missing in charts/ directory: common`, true},
+		{"checking_for_dependencies", `Error: an error occurred while checking for chart dependencies. You may need to run 'helm dependency build'`, true},
+		{"nil_pointer_is_not_dep", `nil pointer evaluating interface {}.hosts`, false},
+		{"schema_is_not_dep", `values don't meet the specifications of the schema(s)`, false},
+	}
+	for _, tc := range cases {
+		t.Run(tc.name, func(t *testing.T) {
+			if got := IsMissingDependency(tc.err); got != tc.want {
+				t.Errorf("IsMissingDependency = %v, want %v", got, tc.want)
+			}
+		})
+	}
+}
+
 func TestParseError_NilPointerRootContextDollar(t *testing.T) {
 	// Templates that reference the root context use "$.Values..." — the "$" must
 	// not defeat path extraction. Real case: argocd-httproute.yaml.

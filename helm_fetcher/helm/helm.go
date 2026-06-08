@@ -203,6 +203,27 @@ func RunHelmDependencyBuild(chartPath string) error {
 	return lastErr
 }
 
+// RunHelmDependencyFetch fetches a chart's declared dependencies so a later
+// render can find them under charts/. It tries "helm dependency build" first
+// (the fast path when a Chart.lock and repo cache are present) and falls back
+// to "helm dependency update" (which re-resolves and downloads URL/OCI deps
+// without a pre-existing lock). It returns the combined output of whichever
+// command ran last and that command's error. Single attempt each — the fixer
+// processes many charts, so the long-backoff retry of RunHelmDependencyBuild is
+// intentionally avoided here.
+func RunHelmDependencyFetch(chartPath string) (output string, err error) {
+	if out, berr := runDepSubcommand(chartPath, "build"); berr == nil {
+		return out, nil
+	}
+	return runDepSubcommand(chartPath, "update")
+}
+
+func runDepSubcommand(chartPath, sub string) (string, error) {
+	cmd := exec.Command("helm", "dependency", sub, chartPath)
+	out, err := cmd.CombinedOutput()
+	return string(out), err
+}
+
 // RunHelmTemplate executes "helm template" for the given chart path and values files, returning the command string, output, and any error.
 func RunHelmTemplate(chartPath string, valuesFiles []string) (cmdStr, output string, err error) {
 	args := []string{"template", "test", chartPath}

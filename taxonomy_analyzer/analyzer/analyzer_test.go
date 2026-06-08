@@ -231,6 +231,71 @@ func TestConsumeRepo_FinalErrorIsCumulative_NotAttempted(t *testing.T) {
 	}
 }
 
+func TestConsumeRepo_DedupesSameErrorWithinProject(t *testing.T) {
+	// The fetcher renders many value-file combinations of one chart; identical
+	// errors must collapse to a single occurrence within the project. Here three
+	// runs share the same malformed-yaml error and one run has a distinct error.
+	sameErr := "error converting YAML to JSON: yaml: control characters are not allowed"
+	repo := model.RepoResult{
+		RepoURL:  "https://github.com/test/mono",
+		RepoName: "test/mono",
+		Charts: []model.ChartSummary{{
+			ChartPath: "/tmp/mono/chart",
+			Runs: []model.RunResult{
+				{ChartPath: "cloned/mono/chart", HelmCommand: "helm template m chart -f a.yaml", ErrorMessage: sameErr},
+				{ChartPath: "cloned/mono/chart", HelmCommand: "helm template m chart -f b.yaml", ErrorMessage: sameErr},
+				{ChartPath: "cloned/mono/chart", HelmCommand: "helm template m chart -f a.yaml,b.yaml", ErrorMessage: sameErr},
+				{ChartPath: "cloned/mono/chart", HelmCommand: "helm template m chart -f c.yaml", ErrorMessage: "nil pointer evaluating interface {}.type"},
+			},
+		}},
+	}
+
+	a := analyzer.New("catalog.json", "", nil)
+	a.ConsumeRepo(repo)
+	report := a.Report()
+
+	if got := report.BySubKind["template.malformed_yaml"].Count; got != 1 {
+		t.Errorf("malformed_yaml Count: got %d, want 1 (combos collapsed)", got)
+	}
+	if got := report.Totals.DuplicatesCollapsed; got != 2 {
+		t.Errorf("DuplicatesCollapsed: got %d, want 2", got)
+	}
+	// The distinct error is preserved.
+	if got := report.BySubKind["template.nil_pointer"].Count; got != 1 {
+		t.Errorf("nil_pointer Count: got %d, want 1 (distinct error preserved)", got)
+	}
+	if got := len(report.AllClassified); got != 2 {
+		t.Errorf("AllClassified: got %d, want 2", got)
+	}
+}
+
+func TestConsumeRepo_SameErrorDifferentProjects_NotDeduped(t *testing.T) {
+	// An identical message in two different projects must count once per project.
+	sameErr := "error converting YAML to JSON: yaml: control characters are not allowed"
+	mk := func(name string) model.RepoResult {
+		return model.RepoResult{
+			RepoURL:  "https://github.com/test/" + name,
+			RepoName: "test/" + name,
+			Charts: []model.ChartSummary{{
+				ChartPath: "/tmp/" + name + "/chart",
+				Runs:      []model.RunResult{{ChartPath: "cloned/" + name + "/chart", HelmCommand: "helm template " + name, ErrorMessage: sameErr}},
+			}},
+		}
+	}
+
+	a := analyzer.New("catalog.json", "", nil)
+	a.ConsumeRepo(mk("alpha"))
+	a.ConsumeRepo(mk("beta"))
+	report := a.Report()
+
+	if got := report.BySubKind["template.malformed_yaml"].Count; got != 2 {
+		t.Errorf("malformed_yaml Count: got %d, want 2 (distinct projects)", got)
+	}
+	if got := report.Totals.DuplicatesCollapsed; got != 0 {
+		t.Errorf("DuplicatesCollapsed: got %d, want 0", got)
+	}
+}
+
 func TestConsumeRepo_WithoutFixedIndex_NoFixStats(t *testing.T) {
 	a := analyzer.New("catalog.json", "", nil)
 	a.ConsumeRepo(repoWithTwoNilPointerRuns())

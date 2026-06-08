@@ -1,6 +1,6 @@
 # Helm Error Taxonomy Report
 
-Generated at: `2026-06-07 21:12:05 UTC`
+Generated at: `2026-06-08 21:34:22 UTC`
 
 Source catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_sources_merged.json`
 
@@ -11,63 +11,52 @@ Fixed catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_fi
 | Metric | Value |
 |---|---:|
 | Repositories | 808 |
-| Helm runs | 8452 |
-| Template failures | 1103 |
-| Dependency failures | 214 |
-| Classified errors | 1295 |
-| Unclassified errors | 22 |
-| Fix attempts | 1103 |
-| Fix resolved | 693 |
-| Fix unresolved | 410 |
+| Helm runs | 17112 |
+| Template failures | 2885 |
+| Dependency failures | 111 |
+| Classified errors | 1024 |
+| Unclassified errors | 130 |
+| Fix attempts | 1048 |
+| Fix resolved | 497 |
+| Fix unresolved | 551 |
 
 ## Taxonomy by Kind
 
 | Kind | Count |
 |---|---:|
-| `template` | 1081 |
-| `dependency` | 214 |
-| `unknown` | 22 |
+| `template` | 1024 |
+| `unknown` | 130 |
 
 ## Taxonomy by SubKind
 
 | SubKind | Count | Fix Resolved | Fix Unresolved |
 |---|---:|---:|---:|
-| `template.nil_pointer` | 440 | 399 | 41 |
-| `template.required_value` | 222 | 162 | 60 |
-| `template.kube_version_incompatible` | 134 | 131 | 3 |
-| `dependency.missing_repository` | 126 | 0 | 0 |
-| `template.values_schema_validation` | 109 | 0 | 109 |
-| `template.malformed_yaml` | 69 | 0 | 69 |
+| `template.nil_pointer` | 359 | 315 | 44 |
+| `template.required_value` | 221 | 154 | 67 |
+| `template.malformed_yaml` | 186 | 0 | 186 |
+| `unknown.unclassified` | 130 | 0 | 24 |
+| `template.values_schema_validation` | 122 | 0 | 122 |
 | `template.custom_validation` | 36 | 0 | 36 |
-| `dependency.missing_subchart` | 30 | 0 | 0 |
-| `template.runtime_eval` | 23 | 0 | 23 |
-| `unknown.unclassified` | 22 | 0 | 22 |
+| `template.kube_version_incompatible` | 27 | 27 | 0 |
+| `template.missing_template` | 23 | 0 | 23 |
 | `template.library_chart_not_installable` | 12 | 0 | 12 |
-| `template.missing_template` | 12 | 0 | 12 |
-| `dependency.chart_validation` | 11 | 0 | 0 |
-| `dependency.lock_file_out_of_sync` | 11 | 0 | 0 |
-| `dependency.repo_update` | 9 | 0 | 0 |
-| `template.unsupported_builtin` | 9 | 0 | 9 |
-| `dependency.network_dns` | 7 | 0 | 0 |
-| `template.type_mismatch` | 7 | 1 | 6 |
-| `dependency.malformed_yaml` | 6 | 0 | 0 |
-| `dependency.cache_index_missing` | 4 | 0 | 0 |
-| `dependency.rate_limit` | 4 | 0 | 0 |
+| `template.type_mismatch` | 9 | 1 | 8 |
+| `template.unsupported_builtin` | 8 | 0 | 8 |
+| `template.runtime_eval` | 7 | 0 | 7 |
+| `template.parse_error` | 6 | 0 | 6 |
 | `template.chart_metadata` | 4 | 0 | 4 |
-| `dependency.unpack_error` | 3 | 0 | 0 |
-| `dependency.version_resolution` | 3 | 0 | 0 |
 | `template.invalid_value` | 3 | 0 | 3 |
-| `template.parse_error` | 1 | 0 | 1 |
+| `template.dependency_check_failed` | 1 | 0 | 1 |
 
 ## Unclassified Samples
 
-- `opea-project/Enterprise-Inference` `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\genai-gateway` `template`: Error: execution error at (genaigateway/charts/redis/templates/NOTES.txt:216:4):   ⚠ ERROR: Original containers have been substituted for unrecognized ones. Deploying this chart ...
-- `dungdm93/shipyard` `D:\helm_clones_github\dungdm93__shipyard\helm\cloudflared` `template`: Error: execution error at (cloudflared/templates/deployment.yaml:50:41): Missing .Values.token  Use --debug flag to render out invalid YAML
-- `dungdm93/shipyard` `D:\helm_clones_github\dungdm93__shipyard\helm\datahub` `template`: Error: execution error at (datahub/templates/setup/secret.yaml:7:55): missing 'ebean.host'  Use --debug flag to render out invalid YAML
-- `kast-spells/kast-system` `D:\helm_clones_github\kast-spells__kast-system\covenant` `template`: Error: execution error at (covenant/templates/covenant.yaml:39:6): covenant/index.yaml not found in bookrack/test  Use --debug flag to render out invalid YAML
-- `influxdata/helm-charts` `D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered` `template`: Error: execution error at (influxdb3-clustered/templates/app-instance.yml:90:3): missing catalog.dsn.SecretName  Use --debug flag to render out invalid YAML
-- `camunda/camunda-platform-helm` `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10` `template`: Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.t...
-- `camunda/camunda-platform-helm` `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10` `template`: Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.t...
-- `camunda/camunda-platform-helm` `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10` `template`: Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.t...
-- `camunda/camunda-platform-helm` `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10` `template`: Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.t...
-- `camunda/camunda-platform-helm` `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10` `template`: Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.t...
+- `rancher/rancher` `D:\helm_clones_github\rancher__rancher\chart` `dependency`: exit status 1
+- `linode/apl-core` `D:\helm_clones_github\linode__apl-core\chart\chart-index` `dependency`: exit status 1
+- `cozystack/cozystack` `D:\helm_clones_github\cozystack__cozystack\packages\apps\bucket` `dependency`: exit status 1
+- `grafana/helm-charts` `D:\helm_clones_github\grafana__helm-charts\charts\enterprise-metrics` `dependency`: exit status 1
+- `norwoodj/helm-docs` `D:\helm_clones_github\norwoodj__helm-docs\example-charts\custom-template` `dependency`: exit status 1
+- `securitybunker/databunker` `D:\helm_clones_github\securitybunker__databunker\charts\databunker` `dependency`: exit status 1
+- `WeBankFinTech/Prophecis` `D:\helm_clones_github\WeBankFinTech__Prophecis\install\Prophecis` `dependency`: exit status 1
+- `rancher/charts` `D:\helm_clones_github\rancher__charts\charts\epinio\102.0.1+up1.6.2` `dependency`: exit status 1
+- `cloudnativeapp/charts` `D:\helm_clones_github\cloudnativeapp__charts\curated\airflow` `dependency`: exit status 1
+- `radondb/radondb-mysql-kubernetes` `D:\helm_clones_github\radondb__radondb-mysql-kubernetes\charts\mysql-operator` `dependency`: exit status 1
