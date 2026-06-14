@@ -29,8 +29,22 @@ var nonFixableYAMLPatterns = []string{
 	"error reading yaml document",
 }
 
+// encryptedValuesPatterns identify a value/chart file that is not authored YAML
+// at all but encrypted ciphertext (git-crypt, sops binary, etc.). "control
+// characters are not allowed" is the giveaway: real YAML almost never carries
+// disallowed control bytes — encrypted blobs always do. Non-fixable and distinct
+// from genuine malformed_yaml, so it gets its own bucket.
+var encryptedValuesPatterns = []string{
+	"control characters are not allowed",
+	"\x00gitcrypt", // git-crypt magic, should it ever leak into the message
+}
+
 var templateRules = []Rule{
-	// malformed_yaml is checked first: the chart can't be parsed, so it is a
+	// encrypted_values is checked before malformed_yaml: an encrypted blob also
+	// trips "error converting yaml to json", but the root cause (no decryption
+	// key) is categorically different from a hand-written YAML mistake.
+	{Kind: "template", SubKind: "encrypted_values", Patterns: encryptedValuesPatterns},
+	// malformed_yaml is checked next: the chart can't be parsed, so it is a
 	// distinct non-fixable class (not a render/value problem).
 	{Kind: "template", SubKind: "malformed_yaml", Patterns: nonFixableYAMLPatterns},
 	// unsupported_builtin: nil pointer on a Helm built-in object (.Release.Time,
@@ -67,6 +81,17 @@ var templateRules = []Rule{
 		"crds installed", "crds first", "resource definition in the target cluster",
 		"deployment found using label", "is missing", "value is missing", "undefined image",
 	}},
+	// author_assertion: a chart-author guardrail raised via Helm's `required` or
+	// `fail`, identified DETERMINISTICALLY by Helm's signature for those calls —
+	// "execution error at (<chart>/templates/<file>:<line>:<col>): <author msg>".
+	// (Helm-internal evaluation errors use "executing ... at <expr>:" instead, and
+	// are matched by the specific rules above.) Placed after required_value and
+	// custom_validation so those keep their descriptive label; this catches the
+	// long tail of bespoke developer messages that no fixed vocabulary would —
+	// e.g. "TLS is not configured. Set one of ...", "You have to deploy X first",
+	// "Pass a valid license at .Values.license". These are intentional, mostly
+	// non-fixable-by-injection: the chart is correctly refusing to render.
+	{Kind: "template", SubKind: "author_assertion", Patterns: []string{"execution error at ("}},
 	// chart_metadata: the chart package itself is invalid (bad apiVersion,
 	// version, or dependency processing) — surfaces template-side too.
 	{Kind: "template", SubKind: "chart_metadata", Patterns: []string{"invalid chart apiversion", "unsupported chart version", "chart dependencies processing failed"}},
@@ -77,6 +102,7 @@ var dependencyRules = []Rule{
 	// A Chart.yaml / values.yaml that fails to load/parse is non-fixable, same
 	// class as the template-side malformed_yaml. Checked first so the broad
 	// "directory "/" not found" subchart patterns below don't shadow it.
+	{Kind: "dependency", SubKind: "encrypted_values", Patterns: encryptedValuesPatterns},
 	{Kind: "dependency", SubKind: "malformed_yaml", Patterns: nonFixableYAMLPatterns},
 	{Kind: "dependency", SubKind: "missing_subchart", Patterns: []string{"an error occurred while checking for chart dependencies", "missing in charts/ directory", "directory ", " not found"}},
 	{Kind: "dependency", SubKind: "missing_repository", Patterns: []string{"no repository definition for", "please add the missing repos", "please add them via 'helm repo add'"}},
@@ -88,6 +114,38 @@ var dependencyRules = []Rule{
 	{Kind: "dependency", SubKind: "unpack_error", Patterns: []string{"error unpacking subchart"}},
 	{Kind: "dependency", SubKind: "version_resolution", Patterns: []string{"can't get a valid version for", "make sure a matching chart version exists"}},
 	{Kind: "dependency", SubKind: "chart_validation", Patterns: []string{"validation: chart.metadata.name is required", "validation: chart.metadata.version", "is invalid", "invalid chart apiversion", "unsupported chart version", "improper constraint", "invalid version/constraint format", "larger than the maximum file size"}},
+}
+
+// nonFixableSubKinds are taxonomy subkinds the fixer cannot resolve by its
+// value-injection strategy (--set <path>=<placeholder>). Two families:
+//   - chart-author intentional validation: the chart is correctly refusing to
+//     render without proper, semantically-valid config (schema, custom guards,
+//     required/fail assertions). A placeholder satisfies presence, not shape.
+//   - structural / environment blockers: there is no value to inject at all
+//     (encrypted or unparseable files, missing Helm built-ins, kube-version or
+//     library-chart constraints, invalid chart metadata).
+//
+// These are flagged so the fix rate can reflect only errors the fixer is
+// actually meant to solve, instead of being dragged down by guardrails.
+var nonFixableSubKinds = map[string]bool{
+	// chart-author intentional validation
+	"values_schema_validation": true,
+	"custom_validation":        true,
+	"author_assertion":         true,
+	// structural / environment — nothing to inject
+	"encrypted_values":              true,
+	"malformed_yaml":                true,
+	"unsupported_builtin":           true,
+	"kube_version_incompatible":     true,
+	"library_chart_not_installable": true,
+	"chart_metadata":                true,
+}
+
+// IsNonFixable reports whether a subkind is inherently unfixable by the fixer's
+// value-injection strategy. kind is accepted for future kind-specific rules
+// (e.g. dependency.*) but classification is currently keyed on subKind alone.
+func IsNonFixable(kind, subKind string) bool {
+	return nonFixableSubKinds[subKind]
 }
 
 // Classify maps an error message to taxonomy labels.

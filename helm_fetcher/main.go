@@ -76,12 +76,16 @@ func main() {
 		runRefetchDepsMode(cfg.CatalogIn, cfg.CloneDir)
 		return
 	}
+	if selectedMode == "refilter-values" {
+		runRefilterValuesMode(cfg.CatalogIn, cfg.CloneDir)
+		return
+	}
 	if selectedMode == "merge" {
 		exporter.MergeCumulative("runs")
 		return
 	}
 	if selectedMode != "full" {
-		log.Fatal().Str("mode", cfg.Mode).Msg("Invalid mode. Use 'full', 'github-search-json', 'artifacthub-search-json', 'fixer', 'refetch-deps', or 'merge'")
+		log.Fatal().Str("mode", cfg.Mode).Msg("Invalid mode. Use 'full', 'github-search-json', 'artifacthub-search-json', 'fixer', 'refetch-deps', 'refilter-values', or 'merge'")
 	}
 
 	selectedSource := strings.ToLower(strings.TrimSpace(cfg.Source))

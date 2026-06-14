@@ -142,6 +142,16 @@ func (a *Analyzer) consumeOccurrence(occ model.ErrorOccurrence) {
 	a.bumpBucket(a.report.ByKind, kindKey, occ)
 	a.bumpBucket(a.report.BySubKind, subKindKey, occ)
 
+	// Flag non-fixable subkinds (chart-author validation / structural blockers)
+	// so the viewer can separate them from the fixable surface. Only the subkind
+	// bucket is flagged — a whole kind ("template") mixes fixable and not.
+	if classifier.IsNonFixable(occ.ErrorKind, occ.ErrorSubKind) {
+		a.report.Totals.NonFixableErrors++
+		b := a.report.BySubKind[subKindKey]
+		b.NonFixable = true
+		a.report.BySubKind[subKindKey] = b
+	}
+
 	if occ.Fixed != nil {
 		a.report.Totals.FixAttempted++
 		if occ.Fixed.Resolved {

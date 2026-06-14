@@ -1,6 +1,6 @@
 # Complete Errors By Taxonomy Bucket
 
-Generated at: `2026-06-08 21:34:29 UTC`
+Generated at: `2026-06-10 17:45:26 UTC`
 
 Source catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\runs\20260529_135859_artifacthub\catalog_by_project.json`
 
@@ -20937,7 +20937,7 @@ Error: execution error at (benthos-collector/templates/statefulset.yaml:41:19): 
 Use --debug flag to render out invalid YAML
 ```
 
-## `unknown.unclassified` (37)
+## `unknown.unclassified` (24)
 
 ### 1. `grafana/helm-charts`
 
@@ -20984,87 +20984,7 @@ exit status 1
 exit status 1
 ```
 
-### 6. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp`
-
-```text
-Error: execution error at (victoria-logs-mcp/templates/deployment.yaml:54:25): .Values.vl.entrypoint should be set
-
-Use --debug flag to render out invalid YAML
-```
-
-### 7. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert`
-
-```text
-Error: execution error at (victoria-metrics-alert/templates/alert-server.yaml:8:6): server.datasource.url datasource URL must be specified
-
-Use --debug flag to render out invalid YAML
-```
-
-### 8. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly`
-
-```text
-Error: execution error at (victoria-metrics-anomaly/templates/server.yaml:2:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.
-       See https://victoriametrics.com/legal/esa/ for details.
-       Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/
-       for more information, visit https://victoriametrics.com/products/enterprise/
-       To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 9. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway`
-
-```text
-Error: execution error at (victoria-metrics-gateway/templates/server.yaml:1:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.
-       See https://victoriametrics.com/legal/esa/ for details.
-       Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/
-       for more information, visit https://victoriametrics.com/products/enterprise/
-       To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 10. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp`
-
-```text
-Error: execution error at (victoria-metrics-mcp/templates/deployment.yaml:64:25): either .Values.vm.cloudAPIKey or .Values.vm.entrypoint should be set
-
-Use --debug flag to render out invalid YAML
-```
-
-### 11. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common`
-
-```text
-Error: execution error at (victoria-metrics-common/templates/service.yaml:7:14): .style argument should be either `plain` or `managed`
-
-Use --debug flag to render out invalid YAML
-```
-
-### 12. `kubernetes/charts`
+### 6. `kubernetes/charts`
 
 - Chart: `D:\helm_clones_artifacthub\kubernetes__charts\incubator\distribution`
 - Source: `dependency`
@@ -21073,68 +20993,7 @@ Use --debug flag to render out invalid YAML
 exit status 1
 ```
 
-### 13. `influxdata/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
-
-```text
-Error: execution error at (influxdb3-clustered/templates/app-instance.yml:90:3): missing catalog.dsn.SecretName
-
-Use --debug flag to render out invalid YAML
-```
-
-### 14. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 15. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 16. `wiremind/wiremind-helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql -f D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml`
-
-```text
-Error: execution error at (postgresql/templates/statefulset.yaml:335:29): In order to enable metrics you need to specify a database (.Values.postgresqlDatabase or .Values.global.postgresql.postgresqlDatabase)
-
-Use --debug flag to render out invalid YAML
-```
-
-### 17. `groundhog2k/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42`
-
-```text
-Error: execution error at (remark42/templates/secureconfig.yaml:9:14): .settings.secretKey must contain value
-
-Use --debug flag to render out invalid YAML
-```
-
-### 18. `jfrog/charts`
+### 7. `jfrog/charts`
 
 - Chart: `D:\helm_clones_artifacthub\jfrog__charts\stable\artifactory-cpp-ce`
 - Source: `dependency`
@@ -21143,7 +21002,7 @@ Use --debug flag to render out invalid YAML
 exit status 1
 ```
 
-### 19. `gabe565/charts`
+### 8. `gabe565/charts`
 
 - Chart: `D:\helm_clones_artifacthub\gabe565__charts\charts\adguard-home`
 - Source: `dependency`
@@ -21152,7 +21011,7 @@ exit status 1
 exit status 1
 ```
 
-### 20. `kestra-io/kestra`
+### 9. `kestra-io/kestra`
 
 - Chart: `D:\helm_clones_artifacthub\kestra-io__kestra\charts\kestra-starter`
 - Source: `dependency`
@@ -21161,7 +21020,7 @@ exit status 1
 exit status 1
 ```
 
-### 21. `helm/charts`
+### 10. `helm/charts`
 
 - Chart: `D:\helm_clones_artifacthub\helm__charts\incubator\distribution`
 - Source: `dependency`
@@ -21170,7 +21029,7 @@ exit status 1
 exit status 1
 ```
 
-### 22. `norwoodj/helm-docs`
+### 11. `norwoodj/helm-docs`
 
 - Chart: `D:\helm_clones_artifacthub\norwoodj__helm-docs\example-charts\custom-template`
 - Source: `dependency`
@@ -21179,26 +21038,7 @@ exit status 1
 exit status 1
 ```
 
-### 23. `chatwoot/charts`
-
-- Chart: `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml`, `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml`
-
-```text
-Error: execution error at (chatwoot/charts/redis/templates/NOTES.txt:182:4): 
-VALUES VALIDATION:
-
-redis: architecture
-    Using redis sentinel on standalone mode is not supported.
-    To deploy redis sentinel, please select the "replication" mode
-    (--set "architecture=replication,sentinel.enabled=true")
-
-Use --debug flag to render out invalid YAML
-```
-
-### 24. `kiwigrid/helm-charts`
+### 12. `kiwigrid/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\kiwigrid__helm-charts\charts\ditto-digital-twins`
 - Source: `dependency`
@@ -21207,19 +21047,7 @@ Use --debug flag to render out invalid YAML
 exit status 1
 ```
 
-### 25. `mysql/mysql-operator`
-
-- Chart: `D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
-
-```text
-Error: execution error at (mysql-innodbcluster/templates/deployment_cluster.yaml:68:8): tls.routerCertAndPKsecretName: secret 'test-router-tls' not found in namespace 'default'
-
-Use --debug flag to render out invalid YAML
-```
-
-### 26. `one-acre-fund/oaf-public-charts`
+### 13. `one-acre-fund/oaf-public-charts`
 
 - Chart: `D:\helm_clones_artifacthub\one-acre-fund__oaf-public-charts\archive\geonode`
 - Source: `dependency`
@@ -21228,7 +21056,7 @@ Use --debug flag to render out invalid YAML
 exit status 1
 ```
 
-### 27. `kubernetes/helm`
+### 14. `kubernetes/helm`
 
 - Chart: `D:\helm_clones_artifacthub\kubernetes__helm\internal\chart\v3\lint\rules\testdata\anotherbadchartfile`
 - Source: `dependency`
@@ -21237,7 +21065,7 @@ exit status 1
 exit status 1
 ```
 
-### 28. `helm/helm`
+### 15. `helm/helm`
 
 - Chart: `D:\helm_clones_artifacthub\helm__helm\internal\chart\v3\lint\rules\testdata\anotherbadchartfile`
 - Source: `dependency`
@@ -21246,7 +21074,7 @@ exit status 1
 exit status 1
 ```
 
-### 29. `banzaicloud/banzai-charts`
+### 16. `banzaicloud/banzai-charts`
 
 - Chart: `D:\helm_clones_artifacthub\banzaicloud__banzai-charts\argo`
 - Source: `dependency`
@@ -21255,7 +21083,7 @@ exit status 1
 exit status 1
 ```
 
-### 30. `ortelius/ortelius-charts`
+### 17. `ortelius/ortelius-charts`
 
 - Chart: `D:\helm_clones_artifacthub\ortelius__ortelius-charts\chart\ortelius`
 - Source: `dependency`
@@ -21264,7 +21092,7 @@ exit status 1
 exit status 1
 ```
 
-### 31. `devtron-labs/charts`
+### 18. `devtron-labs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\devtron-labs__charts\charts\cluster-essentials`
 - Source: `dependency`
@@ -21273,7 +21101,7 @@ exit status 1
 exit status 1
 ```
 
-### 32. `netrisai/charts`
+### 19. `netrisai/charts`
 
 - Chart: `D:\helm_clones_artifacthub\netrisai__charts\charts\netris-controller`
 - Source: `dependency`
@@ -21282,7 +21110,7 @@ exit status 1
 exit status 1
 ```
 
-### 33. `k8s-home-lab/helm-charts`
+### 20. `k8s-home-lab/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\k8s-home-lab__helm-charts\unmaintained\audiobookshelf`
 - Source: `dependency`
@@ -21291,7 +21119,7 @@ exit status 1
 exit status 1
 ```
 
-### 34. `rhdh-bot/openshift-helm-charts`
+### 21. `rhdh-bot/openshift-helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\redhat\redhat\redhat-mysql-persistent\0.0.2\src`
 - Source: `dependency`
@@ -21300,7 +21128,7 @@ exit status 1
 exit status 1
 ```
 
-### 35. `k8s-at-home/charts`
+### 22. `k8s-at-home/charts`
 
 - Chart: `D:\helm_clones_artifacthub\k8s-at-home__charts\charts\stable\firefly-iii`
 - Source: `dependency`
@@ -21309,7 +21137,7 @@ exit status 1
 exit status 1
 ```
 
-### 36. `kube-logging/helm-charts`
+### 23. `kube-logging/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\kube-logging__helm-charts\charts\logging-demo`
 - Source: `dependency`
@@ -21318,7 +21146,7 @@ exit status 1
 exit status 1
 ```
 
-### 37. `fonzdm/servarr`
+### 24. `fonzdm/servarr`
 
 - Chart: `D:\helm_clones_artifacthub\fonzdm__servarr\servarr`
 - Source: `dependency`
@@ -21530,6 +21358,180 @@ Use --debug flag to render out invalid YAML
 
 ```text
 Error: execution error at (cortex/templates/secrets.yaml:1:4): ERROR: You must change the default httpSecret value. Please set cortex.httpSecret to a secure random string of at least 32 characters, or provide an existing secret via cortex.k8sSecretName.
+
+Use --debug flag to render out invalid YAML
+```
+
+## `template.author_assertion` (13)
+
+### 1. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp`
+
+```text
+Error: execution error at (victoria-logs-mcp/templates/deployment.yaml:54:25): .Values.vl.entrypoint should be set
+
+Use --debug flag to render out invalid YAML
+```
+
+### 2. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert`
+
+```text
+Error: execution error at (victoria-metrics-alert/templates/alert-server.yaml:8:6): server.datasource.url datasource URL must be specified
+
+Use --debug flag to render out invalid YAML
+```
+
+### 3. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly`
+
+```text
+Error: execution error at (victoria-metrics-anomaly/templates/server.yaml:2:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.
+       See https://victoriametrics.com/legal/esa/ for details.
+       Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/
+       for more information, visit https://victoriametrics.com/products/enterprise/
+       To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 4. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway`
+
+```text
+Error: execution error at (victoria-metrics-gateway/templates/server.yaml:1:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.
+       See https://victoriametrics.com/legal/esa/ for details.
+       Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/
+       for more information, visit https://victoriametrics.com/products/enterprise/
+       To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 5. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp`
+
+```text
+Error: execution error at (victoria-metrics-mcp/templates/deployment.yaml:64:25): either .Values.vm.cloudAPIKey or .Values.vm.entrypoint should be set
+
+Use --debug flag to render out invalid YAML
+```
+
+### 6. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common`
+
+```text
+Error: execution error at (victoria-metrics-common/templates/service.yaml:7:14): .style argument should be either `plain` or `managed`
+
+Use --debug flag to render out invalid YAML
+```
+
+### 7. `influxdata/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
+
+```text
+Error: execution error at (influxdb3-clustered/templates/app-instance.yml:90:3): missing catalog.dsn.SecretName
+
+Use --debug flag to render out invalid YAML
+```
+
+### 8. `camunda/camunda-platform-helm`
+
+- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+
+```text
+Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 9. `camunda/camunda-platform-helm`
+
+- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9`
+
+```text
+Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 10. `wiremind/wiremind-helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql`
+- Source: `template`
+- Values files: `D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql -f D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml`
+
+```text
+Error: execution error at (postgresql/templates/statefulset.yaml:335:29): In order to enable metrics you need to specify a database (.Values.postgresqlDatabase or .Values.global.postgresql.postgresqlDatabase)
+
+Use --debug flag to render out invalid YAML
+```
+
+### 11. `groundhog2k/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42`
+
+```text
+Error: execution error at (remark42/templates/secureconfig.yaml:9:14): .settings.secretKey must contain value
+
+Use --debug flag to render out invalid YAML
+```
+
+### 12. `chatwoot/charts`
+
+- Chart: `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot`
+- Source: `template`
+- Values files: `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml`, `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml`
+
+```text
+Error: execution error at (chatwoot/charts/redis/templates/NOTES.txt:182:4): 
+VALUES VALIDATION:
+
+redis: architecture
+    Using redis sentinel on standalone mode is not supported.
+    To deploy redis sentinel, please select the "replication" mode
+    (--set "architecture=replication,sentinel.enabled=true")
+
+Use --debug flag to render out invalid YAML
+```
+
+### 13. `mysql/mysql-operator`
+
+- Chart: `D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
+
+```text
+Error: execution error at (mysql-innodbcluster/templates/deployment_cluster.yaml:68:8): tls.routerCertAndPKsecretName: secret 'test-router-tls' not found in namespace 'default'
 
 Use --debug flag to render out invalid YAML
 ```

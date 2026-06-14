@@ -78,7 +78,13 @@
       "Bash(node -e ' *)",
       "PowerShell(.\\\\scripts\\\\refix_all.ps1)",
       "PowerShell(go run *)",
-      "Bash(awk '{print $6, $7}')"
+      "Bash(awk '{print $6, $7}')",
+      "Bash([ -f \"$f\" ])",
+      "Bash(grep -E '^\\(0[0-8b-ce-f]|1[0-9a-f]|7f\\)$')",
+      "PowerShell(.\\\\run_both_sources.ps1 -Top 500 -GithubCloneDir D:/helm_clones_github -ArtifactCloneDir D:/helm_clones_artifacthub)",
+      "Bash(tee /tmp/refilter_github.log)",
+      "Bash(tee /tmp/refilter_ah.log)",
+      "Bash(grep -E '^\\\\| `' out/cumulative_final/taxonomy_summary.md)"
     ]
   }
 }

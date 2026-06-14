@@ -18,6 +18,8 @@ type viewerSubKind struct {
 	// Final is how many unresolved fixes ended on this taxonomy as the final
 	// blocker (the destination counter, distinct from Count which is start).
 	Final int `json:"final"`
+	// NonFixable marks a subkind the fixer cannot resolve by value injection.
+	NonFixable bool `json:"non_fixable,omitempty"`
 }
 
 // viewerPayload is the JSON blob embedded into viewer.html.
@@ -45,7 +47,7 @@ func writeViewerHTML(path string, report model.TaxonomyReport) error {
 	}
 
 	for key, b := range report.BySubKind {
-		row := viewerSubKind{Key: key, Count: b.Count, Final: b.FinalCount}
+		row := viewerSubKind{Key: key, Count: b.Count, Final: b.FinalCount, NonFixable: b.NonFixable}
 		if b.FixOutcome != nil {
 			row.Resolved = b.FixOutcome.Resolved
 			row.Unresolved = b.FixOutcome.Unresolved
@@ -98,7 +100,7 @@ const viewerTemplate = `<!DOCTYPE html>
   :root {
     --bg: #0f1115; --panel: #171a21; --panel2: #1e222b; --border: #2a2f3a;
     --text: #e6e9ef; --muted: #9aa3b2; --accent: #4f9cf9; --green: #3fb950;
-    --red: #f85149; --amber: #d29922; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --red: #f85149; --amber: #d29922; --nfx: #a371f7; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--text);
@@ -113,8 +115,9 @@ const viewerTemplate = `<!DOCTYPE html>
   .totals .stat.red b { color: var(--red); }
   .totals .stat.green b { color: var(--green); }
   .totals .stat.muted b { color: var(--muted); }
+  .totals .stat.nfx b { color: var(--nfx); }
   .layout { display: flex; align-items: flex-start; }
-  aside { width: 440px; flex: none; border-right: 1px solid var(--border);
+  aside { width: 484px; flex: none; border-right: 1px solid var(--border);
     height: calc(100vh - 92px); overflow-y: auto; position: sticky; top: 92px;
     background: var(--panel); }
   aside h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .05em;
@@ -129,6 +132,7 @@ const viewerTemplate = `<!DOCTYPE html>
     text-align: right; font-family: var(--mono); }
   .skrow .badge.red { color: var(--red); }
   .skrow .badge.fin { color: var(--amber); }
+  .skrow .badge.nfx { color: var(--nfx); }
   .skrow .badge.zero { color: var(--border); }
   aside h2 { display: flex; align-items: baseline; }
   aside h2 .leg { margin-left: auto; display: flex; gap: 8px; text-transform: none;
@@ -136,11 +140,12 @@ const viewerTemplate = `<!DOCTYPE html>
   aside h2 .leg span { width: 34px; text-align: right; }
   aside h2 .leg .u { color: var(--red); }
   aside h2 .leg .f { color: var(--amber); }
+  aside h2 .leg .x { color: var(--nfx); }
   /* highlight the active filter column: start dims the ->fin col, final dims tot/unfix */
   aside:not(.dim-final) .skrow .badge.fin,
   aside:not(.dim-final) .leg .f { opacity: .45; }
-  aside.dim-final .skrow .badge:not(.fin),
-  aside.dim-final .leg span:not(.f) { opacity: .45; }
+  aside.dim-final .skrow .badge:not(.fin):not(.nfx),
+  aside.dim-final .leg span:not(.f):not(.x) { opacity: .45; }
   aside.dim-final h2 .leg .f { text-decoration: underline; }
   main { flex: 1; padding: 16px 20px; min-width: 0; }
   .controls { display: flex; gap: 10px; align-items: center; margin-bottom: 14px;
@@ -288,6 +293,9 @@ const viewerTemplate = `<!DOCTYPE html>
       ['Resolved', t.fix_resolved || 0, 'green'],
       ['Still to fix', t.fix_unresolved || 0, 'red'],
     ];
+    if (t.non_fixable_errors) {
+      rows.push(['Non-fixable', t.non_fixable_errors, 'nfx']);
+    }
     if (t.duplicates_collapsed) {
       rows.push(['Dupes collapsed', t.duplicates_collapsed, 'muted']);
     }
@@ -301,10 +309,12 @@ const viewerTemplate = `<!DOCTYPE html>
     let html = '<h2>Subkinds <span class="leg">' +
       '<span title="occurrences as start error">tot</span>' +
       '<span class="u" title="still to fix">unfix</span>' +
-      '<span class="f" title="still failing here at the end (cumulative: unresolved + not-attempted)">&rarr;fin</span></span></h2>';
-    html += skRow({ key: '(all)', count: total, unresolved: DATA.totals.fix_unresolved || 0, final: finalTotal }, state.subkind === null);
+      '<span class="f" title="still failing here at the end (cumulative: unresolved + not-attempted)">&rarr;fin</span>' +
+      '<span class="x" title="non-fixable by design (chart-author validation / structural blockers)">nfx</span></span></h2>';
+    html += skRow({ key: '(all)', count: total, unresolved: DATA.totals.fix_unresolved || 0, final: finalTotal, nfx: DATA.totals.non_fixable_errors || 0 }, state.subkind === null);
     for (const sk of DATA.sub_kinds) {
-      html += skRow(sk, state.subkind === sk.key);
+      // nfx column: a non-fixable subkind contributes its whole count, else 0.
+      html += skRow(Object.assign({}, sk, { nfx: sk.non_fixable ? sk.count : 0 }), state.subkind === sk.key);
     }
     const aside = document.getElementById('sidebar');
     // dim-final emphasizes the column the selected subkind currently filters on.
@@ -323,8 +333,10 @@ const viewerTemplate = `<!DOCTYPE html>
       '" title="still to fix">' + (sk.unresolved || 0) + '</span>';
     const fin = '<span class="badge fin' + (sk.final ? '' : ' zero') +
       '" title="still failing here at the end (cumulative: unresolved + not-attempted)">&rarr;' + (sk.final || 0) + '</span>';
+    const nfx = '<span class="badge nfx' + (sk.nfx ? '' : ' zero') +
+      '" title="non-fixable by design (chart-author validation / structural blockers)">' + (sk.nfx || 0) + '</span>';
     return '<div class="skrow ' + (active ? 'active' : '') + '" data-key="' + esc(sk.key) + '">' +
-      '<span class="name">' + esc(sk.key) + '</span>' + tot + unr + fin + '</div>';
+      '<span class="name">' + esc(sk.key) + '</span>' + tot + unr + fin + nfx + '</div>';
   }
 
   function matches(o) {
