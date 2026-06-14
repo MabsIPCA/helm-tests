@@ -1,6 +1,6 @@
 # Helm Error Taxonomy Report
 
-Generated at: `2026-06-08 21:34:29 UTC`
+Generated at: `2026-06-10 17:45:26 UTC`
 
 Source catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\runs\20260529_135859_artifacthub\catalog_by_project.json`
 
@@ -14,8 +14,8 @@ Fixed catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_fi
 | Helm runs | 2098 |
 | Template failures | 248 |
 | Dependency failures | 24 |
-| Classified errors | 173 |
-| Unclassified errors | 37 |
+| Classified errors | 186 |
+| Unclassified errors | 24 |
 | Fix attempts | 186 |
 | Fix resolved | 23 |
 | Fix unresolved | 163 |
@@ -24,8 +24,8 @@ Fixed catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_fi
 
 | Kind | Count |
 |---|---:|
-| `template` | 173 |
-| `unknown` | 37 |
+| `template` | 186 |
+| `unknown` | 24 |
 
 ## Taxonomy by SubKind
 
@@ -33,8 +33,9 @@ Fixed catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_fi
 |---|---:|---:|---:|
 | `template.values_schema_validation` | 79 | 0 | 79 |
 | `template.required_value` | 44 | 19 | 25 |
-| `unknown.unclassified` | 37 | 0 | 13 |
+| `unknown.unclassified` | 24 | 0 | 0 |
 | `template.custom_validation` | 17 | 0 | 17 |
+| `template.author_assertion` | 13 | 0 | 13 |
 | `template.missing_template` | 8 | 0 | 8 |
 | `template.library_chart_not_installable` | 7 | 0 | 7 |
 | `template.malformed_yaml` | 4 | 0 | 4 |
@@ -54,8 +55,8 @@ Fixed catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_fi
 - `rancher/rancher` `D:\helm_clones_artifacthub\rancher__rancher\chart` `dependency`: exit status 1
 - `renovatebot/renovate` `D:\helm_clones_artifacthub\renovatebot__renovate\lib\modules\manager\helmv3\__fixtures__` `dependency`: exit status 1
 - `rook/rook` `D:\helm_clones_artifacthub\rook__rook\deploy\charts\rook-ceph` `dependency`: exit status 1
-- `VictoriaMetrics/helm-charts` `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp` `template`: Error: execution error at (victoria-logs-mcp/templates/deployment.yaml:54:25): .Values.vl.entrypoint should be set  Use --debug flag to render out invalid YAML
-- `VictoriaMetrics/helm-charts` `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert` `template`: Error: execution error at (victoria-metrics-alert/templates/alert-server.yaml:8:6): server.datasource.url datasource URL must be specified  Use --debug flag to render out invalid Y...
-- `VictoriaMetrics/helm-charts` `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly` `template`: Error: execution error at (victoria-metrics-anomaly/templates/server.yaml:2:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license fo...
-- `VictoriaMetrics/helm-charts` `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway` `template`: Error: execution error at (victoria-metrics-gateway/templates/server.yaml:1:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license fo...
-- `VictoriaMetrics/helm-charts` `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp` `template`: Error: execution error at (victoria-metrics-mcp/templates/deployment.yaml:64:25): either .Values.vm.cloudAPIKey or .Values.vm.entrypoint should be set  Use --debug flag to render o...
+- `kubernetes/charts` `D:\helm_clones_artifacthub\kubernetes__charts\incubator\distribution` `dependency`: exit status 1
+- `jfrog/charts` `D:\helm_clones_artifacthub\jfrog__charts\stable\artifactory-cpp-ce` `dependency`: exit status 1
+- `gabe565/charts` `D:\helm_clones_artifacthub\gabe565__charts\charts\adguard-home` `dependency`: exit status 1
+- `kestra-io/kestra` `D:\helm_clones_artifacthub\kestra-io__kestra\charts\kestra-starter` `dependency`: exit status 1
+- `helm/charts` `D:\helm_clones_artifacthub\helm__charts\incubator\distribution` `dependency`: exit status 1

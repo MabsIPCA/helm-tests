@@ -1,7 +1,9 @@
 package helm
 
 import (
+	"bytes"
 	"fmt"
+	"io"
 	"os"
 	"os/exec"
 	"path/filepath"
@@ -10,6 +12,7 @@ import (
 	"time"
 
 	"github.com/rs/zerolog/log"
+	"sigs.k8s.io/yaml"
 )
 
 const (
@@ -105,8 +108,10 @@ func fileExists(path string) bool {
 	return err == nil && info.Mode().IsRegular()
 }
 
-// FindValuesFiles looks for .yaml/.yml files in the given chartDir, excluding Chart*.yaml/yml and values.yaml/yml.
-func FindValuesFiles(chartDir string) []string {
+// candidateValuesFiles returns the chartDir's overlay value files by NAME only
+// (excluding the auto-loaded values.yaml/yml, Chart*.yaml/yml, non-"values"
+// files, and non-regular files) — before the YAML prefilter is applied.
+func candidateValuesFiles(chartDir string) []string {
 	var all []string
 	for _, pat := range []string{"*.yaml", "*.yml"} {
 		matches, _ := filepath.Glob(filepath.Join(chartDir, pat))
@@ -133,6 +138,82 @@ func FindValuesFiles(chartDir string) []string {
 		}
 	}
 	return all
+}
+
+// FindValuesFiles returns the chartDir's overlay value files to feed to helm,
+// excluding Chart*.yaml/yml and the auto-loaded values.yaml/yml. It applies the
+// YAML prefilter: only files that actually parse as YAML are kept, so the
+// combination set never includes a file helm would reject on load. This drops
+// git-crypt encrypted blobs (ciphertext, not YAML) and any otherwise malformed
+// overlay before it can manufacture noise — they can never render. The parse
+// uses the same YAML->JSON path helm uses (sigs.k8s.io/yaml), so "parseable
+// here" matches "loadable by helm".
+func FindValuesFiles(chartDir string) []string {
+	var kept []string
+	for _, m := range candidateValuesFiles(chartDir) {
+		if !IsParseableValuesFile(m) {
+			reason := "unparseable yaml"
+			if IsGitCryptEncrypted(m) {
+				reason = "git-crypt encrypted"
+			}
+			log.Debug().Str("file", m).Str("reason", reason).Msg("Skipping values file (failed YAML prefilter)")
+			continue
+		}
+		kept = append(kept, m)
+	}
+	return kept
+}
+
+// DroppedValuesFiles returns the chartDir's overlay value files that the YAML
+// prefilter rejects (encrypted or otherwise unparseable). It is the complement
+// of FindValuesFiles over the same candidate set — used to detect which repos
+// the prefilter actually changes.
+func DroppedValuesFiles(chartDir string) []string {
+	var dropped []string
+	for _, m := range candidateValuesFiles(chartDir) {
+		if !IsParseableValuesFile(m) {
+			dropped = append(dropped, m)
+		}
+	}
+	return dropped
+}
+
+// gitCryptMagic is the 10-byte preamble every git-crypt encrypted blob starts
+// with: a NUL, the ASCII "GITCRYPT", and a trailing NUL, followed by the nonce.
+var gitCryptMagic = []byte{0x00, 'G', 'I', 'T', 'C', 'R', 'Y', 'P', 'T', 0x00}
+
+// IsGitCryptEncrypted reports whether the file at path is a git-crypt encrypted
+// blob (its content begins with the git-crypt magic header). Such files appear
+// in repos that encrypt secrets with git-crypt; cloned without the key they are
+// opaque ciphertext, not YAML.
+func IsGitCryptEncrypted(path string) bool {
+	f, err := os.Open(path)
+	if err != nil {
+		return false
+	}
+	defer f.Close()
+	hdr := make([]byte, len(gitCryptMagic))
+	if _, err := io.ReadFull(f, hdr); err != nil {
+		return false
+	}
+	return bytes.Equal(hdr, gitCryptMagic)
+}
+
+// IsParseableValuesFile reports whether the file at path is a YAML document helm
+// could load as values: it must unmarshal via sigs.k8s.io/yaml (the YAML->JSON
+// path helm uses) into a map. An empty/null file is allowed (helm treats it as
+// no overrides); a scalar or list, encrypted blob, or syntactically broken YAML
+// is rejected — matching what helm itself would refuse on load.
+func IsParseableValuesFile(path string) bool {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return false
+	}
+	if len(bytes.TrimSpace(data)) == 0 {
+		return true // empty overlay: helm accepts it as a no-op
+	}
+	var m map[string]interface{}
+	return yaml.Unmarshal(data, &m) == nil
 }
 
 // Combinations generates all non-empty Combinations of the input items.

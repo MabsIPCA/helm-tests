@@ -1,10 +1,10 @@
 # Complete Errors By Taxonomy Bucket
 
-Generated at: `2026-06-08 21:34:22 UTC`
+Generated at: `2026-06-10 17:45:26 UTC`
 
 Source catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_sources_merged.json`
 
-## `template.nil_pointer` (359)
+## `template.nil_pointer` (340)
 
 ### 1. `labring/sealos`
 
@@ -4019,192 +4019,7 @@ Error: istio-operator/templates/deployment.yaml:50:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 286. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn`
-
-```text
-Error: aragorn/templates/env-config-map.yaml:32:25
-  executing "aragorn/templates/env-config-map.yaml" at <.Values.pathfinder.redis.host>:
-    nil pointer evaluating interface {}.redis
-
-Use --debug flag to render out invalid YAML
-```
-
-### 287. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup`
-
-```text
-Error: biolink-lookup/templates/ingress.yaml:26:16
-  executing "biolink-lookup/templates/ingress.yaml" at <.Values.ingress.tls.enabled>:
-    nil pointer evaluating interface {}.enabled
-
-Use --debug flag to render out invalid YAML
-```
-
-### 288. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api`
-
-```text
-Error: cam-kp-api/templates/service.yaml:11:18
-  executing "cam-kp-api/templates/service.yaml" at <.Values.service.type>:
-    nil pointer evaluating interface {}.type
-
-Use --debug flag to render out invalid YAML
-```
-
-### 289. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\issue-router`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\issue-router`
-
-```text
-Error: issue-router/templates/configmap.yaml:6:24
-  executing "issue-router/templates/configmap.yaml" at <.Values.issueRouter.env.github_url>:
-    nil pointer evaluating interface {}.github_url
-
-Use --debug flag to render out invalid YAML
-```
-
-### 290. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup`
-
-```text
-Error: name-lookup/templates/secrets.yaml:1:13
-  executing "name-lookup/templates/secrets.yaml" at <.Values.blocklist.secrets.github_personal_access_token>:
-    nil pointer evaluating interface {}.github_personal_access_token
-
-Use --debug flag to render out invalid YAML
-```
-
-### 291. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp`
-
-```text
-Error: ontology-kp/templates/deployment.yaml:9:20
-  executing "ontology-kp/templates/deployment.yaml" at <.Values.autoscaling.enabled>:
-    nil pointer evaluating interface {}.enabled
-
-Use --debug flag to render out invalid YAML
-```
-
-### 292. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\plater-standalone`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\plater-standalone`
-
-```text
-Error: plater/templates/service.yaml:8:18
-  executing "plater/templates/service.yaml" at <.Values.service.type>:
-    nil pointer evaluating interface {}.type
-
-Use --debug flag to render out invalid YAML
-```
-
-### 293. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\query-logger`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\query-logger`
-
-```text
-Error: querylogger/templates/service.yaml:8:18
-  executing "querylogger/templates/service.yaml" at <.Values.querylogger.service.type>:
-    nil pointer evaluating interface {}.type
-
-Use --debug flag to render out invalid YAML
-```
-
-### 294. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara`
-
-```text
-Error: robokop-ara/templates/deployment.yaml:17:28
-  executing "robokop-ara/templates/deployment.yaml" at <include (print $.Template.BasePath "/configmap.yaml") .>:
-    error calling include:
-robokop-ara/templates/configmap.yaml:9:24
-  executing "robokop-ara/templates/configmap.yaml" at <.Values.app.robokop_kg>:
-    nil pointer evaluating interface {}.robokop_kg
-
-Use --debug flag to render out invalid YAML
-```
-
-### 295. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres`
-
-```text
-Error: robokop-ui-postgres/templates/db-backup-job.yaml:26:30
-  executing "robokop-ui-postgres/templates/db-backup-job.yaml" at <.Values.backupImage.repository>:
-    nil pointer evaluating interface {}.repository
-
-Use --debug flag to render out invalid YAML
-```
-
-### 296. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\strider`
-
-```text
-Error: strider/templates/ingress.yaml:28:16
-  executing "strider/templates/ingress.yaml" at <.Values.ingress.tls.enabled>:
-    nil pointer evaluating interface {}.enabled
-
-Use --debug flag to render out invalid YAML
-```
-
-### 297. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\test-harness`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\test-harness`
-
-```text
-Error: test-harness/templates/performance_tests_later.yaml:6:23
-  executing "test-harness/templates/performance_tests_later.yaml" at <.Values.performance_tests.cronInterval>:
-    nil pointer evaluating interface {}.cronInterval
-
-Use --debug flag to render out invalid YAML
-```
-
-### 298. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\tranql`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\tranql`
-
-```text
-Error: helm/templates/varnish_cache.configmap.yaml:22:43
-  executing "helm/templates/varnish_cache.configmap.yaml" at <.Values.tranql_frontend.gunicorn.timeout>:
-    nil pointer evaluating interface {}.timeout
-
-Use --debug flag to render out invalid YAML
-```
-
-### 299. `kalavai-net/helm-charts`
+### 286. `kalavai-net/helm-charts`
 
 - Chart: `D:\helm_clones_github\kalavai-net__helm-charts\charts\kalavai-api`
 - Source: `template`
@@ -4218,7 +4033,7 @@ Error: kalavai-api/templates/secrets.yaml:9:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 300. `kalavai-net/helm-charts`
+### 287. `kalavai-net/helm-charts`
 
 - Chart: `D:\helm_clones_github\kalavai-net__helm-charts\deployments\monitoring`
 - Source: `template`
@@ -4232,7 +4047,7 @@ Error: monitoring/templates/svc-node-exporter.yaml:2:17
 Use --debug flag to render out invalid YAML
 ```
 
-### 301. `lucidworks/ocp-fusion-helm-charts`
+### 288. `lucidworks/ocp-fusion-helm-charts`
 
 - Chart: `D:\helm_clones_github\lucidworks__ocp-fusion-helm-charts\5.3.4\fusion`
 - Source: `template`
@@ -4250,7 +4065,7 @@ fusion/charts/admin-ui/charts/fusion-common-utils/templates/_helpers.tpl:342:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 302. `ministryofjustice/cloud-platform-how-out-of-date-are-we`
+### 289. `ministryofjustice/cloud-platform-how-out-of-date-are-we`
 
 - Chart: `D:\helm_clones_github\ministryofjustice__cloud-platform-how-out-of-date-are-we\cloud-platform-reports-cronjobs`
 - Source: `template`
@@ -4267,7 +4082,7 @@ cloud-platform-reports-cronjobs/templates/_helpers.tpl:25:20
 Use --debug flag to render out invalid YAML
 ```
 
-### 303. `onasunnymorning/domain-os`
+### 290. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\dos`
 - Source: `template`
@@ -4281,7 +4096,7 @@ Error: dos/templates/sync-worker-deployment.yaml:6:22
 Use --debug flag to render out invalid YAML
 ```
 
-### 304. `onasunnymorning/domain-os`
+### 291. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\echo`
 - Source: `template`
@@ -4295,7 +4110,7 @@ Error: streamclient/templates/secrets.yaml:6:22
 Use --debug flag to render out invalid YAML
 ```
 
-### 305. `onasunnymorning/domain-os`
+### 292. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\metabase`
 - Source: `template`
@@ -4309,7 +4124,7 @@ Error: metabase-helm-chart/templates/metabase-service.yaml:8:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 306. `onasunnymorning/domain-os`
+### 293. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\traefik`
 - Source: `template`
@@ -4323,7 +4138,7 @@ Error: traefik-helm/templates/traefik-service.yaml:9:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 307. `onasunnymorning/domain-os`
+### 294. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\v2\admin-api`
 - Source: `template`
@@ -4337,7 +4152,7 @@ Error: admin-api/templates/admin-api-service.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 308. `onasunnymorning/domain-os`
+### 295. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\v2\jump`
 - Source: `template`
@@ -4351,7 +4166,7 @@ Error: bastion-host/templates/junp-service.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 309. `onasunnymorning/domain-os`
+### 296. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\v2\sftp`
 - Source: `template`
@@ -4365,7 +4180,7 @@ Error: sftp/templates/serviceaccount.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 310. `onasunnymorning/domain-os`
+### 297. `onasunnymorning/domain-os`
 
 - Chart: `D:\helm_clones_github\onasunnymorning__domain-os\deploy\helm\v2\workers`
 - Source: `template`
@@ -4379,7 +4194,7 @@ Error: dos-workers/templates/domain-os-worker-deployment.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 311. `vlab-research/fly`
+### 298. `vlab-research/fly`
 
 - Chart: `D:\helm_clones_github\vlab-research__fly\dashboard-server\chart`
 - Source: `template`
@@ -4393,7 +4208,7 @@ Error: dashboard/templates/service.yaml:7:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 312. `JonasHess/homelab-iac`
+### 299. `JonasHess/homelab-iac`
 
 - Chart: `D:\helm_clones_github\JonasHess__homelab-iac\apps\argocd`
 - Source: `template`
@@ -4407,7 +4222,7 @@ Error: argocd/templates/argocd-httproute.yaml:1:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 313. `JonasHess/homelab-iac`
+### 300. `JonasHess/homelab-iac`
 
 - Chart: `D:\helm_clones_github\JonasHess__homelab-iac\apps\crossplane`
 - Source: `template`
@@ -4421,7 +4236,7 @@ Error: crossplane/templates/external-secret-aws-creds.yaml:9:20
 Use --debug flag to render out invalid YAML
 ```
 
-### 314. `JonasHess/homelab-iac`
+### 301. `JonasHess/homelab-iac`
 
 - Chart: `D:\helm_clones_github\JonasHess__homelab-iac\apps\mosquitto`
 - Source: `template`
@@ -4435,7 +4250,7 @@ Error: mosquitto/charts/generic/templates/external-secrets.yaml:14:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 315. `JonasHess/homelab-iac`
+### 302. `JonasHess/homelab-iac`
 
 - Chart: `D:\helm_clones_github\JonasHess__homelab-iac\apps\smarthome4`
 - Source: `template`
@@ -4449,7 +4264,7 @@ Error: smarthome4/charts/generic/templates/external-secrets.yaml:14:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 316. `Kapil-Bhalodiya/E-Commerce`
+### 303. `Kapil-Bhalodiya/E-Commerce`
 
 - Chart: `D:\helm_clones_github\Kapil-Bhalodiya__E-Commerce\infra\addons\backend`
 - Source: `template`
@@ -4463,7 +4278,7 @@ Error: backend/templates/ingress.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 317. `Kapil-Bhalodiya/E-Commerce`
+### 304. `Kapil-Bhalodiya/E-Commerce`
 
 - Chart: `D:\helm_clones_github\Kapil-Bhalodiya__E-Commerce\infra\addons\frontend`
 - Source: `template`
@@ -4477,7 +4292,7 @@ Error: frontend/templates/ingress.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 318. `Kapil-Bhalodiya/E-Commerce`
+### 305. `Kapil-Bhalodiya/E-Commerce`
 
 - Chart: `D:\helm_clones_github\Kapil-Bhalodiya__E-Commerce\infra\addons\gateway-api`
 - Source: `template`
@@ -4491,7 +4306,7 @@ Error: gateway-api/templates/httproute-backend.yaml:29:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 319. `LasseRapo/fabric-cti-sharing`
+### 306. `LasseRapo/fabric-cti-sharing`
 
 - Chart: `D:\helm_clones_github\LasseRapo__fabric-cti-sharing\bevel-operator-fabric\charts\hlf-ca`
 - Source: `template`
@@ -4505,7 +4320,7 @@ Error: hlf-ca/templates/traefikroute.yaml:1:13
 Use --debug flag to render out invalid YAML
 ```
 
-### 320. `LasseRapo/fabric-cti-sharing`
+### 307. `LasseRapo/fabric-cti-sharing`
 
 - Chart: `D:\helm_clones_github\LasseRapo__fabric-cti-sharing\bevel-operator-fabric\charts\hlf-ordnode`
 - Source: `template`
@@ -4519,7 +4334,7 @@ Error: hlf-ordnode/templates/traefikroute.yaml:1:13
 Use --debug flag to render out invalid YAML
 ```
 
-### 321. `MrE-Fog/ks-installer2`
+### 308. `MrE-Fog/ks-installer2`
 
 - Chart: `D:\helm_clones_github\MrE-Fog__ks-installer2\roles\common\files\openldap-ha`
 - Source: `template`
@@ -4533,7 +4348,7 @@ Error: openldap-ha/templates/statefulset.yaml:144:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 322. `MrE-Fog/ks-installer2`
+### 309. `MrE-Fog/ks-installer2`
 
 - Chart: `D:\helm_clones_github\MrE-Fog__ks-installer2\roles\edgeruntime\files\kubeedge\cloudcore`
 - Source: `template`
@@ -4547,7 +4362,7 @@ Error: cloudcore/templates/service_edgeservice.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 323. `MrE-Fog/ks-installer2`
+### 310. `MrE-Fog/ks-installer2`
 
 - Chart: `D:\helm_clones_github\MrE-Fog__ks-installer2\roles\ks-auditing\files\kube-auditing`
 - Source: `template`
@@ -4561,7 +4376,7 @@ Error: kube-auditing/templates/webhook.yaml:6:16
 Use --debug flag to render out invalid YAML
 ```
 
-### 324. `MrE-Fog/ks-installer2`
+### 311. `MrE-Fog/ks-installer2`
 
 - Chart: `D:\helm_clones_github\MrE-Fog__ks-installer2\roles\ks-monitor\files\notification-manager`
 - Source: `template`
@@ -4575,7 +4390,7 @@ Error: notification-manager/templates/operator.yaml:23:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 325. `PilotDataPlatform/helm-charts`
+### 312. `PilotDataPlatform/helm-charts`
 
 - Chart: `D:\helm_clones_github\PilotDataPlatform__helm-charts\ai-chat-service`
 - Source: `template`
@@ -4589,7 +4404,7 @@ Error: ai-chat-service/templates/deployment.yaml:51:39
 Use --debug flag to render out invalid YAML
 ```
 
-### 326. `PilotDataPlatform/helm-charts`
+### 313. `PilotDataPlatform/helm-charts`
 
 - Chart: `D:\helm_clones_github\PilotDataPlatform__helm-charts\base-chart`
 - Source: `template`
@@ -4603,7 +4418,7 @@ Error: base-chart/templates/deployment.yaml:66:29
 Use --debug flag to render out invalid YAML
 ```
 
-### 327. `PilotDataPlatform/helm-charts`
+### 314. `PilotDataPlatform/helm-charts`
 
 - Chart: `D:\helm_clones_github\PilotDataPlatform__helm-charts\database-backup`
 - Source: `template`
@@ -4617,7 +4432,7 @@ Error: database-backup/templates/pvc.yaml:6:31
 Use --debug flag to render out invalid YAML
 ```
 
-### 328. `cisco-open/appdynamics-k8s-webhook-instrumentor`
+### 315. `cisco-open/appdynamics-k8s-webhook-instrumentor`
 
 - Chart: `D:\helm_clones_github\cisco-open__appdynamics-k8s-webhook-instrumentor\buildEnv\helm\webhook-instrumentor`
 - Source: `template`
@@ -4631,7 +4446,7 @@ Error: webhook-instrumentor/templates/d-webhook-instrumentor.yaml:31:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 329. `codefuturist/helm-charts`
+### 316. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\actualbudget`
 - Source: `template`
@@ -4645,7 +4460,7 @@ Error: actualbudget/templates/statefulset.yaml:1:17
 Use --debug flag to render out invalid YAML
 ```
 
-### 330. `codefuturist/helm-charts`
+### 317. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\bitwarden-eso-provider`
 - Source: `template`
@@ -4659,7 +4474,7 @@ Error: bitwarden-eso-provider/templates/serviceaccount.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 331. `codefuturist/helm-charts`
+### 318. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\homarr`
 - Source: `template`
@@ -4673,7 +4488,7 @@ Error: homarr/templates/deployment.yaml:222:22
 Use --debug flag to render out invalid YAML
 ```
 
-### 332. `codefuturist/helm-charts`
+### 319. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\home-assistant`
 - Source: `template`
@@ -4690,7 +4505,7 @@ home-assistant/templates/_helpers.tpl:130:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 333. `codefuturist/helm-charts`
+### 320. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\metube`
 - Source: `template`
@@ -4704,7 +4519,7 @@ Error: metube/templates/statefulset.yaml:1:17
 Use --debug flag to render out invalid YAML
 ```
 
-### 334. `codefuturist/helm-charts`
+### 321. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\paperless-ngx`
 - Source: `template`
@@ -4718,7 +4533,7 @@ Error: paperless-ngx/templates/worker-deployment.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 335. `codefuturist/helm-charts`
+### 322. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\shlink`
 - Source: `template`
@@ -4735,7 +4550,7 @@ shlink/templates/_helpers.tpl:153:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 336. `stfc/cloud-helm-charts`
+### 323. `stfc/cloud-helm-charts`
 
 - Chart: `D:\helm_clones_github\stfc__cloud-helm-charts\old\stfc-cloud-chatops`
 - Source: `template`
@@ -4749,7 +4564,7 @@ Error: stfc-cloud-chatops/templates/secrets.yaml:9:31
 Use --debug flag to render out invalid YAML
 ```
 
-### 337. `100rd/platform-design`
+### 324. `100rd/platform-design`
 
 - Chart: `D:\helm_clones_github\100rd__platform-design\apps\infra\observability\pyroscope`
 - Source: `template`
@@ -4763,7 +4578,7 @@ Error: pyroscope/templates/pyroscope-s3-secret.yaml:79:55
 Use --debug flag to render out invalid YAML
 ```
 
-### 338. `AdmanTIC/helm-charts`
+### 325. `AdmanTIC/helm-charts`
 
 - Chart: `D:\helm_clones_github\AdmanTIC__helm-charts\charts\k8s-workload-rollout-api`
 - Source: `template`
@@ -4780,7 +4595,7 @@ k8s-workload-rollout-api/templates/_helpers.tpl:73:16
 Use --debug flag to render out invalid YAML
 ```
 
-### 339. `AlexanderBabel/helm-charts`
+### 326. `AlexanderBabel/helm-charts`
 
 - Chart: `D:\helm_clones_github\AlexanderBabel__helm-charts\charts\matrix`
 - Source: `template`
@@ -4800,7 +4615,7 @@ matrix/templates/synapse/_homeserver.yaml:421:16
 Use --debug flag to render out invalid YAML
 ```
 
-### 340. `Bahmni/helm-umbrella-chart`
+### 327. `Bahmni/helm-umbrella-chart`
 
 - Chart: `D:\helm_clones_github\Bahmni__helm-umbrella-chart`
 - Source: `template`
@@ -4814,7 +4629,7 @@ Error: bahmni/templates/ingress.yaml:6:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 341. `Clark1992/ECK1`
+### 328. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\analytics\clickhouse`
 - Source: `template`
@@ -4828,7 +4643,7 @@ Error: clickhouse/templates/stateful-set.yaml:60:25
 Use --debug flag to render out invalid YAML
 ```
 
-### 342. `Clark1992/ECK1`
+### 329. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\cert`
 - Source: `template`
@@ -4842,7 +4657,7 @@ Error: elasticsearch-certs/templates/renew-cert-job-once.yaml:17:27
 Use --debug flag to render out invalid YAML
 ```
 
-### 343. `Clark1992/ECK1`
+### 330. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\cluster`
 - Source: `template`
@@ -4856,7 +4671,7 @@ Error: elasticsearch/templates/statefulset-master.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 344. `Clark1992/ECK1`
+### 331. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\external-access`
 - Source: `template`
@@ -4870,7 +4685,7 @@ Error: elasticsearch-external-access/templates/ingress.yaml:1:14
 Use --debug flag to render out invalid YAML
 ```
 
-### 345. `Clark1992/ECK1`
+### 332. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\external-access`
 - Source: `template`
@@ -4885,7 +4700,7 @@ Error: elasticsearch-external-access/templates/ingress.yaml:28:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 346. `Clark1992/ECK1`
+### 333. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\elasticsearch\internal-access`
 - Source: `template`
@@ -4899,7 +4714,7 @@ Error: elasticsearch-internal-access/templates/service.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 347. `Clark1992/ECK1`
+### 334. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\global-vars`
 - Source: `template`
@@ -4913,7 +4728,7 @@ Error: global-config/templates/configmap.yaml:13:48
 Use --debug flag to render out invalid YAML
 ```
 
-### 348. `Clark1992/ECK1`
+### 335. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\kafka\cluster`
 - Source: `template`
@@ -4927,7 +4742,7 @@ Error: strimzi-kafka/templates/user.yaml:4:18
 Use --debug flag to render out invalid YAML
 ```
 
-### 349. `Clark1992/ECK1`
+### 336. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\kafka\schema-registry\apicurio`
 - Source: `template`
@@ -4941,7 +4756,7 @@ Error: apicurio-registry/templates/service-topics.yaml:8:34
 Use --debug flag to render out invalid YAML
 ```
 
-### 350. `Clark1992/ECK1`
+### 337. `Clark1992/ECK1`
 
 - Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\kafka\schema-registry\apicurio`
 - Source: `template`
@@ -4956,92 +4771,7 @@ Error: apicurio-registry/templates/registry-cr.yaml:13:34
 Use --debug flag to render out invalid YAML
 ```
 
-### 351. `Clark1992/ECK1`
-
-- Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\namespace`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\namespace`
-
-```text
-Error: namespaces/templates/namespace.yaml:8:19
-  executing "namespaces/templates/namespace.yaml" at <.Values.elasticsearch.caSecretName>:
-    nil pointer evaluating interface {}.caSecretName
-
-Use --debug flag to render out invalid YAML
-```
-
-### 352. `Clark1992/ECK1`
-
-- Chart: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\integration-manifests`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\integration-manifests`
-
-```text
-Error: eck1-commands-integration-manifests/templates/elasticsearch/es-mappings-job.yaml:16:27
-  executing "eck1-commands-integration-manifests/templates/elasticsearch/es-mappings-job.yaml" at <.Values.toolbox.image>:
-    nil pointer evaluating interface {}.image
-
-Use --debug flag to render out invalid YAML
-```
-
-### 353. `Clark1992/ECK1`
-
-- Chart: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\integration-manifests`
-- Source: `template`
-- Values files: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\integration-manifests\values.local.yaml`
-- Command: `helm template test D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\integration-manifests -f D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\integration-manifests\values.local.yaml`
-
-```text
-Error: eck1-commands-integration-manifests/templates/elasticsearch/es-mappings-job.yaml:23:31
-  executing "eck1-commands-integration-manifests/templates/elasticsearch/es-mappings-job.yaml" at <.Values.elasticsearch.clusterUrl>:
-    nil pointer evaluating interface {}.clusterUrl
-
-Use --debug flag to render out invalid YAML
-```
-
-### 354. `Clark1992/ECK1`
-
-- Chart: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\service`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Clark1992__ECK1\src\ECK1.CommandsAPI\Deploy\service`
-
-```text
-Error: eck1-commandsapi/templates/deployment.yaml:80:32
-  executing "eck1-commandsapi/templates/deployment.yaml" at <.Values.redis.host>:
-    nil pointer evaluating interface {}.host
-
-Use --debug flag to render out invalid YAML
-```
-
-### 355. `Clark1992/ECK1`
-
-- Chart: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.FE\Deploy`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Clark1992__ECK1\src\ECK1.FE\Deploy`
-
-```text
-Error: eck1-fe/templates/service.yaml:8:18
-  executing "eck1-fe/templates/service.yaml" at <.Values.service.type>:
-    nil pointer evaluating interface {}.type
-
-Use --debug flag to render out invalid YAML
-```
-
-### 356. `Clark1992/ECK1`
-
-- Chart: `D:\helm_clones_github\Clark1992__ECK1\src\ECK1.Gateway\Deploy`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Clark1992__ECK1\src\ECK1.Gateway\Deploy`
-
-```text
-Error: eck1-gateway/templates/service.yaml:8:18
-  executing "eck1-gateway/templates/service.yaml" at <.Values.service.type>:
-    nil pointer evaluating interface {}.type
-
-Use --debug flag to render out invalid YAML
-```
-
-### 357. `Microsoft/mssql-docker`
+### 338. `Microsoft/mssql-docker`
 
 - Chart: `D:\helm_clones_artifacthub\Microsoft__mssql-docker\linux\rancher`
 - Source: `template`
@@ -5055,7 +4785,7 @@ Error: sql-server-rancher/templates/secret.yaml:9:32
 Use --debug flag to render out invalid YAML
 ```
 
-### 358. `gchq/gaffer-docker`
+### 339. `gchq/gaffer-docker`
 
 - Chart: `D:\helm_clones_artifacthub\gchq__gaffer-docker\kubernetes\gaffer-jhub`
 - Source: `template`
@@ -5069,7 +4799,7 @@ Error: gaffer-jhub/templates/tests/notebook-tests/pod.yaml:38:23
 Use --debug flag to render out invalid YAML
 ```
 
-### 359. `rhdh-bot/openshift-helm-charts`
+### 340. `rhdh-bot/openshift-helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\redhat\redhat\redhat-httpd-template\0.0.2\src`
 - Source: `template`
@@ -5083,7 +4813,7 @@ Error: httpd-template/templates/tests/test-httpd-connection.yaml:13:34
 Use --debug flag to render out invalid YAML
 ```
 
-## `template.required_value` (221)
+## `template.required_value` (220)
 
 ### 1. `trueforge-org/truecharts`
 
@@ -5277,20 +5007,7 @@ Error: execution error at (postgres/templates/secret.yaml:12:24): PostgreSQL pas
 Use --debug flag to render out invalid YAML
 ```
 
-### 17. `opea-project/Enterprise-Inference`
-
-- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\observability\logs-stack`
-- Source: `template`
-- Values files: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\observability\logs-stack\aws-s3-values.yaml`
-- Command: `helm template test D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\observability\logs-stack -f D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\observability\logs-stack\aws-s3-values.yaml`
-
-```text
-Error: execution error at (logs/charts/loki/templates/write/statefulset-write.yaml:50:28): Please define loki.storage.bucketNames.chunks
-
-Use --debug flag to render out invalid YAML
-```
-
-### 18. `acuvity/mcp-servers-registry`
+### 17. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-21st-dev-magic\charts\mcp-server-21st-dev-magic`
 - Source: `template`
@@ -5302,7 +5019,7 @@ Error: execution error at (mcp-server-21st-dev-magic/templates/secrets.yaml:10:9
 Use --debug flag to render out invalid YAML
 ```
 
-### 19. `acuvity/mcp-servers-registry`
+### 18. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-adfin\charts\mcp-server-adfin`
 - Source: `template`
@@ -5314,7 +5031,7 @@ Error: execution error at (mcp-server-adfin/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 20. `acuvity/mcp-servers-registry`
+### 19. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-agentql\charts\mcp-server-agentql`
 - Source: `template`
@@ -5326,7 +5043,7 @@ Error: execution error at (mcp-server-agentql/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 21. `acuvity/mcp-servers-registry`
+### 20. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-agentrpc\charts\mcp-server-agentrpc`
 - Source: `template`
@@ -5338,7 +5055,7 @@ Error: execution error at (mcp-server-agentrpc/templates/secrets.yaml:10:9): req
 Use --debug flag to render out invalid YAML
 ```
 
-### 22. `acuvity/mcp-servers-registry`
+### 21. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aiven\charts\mcp-server-aiven`
 - Source: `template`
@@ -5350,7 +5067,7 @@ Error: execution error at (mcp-server-aiven/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 23. `acuvity/mcp-servers-registry`
+### 22. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-alation\charts\mcp-server-alation`
 - Source: `template`
@@ -5362,7 +5079,7 @@ Error: execution error at (mcp-server-alation/templates/deployment.yaml:43:24): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 24. `acuvity/mcp-servers-registry`
+### 23. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-alchemy\charts\mcp-server-alchemy`
 - Source: `template`
@@ -5374,7 +5091,7 @@ Error: execution error at (mcp-server-alchemy/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 25. `acuvity/mcp-servers-registry`
+### 24. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-algolia\charts\mcp-server-algolia`
 - Source: `template`
@@ -5386,7 +5103,7 @@ Error: execution error at (mcp-server-algolia/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 26. `acuvity/mcp-servers-registry`
+### 25. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-alibaba-cloud-ops\charts\mcp-server-alibaba-cloud-ops`
 - Source: `template`
@@ -5398,7 +5115,7 @@ Error: execution error at (mcp-server-alibaba-cloud-ops/templates/secrets.yaml:1
 Use --debug flag to render out invalid YAML
 ```
 
-### 27. `acuvity/mcp-servers-registry`
+### 26. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-alibabacloud-adb-mysql\charts\mcp-server-alibabacloud-adb-mysql`
 - Source: `template`
@@ -5410,7 +5127,7 @@ Error: execution error at (mcp-server-alibabacloud-adb-mysql/templates/secrets.y
 Use --debug flag to render out invalid YAML
 ```
 
-### 28. `acuvity/mcp-servers-registry`
+### 27. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-alibabacloud-hologres\charts\mcp-server-alibaba-hologres`
 - Source: `template`
@@ -5422,7 +5139,7 @@ Error: execution error at (mcp-server-alibaba-hologres/templates/secrets.yaml:10
 Use --debug flag to render out invalid YAML
 ```
 
-### 29. `acuvity/mcp-servers-registry`
+### 28. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-alibabacloud-hologres\charts\mcp-server-alibabacloud-hologres`
 - Source: `template`
@@ -5434,7 +5151,7 @@ Error: execution error at (mcp-server-alibabacloud-hologres/templates/secrets.ya
 Use --debug flag to render out invalid YAML
 ```
 
-### 30. `acuvity/mcp-servers-registry`
+### 29. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-alibabacloud-opensearch-ai-search\charts\mcp-server-alibabacloud-opensearch-ai-search`
 - Source: `template`
@@ -5446,7 +5163,7 @@ Error: execution error at (mcp-server-alibabacloud-opensearch-ai-search/template
 Use --debug flag to render out invalid YAML
 ```
 
-### 31. `acuvity/mcp-servers-registry`
+### 30. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-alibabacloud-opensearch-vector-search\charts\mcp-server-alibabacloud-opensearch-vector-search`
 - Source: `template`
@@ -5458,7 +5175,7 @@ Error: execution error at (mcp-server-alibabacloud-opensearch-vector-search/temp
 Use --debug flag to render out invalid YAML
 ```
 
-### 32. `acuvity/mcp-servers-registry`
+### 31. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-alibabacloud-ops\charts\mcp-server-alibabacloud-ops`
 - Source: `template`
@@ -5470,7 +5187,7 @@ Error: execution error at (mcp-server-alibabacloud-ops/templates/secrets.yaml:10
 Use --debug flag to render out invalid YAML
 ```
 
-### 33. `acuvity/mcp-servers-registry`
+### 32. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-alibabacloud-rds\charts\mcp-server-alibaba-cloud-rds`
 - Source: `template`
@@ -5482,7 +5199,7 @@ Error: execution error at (mcp-server-alibaba-cloud-rds/templates/secrets.yaml:1
 Use --debug flag to render out invalid YAML
 ```
 
-### 34. `acuvity/mcp-servers-registry`
+### 33. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-alibabacloud-rds\charts\mcp-server-alibabacloud-rds`
 - Source: `template`
@@ -5494,7 +5211,7 @@ Error: execution error at (mcp-server-alibabacloud-rds/templates/secrets.yaml:10
 Use --debug flag to render out invalid YAML
 ```
 
-### 35. `acuvity/mcp-servers-registry`
+### 34. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-anilist\charts\mcp-server-anilist`
 - Source: `template`
@@ -5506,7 +5223,7 @@ Error: execution error at (mcp-server-anilist/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 36. `acuvity/mcp-servers-registry`
+### 35. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-apache-airflow\charts\mcp-server-apache-airflow`
 - Source: `template`
@@ -5518,7 +5235,7 @@ Error: execution error at (mcp-server-apache-airflow/templates/secrets.yaml:10:9
 Use --debug flag to render out invalid YAML
 ```
 
-### 37. `acuvity/mcp-servers-registry`
+### 36. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-apify-actors\charts\mcp-server-apify-actors`
 - Source: `template`
@@ -5530,7 +5247,7 @@ Error: execution error at (mcp-server-apify-actors/templates/secrets.yaml:10:9):
 Use --debug flag to render out invalid YAML
 ```
 
-### 38. `acuvity/mcp-servers-registry`
+### 37. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-apify-rag-web-browser\charts\mcp-server-apify-rag-web-browser`
 - Source: `template`
@@ -5542,7 +5259,7 @@ Error: execution error at (mcp-server-apify-rag-web-browser/templates/secrets.ya
 Use --debug flag to render out invalid YAML
 ```
 
-### 39. `acuvity/mcp-servers-registry`
+### 38. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-apimatic-validator\charts\mcp-server-apimatic-validator`
 - Source: `template`
@@ -5554,7 +5271,7 @@ Error: execution error at (mcp-server-apimatic-validator/templates/secrets.yaml:
 Use --debug flag to render out invalid YAML
 ```
 
-### 40. `acuvity/mcp-servers-registry`
+### 39. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-asana\charts\mcp-server-asana`
 - Source: `template`
@@ -5566,7 +5283,7 @@ Error: execution error at (mcp-server-asana/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 41. `acuvity/mcp-servers-registry`
+### 40. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-asgardeo\charts\mcp-server-asgardeo`
 - Source: `template`
@@ -5578,7 +5295,7 @@ Error: execution error at (mcp-server-asgardeo/templates/secrets.yaml:10:9): req
 Use --debug flag to render out invalid YAML
 ```
 
-### 42. `acuvity/mcp-servers-registry`
+### 41. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-astra-db-mcp\charts\mcp-server-astra-db-mcp`
 - Source: `template`
@@ -5590,7 +5307,7 @@ Error: execution error at (mcp-server-astra-db-mcp/templates/secrets.yaml:10:9):
 Use --debug flag to render out invalid YAML
 ```
 
-### 43. `acuvity/mcp-servers-registry`
+### 42. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-atla\charts\mcp-server-atla`
 - Source: `template`
@@ -5602,7 +5319,7 @@ Error: execution error at (mcp-server-atla/templates/secrets.yaml:10:9): require
 Use --debug flag to render out invalid YAML
 ```
 
-### 44. `acuvity/mcp-servers-registry`
+### 43. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-atlan\charts\mcp-server-atlan`
 - Source: `template`
@@ -5614,7 +5331,7 @@ Error: execution error at (mcp-server-atlan/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 45. `acuvity/mcp-servers-registry`
+### 44. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-atlassian\charts\mcp-server-atlassian`
 - Source: `template`
@@ -5626,7 +5343,7 @@ Error: execution error at (mcp-server-atlassian/templates/secrets.yaml:10:9): re
 Use --debug flag to render out invalid YAML
 ```
 
-### 46. `acuvity/mcp-servers-registry`
+### 45. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-attio\charts\mcp-server-attio`
 - Source: `template`
@@ -5638,7 +5355,7 @@ Error: execution error at (mcp-server-attio/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 47. `acuvity/mcp-servers-registry`
+### 46. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-audiense-insights\charts\mcp-server-audiense-insights`
 - Source: `template`
@@ -5650,7 +5367,7 @@ Error: execution error at (mcp-server-audiense-insights/templates/secrets.yaml:1
 Use --debug flag to render out invalid YAML
 ```
 
-### 48. `acuvity/mcp-servers-registry`
+### 47. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aws-aurora-dsql\charts\mcp-server-aws-aurora-dsql`
 - Source: `template`
@@ -5662,7 +5379,7 @@ Error: execution error at (mcp-server-aws-aurora-dsql/templates/deployment.yaml:
 Use --debug flag to render out invalid YAML
 ```
 
-### 49. `acuvity/mcp-servers-registry`
+### 48. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aws-bedrock-data-automation\charts\mcp-server-aws-bedrock-data-automation`
 - Source: `template`
@@ -5674,7 +5391,7 @@ Error: execution error at (mcp-server-aws-bedrock-data-automation/templates/depl
 Use --debug flag to render out invalid YAML
 ```
 
-### 50. `acuvity/mcp-servers-registry`
+### 49. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aws-kendra-index\charts\mcp-server-aws-kendra-index`
 - Source: `template`
@@ -5686,7 +5403,7 @@ Error: execution error at (mcp-server-aws-kendra-index/templates/deployment.yaml
 Use --debug flag to render out invalid YAML
 ```
 
-### 51. `acuvity/mcp-servers-registry`
+### 50. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aws-keyspaces\charts\mcp-server-aws-keyspaces`
 - Source: `template`
@@ -5698,7 +5415,7 @@ Error: execution error at (mcp-server-aws-keyspaces/templates/secrets.yaml:10:9)
 Use --debug flag to render out invalid YAML
 ```
 
-### 52. `acuvity/mcp-servers-registry`
+### 51. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aws-memcached\charts\mcp-server-aws-memcached`
 - Source: `template`
@@ -5710,7 +5427,7 @@ Error: execution error at (mcp-server-aws-memcached/templates/deployment.yaml:43
 Use --debug flag to render out invalid YAML
 ```
 
-### 53. `acuvity/mcp-servers-registry`
+### 52. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aws-mysql\charts\mcp-server-aws-mysql`
 - Source: `template`
@@ -5722,7 +5439,7 @@ Error: execution error at (mcp-server-aws-mysql/templates/deployment.yaml:51:24)
 Use --debug flag to render out invalid YAML
 ```
 
-### 54. `acuvity/mcp-servers-registry`
+### 53. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aws-neptune\charts\mcp-server-aws-neptune`
 - Source: `template`
@@ -5734,7 +5451,7 @@ Error: execution error at (mcp-server-aws-neptune/templates/deployment.yaml:43:2
 Use --debug flag to render out invalid YAML
 ```
 
-### 55. `acuvity/mcp-servers-registry`
+### 54. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aws-postgres\charts\mcp-server-aws-postgres`
 - Source: `template`
@@ -5746,7 +5463,7 @@ Error: execution error at (mcp-server-aws-postgres/templates/deployment.yaml:51:
 Use --debug flag to render out invalid YAML
 ```
 
-### 56. `acuvity/mcp-servers-registry`
+### 55. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aws-prometheus\charts\mcp-server-aws-prometheus`
 - Source: `template`
@@ -5758,7 +5475,7 @@ Error: execution error at (mcp-server-aws-prometheus/templates/deployment.yaml:4
 Use --debug flag to render out invalid YAML
 ```
 
-### 57. `acuvity/mcp-servers-registry`
+### 56. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aws-valkey\charts\mcp-server-aws-valkey`
 - Source: `template`
@@ -5770,7 +5487,7 @@ Error: execution error at (mcp-server-aws-valkey/templates/secrets.yaml:10:9): r
 Use --debug flag to render out invalid YAML
 ```
 
-### 58. `acuvity/mcp-servers-registry`
+### 57. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-axiom\charts\mcp-server-axiom`
 - Source: `template`
@@ -5782,7 +5499,7 @@ Error: execution error at (mcp-server-axiom/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 59. `acuvity/mcp-servers-registry`
+### 58. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-azure\charts\mcp-server-azure`
 - Source: `template`
@@ -5794,7 +5511,7 @@ Error: execution error at (mcp-server-azure/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 60. `acuvity/mcp-servers-registry`
+### 59. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-azure-devops\charts\mcp-server-azure-devops`
 - Source: `template`
@@ -5806,7 +5523,7 @@ Error: execution error at (mcp-server-azure-devops/templates/deployment.yaml:43:
 Use --debug flag to render out invalid YAML
 ```
 
-### 61. `acuvity/mcp-servers-registry`
+### 60. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-bankless-onchain\charts\mcp-server-bankless-onchain`
 - Source: `template`
@@ -5818,7 +5535,7 @@ Error: execution error at (mcp-server-bankless-onchain/templates/secrets.yaml:10
 Use --debug flag to render out invalid YAML
 ```
 
-### 62. `acuvity/mcp-servers-registry`
+### 61. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-benborla-mysql\charts\mcp-server-benborla-mysql`
 - Source: `template`
@@ -5830,7 +5547,7 @@ Error: execution error at (mcp-server-benborla-mysql/templates/secrets.yaml:10:9
 Use --debug flag to render out invalid YAML
 ```
 
-### 63. `acuvity/mcp-servers-registry`
+### 62. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-bicscan\charts\mcp-server-bicscan`
 - Source: `template`
@@ -5842,7 +5559,7 @@ Error: execution error at (mcp-server-bicscan/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 64. `acuvity/mcp-servers-registry`
+### 63. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-bing-search\charts\mcp-server-bing-search`
 - Source: `template`
@@ -5854,7 +5571,7 @@ Error: execution error at (mcp-server-bing-search/templates/secrets.yaml:10:9): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 65. `acuvity/mcp-servers-registry`
+### 64. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-bitrefill\charts\mcp-server-bitrefill`
 - Source: `template`
@@ -5866,7 +5583,7 @@ Error: execution error at (mcp-server-bitrefill/templates/secrets.yaml:10:9): re
 Use --debug flag to render out invalid YAML
 ```
 
-### 66. `acuvity/mcp-servers-registry`
+### 65. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-bitrise\charts\mcp-server-bitrise`
 - Source: `template`
@@ -5878,7 +5595,7 @@ Error: execution error at (mcp-server-bitrise/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 67. `acuvity/mcp-servers-registry`
+### 66. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-brave-search\charts\mcp-server-brave-search`
 - Source: `template`
@@ -5890,7 +5607,7 @@ Error: execution error at (mcp-server-brave-search/templates/secrets.yaml:10:9):
 Use --debug flag to render out invalid YAML
 ```
 
-### 68. `acuvity/mcp-servers-registry`
+### 67. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-brightdata\charts\mcp-server-brightdata`
 - Source: `template`
@@ -5902,7 +5619,7 @@ Error: execution error at (mcp-server-brightdata/templates/secrets.yaml:10:9): r
 Use --debug flag to render out invalid YAML
 ```
 
-### 69. `acuvity/mcp-servers-registry`
+### 68. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-browserbase\charts\mcp-server-browserbase`
 - Source: `template`
@@ -5914,7 +5631,7 @@ Error: execution error at (mcp-server-browserbase/templates/secrets.yaml:10:9): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 70. `acuvity/mcp-servers-registry`
+### 69. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-browserstack\charts\mcp-server-browserstack`
 - Source: `template`
@@ -5926,7 +5643,7 @@ Error: execution error at (mcp-server-browserstack/templates/secrets.yaml:10:9):
 Use --debug flag to render out invalid YAML
 ```
 
-### 71. `acuvity/mcp-servers-registry`
+### 70. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-bugsnag\charts\mcp-server-bugsnag`
 - Source: `template`
@@ -5938,7 +5655,7 @@ Error: execution error at (mcp-server-bugsnag/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 72. `acuvity/mcp-servers-registry`
+### 71. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-cartesia\charts\mcp-server-cartesia`
 - Source: `template`
@@ -5950,7 +5667,7 @@ Error: execution error at (mcp-server-cartesia/templates/secrets.yaml:10:9): req
 Use --debug flag to render out invalid YAML
 ```
 
-### 73. `acuvity/mcp-servers-registry`
+### 72. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-chroma\charts\mcp-server-chroma`
 - Source: `template`
@@ -5962,7 +5679,7 @@ Error: execution error at (mcp-server-chroma/templates/deployment.yaml:44:24): e
 Use --debug flag to render out invalid YAML
 ```
 
-### 74. `acuvity/mcp-servers-registry`
+### 73. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-chronulus-ai\charts\mcp-server-chronulus-ai`
 - Source: `template`
@@ -5974,7 +5691,7 @@ Error: execution error at (mcp-server-chronulus-ai/templates/secrets.yaml:10:9):
 Use --debug flag to render out invalid YAML
 ```
 
-### 75. `acuvity/mcp-servers-registry`
+### 74. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-clickhouse\charts\mcp-server-clickhouse`
 - Source: `template`
@@ -5986,7 +5703,7 @@ Error: execution error at (mcp-server-clickhouse/templates/secrets.yaml:10:9): r
 Use --debug flag to render out invalid YAML
 ```
 
-### 76. `acuvity/mcp-servers-registry`
+### 75. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-coda\charts\mcp-server-coda`
 - Source: `template`
@@ -5998,7 +5715,7 @@ Error: execution error at (mcp-server-coda/templates/secrets.yaml:10:9): require
 Use --debug flag to render out invalid YAML
 ```
 
-### 77. `acuvity/mcp-servers-registry`
+### 76. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-codelogic\charts\mcp-server-codelogic`
 - Source: `template`
@@ -6010,7 +5727,7 @@ Error: execution error at (mcp-server-codelogic/templates/secrets.yaml:10:9): re
 Use --debug flag to render out invalid YAML
 ```
 
-### 78. `acuvity/mcp-servers-registry`
+### 77. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-codex\charts\mcp-server-codex`
 - Source: `template`
@@ -6022,7 +5739,7 @@ Error: execution error at (mcp-server-codex/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 79. `acuvity/mcp-servers-registry`
+### 78. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-contentful\charts\mcp-server-contentful`
 - Source: `template`
@@ -6034,7 +5751,7 @@ Error: execution error at (mcp-server-contentful/templates/secrets.yaml:10:9): r
 Use --debug flag to render out invalid YAML
 ```
 
-### 80. `acuvity/mcp-servers-registry`
+### 79. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-couchbase\charts\mcp-server-couchbase`
 - Source: `template`
@@ -6046,7 +5763,7 @@ Error: execution error at (mcp-server-couchbase/templates/secrets.yaml:10:9): re
 Use --debug flag to render out invalid YAML
 ```
 
-### 81. `acuvity/mcp-servers-registry`
+### 80. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-dappier\charts\mcp-server-dappier`
 - Source: `template`
@@ -6058,7 +5775,7 @@ Error: execution error at (mcp-server-dappier/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 82. `acuvity/mcp-servers-registry`
+### 81. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-dart\charts\mcp-server-dart`
 - Source: `template`
@@ -6070,7 +5787,7 @@ Error: execution error at (mcp-server-dart/templates/secrets.yaml:10:9): require
 Use --debug flag to render out invalid YAML
 ```
 
-### 83. `acuvity/mcp-servers-registry`
+### 82. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-datahub\charts\mcp-server-datahub`
 - Source: `template`
@@ -6082,7 +5799,7 @@ Error: execution error at (mcp-server-datahub/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 84. `acuvity/mcp-servers-registry`
+### 83. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-devhub\charts\mcp-server-devhub`
 - Source: `template`
@@ -6094,7 +5811,7 @@ Error: execution error at (mcp-server-devhub/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 85. `acuvity/mcp-servers-registry`
+### 84. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-doit\charts\mcp-server-doit`
 - Source: `template`
@@ -6106,7 +5823,7 @@ Error: execution error at (mcp-server-doit/templates/secrets.yaml:10:9): require
 Use --debug flag to render out invalid YAML
 ```
 
-### 86. `acuvity/mcp-servers-registry`
+### 85. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-e2b\charts\mcp-server-e2b`
 - Source: `template`
@@ -6118,7 +5835,7 @@ Error: execution error at (mcp-server-e2b/templates/secrets.yaml:10:9): required
 Use --debug flag to render out invalid YAML
 ```
 
-### 87. `acuvity/mcp-servers-registry`
+### 86. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-elasticsearch\charts\mcp-server-elasticsearch`
 - Source: `template`
@@ -6130,7 +5847,7 @@ Error: execution error at (mcp-server-elasticsearch/templates/secrets.yaml:10:9)
 Use --debug flag to render out invalid YAML
 ```
 
-### 88. `acuvity/mcp-servers-registry`
+### 87. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-elevenlabs\charts\mcp-server-elevenlabs`
 - Source: `template`
@@ -6142,7 +5859,7 @@ Error: execution error at (mcp-server-elevenlabs/templates/secrets.yaml:10:9): r
 Use --debug flag to render out invalid YAML
 ```
 
-### 89. `acuvity/mcp-servers-registry`
+### 88. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-exa\charts\mcp-server-exa`
 - Source: `template`
@@ -6154,7 +5871,7 @@ Error: execution error at (mcp-server-exa/templates/secrets.yaml:10:9): required
 Use --debug flag to render out invalid YAML
 ```
 
-### 90. `acuvity/mcp-servers-registry`
+### 89. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-fibery\charts\mcp-server-fibery`
 - Source: `template`
@@ -6166,7 +5883,7 @@ Error: execution error at (mcp-server-fibery/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 91. `acuvity/mcp-servers-registry`
+### 90. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-figma\charts\mcp-server-figma`
 - Source: `template`
@@ -6178,7 +5895,7 @@ Error: execution error at (mcp-server-figma/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 92. `acuvity/mcp-servers-registry`
+### 91. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-firecrawl\charts\mcp-server-firecrawl`
 - Source: `template`
@@ -6190,7 +5907,7 @@ Error: execution error at (mcp-server-firecrawl/templates/secrets.yaml:10:9): re
 Use --debug flag to render out invalid YAML
 ```
 
-### 93. `acuvity/mcp-servers-registry`
+### 92. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-github\charts\mcp-server-github`
 - Source: `template`
@@ -6202,7 +5919,7 @@ Error: execution error at (mcp-server-github/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 94. `acuvity/mcp-servers-registry`
+### 93. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-github-chat\charts\mcp-server-github-chat`
 - Source: `template`
@@ -6214,7 +5931,7 @@ Error: execution error at (mcp-server-github-chat/templates/secrets.yaml:10:9): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 95. `acuvity/mcp-servers-registry`
+### 94. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-gitlab\charts\mcp-server-gitlab`
 - Source: `template`
@@ -6226,7 +5943,7 @@ Error: execution error at (mcp-server-gitlab/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 96. `acuvity/mcp-servers-registry`
+### 95. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-glif\charts\mcp-server-glif`
 - Source: `template`
@@ -6238,7 +5955,7 @@ Error: execution error at (mcp-server-glif/templates/secrets.yaml:10:9): require
 Use --debug flag to render out invalid YAML
 ```
 
-### 97. `acuvity/mcp-servers-registry`
+### 96. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-google-bigquery\charts\mcp-server-google-bigquery`
 - Source: `template`
@@ -6250,7 +5967,7 @@ Error: execution error at (mcp-server-google-bigquery/templates/secrets.yaml:10:
 Use --debug flag to render out invalid YAML
 ```
 
-### 98. `acuvity/mcp-servers-registry`
+### 97. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-google-drive\charts\mcp-server-google-drive`
 - Source: `template`
@@ -6262,7 +5979,7 @@ Error: execution error at (mcp-server-google-drive/templates/deployment.yaml:43:
 Use --debug flag to render out invalid YAML
 ```
 
-### 99. `acuvity/mcp-servers-registry`
+### 98. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-google-maps\charts\mcp-server-google-maps`
 - Source: `template`
@@ -6274,7 +5991,7 @@ Error: execution error at (mcp-server-google-maps/templates/secrets.yaml:10:9): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 100. `acuvity/mcp-servers-registry`
+### 99. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-grafana\charts\mcp-server-grafana`
 - Source: `template`
@@ -6286,7 +6003,7 @@ Error: execution error at (mcp-server-grafana/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 101. `acuvity/mcp-servers-registry`
+### 100. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-graphlit\charts\mcp-server-graphlit`
 - Source: `template`
@@ -6298,7 +6015,7 @@ Error: execution error at (mcp-server-graphlit/templates/secrets.yaml:10:9): req
 Use --debug flag to render out invalid YAML
 ```
 
-### 102. `acuvity/mcp-servers-registry`
+### 101. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-gyazo\charts\mcp-server-gyazo`
 - Source: `template`
@@ -6310,7 +6027,7 @@ Error: execution error at (mcp-server-gyazo/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 103. `acuvity/mcp-servers-registry`
+### 102. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-hackle-mcp\charts\mcp-server-hackle-mcp`
 - Source: `template`
@@ -6322,7 +6039,7 @@ Error: execution error at (mcp-server-hackle-mcp/templates/secrets.yaml:10:9): r
 Use --debug flag to render out invalid YAML
 ```
 
-### 104. `acuvity/mcp-servers-registry`
+### 103. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-harness\charts\mcp-server-harness`
 - Source: `template`
@@ -6334,7 +6051,7 @@ Error: execution error at (mcp-server-harness/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 105. `acuvity/mcp-servers-registry`
+### 104. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-heroku\charts\mcp-server-heroku`
 - Source: `template`
@@ -6346,7 +6063,7 @@ Error: execution error at (mcp-server-heroku/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 106. `acuvity/mcp-servers-registry`
+### 105. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-hyperbrowser\charts\mcp-server-hyperbrowser`
 - Source: `template`
@@ -6358,7 +6075,7 @@ Error: execution error at (mcp-server-hyperbrowser/templates/secrets.yaml:10:9):
 Use --debug flag to render out invalid YAML
 ```
 
-### 107. `acuvity/mcp-servers-registry`
+### 106. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-hyperspell\charts\mcp-server-hyperspell`
 - Source: `template`
@@ -6370,7 +6087,7 @@ Error: execution error at (mcp-server-hyperspell/templates/secrets.yaml:10:9): r
 Use --debug flag to render out invalid YAML
 ```
 
-### 108. `acuvity/mcp-servers-registry`
+### 107. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-iaptic\charts\mcp-server-iaptic`
 - Source: `template`
@@ -6382,7 +6099,7 @@ Error: execution error at (mcp-server-iaptic/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 109. `acuvity/mcp-servers-registry`
+### 108. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-iotdb\charts\mcp-server-iotdb`
 - Source: `template`
@@ -6394,7 +6111,7 @@ Error: execution error at (mcp-server-iotdb/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 110. `acuvity/mcp-servers-registry`
+### 109. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-jetbrains\charts\mcp-server-jetbrains`
 - Source: `template`
@@ -6406,7 +6123,7 @@ Error: execution error at (mcp-server-jetbrains/templates/deployment.yaml:43:24)
 Use --debug flag to render out invalid YAML
 ```
 
-### 111. `acuvity/mcp-servers-registry`
+### 110. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-kagisearch\charts\mcp-server-kagisearch`
 - Source: `template`
@@ -6418,7 +6135,7 @@ Error: execution error at (mcp-server-kagisearch/templates/secrets.yaml:10:9): r
 Use --debug flag to render out invalid YAML
 ```
 
-### 112. `acuvity/mcp-servers-registry`
+### 111. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-lara-translate\charts\mcp-server-lara-translate`
 - Source: `template`
@@ -6430,7 +6147,7 @@ Error: execution error at (mcp-server-lara-translate/templates/secrets.yaml:10:9
 Use --debug flag to render out invalid YAML
 ```
 
-### 113. `acuvity/mcp-servers-registry`
+### 112. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-line-bot\charts\mcp-server-line-bot`
 - Source: `template`
@@ -6442,7 +6159,7 @@ Error: execution error at (mcp-server-line-bot/templates/secrets.yaml:10:9): req
 Use --debug flag to render out invalid YAML
 ```
 
-### 114. `acuvity/mcp-servers-registry`
+### 113. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-metatool-app\charts\mcp-server-metatool-app`
 - Source: `template`
@@ -6454,7 +6171,7 @@ Error: execution error at (mcp-server-metatool-app/templates/secrets.yaml:10:9):
 Use --debug flag to render out invalid YAML
 ```
 
-### 115. `acuvity/mcp-servers-registry`
+### 114. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-microsoft-graph\charts\mcp-server-microsoft-graph`
 - Source: `template`
@@ -6466,7 +6183,7 @@ Error: execution error at (mcp-server-microsoft-graph/templates/secrets.yaml:10:
 Use --debug flag to render out invalid YAML
 ```
 
-### 116. `acuvity/mcp-servers-registry`
+### 115. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-mobsf\charts\mcp-server-mobsf`
 - Source: `template`
@@ -6478,7 +6195,7 @@ Error: execution error at (mcp-server-mobsf/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 117. `acuvity/mcp-servers-registry`
+### 116. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-multiversx\charts\mcp-server-multiversx`
 - Source: `template`
@@ -6490,7 +6207,7 @@ Error: execution error at (mcp-server-multiversx/templates/deployment.yaml:43:24
 Use --debug flag to render out invalid YAML
 ```
 
-### 118. `acuvity/mcp-servers-registry`
+### 117. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-neo4j-aura\charts\mcp-server-neo4j-aura`
 - Source: `template`
@@ -6502,7 +6219,7 @@ Error: execution error at (mcp-server-neo4j-aura/templates/secrets.yaml:10:9): r
 Use --debug flag to render out invalid YAML
 ```
 
-### 119. `acuvity/mcp-servers-registry`
+### 118. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-neo4j-cypher\charts\mcp-server-neo4j-cypher`
 - Source: `template`
@@ -6514,7 +6231,7 @@ Error: execution error at (mcp-server-neo4j-cypher/templates/secrets.yaml:10:9):
 Use --debug flag to render out invalid YAML
 ```
 
-### 120. `acuvity/mcp-servers-registry`
+### 119. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-neo4j-memory\charts\mcp-server-neo4j-memory`
 - Source: `template`
@@ -6526,7 +6243,7 @@ Error: execution error at (mcp-server-neo4j-memory/templates/secrets.yaml:10:9):
 Use --debug flag to render out invalid YAML
 ```
 
-### 121. `acuvity/mcp-servers-registry`
+### 120. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-neon\charts\mcp-server-neon`
 - Source: `template`
@@ -6538,7 +6255,7 @@ Error: execution error at (mcp-server-neon/templates/secrets.yaml:10:9): require
 Use --debug flag to render out invalid YAML
 ```
 
-### 122. `acuvity/mcp-servers-registry`
+### 121. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-notion\charts\mcp-server-notion`
 - Source: `template`
@@ -6550,7 +6267,7 @@ Error: execution error at (mcp-server-notion/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 123. `acuvity/mcp-servers-registry`
+### 122. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-obsidian\charts\mcp-server-obsidian`
 - Source: `template`
@@ -6562,7 +6279,7 @@ Error: execution error at (mcp-server-obsidian/templates/secrets.yaml:10:9): req
 Use --debug flag to render out invalid YAML
 ```
 
-### 124. `acuvity/mcp-servers-registry`
+### 123. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-openapi-schema\charts\mcp-server-openapi-schema`
 - Source: `template`
@@ -6574,7 +6291,7 @@ Error: execution error at (mcp-server-openapi-schema/templates/deployment.yaml:4
 Use --debug flag to render out invalid YAML
 ```
 
-### 125. `acuvity/mcp-servers-registry`
+### 124. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-oxylabs\charts\mcp-server-oxylabs`
 - Source: `template`
@@ -6586,7 +6303,7 @@ Error: execution error at (mcp-server-oxylabs/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 126. `acuvity/mcp-servers-registry`
+### 125. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-paypal\charts\mcp-server-paypal`
 - Source: `template`
@@ -6598,7 +6315,7 @@ Error: execution error at (mcp-server-paypal/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 127. `acuvity/mcp-servers-registry`
+### 126. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-phoenix\charts\mcp-server-phoenix`
 - Source: `template`
@@ -6610,7 +6327,7 @@ Error: execution error at (mcp-server-phoenix/templates/deployment.yaml:43:24): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 128. `acuvity/mcp-servers-registry`
+### 127. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-postgres\charts\mcp-server-postgres`
 - Source: `template`
@@ -6622,7 +6339,7 @@ Error: execution error at (mcp-server-postgres/templates/secrets.yaml:10:9): req
 Use --debug flag to render out invalid YAML
 ```
 
-### 129. `acuvity/mcp-servers-registry`
+### 128. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-razorpay\charts\mcp-server-razorpay`
 - Source: `template`
@@ -6634,7 +6351,7 @@ Error: execution error at (mcp-server-razorpay/templates/secrets.yaml:10:9): req
 Use --debug flag to render out invalid YAML
 ```
 
-### 130. `acuvity/mcp-servers-registry`
+### 129. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-risken\charts\mcp-server-risken`
 - Source: `template`
@@ -6646,7 +6363,7 @@ Error: execution error at (mcp-server-risken/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 131. `acuvity/mcp-servers-registry`
+### 130. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-scrapezy\charts\mcp-server-scrapezy`
 - Source: `template`
@@ -6658,7 +6375,7 @@ Error: execution error at (mcp-server-scrapezy/templates/secrets.yaml:10:9): req
 Use --debug flag to render out invalid YAML
 ```
 
-### 132. `acuvity/mcp-servers-registry`
+### 131. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-send-email\charts\mcp-server-send-email`
 - Source: `template`
@@ -6670,7 +6387,7 @@ Error: execution error at (mcp-server-send-email/templates/secrets.yaml:10:9): r
 Use --debug flag to render out invalid YAML
 ```
 
-### 133. `acuvity/mcp-servers-registry`
+### 132. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-sentry\charts\mcp-server-sentry`
 - Source: `template`
@@ -6682,7 +6399,7 @@ Error: execution error at (mcp-server-sentry/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 134. `acuvity/mcp-servers-registry`
+### 133. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-slack\charts\mcp-server-slack`
 - Source: `template`
@@ -6694,7 +6411,7 @@ Error: execution error at (mcp-server-slack/templates/secrets.yaml:10:9): requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 135. `acuvity/mcp-servers-registry`
+### 134. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-stripe\charts\mcp-server-stripe`
 - Source: `template`
@@ -6706,7 +6423,7 @@ Error: execution error at (mcp-server-stripe/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 136. `acuvity/mcp-servers-registry`
+### 135. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-tavily\charts\mcp-server-tavily`
 - Source: `template`
@@ -6718,7 +6435,7 @@ Error: execution error at (mcp-server-tavily/templates/secrets.yaml:10:9): requi
 Use --debug flag to render out invalid YAML
 ```
 
-### 137. `acuvity/mcp-servers-registry`
+### 136. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-triplewhale\charts\mcp-server-triplewhale`
 - Source: `template`
@@ -6730,7 +6447,7 @@ Error: execution error at (mcp-server-triplewhale/templates/secrets.yaml:10:9): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 138. `acuvity/mcp-servers-registry`
+### 137. `acuvity/mcp-servers-registry`
 
 - Chart: `D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-webflow\charts\mcp-server-webflow`
 - Source: `template`
@@ -6742,7 +6459,7 @@ Error: execution error at (mcp-server-webflow/templates/secrets.yaml:10:9): requ
 Use --debug flag to render out invalid YAML
 ```
 
-### 139. `k0rdent/catalog`
+### 138. `k0rdent/catalog`
 
 - Chart: `D:\helm_clones_github\k0rdent__catalog\apps\gitlab\charts\gitlab-8.9.2`
 - Source: `template`
@@ -6754,7 +6471,7 @@ Error: execution error at (gitlab/charts/gitlab/charts/certmanager-issuer/templa
 Use --debug flag to render out invalid YAML
 ```
 
-### 140. `k0rdent/catalog`
+### 139. `k0rdent/catalog`
 
 - Chart: `D:\helm_clones_github\k0rdent__catalog\apps\gitlab\charts\gitlab-9.8.4`
 - Source: `template`
@@ -6766,7 +6483,7 @@ Error: execution error at (gitlab/charts/gitlab/charts/certmanager-issuer/templa
 Use --debug flag to render out invalid YAML
 ```
 
-### 141. `k0rdent/catalog`
+### 140. `k0rdent/catalog`
 
 - Chart: `D:\helm_clones_github\k0rdent__catalog\apps\kube-prometheus-stack\example_logs`
 - Source: `template`
@@ -6778,7 +6495,7 @@ Error: execution error at (example/charts/loki/charts/loki/templates/write/state
 Use --debug flag to render out invalid YAML
 ```
 
-### 142. `k0rdent/catalog`
+### 141. `k0rdent/catalog`
 
 - Chart: `D:\helm_clones_github\k0rdent__catalog\apps\loki\charts\loki-6.53.0`
 - Source: `template`
@@ -6790,7 +6507,7 @@ Error: execution error at (loki/charts/loki/templates/write/statefulset-write.ya
 Use --debug flag to render out invalid YAML
 ```
 
-### 143. `junghoon2/k8s-class`
+### 142. `junghoon2/k8s-class`
 
 - Chart: `D:\helm_clones_github\junghoon2__k8s-class\gitlab\gitlab-7.0.1`
 - Source: `template`
@@ -6802,7 +6519,7 @@ Error: execution error at (gitlab/charts/certmanager-issuer/templates/cert-manag
 Use --debug flag to render out invalid YAML
 ```
 
-### 144. `junghoon2/k8s-class`
+### 143. `junghoon2/k8s-class`
 
 - Chart: `D:\helm_clones_github\junghoon2__k8s-class\opentelemetry-collector\opentelemetry-collector-0.59.1`
 - Source: `template`
@@ -6814,7 +6531,7 @@ Error: execution error at (opentelemetry-collector/templates/NOTES.txt:14:3): [E
 Use --debug flag to render out invalid YAML
 ```
 
-### 145. `openkruise/charts`
+### 144. `openkruise/charts`
 
 - Chart: `D:\helm_clones_github\openkruise__charts\versions\kruise-agents-sandbox-manager\0.2.0`
 - Source: `template`
@@ -6826,7 +6543,7 @@ Error: execution error at (agents-sandbox-manager/templates/ingress.yaml:13:23):
 Use --debug flag to render out invalid YAML
 ```
 
-### 146. `cloud-native-toolkit/toolkit-charts`
+### 145. `cloud-native-toolkit/toolkit-charts`
 
 - Chart: `D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\cloud-setup`
 - Source: `template`
@@ -6838,7 +6555,7 @@ Error: execution error at (cloud-setup/charts/ibmcloud/templates/config-map.yaml
 Use --debug flag to render out invalid YAML
 ```
 
-### 147. `cloud-native-toolkit/toolkit-charts`
+### 146. `cloud-native-toolkit/toolkit-charts`
 
 - Chart: `D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\console-link-configmap`
 - Source: `template`
@@ -6850,7 +6567,7 @@ Error: execution error at (console-link-configmap/templates/configmap.yaml:4:11)
 Use --debug flag to render out invalid YAML
 ```
 
-### 148. `cloud-native-toolkit/toolkit-charts`
+### 147. `cloud-native-toolkit/toolkit-charts`
 
 - Chart: `D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\doc-config`
 - Source: `template`
@@ -6862,7 +6579,7 @@ Error: execution error at (doc-config/templates/help-menu.yaml:9:11): The url is
 Use --debug flag to render out invalid YAML
 ```
 
-### 149. `kubero-dev/kubero-operator`
+### 148. `kubero-dev/kubero-operator`
 
 - Chart: `D:\helm_clones_github\kubero-dev__kubero-operator\helm-charts\kuberocouchdb`
 - Source: `template`
@@ -6874,7 +6591,7 @@ Error: execution error at (kuberoelasticsearch/charts/couchdb/templates/stateful
 Use --debug flag to render out invalid YAML
 ```
 
-### 150. `LeoShivas/GitOps`
+### 149. `LeoShivas/GitOps`
 
 - Chart: `D:\helm_clones_github\LeoShivas__GitOps\kubernetes\transmission\helm\transmission`
 - Source: `template`
@@ -6886,7 +6603,7 @@ Error: execution error at (transmission/templates/deployment.yaml:94:26): An exi
 Use --debug flag to render out invalid YAML
 ```
 
-### 151. `Merck/Data-Profiler`
+### 150. `Merck/Data-Profiler`
 
 - Chart: `D:\helm_clones_github\Merck__Data-Profiler\infrastructure\kube\helm-charts\namespace-setup\dp-cluster-proxies`
 - Source: `template`
@@ -6898,7 +6615,7 @@ Error: execution error at (dp-cluster-proxies/templates/spark-master.yml:62:13):
 Use --debug flag to render out invalid YAML
 ```
 
-### 152. `celo-org/charts`
+### 151. `celo-org/charts`
 
 - Chart: `D:\helm_clones_github\celo-org__charts\charts\sync-test`
 - Source: `template`
@@ -6910,7 +6627,7 @@ Error: execution error at (sync-test/templates/NOTES.txt:1:4): op-geth.secrets.n
 Use --debug flag to render out invalid YAML
 ```
 
-### 153. `claytono/infra`
+### 152. `claytono/infra`
 
 - Chart: `D:\helm_clones_github\claytono__infra\kubernetes\democratic-csi`
 - Source: `template`
@@ -6922,7 +6639,7 @@ Error: execution error at (democratic-csi/charts/democratic-csi/templates/requir
 Use --debug flag to render out invalid YAML
 ```
 
-### 154. `claytono/infra`
+### 153. `claytono/infra`
 
 - Chart: `D:\helm_clones_github\claytono__infra\kubernetes\immich`
 - Source: `template`
@@ -6934,7 +6651,7 @@ Error: execution error at (immich-meta/charts/immich/templates/checks.yaml:1:64)
 Use --debug flag to render out invalid YAML
 ```
 
-### 155. `claytono/infra`
+### 154. `claytono/infra`
 
 - Chart: `D:\helm_clones_github\claytono__infra\kubernetes\loki`
 - Source: `template`
@@ -6946,7 +6663,7 @@ Error: execution error at (loki-meta/charts/loki/templates/write/statefulset-wri
 Use --debug flag to render out invalid YAML
 ```
 
-### 156. `pascalnaber/ignite-tour-k8s-lessons-learned`
+### 155. `pascalnaber/ignite-tour-k8s-lessons-learned`
 
 - Chart: `D:\helm_clones_github\pascalnaber__ignite-tour-k8s-lessons-learned\app-keyvault\provisioning\aad-pod-identity`
 - Source: `template`
@@ -6958,7 +6675,7 @@ Error: execution error at (aad-pod-identity/templates/identities.yaml:8:15): .Va
 Use --debug flag to render out invalid YAML
 ```
 
-### 157. `bakseter/whpah`
+### 156. `bakseter/whpah`
 
 - Chart: `D:\helm_clones_github\bakseter__whpah\manifests\cluster-addons\monitoring`
 - Source: `template`
@@ -6970,7 +6687,7 @@ Error: execution error at (monitoring-umbrella/charts/loki/templates/validate.ya
 Use --debug flag to render out invalid YAML
 ```
 
-### 158. `edixos/ekp-helm`
+### 157. `edixos/ekp-helm`
 
 - Chart: `D:\helm_clones_github\edixos__ekp-helm\charts\gcp-gke-cluster`
 - Source: `template`
@@ -6982,7 +6699,7 @@ Error: execution error at (gcp-gke-cluster/templates/nodepool.yaml:22:21): A val
 Use --debug flag to render out invalid YAML
 ```
 
-### 159. `elasticio/helm-charts`
+### 158. `elasticio/helm-charts`
 
 - Chart: `D:\helm_clones_github\elasticio__helm-charts\cluster`
 - Source: `template`
@@ -6994,7 +6711,7 @@ Error: execution error at (cluster/charts/platform-storage-slugs/templates/servi
 Use --debug flag to render out invalid YAML
 ```
 
-### 160. `elasticio/helm-charts`
+### 159. `elasticio/helm-charts`
 
 - Chart: `D:\helm_clones_github\elasticio__helm-charts\gitreceiver`
 - Source: `template`
@@ -7006,7 +6723,7 @@ Error: execution error at (gitreceiver/templates/service-loadbalancer.yaml:13:21
 Use --debug flag to render out invalid YAML
 ```
 
-### 161. `elasticio/helm-charts`
+### 160. `elasticio/helm-charts`
 
 - Chart: `D:\helm_clones_github\elasticio__helm-charts\platform-storage-slugs`
 - Source: `template`
@@ -7018,7 +6735,7 @@ Error: execution error at (platform-storage-slugs/templates/service-loadbalancer
 Use --debug flag to render out invalid YAML
 ```
 
-### 162. `thelande/charts`
+### 161. `thelande/charts`
 
 - Chart: `D:\helm_clones_github\thelande__charts\charts\apcupsd-exporter`
 - Source: `template`
@@ -7030,7 +6747,7 @@ Error: execution error at (apcupsd-exporter/templates/common.yml:81:34): A valid
 Use --debug flag to render out invalid YAML
 ```
 
-### 163. `thelande/charts`
+### 162. `thelande/charts`
 
 - Chart: `D:\helm_clones_github\thelande__charts\charts\bar-assistant`
 - Source: `template`
@@ -7042,7 +6759,7 @@ Error: execution error at (bar-assistant/templates/statefulset.yaml:94:25): base
 Use --debug flag to render out invalid YAML
 ```
 
-### 164. `thelande/charts`
+### 163. `thelande/charts`
 
 - Chart: `D:\helm_clones_github\thelande__charts\charts\docmost`
 - Source: `template`
@@ -7054,7 +6771,7 @@ Error: execution error at (docmost/templates/deployment.yaml:75:25): An app URL 
 Use --debug flag to render out invalid YAML
 ```
 
-### 165. `thelande/charts`
+### 164. `thelande/charts`
 
 - Chart: `D:\helm_clones_github\thelande__charts\charts\sdtd-exporter`
 - Source: `template`
@@ -7066,7 +6783,7 @@ Error: execution error at (sdtd-exporter/templates/deployment.yaml:53:24): apiUr
 Use --debug flag to render out invalid YAML
 ```
 
-### 166. `CSCfi/helm-charts`
+### 165. `CSCfi/helm-charts`
 
 - Chart: `D:\helm_clones_github\CSCfi__helm-charts\charts\hedgedoc`
 - Source: `template`
@@ -7078,7 +6795,7 @@ Error: execution error at (hedgedoc/templates/route.yaml:9:42): A valid domain m
 Use --debug flag to render out invalid YAML
 ```
 
-### 167. `CSCfi/helm-charts`
+### 166. `CSCfi/helm-charts`
 
 - Chart: `D:\helm_clones_github\CSCfi__helm-charts\charts\mattermost`
 - Source: `template`
@@ -7090,7 +6807,7 @@ Error: execution error at (mattermost/templates/route.yaml:9:11): A value for 'r
 Use --debug flag to render out invalid YAML
 ```
 
-### 168. `CSCfi/helm-charts`
+### 167. `CSCfi/helm-charts`
 
 - Chart: `D:\helm_clones_github\CSCfi__helm-charts\charts\minio`
 - Source: `template`
@@ -7102,7 +6819,7 @@ Error: execution error at (minio/templates/route.yaml:10:43): A valid domainSuff
 Use --debug flag to render out invalid YAML
 ```
 
-### 169. `CSCfi/helm-charts`
+### 168. `CSCfi/helm-charts`
 
 - Chart: `D:\helm_clones_github\CSCfi__helm-charts\charts\rocketchat`
 - Source: `template`
@@ -7114,7 +6831,7 @@ Error: execution error at (rocketchat/templates/route.yaml:12:36): A value is re
 Use --debug flag to render out invalid YAML
 ```
 
-### 170. `CSCfi/helm-charts`
+### 169. `CSCfi/helm-charts`
 
 - Chart: `D:\helm_clones_github\CSCfi__helm-charts\charts\rstudio`
 - Source: `template`
@@ -7126,7 +6843,7 @@ Error: execution error at (rstudio/templates/routes.yaml:9:11): A valid .Values.
 Use --debug flag to render out invalid YAML
 ```
 
-### 171. `JonasHess/homelab-iac`
+### 170. `JonasHess/homelab-iac`
 
 - Chart: `D:\helm_clones_github\JonasHess__homelab-iac\apps\envoy-gateway`
 - Source: `template`
@@ -7138,7 +6855,7 @@ Error: execution error at (envoy-gateway/templates/oidc-security-policy.yaml:21:
 Use --debug flag to render out invalid YAML
 ```
 
-### 172. `JonasHess/homelab-iac`
+### 171. `JonasHess/homelab-iac`
 
 - Chart: `D:\helm_clones_github\JonasHess__homelab-iac\base-chart`
 - Source: `template`
@@ -7150,7 +6867,7 @@ Error: execution error at (base-chart/templates/application.yaml:67:68): A globa
 Use --debug flag to render out invalid YAML
 ```
 
-### 173. `codefuturist/helm-charts`
+### 172. `codefuturist/helm-charts`
 
 - Chart: `D:\helm_clones_github\codefuturist__helm-charts\charts\apps\compass-web`
 - Source: `template`
@@ -7162,7 +6879,7 @@ Error: execution error at (compass-web/templates/statefulset.yaml:1:4): Either c
 Use --debug flag to render out invalid YAML
 ```
 
-### 174. `merlindorin/charts`
+### 173. `merlindorin/charts`
 
 - Chart: `D:\helm_clones_github\merlindorin__charts\charts\exporter-unifi-protect`
 - Source: `template`
@@ -7174,7 +6891,7 @@ Error: execution error at (exporter-unifi-protect/templates/secret.yaml:10:59): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 175. `100rd/platform-design`
+### 174. `100rd/platform-design`
 
 - Chart: `D:\helm_clones_github\100rd__platform-design\apps\infra\kargo`
 - Source: `template`
@@ -7186,7 +6903,7 @@ Error: execution error at (kargo/charts/kargo/templates/api/secret.yaml:14:8): A
 Use --debug flag to render out invalid YAML
 ```
 
-### 176. `AdmanTIC/helm-charts`
+### 175. `AdmanTIC/helm-charts`
 
 - Chart: `D:\helm_clones_github\AdmanTIC__helm-charts\charts\matomo`
 - Source: `template`
@@ -7198,7 +6915,7 @@ Error: execution error at (matomo/charts/mariadb/templates/statefulset.yaml:41:3
 Use --debug flag to render out invalid YAML
 ```
 
-### 177. `AlexanderBabel/helm-charts`
+### 176. `AlexanderBabel/helm-charts`
 
 - Chart: `D:\helm_clones_github\AlexanderBabel__helm-charts\charts\limesurvey`
 - Source: `template`
@@ -7210,7 +6927,7 @@ Error: execution error at (limesurvey/templates/secrets.yaml:45:18): externalDat
 Use --debug flag to render out invalid YAML
 ```
 
-### 178. `prometheus-community/helm-charts`
+### 177. `prometheus-community/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\prometheus-postgres-exporter`
 - Source: `template`
@@ -7222,7 +6939,7 @@ Error: execution error at (prometheus-postgres-exporter/templates/secrets.yaml:2
 Use --debug flag to render out invalid YAML
 ```
 
-### 179. `community-charts/helm-charts`
+### 178. `community-charts/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\community-charts__helm-charts\charts\cloudflared`
 - Source: `template`
@@ -7234,7 +6951,7 @@ Error: execution error at (cloudflared/templates/secret.yaml:9:23): Base64 encod
 Use --debug flag to render out invalid YAML
 ```
 
-### 180. `community-charts/helm-charts`
+### 179. `community-charts/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\community-charts__helm-charts\charts\outline`
 - Source: `template`
@@ -7246,7 +6963,7 @@ Error: execution error at (outline/templates/secret.yaml:14:24): PostgreSQL pass
 Use --debug flag to render out invalid YAML
 ```
 
-### 181. `VictoriaMetrics/helm-charts`
+### 180. `VictoriaMetrics/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-agent`
 - Source: `template`
@@ -7258,7 +6975,7 @@ Error: execution error at (victoria-logs-agent/templates/server.yaml:64:20): at 
 Use --debug flag to render out invalid YAML
 ```
 
-### 182. `VictoriaMetrics/helm-charts`
+### 181. `VictoriaMetrics/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-collector`
 - Source: `template`
@@ -7270,7 +6987,7 @@ Error: execution error at (victoria-logs-collector/templates/server.yaml:67:24):
 Use --debug flag to render out invalid YAML
 ```
 
-### 183. `VictoriaMetrics/helm-charts`
+### 182. `VictoriaMetrics/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-agent`
 - Source: `template`
@@ -7282,7 +6999,7 @@ Error: execution error at (victoria-metrics-agent/templates/server.yaml:80:19): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 184. `actions/actions-runner-controller`
+### 183. `actions/actions-runner-controller`
 
 - Chart: `D:\helm_clones_artifacthub\actions__actions-runner-controller\charts\gha-runner-scale-set-experimental`
 - Source: `template`
@@ -7294,7 +7011,7 @@ Error: execution error at (gha-runner-scale-set-experimental/templates/manager_r
 Use --debug flag to render out invalid YAML
 ```
 
-### 185. `CloudPirates-io/helm-charts`
+### 184. `CloudPirates-io/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\CloudPirates-io__helm-charts\charts\clusterpirate`
 - Source: `template`
@@ -7306,7 +7023,7 @@ Error: execution error at (clusterpirate/templates/secret.yaml:24:4): ERROR: aut
 Use --debug flag to render out invalid YAML
 ```
 
-### 186. `linkerd/linkerd2`
+### 185. `linkerd/linkerd2`
 
 - Chart: `D:\helm_clones_artifacthub\linkerd__linkerd2\charts\linkerd-control-plane`
 - Source: `template`
@@ -7318,7 +7035,7 @@ Error: execution error at (linkerd-control-plane/templates/identity.yaml:19:21):
 Use --debug flag to render out invalid YAML
 ```
 
-### 187. `grafana/loki`
+### 186. `grafana/loki`
 
 - Chart: `D:\helm_clones_artifacthub\grafana__loki\production\helm\loki`
 - Source: `template`
@@ -7330,7 +7047,7 @@ Error: execution error at (loki/templates/write/statefulset-write.yaml:50:28): P
 Use --debug flag to render out invalid YAML
 ```
 
-### 188. `piraeusdatastore/helm-charts`
+### 187. `piraeusdatastore/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\piraeusdatastore__helm-charts\charts\linstor-affinity-controller`
 - Source: `template`
@@ -7343,7 +7060,7 @@ Error: execution error at (linstor-affinity-controller/templates/deployment.yaml
 Use --debug flag to render out invalid YAML
 ```
 
-### 189. `piraeusdatastore/helm-charts`
+### 188. `piraeusdatastore/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\piraeusdatastore__helm-charts\charts\linstor-scheduler`
 - Source: `template`
@@ -7356,7 +7073,7 @@ Error: execution error at (linstor-scheduler/templates/deployment.yaml:91:24): P
 Use --debug flag to render out invalid YAML
 ```
 
-### 190. `coder/coder`
+### 189. `coder/coder`
 
 - Chart: `D:\helm_clones_artifacthub\coder__coder\helm\coder`
 - Source: `template`
@@ -7368,7 +7085,7 @@ Error: execution error at (coder/templates/coder.yaml:7:3): You must specify the
 Use --debug flag to render out invalid YAML
 ```
 
-### 191. `coder/coder`
+### 190. `coder/coder`
 
 - Chart: `D:\helm_clones_artifacthub\coder__coder\helm\provisioner`
 - Source: `template`
@@ -7380,7 +7097,7 @@ Error: execution error at (coder-provisioner/templates/coder.yaml:7:3): You must
 Use --debug flag to render out invalid YAML
 ```
 
-### 192. `codefresh-io/gitops-runtime-helm`
+### 191. `codefresh-io/gitops-runtime-helm`
 
 - Chart: `D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime`
 - Source: `template`
@@ -7393,7 +7110,7 @@ Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-r
 Use --debug flag to render out invalid YAML
 ```
 
-### 193. `cetic/helm-nifi`
+### 192. `cetic/helm-nifi`
 
 - Chart: `D:\helm_clones_artifacthub\cetic__helm-nifi`
 - Source: `template`
@@ -7406,7 +7123,7 @@ Error: template: nifi/templates/configmap.yaml:12:4: executing "nifi/templates/c
 Use --debug flag to render out invalid YAML
 ```
 
-### 194. `SumoLogic/sumologic-kubernetes-collection`
+### 193. `SumoLogic/sumologic-kubernetes-collection`
 
 - Chart: `D:\helm_clones_artifacthub\SumoLogic__sumologic-kubernetes-collection\deploy\helm\sumologic`
 - Source: `template`
@@ -7418,7 +7135,7 @@ Error: execution error at (sumologic/templates/setup/secret.yaml:18:25): A valid
 Use --debug flag to render out invalid YAML
 ```
 
-### 195. `neo4j/helm-charts`
+### 194. `neo4j/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\neo4j__helm-charts\neo4j`
 - Source: `template`
@@ -7430,7 +7147,7 @@ Error: execution error at (neo4j/templates/_helpers.tpl:38:8): neo4j.name is req
 Use --debug flag to render out invalid YAML
 ```
 
-### 196. `neo4j/helm-charts`
+### 195. `neo4j/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\neo4j__helm-charts\neo4j-docker-desktop-pv`
 - Source: `template`
@@ -7442,7 +7159,7 @@ Error: execution error at (neo4j-docker-desktop-pv/templates/_helpers.tpl:2:5): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 197. `neo4j/helm-charts`
+### 196. `neo4j/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\neo4j__helm-charts\neo4j-headless-service`
 - Source: `template`
@@ -7454,7 +7171,7 @@ Error: execution error at (neo4j-headless-service/templates/neo4j-svc.yaml:6:12)
 Use --debug flag to render out invalid YAML
 ```
 
-### 198. `neo4j/helm-charts`
+### 197. `neo4j/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\neo4j__helm-charts\neo4j-persistent-volume`
 - Source: `template`
@@ -7466,7 +7183,7 @@ Error: execution error at (neo4j-persistent-volume/templates/_helpers.tpl:2:5): 
 Use --debug flag to render out invalid YAML
 ```
 
-### 199. `PrefectHQ/prefect-helm`
+### 198. `PrefectHQ/prefect-helm`
 
 - Chart: `D:\helm_clones_artifacthub\PrefectHQ__prefect-helm\charts\prefect-worker`
 - Source: `template`
@@ -7478,7 +7195,7 @@ Error: execution error at (prefect-worker/templates/deployment.yaml:193:17): A W
 Use --debug flag to render out invalid YAML
 ```
 
-### 200. `mysql/mysql-operator`
+### 199. `mysql/mysql-operator`
 
 - Chart: `D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-operator`
 - Source: `template`
@@ -7490,7 +7207,7 @@ Error: execution error at (mysql-operator/templates/service_account_operator.yam
 Use --debug flag to render out invalid YAML
 ```
 
-### 201. `codefresh-io/venona`
+### 200. `codefresh-io/venona`
 
 - Chart: `D:\helm_clones_artifacthub\codefresh-io__venona\charts\cf-runtime`
 - Source: `template`
@@ -7502,7 +7219,7 @@ Error: execution error at (cf-runtime/templates/hooks/post-install/cm-update-run
 Use --debug flag to render out invalid YAML
 ```
 
-### 202. `apecloud/helm-charts`
+### 201. `apecloud/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\apecloud__helm-charts\charts\redash`
 - Source: `template`
@@ -7514,7 +7231,7 @@ Error: execution error at (redash/templates/secrets.yaml:11:14): A value for one
 Use --debug flag to render out invalid YAML
 ```
 
-### 203. `apache/couchdb-helm`
+### 202. `apache/couchdb-helm`
 
 - Chart: `D:\helm_clones_artifacthub\apache__couchdb-helm\couchdb`
 - Source: `template`
@@ -7526,7 +7243,7 @@ Error: execution error at (couchdb/templates/statefulset.yaml:25:28): A value fo
 Use --debug flag to render out invalid YAML
 ```
 
-### 204. `stevehipwell/helm-charts`
+### 203. `stevehipwell/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\stevehipwell__helm-charts\charts\kube-proxy`
 - Source: `template`
@@ -7538,7 +7255,7 @@ Error: execution error at (kube-proxy/templates/daemonset.yaml:27:28): You must 
 Use --debug flag to render out invalid YAML
 ```
 
-### 205. `sysdiglabs/charts`
+### 204. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cloud-bench`
 - Source: `template`
@@ -7550,7 +7267,7 @@ Error: execution error at (cloud-bench/templates/secret.yaml:10:24): A valid .Va
 Use --debug flag to render out invalid YAML
 ```
 
-### 206. `sysdiglabs/charts`
+### 205. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cloud-connector`
 - Source: `template`
@@ -7562,7 +7279,7 @@ Error: execution error at (cloud-connector/templates/secret.yaml:20:23): value '
 Use --debug flag to render out invalid YAML
 ```
 
-### 207. `sysdiglabs/charts`
+### 206. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cloud-scanning`
 - Source: `template`
@@ -7574,7 +7291,7 @@ Error: execution error at (cloud-scanning/templates/secret.yaml:14:23): value 's
 Use --debug flag to render out invalid YAML
 ```
 
-### 208. `sysdiglabs/charts`
+### 207. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\registry-scanner`
 - Source: `template`
@@ -7586,7 +7303,7 @@ Error: execution error at (registry-scanner/templates/secret.yaml:10:21): A vali
 Use --debug flag to render out invalid YAML
 ```
 
-### 209. `sysdiglabs/charts`
+### 208. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\sysdig`
 - Source: `template`
@@ -7599,7 +7316,7 @@ Error: execution error at (sysdig/templates/secrets.yaml:11:17): A valid .Values
 Use --debug flag to render out invalid YAML
 ```
 
-### 210. `sysdiglabs/charts`
+### 209. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\sysdig-deploy`
 - Source: `template`
@@ -7611,7 +7328,7 @@ Error: execution error at (sysdig-deploy/charts/nodeAnalyzer/templates/secrets.y
 Use --debug flag to render out invalid YAML
 ```
 
-### 211. `sysdiglabs/charts`
+### 210. `sysdiglabs/charts`
 
 - Chart: `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\sysdig-mcm-navmenu`
 - Source: `template`
@@ -7623,7 +7340,7 @@ Error: execution error at (sysdig-mcm-navmenu/templates/configmap.yaml:6:99): va
 Use --debug flag to render out invalid YAML
 ```
 
-### 212. `RedisLabs/redis-enterprise-helm`
+### 211. `RedisLabs/redis-enterprise-helm`
 
 - Chart: `D:\helm_clones_artifacthub\RedisLabs__redis-enterprise-helm\ai\charts\redis-agent-memory`
 - Source: `template`
@@ -7635,7 +7352,7 @@ Error: execution error at (redis-agent-memory/templates/deployment.yaml:1:4): li
 Use --debug flag to render out invalid YAML
 ```
 
-### 213. `relution-io/relution-kubernetes`
+### 212. `relution-io/relution-kubernetes`
 
 - Chart: `D:\helm_clones_artifacthub\relution-io__relution-kubernetes\charts\relution`
 - Source: `template`
@@ -7647,7 +7364,7 @@ Error: execution error at (relution/templates/deployment.yaml:2:3): Please provi
 Use --debug flag to render out invalid YAML
 ```
 
-### 214. `intel/helm-charts`
+### 213. `intel/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\intel__helm-charts\charts\evi-clustering-archiving-0.8.4`
 - Source: `template`
@@ -7659,7 +7376,7 @@ Error: execution error at (evi-clustering-archiving/templates/secret.yaml:21:18)
 Use --debug flag to render out invalid YAML
 ```
 
-### 215. `intel/helm-charts`
+### 214. `intel/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\intel__helm-charts\charts\evi-hbase-0.8.3`
 - Source: `template`
@@ -7671,7 +7388,7 @@ Error: execution error at (evi-hbase/templates/pv-zookeeper.yaml:22:16): A valid
 Use --debug flag to render out invalid YAML
 ```
 
-### 216. `getindata/helm-charts`
+### 215. `getindata/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\getindata__helm-charts\charts\kubeflow-pipelines`
 - Source: `template`
@@ -7683,7 +7400,7 @@ Error: execution error at (kubeflow-pipelines/templates/storage-configs.yaml:17:
 Use --debug flag to render out invalid YAML
 ```
 
-### 217. `obeone/charts`
+### 216. `obeone/charts`
 
 - Chart: `D:\helm_clones_artifacthub\obeone__charts\charts\fooocus`
 - Source: `template`
@@ -7695,7 +7412,7 @@ Error: execution error at (fooocus/templates/common.yaml:1:3): accessMode is req
 Use --debug flag to render out invalid YAML
 ```
 
-### 218. `icoretech/helm`
+### 217. `icoretech/helm`
 
 - Chart: `D:\helm_clones_artifacthub\icoretech__helm\charts\airbroke`
 - Source: `template`
@@ -7707,7 +7424,7 @@ Error: execution error at (airbroke/templates/web-env-secret.yaml:9:20): databas
 Use --debug flag to render out invalid YAML
 ```
 
-### 219. `icoretech/helm`
+### 218. `icoretech/helm`
 
 - Chart: `D:\helm_clones_artifacthub\icoretech__helm\charts\pgbouncer`
 - Source: `template`
@@ -7719,7 +7436,7 @@ Error: execution error at (pgbouncer/templates/userlist-secret.yaml:9:19): A val
 Use --debug flag to render out invalid YAML
 ```
 
-### 220. `Warxcell/helm-chart`
+### 219. `Warxcell/helm-chart`
 
 - Chart: `D:\helm_clones_artifacthub\Warxcell__helm-chart\charts\blackfire`
 - Source: `template`
@@ -7731,7 +7448,7 @@ Error: execution error at (blackfire/templates/secret.yaml:9:16): serverId is re
 Use --debug flag to render out invalid YAML
 ```
 
-### 221. `openmeterio/openmeter`
+### 220. `openmeterio/openmeter`
 
 - Chart: `D:\helm_clones_artifacthub\openmeterio__openmeter\deploy\charts\benthos-collector`
 - Source: `template`
@@ -7741,4168 +7458,6 @@ Use --debug flag to render out invalid YAML
 Error: execution error at (benthos-collector/templates/statefulset.yaml:41:19): One of 'config', 'configFile' or 'preset' is required
 
 Use --debug flag to render out invalid YAML
-```
-
-## `template.malformed_yaml` (186)
-
-### 1. `trueforge-org/truecharts`
-
-- Chart: `D:\helm_clones_github\trueforge-org__truecharts\charts\stable\clamav`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\trueforge-org__truecharts\charts\stable\clamav`
-
-```text
-Error: execution error at (clamav/templates/common.yaml:13:3): Chart - Values contain an error that may be a result of merging. Make sure you don't have any invalid YAML characters starting a value. 
- Renderd Values containing the error: 
-
- ============================================================================================= 
- TZ: UTC
-addons:
-  codeserver:
-    container:
-      enabled: true
-      env:
-        DEFAULT_WORKSPACE: /
-        PORT: 12321
-      imageSelector: codeserverImage
-      probes:
-        liveness:
-          enabled: true
-          path: /
-          port: 12321
-        readiness:
-          enabled: true
-          path: /
-          port: 12321
-        startup:
-          enabled: true
-          path: /
-          port: 12321
-      resources:
-        excludeExtra: true
-      securityContext:
-        readOnlyRootFilesystem: false
-        runAsGroup: 0
-        runAsNonRoot: false
-        runAsUser: 0
-      targetSelector:
-      - main
-    enabled: false
-    ingress:
-      annotations: {}
-      enabled: false
-      hosts:
-      - host: code.chart-example.local
-        paths:
-        - path: /
-          pathType: Prefix
-      labels: {}
-      tls: []
-    service:
-      enabled: true
-      ports:
-        codeserver:
-          enabled: true
-          port: 12321
-          primary: true
-          protocol: http
-          targetPort: 12321
-      type: ClusterIP
-  gluetun:
-    container:
-      enabled: true
-      env:
-        DNS_KEEP_NAMESERVER: "on"
-        DOT: "off"
-        FIREWALL: "off"
-        FIREWALL_INPUT_PORTS: ""
-        FIREWALL_OUTBOUND_SUBNETS: ""
-      imageSelector: gluetunImage
-      probes:
-        liveness:
-          enabled: false
-        readiness:
-          enabled: false
-        startup:
-          enabled: false
-      resources:
-        excludeExtra: true
-      securityContext:
-        capabilities:
-          add:
-          - NET_ADMIN
-          - NET_RAW
-          - MKNOD
-        readOnlyRootFilesystem: false
-        runAsGroup: 568
-        runAsNonRoot: false
-        runAsUser: 0
-    enabled: false
-    targetSelector:
-    - main
-  netshoot:
-    container:
-      command:
-      - /bin/sh
-      - -c
-      - sleep infinity
-      enabled: true
-      imageSelector: netshootImage
-      probes:
-        liveness:
-          enabled: false
-        readiness:
-          enabled: false
-        startup:
-          enabled: false
-      resources:
-        excludeExtra: true
-      securityContext:
-        capabilities:
-          add:
-          - NET_ADMIN
-          - NET_RAW
-        readOnlyRootFilesystem: false
-        runAsGroup: 0
-        runAsNonRoot: false
-        runAsUser: 0
-    enabled: false
-  tailscale:
-    accept_dns: false
-    annotations: {}
-    auth_once: true
-    authkey: ""
-    config: ""
-    container:
-      command:
-      - /usr/local/bin/containerboot
-      enabled: true
-      env:
-        TS_ACCEPT_DNS: false
-        TS_AUTH_KEY: ""
-        TS_AUTH_ONCE: true
-        TS_DEST_IP: ""
-        TS_EXTRA_ARGS: ""
-        TS_KUBE_SECRET: ""
-        TS_OUTBOUND_HTTP_PROXY_LISTEN: ""
-        TS_ROUTES: ""
-        TS_SOCKET: /var/run/tailscale/tailscaled.sock
-        TS_SOCKS5_SERVER: ""
-        TS_STATE_DIR: /var/lib/tailscale/state
-        TS_TAILSCALED_EXTRA_ARGS: ""
-        TS_USERSPACE: true
-      imageSelector: tailscaleImage
-      probes:
-        liveness:
-          enabled: false
-        readiness:
-          enabled: false
-        startup:
-          enabled: false
-      resources:
-        excludeExtra: true
-      securityContext:
-        capabilities:
-          add:
-          - NET_ADMIN
-          - NET_RAW
-    daemon_extra_args: ""
-    dest_ip: ""
-    enabled: false
-    extra_args: ""
-    outbound_http_proxy_listen: ""
-    routes: ""
-    sock5_server: ""
-    targetSelector:
-    - main
-    userspace: true
-alpineImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/tccr/alpine
-  tag: v3.22.1@sha256:6dc807ae4f2867cb2d00d061f8f579f1966420ad792c179ac68072ab235109f8
-certificate: {}
-chartContext:
-  appHost: 127.0.0.1
-  appPath: /
-  appPort: "3310"
-  appProtocol: http
-  appUrl: http://127.0.0.1:3310
-  appUrlWithPortAndPath: http://127.0.0.1:3310/
-  podCIDR: 172.16.0.0/16
-  svcCIDR: 172.17.0.0/16
-clamav:
-  cron_enabled: true
-  cron_schedule: '* * * * *'
-  date_format: +%m-%d-%Y_%H.%M.%S
-  extra_args: ""
-  log_file_name: clamscan_report
-  report_path: /logs
-clickhouse:
-  creds: {}
-  enabled: false
-  includeCommon: false
-  password: PLACEHOLDERPASSWORD
-cnpg:
-  main:
-    annotations: {}
-    backups:
-      credentials: ""
-      destinationPath: ""
-      enabled: false
-      encryption:
-        enabled: false
-      manualBackups: []
-      retentionPolicy: 30d
-      scheduledBackups:
-      - backupOwnerReference: self
-        immediate: true
-        name: daily-backup
-        schedule: 0 0 0 * * *
-        suspend: false
-      servername: ""
-      target: ""
-    cluster:
-      annotations: {}
-      env: {}
-      envFrom: {}
-      initdb: {}
-      instances: 2
-      labels: {}
-      logLevel: info
-      primaryUpdateMethod: switchover
-      primaryUpdateStrategy: unsupervised
-      singleNode: false
-    creds: {}
-    database: app
-    enabled: false
-    hibernate: false
-    labels: {}
-    mode: standalone
-    monitoring:
-      customQueries: []
-      disableDefaultQueries: false
-      enablePodMonitor: false
-    password: PLACEHOLDERPASSWORD
-    pgVersion: 16
-    pooler:
-      annotations: {}
-      createRO: false
-      enabled: false
-      instances: 2
-      labels: {}
-      poolMode: session
-    primary: true
-    recovery:
-      backupName: ""
-      clusterName: ""
-      destinationPath: ""
-      method: object_store
-      pitrTarget:
-        time: ""
-      servername: ""
-    type: postgres
-    user: app
-codeserverImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/containerforge/code-server
-  tag: 4.118.0@sha256:b02714ac2d0ee60df7dbcb2aa8b323779d97b71d2d40deeb412831a9530f7a9c
-configmap: {}
-containerOptions:
-  NVIDIA_CAPS:
-  - all
-credentials: {}
-cronjob:
-  annotations: {}
-  failedJobsHistoryLimit: 5
-  successfulJobsHistoryLimit: 2
-diagnosticMode:
-  enabled: false
-extraTpl: []
-global:
-  annotations: {}
-  diagnosticMode:
-    enabled: false
-  fallbackDefaults:
-    accessModes:
-    - ReadWriteOnce
-    cnpg:
-      pgVersion: 16
-      skipEmptyWalArchiveCheck: true
-    persistenceType: pvc
-    probeTimeouts:
-      liveness:
-        failureThreshold: 5
-        initialDelaySeconds: 12
-        periodSeconds: 15
-        successThreshold: 1
-        timeoutSeconds: 5
-      readiness:
-        failureThreshold: 4
-        initialDelaySeconds: 10
-        periodSeconds: 12
-        successThreshold: 2
-        timeoutSeconds: 5
-      startup:
-        failureThreshold: 60
-        initialDelaySeconds: 10
-        periodSeconds: 5
-        successThreshold: 1
-        timeoutSeconds: 3
-    probeType: http
-    pvcRetain: false
-    pvcSize: 100Gi
-    serviceProtocol: tcp
-    serviceType: ClusterIP
-    topologyKey: kubernetes.io/hostname
-    vctAccessModes:
-    - ReadWriteOnce
-    vctSize: 100Gi
-  labels: {}
-  minNodePort: 9000
-  namespace: ""
-  stopAll: false
-  traefik:
-    commonMiddlewares:
-    - name: tc-basic-secure-headers
-gluetunImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/tccr/gluetun
-  tag: v3.40.0@sha256:a8189e29155e0f8142be1500ae068a92b189b1b25abbba036321e74d6389bf2b
-hpa:
-  main:
-    enabled: false
-    targetSelector: []
-image:
-  pullPolicy: IfNotPresent
-  repository: docker.io/clamav/clamav
-  tag: 1.5.2@sha256:f7954ca7ca13f0ebc301bb8a8b492a88db793192c48763a0b9a2ffb64dcf4bee
-imagePullSecret: {}
-ingress:
-  main:
-    annotations: {}
-    enabled: false
-    hosts: []
-    ingressClassName: ""
-    integrations:
-      certManager:
-        certificateIssuer: ""
-        enabled: false
-      homepage:
-        description: ""
-        enabled: false
-        group: ""
-        icon: ""
-        name: ""
-        widget:
-          type: ""
-          url: ""
-      nginx:
-        auth:
-          externalHost: ""
-          internalHost: ""
-          responseHeaders: []
-          type: ""
-        enabled: false
-        ipWhitelist: []
-        themepark:
-          css: ""
-          enabled: false
-      traefik:
-        enabled: false
-        entrypoints:
-        - websecure
-        forceTLS: true
-        middlewares: []
-    labels: {}
-    primary: true
-    required: false
-    tls: []
-ingressMiddlewares:
-  traefik:
-    tc-basic-secure-headers:
-      data:
-        accessControlAllowMethods:
-        - GET
-        - OPTIONS
-        - HEAD
-        - PUT
-        accessControlMaxAge: 100
-        browserXssFilter: true
-        contentTypeNosniff: true
-        customRequestHeaders:
-          X-Forwarded-Proto: https
-        forceSTSHeader: true
-        referrerPolicy: same-origin
-        stsSeconds: 63072000
-      enabled: false
-      type: headers
-kubectlImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/containerforge/kubectl
-  tag: 1.31.1@sha256:47fa8a164386b5320c18140236109baec862d7ed778215263c473965cecd18ac
-mariadb:
-  creds: {}
-  enabled: false
-  includeCommon: false
-  password: PLACEHOLDERPASSWORD
-  rootPassword: PLACEHOLDERROOTPASSWORD
-mariadbClientImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/containerforge/mariadb-client
-  tag: 12.2.2@sha256:a731429e1a17c24609eea50b0705ff5ad2e74fde98545d465f41bf2175a9c2e4
-metrics:
-  main:
-    enabled: false
-    endpoints:
-    - honorLabels: false
-      interval: 5s
-      path: /
-      port: main
-      scrapeTimeout: 5s
-    primary: true
-    prometheusRule:
-      enabled: false
-      groups: {}
-    selector: {}
-    type: servicemonitor
-mongodb:
-  creds: {}
-  enabled: false
-  includeCommon: false
-  password: PLACEHOLDERPASSWORD
-  rootPassword: PLACEHOLDERROOTPASSWORD
-mongodbClientImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/containerforge/mongosh
-  tag: 2.8.3@sha256:f414e9cdfe773400f2a38577c2595f4005723d5e4156b71d5dd5e3c15772658a
-namespace: ""
-netshootImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/tccr/netshoot
-  tag: v0.14.0@sha256:28ede4317d22391e7d89a15eb78dc2afc3587ece02c76c983dde7239a0e43679
-notes:
-  custom: |
-    {{- if .Values.chartContext.appUrl }}
-    ## Connecting externally
-    You can use this Chart by opening the following links in your browser:
-    - {{ toYaml .Values.chartContext.appUrl }}
-    {{- end }}
-
-    {{ if .Chart.Dependencies }}
-    ## Dependencies for {{ .Chart.Name }}
-
-    {{- range .Chart.Dependencies }}
-    - Chart: {{ .Repository }}/{{ .Name }}
-      Version: {{ .Version }}
-    {{- end }}
-    {{- end }}
-    {{- if .Values.chartContext.internalUrls }}
-    ## Connecting Internally
-
-    You can reach this chart inside your cluster, using the following service URLS:
-    {{- range $url := .Values.chartContext.internalUrls -}}
-    - {{ $url }}
-    {{- end }}
-    {{- end }}
-
-    ## Sources for {{ .Chart.Name }}
-
-    {{- range .Chart.Sources }}
-    - {{ . }}
-    {{- end -}}
-
-    {{- $link := .Chart.Annotations.docs -}}
-    {{- if not $link -}}
-      {{- $link = .Chart.Home -}}
-    {{- end }}
-
-    See more for **{{ $.Chart.Name }}** at ({{ $link }})
-  footer: |
-    ## Documentation
-    Please check out the TrueCharts documentation on:
-    https://truecharts.org
-
-    OpenSource can only exist with your help, please consider supporting TrueCharts:
-    https://trueforge.org/sponsor
-  header: |
-    # Thank you for installing {{ .Chart.Name }} by TrueCharts.
-  warnings: []
-openvpnImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/tccr/openvpn-client
-  tag: latest@sha256:9bfdf50791d6e51056e31c03f73c9db329b2b72e7746155cfdc63e0c8b49b55a
-persistence:
-  devshm:
-    enabled: true
-    medium: Memory
-    mountPath: /dev/shm
-    targetSelectAll: true
-    type: emptyDir
-  logs:
-    enabled: true
-    mountPath: /logs
-    targetSelectAll: true
-  scandir:
-    enabled: true
-    mountPath: /scandir
-    readOnly: true
-    targetSelectAll: true
-  shared:
-    enabled: true
-    mountPath: /shared
-    targetSelectAll: true
-    type: emptyDir
-  sigdatabase:
-    enabled: true
-    mountPath: /var/lib/clamav
-    targetSelectAll: true
-  tmp:
-    enabled: true
-    medium: Memory
-    mountPath: /tmp
-    targetSelectAll: true
-    type: emptyDir
-  varlogs:
-    enabled: true
-    medium: Memory
-    mountPath: /var/logs
-    targetSelectAll: true
-    type: emptyDir
-  varrun:
-    enabled: true
-    medium: Memory
-    mountPath: /var/run
-    targetSelectAll: true
-    type: emptyDir
-podDisruptionBudget:
-  main:
-    enabled: false
-    targetSelector: main
-podOptions:
-  affinity: {}
-  automountServiceAccountToken: false
-  defaultAffinity: true
-  defaultSpread: true
-  dnsConfig:
-    options:
-    - name: ndots
-      value: "1"
-  dnsPolicy: ClusterFirst
-  enableServiceLinks: false
-  hostAliases: []
-  hostIPC: false
-  hostNetwork: false
-  hostPID: false
-  nodeSelector:
-    kubernetes.io/arch: amd64
-  priorityClassName: ""
-  runtimeClassName: ""
-  schedulerName: ""
-  shareProcessNamespace: false
-  terminationGracePeriodSeconds: 60
-  tolerations: []
-  topologySpreadConstraints: []
-postgres15Image:
-  pullPolicy: IfNotPresent
-  repository: ghcr.io/cloudnative-pg/postgresql
-  tag: 15.17@sha256:23d56b4e6232954ba7ae9eda453a9630946f382325e3bb63af3c2c32fce9a119
-postgres16Image:
-  pullPolicy: IfNotPresent
-  repository: ghcr.io/cloudnative-pg/postgresql
-  tag: 16.13@sha256:da09a5927dd7af1572591df6c2c1a192d441054ff73e6df823402fcbf08c5ff0
-postgresClientImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/containerforge/postgresql-client
-  tag: 9.6.24@sha256:c7ea20fbec42f93e8c45d05676673654dfba12665f63b9dc7020a00e01cff3cc
-postgresPostgis15Image:
-  pullPolicy: IfNotPresent
-  repository: ghcr.io/cloudnative-pg/postgis
-  tag: 15-3.4@sha256:4596b193991cd2463a07d40e3d3d62c59f046a7dece8f163ad1aba15925a38e4
-postgresPostgis16Image:
-  pullPolicy: IfNotPresent
-  repository: ghcr.io/cloudnative-pg/postgis
-  tag: 16-3.4@sha256:bb5a8590a8c934767482e34e1d103253f412aec703b77bbc52ad9044bf6e56f9
-postgresVectorchord15Image:
-  pullPolicy: IfNotPresent
-  repository: ghcr.io/tensorchord/cloudnative-vectorchord
-  tag: 15.14-0.5.3@sha256:1978732dc1e7e9ef94b9e806a094fcb123afab1e50a7e878e2d29de8b849cf47
-postgresVectorchord16Image:
-  pullPolicy: IfNotPresent
-  repository: ghcr.io/tensorchord/cloudnative-vectorchord
-  tag: 16.10-0.5.3@sha256:a0776b514bb23858d8aa59b08587223f8b449bba1b278ffbcf85e097d6504eb0
-postgresVectors15Image:
-  pullPolicy: IfNotPresent
-  repository: ghcr.io/tensorchord/cloudnative-pgvecto.rs
-  tag: 15.7-v0.2.1@sha256:dbdeddf0d635f76df41f745407816c87c7468df35e3b7b0665ca4e0500ff3048
-postgresVectors16Image:
-  pullPolicy: IfNotPresent
-  repository: ghcr.io/tensorchord/cloudnative-pgvecto.rs
-  tag: 16.3-v0.2.1@sha256:f1a19d4fc4073b0671a72ad34ef012aa20d21b3ddf5b4b0c9077d54450db679a
-priorityClass: {}
-rbac: {}
-redis:
-  creds: {}
-  enabled: false
-  includeCommon: false
-  password: PLACEHOLDERPASSWORD
-  secret:
-    credentials:
-      enabled: false
-redisClientImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/containerforge/valkey-tools
-  tag: 1.1.0@sha256:10dfaf1f3bcc49a58eb1c298d3433efbe8e05e17b7e856699381efb2e4338362
-resources:
-  limits:
-    cpu: 1500m
-    memory: 2400Mi
-  requests:
-    cpu: 75m
-    memory: 200Mi
-route:
-  main:
-    annotations: {}
-    enabled: false
-    hostnames: []
-    kind: HTTPRoute
-    labels: {}
-    parentRefs:
-    - group: gateway.networking.k8s.io
-      kind: Gateway
-      name: null
-      namespace: null
-      sectionName: null
-    rules:
-    - backendRefs:
-      - group: ""
-        kind: Service
-        name: null
-        namespace: null
-        port: null
-        weight: 1
-      matches:
-      - path:
-          type: PathPrefix
-          value: /
-scratchImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/containerforge/scratch
-  tag: 1.0.0@sha256:84182a2371dd7584ad752326b7150b4e928c640b7f70a249a3994b40f1db11fd
-secret: {}
-securityContext:
-  container:
-    PUID: 568
-    UMASK: "0022"
-    allowPrivilegeEscalation: false
-    capabilities:
-      add: []
-      disableS6Caps: false
-      drop:
-      - ALL
-    privileged: false
-    readOnlyRootFilesystem: false
-    runAsGroup: 0
-    runAsNonRoot: false
-    runAsUser: 0
-    seccompProfile:
-      type: RuntimeDefault
-  pod:
-    fsGroup: 568
-    fsGroupChangePolicy: OnRootMismatch
-    supplementalGroups: []
-    sysctls: []
-service:
-  main:
-    enabled: true
-    ports:
-      main:
-        enabled: true
-        port: 3310
-        primary: true
-        protocol: http
-        targetPort: 3310
-    primary: true
-  milter:
-    enabled: false
-    ports:
-      milter:
-        enabled: true
-        port: 7357
-        protocol: http
-        targetPort: 7357
-serviceAccount: {}
-solr:
-  creds: {}
-  enabled: false
-  includeCommon: false
-  password: PLACEHOLDERPASSWORD
-  solrCores: 1
-  solrEnableAuthentication: "no"
-storageClass: {}
-tailscaleImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/tccr/tailscale
-  tag: v1.88.3@sha256:878612592f133bc0728e978558b10a1c457371ac5949985d0584664c8e92c2f9
-ubuntuImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/containerforge/ubuntu
-  tag: 26.4@sha256:17312da6b52fe7ab6e3bdc8e4a1f99df63c2494b2bad4f4b634a9065d585898e
-valkeyClientImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/containerforge/valkey-tools
-  tag: 1.1.0@sha256:10dfaf1f3bcc49a58eb1c298d3433efbe8e05e17b7e856699381efb2e4338362
-volumeSnapshotClass: {}
-volumeSnapshots: {}
-vpa:
-  main:
-    enabled: false
-    resourcePolicy:
-      containerPolicies:
-      - containerName: '*'
-        controlledResources:
-        - cpu
-        - memory
-        maxAllowed:
-          cpu: 8000m
-          memory: 20Gi
-        minAllowed:
-          cpu: 50m
-          memory: 50Mi
-    targetSelector: []
-webhook:
-  mutating:
-    enabled: false
-    type: mutating
-    webhooks: []
-  validating:
-    enabled: false
-    type: validating
-    webhooks: []
-wgetImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/containerforge/ubuntu
-  tag: 26.4@sha256:17312da6b52fe7ab6e3bdc8e4a1f99df63c2494b2bad4f4b634a9065d585898e
-wireguardImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/tccr/wireguard
-  tag: v1.0.20210914@sha256:683b8b74d64ebd07f9955147539834c2a4b60fee51d2a36fa76b9aba689601bf
-workload:
-  cron:
-    Error: 'error converting YAML to JSON: yaml: line 3: did not find expected alphabetic
-      or numeric character'
-  main:
-    dbWait: true
-    enabled: true
-    podSpec:
-      containers:
-        main:
-          enabled: true
-          env:
-            CLAMAV_NO_CLAMD: false
-            CLAMAV_NO_FRESHCLAMD: false
-            CLAMAV_NO_MILTERD: '{{ not .Values.service.milter.enabled }}'
-            CLAMD_STARTUP_TIMEOUT: 1800
-            FRESHCLAM_CHECKS: 1
-          imageSelector: image
-          primary: true
-          probes:
-            liveness:
-              command:
-              - clamdcheck.sh
-              enabled: true
-              port: '{{ $.Values.service.main.ports.main.targetPort | default .Values.service.main.ports.main.port
-                }}'
-              type: exec
-            readiness:
-              command:
-              - clamdcheck.sh
-              enabled: true
-              port: '{{ $.Values.service.main.ports.main.targetPort | default .Values.service.main.ports.main.port
-                }}'
-              type: exec
-            startup:
-              command:
-              - clamdcheck.sh
-              enabled: true
-              port: '{{ $.Values.service.main.ports.main.targetPort | default .Values.service.main.ports.main.port
-                }}'
-              type: exec
-    primary: true
-    type: Deployment
-yqImage:
-  pullPolicy: IfNotPresent
-  repository: oci.trueforge.org/containerforge/go-yq
-  tag: 4.53.2@sha256:297b088fc4e93a81e782eb3b641345c71d43dff3107753c0468c1ef9498c63f3 
- ============================================================================================= 
-
- See error above values.
-
-Use --debug flag to render out invalid YAML
-```
-
-### 2. `vexxhost/atmosphere`
-
-- Chart: `D:\helm_clones_github\vexxhost__atmosphere\charts\kube-prometheus-stack`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\vexxhost__atmosphere\charts\kube-prometheus-stack`
-
-```text
-level=INFO msg="Warning: Dependency locking is handled in Chart.lock since apiVersion \"v2\". We recommend migrating to Chart.lock."
-Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
-
-Use --debug flag to render out invalid YAML
-```
-
-### 3. `open-edge-platform/edge-ai-libraries`
-
-- Chart: `D:\helm_clones_github\open-edge-platform__edge-ai-libraries\sample-applications\chat-question-and-answer\chart`
-- Source: `template`
-- Values files: `D:\helm_clones_github\open-edge-platform__edge-ai-libraries\sample-applications\chat-question-and-answer\chart\values_ovms.yaml`
-- Command: `helm template test D:\helm_clones_github\open-edge-platform__edge-ai-libraries\sample-applications\chat-question-and-answer\chart -f D:\helm_clones_github\open-edge-platform__edge-ai-libraries\sample-applications\chat-question-and-answer\chart\values_ovms.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\open-edge-platform__edge-ai-libraries\sample-applications\chat-question-and-answer\chart\values_ovms.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
-```
-
-### 4. `opea-project/Enterprise-Inference`
-
-- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tei`
-- Source: `template`
-- Values files: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tei\ci-gaudi-values.yaml`
-- Command: `helm template test D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tei -f D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tei\ci-gaudi-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tei\ci-gaudi-values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
-```
-
-### 5. `opea-project/Enterprise-Inference`
-
-- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tei`
-- Source: `template`
-- Values files: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tei\ci-values.yaml`
-- Command: `helm template test D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tei -f D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tei\ci-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tei\ci-values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
-```
-
-### 6. `opea-project/Enterprise-Inference`
-
-- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\teirerank`
-- Source: `template`
-- Values files: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\teirerank\ci-gaudi-values.yaml`
-- Command: `helm template test D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\teirerank -f D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\teirerank\ci-gaudi-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\teirerank\ci-gaudi-values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
-```
-
-### 7. `opea-project/Enterprise-Inference`
-
-- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\teirerank`
-- Source: `template`
-- Values files: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\teirerank\ci-values.yaml`
-- Command: `helm template test D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\teirerank -f D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\teirerank\ci-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\teirerank\ci-values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
-```
-
-### 8. `opea-project/Enterprise-Inference`
-
-- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tgi`
-- Source: `template`
-- Values files: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tgi\ci-gaudi-values.yaml`
-- Command: `helm template test D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tgi -f D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tgi\ci-gaudi-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tgi\ci-gaudi-values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
-```
-
-### 9. `opea-project/Enterprise-Inference`
-
-- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tgi`
-- Source: `template`
-- Values files: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tgi\ci-values.yaml`
-- Command: `helm template test D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tgi -f D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tgi\ci-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\tgi\ci-values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
-```
-
-### 10. `opea-project/Enterprise-Inference`
-
-- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm`
-- Source: `template`
-- Values files: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm\ci-gaudi-values.yaml`
-- Command: `helm template test D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm -f D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm\ci-gaudi-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm\ci-gaudi-values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
-```
-
-### 11. `opea-project/Enterprise-Inference`
-
-- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm`
-- Source: `template`
-- Values files: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm\ci-values.yaml`
-- Command: `helm template test D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm -f D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm\ci-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm\ci-values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
-```
-
-### 12. `camptocamp/charts`
-
-- Chart: `D:\helm_clones_github\camptocamp__charts\bivac`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\camptocamp__charts\bivac`
-
-```text
-Error: YAML parse error on bivac/templates/cronjob.yaml: error converting YAML to JSON: yaml: line 32: could not find expected ':'
-
-Use --debug flag to render out invalid YAML
-```
-
-### 13. `bflance/proxmox-talos`
-
-- Chart: `D:\helm_clones_github\bflance__proxmox-talos\charts\kube-prometheus-stack`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\bflance__proxmox-talos\charts\kube-prometheus-stack`
-
-```text
-Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
-
-Use --debug flag to render out invalid YAML
-```
-
-### 14. `Loongson-Cloud-Community/dockerfiles`
-
-- Chart: `D:\helm_clones_github\Loongson-Cloud-Community__dockerfiles\kubesphere\ks-installer\v3.2.1\roles\gatekeeper\files\gatekeeper`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Loongson-Cloud-Community__dockerfiles\kubesphere\ks-installer\v3.2.1\roles\gatekeeper\files\gatekeeper`
-
-```text
-Error: YAML parse error on gatekeeper/templates/gatekeeper-validating-webhook-configuration-validatingwebhookconfiguration.yaml: error converting YAML to JSON: yaml: invalid map key: map[interface {}]interface {}{".Values.validatingWebhookFailurePolicy":interface {}(nil)}
-
-Use --debug flag to render out invalid YAML
-```
-
-### 15. `cloud-native-toolkit/toolkit-charts`
-
-- Chart: `D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\assign-group-cronjob`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\assign-group-cronjob`
-
-```text
-Error: YAML parse error on assign-group-cronjob/templates/cronjob.yaml: error converting YAML to JSON: yaml: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 16. `cloud-native-toolkit/toolkit-charts`
-
-- Chart: `D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\console-link-cronjob`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\console-link-cronjob`
-
-```text
-Error: YAML parse error on console-link-cronjob/templates/cronjob.yaml: error converting YAML to JSON: yaml: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 17. `cloud-native-toolkit/toolkit-charts`
-
-- Chart: `D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\ibm-eventstreams-instance`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\ibm-eventstreams-instance`
-
-```text
-Error: YAML parse error on ibm-eventstreams-instance/templates/instance.yaml: error converting YAML to JSON: yaml: line 6: could not find expected ':'
-
-Use --debug flag to render out invalid YAML
-```
-
-### 18. `jharmison-redhat/openshift-setup`
-
-- Chart: `D:\helm_clones_github\jharmison-redhat__openshift-setup\charts\aws-efs-csi-setup`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\jharmison-redhat__openshift-setup\charts\aws-efs-csi-setup`
-
-```text
-Error: YAML parse error on aws-efs-csi-set/templates/csi-driver/storageclass-job.yaml: error converting YAML to JSON: yaml: line 9: did not find expected key
-
-Use --debug flag to render out invalid YAML
-```
-
-### 19. `henrywhitaker3/homelab`
-
-- Chart: `D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\mango\apps\networking\cert-manager\chart`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\mango\apps\networking\cert-manager\chart`
-
-```text
-Error: YAML parse error on cert-manager/templates/cloudflare-creds.yaml: error converting YAML to JSON: yaml: invalid map key: map[interface {}]interface {}{".Values.cloudflareApiToken":interface {}(nil)}
-
-Use --debug flag to render out invalid YAML
-```
-
-### 20. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser -f D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 21. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser -f D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 22. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser -f D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 23. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser -f D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 24. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce -f D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 25. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce -f D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 26. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce -f D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 27. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce -f D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 28. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\renci-exp-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce -f D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\renci-exp-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\renci-exp-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 29. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\renci-test-exp-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce -f D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\renci-test-exp-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\renci-test-exp-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 30. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce -f D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\answer-coalesce\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 31. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog`
-
-```text
-Error: YAML parse error on api-watchdog/templates/cronjob.yaml: error converting YAML to JSON: yaml: line 16: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 32. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog -f D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 33. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog -f D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 34. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog -f D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 35. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\renci-prod-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog -f D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\renci-prod-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\api-watchdog\renci-prod-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 36. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 37. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 38. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 39. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 40. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-exp-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-exp-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-exp-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 41. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-u24-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-u24-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-u24-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 42. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-yobokop-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-yobokop-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn\renci-yobokop-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 43. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 44. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 45. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 46. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 47. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\renci-exp-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\renci-exp-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\renci-exp-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 48. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\renci-u24-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\renci-u24-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\renci-u24-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 49. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker -f D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\aragorn-ranker\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 50. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\automat -f D:\helm_clones_github\helxplatform__translator-devops\helm\automat\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\automat\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 51. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\automat -f D:\helm_clones_github\helxplatform__translator-devops\helm\automat\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\automat\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 52. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\automat -f D:\helm_clones_github\helxplatform__translator-devops\helm\automat\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\automat\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 53. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat\renci-exp-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\automat -f D:\helm_clones_github\helxplatform__translator-devops\helm\automat\renci-exp-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\automat\renci-exp-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 54. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat\renci-u24-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\automat -f D:\helm_clones_github\helxplatform__translator-devops\helm\automat\renci-u24-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\automat\renci-u24-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 55. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\automat\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\automat -f D:\helm_clones_github\helxplatform__translator-devops\helm\automat\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\automat\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 56. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 57. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 58. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 59. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 60. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\renci-prod-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\renci-prod-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\renci-prod-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 61. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\biolink-lookup\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 62. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 63. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 64. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 65. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\renci-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\renci-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\renci-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 66. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\renci-exp-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\renci-exp-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\renci-exp-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 67. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\renci-original-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\renci-original-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\renci-original-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 68. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-kp-api\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 69. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 70. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 71. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 72. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-builder\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 73. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 74. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 75. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 76. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server -f D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cam-pipeline-web-server\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 77. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cqs`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cqs -f D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 78. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cqs`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cqs -f D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 79. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cqs`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cqs -f D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 80. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cqs`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cqs -f D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 81. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\cqs`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\cqs -f D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\cqs\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 82. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-asthma-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-asthma-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-asthma-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 83. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-asthma-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-asthma-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-asthma-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 84. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-covid-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-covid-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-covid-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 85. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-covid-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-covid-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-covid-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 86. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-dili-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-dili-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-dili-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 87. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-dili-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-dili-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-dili-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 88. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-pcd-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api -f D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-pcd-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\icees-api\renci-pcd-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 89. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\information-radiator`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\information-radiator\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\information-radiator -f D:\helm_clones_github\helxplatform__translator-devops\helm\information-radiator\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\information-radiator\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 90. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\issue-router`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\issue-router\renci-prod-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\issue-router -f D:\helm_clones_github\helxplatform__translator-devops\helm\issue-router\renci-prod-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\issue-router\renci-prod-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 91. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger -f D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 92. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger -f D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 93. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger -f D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 94. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\renci-exp-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger -f D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\renci-exp-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\renci-exp-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 95. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\renci-robokop-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger -f D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\renci-robokop-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\renci-robokop-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 96. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger -f D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\jaeger\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 97. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\kg-summarizer`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\kg-summarizer\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\kg-summarizer -f D:\helm_clones_github\helxplatform__translator-devops\helm\kg-summarizer\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\kg-summarizer\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 98. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 99. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 100. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 101. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 102. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\renci-exp-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\renci-exp-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\renci-exp-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 103. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup -f D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\name-lookup\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 104. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 105. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 106. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 107. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 108. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\renci-exp-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\renci-exp-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\renci-exp-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 109. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-loader\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 110. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 111. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 112. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 113. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 114. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\renci-exp-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\renci-exp-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\renci-exp-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 115. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\renci-test-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\renci-test-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\renci-test-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 116. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server -f D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\node-normalization-web-server\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 117. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp -f D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 118. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp -f D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 119. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp -f D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 120. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp -f D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 121. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis -f D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 122. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis -f D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 123. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis -f D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 124. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis -f D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\omnicorp-redis\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 125. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp -f D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 126. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp -f D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 127. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp -f D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 128. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp -f D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 129. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\renci-exp-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp -f D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\renci-exp-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-kp\renci-exp-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 130. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools\renci-bionames-sterling-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools -f D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools\renci-bionames-sterling-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools\renci-bionames-sterling-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 131. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools\renci-onto-sterling-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools -f D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools\renci-onto-sterling-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools\renci-onto-sterling-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 132. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools\renci-onto-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools -f D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools\renci-onto-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\ontology-tools\renci-onto-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 133. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\plater`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\plater\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\plater -f D:\helm_clones_github\helxplatform__translator-devops\helm\plater\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\plater\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 134. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\qgraph`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\qgraph\renci-prod-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\qgraph -f D:\helm_clones_github\helxplatform__translator-devops\helm\qgraph\renci-prod-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\qgraph\renci-prod-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 135. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\query-logger`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\query-logger\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\query-logger -f D:\helm_clones_github\helxplatform__translator-devops\helm\query-logger\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\query-logger\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 136. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external -f D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 137. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external\renci-exp-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external -f D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external\renci-exp-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external\renci-exp-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 138. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external -f D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\redis-r3-external\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 139. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\robokop -f D:\helm_clones_github\helxplatform__translator-devops\helm\robokop\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\robokop\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 140. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara -f D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 141. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara\renci-prod-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara -f D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara\renci-prod-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara\renci-prod-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 142. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara\renci-yobokop-ara-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara -f D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara\renci-yobokop-ara-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ara\renci-yobokop-ara-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 143. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui\renci-prod-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui -f D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui\renci-prod-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui\renci-prod-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 144. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres\aws-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres -f D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres\aws-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres\aws-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 145. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres\renci-prod-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres -f D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres\renci-prod-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\robokop-ui-postgres\renci-prod-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 146. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokopkg`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokopkg\renci-litcoin-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\robokopkg -f D:\helm_clones_github\helxplatform__translator-devops\helm\robokopkg\renci-litcoin-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\robokopkg\renci-litcoin-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 147. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokopkg`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\robokopkg\renci-robokopkg-5-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\robokopkg -f D:\helm_clones_github\helxplatform__translator-devops\helm\robokopkg\renci-robokopkg-5-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\robokopkg\renci-robokopkg-5-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 148. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd -f D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 149. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd -f D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 150. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd -f D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 151. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\renci-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd -f D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\renci-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\renci-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 152. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd -f D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\shepherd\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 153. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\sri-testing`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\sri-testing\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\sri-testing -f D:\helm_clones_github\helxplatform__translator-devops\helm\sri-testing\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\sri-testing\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 154. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\strider -f D:\helm_clones_github\helxplatform__translator-devops\helm\strider\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\strider\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 155. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\strider -f D:\helm_clones_github\helxplatform__translator-devops\helm\strider\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\strider\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 156. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\strider -f D:\helm_clones_github\helxplatform__translator-devops\helm\strider\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\strider\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 157. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\strider -f D:\helm_clones_github\helxplatform__translator-devops\helm\strider\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\strider\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 158. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider\renci-exp-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\strider -f D:\helm_clones_github\helxplatform__translator-devops\helm\strider\renci-exp-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\strider\renci-exp-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 159. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\strider\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\strider -f D:\helm_clones_github\helxplatform__translator-devops\helm\strider\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\strider\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 160. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\test-harness`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\test-harness\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\test-harness -f D:\helm_clones_github\helxplatform__translator-devops\helm\test-harness\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\test-harness\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 161. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\ncats-dev-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner -f D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\ncats-dev-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\ncats-dev-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 162. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\ncats-prod-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner -f D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\ncats-prod-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\ncats-prod-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 163. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\ncats-test-values.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner -f D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\ncats-test-values.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\ncats-test-values.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 164. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\renci-dev-values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner -f D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\renci-dev-values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\renci-dev-values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 165. `helxplatform/translator-devops`
-
-- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner`
-- Source: `template`
-- Values files: `D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\values-populated.yaml`
-- Command: `helm template test D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner -f D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\values-populated.yaml`
-
-```text
-Error: failed to parse D:\helm_clones_github\helxplatform__translator-devops\helm\translator-workflow-runner\values-populated.yaml: cannot unmarshal yaml document: error converting YAML to JSON: yaml: control characters are not allowed
-```
-
-### 166. `erost/vdz26-demo-fleet-commander`
-
-- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-bucket\chart`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-bucket\chart`
-
-```text
-Error: YAML parse error on public-function-bucket/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 167. `erost/vdz26-demo-fleet-commander`
-
-- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-numbers\chart`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-numbers\chart`
-
-```text
-Error: YAML parse error on public-function-numbers/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 168. `erost/vdz26-demo-fleet-commander`
-
-- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-strings\chart`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-strings\chart`
-
-```text
-Error: YAML parse error on public-function-strings/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 169. `erost/vdz26-demo-fleet-commander`
-
-- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-aws\function-bucket\chart`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-aws\function-bucket\chart`
-
-```text
-Error: YAML parse error on function-bucket/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 170. `erost/vdz26-demo-fleet-commander`
-
-- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-numbers\function-numbers\chart`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-numbers\function-numbers\chart`
-
-```text
-Error: YAML parse error on function-numbers/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 171. `erost/vdz26-demo-fleet-commander`
-
-- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-strings\function-strings\chart`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-strings\function-strings\chart`
-
-```text
-Error: YAML parse error on function-strings/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 172. `ndebuhr/isidro`
-
-- Chart: `D:\helm_clones_github\ndebuhr__isidro\chart`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\ndebuhr__isidro\chart`
-
-```text
-Error: YAML parse error on isidro/templates/prometheus.yaml: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type util.SimpleHead
-
-Use --debug flag to render out invalid YAML
-```
-
-### 173. `thelande/charts`
-
-- Chart: `D:\helm_clones_github\thelande__charts\charts\opencloud`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\thelande__charts\charts\opencloud`
-
-```text
-Error: YAML parse error on opencloud/templates/secret.yaml: error converting YAML to JSON: yaml: line 5: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 174. `Vaibhav2goyal/alertmanager`
-
-- Chart: `D:\helm_clones_github\Vaibhav2goyal__alertmanager\scripts\kube-prometheus-stack`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Vaibhav2goyal__alertmanager\scripts\kube-prometheus-stack`
-
-```text
-Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
-
-Use --debug flag to render out invalid YAML
-```
-
-### 175. `Yahya-rabii/soge-plus`
-
-- Chart: `D:\helm_clones_github\Yahya-rabii__soge-plus\helm-charts\kube-prometheus-stack`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Yahya-rabii__soge-plus\helm-charts\kube-prometheus-stack`
-
-```text
-Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
-
-Use --debug flag to render out invalid YAML
-```
-
-### 176. `alercebroker/web-services`
-
-- Chart: `D:\helm_clones_github\alercebroker__web-services\charts\alerts-api`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\alercebroker__web-services\charts\alerts-api`
-
-```text
-Error: YAML parse error on alerts-api/templates/ingress.yaml: error converting YAML to JSON: yaml: line 36: found character that cannot start any token
-
-Use --debug flag to render out invalid YAML
-```
-
-### 177. `cisco-open/appdynamics-k8s-webhook-instrumentor`
-
-- Chart: `D:\helm_clones_github\cisco-open__appdynamics-k8s-webhook-instrumentor\buildEnv\helm\webhook-instrumentor`
-- Source: `template`
-- Values files: `D:\helm_clones_github\cisco-open__appdynamics-k8s-webhook-instrumentor\buildEnv\helm\webhook-instrumentor\values-sample.yaml`
-- Command: `helm template test D:\helm_clones_github\cisco-open__appdynamics-k8s-webhook-instrumentor\buildEnv\helm\webhook-instrumentor -f D:\helm_clones_github\cisco-open__appdynamics-k8s-webhook-instrumentor\buildEnv\helm\webhook-instrumentor\values-sample.yaml`
-
-```text
-Error: YAML parse error on webhook-instrumentor/templates/otel/cm-otel-collector-config.yaml: error converting YAML to JSON: yaml: line 10: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 178. `dan1dan12345678/Helm_charts`
-
-- Chart: `D:\helm_clones_github\dan1dan12345678__Helm_charts\kube-prometheus-stack`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\dan1dan12345678__Helm_charts\kube-prometheus-stack`
-
-```text
-Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 38: did not find expected key
-
-Use --debug flag to render out invalid YAML
-```
-
-### 179. `sydney900/CQRS-ES-Microservices`
-
-- Chart: `D:\helm_clones_github\sydney900__CQRS-ES-Microservices\Charts\V1`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\sydney900__CQRS-ES-Microservices\Charts\V1`
-
-```text
-Error: YAML parse error on V1/templates/ingress.yaml: error converting YAML to JSON: yaml: line 8: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-### 180. `Backstage-Epitech/cltest`
-
-- Chart: `D:\helm_clones_github\Backstage-Epitech__cltest\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Backstage-Epitech__cltest\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
-
-```text
-Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
-
-Use --debug flag to render out invalid YAML
-```
-
-### 181. `Bernardpro/ClusterGCP`
-
-- Chart: `D:\helm_clones_github\Bernardpro__ClusterGCP\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Bernardpro__ClusterGCP\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
-
-```text
-Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
-
-Use --debug flag to render out invalid YAML
-```
-
-### 182. `Bernardpro/ClusterGKE`
-
-- Chart: `D:\helm_clones_github\Bernardpro__ClusterGKE\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Bernardpro__ClusterGKE\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
-
-```text
-Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
-
-Use --debug flag to render out invalid YAML
-```
-
-### 183. `prometheus-community/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\kube-prometheus-stack`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\kube-prometheus-stack`
-
-```text
-Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
-
-Use --debug flag to render out invalid YAML
-```
-
-### 184. `linkerd/linkerd2`
-
-- Chart: `D:\helm_clones_artifacthub\linkerd__linkerd2\charts\patch`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\linkerd__linkerd2\charts\patch`
-
-```text
-Error: YAML parse error on patch/templates/patch.json: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal array into Go value of type util.SimpleHead
-
-Use --debug flag to render out invalid YAML
-```
-
-### 185. `code-server-boilerplates/charts`
-
-- Chart: `D:\helm_clones_artifacthub\code-server-boilerplates__charts\charts\starter-pack`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\code-server-boilerplates__charts\charts\starter-pack`
-
-```text
-Error: YAML parse error on starter-pack/templates/ingress.yaml: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal array into Go struct field .metadata.annotations of type string
-
-Use --debug flag to render out invalid YAML
-```
-
-### 186. `Warxcell/helm-chart`
-
-- Chart: `D:\helm_clones_artifacthub\Warxcell__helm-chart\charts\selenium`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\Warxcell__helm-chart\charts\selenium`
-
-```text
-Error: YAML parse error on selenium/templates/chrome-node-deployment.yaml: error converting YAML to JSON: yaml: line 32: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-```
-
-## `unknown.unclassified` (130)
-
-### 1. `rancher/rancher`
-
-- Chart: `D:\helm_clones_github\rancher__rancher\chart`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 2. `linode/apl-core`
-
-- Chart: `D:\helm_clones_github\linode__apl-core\chart\chart-index`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 3. `cozystack/cozystack`
-
-- Chart: `D:\helm_clones_github\cozystack__cozystack\packages\apps\bucket`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 4. `grafana/helm-charts`
-
-- Chart: `D:\helm_clones_github\grafana__helm-charts\charts\enterprise-metrics`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 5. `norwoodj/helm-docs`
-
-- Chart: `D:\helm_clones_github\norwoodj__helm-docs\example-charts\custom-template`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 6. `securitybunker/databunker`
-
-- Chart: `D:\helm_clones_github\securitybunker__databunker\charts\databunker`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 7. `WeBankFinTech/Prophecis`
-
-- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\install\Prophecis`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 8. `rancher/charts`
-
-- Chart: `D:\helm_clones_github\rancher__charts\charts\epinio\102.0.1+up1.6.2`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 9. `cloudnativeapp/charts`
-
-- Chart: `D:\helm_clones_github\cloudnativeapp__charts\curated\airflow`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 10. `radondb/radondb-mysql-kubernetes`
-
-- Chart: `D:\helm_clones_github\radondb__radondb-mysql-kubernetes\charts\mysql-operator`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 11. `IBM/charts`
-
-- Chart: `D:\helm_clones_github\IBM__charts\community\artifactory-ha`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 12. `JahstreetOrg/spark-on-kubernetes-helm`
-
-- Chart: `D:\helm_clones_github\JahstreetOrg__spark-on-kubernetes-helm\charts\spark-monitoring`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 13. `vexxhost/atmosphere`
-
-- Chart: `D:\helm_clones_github\vexxhost__atmosphere\charts\rook-ceph`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 14. `unixhot/devops-x`
-
-- Chart: `D:\helm_clones_github\unixhot__devops-x\helm\gitlab`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 15. `rancher/rke2-charts`
-
-- Chart: `D:\helm_clones_github\rancher__rke2-charts\packages\rke2-cilium-legacy\charts`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 16. `stackrox/helm-charts`
-
-- Chart: `D:\helm_clones_github\stackrox__helm-charts\3.0.41.0`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 17. `project-sunbird/sunbird-devops`
-
-- Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\monitoring\oauth2-proxy`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 18. `rancher/partner-charts`
-
-- Chart: `D:\helm_clones_github\rancher__partner-charts\charts\appscode\kubedb\2026.2.26`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 19. `CARV-ICS-FORTH/frisbee`
-
-- Chart: `D:\helm_clones_github\CARV-ICS-FORTH__frisbee\charts\platform`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 20. `wikibook/kubepractice`
-
-- Chart: `D:\helm_clones_github\wikibook__kubepractice\ch11\rook\deploy\charts\rook-ceph`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 21. `pluralsh/plural-artifacts`
-
-- Chart: `D:\helm_clones_github\pluralsh__plural-artifacts\airbyte\helm\airbyte`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 22. `boozallen/aissemble`
-
-- Chart: `D:\helm_clones_github\boozallen__aissemble\foundation\foundation-archetype\src\main\resources\archetype-resources\__rootArtifactId__-deploy\src\main\resources\apps\common-infrastructure`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 23. `tkestack/charts`
-
-- Chart: `D:\helm_clones_github\tkestack__charts\incubator\airflow`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 24. `sapcc/helm-charts`
-
-- Chart: `D:\helm_clones_github\sapcc__helm-charts\common\inventory-updater`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 25. `opea-project/Enterprise-Inference`
-
-- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\genai-gateway`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\genai-gateway`
-
-```text
-Error: execution error at (genaigateway/charts/redis/templates/NOTES.txt:216:4): 
-
-⚠ ERROR: Original containers have been substituted for unrecognized ones. Deploying this chart with non-standard containers is likely to cause degraded security and performance, broken chart features, and missing environment variables.
-
-Unrecognized images:
-  - docker.io/bitnamilegacy/redis:8.0.1-debian-12-r1
-
-If you are sure you want to proceed with non-standard containers, you can skip container image verification by setting the global parameter 'global.security.allowInsecureImages' to true.
-Further information can be obtained at https://github.com/bitnami/charts/issues/30850
-
-Use --debug flag to render out invalid YAML
-```
-
-### 26. `opendevstack/ods-quickstarters`
-
-- Chart: `D:\helm_clones_github\opendevstack__ods-quickstarters\be-rust-axum\rust-template\chart`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 27. `k8s-home-lab/helm-charts`
-
-- Chart: `D:\helm_clones_github\k8s-home-lab__helm-charts\unmaintained\audiobookshelf`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 28. `mojaloop/helm`
-
-- Chart: `D:\helm_clones_github\mojaloop__helm\perf-test-harness`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 29. `camptocamp/charts`
-
-- Chart: `D:\helm_clones_github\camptocamp__charts\common-build-code`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 30. `devtron-labs/charts`
-
-- Chart: `D:\helm_clones_github\devtron-labs__charts\charts\cluster-essentials`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 31. `YAKEcloud/yake`
-
-- Chart: `D:\helm_clones_github\YAKEcloud__yake\helmcharts\acl`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 32. `k0rdent/catalog`
-
-- Chart: `D:\helm_clones_github\k0rdent__catalog\apps\k0rdent-utils\charts\kgst`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\k0rdent__catalog\apps\k0rdent-utils\charts\kgst`
-
-```text
-Error: execution error at (kgst/templates/service-template.yaml:3:5): Invalid 'chart' format: must be 'name:version' (e.g. 'ingress-nginx:4.11.5')
-
-Use --debug flag to render out invalid YAML
-```
-
-### 33. `k0rdent/catalog`
-
-- Chart: `D:\helm_clones_github\k0rdent__catalog\apps\mysql\charts\mysql-operator-2.2.3`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 34. `Loongson-Cloud-Community/dockerfiles`
-
-- Chart: `D:\helm_clones_github\Loongson-Cloud-Community__dockerfiles\kubesphere\ks-installer\v3.2.1\roles\ks-multicluster\files\kubefed\kubefed`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 35. `junghoon2/k8s-class`
-
-- Chart: `D:\helm_clones_github\junghoon2__k8s-class\tempo\tempo-distributed-1.4.2`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 36. `cloud-native-toolkit/toolkit-charts`
-
-- Chart: `D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\ibm-sch\unit-tests\test-secret-gen-1\chart`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 37. `suse-edge/charts`
-
-- Chart: `D:\helm_clones_github\suse-edge__charts\charts\kubevirt\0.1.0`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 38. `ai-solution-eng/frameworks`
-
-- Chart: `D:\helm_clones_github\ai-solution-eng__frameworks\nemo-microservices\25.12.1`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 39. `Sagar2366/tech-talks`
-
-- Chart: `D:\helm_clones_github\Sagar2366__tech-talks\k8s_pune_oct22\prometheus-comunity-helm-chart\charts\prometheus-kafka-exporter`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 40. `boozallen/sdp-helm-chart`
-
-- Chart: `D:\helm_clones_github\boozallen__sdp-helm-chart`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 41. `randoli/helm-charts`
-
-- Chart: `D:\helm_clones_github\randoli__helm-charts\charts\network`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\randoli__helm-charts\charts\network`
-
-```text
-Error: execution error at (network/templates/tls-validate.yaml:7:6): 
-
-charts/network: TLS is not configured.
-
-Set one of:
-  tls.existingSecret.name=<secret-name>   (recommended — see README.md)
-  tls.generateJob.enabled=true             (auto-generate self-signed cert)
-
-
-Use --debug flag to render out invalid YAML
-```
-
-### 42. `randoli/helm-charts`
-
-- Chart: `D:\helm_clones_github\randoli__helm-charts\charts\randoli-agent`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 43. `unixfox/k8s`
-
-- Chart: `D:\helm_clones_github\unixfox__k8s\charts\eternaljukebox`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 44. `henrywhitaker3/homelab`
-
-- Chart: `D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\k3s\apps\networking\external-dns\chart`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\k3s\apps\networking\external-dns\chart`
-
-```text
-panic: runtime error: index out of range [1] with length 1
-
-goroutine 1 [running]:
-helm.sh/helm/v4/pkg/chart.(*v3Accessor).MetaDependencies(0xd3d47180260)
-	helm.sh/helm/v4/pkg/chart/common.go:167 +0xb3
-helm.sh/helm/v4/pkg/cmd.runInstall({0xd3d47326840, 0x2, 0x2}, 0xd3d46e0ce00, 0xd3d4701ee10, {0x7ff680310ce0, 0xd3d46d02048})
-	helm.sh/helm/v4/pkg/cmd/install.go:299 +0x39b
-helm.sh/helm/v4/pkg/cmd.newTemplateCmd.func2(0xd3d470a5b08, {0xd3d47326840, 0x2, 0x2})
-	helm.sh/helm/v4/pkg/cmd/template.go:108 +0x325
-github.com/spf13/cobra.(*Command).execute(0xd3d470a5b08, {0xd3d47326800, 0x2, 0x2})
-	github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb14
-github.com/spf13/cobra.(*Command).ExecuteC(0xd3d47148308)
-	github.com/spf13/cobra@v1.10.2/command.go:1148 +0x465
-github.com/spf13/cobra.(*Command).Execute(0x7ff680310ce0?)
-	github.com/spf13/cobra@v1.10.2/command.go:1071 +0x13
-main.main()
-	helm.sh/helm/v4/cmd/helm/helm.go:44 +0x167
-```
-
-### 45. `henrywhitaker3/homelab`
-
-- Chart: `D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\k3s\apps\networking\traefik\public\chart`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\k3s\apps\networking\traefik\public\chart`
-
-```text
-Error: execution error at (traefik-public/charts/traefik/templates/servicemonitor.yaml:5:10): ERROR: You have to deploy monitoring.coreos.com/v1 first
-
-Use --debug flag to render out invalid YAML
-```
-
-### 46. `logicalisuki/ubiquity-open`
-
-- Chart: `D:\helm_clones_github\logicalisuki__ubiquity-open\disabled\platform\opensm`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 47. `junghoon2/kube-books`
-
-- Chart: `D:\helm_clones_github\junghoon2__kube-books\ch11\rook\deploy\charts\rook-ceph`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 48. `llajas/homelab`
-
-- Chart: `D:\helm_clones_github\llajas__homelab\apps\plex-apps`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 49. `stakater/nordmart-apps-gitops-config`
-
-- Chart: `D:\helm_clones_github\stakater__nordmart-apps-gitops-config\01-arsenal\01-stakater-nordmart-review-api\01-dev`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 50. `thoughtworks/byor-voting-infrastructure`
-
-- Chart: `D:\helm_clones_github\thoughtworks__byor-voting-infrastructure\src\byor-voting-chart`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 51. `starlingx/openstack-armada-app`
-
-- Chart: `D:\helm_clones_github\starlingx__openstack-armada-app\stx-openstack-helm-fluxcd\stx-openstack-helm-fluxcd\helm-charts\clients`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 52. `appscode-cloud/ui-wizards`
-
-- Chart: `D:\helm_clones_github\appscode-cloud__ui-wizards\charts\kubedbcom-elasticsearch-editor`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 53. `cloudstark/helm-charts`
-
-- Chart: `D:\helm_clones_github\cloudstark__helm-charts\postgrest`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 54. `dungdm93/shipyard`
-
-- Chart: `D:\helm_clones_github\dungdm93__shipyard\helm\cloudflared`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\dungdm93__shipyard\helm\cloudflared`
-
-```text
-Error: execution error at (cloudflared/templates/deployment.yaml:50:41): Missing .Values.token
-
-Use --debug flag to render out invalid YAML
-```
-
-### 55. `dungdm93/shipyard`
-
-- Chart: `D:\helm_clones_github\dungdm93__shipyard\helm\datahub`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\dungdm93__shipyard\helm\datahub`
-
-```text
-Error: execution error at (datahub/templates/setup/secret.yaml:7:55): missing 'ebean.host'
-
-Use --debug flag to render out invalid YAML
-```
-
-### 56. `dungdm93/shipyard`
-
-- Chart: `D:\helm_clones_github\dungdm93__shipyard\helm\druid`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 57. `atsip76/k8s_asterisk_project`
-
-- Chart: `D:\helm_clones_github\atsip76__k8s_asterisk_project\service\logging\efk`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 58. `ibuildthecloud/rancher-charts`
-
-- Chart: `D:\helm_clones_github\ibuildthecloud__rancher-charts\charts\anchore-engine\0.1.0`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 59. `Otus-DevOps-2019-08/sgremyachikh_microservices`
-
-- Chart: `D:\helm_clones_github\Otus-DevOps-2019-08__sgremyachikh_microservices\kubernetes\Charts\reddit`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 60. `claytono/infra`
-
-- Chart: `D:\helm_clones_github\claytono__infra\kubernetes\crowdsec`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\claytono__infra\kubernetes\crowdsec`
-
-```text
-Error: execution error at (crowdsec-meta/charts/crowdsec/templates/agent-daemonSet.yaml:23:38): No acquisition or additionalAcquisition configured
-
-Use --debug flag to render out invalid YAML
-```
-
-### 61. `claytono/infra`
-
-- Chart: `D:\helm_clones_github\claytono__infra\kubernetes\nvidia-device-plugin`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\claytono__infra\kubernetes\nvidia-device-plugin`
-
-```text
-Error: execution error at (nvidia-device-plugin-meta/charts/nvidia-device-plugin/templates/validation.yml:19:4): 
-Running in the 'default' namespace is not recommended.
-Set 'allowDefaultNamespace=true' to bypass this error.
-Otherwise, use --namespace (with --create-namespace as necessary) to run in a specific namespace.
-See: https://helm.sh/docs/helm/helm_install/#options
-
-Use --debug flag to render out invalid YAML
-```
-
-### 62. `punchplatform/punch-helm`
-
-- Chart: `D:\helm_clones_github\punchplatform__punch-helm\operator`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 63. `EamonKeane/k8s-cluster-services`
-
-- Chart: `D:\helm_clones_github\EamonKeane__k8s-cluster-services\cluster-svc`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 64. `Makhuta/truecharts-archive-scale-catalog`
-
-- Chart: `D:\helm_clones_github\Makhuta__truecharts-archive-scale-catalog\incubator\archivebox\0.7.2`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 65. `kast-spells/kast-system`
-
-- Chart: `D:\helm_clones_github\kast-spells__kast-system\covenant`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\kast-spells__kast-system\covenant`
-
-```text
-Error: execution error at (covenant/templates/covenant.yaml:39:6): covenant/index.yaml not found in bookrack/test
-
-Use --debug flag to render out invalid YAML
-```
-
-### 66. `kast-spells/kast-system`
-
-- Chart: `D:\helm_clones_github\kast-spells__kast-system\librarian`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 67. `opspresso/argocd-env-addons`
-
-- Chart: `D:\helm_clones_github\opspresso__argocd-env-addons\charts\dashboard`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 68. `pluralsh/plural-helm-charts`
-
-- Chart: `D:\helm_clones_github\pluralsh__plural-helm-charts\charts\goldilocks`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 69. `AchillesChan/memo`
-
-- Chart: `D:\helm_clones_github\AchillesChan__memo\helm-demo\prometheus-charts\charts\prometheus-kafka-exporter`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 70. `KevMCarp/truecharts-catalog-fork`
-
-- Chart: `D:\helm_clones_github\KevMCarp__truecharts-catalog-fork\dependency\clickhouse\5.0.54`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 71. `NeuraLegion/helmcharts`
-
-- Chart: `D:\helm_clones_github\NeuraLegion__helmcharts\charts\altoroj`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 72. `Sureya/airflow_k8s_executor`
-
-- Chart: `D:\helm_clones_github\Sureya__airflow_k8s_executor\helm_charts\official\charts\incubator\distribution`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 73. `TheOpsDev/homelab`
-
-- Chart: `D:\helm_clones_github\TheOpsDev__homelab\charts\k8s-dashboard`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 74. `devops4solutions/guestbook`
-
-- Chart: `D:\helm_clones_github\devops4solutions__guestbook`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 75. `elastic/k8s-integration-infra`
-
-- Chart: `D:\helm_clones_github\elastic__k8s-integration-infra\infra\charts\elastic-agent`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 76. `rancher/ob-team-charts`
-
-- Chart: `D:\helm_clones_github\rancher__ob-team-charts\charts\prometheus-federator\0.0.1`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 77. `shelleg/ac-k8s`
-
-- Chart: `D:\helm_clones_github\shelleg__ac-k8s\helm\ant-umbrella`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 78. `vlab-research/fly`
-
-- Chart: `D:\helm_clones_github\vlab-research__fly\devops\vlab`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 79. `FIWARE-Ops/fiware-gitops`
-
-- Chart: `D:\helm_clones_github\FIWARE-Ops__fiware-gitops\aws\token\mongodb`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 80. `Kapil-Bhalodiya/E-commerce-Platform`
-
-- Chart: `D:\helm_clones_github\Kapil-Bhalodiya__E-commerce-Platform\infra\addons\frontend`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 81. `LuukHors/homelab`
-
-- Chart: `D:\helm_clones_github\LuukHors__homelab\products\_base`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 82. `MrE-Fog/ks-installer2`
-
-- Chart: `D:\helm_clones_github\MrE-Fog__ks-installer2\roles\ks-multicluster\files\kubefed\kubefed`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 83. `PilotDataPlatform/helm-charts`
-
-- Chart: `D:\helm_clones_github\PilotDataPlatform__helm-charts\keycloak-6.1.0`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 84. `TSMC-NYCU-LAB-13/infrastructures`
-
-- Chart: `D:\helm_clones_github\TSMC-NYCU-LAB-13__infrastructures\monitoring\tracing\jaeger`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 85. `VadimShtukan/otus_homework`
-
-- Chart: `D:\helm_clones_github\VadimShtukan__otus_homework\architect\lesson05\kubernetis\helm-chart`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 86. `adstanley/archive`
-
-- Chart: `D:\helm_clones_github\adstanley__archive\scale-catalog\incubator\archivebox\0.7.2`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 87. `codefuturist/helm-charts`
-
-- Chart: `D:\helm_clones_github\codefuturist__helm-charts\templates\chart-template`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 88. `dboeckli/spring-6-icecold-micro-service`
-
-- Chart: `D:\helm_clones_github\dboeckli__spring-6-icecold-micro-service\helm-charts`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 89. `hey101/scale-catalog`
-
-- Chart: `D:\helm_clones_github\hey101__scale-catalog\incubator\archivebox\0.7.2`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 90. `hmcts/hmcts-charts`
-
-- Chart: `D:\helm_clones_github\hmcts__hmcts-charts\stable\aac-manage-case-assignment`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 91. `legion-platform/legion-infrastructure`
-
-- Chart: `D:\helm_clones_github\legion-platform__legion-infrastructure\helms\monitoring`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 92. `nwthomas/gitops`
-
-- Chart: `D:\helm_clones_github\nwthomas__gitops\helm\nvidia-device-plugin`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\nwthomas__gitops\helm\nvidia-device-plugin`
-
-```text
-Error: execution error at (nvidia-device-plugin/templates/validation.yml:19:4): 
-Running in the 'default' namespace is not recommended.
-Set 'allowDefaultNamespace=true' to bypass this error.
-Otherwise, use --namespace (with --create-namespace as necessary) to run in a specific namespace.
-See: https://helm.sh/docs/helm/helm_install/#options
-
-Use --debug flag to render out invalid YAML
-```
-
-### 93. `otus-kuber-2019-12/gidmaster_platform`
-
-- Chart: `D:\helm_clones_github\otus-kuber-2019-12__gidmaster_platform\kubernetes-gitops\deploy\charts\cartservice`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 94. `rtang03/helm-charts`
-
-- Chart: `D:\helm_clones_github\rtang03__helm-charts\charts\nginx`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 95. `100rd/platform-design`
-
-- Chart: `D:\helm_clones_github\100rd__platform-design\apps\infra\victoriametrics`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 96. `AdmanTIC/helm-charts`
-
-- Chart: `D:\helm_clones_github\AdmanTIC__helm-charts\charts\zulip-legacy`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 97. `Arthur-B-DevOps/old_helm_charts`
-
-- Chart: `D:\helm_clones_github\Arthur-B-DevOps__old_helm_charts\charts\Old_charts\charts\incubator\distribution`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 98. `Clark1992/ECK1`
-
-- Chart: `D:\helm_clones_github\Clark1992__ECK1\src\Integration\ECK1.FailedViewRebuilder\Deploy\service`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 99. `goharbor/harbor`
-
-- Chart: `D:\helm_clones_artifacthub\goharbor__harbor\src\pkg\chart\testdata\harbor-schema1`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 100. `renovatebot/renovate`
-
-- Chart: `D:\helm_clones_artifacthub\renovatebot__renovate\lib\modules\manager\helmv3\__fixtures__`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 101. `rook/rook`
-
-- Chart: `D:\helm_clones_artifacthub\rook__rook\deploy\charts\rook-ceph`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 102. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp`
-
-```text
-Error: execution error at (victoria-logs-mcp/templates/deployment.yaml:54:25): .Values.vl.entrypoint should be set
-
-Use --debug flag to render out invalid YAML
-```
-
-### 103. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert`
-
-```text
-Error: execution error at (victoria-metrics-alert/templates/alert-server.yaml:8:6): server.datasource.url datasource URL must be specified
-
-Use --debug flag to render out invalid YAML
-```
-
-### 104. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly`
-
-```text
-Error: execution error at (victoria-metrics-anomaly/templates/server.yaml:2:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.
-       See https://victoriametrics.com/legal/esa/ for details.
-       Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/
-       for more information, visit https://victoriametrics.com/products/enterprise/
-       To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 105. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway`
-
-```text
-Error: execution error at (victoria-metrics-gateway/templates/server.yaml:1:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.
-       See https://victoriametrics.com/legal/esa/ for details.
-       Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/
-       for more information, visit https://victoriametrics.com/products/enterprise/
-       To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 106. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp`
-
-```text
-Error: execution error at (victoria-metrics-mcp/templates/deployment.yaml:64:25): either .Values.vm.cloudAPIKey or .Values.vm.entrypoint should be set
-
-Use --debug flag to render out invalid YAML
-```
-
-### 107. `VictoriaMetrics/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common`
-
-```text
-Error: execution error at (victoria-metrics-common/templates/service.yaml:7:14): .style argument should be either `plain` or `managed`
-
-Use --debug flag to render out invalid YAML
-```
-
-### 108. `kubernetes/charts`
-
-- Chart: `D:\helm_clones_artifacthub\kubernetes__charts\incubator\distribution`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 109. `influxdata/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
-
-```text
-Error: execution error at (influxdb3-clustered/templates/app-instance.yml:90:3): missing catalog.dsn.SecretName
-
-Use --debug flag to render out invalid YAML
-```
-
-### 110. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 111. `camunda/camunda-platform-helm`
-
-- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9`
-
-```text
-Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
-
-Use --debug flag to render out invalid YAML
-```
-
-### 112. `wiremind/wiremind-helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql -f D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml`
-
-```text
-Error: execution error at (postgresql/templates/statefulset.yaml:335:29): In order to enable metrics you need to specify a database (.Values.postgresqlDatabase or .Values.global.postgresql.postgresqlDatabase)
-
-Use --debug flag to render out invalid YAML
-```
-
-### 113. `groundhog2k/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42`
-
-```text
-Error: execution error at (remark42/templates/secureconfig.yaml:9:14): .settings.secretKey must contain value
-
-Use --debug flag to render out invalid YAML
-```
-
-### 114. `jfrog/charts`
-
-- Chart: `D:\helm_clones_artifacthub\jfrog__charts\stable\artifactory-cpp-ce`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 115. `gabe565/charts`
-
-- Chart: `D:\helm_clones_artifacthub\gabe565__charts\charts\adguard-home`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 116. `kestra-io/kestra`
-
-- Chart: `D:\helm_clones_artifacthub\kestra-io__kestra\charts\kestra-starter`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 117. `helm/charts`
-
-- Chart: `D:\helm_clones_artifacthub\helm__charts\incubator\distribution`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 118. `chatwoot/charts`
-
-- Chart: `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot`
-- Source: `template`
-- Values files: `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml`, `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml`
-- Command: `helm template test D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml`
-
-```text
-Error: execution error at (chatwoot/charts/redis/templates/NOTES.txt:182:4): 
-VALUES VALIDATION:
-
-redis: architecture
-    Using redis sentinel on standalone mode is not supported.
-    To deploy redis sentinel, please select the "replication" mode
-    (--set "architecture=replication,sentinel.enabled=true")
-
-Use --debug flag to render out invalid YAML
-```
-
-### 119. `kiwigrid/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\kiwigrid__helm-charts\charts\ditto-digital-twins`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 120. `mysql/mysql-operator`
-
-- Chart: `D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
-
-```text
-Error: execution error at (mysql-innodbcluster/templates/deployment_cluster.yaml:68:8): tls.routerCertAndPKsecretName: secret 'test-router-tls' not found in namespace 'default'
-
-Use --debug flag to render out invalid YAML
-```
-
-### 121. `one-acre-fund/oaf-public-charts`
-
-- Chart: `D:\helm_clones_artifacthub\one-acre-fund__oaf-public-charts\archive\geonode`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 122. `kubernetes/helm`
-
-- Chart: `D:\helm_clones_artifacthub\kubernetes__helm\internal\chart\v3\lint\rules\testdata\anotherbadchartfile`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 123. `helm/helm`
-
-- Chart: `D:\helm_clones_artifacthub\helm__helm\internal\chart\v3\lint\rules\testdata\anotherbadchartfile`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 124. `banzaicloud/banzai-charts`
-
-- Chart: `D:\helm_clones_artifacthub\banzaicloud__banzai-charts\argo`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 125. `ortelius/ortelius-charts`
-
-- Chart: `D:\helm_clones_artifacthub\ortelius__ortelius-charts\chart\ortelius`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 126. `netrisai/charts`
-
-- Chart: `D:\helm_clones_artifacthub\netrisai__charts\charts\netris-controller`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 127. `rhdh-bot/openshift-helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\redhat\redhat\redhat-mysql-persistent\0.0.2\src`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 128. `k8s-at-home/charts`
-
-- Chart: `D:\helm_clones_artifacthub\k8s-at-home__charts\charts\stable\firefly-iii`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 129. `kube-logging/helm-charts`
-
-- Chart: `D:\helm_clones_artifacthub\kube-logging__helm-charts\charts\logging-demo`
-- Source: `dependency`
-
-```text
-exit status 1
-```
-
-### 130. `fonzdm/servarr`
-
-- Chart: `D:\helm_clones_artifacthub\fonzdm__servarr\servarr`
-- Source: `dependency`
-
-```text
-exit status 1
 ```
 
 ## `template.values_schema_validation` (122)
@@ -32891,7 +28446,971 @@ libretranslate:
       - at '/persistence/share': additional properties 'cpuPath', 'gpuPath', 'size', 'accessMode', 'annotations' not allowed
 ```
 
-## `template.custom_validation` (36)
+## `unknown.unclassified` (105)
+
+### 1. `rancher/rancher`
+
+- Chart: `D:\helm_clones_github\rancher__rancher\chart`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 2. `linode/apl-core`
+
+- Chart: `D:\helm_clones_github\linode__apl-core\chart\chart-index`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 3. `cozystack/cozystack`
+
+- Chart: `D:\helm_clones_github\cozystack__cozystack\packages\apps\bucket`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 4. `grafana/helm-charts`
+
+- Chart: `D:\helm_clones_github\grafana__helm-charts\charts\enterprise-metrics`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 5. `norwoodj/helm-docs`
+
+- Chart: `D:\helm_clones_github\norwoodj__helm-docs\example-charts\custom-template`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 6. `securitybunker/databunker`
+
+- Chart: `D:\helm_clones_github\securitybunker__databunker\charts\databunker`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 7. `WeBankFinTech/Prophecis`
+
+- Chart: `D:\helm_clones_github\WeBankFinTech__Prophecis\install\Prophecis`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 8. `rancher/charts`
+
+- Chart: `D:\helm_clones_github\rancher__charts\charts\epinio\102.0.1+up1.6.2`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 9. `cloudnativeapp/charts`
+
+- Chart: `D:\helm_clones_github\cloudnativeapp__charts\curated\airflow`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 10. `radondb/radondb-mysql-kubernetes`
+
+- Chart: `D:\helm_clones_github\radondb__radondb-mysql-kubernetes\charts\mysql-operator`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 11. `JahstreetOrg/spark-on-kubernetes-helm`
+
+- Chart: `D:\helm_clones_github\JahstreetOrg__spark-on-kubernetes-helm\charts\spark-monitoring`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 12. `vexxhost/atmosphere`
+
+- Chart: `D:\helm_clones_github\vexxhost__atmosphere\charts\rook-ceph`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 13. `unixhot/devops-x`
+
+- Chart: `D:\helm_clones_github\unixhot__devops-x\helm\gitlab`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 14. `rancher/rke2-charts`
+
+- Chart: `D:\helm_clones_github\rancher__rke2-charts\packages\rke2-cilium-legacy\charts`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 15. `stackrox/helm-charts`
+
+- Chart: `D:\helm_clones_github\stackrox__helm-charts\3.0.41.0`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 16. `project-sunbird/sunbird-devops`
+
+- Chart: `D:\helm_clones_github\project-sunbird__sunbird-devops\kubernetes\helm_charts\monitoring\oauth2-proxy`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 17. `rancher/partner-charts`
+
+- Chart: `D:\helm_clones_github\rancher__partner-charts\charts\appscode\kubedb\2026.2.26`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 18. `CARV-ICS-FORTH/frisbee`
+
+- Chart: `D:\helm_clones_github\CARV-ICS-FORTH__frisbee\charts\platform`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 19. `wikibook/kubepractice`
+
+- Chart: `D:\helm_clones_github\wikibook__kubepractice\ch11\rook\deploy\charts\rook-ceph`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 20. `pluralsh/plural-artifacts`
+
+- Chart: `D:\helm_clones_github\pluralsh__plural-artifacts\airbyte\helm\airbyte`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 21. `boozallen/aissemble`
+
+- Chart: `D:\helm_clones_github\boozallen__aissemble\foundation\foundation-archetype\src\main\resources\archetype-resources\__rootArtifactId__-deploy\src\main\resources\apps\common-infrastructure`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 22. `tkestack/charts`
+
+- Chart: `D:\helm_clones_github\tkestack__charts\incubator\airflow`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 23. `sapcc/helm-charts`
+
+- Chart: `D:\helm_clones_github\sapcc__helm-charts\common\inventory-updater`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 24. `opendevstack/ods-quickstarters`
+
+- Chart: `D:\helm_clones_github\opendevstack__ods-quickstarters\be-rust-axum\rust-template\chart`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 25. `k8s-home-lab/helm-charts`
+
+- Chart: `D:\helm_clones_github\k8s-home-lab__helm-charts\unmaintained\audiobookshelf`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 26. `mojaloop/helm`
+
+- Chart: `D:\helm_clones_github\mojaloop__helm\perf-test-harness`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 27. `camptocamp/charts`
+
+- Chart: `D:\helm_clones_github\camptocamp__charts\common-build-code`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 28. `devtron-labs/charts`
+
+- Chart: `D:\helm_clones_github\devtron-labs__charts\charts\cluster-essentials`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 29. `YAKEcloud/yake`
+
+- Chart: `D:\helm_clones_github\YAKEcloud__yake\helmcharts\acl`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 30. `k0rdent/catalog`
+
+- Chart: `D:\helm_clones_github\k0rdent__catalog\apps\mysql\charts\mysql-operator-2.2.3`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 31. `Loongson-Cloud-Community/dockerfiles`
+
+- Chart: `D:\helm_clones_github\Loongson-Cloud-Community__dockerfiles\kubesphere\ks-installer\v3.2.1\roles\ks-multicluster\files\kubefed\kubefed`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 32. `junghoon2/k8s-class`
+
+- Chart: `D:\helm_clones_github\junghoon2__k8s-class\tempo\tempo-distributed-1.4.2`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 33. `cloud-native-toolkit/toolkit-charts`
+
+- Chart: `D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\ibm-sch\unit-tests\test-secret-gen-1\chart`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 34. `suse-edge/charts`
+
+- Chart: `D:\helm_clones_github\suse-edge__charts\charts\kubevirt\0.1.0`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 35. `ai-solution-eng/frameworks`
+
+- Chart: `D:\helm_clones_github\ai-solution-eng__frameworks\nemo-microservices\25.12.1`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 36. `Sagar2366/tech-talks`
+
+- Chart: `D:\helm_clones_github\Sagar2366__tech-talks\k8s_pune_oct22\prometheus-comunity-helm-chart\charts\prometheus-kafka-exporter`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 37. `boozallen/sdp-helm-chart`
+
+- Chart: `D:\helm_clones_github\boozallen__sdp-helm-chart`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 38. `randoli/helm-charts`
+
+- Chart: `D:\helm_clones_github\randoli__helm-charts\charts\randoli-agent`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 39. `unixfox/k8s`
+
+- Chart: `D:\helm_clones_github\unixfox__k8s\charts\eternaljukebox`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 40. `henrywhitaker3/homelab`
+
+- Chart: `D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\k3s\apps\networking\external-dns\chart`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\k3s\apps\networking\external-dns\chart`
+
+```text
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+helm.sh/helm/v4/pkg/chart.(*v3Accessor).MetaDependencies(0xd3d47180260)
+	helm.sh/helm/v4/pkg/chart/common.go:167 +0xb3
+helm.sh/helm/v4/pkg/cmd.runInstall({0xd3d47326840, 0x2, 0x2}, 0xd3d46e0ce00, 0xd3d4701ee10, {0x7ff680310ce0, 0xd3d46d02048})
+	helm.sh/helm/v4/pkg/cmd/install.go:299 +0x39b
+helm.sh/helm/v4/pkg/cmd.newTemplateCmd.func2(0xd3d470a5b08, {0xd3d47326840, 0x2, 0x2})
+	helm.sh/helm/v4/pkg/cmd/template.go:108 +0x325
+github.com/spf13/cobra.(*Command).execute(0xd3d470a5b08, {0xd3d47326800, 0x2, 0x2})
+	github.com/spf13/cobra@v1.10.2/command.go:1015 +0xb14
+github.com/spf13/cobra.(*Command).ExecuteC(0xd3d47148308)
+	github.com/spf13/cobra@v1.10.2/command.go:1148 +0x465
+github.com/spf13/cobra.(*Command).Execute(0x7ff680310ce0?)
+	github.com/spf13/cobra@v1.10.2/command.go:1071 +0x13
+main.main()
+	helm.sh/helm/v4/cmd/helm/helm.go:44 +0x167
+```
+
+### 41. `logicalisuki/ubiquity-open`
+
+- Chart: `D:\helm_clones_github\logicalisuki__ubiquity-open\disabled\platform\opensm`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 42. `junghoon2/kube-books`
+
+- Chart: `D:\helm_clones_github\junghoon2__kube-books\ch11\rook\deploy\charts\rook-ceph`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 43. `llajas/homelab`
+
+- Chart: `D:\helm_clones_github\llajas__homelab\apps\plex-apps`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 44. `stakater/nordmart-apps-gitops-config`
+
+- Chart: `D:\helm_clones_github\stakater__nordmart-apps-gitops-config\01-arsenal\01-stakater-nordmart-review-api\01-dev`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 45. `thoughtworks/byor-voting-infrastructure`
+
+- Chart: `D:\helm_clones_github\thoughtworks__byor-voting-infrastructure\src\byor-voting-chart`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 46. `starlingx/openstack-armada-app`
+
+- Chart: `D:\helm_clones_github\starlingx__openstack-armada-app\stx-openstack-helm-fluxcd\stx-openstack-helm-fluxcd\helm-charts\clients`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 47. `appscode-cloud/ui-wizards`
+
+- Chart: `D:\helm_clones_github\appscode-cloud__ui-wizards\charts\kubedbcom-elasticsearch-editor`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 48. `cloudstark/helm-charts`
+
+- Chart: `D:\helm_clones_github\cloudstark__helm-charts\postgrest`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 49. `dungdm93/shipyard`
+
+- Chart: `D:\helm_clones_github\dungdm93__shipyard\helm\druid`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 50. `atsip76/k8s_asterisk_project`
+
+- Chart: `D:\helm_clones_github\atsip76__k8s_asterisk_project\service\logging\efk`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 51. `ibuildthecloud/rancher-charts`
+
+- Chart: `D:\helm_clones_github\ibuildthecloud__rancher-charts\charts\anchore-engine\0.1.0`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 52. `Otus-DevOps-2019-08/sgremyachikh_microservices`
+
+- Chart: `D:\helm_clones_github\Otus-DevOps-2019-08__sgremyachikh_microservices\kubernetes\Charts\reddit`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 53. `punchplatform/punch-helm`
+
+- Chart: `D:\helm_clones_github\punchplatform__punch-helm\operator`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 54. `EamonKeane/k8s-cluster-services`
+
+- Chart: `D:\helm_clones_github\EamonKeane__k8s-cluster-services\cluster-svc`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 55. `Makhuta/truecharts-archive-scale-catalog`
+
+- Chart: `D:\helm_clones_github\Makhuta__truecharts-archive-scale-catalog\incubator\archivebox\0.7.2`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 56. `kast-spells/kast-system`
+
+- Chart: `D:\helm_clones_github\kast-spells__kast-system\librarian`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 57. `opspresso/argocd-env-addons`
+
+- Chart: `D:\helm_clones_github\opspresso__argocd-env-addons\charts\dashboard`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 58. `pluralsh/plural-helm-charts`
+
+- Chart: `D:\helm_clones_github\pluralsh__plural-helm-charts\charts\goldilocks`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 59. `AchillesChan/memo`
+
+- Chart: `D:\helm_clones_github\AchillesChan__memo\helm-demo\prometheus-charts\charts\prometheus-kafka-exporter`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 60. `KevMCarp/truecharts-catalog-fork`
+
+- Chart: `D:\helm_clones_github\KevMCarp__truecharts-catalog-fork\dependency\clickhouse\5.0.54`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 61. `NeuraLegion/helmcharts`
+
+- Chart: `D:\helm_clones_github\NeuraLegion__helmcharts\charts\altoroj`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 62. `Sureya/airflow_k8s_executor`
+
+- Chart: `D:\helm_clones_github\Sureya__airflow_k8s_executor\helm_charts\official\charts\incubator\distribution`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 63. `TheOpsDev/homelab`
+
+- Chart: `D:\helm_clones_github\TheOpsDev__homelab\charts\k8s-dashboard`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 64. `devops4solutions/guestbook`
+
+- Chart: `D:\helm_clones_github\devops4solutions__guestbook`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 65. `elastic/k8s-integration-infra`
+
+- Chart: `D:\helm_clones_github\elastic__k8s-integration-infra\infra\charts\elastic-agent`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 66. `rancher/ob-team-charts`
+
+- Chart: `D:\helm_clones_github\rancher__ob-team-charts\charts\prometheus-federator\0.0.1`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 67. `shelleg/ac-k8s`
+
+- Chart: `D:\helm_clones_github\shelleg__ac-k8s\helm\ant-umbrella`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 68. `vlab-research/fly`
+
+- Chart: `D:\helm_clones_github\vlab-research__fly\devops\vlab`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 69. `FIWARE-Ops/fiware-gitops`
+
+- Chart: `D:\helm_clones_github\FIWARE-Ops__fiware-gitops\aws\token\mongodb`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 70. `Kapil-Bhalodiya/E-commerce-Platform`
+
+- Chart: `D:\helm_clones_github\Kapil-Bhalodiya__E-commerce-Platform\infra\addons\frontend`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 71. `LuukHors/homelab`
+
+- Chart: `D:\helm_clones_github\LuukHors__homelab\products\_base`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 72. `MrE-Fog/ks-installer2`
+
+- Chart: `D:\helm_clones_github\MrE-Fog__ks-installer2\roles\ks-multicluster\files\kubefed\kubefed`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 73. `PilotDataPlatform/helm-charts`
+
+- Chart: `D:\helm_clones_github\PilotDataPlatform__helm-charts\keycloak-6.1.0`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 74. `TSMC-NYCU-LAB-13/infrastructures`
+
+- Chart: `D:\helm_clones_github\TSMC-NYCU-LAB-13__infrastructures\monitoring\tracing\jaeger`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 75. `VadimShtukan/otus_homework`
+
+- Chart: `D:\helm_clones_github\VadimShtukan__otus_homework\architect\lesson05\kubernetis\helm-chart`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 76. `adstanley/archive`
+
+- Chart: `D:\helm_clones_github\adstanley__archive\scale-catalog\incubator\archivebox\0.7.2`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 77. `codefuturist/helm-charts`
+
+- Chart: `D:\helm_clones_github\codefuturist__helm-charts\templates\chart-template`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 78. `dboeckli/spring-6-icecold-micro-service`
+
+- Chart: `D:\helm_clones_github\dboeckli__spring-6-icecold-micro-service\helm-charts`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 79. `hey101/scale-catalog`
+
+- Chart: `D:\helm_clones_github\hey101__scale-catalog\incubator\archivebox\0.7.2`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 80. `hmcts/hmcts-charts`
+
+- Chart: `D:\helm_clones_github\hmcts__hmcts-charts\stable\aac-manage-case-assignment`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 81. `legion-platform/legion-infrastructure`
+
+- Chart: `D:\helm_clones_github\legion-platform__legion-infrastructure\helms\monitoring`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 82. `otus-kuber-2019-12/gidmaster_platform`
+
+- Chart: `D:\helm_clones_github\otus-kuber-2019-12__gidmaster_platform\kubernetes-gitops\deploy\charts\cartservice`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 83. `rtang03/helm-charts`
+
+- Chart: `D:\helm_clones_github\rtang03__helm-charts\charts\nginx`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 84. `100rd/platform-design`
+
+- Chart: `D:\helm_clones_github\100rd__platform-design\apps\infra\victoriametrics`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 85. `AdmanTIC/helm-charts`
+
+- Chart: `D:\helm_clones_github\AdmanTIC__helm-charts\charts\zulip-legacy`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 86. `Arthur-B-DevOps/old_helm_charts`
+
+- Chart: `D:\helm_clones_github\Arthur-B-DevOps__old_helm_charts\charts\Old_charts\charts\incubator\distribution`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 87. `goharbor/harbor`
+
+- Chart: `D:\helm_clones_artifacthub\goharbor__harbor\src\pkg\chart\testdata\harbor-schema1`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 88. `renovatebot/renovate`
+
+- Chart: `D:\helm_clones_artifacthub\renovatebot__renovate\lib\modules\manager\helmv3\__fixtures__`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 89. `rook/rook`
+
+- Chart: `D:\helm_clones_artifacthub\rook__rook\deploy\charts\rook-ceph`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 90. `kubernetes/charts`
+
+- Chart: `D:\helm_clones_artifacthub\kubernetes__charts\incubator\distribution`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 91. `jfrog/charts`
+
+- Chart: `D:\helm_clones_artifacthub\jfrog__charts\stable\artifactory-cpp-ce`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 92. `gabe565/charts`
+
+- Chart: `D:\helm_clones_artifacthub\gabe565__charts\charts\adguard-home`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 93. `kestra-io/kestra`
+
+- Chart: `D:\helm_clones_artifacthub\kestra-io__kestra\charts\kestra-starter`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 94. `helm/charts`
+
+- Chart: `D:\helm_clones_artifacthub\helm__charts\incubator\distribution`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 95. `kiwigrid/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\kiwigrid__helm-charts\charts\ditto-digital-twins`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 96. `one-acre-fund/oaf-public-charts`
+
+- Chart: `D:\helm_clones_artifacthub\one-acre-fund__oaf-public-charts\archive\geonode`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 97. `kubernetes/helm`
+
+- Chart: `D:\helm_clones_artifacthub\kubernetes__helm\internal\chart\v3\lint\rules\testdata\anotherbadchartfile`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 98. `helm/helm`
+
+- Chart: `D:\helm_clones_artifacthub\helm__helm\internal\chart\v3\lint\rules\testdata\anotherbadchartfile`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 99. `banzaicloud/banzai-charts`
+
+- Chart: `D:\helm_clones_artifacthub\banzaicloud__banzai-charts\argo`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 100. `ortelius/ortelius-charts`
+
+- Chart: `D:\helm_clones_artifacthub\ortelius__ortelius-charts\chart\ortelius`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 101. `netrisai/charts`
+
+- Chart: `D:\helm_clones_artifacthub\netrisai__charts\charts\netris-controller`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 102. `rhdh-bot/openshift-helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\redhat\redhat\redhat-mysql-persistent\0.0.2\src`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 103. `k8s-at-home/charts`
+
+- Chart: `D:\helm_clones_artifacthub\k8s-at-home__charts\charts\stable\firefly-iii`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 104. `kube-logging/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\kube-logging__helm-charts\charts\logging-demo`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+### 105. `fonzdm/servarr`
+
+- Chart: `D:\helm_clones_artifacthub\fonzdm__servarr\servarr`
+- Source: `dependency`
+
+```text
+exit status 1
+```
+
+## `template.custom_validation` (35)
 
 ### 1. `junghoon2/k8s-class`
 
@@ -33112,19 +29631,7 @@ Error: execution error at (aws-load-balancer-controller/charts/aws-load-balancer
 Use --debug flag to render out invalid YAML
 ```
 
-### 19. `Clark1992/ECK1`
-
-- Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\zitadel-upstream`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\zitadel-upstream`
-
-```text
-Error: execution error at (zitadel/templates/secret_zitadel-masterkey.yaml:2:4): Either set .Values.zitadel.masterkey xor .Values.zitadel.masterkeySecretName
-
-Use --debug flag to render out invalid YAML
-```
-
-### 20. `aws/eks-charts`
+### 19. `aws/eks-charts`
 
 - Chart: `D:\helm_clones_artifacthub\aws__eks-charts\stable\aws-load-balancer-controller`
 - Source: `template`
@@ -33136,7 +29643,7 @@ Error: execution error at (aws-load-balancer-controller/templates/deployment.yam
 Use --debug flag to render out invalid YAML
 ```
 
-### 21. `itzg/minecraft-server-charts`
+### 20. `itzg/minecraft-server-charts`
 
 - Chart: `D:\helm_clones_artifacthub\itzg__minecraft-server-charts\charts\rcon-web-admin`
 - Source: `template`
@@ -33148,7 +29655,7 @@ Error: execution error at (rcon-web-admin/templates/secrets.yaml:15:10): UI pass
 Use --debug flag to render out invalid YAML
 ```
 
-### 22. `VictoriaMetrics/helm-charts`
+### 21. `VictoriaMetrics/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-multilevel`
 - Source: `template`
@@ -33160,7 +29667,7 @@ Error: execution error at (victoria-logs-multilevel/templates/vlselect-server.ya
 Use --debug flag to render out invalid YAML
 ```
 
-### 23. `actions/actions-runner-controller`
+### 22. `actions/actions-runner-controller`
 
 - Chart: `D:\helm_clones_artifacthub\actions__actions-runner-controller\charts\gha-runner-scale-set`
 - Source: `template`
@@ -33172,7 +29679,7 @@ Error: execution error at (gha-runner-scale-set/templates/manager_role_binding.y
 Use --debug flag to render out invalid YAML
 ```
 
-### 24. `EugenMayer/helm-charts`
+### 23. `EugenMayer/helm-charts`
 
 - Chart: `D:\helm_clones_github\EugenMayer__helm-charts\charts\cert-manager-cloudflare-config`
 - Source: `template`
@@ -33184,7 +29691,7 @@ Error: execution error at (cert-manager-cloudflare-config/templates/le_issuer.ya
 Use --debug flag to render out invalid YAML
 ```
 
-### 25. `EugenMayer/helm-charts`
+### 24. `EugenMayer/helm-charts`
 
 - Chart: `D:\helm_clones_github\EugenMayer__helm-charts\charts\cert-manager-external-account-bindings-cloudflare-config`
 - Source: `template`
@@ -33196,7 +29703,7 @@ Error: execution error at (cert-manager-external-account-bindings-cloudflare-con
 Use --debug flag to render out invalid YAML
 ```
 
-### 26. `EugenMayer/helm-charts`
+### 25. `EugenMayer/helm-charts`
 
 - Chart: `D:\helm_clones_github\EugenMayer__helm-charts\charts\openldap-test`
 - Source: `template`
@@ -33208,7 +29715,7 @@ Error: execution error at (openldap-test/templates/common.yaml:1:3): Service - E
 Use --debug flag to render out invalid YAML
 ```
 
-### 27. `EugenMayer/helm-charts`
+### 26. `EugenMayer/helm-charts`
 
 - Chart: `D:\helm_clones_github\EugenMayer__helm-charts\charts\rundeck`
 - Source: `template`
@@ -33220,7 +29727,7 @@ Error: execution error at (rundeck/templates/rundeck-backend-deployment.yaml:78:
 Use --debug flag to render out invalid YAML
 ```
 
-### 28. `kestra-io/kestra`
+### 27. `kestra-io/kestra`
 
 - Chart: `D:\helm_clones_artifacthub\kestra-io__kestra\charts\kestra`
 - Source: `template`
@@ -33232,7 +29739,7 @@ Error: execution error at (kestra/templates/checks.yaml:25:3): At least one of .
 Use --debug flag to render out invalid YAML
 ```
 
-### 29. `neo4j/helm-charts`
+### 28. `neo4j/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\neo4j__helm-charts\neo4j-admin`
 - Source: `template`
@@ -33244,7 +29751,7 @@ Error: execution error at (neo4j-admin/templates/_validation.tpl:68:16): Empty f
 Use --debug flag to render out invalid YAML
 ```
 
-### 30. `aws/karpenter`
+### 29. `aws/karpenter`
 
 - Chart: `D:\helm_clones_artifacthub\aws__karpenter\charts\karpenter`
 - Source: `template`
@@ -33256,7 +29763,7 @@ Error: execution error at (karpenter/templates/deployment.yaml:151:25): Chart ca
 Use --debug flag to render out invalid YAML
 ```
 
-### 31. `kubitodev/helm`
+### 30. `kubitodev/helm`
 
 - Chart: `D:\helm_clones_artifacthub\kubitodev__helm\charts\kubernetes-cloudflare-ddns`
 - Source: `template`
@@ -33268,7 +29775,7 @@ Error: execution error at (kubernetes-cloudflare-ddns/templates/secret.yaml:9:15
 Use --debug flag to render out invalid YAML
 ```
 
-### 32. `kubitodev/helm`
+### 31. `kubitodev/helm`
 
 - Chart: `D:\helm_clones_artifacthub\kubitodev__helm\charts\traefik-cloudflared-source-ip`
 - Source: `template`
@@ -33280,7 +29787,7 @@ Error: execution error at (traefik-cloudflared-source-ip/charts/traefik/template
 Use --debug flag to render out invalid YAML
 ```
 
-### 33. `spiffe/helm-charts-hardened`
+### 32. `spiffe/helm-charts-hardened`
 
 - Chart: `D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spiffe-step-ssh`
 - Source: `template`
@@ -33292,7 +29799,7 @@ Error: execution error at (spiffe-step-ssh/templates/step-config.yaml:29:6): You
 Use --debug flag to render out invalid YAML
 ```
 
-### 34. `fosrl/helm-charts`
+### 33. `fosrl/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt`
 - Source: `template`
@@ -33304,7 +29811,7 @@ Error: execution error at (newt/templates/secret-newt.yaml:44:4): newtInstances:
 Use --debug flag to render out invalid YAML
 ```
 
-### 35. `fosrl/helm-charts`
+### 34. `fosrl/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\fosrl__helm-charts\charts\newt`
 - Source: `template`
@@ -33317,7 +29824,7 @@ Error: execution error at (newt/templates/secret-newt.yaml:24:4): newtInstances:
 Use --debug flag to render out invalid YAML
 ```
 
-### 36. `StrangeBeeCorp/helm-charts`
+### 35. `StrangeBeeCorp/helm-charts`
 
 - Chart: `D:\helm_clones_artifacthub\StrangeBeeCorp__helm-charts\cortex-charts\cortex`
 - Source: `template`
@@ -33325,6 +29832,1165 @@ Use --debug flag to render out invalid YAML
 
 ```text
 Error: execution error at (cortex/templates/secrets.yaml:1:4): ERROR: You must change the default httpSecret value. Please set cortex.httpSecret to a secure random string of at least 32 characters, or provide an existing secret via cortex.k8sSecretName.
+
+Use --debug flag to render out invalid YAML
+```
+
+## `template.malformed_yaml` (31)
+
+### 1. `trueforge-org/truecharts`
+
+- Chart: `D:\helm_clones_github\trueforge-org__truecharts\charts\stable\clamav`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\trueforge-org__truecharts\charts\stable\clamav`
+
+```text
+Error: execution error at (clamav/templates/common.yaml:13:3): Chart - Values contain an error that may be a result of merging. Make sure you don't have any invalid YAML characters starting a value. 
+ Renderd Values containing the error: 
+
+ ============================================================================================= 
+ TZ: UTC
+addons:
+  codeserver:
+    container:
+      enabled: true
+      env:
+        DEFAULT_WORKSPACE: /
+        PORT: 12321
+      imageSelector: codeserverImage
+      probes:
+        liveness:
+          enabled: true
+          path: /
+          port: 12321
+        readiness:
+          enabled: true
+          path: /
+          port: 12321
+        startup:
+          enabled: true
+          path: /
+          port: 12321
+      resources:
+        excludeExtra: true
+      securityContext:
+        readOnlyRootFilesystem: false
+        runAsGroup: 0
+        runAsNonRoot: false
+        runAsUser: 0
+      targetSelector:
+      - main
+    enabled: false
+    ingress:
+      annotations: {}
+      enabled: false
+      hosts:
+      - host: code.chart-example.local
+        paths:
+        - path: /
+          pathType: Prefix
+      labels: {}
+      tls: []
+    service:
+      enabled: true
+      ports:
+        codeserver:
+          enabled: true
+          port: 12321
+          primary: true
+          protocol: http
+          targetPort: 12321
+      type: ClusterIP
+  gluetun:
+    container:
+      enabled: true
+      env:
+        DNS_KEEP_NAMESERVER: "on"
+        DOT: "off"
+        FIREWALL: "off"
+        FIREWALL_INPUT_PORTS: ""
+        FIREWALL_OUTBOUND_SUBNETS: ""
+      imageSelector: gluetunImage
+      probes:
+        liveness:
+          enabled: false
+        readiness:
+          enabled: false
+        startup:
+          enabled: false
+      resources:
+        excludeExtra: true
+      securityContext:
+        capabilities:
+          add:
+          - NET_ADMIN
+          - NET_RAW
+          - MKNOD
+        readOnlyRootFilesystem: false
+        runAsGroup: 568
+        runAsNonRoot: false
+        runAsUser: 0
+    enabled: false
+    targetSelector:
+    - main
+  netshoot:
+    container:
+      command:
+      - /bin/sh
+      - -c
+      - sleep infinity
+      enabled: true
+      imageSelector: netshootImage
+      probes:
+        liveness:
+          enabled: false
+        readiness:
+          enabled: false
+        startup:
+          enabled: false
+      resources:
+        excludeExtra: true
+      securityContext:
+        capabilities:
+          add:
+          - NET_ADMIN
+          - NET_RAW
+        readOnlyRootFilesystem: false
+        runAsGroup: 0
+        runAsNonRoot: false
+        runAsUser: 0
+    enabled: false
+  tailscale:
+    accept_dns: false
+    annotations: {}
+    auth_once: true
+    authkey: ""
+    config: ""
+    container:
+      command:
+      - /usr/local/bin/containerboot
+      enabled: true
+      env:
+        TS_ACCEPT_DNS: false
+        TS_AUTH_KEY: ""
+        TS_AUTH_ONCE: true
+        TS_DEST_IP: ""
+        TS_EXTRA_ARGS: ""
+        TS_KUBE_SECRET: ""
+        TS_OUTBOUND_HTTP_PROXY_LISTEN: ""
+        TS_ROUTES: ""
+        TS_SOCKET: /var/run/tailscale/tailscaled.sock
+        TS_SOCKS5_SERVER: ""
+        TS_STATE_DIR: /var/lib/tailscale/state
+        TS_TAILSCALED_EXTRA_ARGS: ""
+        TS_USERSPACE: true
+      imageSelector: tailscaleImage
+      probes:
+        liveness:
+          enabled: false
+        readiness:
+          enabled: false
+        startup:
+          enabled: false
+      resources:
+        excludeExtra: true
+      securityContext:
+        capabilities:
+          add:
+          - NET_ADMIN
+          - NET_RAW
+    daemon_extra_args: ""
+    dest_ip: ""
+    enabled: false
+    extra_args: ""
+    outbound_http_proxy_listen: ""
+    routes: ""
+    sock5_server: ""
+    targetSelector:
+    - main
+    userspace: true
+alpineImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/tccr/alpine
+  tag: v3.22.1@sha256:6dc807ae4f2867cb2d00d061f8f579f1966420ad792c179ac68072ab235109f8
+certificate: {}
+chartContext:
+  appHost: 127.0.0.1
+  appPath: /
+  appPort: "3310"
+  appProtocol: http
+  appUrl: http://127.0.0.1:3310
+  appUrlWithPortAndPath: http://127.0.0.1:3310/
+  podCIDR: 172.16.0.0/16
+  svcCIDR: 172.17.0.0/16
+clamav:
+  cron_enabled: true
+  cron_schedule: '* * * * *'
+  date_format: +%m-%d-%Y_%H.%M.%S
+  extra_args: ""
+  log_file_name: clamscan_report
+  report_path: /logs
+clickhouse:
+  creds: {}
+  enabled: false
+  includeCommon: false
+  password: PLACEHOLDERPASSWORD
+cnpg:
+  main:
+    annotations: {}
+    backups:
+      credentials: ""
+      destinationPath: ""
+      enabled: false
+      encryption:
+        enabled: false
+      manualBackups: []
+      retentionPolicy: 30d
+      scheduledBackups:
+      - backupOwnerReference: self
+        immediate: true
+        name: daily-backup
+        schedule: 0 0 0 * * *
+        suspend: false
+      servername: ""
+      target: ""
+    cluster:
+      annotations: {}
+      env: {}
+      envFrom: {}
+      initdb: {}
+      instances: 2
+      labels: {}
+      logLevel: info
+      primaryUpdateMethod: switchover
+      primaryUpdateStrategy: unsupervised
+      singleNode: false
+    creds: {}
+    database: app
+    enabled: false
+    hibernate: false
+    labels: {}
+    mode: standalone
+    monitoring:
+      customQueries: []
+      disableDefaultQueries: false
+      enablePodMonitor: false
+    password: PLACEHOLDERPASSWORD
+    pgVersion: 16
+    pooler:
+      annotations: {}
+      createRO: false
+      enabled: false
+      instances: 2
+      labels: {}
+      poolMode: session
+    primary: true
+    recovery:
+      backupName: ""
+      clusterName: ""
+      destinationPath: ""
+      method: object_store
+      pitrTarget:
+        time: ""
+      servername: ""
+    type: postgres
+    user: app
+codeserverImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/containerforge/code-server
+  tag: 4.118.0@sha256:b02714ac2d0ee60df7dbcb2aa8b323779d97b71d2d40deeb412831a9530f7a9c
+configmap: {}
+containerOptions:
+  NVIDIA_CAPS:
+  - all
+credentials: {}
+cronjob:
+  annotations: {}
+  failedJobsHistoryLimit: 5
+  successfulJobsHistoryLimit: 2
+diagnosticMode:
+  enabled: false
+extraTpl: []
+global:
+  annotations: {}
+  diagnosticMode:
+    enabled: false
+  fallbackDefaults:
+    accessModes:
+    - ReadWriteOnce
+    cnpg:
+      pgVersion: 16
+      skipEmptyWalArchiveCheck: true
+    persistenceType: pvc
+    probeTimeouts:
+      liveness:
+        failureThreshold: 5
+        initialDelaySeconds: 12
+        periodSeconds: 15
+        successThreshold: 1
+        timeoutSeconds: 5
+      readiness:
+        failureThreshold: 4
+        initialDelaySeconds: 10
+        periodSeconds: 12
+        successThreshold: 2
+        timeoutSeconds: 5
+      startup:
+        failureThreshold: 60
+        initialDelaySeconds: 10
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 3
+    probeType: http
+    pvcRetain: false
+    pvcSize: 100Gi
+    serviceProtocol: tcp
+    serviceType: ClusterIP
+    topologyKey: kubernetes.io/hostname
+    vctAccessModes:
+    - ReadWriteOnce
+    vctSize: 100Gi
+  labels: {}
+  minNodePort: 9000
+  namespace: ""
+  stopAll: false
+  traefik:
+    commonMiddlewares:
+    - name: tc-basic-secure-headers
+gluetunImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/tccr/gluetun
+  tag: v3.40.0@sha256:a8189e29155e0f8142be1500ae068a92b189b1b25abbba036321e74d6389bf2b
+hpa:
+  main:
+    enabled: false
+    targetSelector: []
+image:
+  pullPolicy: IfNotPresent
+  repository: docker.io/clamav/clamav
+  tag: 1.5.2@sha256:f7954ca7ca13f0ebc301bb8a8b492a88db793192c48763a0b9a2ffb64dcf4bee
+imagePullSecret: {}
+ingress:
+  main:
+    annotations: {}
+    enabled: false
+    hosts: []
+    ingressClassName: ""
+    integrations:
+      certManager:
+        certificateIssuer: ""
+        enabled: false
+      homepage:
+        description: ""
+        enabled: false
+        group: ""
+        icon: ""
+        name: ""
+        widget:
+          type: ""
+          url: ""
+      nginx:
+        auth:
+          externalHost: ""
+          internalHost: ""
+          responseHeaders: []
+          type: ""
+        enabled: false
+        ipWhitelist: []
+        themepark:
+          css: ""
+          enabled: false
+      traefik:
+        enabled: false
+        entrypoints:
+        - websecure
+        forceTLS: true
+        middlewares: []
+    labels: {}
+    primary: true
+    required: false
+    tls: []
+ingressMiddlewares:
+  traefik:
+    tc-basic-secure-headers:
+      data:
+        accessControlAllowMethods:
+        - GET
+        - OPTIONS
+        - HEAD
+        - PUT
+        accessControlMaxAge: 100
+        browserXssFilter: true
+        contentTypeNosniff: true
+        customRequestHeaders:
+          X-Forwarded-Proto: https
+        forceSTSHeader: true
+        referrerPolicy: same-origin
+        stsSeconds: 63072000
+      enabled: false
+      type: headers
+kubectlImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/containerforge/kubectl
+  tag: 1.31.1@sha256:47fa8a164386b5320c18140236109baec862d7ed778215263c473965cecd18ac
+mariadb:
+  creds: {}
+  enabled: false
+  includeCommon: false
+  password: PLACEHOLDERPASSWORD
+  rootPassword: PLACEHOLDERROOTPASSWORD
+mariadbClientImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/containerforge/mariadb-client
+  tag: 12.2.2@sha256:a731429e1a17c24609eea50b0705ff5ad2e74fde98545d465f41bf2175a9c2e4
+metrics:
+  main:
+    enabled: false
+    endpoints:
+    - honorLabels: false
+      interval: 5s
+      path: /
+      port: main
+      scrapeTimeout: 5s
+    primary: true
+    prometheusRule:
+      enabled: false
+      groups: {}
+    selector: {}
+    type: servicemonitor
+mongodb:
+  creds: {}
+  enabled: false
+  includeCommon: false
+  password: PLACEHOLDERPASSWORD
+  rootPassword: PLACEHOLDERROOTPASSWORD
+mongodbClientImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/containerforge/mongosh
+  tag: 2.8.3@sha256:f414e9cdfe773400f2a38577c2595f4005723d5e4156b71d5dd5e3c15772658a
+namespace: ""
+netshootImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/tccr/netshoot
+  tag: v0.14.0@sha256:28ede4317d22391e7d89a15eb78dc2afc3587ece02c76c983dde7239a0e43679
+notes:
+  custom: |
+    {{- if .Values.chartContext.appUrl }}
+    ## Connecting externally
+    You can use this Chart by opening the following links in your browser:
+    - {{ toYaml .Values.chartContext.appUrl }}
+    {{- end }}
+
+    {{ if .Chart.Dependencies }}
+    ## Dependencies for {{ .Chart.Name }}
+
+    {{- range .Chart.Dependencies }}
+    - Chart: {{ .Repository }}/{{ .Name }}
+      Version: {{ .Version }}
+    {{- end }}
+    {{- end }}
+    {{- if .Values.chartContext.internalUrls }}
+    ## Connecting Internally
+
+    You can reach this chart inside your cluster, using the following service URLS:
+    {{- range $url := .Values.chartContext.internalUrls -}}
+    - {{ $url }}
+    {{- end }}
+    {{- end }}
+
+    ## Sources for {{ .Chart.Name }}
+
+    {{- range .Chart.Sources }}
+    - {{ . }}
+    {{- end -}}
+
+    {{- $link := .Chart.Annotations.docs -}}
+    {{- if not $link -}}
+      {{- $link = .Chart.Home -}}
+    {{- end }}
+
+    See more for **{{ $.Chart.Name }}** at ({{ $link }})
+  footer: |
+    ## Documentation
+    Please check out the TrueCharts documentation on:
+    https://truecharts.org
+
+    OpenSource can only exist with your help, please consider supporting TrueCharts:
+    https://trueforge.org/sponsor
+  header: |
+    # Thank you for installing {{ .Chart.Name }} by TrueCharts.
+  warnings: []
+openvpnImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/tccr/openvpn-client
+  tag: latest@sha256:9bfdf50791d6e51056e31c03f73c9db329b2b72e7746155cfdc63e0c8b49b55a
+persistence:
+  devshm:
+    enabled: true
+    medium: Memory
+    mountPath: /dev/shm
+    targetSelectAll: true
+    type: emptyDir
+  logs:
+    enabled: true
+    mountPath: /logs
+    targetSelectAll: true
+  scandir:
+    enabled: true
+    mountPath: /scandir
+    readOnly: true
+    targetSelectAll: true
+  shared:
+    enabled: true
+    mountPath: /shared
+    targetSelectAll: true
+    type: emptyDir
+  sigdatabase:
+    enabled: true
+    mountPath: /var/lib/clamav
+    targetSelectAll: true
+  tmp:
+    enabled: true
+    medium: Memory
+    mountPath: /tmp
+    targetSelectAll: true
+    type: emptyDir
+  varlogs:
+    enabled: true
+    medium: Memory
+    mountPath: /var/logs
+    targetSelectAll: true
+    type: emptyDir
+  varrun:
+    enabled: true
+    medium: Memory
+    mountPath: /var/run
+    targetSelectAll: true
+    type: emptyDir
+podDisruptionBudget:
+  main:
+    enabled: false
+    targetSelector: main
+podOptions:
+  affinity: {}
+  automountServiceAccountToken: false
+  defaultAffinity: true
+  defaultSpread: true
+  dnsConfig:
+    options:
+    - name: ndots
+      value: "1"
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: false
+  hostAliases: []
+  hostIPC: false
+  hostNetwork: false
+  hostPID: false
+  nodeSelector:
+    kubernetes.io/arch: amd64
+  priorityClassName: ""
+  runtimeClassName: ""
+  schedulerName: ""
+  shareProcessNamespace: false
+  terminationGracePeriodSeconds: 60
+  tolerations: []
+  topologySpreadConstraints: []
+postgres15Image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/cloudnative-pg/postgresql
+  tag: 15.17@sha256:23d56b4e6232954ba7ae9eda453a9630946f382325e3bb63af3c2c32fce9a119
+postgres16Image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/cloudnative-pg/postgresql
+  tag: 16.13@sha256:da09a5927dd7af1572591df6c2c1a192d441054ff73e6df823402fcbf08c5ff0
+postgresClientImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/containerforge/postgresql-client
+  tag: 9.6.24@sha256:c7ea20fbec42f93e8c45d05676673654dfba12665f63b9dc7020a00e01cff3cc
+postgresPostgis15Image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/cloudnative-pg/postgis
+  tag: 15-3.4@sha256:4596b193991cd2463a07d40e3d3d62c59f046a7dece8f163ad1aba15925a38e4
+postgresPostgis16Image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/cloudnative-pg/postgis
+  tag: 16-3.4@sha256:bb5a8590a8c934767482e34e1d103253f412aec703b77bbc52ad9044bf6e56f9
+postgresVectorchord15Image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/tensorchord/cloudnative-vectorchord
+  tag: 15.14-0.5.3@sha256:1978732dc1e7e9ef94b9e806a094fcb123afab1e50a7e878e2d29de8b849cf47
+postgresVectorchord16Image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/tensorchord/cloudnative-vectorchord
+  tag: 16.10-0.5.3@sha256:a0776b514bb23858d8aa59b08587223f8b449bba1b278ffbcf85e097d6504eb0
+postgresVectors15Image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/tensorchord/cloudnative-pgvecto.rs
+  tag: 15.7-v0.2.1@sha256:dbdeddf0d635f76df41f745407816c87c7468df35e3b7b0665ca4e0500ff3048
+postgresVectors16Image:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/tensorchord/cloudnative-pgvecto.rs
+  tag: 16.3-v0.2.1@sha256:f1a19d4fc4073b0671a72ad34ef012aa20d21b3ddf5b4b0c9077d54450db679a
+priorityClass: {}
+rbac: {}
+redis:
+  creds: {}
+  enabled: false
+  includeCommon: false
+  password: PLACEHOLDERPASSWORD
+  secret:
+    credentials:
+      enabled: false
+redisClientImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/containerforge/valkey-tools
+  tag: 1.1.0@sha256:10dfaf1f3bcc49a58eb1c298d3433efbe8e05e17b7e856699381efb2e4338362
+resources:
+  limits:
+    cpu: 1500m
+    memory: 2400Mi
+  requests:
+    cpu: 75m
+    memory: 200Mi
+route:
+  main:
+    annotations: {}
+    enabled: false
+    hostnames: []
+    kind: HTTPRoute
+    labels: {}
+    parentRefs:
+    - group: gateway.networking.k8s.io
+      kind: Gateway
+      name: null
+      namespace: null
+      sectionName: null
+    rules:
+    - backendRefs:
+      - group: ""
+        kind: Service
+        name: null
+        namespace: null
+        port: null
+        weight: 1
+      matches:
+      - path:
+          type: PathPrefix
+          value: /
+scratchImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/containerforge/scratch
+  tag: 1.0.0@sha256:84182a2371dd7584ad752326b7150b4e928c640b7f70a249a3994b40f1db11fd
+secret: {}
+securityContext:
+  container:
+    PUID: 568
+    UMASK: "0022"
+    allowPrivilegeEscalation: false
+    capabilities:
+      add: []
+      disableS6Caps: false
+      drop:
+      - ALL
+    privileged: false
+    readOnlyRootFilesystem: false
+    runAsGroup: 0
+    runAsNonRoot: false
+    runAsUser: 0
+    seccompProfile:
+      type: RuntimeDefault
+  pod:
+    fsGroup: 568
+    fsGroupChangePolicy: OnRootMismatch
+    supplementalGroups: []
+    sysctls: []
+service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 3310
+        primary: true
+        protocol: http
+        targetPort: 3310
+    primary: true
+  milter:
+    enabled: false
+    ports:
+      milter:
+        enabled: true
+        port: 7357
+        protocol: http
+        targetPort: 7357
+serviceAccount: {}
+solr:
+  creds: {}
+  enabled: false
+  includeCommon: false
+  password: PLACEHOLDERPASSWORD
+  solrCores: 1
+  solrEnableAuthentication: "no"
+storageClass: {}
+tailscaleImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/tccr/tailscale
+  tag: v1.88.3@sha256:878612592f133bc0728e978558b10a1c457371ac5949985d0584664c8e92c2f9
+ubuntuImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/containerforge/ubuntu
+  tag: 26.4@sha256:17312da6b52fe7ab6e3bdc8e4a1f99df63c2494b2bad4f4b634a9065d585898e
+valkeyClientImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/containerforge/valkey-tools
+  tag: 1.1.0@sha256:10dfaf1f3bcc49a58eb1c298d3433efbe8e05e17b7e856699381efb2e4338362
+volumeSnapshotClass: {}
+volumeSnapshots: {}
+vpa:
+  main:
+    enabled: false
+    resourcePolicy:
+      containerPolicies:
+      - containerName: '*'
+        controlledResources:
+        - cpu
+        - memory
+        maxAllowed:
+          cpu: 8000m
+          memory: 20Gi
+        minAllowed:
+          cpu: 50m
+          memory: 50Mi
+    targetSelector: []
+webhook:
+  mutating:
+    enabled: false
+    type: mutating
+    webhooks: []
+  validating:
+    enabled: false
+    type: validating
+    webhooks: []
+wgetImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/containerforge/ubuntu
+  tag: 26.4@sha256:17312da6b52fe7ab6e3bdc8e4a1f99df63c2494b2bad4f4b634a9065d585898e
+wireguardImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/tccr/wireguard
+  tag: v1.0.20210914@sha256:683b8b74d64ebd07f9955147539834c2a4b60fee51d2a36fa76b9aba689601bf
+workload:
+  cron:
+    Error: 'error converting YAML to JSON: yaml: line 3: did not find expected alphabetic
+      or numeric character'
+  main:
+    dbWait: true
+    enabled: true
+    podSpec:
+      containers:
+        main:
+          enabled: true
+          env:
+            CLAMAV_NO_CLAMD: false
+            CLAMAV_NO_FRESHCLAMD: false
+            CLAMAV_NO_MILTERD: '{{ not .Values.service.milter.enabled }}'
+            CLAMD_STARTUP_TIMEOUT: 1800
+            FRESHCLAM_CHECKS: 1
+          imageSelector: image
+          primary: true
+          probes:
+            liveness:
+              command:
+              - clamdcheck.sh
+              enabled: true
+              port: '{{ $.Values.service.main.ports.main.targetPort | default .Values.service.main.ports.main.port
+                }}'
+              type: exec
+            readiness:
+              command:
+              - clamdcheck.sh
+              enabled: true
+              port: '{{ $.Values.service.main.ports.main.targetPort | default .Values.service.main.ports.main.port
+                }}'
+              type: exec
+            startup:
+              command:
+              - clamdcheck.sh
+              enabled: true
+              port: '{{ $.Values.service.main.ports.main.targetPort | default .Values.service.main.ports.main.port
+                }}'
+              type: exec
+    primary: true
+    type: Deployment
+yqImage:
+  pullPolicy: IfNotPresent
+  repository: oci.trueforge.org/containerforge/go-yq
+  tag: 4.53.2@sha256:297b088fc4e93a81e782eb3b641345c71d43dff3107753c0468c1ef9498c63f3 
+ ============================================================================================= 
+
+ See error above values.
+
+Use --debug flag to render out invalid YAML
+```
+
+### 2. `vexxhost/atmosphere`
+
+- Chart: `D:\helm_clones_github\vexxhost__atmosphere\charts\kube-prometheus-stack`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\vexxhost__atmosphere\charts\kube-prometheus-stack`
+
+```text
+level=INFO msg="Warning: Dependency locking is handled in Chart.lock since apiVersion \"v2\". We recommend migrating to Chart.lock."
+Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
+
+Use --debug flag to render out invalid YAML
+```
+
+### 3. `camptocamp/charts`
+
+- Chart: `D:\helm_clones_github\camptocamp__charts\bivac`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\camptocamp__charts\bivac`
+
+```text
+Error: YAML parse error on bivac/templates/cronjob.yaml: error converting YAML to JSON: yaml: line 32: could not find expected ':'
+
+Use --debug flag to render out invalid YAML
+```
+
+### 4. `bflance/proxmox-talos`
+
+- Chart: `D:\helm_clones_github\bflance__proxmox-talos\charts\kube-prometheus-stack`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\bflance__proxmox-talos\charts\kube-prometheus-stack`
+
+```text
+Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
+
+Use --debug flag to render out invalid YAML
+```
+
+### 5. `Loongson-Cloud-Community/dockerfiles`
+
+- Chart: `D:\helm_clones_github\Loongson-Cloud-Community__dockerfiles\kubesphere\ks-installer\v3.2.1\roles\gatekeeper\files\gatekeeper`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\Loongson-Cloud-Community__dockerfiles\kubesphere\ks-installer\v3.2.1\roles\gatekeeper\files\gatekeeper`
+
+```text
+Error: YAML parse error on gatekeeper/templates/gatekeeper-validating-webhook-configuration-validatingwebhookconfiguration.yaml: error converting YAML to JSON: yaml: invalid map key: map[interface {}]interface {}{".Values.validatingWebhookFailurePolicy":interface {}(nil)}
+
+Use --debug flag to render out invalid YAML
+```
+
+### 6. `cloud-native-toolkit/toolkit-charts`
+
+- Chart: `D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\assign-group-cronjob`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\assign-group-cronjob`
+
+```text
+Error: YAML parse error on assign-group-cronjob/templates/cronjob.yaml: error converting YAML to JSON: yaml: mapping values are not allowed in this context
+
+Use --debug flag to render out invalid YAML
+```
+
+### 7. `cloud-native-toolkit/toolkit-charts`
+
+- Chart: `D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\console-link-cronjob`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\console-link-cronjob`
+
+```text
+Error: YAML parse error on console-link-cronjob/templates/cronjob.yaml: error converting YAML to JSON: yaml: mapping values are not allowed in this context
+
+Use --debug flag to render out invalid YAML
+```
+
+### 8. `cloud-native-toolkit/toolkit-charts`
+
+- Chart: `D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\ibm-eventstreams-instance`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\cloud-native-toolkit__toolkit-charts\stable\ibm-eventstreams-instance`
+
+```text
+Error: YAML parse error on ibm-eventstreams-instance/templates/instance.yaml: error converting YAML to JSON: yaml: line 6: could not find expected ':'
+
+Use --debug flag to render out invalid YAML
+```
+
+### 9. `jharmison-redhat/openshift-setup`
+
+- Chart: `D:\helm_clones_github\jharmison-redhat__openshift-setup\charts\aws-efs-csi-setup`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\jharmison-redhat__openshift-setup\charts\aws-efs-csi-setup`
+
+```text
+Error: YAML parse error on aws-efs-csi-set/templates/csi-driver/storageclass-job.yaml: error converting YAML to JSON: yaml: line 9: did not find expected key
+
+Use --debug flag to render out invalid YAML
+```
+
+### 10. `henrywhitaker3/homelab`
+
+- Chart: `D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\mango\apps\networking\cert-manager\chart`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\mango\apps\networking\cert-manager\chart`
+
+```text
+Error: YAML parse error on cert-manager/templates/cloudflare-creds.yaml: error converting YAML to JSON: yaml: invalid map key: map[interface {}]interface {}{".Values.cloudflareApiToken":interface {}(nil)}
+
+Use --debug flag to render out invalid YAML
+```
+
+### 11. `erost/vdz26-demo-fleet-commander`
+
+- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-bucket\chart`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-bucket\chart`
+
+```text
+Error: YAML parse error on public-function-bucket/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
+
+Use --debug flag to render out invalid YAML
+```
+
+### 12. `erost/vdz26-demo-fleet-commander`
+
+- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-numbers\chart`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-numbers\chart`
+
+```text
+Error: YAML parse error on public-function-numbers/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
+
+Use --debug flag to render out invalid YAML
+```
+
+### 13. `erost/vdz26-demo-fleet-commander`
+
+- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-strings\chart`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\commander\public-function-strings\chart`
+
+```text
+Error: YAML parse error on public-function-strings/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
+
+Use --debug flag to render out invalid YAML
+```
+
+### 14. `erost/vdz26-demo-fleet-commander`
+
+- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-aws\function-bucket\chart`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-aws\function-bucket\chart`
+
+```text
+Error: YAML parse error on function-bucket/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
+
+Use --debug flag to render out invalid YAML
+```
+
+### 15. `erost/vdz26-demo-fleet-commander`
+
+- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-numbers\function-numbers\chart`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-numbers\function-numbers\chart`
+
+```text
+Error: YAML parse error on function-numbers/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
+
+Use --debug flag to render out invalid YAML
+```
+
+### 16. `erost/vdz26-demo-fleet-commander`
+
+- Chart: `D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-strings\function-strings\chart`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\erost__vdz26-demo-fleet-commander\units\unit-strings\function-strings\chart`
+
+```text
+Error: YAML parse error on function-strings/templates/function.yaml: error converting YAML to JSON: yaml: line 6: mapping values are not allowed in this context
+
+Use --debug flag to render out invalid YAML
+```
+
+### 17. `ndebuhr/isidro`
+
+- Chart: `D:\helm_clones_github\ndebuhr__isidro\chart`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\ndebuhr__isidro\chart`
+
+```text
+Error: YAML parse error on isidro/templates/prometheus.yaml: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type util.SimpleHead
+
+Use --debug flag to render out invalid YAML
+```
+
+### 18. `thelande/charts`
+
+- Chart: `D:\helm_clones_github\thelande__charts\charts\opencloud`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\thelande__charts\charts\opencloud`
+
+```text
+Error: YAML parse error on opencloud/templates/secret.yaml: error converting YAML to JSON: yaml: line 5: mapping values are not allowed in this context
+
+Use --debug flag to render out invalid YAML
+```
+
+### 19. `Vaibhav2goyal/alertmanager`
+
+- Chart: `D:\helm_clones_github\Vaibhav2goyal__alertmanager\scripts\kube-prometheus-stack`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\Vaibhav2goyal__alertmanager\scripts\kube-prometheus-stack`
+
+```text
+Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
+
+Use --debug flag to render out invalid YAML
+```
+
+### 20. `Yahya-rabii/soge-plus`
+
+- Chart: `D:\helm_clones_github\Yahya-rabii__soge-plus\helm-charts\kube-prometheus-stack`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\Yahya-rabii__soge-plus\helm-charts\kube-prometheus-stack`
+
+```text
+Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
+
+Use --debug flag to render out invalid YAML
+```
+
+### 21. `alercebroker/web-services`
+
+- Chart: `D:\helm_clones_github\alercebroker__web-services\charts\alerts-api`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\alercebroker__web-services\charts\alerts-api`
+
+```text
+Error: YAML parse error on alerts-api/templates/ingress.yaml: error converting YAML to JSON: yaml: line 36: found character that cannot start any token
+
+Use --debug flag to render out invalid YAML
+```
+
+### 22. `cisco-open/appdynamics-k8s-webhook-instrumentor`
+
+- Chart: `D:\helm_clones_github\cisco-open__appdynamics-k8s-webhook-instrumentor\buildEnv\helm\webhook-instrumentor`
+- Source: `template`
+- Values files: `D:\helm_clones_github\cisco-open__appdynamics-k8s-webhook-instrumentor\buildEnv\helm\webhook-instrumentor\values-sample.yaml`
+- Command: `helm template test D:\helm_clones_github\cisco-open__appdynamics-k8s-webhook-instrumentor\buildEnv\helm\webhook-instrumentor -f D:\helm_clones_github\cisco-open__appdynamics-k8s-webhook-instrumentor\buildEnv\helm\webhook-instrumentor\values-sample.yaml`
+
+```text
+Error: YAML parse error on webhook-instrumentor/templates/otel/cm-otel-collector-config.yaml: error converting YAML to JSON: yaml: line 10: mapping values are not allowed in this context
+
+Use --debug flag to render out invalid YAML
+```
+
+### 23. `dan1dan12345678/Helm_charts`
+
+- Chart: `D:\helm_clones_github\dan1dan12345678__Helm_charts\kube-prometheus-stack`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\dan1dan12345678__Helm_charts\kube-prometheus-stack`
+
+```text
+Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 38: did not find expected key
+
+Use --debug flag to render out invalid YAML
+```
+
+### 24. `sydney900/CQRS-ES-Microservices`
+
+- Chart: `D:\helm_clones_github\sydney900__CQRS-ES-Microservices\Charts\V1`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\sydney900__CQRS-ES-Microservices\Charts\V1`
+
+```text
+Error: YAML parse error on V1/templates/ingress.yaml: error converting YAML to JSON: yaml: line 8: mapping values are not allowed in this context
+
+Use --debug flag to render out invalid YAML
+```
+
+### 25. `Backstage-Epitech/cltest`
+
+- Chart: `D:\helm_clones_github\Backstage-Epitech__cltest\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\Backstage-Epitech__cltest\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
+
+```text
+Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
+
+Use --debug flag to render out invalid YAML
+```
+
+### 26. `Bernardpro/ClusterGCP`
+
+- Chart: `D:\helm_clones_github\Bernardpro__ClusterGCP\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\Bernardpro__ClusterGCP\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
+
+```text
+Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
+
+Use --debug flag to render out invalid YAML
+```
+
+### 27. `Bernardpro/ClusterGKE`
+
+- Chart: `D:\helm_clones_github\Bernardpro__ClusterGKE\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\Bernardpro__ClusterGKE\kustomize\kube-prometheus-stack\charts\kube-prometheus-stack-73.2.2\kube-prometheus-stack`
+
+```text
+Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
+
+Use --debug flag to render out invalid YAML
+```
+
+### 28. `prometheus-community/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\kube-prometheus-stack`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\kube-prometheus-stack`
+
+```text
+Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key
+
+Use --debug flag to render out invalid YAML
+```
+
+### 29. `linkerd/linkerd2`
+
+- Chart: `D:\helm_clones_artifacthub\linkerd__linkerd2\charts\patch`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\linkerd__linkerd2\charts\patch`
+
+```text
+Error: YAML parse error on patch/templates/patch.json: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal array into Go value of type util.SimpleHead
+
+Use --debug flag to render out invalid YAML
+```
+
+### 30. `code-server-boilerplates/charts`
+
+- Chart: `D:\helm_clones_artifacthub\code-server-boilerplates__charts\charts\starter-pack`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\code-server-boilerplates__charts\charts\starter-pack`
+
+```text
+Error: YAML parse error on starter-pack/templates/ingress.yaml: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal array into Go struct field .metadata.annotations of type string
+
+Use --debug flag to render out invalid YAML
+```
+
+### 31. `Warxcell/helm-chart`
+
+- Chart: `D:\helm_clones_artifacthub\Warxcell__helm-chart\charts\selenium`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\Warxcell__helm-chart\charts\selenium`
+
+```text
+Error: YAML parse error on selenium/templates/chrome-node-deployment.yaml: error converting YAML to JSON: yaml: line 32: mapping values are not allowed in this context
 
 Use --debug flag to render out invalid YAML
 ```
@@ -34017,6 +31683,303 @@ template: no template "common.annotations" associated with template "gotpl"
 Use --debug flag to render out invalid YAML
 ```
 
+## `template.author_assertion` (22)
+
+### 1. `k0rdent/catalog`
+
+- Chart: `D:\helm_clones_github\k0rdent__catalog\apps\k0rdent-utils\charts\kgst`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\k0rdent__catalog\apps\k0rdent-utils\charts\kgst`
+
+```text
+Error: execution error at (kgst/templates/service-template.yaml:3:5): Invalid 'chart' format: must be 'name:version' (e.g. 'ingress-nginx:4.11.5')
+
+Use --debug flag to render out invalid YAML
+```
+
+### 2. `randoli/helm-charts`
+
+- Chart: `D:\helm_clones_github\randoli__helm-charts\charts\network`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\randoli__helm-charts\charts\network`
+
+```text
+Error: execution error at (network/templates/tls-validate.yaml:7:6): 
+
+charts/network: TLS is not configured.
+
+Set one of:
+  tls.existingSecret.name=<secret-name>   (recommended — see README.md)
+  tls.generateJob.enabled=true             (auto-generate self-signed cert)
+
+
+Use --debug flag to render out invalid YAML
+```
+
+### 3. `henrywhitaker3/homelab`
+
+- Chart: `D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\k3s\apps\networking\traefik\public\chart`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\henrywhitaker3__homelab\kubernetes\k3s\apps\networking\traefik\public\chart`
+
+```text
+Error: execution error at (traefik-public/charts/traefik/templates/servicemonitor.yaml:5:10): ERROR: You have to deploy monitoring.coreos.com/v1 first
+
+Use --debug flag to render out invalid YAML
+```
+
+### 4. `dungdm93/shipyard`
+
+- Chart: `D:\helm_clones_github\dungdm93__shipyard\helm\cloudflared`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\dungdm93__shipyard\helm\cloudflared`
+
+```text
+Error: execution error at (cloudflared/templates/deployment.yaml:50:41): Missing .Values.token
+
+Use --debug flag to render out invalid YAML
+```
+
+### 5. `dungdm93/shipyard`
+
+- Chart: `D:\helm_clones_github\dungdm93__shipyard\helm\datahub`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\dungdm93__shipyard\helm\datahub`
+
+```text
+Error: execution error at (datahub/templates/setup/secret.yaml:7:55): missing 'ebean.host'
+
+Use --debug flag to render out invalid YAML
+```
+
+### 6. `claytono/infra`
+
+- Chart: `D:\helm_clones_github\claytono__infra\kubernetes\crowdsec`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\claytono__infra\kubernetes\crowdsec`
+
+```text
+Error: execution error at (crowdsec-meta/charts/crowdsec/templates/agent-daemonSet.yaml:23:38): No acquisition or additionalAcquisition configured
+
+Use --debug flag to render out invalid YAML
+```
+
+### 7. `claytono/infra`
+
+- Chart: `D:\helm_clones_github\claytono__infra\kubernetes\nvidia-device-plugin`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\claytono__infra\kubernetes\nvidia-device-plugin`
+
+```text
+Error: execution error at (nvidia-device-plugin-meta/charts/nvidia-device-plugin/templates/validation.yml:19:4): 
+Running in the 'default' namespace is not recommended.
+Set 'allowDefaultNamespace=true' to bypass this error.
+Otherwise, use --namespace (with --create-namespace as necessary) to run in a specific namespace.
+See: https://helm.sh/docs/helm/helm_install/#options
+
+Use --debug flag to render out invalid YAML
+```
+
+### 8. `kast-spells/kast-system`
+
+- Chart: `D:\helm_clones_github\kast-spells__kast-system\covenant`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\kast-spells__kast-system\covenant`
+
+```text
+Error: execution error at (covenant/templates/covenant.yaml:39:6): covenant/index.yaml not found in bookrack/test
+
+Use --debug flag to render out invalid YAML
+```
+
+### 9. `nwthomas/gitops`
+
+- Chart: `D:\helm_clones_github\nwthomas__gitops\helm\nvidia-device-plugin`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_github\nwthomas__gitops\helm\nvidia-device-plugin`
+
+```text
+Error: execution error at (nvidia-device-plugin/templates/validation.yml:19:4): 
+Running in the 'default' namespace is not recommended.
+Set 'allowDefaultNamespace=true' to bypass this error.
+Otherwise, use --namespace (with --create-namespace as necessary) to run in a specific namespace.
+See: https://helm.sh/docs/helm/helm_install/#options
+
+Use --debug flag to render out invalid YAML
+```
+
+### 10. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp`
+
+```text
+Error: execution error at (victoria-logs-mcp/templates/deployment.yaml:54:25): .Values.vl.entrypoint should be set
+
+Use --debug flag to render out invalid YAML
+```
+
+### 11. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert`
+
+```text
+Error: execution error at (victoria-metrics-alert/templates/alert-server.yaml:8:6): server.datasource.url datasource URL must be specified
+
+Use --debug flag to render out invalid YAML
+```
+
+### 12. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly`
+
+```text
+Error: execution error at (victoria-metrics-anomaly/templates/server.yaml:2:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.
+       See https://victoriametrics.com/legal/esa/ for details.
+       Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/
+       for more information, visit https://victoriametrics.com/products/enterprise/
+       To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 13. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway`
+
+```text
+Error: execution error at (victoria-metrics-gateway/templates/server.yaml:1:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.
+       See https://victoriametrics.com/legal/esa/ for details.
+       Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/
+       for more information, visit https://victoriametrics.com/products/enterprise/
+       To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 14. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp`
+
+```text
+Error: execution error at (victoria-metrics-mcp/templates/deployment.yaml:64:25): either .Values.vm.cloudAPIKey or .Values.vm.entrypoint should be set
+
+Use --debug flag to render out invalid YAML
+```
+
+### 15. `VictoriaMetrics/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common`
+
+```text
+Error: execution error at (victoria-metrics-common/templates/service.yaml:7:14): .style argument should be either `plain` or `managed`
+
+Use --debug flag to render out invalid YAML
+```
+
+### 16. `influxdata/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered`
+
+```text
+Error: execution error at (influxdb3-clustered/templates/app-instance.yml:90:3): missing catalog.dsn.SecretName
+
+Use --debug flag to render out invalid YAML
+```
+
+### 17. `camunda/camunda-platform-helm`
+
+- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10`
+
+```text
+Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 18. `camunda/camunda-platform-helm`
+
+- Chart: `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9`
+
+```text
+Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/
+
+Use --debug flag to render out invalid YAML
+```
+
+### 19. `wiremind/wiremind-helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql`
+- Source: `template`
+- Values files: `D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql -f D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml`
+
+```text
+Error: execution error at (postgresql/templates/statefulset.yaml:335:29): In order to enable metrics you need to specify a database (.Values.postgresqlDatabase or .Values.global.postgresql.postgresqlDatabase)
+
+Use --debug flag to render out invalid YAML
+```
+
+### 20. `groundhog2k/helm-charts`
+
+- Chart: `D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42`
+
+```text
+Error: execution error at (remark42/templates/secureconfig.yaml:9:14): .settings.secretKey must contain value
+
+Use --debug flag to render out invalid YAML
+```
+
+### 21. `chatwoot/charts`
+
+- Chart: `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot`
+- Source: `template`
+- Values files: `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml`, `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml`
+- Command: `helm template test D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml`
+
+```text
+Error: execution error at (chatwoot/charts/redis/templates/NOTES.txt:182:4): 
+VALUES VALIDATION:
+
+redis: architecture
+    Using redis sentinel on standalone mode is not supported.
+    To deploy redis sentinel, please select the "replication" mode
+    (--set "architecture=replication,sentinel.enabled=true")
+
+Use --debug flag to render out invalid YAML
+```
+
+### 22. `mysql/mysql-operator`
+
+- Chart: `D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
+- Source: `template`
+- Command: `helm template test D:\helm_clones_artifacthub\mysql__mysql-operator\helm\mysql-innodbcluster`
+
+```text
+Error: execution error at (mysql-innodbcluster/templates/deployment_cluster.yaml:68:8): tls.routerCertAndPKsecretName: secret 'test-router-tls' not found in namespace 'default'
+
+Use --debug flag to render out invalid YAML
+```
+
 ## `template.library_chart_not_installable` (12)
 
 ### 1. `bitnami/charts`
@@ -34636,7 +32599,36 @@ Error: invalid chart apiVersion
 Error: invalid chart apiVersion
 ```
 
-## `template.invalid_value` (3)
+## `dependency.missing_repository` (3)
+
+### 1. `opea-project/Enterprise-Inference`
+
+- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\apisix-helm`
+- Source: `dependency`
+
+```text
+Error: no repository definition for https://charts.apiseven.com. Please add the missing repos via 'helm repo add'
+```
+
+### 2. `helxplatform/translator-devops`
+
+- Chart: `D:\helm_clones_github\helxplatform__translator-devops\helm\answer-appraiser`
+- Source: `dependency`
+
+```text
+Error: no repository definition for https://charts.bitnami.com/bitnami. Please add the missing repos via 'helm repo add'
+```
+
+### 3. `Clark1992/ECK1`
+
+- Chart: `D:\helm_clones_github\Clark1992__ECK1\infra\k8s\charts\metrics-stack`
+- Source: `dependency`
+
+```text
+Error: no repository definition for https://kubernetes-sigs.github.io/metrics-server. Please add the missing repos via 'helm repo add'
+```
+
+## `template.invalid_value` (2)
 
 ### 1. `ODIM-Project/ODIM`
 
@@ -34650,19 +32642,7 @@ Error: template: etcd-ha/templates/etcd-ha-deployment.yaml:40:29: executing "etc
 Use --debug flag to render out invalid YAML
 ```
 
-### 2. `opea-project/Enterprise-Inference`
-
-- Chart: `D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm`
-- Source: `template`
-- Command: `helm template test D:\helm_clones_github\opea-project__Enterprise-Inference\core\helm-charts\vllm`
-
-```text
-Error: template: vllm/templates/deployment.yaml:135:33: executing "vllm/templates/deployment.yaml" at <index .Values.modelConfigs $modelName>: error calling index: index of untyped nil
-
-Use --debug flag to render out invalid YAML
-```
-
-### 3. `stfc/cloud-helm-charts`
+### 2. `stfc/cloud-helm-charts`
 
 - Chart: `D:\helm_clones_github\stfc__cloud-helm-charts\charts\stfc-cloud-openstack-cluster`
 - Source: `template`
@@ -34672,6 +32652,18 @@ Use --debug flag to render out invalid YAML
 Error: template: stfc-cloud-openstack-cluster/templates/credentials-secret.yaml:18:12: executing "stfc-cloud-openstack-cluster/templates/credentials-secret.yaml" at <index .Values.clouds $cloudName>: error calling index: index of untyped nil
 
 Use --debug flag to render out invalid YAML
+```
+
+## `dependency.missing_subchart` (1)
+
+### 1. `IBM/charts`
+
+- Chart: `D:\helm_clones_github\IBM__charts\community\artifactory-ha`
+- Source: `dependency`
+
+```text
+level=INFO msg="warning: a valid Helm v3 hash was not found. Checking against Helm v2 hash..."
+Error: no repository definition for https://kubernetes-charts.storage.googleapis.com/. Please add the missing repos via 'helm repo add'
 ```
 
 ## `template.dependency_check_failed` (1)

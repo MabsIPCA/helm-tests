@@ -142,3 +142,101 @@ func TestRunHelmTemplateWithSets_NoExtras(t *testing.T) {
 		t.Errorf("got %q, want %q", cmdStr, want)
 	}
 }
+
+func TestIsGitCryptEncrypted(t *testing.T) {
+	root := t.TempDir()
+	magic := append([]byte{0x00, 'G', 'I', 'T', 'C', 'R', 'Y', 'P', 'T', 0x00}, []byte("\x01\x02\x03nonce+ciphertext")...)
+	write := func(name string, content []byte) string {
+		p := filepath.Join(root, name)
+		if err := os.WriteFile(p, content, 0o644); err != nil {
+			t.Fatal(err)
+		}
+		return p
+	}
+
+	enc := write("secret-values.yaml", magic)
+	plain := write("values-prod.yaml", []byte("replicas: 3\nimage: nginx\n"))
+	short := write("tiny.yaml", []byte("a: 1")) // shorter than the magic header
+	looksClose := write("decoy.yaml", []byte("GITCRYPT but not at the start"))
+
+	cases := []struct {
+		path string
+		want bool
+	}{
+		{enc, true},
+		{plain, false},
+		{short, false},
+		{looksClose, false},
+		{filepath.Join(root, "does-not-exist.yaml"), false},
+	}
+	for _, c := range cases {
+		if got := helm.IsGitCryptEncrypted(c.path); got != c.want {
+			t.Errorf("IsGitCryptEncrypted(%q) = %v, want %v", c.path, got, c.want)
+		}
+	}
+}
+
+func TestIsParseableValuesFile(t *testing.T) {
+	root := t.TempDir()
+	write := func(name string, content []byte) string {
+		p := filepath.Join(root, name)
+		if err := os.WriteFile(p, content, 0o644); err != nil {
+			t.Fatal(err)
+		}
+		return p
+	}
+	magic := append([]byte{0x00, 'G', 'I', 'T', 'C', 'R', 'Y', 'P', 'T', 0x00}, []byte("\x01\x02ciphertext")...)
+
+	cases := []struct {
+		name    string
+		content []byte
+		want    bool
+	}{
+		{"valid map", []byte("replicas: 3\nimage:\n  tag: v1\n"), true},
+		{"empty file", []byte(""), true},
+		{"whitespace only", []byte("\n  \n"), true},
+		{"null doc", []byte("null\n"), true},
+		{"git-crypt encrypted", magic, false},
+		{"control characters", []byte("foo: \x07\x1b\x00bar\n"), false},
+		{"broken yaml", []byte("foo: [unterminated\n"), false},
+		{"scalar not a map", []byte("just-a-string\n"), false},
+		{"sequence not a map", []byte("- a\n- b\n"), false},
+	}
+	for _, c := range cases {
+		p := write(c.name+".yaml", c.content)
+		if got := helm.IsParseableValuesFile(p); got != c.want {
+			t.Errorf("%s: IsParseableValuesFile = %v, want %v", c.name, got, c.want)
+		}
+	}
+	if helm.IsParseableValuesFile(filepath.Join(root, "missing.yaml")) {
+		t.Error("missing file should not be parseable")
+	}
+}
+
+func TestFindValuesFiles_PrefiltersUnparseable(t *testing.T) {
+	chart := t.TempDir()
+	if err := os.WriteFile(filepath.Join(chart, "Chart.yaml"), []byte("name: x\n"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	magic := append([]byte{0x00, 'G', 'I', 'T', 'C', 'R', 'Y', 'P', 'T', 0x00}, []byte("ciphertext")...)
+	mustWrite := func(name string, b []byte) {
+		if err := os.WriteFile(filepath.Join(chart, name), b, 0o644); err != nil {
+			t.Fatal(err)
+		}
+	}
+	mustWrite("secret-values.yaml", magic)                          // encrypted -> dropped
+	mustWrite("broken-values.yaml", []byte("a: [oops\n"))           // malformed -> dropped
+	mustWrite("values-prod.yaml", []byte("replicas: 3\n"))          // valid -> kept
+	mustWrite("values-staging.yaml", []byte("image:\n  tag: v2\n")) // valid -> kept
+
+	got := helm.FindValuesFiles(chart)
+	gotBase := make([]string, 0, len(got))
+	for _, g := range got {
+		gotBase = append(gotBase, filepath.Base(g))
+	}
+	sort.Strings(gotBase)
+	want := []string{"values-prod.yaml", "values-staging.yaml"}
+	if strings.Join(gotBase, ",") != strings.Join(want, ",") {
+		t.Errorf("FindValuesFiles = %v, want %v (unparseable files prefiltered)", gotBase, want)
+	}
+}

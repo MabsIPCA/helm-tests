@@ -98,6 +98,9 @@ type TaxonomyBucket struct {
 	FinalCount int               `json:"final_count,omitempty"`
 	Examples   []ErrorOccurrence `json:"examples"`
 	FixOutcome *FixOutcome       `json:"fix_outcome,omitempty"`
+	// NonFixable marks a subkind the fixer cannot resolve by value injection
+	// (chart-author validation or structural blockers) — see classifier.IsNonFixable.
+	NonFixable bool `json:"non_fixable,omitempty"`
 }
 
 type ReportTotals struct {
@@ -112,9 +115,13 @@ type ReportTotals struct {
 	// repeated charts). Raw run counts above (Runs, TemplateFailures) are NOT
 	// deduped; the classified/fix totals and taxonomy buckets ARE.
 	DuplicatesCollapsed int `json:"duplicates_collapsed,omitempty"`
-	FixAttempted        int `json:"fix_attempted,omitempty"`
-	FixResolved         int `json:"fix_resolved,omitempty"`
-	FixUnresolved       int `json:"fix_unresolved,omitempty"`
+	// NonFixableErrors is how many classified occurrences fall in a non-fixable
+	// subkind (classifier.IsNonFixable) — guardrails/structural blockers excluded
+	// from the fixable surface.
+	NonFixableErrors int `json:"non_fixable_errors,omitempty"`
+	FixAttempted     int `json:"fix_attempted,omitempty"`
+	FixResolved      int `json:"fix_resolved,omitempty"`
+	FixUnresolved    int `json:"fix_unresolved,omitempty"`
 }
 
 type TaxonomyReport struct {

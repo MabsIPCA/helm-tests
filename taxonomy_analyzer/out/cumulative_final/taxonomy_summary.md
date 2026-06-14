@@ -1,6 +1,6 @@
 # Helm Error Taxonomy Report
 
-Generated at: `2026-06-08 21:34:22 UTC`
+Generated at: `2026-06-10 17:45:26 UTC`
 
 Source catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_sources_merged.json`
 
@@ -11,41 +11,45 @@ Fixed catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_fi
 | Metric | Value |
 |---|---:|
 | Repositories | 808 |
-| Helm runs | 17112 |
-| Template failures | 2885 |
-| Dependency failures | 111 |
-| Classified errors | 1024 |
-| Unclassified errors | 130 |
-| Fix attempts | 1048 |
-| Fix resolved | 497 |
-| Fix unresolved | 551 |
+| Helm runs | 15691 |
+| Template failures | 1545 |
+| Dependency failures | 113 |
+| Classified errors | 873 |
+| Unclassified errors | 105 |
+| Fix attempts | 870 |
+| Fix resolved | 481 |
+| Fix unresolved | 389 |
 
 ## Taxonomy by Kind
 
 | Kind | Count |
 |---|---:|
-| `template` | 1024 |
-| `unknown` | 130 |
+| `template` | 869 |
+| `unknown` | 105 |
+| `dependency` | 4 |
 
 ## Taxonomy by SubKind
 
 | SubKind | Count | Fix Resolved | Fix Unresolved |
 |---|---:|---:|---:|
-| `template.nil_pointer` | 359 | 315 | 44 |
-| `template.required_value` | 221 | 154 | 67 |
-| `template.malformed_yaml` | 186 | 0 | 186 |
-| `unknown.unclassified` | 130 | 0 | 24 |
+| `template.nil_pointer` | 340 | 298 | 42 |
+| `template.required_value` | 220 | 154 | 66 |
 | `template.values_schema_validation` | 122 | 0 | 122 |
-| `template.custom_validation` | 36 | 0 | 36 |
+| `unknown.unclassified` | 105 | 0 | 1 |
+| `template.custom_validation` | 35 | 0 | 35 |
+| `template.malformed_yaml` | 31 | 0 | 31 |
 | `template.kube_version_incompatible` | 27 | 27 | 0 |
-| `template.missing_template` | 23 | 0 | 23 |
+| `template.missing_template` | 23 | 1 | 22 |
+| `template.author_assertion` | 22 | 0 | 22 |
 | `template.library_chart_not_installable` | 12 | 0 | 12 |
 | `template.type_mismatch` | 9 | 1 | 8 |
 | `template.unsupported_builtin` | 8 | 0 | 8 |
 | `template.runtime_eval` | 7 | 0 | 7 |
 | `template.parse_error` | 6 | 0 | 6 |
 | `template.chart_metadata` | 4 | 0 | 4 |
-| `template.invalid_value` | 3 | 0 | 3 |
+| `dependency.missing_repository` | 3 | 0 | 0 |
+| `template.invalid_value` | 2 | 0 | 2 |
+| `dependency.missing_subchart` | 1 | 0 | 0 |
 | `template.dependency_check_failed` | 1 | 0 | 1 |
 
 ## Unclassified Samples

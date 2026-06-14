@@ -235,7 +235,7 @@ func TestConsumeRepo_DedupesSameErrorWithinProject(t *testing.T) {
 	// The fetcher renders many value-file combinations of one chart; identical
 	// errors must collapse to a single occurrence within the project. Here three
 	// runs share the same malformed-yaml error and one run has a distinct error.
-	sameErr := "error converting YAML to JSON: yaml: control characters are not allowed"
+	sameErr := "error converting YAML to JSON: yaml: did not find expected node content"
 	repo := model.RepoResult{
 		RepoURL:  "https://github.com/test/mono",
 		RepoName: "test/mono",
@@ -271,7 +271,7 @@ func TestConsumeRepo_DedupesSameErrorWithinProject(t *testing.T) {
 
 func TestConsumeRepo_SameErrorDifferentProjects_NotDeduped(t *testing.T) {
 	// An identical message in two different projects must count once per project.
-	sameErr := "error converting YAML to JSON: yaml: control characters are not allowed"
+	sameErr := "error converting YAML to JSON: yaml: did not find expected node content"
 	mk := func(name string) model.RepoResult {
 		return model.RepoResult{
 			RepoURL:  "https://github.com/test/" + name,
@@ -293,6 +293,37 @@ func TestConsumeRepo_SameErrorDifferentProjects_NotDeduped(t *testing.T) {
 	}
 	if got := report.Totals.DuplicatesCollapsed; got != 0 {
 		t.Errorf("DuplicatesCollapsed: got %d, want 0", got)
+	}
+}
+
+func TestConsumeRepo_FlagsNonFixableSubKinds(t *testing.T) {
+	// A schema-validation error (non-fixable by design) and a nil_pointer error
+	// (fixable) in the same repo: only the schema subkind is flagged non-fixable,
+	// and the total counts it once.
+	repo := model.RepoResult{
+		RepoURL:  "https://github.com/test/nf",
+		RepoName: "test/nf",
+		Charts: []model.ChartSummary{{
+			ChartPath: "/tmp/nf/chart",
+			Runs: []model.RunResult{
+				{ChartPath: "cloned/nf/chart", HelmCommand: "helm template nf chart", ErrorMessage: "values don't meet the specifications of the schema(s) in the following chart(s): foo: - at '': missing properties 'image'"},
+				{ChartPath: "cloned/nf/chart", HelmCommand: "helm template nf chart -f v.yaml", ErrorMessage: "nil pointer evaluating interface {}.type"},
+			},
+		}},
+	}
+
+	a := analyzer.New("catalog.json", "", nil)
+	a.ConsumeRepo(repo)
+	report := a.Report()
+
+	if !report.BySubKind["template.values_schema_validation"].NonFixable {
+		t.Error("values_schema_validation should be flagged NonFixable")
+	}
+	if report.BySubKind["template.nil_pointer"].NonFixable {
+		t.Error("nil_pointer must NOT be flagged NonFixable")
+	}
+	if got := report.Totals.NonFixableErrors; got != 1 {
+		t.Errorf("NonFixableErrors: got %d, want 1", got)
 	}
 }
 
