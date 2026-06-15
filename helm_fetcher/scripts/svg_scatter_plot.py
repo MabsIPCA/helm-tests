@@ -40,7 +40,15 @@ def _build_log_star_ticks(max_x: int) -> list[int]:
                 ticks.append(tick)
         value *= 10
 
-    if max_x not in ticks:
+    # Only add a tick for the exact max when it is far enough (in log space)
+    # from the largest decade tick. Otherwise its label crams into / overlaps
+    # the last decade label — and since labels are floored to "k"/"M", a max of
+    # e.g. 10.3k even renders as a duplicate "10k" right on top of the 10k tick.
+    largest = ticks[-1]
+    min_log_gap = 0.15  # ~1.41x separation before the max earns its own label
+    if max_x not in ticks and (
+        math.log10(max_x + 1) - math.log10(largest + 1) >= min_log_gap
+    ):
         ticks.append(max_x)
 
     ticks = sorted(set(ticks))

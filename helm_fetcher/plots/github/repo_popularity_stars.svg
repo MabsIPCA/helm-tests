@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1630" viewBox="0 0 1400 1630">
+<style>
+.title { font: 700 22px sans-serif; fill: #111827; }
+.axis { font: 12px sans-serif; fill: #374151; }
+.label { font: 12px sans-serif; fill: #111827; }
+.value { font: 11px sans-serif; fill: #111827; }
+.grid { stroke: #e5e7eb; stroke-width: 1; }
+</style>
+<text class="title" x="24" y="36">Repository Popularity by Stars (Top 50)</text>
+<line class="grid" x1="480.00" y1="70" x2="480.00" y2="1570" />
+<text class="axis" x="480.00" y="1588" text-anchor="middle">0</text>
+<line class="grid" x1="626.67" y1="70" x2="626.67" y2="1570" />
+<text class="axis" x="626.67" y="1588" text-anchor="middle">2613</text>
+<line class="grid" x1="773.33" y1="70" x2="773.33" y2="1570" />
+<text class="axis" x="773.33" y="1588" text-anchor="middle">5226</text>
+<line class="grid" x1="920.00" y1="70" x2="920.00" y2="1570" />
+<text class="axis" x="920.00" y="1588" text-anchor="middle">7839</text>
+<line class="grid" x1="1066.67" y1="70" x2="1066.67" y2="1570" />
+<text class="axis" x="1066.67" y="1588" text-anchor="middle">10452</text>
+<line class="grid" x1="1213.33" y1="70" x2="1213.33" y2="1570" />
+<text class="axis" x="1213.33" y="1588" text-anchor="middle">13065</text>
+<line class="grid" x1="1360.00" y1="70" x2="1360.00" y2="1570" />
+<text class="axis" x="1360.00" y="1588" text-anchor="middle">15678</text>
+<text class="axis" x="920.00" y="1612" text-anchor="middle">GitHub stars</text>
+<text class="label" x="468" y="85.84" text-anchor="end">Tencent/WeKnora</text>
+<rect x="480" y="70" width="880.00" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="1366.00" y="85.84">15678</text>
+<text class="label" x="468" y="115.84" text-anchor="end">bitnami/charts</text>
+<rect x="480" y="100" width="581.11" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="1067.11" y="115.84">10353</text>
+<text class="label" x="468" y="145.84" text-anchor="end">openebs/openebs</text>
+<rect x="480" y="130" width="547.60" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="1033.60" y="145.84">9756</text>
+<text class="label" x="468" y="175.84" text-anchor="end">higress-group/higress</text>
+<rect x="480" y="160" width="477.33" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="963.33" y="175.84">8504</text>
+<text class="label" x="468" y="205.84" text-anchor="end">feast-dev/feast</text>
+<rect x="480" y="190" width="396.11" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="882.11" y="205.84">7057</text>
+<text class="label" x="468" y="235.84" text-anchor="end">prometheus-community/helm-charts</text>
+<rect x="480" y="220" width="343.34" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="829.34" y="235.84">6117</text>
+<text class="label" x="468" y="265.84" text-anchor="end">diggerhq/digger</text>
+<rect x="480" y="250" width="277.84" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="763.84" y="265.84">4950</text>
+<text class="label" x="468" y="295.84" text-anchor="end">Kovah/LinkAce</text>
+<rect x="480" y="280" width="184.78" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="670.78" y="295.84">3292</text>
+<text class="label" x="468" y="325.84" text-anchor="end">collabnix/kubelabs</text>
+<rect x="480" y="310" width="173.95" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="659.95" y="325.84">3099</text>
+<text class="label" x="468" y="355.84" text-anchor="end">apache/activemq</text>
+<rect x="480" y="340" width="136.34" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="622.34" y="355.84">2429</text>
+<text class="label" x="468" y="385.84" text-anchor="end">cozystack/cozystack</text>
+<rect x="480" y="370" width="117.20" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="603.20" y="385.84">2088</text>
+<text class="label" x="468" y="415.84" text-anchor="end">grafana/helm-charts</text>
+<rect x="480" y="400" width="111.75" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="597.75" y="415.84">1991</text>
+<text class="label" x="468" y="445.84" text-anchor="end">FJ-OMS/oms-erp</text>
+<rect x="480" y="430" width="106.25" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="592.25" y="445.84">1893</text>
+<text class="label" x="468" y="475.84" text-anchor="end">microsoft/mssql-docker</text>
+<rect x="480" y="460" width="104.96" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="590.96" y="475.84">1870</text>
+<text class="label" x="468" y="505.84" text-anchor="end">tungbq/devops-basics</text>
+<rect x="480" y="490" width="104.34" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="590.34" y="505.84">1859</text>
+<text class="label" x="468" y="535.84" text-anchor="end">containers/kubernetes-mcp-server</text>
+<rect x="480" y="520" width="91.66" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="577.66" y="535.84">1633</text>
+<text class="label" x="468" y="565.84" text-anchor="end">FeatureProbe/FeatureProbe</text>
+<rect x="480" y="550" width="91.44" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="577.44" y="565.84">1629</text>
+<text class="label" x="468" y="595.84" text-anchor="end">semaphoreio/semaphore</text>
+<rect x="480" y="580" width="85.71" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="571.71" y="595.84">1527</text>
+<text class="label" x="468" y="625.84" text-anchor="end">pluralsh/plural</text>
+<rect x="480" y="610" width="83.41" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="569.41" y="625.84">1486</text>
+<text class="label" x="468" y="655.84" text-anchor="end">trueforge-org/truecharts</text>
+<rect x="480" y="640" width="75.44" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="561.44" y="655.84">1344</text>
+<text class="label" x="468" y="685.84" text-anchor="end">deckhouse/deckhouse</text>
+<rect x="480" y="670" width="73.53" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="559.53" y="685.84">1310</text>
+<text class="label" x="468" y="715.84" text-anchor="end">kubernetes-csi/csi-driver-nfs</text>
+<rect x="480" y="700" width="71.68" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="557.68" y="715.84">1277</text>
+<text class="label" x="468" y="745.84" text-anchor="end">mobilecoinfoundation/mobilecoin</text>
+<rect x="480" y="730" width="66.01" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="552.01" y="745.84">1176</text>
+<text class="label" x="468" y="775.84" text-anchor="end">slurm-personal/school-dev-k8s</text>
+<rect x="480" y="760" width="55.79" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="541.79" y="775.84">994</text>
+<text class="label" x="468" y="805.84" text-anchor="end">secureCodeBox/secureCodeBox</text>
+<rect x="480" y="790" width="54.61" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="540.61" y="805.84">973</text>
+<text class="label" x="468" y="835.84" text-anchor="end">kanisterio/kanister</text>
+<rect x="480" y="820" width="49.11" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="535.11" y="835.84">875</text>
+<text class="label" x="468" y="865.84" text-anchor="end">kubeflow/arena</text>
+<rect x="480" y="850" width="45.52" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="531.52" y="865.84">811</text>
+<text class="label" x="468" y="895.84" text-anchor="end">fluxninja/aperture</text>
+<rect x="480" y="880" width="40.86" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="526.86" y="895.84">728</text>
+<text class="label" x="468" y="925.84" text-anchor="end">kubernetes-csi/csi-driver-smb</text>
+<rect x="480" y="910" width="35.87" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="521.87" y="925.84">639</text>
+<text class="label" x="468" y="955.84" text-anchor="end">banzaicloud/istio-operator</text>
+<rect x="480" y="940" width="29.92" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="515.92" y="955.84">533</text>
+<text class="label" x="468" y="985.84" text-anchor="end">WeBankFinTech/Prophecis</text>
+<rect x="480" y="970" width="28.74" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="514.74" y="985.84">512</text>
+<text class="label" x="468" y="1015.84" text-anchor="end">rancher/charts</text>
+<rect x="480" y="1000" width="24.02" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="510.02" y="1015.84">428</text>
+<text class="label" x="468" y="1045.84" text-anchor="end">DataDog/helm-charts</text>
+<rect x="480" y="1030" width="23.41" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="509.41" y="1045.84">417</text>
+<text class="label" x="468" y="1075.84" text-anchor="end">radondb/radondb-mysql-kubernetes</text>
+<rect x="480" y="1060" width="20.82" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="506.82" y="1075.84">371</text>
+<text class="label" x="468" y="1105.84" text-anchor="end">LinuxSuRen/api-testing</text>
+<rect x="480" y="1090" width="20.54" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="506.54" y="1105.84">366</text>
+<text class="label" x="468" y="1135.84" text-anchor="end">truenas/charts</text>
+<rect x="480" y="1120" width="19.65" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="505.65" y="1135.84">350</text>
+<text class="label" x="468" y="1165.84" text-anchor="end">instantlinux/docker-tools</text>
+<rect x="480" y="1150" width="18.13" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="504.13" y="1165.84">323</text>
+<text class="label" x="468" y="1195.84" text-anchor="end">IBM/charts</text>
+<rect x="480" y="1180" width="17.40" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="503.40" y="1195.84">310</text>
+<text class="label" x="468" y="1225.84" text-anchor="end">aenix-io/kubernetes-in-kubernetes</text>
+<rect x="480" y="1210" width="16.61" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="502.61" y="1225.84">296</text>
+<text class="label" x="468" y="1255.84" text-anchor="end">mercedes-benz/DnA</text>
+<rect x="480" y="1240" width="16.39" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="502.39" y="1255.84">292</text>
+<text class="label" x="468" y="1285.84" text-anchor="end">Hydrospheredata/hydro-serving</text>
+<rect x="480" y="1270" width="15.27" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="501.27" y="1285.84">272</text>
+<text class="label" x="468" y="1315.84" text-anchor="end">redhat-cop/namespace-configuration-operator</text>
+<rect x="480" y="1300" width="15.21" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="501.21" y="1315.84">271</text>
+<text class="label" x="468" y="1345.84" text-anchor="end">llm-d/llm-d-router</text>
+<rect x="480" y="1330" width="11.45" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="497.45" y="1345.84">204</text>
+<text class="label" x="468" y="1375.84" text-anchor="end">JahstreetOrg/spark-on-kubernetes-helm</text>
+<rect x="480" y="1360" width="11.34" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="497.34" y="1375.84">202</text>
+<text class="label" x="468" y="1405.84" text-anchor="end">osm-seed/osm-seed</text>
+<rect x="480" y="1390" width="9.71" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="495.71" y="1405.84">173</text>
+<text class="label" x="468" y="1435.84" text-anchor="end">digitalis-io/k3s-on-prem-production</text>
+<rect x="480" y="1420" width="9.04" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="495.04" y="1435.84">161</text>
+<text class="label" x="468" y="1465.84" text-anchor="end">Gradiant/5g-charts</text>
+<rect x="480" y="1450" width="8.81" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="494.81" y="1465.84">157</text>
+<text class="label" x="468" y="1495.84" text-anchor="end">kubernetes-sigs/blob-csi-driver</text>
+<rect x="480" y="1480" width="8.14" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="494.14" y="1495.84">145</text>
+<text class="label" x="468" y="1525.84" text-anchor="end">quanxiang-cloud/quanxiang</text>
+<rect x="480" y="1510" width="7.58" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="493.58" y="1525.84">135</text>
+<text class="label" x="468" y="1555.84" text-anchor="end">redhat-cop/patch-operator</text>
+<rect x="480" y="1540" width="7.24" height="22" rx="2" ry="2" fill="#2563eb" />
+<text class="value" x="493.24" y="1555.84">129</text>
+</svg>

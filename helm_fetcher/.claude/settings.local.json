@@ -84,7 +84,16 @@
       "PowerShell(.\\\\run_both_sources.ps1 -Top 500 -GithubCloneDir D:/helm_clones_github -ArtifactCloneDir D:/helm_clones_artifacthub)",
       "Bash(tee /tmp/refilter_github.log)",
       "Bash(tee /tmp/refilter_ah.log)",
-      "Bash(grep -E '^\\\\| `' out/cumulative_final/taxonomy_summary.md)"
+      "Bash(grep -E '^\\\\| `' out/cumulative_final/taxonomy_summary.md)",
+      "Bash(ls -la --time-style=+%Y-%m-%d_%H:%M:%S taxonomy_analyzer/out/)",
+      "Bash(ls -la --time-style=+%Y-%m-%d_%H:%M:%S taxonomy_analyzer/out/cumulative_final/)",
+      "Bash(ls -la --time-style=+%Y-%m-%d_%H:%M:%S helm_fetcher/plots/top500Github/)",
+      "Bash(ls scripts/)",
+      "Bash(py --version)",
+      "Bash(py -3 --version)",
+      "Bash(where py *)",
+      "PowerShell(winget install *)",
+      "PowerShell($py = Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\\\\Python\" -Filter python.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName; if \\(-not $py\\) { $py = \\(Get-ChildItem \"$env:LOCALAPPDATA\\\\Microsoft\\\\WindowsApps\\\\python3.12.exe\" -ErrorAction SilentlyContinue\\).FullName }; \"PY=$py\"; if \\($py\\) { & $py --version })"
     ]
   }
 }

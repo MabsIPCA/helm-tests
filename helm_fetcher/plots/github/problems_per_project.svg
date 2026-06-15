@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1330" viewBox="0 0 1400 1330">
+<style>
+.title { font: 700 22px sans-serif; fill: #111827; }
+.axis { font: 12px sans-serif; fill: #374151; }
+.label { font: 12px sans-serif; fill: #111827; }
+.value { font: 11px sans-serif; fill: #111827; }
+.grid { stroke: #e5e7eb; stroke-width: 1; }
+</style>
+<text class="title" x="24" y="36">Helm Template Problems per Project (Top 40)</text>
+<line class="grid" x1="480.00" y1="70" x2="480.00" y2="1270" />
+<text class="axis" x="480.00" y="1288" text-anchor="middle">0</text>
+<line class="grid" x1="626.67" y1="70" x2="626.67" y2="1270" />
+<text class="axis" x="626.67" y="1288" text-anchor="middle">31</text>
+<line class="grid" x1="773.33" y1="70" x2="773.33" y2="1270" />
+<text class="axis" x="773.33" y="1288" text-anchor="middle">62</text>
+<line class="grid" x1="920.00" y1="70" x2="920.00" y2="1270" />
+<text class="axis" x="920.00" y="1288" text-anchor="middle">94</text>
+<line class="grid" x1="1066.67" y1="70" x2="1066.67" y2="1270" />
+<text class="axis" x="1066.67" y="1288" text-anchor="middle">125</text>
+<line class="grid" x1="1213.33" y1="70" x2="1213.33" y2="1270" />
+<text class="axis" x="1213.33" y="1288" text-anchor="middle">156</text>
+<line class="grid" x1="1360.00" y1="70" x2="1360.00" y2="1270" />
+<text class="axis" x="1360.00" y="1288" text-anchor="middle">187</text>
+<text class="axis" x="920.00" y="1312" text-anchor="middle">Problem count (total_failures + total_dep_failures)</text>
+<text class="label" x="468" y="85.84" text-anchor="end">Above-Os/terminus-apps</text>
+<rect x="480" y="70" width="880.00" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="1366.00" y="85.84">187</text>
+<text class="label" x="468" y="115.84" text-anchor="end">tetratelabs/charts</text>
+<rect x="480" y="100" width="865.88" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="1351.88" y="115.84">184</text>
+<text class="label" x="468" y="145.84" text-anchor="end">oracle-cne/catalog</text>
+<rect x="480" y="130" width="630.59" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="1116.59" y="145.84">134</text>
+<text class="label" x="468" y="175.84" text-anchor="end">acuvity/mcp-servers-registry</text>
+<rect x="480" y="160" width="574.12" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="1060.12" y="175.84">122</text>
+<text class="label" x="468" y="205.84" text-anchor="end">tetratelabs/helm-charts</text>
+<rect x="480" y="190" width="531.76" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="1017.76" y="205.84">113</text>
+<text class="label" x="468" y="235.84" text-anchor="end">cap-js/cap-operator-plugin</text>
+<rect x="480" y="220" width="475.29" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="961.29" y="235.84">101</text>
+<text class="label" x="468" y="265.84" text-anchor="end">project-sunbird/sunbird-devops</text>
+<rect x="480" y="250" width="301.18" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="787.18" y="265.84">64</text>
+<text class="label" x="468" y="295.84" text-anchor="end">JonasHess/homelab-iac</text>
+<rect x="480" y="280" width="272.94" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="758.94" y="295.84">58</text>
+<text class="label" x="468" y="325.84" text-anchor="end">cloud-native-toolkit/toolkit-charts</text>
+<rect x="480" y="310" width="160.00" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="646.00" y="325.84">34</text>
+<text class="label" x="468" y="355.84" text-anchor="end">100rd/platform-design</text>
+<rect x="480" y="340" width="80.00" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="566.00" y="355.84">17</text>
+<text class="label" x="468" y="385.84" text-anchor="end">Clark1992/ECK1</text>
+<rect x="480" y="370" width="75.29" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="561.29" y="385.84">16</text>
+<text class="label" x="468" y="415.84" text-anchor="end">junghoon2/k8s-class</text>
+<rect x="480" y="400" width="65.88" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="551.88" y="415.84">14</text>
+<text class="label" x="468" y="445.84" text-anchor="end">codefuturist/helm-charts</text>
+<rect x="480" y="430" width="61.18" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="547.18" y="445.84">13</text>
+<text class="label" x="468" y="475.84" text-anchor="end">WeBankFinTech/Prophecis</text>
+<rect x="480" y="460" width="51.76" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="537.76" y="475.84">11</text>
+<text class="label" x="468" y="505.84" text-anchor="end">CloudFitSoftware/PubSec-Info-Assistant</text>
+<rect x="480" y="490" width="47.06" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="533.06" y="505.84">10</text>
+<text class="label" x="468" y="535.84" text-anchor="end">open-edge-platform/edge-ai-libraries</text>
+<rect x="480" y="520" width="42.35" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="528.35" y="535.84">9</text>
+<text class="label" x="468" y="565.84" text-anchor="end">onasunnymorning/domain-os</text>
+<rect x="480" y="550" width="42.35" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="528.35" y="565.84">9</text>
+<text class="label" x="468" y="595.84" text-anchor="end">k0rdent/catalog</text>
+<rect x="480" y="580" width="37.65" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="523.65" y="595.84">8</text>
+<text class="label" x="468" y="625.84" text-anchor="end">claytono/infra</text>
+<rect x="480" y="610" width="37.65" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="523.65" y="625.84">8</text>
+<text class="label" x="468" y="655.84" text-anchor="end">trueforge-org/truecharts</text>
+<rect x="480" y="640" width="32.94" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="518.94" y="655.84">7</text>
+<text class="label" x="468" y="685.84" text-anchor="end">CSCfi/helm-charts</text>
+<rect x="480" y="670" width="32.94" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="518.94" y="685.84">7</text>
+<text class="label" x="468" y="715.84" text-anchor="end">oneconcern/datamon</text>
+<rect x="480" y="700" width="28.24" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="514.24" y="715.84">6</text>
+<text class="label" x="468" y="745.84" text-anchor="end">kast-spells/kast-system</text>
+<rect x="480" y="730" width="28.24" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="514.24" y="745.84">6</text>
+<text class="label" x="468" y="775.84" text-anchor="end">erost/vdz26-demo-fleet-commander</text>
+<rect x="480" y="760" width="28.24" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="514.24" y="775.84">6</text>
+<text class="label" x="468" y="805.84" text-anchor="end">cisco-open/appdynamics-k8s-webhook-instrumentor</text>
+<rect x="480" y="790" width="28.24" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="514.24" y="805.84">6</text>
+<text class="label" x="468" y="835.84" text-anchor="end">aws-samples/amazon-eks-machine-learning-with-terraform-and-kubeflow</text>
+<rect x="480" y="820" width="23.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="509.53" y="835.84">5</text>
+<text class="label" x="468" y="865.84" text-anchor="end">Loongson-Cloud-Community/dockerfiles</text>
+<rect x="480" y="850" width="23.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="509.53" y="865.84">5</text>
+<text class="label" x="468" y="895.84" text-anchor="end">thelande/charts</text>
+<rect x="480" y="880" width="23.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="509.53" y="895.84">5</text>
+<text class="label" x="468" y="925.84" text-anchor="end">MrE-Fog/ks-installer2</text>
+<rect x="480" y="910" width="23.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="509.53" y="925.84">5</text>
+<text class="label" x="468" y="955.84" text-anchor="end">PilotDataPlatform/helm-charts</text>
+<rect x="480" y="940" width="23.53" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="509.53" y="955.84">5</text>
+<text class="label" x="468" y="985.84" text-anchor="end">IBM/charts</text>
+<rect x="480" y="970" width="18.82" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="504.82" y="985.84">4</text>
+<text class="label" x="468" y="1015.84" text-anchor="end">openkruise/charts</text>
+<rect x="480" y="1000" width="18.82" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="504.82" y="1015.84">4</text>
+<text class="label" x="468" y="1045.84" text-anchor="end">randoli/helm-charts</text>
+<rect x="480" y="1030" width="18.82" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="504.82" y="1045.84">4</text>
+<text class="label" x="468" y="1075.84" text-anchor="end">dungdm93/shipyard</text>
+<rect x="480" y="1060" width="18.82" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="504.82" y="1075.84">4</text>
+<text class="label" x="468" y="1105.84" text-anchor="end">Yahya-rabii/soge-plus</text>
+<rect x="480" y="1090" width="18.82" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="504.82" y="1105.84">4</text>
+<text class="label" x="468" y="1135.84" text-anchor="end">AdmanTIC/helm-charts</text>
+<rect x="480" y="1120" width="18.82" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="504.82" y="1135.84">4</text>
+<text class="label" x="468" y="1165.84" text-anchor="end">Thakurvaibhav/k8s</text>
+<rect x="480" y="1150" width="14.12" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="500.12" y="1165.84">3</text>
+<text class="label" x="468" y="1195.84" text-anchor="end">vexxhost/atmosphere</text>
+<rect x="480" y="1180" width="14.12" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="500.12" y="1195.84">3</text>
+<text class="label" x="468" y="1225.84" text-anchor="end">ODIM-Project/ODIM</text>
+<rect x="480" y="1210" width="14.12" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="500.12" y="1225.84">3</text>
+<text class="label" x="468" y="1255.84" text-anchor="end">opea-project/Enterprise-Inference</text>
+<rect x="480" y="1240" width="14.12" height="22" rx="2" ry="2" fill="#dc2626" />
+<text class="value" x="500.12" y="1255.84">3</text>
+</svg>
