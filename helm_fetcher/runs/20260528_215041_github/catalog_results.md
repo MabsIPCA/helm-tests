@@ -40,9 +40,9 @@
 | 34 | [LinuxSuRen/api-testing](https://github.com/LinuxSuRen/api-testing) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 35 | [truenas/charts](https://github.com/truenas/charts) | 249 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
 | 36 | [instantlinux/docker-tools](https://github.com/instantlinux/docker-tools) | 61 | 8 | 8 | 0 | 1 | 100.0% | Dep-Failed |
-| 37 | [IBM/charts](https://github.com/IBM/charts) | 585 | 3 | 0 | 3 | 1 | 0.0% | Dep-Failed |
+| 37 | [IBM/charts](https://github.com/IBM/charts) | 230 | 3 | 0 | 3 | 1 | 0.0% | Dep-Failed |
 | 38 | [aenix-io/kubernetes-in-kubernetes](https://github.com/aenix-io/kubernetes-in-kubernetes) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 39 | [mercedes-benz/DnA](https://github.com/mercedes-benz/DnA) | 19 | 17 | 12 | 5 | 1 | 70.6% | Dep-Failed |
+| 39 | [mercedes-benz/DnA](https://github.com/mercedes-benz/DnA) | 2 | 1 | 0 | 1 | 1 | 0.0% | Dep-Failed |
 | 40 | [Hydrospheredata/hydro-serving](https://github.com/Hydrospheredata/hydro-serving) | 16 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
 | 41 | [redhat-cop/namespace-configuration-operator](https://github.com/redhat-cop/namespace-configuration-operator) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 42 | [llm-d/llm-d-router](https://github.com/llm-d/llm-d-router) | 3 | 3 | 0 | 3 | 0 | 0.0% | Kept |
@@ -122,7 +122,7 @@
 | 116 | [sebolabs/eks-tf-gitops](https://github.com/sebolabs/eks-tf-gitops) | 12 | 6 | 5 | 1 | 1 | 83.3% | Dep-Failed |
 | 117 | [AI4quantum/qiskit-studio](https://github.com/AI4quantum/qiskit-studio) | 1 | 8 | 8 | 0 | 0 | 100.0% | Removed |
 | 118 | [ministryofjustice/prison-visits-2](https://github.com/ministryofjustice/prison-visits-2) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 119 | [StatCan/charts](https://github.com/StatCan/charts) | 59 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 119 | [StatCan/charts](https://github.com/StatCan/charts) | 56 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
 | 120 | [engineering-bjs/laradock-kubernetes](https://github.com/engineering-bjs/laradock-kubernetes) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 121 | [jordanopensource/charts](https://github.com/jordanopensource/charts) | 14 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
 | 122 | [jugatsu/microservices](https://github.com/jugatsu/microservices) | 7 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
@@ -171,7 +171,7 @@
 | 165 | [ppc64le/charts](https://github.com/ppc64le/charts) | 61 | 111 | 107 | 4 | 0 | 96.4% | Kept |
 | 166 | [wunderio/charts](https://github.com/wunderio/charts) | 29 | 2 | 2 | 0 | 1 | 100.0% | Dep-Failed |
 | 167 | [SocialGouv/no-package-malware](https://github.com/SocialGouv/no-package-malware) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 168 | [StackVista/helm-charts](https://github.com/StackVista/helm-charts) | 43 | 34 | 25 | 9 | 1 | 73.5% | Dep-Failed |
+| 168 | [StackVista/helm-charts](https://github.com/StackVista/helm-charts) | 26 | 13 | 11 | 2 | 1 | 84.6% | Dep-Failed |
 | 169 | [anup1384/helm-charts](https://github.com/anup1384/helm-charts) | 9 | 6 | 6 | 0 | 1 | 100.0% | Dep-Failed |
 | 170 | [cap-js/cap-operator-plugin](https://github.com/cap-js/cap-operator-plugin) | 2 | 202 | 101 | 101 | 0 | 50.0% | Kept |
 | 171 | [freqq/DocWIRE](https://github.com/freqq/DocWIRE) | 26 | 26 | 4 | 22 | 0 | 15.4% | Kept |
@@ -261,7 +261,7 @@
 | 255 | [BENMALEKarim/argocd-helm](https://github.com/BENMALEKarim/argocd-helm) | 3 | 3 | 2 | 1 | 0 | 66.7% | Kept |
 | 256 | [Chinaxiaoming666/kube-prometheus-stack](https://github.com/Chinaxiaoming666/kube-prometheus-stack) | 4 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
 | 257 | [DeeJayTC/AdaptiveAPI](https://github.com/DeeJayTC/AdaptiveAPI) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 258 | [DenisMarta/prodject1](https://github.com/DenisMarta/prodject1) | 19 | 17 | 12 | 5 | 1 | 70.6% | Dep-Failed |
+| 258 | [DenisMarta/prodject1](https://github.com/DenisMarta/prodject1) | 2 | 1 | 0 | 1 | 1 | 0.0% | Dep-Failed |
 | 259 | [EOSC-Lot-1/helm-charts](https://github.com/EOSC-Lot-1/helm-charts) | 23 | 23 | 21 | 2 | 0 | 91.3% | Kept |
 | 260 | [Frnn4268/K8s_helm_demos](https://github.com/Frnn4268/K8s_helm_demos) | 2 | 3 | 3 | 0 | 0 | 100.0% | Removed |
 | 261 | [GiveGetGo/givegetgo-backend](https://github.com/GiveGetGo/givegetgo-backend) | 14 | 14 | 14 | 0 | 0 | 100.0% | Removed |
@@ -389,7 +389,7 @@
 | 383 | [KingRyuK69/kubernetics](https://github.com/KingRyuK69/kubernetics) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 384 | [LBrinkmann/machine_culture_machines](https://github.com/LBrinkmann/machine_culture_machines) | 1 | 1 | 0 | 1 | 0 | 0.0% | Kept |
 | 385 | [LTKH/minikube](https://github.com/LTKH/minikube) | 19 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 386 | [LeeLisker/helm](https://github.com/LeeLisker/helm) | 575 | 3 | 0 | 3 | 1 | 0.0% | Dep-Failed |
+| 386 | [LeeLisker/helm](https://github.com/LeeLisker/helm) | 230 | 3 | 0 | 3 | 1 | 0.0% | Dep-Failed |
 | 387 | [Luohao-Yan/Louis-dify-apps](https://github.com/Luohao-Yan/Louis-dify-apps) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 388 | [MAAP-Project/maap-edav-esa-back](https://github.com/MAAP-Project/maap-edav-esa-back) | 27 | 27 | 0 | 27 | 0 | 0.0% | Kept |
 | 389 | [MMR-46org/payment](https://github.com/MMR-46org/payment) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
@@ -492,7 +492,7 @@
 | 486 | [beantownpub/helm](https://github.com/beantownpub/helm) | 12 | 1 | 0 | 1 | 1 | 0.0% | Dep-Failed |
 | 487 | [bgarcia-elastic/tfk8](https://github.com/bgarcia-elastic/tfk8) | 25 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
 |---|------------|--------|------|------------|-------------|-----------------|--------------|--------|
-| **Total** | **487 repos** | **69788** | **8065** | **5852** | **2213** | **194** | **72.6%** | - |
+| **Total** | **487 repos** | **69034** | **8012** | **5814** | **2198** | **194** | **72.6%** | - |
 
 ## Failure Details
 
@@ -711,30 +711,6 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm` | Error: helm/charts/storagebe/templates/secret.yaml:9:26   executing "helm/charts/storagebe/templates/secret.yaml" at <b64enc>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\airflow`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\airflow` | Error: YAML parse error on airflow/templates/deployment.yaml: error converting YAML to JSON: yaml: line 75: mapping values are not allowed in this context  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\bitnami-postgresql\charts\common`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\bitnami-postgresql\charts\common` | Error: library charts are not installable  |
-
-#### `D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\clamav`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\clamav` | Error: clamav/templates/clamav-deployment.yaml:64:29   executing "clamav/templates/clamav-deployment.yaml" at <.Values.securityContext.runasUser>:     nil pointer evaluating interface {}.runasUser  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\minio\charts\common`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\minio\charts\common` | Error: library charts are not installable  |
 
 ### llm-d/llm-d-router
 
@@ -7189,42 +7165,6 @@
 
 ### StackVista/helm-charts
 
-#### `D:\helm_clones_github\StackVista__helm-charts\local\anomaly-detection`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\StackVista__helm-charts\local\anomaly-detection` | Error: anomaly-detection/templates/anomaly-detection-worker.yaml:83:16   executing "anomaly-detection/templates/anomaly-detection-worker.yaml" at <include "anomaly-detection.stackstate.instance" .>:     error calling include: anomaly-detection/templates/_helpers.tpl:35:14   executing "anomaly-detection.stackstate.instance" at <.Values.stackstate.instance>:     wrong type for value; expected string; got interface {}  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_github\StackVista__helm-charts\local\clickhouse\charts\common`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\StackVista__helm-charts\local\clickhouse\charts\common` | Error: library charts are not installable  |
-
-#### `D:\helm_clones_github\StackVista__helm-charts\local\hbase`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| D:\helm_clones_github\StackVista__helm-charts\local\hbase\linter_values.yaml | `helm template test D:\helm_clones_github\StackVista__helm-charts\local\hbase -f D:\helm_clones_github\StackVista__helm-charts\local\hbase\linter_values.yaml` | Error: failed to parse D:\helm_clones_github\StackVista__helm-charts\local\hbase\linter_values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}  |
-
-#### `D:\helm_clones_github\StackVista__helm-charts\local\kafka\charts\common`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\StackVista__helm-charts\local\kafka\charts\common` | Error: library charts are not installable  |
-
-#### `D:\helm_clones_github\StackVista__helm-charts\local\kubernetes-rbac-agent`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\StackVista__helm-charts\local\kubernetes-rbac-agent` | Error: execution error at (kubernetes-rbac-agent/templates/url-configmap.yaml:21:4): Url not defined, either provide a SUSE Observability platform url through url.value  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_github\StackVista__helm-charts\local\zookeeper\charts\common`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\StackVista__helm-charts\local\zookeeper\charts\common` | Error: library charts are not installable  |
-
 #### `D:\helm_clones_github\StackVista__helm-charts\stable\artifactory-cleaner`
 
 | Values Files | Command | Error |
@@ -7236,7 +7176,6 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_github\StackVista__helm-charts\stable\gitlab-steward` | Error: gitlab-steward/templates/sts-secret.yaml:10:65   executing "gitlab-steward/templates/sts-secret.yaml" at <b64enc>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
-| D:\helm_clones_github\StackVista__helm-charts\stable\gitlab-steward\linter_values.yaml | `helm template test D:\helm_clones_github\StackVista__helm-charts\stable\gitlab-steward -f D:\helm_clones_github\StackVista__helm-charts\stable\gitlab-steward\linter_values.yaml` | Error: failed to parse D:\helm_clones_github\StackVista__helm-charts\stable\gitlab-steward\linter_values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}  |
 
 ### cap-js/cap-operator-plugin
 
@@ -8896,30 +8835,6 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm` | Error: helm/charts/storagebe/templates/secret.yaml:9:26   executing "helm/charts/storagebe/templates/secret.yaml" at <b64enc>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\airflow`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\airflow` | Error: YAML parse error on airflow/templates/deployment.yaml: error converting YAML to JSON: yaml: line 75: mapping values are not allowed in this context  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\bitnami-postgresql\charts\common`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\bitnami-postgresql\charts\common` | Error: library charts are not installable  |
-
-#### `D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\clamav`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\clamav` | Error: clamav/templates/clamav-deployment.yaml:64:29   executing "clamav/templates/clamav-deployment.yaml" at <.Values.securityContext.runasUser>:     nil pointer evaluating interface {}.runasUser  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\minio\charts\common`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\minio\charts\common` | Error: library charts are not installable  |
 
 ### EOSC-Lot-1/helm-charts
 

@@ -93,7 +93,8 @@
       "Bash(py -3 --version)",
       "Bash(where py *)",
       "PowerShell(winget install *)",
-      "PowerShell($py = Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\\\\Python\" -Filter python.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName; if \\(-not $py\\) { $py = \\(Get-ChildItem \"$env:LOCALAPPDATA\\\\Microsoft\\\\WindowsApps\\\\python3.12.exe\" -ErrorAction SilentlyContinue\\).FullName }; \"PY=$py\"; if \\($py\\) { & $py --version })"
+      "PowerShell($py = Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\\\\Python\" -Filter python.exe -Recurse -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName; if \\(-not $py\\) { $py = \\(Get-ChildItem \"$env:LOCALAPPDATA\\\\Microsoft\\\\WindowsApps\\\\python3.12.exe\" -ErrorAction SilentlyContinue\\).FullName }; \"PY=$py\"; if \\($py\\) { & $py --version })",
+      "Bash(sort -k3)"
     ]
   }
 }
