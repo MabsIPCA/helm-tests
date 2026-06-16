@@ -7,13 +7,13 @@
 | 1 | [prometheus-operator/kube-prometheus](https://github.com/prometheus-operator/kube-prometheus) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 2 | [cert-manager/approver-policy](https://github.com/cert-manager/approver-policy) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 3 | [kubernetes/ingress-nginx](https://github.com/kubernetes/ingress-nginx) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 4 | [argoproj/argo-helm](https://github.com/argoproj/argo-helm) | 6 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 5 | [prometheus-community/helm-charts](https://github.com/prometheus-community/helm-charts) | 46 | 7 | 6 | 1 | 1 | 85.7% | Dep-Failed |
-| 6 | [bitnami/charts](https://github.com/bitnami/charts) | 119 | 119 | 118 | 1 | 0 | 99.2% | Kept |
+| 4 | [argoproj/argo-helm](https://github.com/argoproj/argo-helm) | 6 | 6 | 5 | 1 | 0 | 83.3% | Kept |
+| 5 | [prometheus-community/helm-charts](https://github.com/prometheus-community/helm-charts) | 44 | 44 | 42 | 2 | 0 | 95.5% | Kept |
+| 6 | [bitnami/charts](https://github.com/bitnami/charts) | 118 | 118 | 117 | 1 | 0 | 99.2% | Kept |
 | 7 | [bitnami/containers](https://github.com/bitnami/containers) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 8 | [traefik/traefik-helm-chart](https://github.com/traefik/traefik-helm-chart) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 9 | [kubernetes/dashboard](https://github.com/kubernetes/dashboard) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 10 | [grafana/helm-charts](https://github.com/grafana/helm-charts) | 15 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
+| 9 | [kubernetes/dashboard](https://github.com/kubernetes/dashboard) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 10 | [grafana/helm-charts](https://github.com/grafana/helm-charts) | 14 | 2 | 2 | 0 | 1 | 100.0% | Dep-Failed |
 | 11 | [kubernetes-sigs/metrics-server](https://github.com/kubernetes-sigs/metrics-server) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 12 | [hashicorp/vault](https://github.com/hashicorp/vault) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 13 | [goharbor/harbor](https://github.com/goharbor/harbor) | 2 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
@@ -23,23 +23,23 @@
 | 17 | [longhorn/charts](https://github.com/longhorn/charts) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 18 | [aws/eks-charts](https://github.com/aws/eks-charts) | 16 | 16 | 15 | 1 | 0 | 93.8% | Kept |
 | 19 | [kubernetes-incubator/external-dns](https://github.com/kubernetes-incubator/external-dns) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 20 | [apache/airflow](https://github.com/apache/airflow) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 21 | [elastic/helm-charts](https://github.com/elastic/helm-charts) | 6 | 5 | 5 | 0 | 1 | 100.0% | Dep-Failed |
-| 22 | [nextcloud/helm](https://github.com/nextcloud/helm) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 20 | [apache/airflow](https://github.com/apache/airflow) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 21 | [elastic/helm-charts](https://github.com/elastic/helm-charts) | 6 | 6 | 6 | 0 | 0 | 100.0% | Removed |
+| 22 | [nextcloud/helm](https://github.com/nextcloud/helm) | 1 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 23 | [vmware-tanzu/velero](https://github.com/vmware-tanzu/velero) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 24 | [cilium/cilium](https://github.com/cilium/cilium) | 4 | 4 | 4 | 0 | 0 | 100.0% | Removed |
 | 25 | [kubernetes/autoscaler](https://github.com/kubernetes/autoscaler) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
-| 26 | [metallb/metallb](https://github.com/metallb/metallb) | 2 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 27 | [istio/istio](https://github.com/istio/istio) | 10 | 10 | 10 | 0 | 0 | 100.0% | Removed |
+| 26 | [metallb/metallb](https://github.com/metallb/metallb) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 27 | [istio/istio](https://github.com/istio/istio) | 6 | 6 | 6 | 0 | 0 | 100.0% | Removed |
 | 28 | [rancher/rancher](https://github.com/rancher/rancher) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 29 | [kyverno/kyverno](https://github.com/kyverno/kyverno) | 4 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 29 | [kyverno/kyverno](https://github.com/kyverno/kyverno) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 30 | [go-gitea/gitea](https://github.com/go-gitea/gitea) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 31 | [SonarSource/helm-chart-sonarqube](https://github.com/SonarSource/helm-chart-sonarqube) | 3 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
-| 32 | [cloudnative-pg/charts](https://github.com/cloudnative-pg/charts) | 3 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 31 | [SonarSource/helm-chart-sonarqube](https://github.com/SonarSource/helm-chart-sonarqube) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 32 | [cloudnative-pg/charts](https://github.com/cloudnative-pg/charts) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
 | 33 | [fluent/fluent-bit](https://github.com/fluent/fluent-bit) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 34 | [DataDog/datadog-agent](https://github.com/DataDog/datadog-agent) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 35 | [rowanruseler/helm-charts](https://github.com/rowanruseler/helm-charts) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 36 | [oauth2-proxy/manifests](https://github.com/oauth2-proxy/manifests) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 36 | [oauth2-proxy/manifests](https://github.com/oauth2-proxy/manifests) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 37 | [goauthentik/helm](https://github.com/goauthentik/helm) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 38 | [bitnami-labs/sealed-secrets](https://github.com/bitnami-labs/sealed-secrets) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 39 | [nginx/kubernetes-ingress](https://github.com/nginx/kubernetes-ingress) | 1 | 8 | 4 | 4 | 0 | 50.0% | Kept |
@@ -48,23 +48,23 @@
 | 42 | [artifacthub/hub](https://github.com/artifacthub/hub) | 5 | 8 | 8 | 0 | 0 | 100.0% | Removed |
 | 43 | [MoJo2600/pihole-kubernetes](https://github.com/MoJo2600/pihole-kubernetes) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 44 | [hashicorp/consul-k8s](https://github.com/hashicorp/consul-k8s) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
-| 45 | [community-charts/helm-charts](https://github.com/community-charts/helm-charts) | 8 | 3 | 2 | 1 | 1 | 66.7% | Dep-Failed |
-| 46 | [elastic/cloud-on-k8s](https://github.com/elastic/cloud-on-k8s) | 13 | 14 | 8 | 6 | 0 | 57.1% | Kept |
+| 45 | [community-charts/helm-charts](https://github.com/community-charts/helm-charts) | 8 | 11 | 9 | 2 | 0 | 81.8% | Kept |
+| 46 | [elastic/cloud-on-k8s](https://github.com/elastic/cloud-on-k8s) | 2 | 3 | 3 | 0 | 0 | 100.0% | Kept |
 | 47 | [kubernetes-sigs/descheduler](https://github.com/kubernetes-sigs/descheduler) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 48 | [prometheus/blackbox_exporter](https://github.com/prometheus/blackbox_exporter) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 49 | [stakater/Reloader](https://github.com/stakater/Reloader) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 50 | [jupyterhub/zero-to-jupyterhub-k8s](https://github.com/jupyterhub/zero-to-jupyterhub-k8s) | 1 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 51 | [argoproj/argo-rollouts](https://github.com/argoproj/argo-rollouts) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 52 | [jaegertracing/helm-charts](https://github.com/jaegertracing/helm-charts) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 52 | [jaegertracing/helm-charts](https://github.com/jaegertracing/helm-charts) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 53 | [prometheus-operator/prometheus-operator](https://github.com/prometheus-operator/prometheus-operator) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 54 | [metabase/metabase](https://github.com/metabase/metabase) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 55 | [nats-io/k8s](https://github.com/nats-io/k8s) | 6 | 6 | 6 | 0 | 0 | 100.0% | Removed |
-| 56 | [8gears/n8n-helm-chart](https://github.com/8gears/n8n-helm-chart) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 56 | [8gears/n8n-helm-chart](https://github.com/8gears/n8n-helm-chart) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 57 | [dexidp/dex](https://github.com/dexidp/dex) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 58 | [argoproj-labs/argocd-image-updater](https://github.com/argoproj-labs/argocd-image-updater) | 5 | 5 | 5 | 0 | 0 | 100.0% | Removed |
 | 59 | [dirsigler/uptime-kuma-helm](https://github.com/dirsigler/uptime-kuma-helm) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 60 | [benc-uk/kubeview](https://github.com/benc-uk/kubeview) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 61 | [airflow-helm/charts](https://github.com/airflow-helm/charts) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 61 | [airflow-helm/charts](https://github.com/airflow-helm/charts) | 1 | 8 | 8 | 0 | 0 | 100.0% | Removed |
 | 62 | [renovatebot/renovate](https://github.com/renovatebot/renovate) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
 | 63 | [kubernetes-sigs/nfs-ganesha-server-and-external-provisioner](https://github.com/kubernetes-sigs/nfs-ganesha-server-and-external-provisioner) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 64 | [jimmidyson/configmap-reload](https://github.com/jimmidyson/configmap-reload) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
@@ -75,31 +75,31 @@
 | 69 | [kubernetes-sigs/headlamp](https://github.com/kubernetes-sigs/headlamp) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 70 | [prometheus/node_exporter](https://github.com/prometheus/node_exporter) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 71 | [minio/operator](https://github.com/minio/operator) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
-| 72 | [Kong/charts](https://github.com/Kong/charts) | 10 | 4 | 4 | 0 | 1 | 100.0% | Dep-Failed |
+| 72 | [Kong/charts](https://github.com/Kong/charts) | 4 | 4 | 4 | 0 | 0 | 100.0% | Removed |
 | 73 | [haproxy/haproxy](https://github.com/haproxy/haproxy) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 74 | [open-telemetry/opentelemetry-collector](https://github.com/open-telemetry/opentelemetry-collector) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 75 | [rook/rook](https://github.com/rook/rook) | 3 | 1 | 0 | 1 | 1 | 0.0% | Dep-Failed |
+| 75 | [rook/rook](https://github.com/rook/rook) | 2 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
 | 76 | [aquasecurity/helm-charts](https://github.com/aquasecurity/helm-charts) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 77 | [argoproj/argo-events](https://github.com/argoproj/argo-events) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 78 | [docker/distribution-library-image](https://github.com/docker/distribution-library-image) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 79 | [codecentric/helm-charts](https://github.com/codecentric/helm-charts) | 3 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 79 | [codecentric/helm-charts](https://github.com/codecentric/helm-charts) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
 | 80 | [itzg/minecraft-server-charts](https://github.com/itzg/minecraft-server-charts) | 5 | 5 | 4 | 1 | 0 | 80.0% | Kept |
 | 81 | [opensearch-project/opensearch](https://github.com/opensearch-project/opensearch) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 82 | [prometheus-community/postgres_exporter](https://github.com/prometheus-community/postgres_exporter) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 83 | [kubereboot/kured](https://github.com/kubereboot/kured) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 84 | [VictoriaMetrics/helm-charts](https://github.com/VictoriaMetrics/helm-charts) | 24 | 1 | 0 | 1 | 1 | 0.0% | Dep-Failed |
+| 84 | [VictoriaMetrics/helm-charts](https://github.com/VictoriaMetrics/helm-charts) | 21 | 25 | 15 | 10 | 0 | 60.0% | Kept |
 | 85 | [openebs/openebs](https://github.com/openebs/openebs) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
-| 86 | [kubernetes/charts](https://github.com/kubernetes/charts) | 363 | 14 | 14 | 0 | 1 | 100.0% | Dep-Failed |
+| 86 | [kubernetes/charts](https://github.com/kubernetes/charts) | 356 | 14 | 14 | 0 | 1 | 100.0% | Dep-Failed |
 | 87 | [backstage/charts](https://github.com/backstage/charts) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 88 | [open-webui/helm-charts](https://github.com/open-webui/helm-charts) | 3 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 88 | [open-webui/helm-charts](https://github.com/open-webui/helm-charts) | 3 | 6 | 6 | 0 | 0 | 100.0% | Removed |
 | 89 | [pajikos/home-assistant-helm-chart](https://github.com/pajikos/home-assistant-helm-chart) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 90 | [kafbat/kafka-ui](https://github.com/kafbat/kafka-ui) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 91 | [actions/actions-runner-controller](https://github.com/actions/actions-runner-controller) | 6 | 6 | 4 | 2 | 0 | 66.7% | Kept |
 | 92 | [projectcalico/vpp-dataplane](https://github.com/projectcalico/vpp-dataplane) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 93 | [FairwindsOps/goldilocks](https://github.com/FairwindsOps/goldilocks) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 94 | [CloudPirates-io/helm-charts](https://github.com/CloudPirates-io/helm-charts) | 18 | 3 | 1 | 2 | 1 | 33.3% | Dep-Failed |
+| 94 | [CloudPirates-io/helm-charts](https://github.com/CloudPirates-io/helm-charts) | 18 | 18 | 16 | 2 | 0 | 88.9% | Kept |
 | 95 | [grafana/grafana](https://github.com/grafana/grafana) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 96 | [atlassian/data-center-helm-charts](https://github.com/atlassian/data-center-helm-charts) | 10 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
+| 96 | [atlassian/data-center-helm-charts](https://github.com/atlassian/data-center-helm-charts) | 10 | 10 | 4 | 6 | 0 | 40.0% | Kept |
 | 97 | [hashicorp/terraform-k8s](https://github.com/hashicorp/terraform-k8s) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 98 | [enix/x509-certificate-exporter](https://github.com/enix/x509-certificate-exporter) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 99 | [coredns/helm](https://github.com/coredns/helm) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
@@ -115,13 +115,13 @@
 | 109 | [hashicorp/vault-secrets-operator](https://github.com/hashicorp/vault-secrets-operator) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 110 | [open-metadata/OpenMetadata](https://github.com/open-metadata/OpenMetadata) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 111 | [zitadel/zitadel](https://github.com/zitadel/zitadel) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 112 | [linkerd/linkerd2](https://github.com/linkerd/linkerd2) | 8 | 12 | 9 | 3 | 0 | 75.0% | Kept |
-| 113 | [grafana/loki](https://github.com/grafana/loki) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 112 | [linkerd/linkerd2](https://github.com/linkerd/linkerd2) | 7 | 11 | 8 | 3 | 0 | 72.7% | Kept |
+| 113 | [grafana/loki](https://github.com/grafana/loki) | 1 | 8 | 7 | 1 | 0 | 87.5% | Kept |
 | 114 | [ottoyiu/django-cors-headers](https://github.com/ottoyiu/django-cors-headers) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 115 | [redpanda-data/helm-charts](https://github.com/redpanda-data/helm-charts) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
 | 116 | [open-policy-agent/gatekeeper](https://github.com/open-policy-agent/gatekeeper) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
 | 117 | [RocketChat/Docker.Official.Image](https://github.com/RocketChat/Docker.Official.Image) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 118 | [jp-gouin/helm-openldap](https://github.com/jp-gouin/helm-openldap) | 3 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 118 | [jp-gouin/helm-openldap](https://github.com/jp-gouin/helm-openldap) | 1 | 1 | 0 | 1 | 0 | 0.0% | Kept |
 | 119 | [piraeusdatastore/helm-charts](https://github.com/piraeusdatastore/helm-charts) | 5 | 5 | 3 | 2 | 0 | 60.0% | Kept |
 | 120 | [valkey-io/valkey-helm](https://github.com/valkey-io/valkey-helm) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 121 | [kyverno/policies](https://github.com/kyverno/policies) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
@@ -131,31 +131,31 @@
 | 125 | [ceph/ceph-csi](https://github.com/ceph/ceph-csi) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 126 | [apache/solr-operator](https://github.com/apache/solr-operator) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 127 | [cert-manager/trust-manager](https://github.com/cert-manager/trust-manager) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 128 | [acryldata/datahub-helm](https://github.com/acryldata/datahub-helm) | 8 | 9 | 4 | 5 | 0 | 44.4% | Kept |
+| 128 | [acryldata/datahub-helm](https://github.com/acryldata/datahub-helm) | 2 | 3 | 3 | 0 | 0 | 100.0% | Kept |
 | 129 | [kubernetes/kube-state-metrics](https://github.com/kubernetes/kube-state-metrics) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 130 | [kubernetes-sigs/kind](https://github.com/kubernetes-sigs/kind) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 131 | [stefanprodan/podinfo](https://github.com/stefanprodan/podinfo) | 1 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 132 | [portainer/k8s](https://github.com/portainer/k8s) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 133 | [camunda/camunda-platform-helm](https://github.com/camunda/camunda-platform-helm) | 33 | 32 | 16 | 16 | 1 | 50.0% | Dep-Failed |
+| 133 | [camunda/camunda-platform-helm](https://github.com/camunda/camunda-platform-helm) | 10 | 158 | 118 | 40 | 0 | 74.7% | Kept |
 | 134 | [chaos-mesh/chaos-mesh](https://github.com/chaos-mesh/chaos-mesh) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 135 | [wiremind/wiremind-helm-charts](https://github.com/wiremind/wiremind-helm-charts) | 79 | 24 | 24 | 0 | 1 | 100.0% | Dep-Failed |
-| 136 | [bootc/netbox-chart](https://github.com/bootc/netbox-chart) | 2 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 137 | [OpsMx/spinnaker-helm](https://github.com/OpsMx/spinnaker-helm) | 5 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 135 | [wiremind/wiremind-helm-charts](https://github.com/wiremind/wiremind-helm-charts) | 79 | 80 | 79 | 1 | 0 | 98.8% | Kept |
+| 136 | [bootc/netbox-chart](https://github.com/bootc/netbox-chart) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 137 | [OpsMx/spinnaker-helm](https://github.com/OpsMx/spinnaker-helm) | 1 | 8 | 8 | 0 | 0 | 100.0% | Removed |
 | 138 | [loft-sh/vcluster](https://github.com/loft-sh/vcluster) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 139 | [runatlantis/helm-charts](https://github.com/runatlantis/helm-charts) | 1 | 2 | 2 | 0 | 0 | 100.0% | Removed |
-| 140 | [mariadb-operator/mariadb-operator](https://github.com/mariadb-operator/mariadb-operator) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
-| 141 | [milvus-io/milvus-helm](https://github.com/milvus-io/milvus-helm) | 2 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 140 | [mariadb-operator/mariadb-operator](https://github.com/mariadb-operator/mariadb-operator) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 141 | [milvus-io/milvus-helm](https://github.com/milvus-io/milvus-helm) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 142 | [cloudflare/cloudflared](https://github.com/cloudflare/cloudflared) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 143 | [cockroachdb/cockroach](https://github.com/cockroachdb/cockroach) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 144 | [containeroo/helm-charts](https://github.com/containeroo/helm-charts) | 7 | 7 | 7 | 0 | 0 | 100.0% | Removed |
 | 145 | [prometheus/mysqld_exporter](https://github.com/prometheus/mysqld_exporter) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 146 | [fluxcd/flagger](https://github.com/fluxcd/flagger) | 4 | 4 | 4 | 0 | 0 | 100.0% | Removed |
-| 147 | [clearml/clearml-helm-charts](https://github.com/clearml/clearml-helm-charts) | 3 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 148 | [coder/coder](https://github.com/coder/coder) | 3 | 3 | 0 | 3 | 0 | 0.0% | Kept |
-| 149 | [DataDog/helm-charts](https://github.com/DataDog/helm-charts) | 9 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
+| 147 | [clearml/clearml-helm-charts](https://github.com/clearml/clearml-helm-charts) | 3 | 4 | 4 | 0 | 0 | 100.0% | Removed |
+| 148 | [coder/coder](https://github.com/coder/coder) | 2 | 2 | 0 | 2 | 0 | 0.0% | Kept |
+| 149 | [DataDog/helm-charts](https://github.com/DataDog/helm-charts) | 9 | 9 | 9 | 0 | 0 | 100.0% | Removed |
 | 150 | [codefresh-io/gitops-runtime-helm](https://github.com/codefresh-io/gitops-runtime-helm) | 2 | 9 | 1 | 8 | 0 | 11.1% | Kept |
 | 151 | [penpot/penpot-helm](https://github.com/penpot/penpot-helm) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 152 | [WeblateOrg/helm](https://github.com/WeblateOrg/helm) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 152 | [WeblateOrg/helm](https://github.com/WeblateOrg/helm) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 153 | [opensearch-project/helm-charts](https://github.com/opensearch-project/helm-charts) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
 | 154 | [emberstack/kubernetes-reflector](https://github.com/emberstack/kubernetes-reflector) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 155 | [kubernetes-sigs/sig-storage-local-static-provisioner](https://github.com/kubernetes-sigs/sig-storage-local-static-provisioner) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
@@ -170,11 +170,11 @@
 | 164 | [fission/fission](https://github.com/fission/fission) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 165 | [meshery/meshery-istio](https://github.com/meshery/meshery-istio) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 166 | [bitcoin/bitcoin](https://github.com/bitcoin/bitcoin) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 167 | [jouve/charts](https://github.com/jouve/charts) | 4 | 2 | 2 | 0 | 1 | 100.0% | Dep-Failed |
+| 167 | [jouve/charts](https://github.com/jouve/charts) | 4 | 4 | 4 | 0 | 0 | 100.0% | Removed |
 | 168 | [mongo-express/mongo-express](https://github.com/mongo-express/mongo-express) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 169 | [alibaba/nacos](https://github.com/alibaba/nacos) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 170 | [emqx/emqx](https://github.com/emqx/emqx) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 171 | [groundhog2k/helm-charts](https://github.com/groundhog2k/helm-charts) | 14 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
+| 171 | [groundhog2k/helm-charts](https://github.com/groundhog2k/helm-charts) | 14 | 14 | 13 | 1 | 0 | 92.9% | Kept |
 | 172 | [seaweedfs/seaweedfs](https://github.com/seaweedfs/seaweedfs) | 1 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 173 | [DependencyTrack/helm-charts](https://github.com/DependencyTrack/helm-charts) | 2 | 4 | 4 | 0 | 0 | 100.0% | Removed |
 | 174 | [apache/solr](https://github.com/apache/solr) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
@@ -182,13 +182,13 @@
 | 176 | [nicholaswilde/helm-charts](https://github.com/nicholaswilde/helm-charts) | 63 | 63 | 0 | 63 | 0 | 0.0% | Kept |
 | 177 | [langgenius/dify](https://github.com/langgenius/dify) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 178 | [dragonflyoss/helm-charts](https://github.com/dragonflyoss/helm-charts) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
-| 179 | [mattermost/mattermost-helm](https://github.com/mattermost/mattermost-helm) | 11 | 12 | 10 | 2 | 0 | 83.3% | Kept |
+| 179 | [mattermost/mattermost-helm](https://github.com/mattermost/mattermost-helm) | 9 | 10 | 10 | 0 | 0 | 100.0% | Kept |
 | 180 | [bottlerocket-os/bottlerocket](https://github.com/bottlerocket-os/bottlerocket) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 181 | [jfrog/charts](https://github.com/jfrog/charts) | 13 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 181 | [jfrog/charts](https://github.com/jfrog/charts) | 13 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
 | 182 | [ansible/awx](https://github.com/ansible/awx) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 183 | [cetic/helm-nifi](https://github.com/cetic/helm-nifi) | 2 | 2 | 1 | 1 | 0 | 50.0% | Kept |
+| 183 | [cetic/helm-nifi](https://github.com/cetic/helm-nifi) | 1 | 1 | 0 | 1 | 0 | 0.0% | Kept |
 | 184 | [rancher/ui](https://github.com/rancher/ui) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 185 | [SigNoz/charts](https://github.com/SigNoz/charts) | 7 | 3 | 3 | 0 | 1 | 100.0% | Dep-Failed |
+| 185 | [SigNoz/charts](https://github.com/SigNoz/charts) | 5 | 5 | 4 | 1 | 0 | 80.0% | Kept |
 | 186 | [kubeshark/kubeshark](https://github.com/kubeshark/kubeshark) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 187 | [elastic/beats](https://github.com/elastic/beats) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 188 | [enix/kube-image-keeper](https://github.com/enix/kube-image-keeper) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
@@ -203,7 +203,7 @@
 | 197 | [kubevela/kubevela](https://github.com/kubevela/kubevela) | 6 | 6 | 3 | 3 | 0 | 50.0% | Kept |
 | 198 | [verdaccio/charts](https://github.com/verdaccio/charts) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 199 | [gocd/helm-chart](https://github.com/gocd/helm-chart) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 200 | [k8sgpt-ai/k8sgpt-operator](https://github.com/k8sgpt-ai/k8sgpt-operator) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 200 | [k8sgpt-ai/k8sgpt-operator](https://github.com/k8sgpt-ai/k8sgpt-operator) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 201 | [k8tz/k8tz](https://github.com/k8tz/k8tz) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 202 | [kestra-io/kestra](https://github.com/kestra-io/kestra) | 2 | 2 | 1 | 1 | 1 | 50.0% | Dep-Failed |
 | 203 | [nginx/nginx-gateway-fabric](https://github.com/nginx/nginx-gateway-fabric) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
@@ -215,8 +215,8 @@
 | 209 | [kubernetes/community](https://github.com/kubernetes/community) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 210 | [aws/amazon-vpc-cni-k8s](https://github.com/aws/amazon-vpc-cni-k8s) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
 | 211 | [frappe/frappe](https://github.com/frappe/frappe) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 212 | [helm/charts](https://github.com/helm/charts) | 363 | 14 | 14 | 0 | 1 | 100.0% | Dep-Failed |
-| 213 | [norwoodj/helm-docs](https://github.com/norwoodj/helm-docs) | 93 | 66 | 66 | 0 | 1 | 100.0% | Dep-Failed |
+| 212 | [helm/charts](https://github.com/helm/charts) | 356 | 14 | 14 | 0 | 1 | 100.0% | Dep-Failed |
+| 213 | [norwoodj/helm-docs](https://github.com/norwoodj/helm-docs) | 33 | 10 | 10 | 0 | 1 | 100.0% | Dep-Failed |
 | 214 | [prometheus-msteams/prometheus-msteams](https://github.com/prometheus-msteams/prometheus-msteams) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 215 | [iovisor/bcc](https://github.com/iovisor/bcc) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 216 | [homarr-labs/homarr](https://github.com/homarr-labs/homarr) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
@@ -225,11 +225,11 @@
 | 219 | [prometheus/snmp_exporter](https://github.com/prometheus/snmp_exporter) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 220 | [NetApp/trident](https://github.com/NetApp/trident) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 221 | [weaviate/weaviate](https://github.com/weaviate/weaviate) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 222 | [chatwoot/charts](https://github.com/chatwoot/charts) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 222 | [chatwoot/charts](https://github.com/chatwoot/charts) | 1 | 8 | 6 | 2 | 0 | 75.0% | Kept |
 | 223 | [gobwas/glob](https://github.com/gobwas/glob) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 224 | [geek-cookbook/charts](https://github.com/geek-cookbook/charts) | 206 | 206 | 206 | 0 | 0 | 100.0% | Removed |
 | 225 | [prymitive/karma](https://github.com/prymitive/karma) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 226 | [hirosystems/charts](https://github.com/hirosystems/charts) | 3 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 226 | [hirosystems/charts](https://github.com/hirosystems/charts) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
 | 227 | [morgoved/wazuh-helm](https://github.com/morgoved/wazuh-helm) | 9 | 9 | 9 | 0 | 0 | 100.0% | Removed |
 | 228 | [apache/apisix-ingress-controller](https://github.com/apache/apisix-ingress-controller) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 229 | [datawire/ambassador](https://github.com/datawire/ambassador) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
@@ -240,15 +240,15 @@
 | 234 | [matrix-org/synapse](https://github.com/matrix-org/synapse) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 235 | [guerzon/vaultwarden](https://github.com/guerzon/vaultwarden) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 236 | [zabbix-community/helm-zabbix](https://github.com/zabbix-community/helm-zabbix) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 237 | [StarRocks/starrocks-kubernetes-operator](https://github.com/StarRocks/starrocks-kubernetes-operator) | 4 | 4 | 4 | 0 | 0 | 100.0% | Removed |
-| 238 | [ngrok/ngrok-operator](https://github.com/ngrok/ngrok-operator) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 237 | [StarRocks/starrocks-kubernetes-operator](https://github.com/StarRocks/starrocks-kubernetes-operator) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 238 | [ngrok/ngrok-operator](https://github.com/ngrok/ngrok-operator) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 239 | [open-feature/flagd](https://github.com/open-feature/flagd) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 240 | [telepresenceio/telepresence](https://github.com/telepresenceio/telepresence) | 1 | 2 | 2 | 0 | 0 | 100.0% | Removed |
-| 241 | [evryfs/helm-charts](https://github.com/evryfs/helm-charts) | 5 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 241 | [evryfs/helm-charts](https://github.com/evryfs/helm-charts) | 5 | 5 | 5 | 0 | 0 | 100.0% | Removed |
 | 242 | [SQLJames/factorio-server-charts](https://github.com/SQLJames/factorio-server-charts) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 243 | [CrowdStrike/falcon-helm](https://github.com/CrowdStrike/falcon-helm) | 7 | 7 | 2 | 5 | 0 | 28.6% | Kept |
+| 243 | [CrowdStrike/falcon-helm](https://github.com/CrowdStrike/falcon-helm) | 4 | 4 | 2 | 2 | 0 | 50.0% | Kept |
 | 244 | [linuxserver/docker-jellyfin](https://github.com/linuxserver/docker-jellyfin) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 245 | [k8gb-io/k8gb](https://github.com/k8gb-io/k8gb) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 245 | [k8gb-io/k8gb](https://github.com/k8gb-io/k8gb) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 246 | [k8up-io/k8up](https://github.com/k8up-io/k8up) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 247 | [neo4j/helm-charts](https://github.com/neo4j/helm-charts) | 7 | 7 | 2 | 5 | 0 | 28.6% | Kept |
 | 248 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
@@ -261,22 +261,22 @@
 | 255 | [dgraph-io/charts](https://github.com/dgraph-io/charts) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
 | 256 | [kiwigrid/helm-charts](https://github.com/kiwigrid/helm-charts) | 21 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
 | 257 | [localstack/localstack](https://github.com/localstack/localstack) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 258 | [banzaicloud/logging-operator](https://github.com/banzaicloud/logging-operator) | 2 | 3 | 3 | 0 | 0 | 100.0% | Removed |
+| 258 | [banzaicloud/logging-operator](https://github.com/banzaicloud/logging-operator) | 1 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 259 | [outline/outline](https://github.com/outline/outline) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 260 | [sergelogvinov/proxmox-csi-plugin](https://github.com/sergelogvinov/proxmox-csi-plugin) | 1 | 4 | 4 | 0 | 0 | 100.0% | Removed |
 | 261 | [percona/percona-xtradb-cluster-operator](https://github.com/percona/percona-xtradb-cluster-operator) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 262 | [jetstack/kube-lego](https://github.com/jetstack/kube-lego) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 263 | [ROCm/k8s-device-plugin](https://github.com/ROCm/k8s-device-plugin) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 264 | [Flagsmith/flagsmith-charts](https://github.com/Flagsmith/flagsmith-charts) | 2 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 265 | [glasskube/operator](https://github.com/glasskube/operator) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 264 | [Flagsmith/flagsmith-charts](https://github.com/Flagsmith/flagsmith-charts) | 1 | 2 | 1 | 1 | 0 | 50.0% | Kept |
+| 265 | [glasskube/operator](https://github.com/glasskube/operator) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 266 | [makeplane/plane](https://github.com/makeplane/plane) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 267 | [rancher/local-path-provisioner](https://github.com/rancher/local-path-provisioner) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 268 | [backube/scribe](https://github.com/backube/scribe) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 269 | [apache/camel-k](https://github.com/apache/camel-k) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 270 | [aureq/cert-manager-webhook-ovh](https://github.com/aureq/cert-manager-webhook-ovh) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 271 | [neuvector/neuvector](https://github.com/neuvector/neuvector) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 272 | [oauth2-proxy/oauth2-proxy](https://github.com/oauth2-proxy/oauth2-proxy) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 273 | [aws/karpenter](https://github.com/aws/karpenter) | 2 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 272 | [oauth2-proxy/oauth2-proxy](https://github.com/oauth2-proxy/oauth2-proxy) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 273 | [aws/karpenter](https://github.com/aws/karpenter) | 2 | 2 | 1 | 1 | 0 | 50.0% | Kept |
 | 274 | [Microsoft/mssql-docker](https://github.com/Microsoft/mssql-docker) | 3 | 6 | 5 | 1 | 0 | 83.3% | Kept |
 | 275 | [netbirdio/netbird](https://github.com/netbirdio/netbird) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 276 | [oobeyaio/oobeya-helm-chart](https://github.com/oobeyaio/oobeya-helm-chart) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
@@ -291,9 +291,9 @@
 | 285 | [datawire/edge-stack](https://github.com/datawire/edge-stack) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 286 | [falcosecurity/falcosidekick](https://github.com/falcosecurity/falcosidekick) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 287 | [AdguardTeam/AdGuardHome](https://github.com/AdguardTeam/AdGuardHome) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 288 | [mogenius/renovate-operator](https://github.com/mogenius/renovate-operator) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 288 | [mogenius/renovate-operator](https://github.com/mogenius/renovate-operator) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 289 | [pree/helm-charts](https://github.com/pree/helm-charts) | 9 | 9 | 9 | 0 | 0 | 100.0% | Removed |
-| 290 | [spiffe/helm-charts-hardened](https://github.com/spiffe/helm-charts-hardened) | 14 | 14 | 4 | 10 | 0 | 28.6% | Kept |
+| 290 | [spiffe/helm-charts-hardened](https://github.com/spiffe/helm-charts-hardened) | 4 | 4 | 3 | 1 | 0 | 75.0% | Kept |
 | 291 | [supabase-community/supabase-kubernetes](https://github.com/supabase-community/supabase-kubernetes) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 292 | [haugene/docker-transmission-openvpn](https://github.com/haugene/docker-transmission-openvpn) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 293 | [otwld/velero-ui](https://github.com/otwld/velero-ui) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
@@ -317,22 +317,22 @@
 | 311 | [openzipkin/zipkin](https://github.com/openzipkin/zipkin) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 312 | [authelia/chartrepo](https://github.com/authelia/chartrepo) | 1 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 313 | [codefresh-io/venona](https://github.com/codefresh-io/venona) | 1 | 2 | 0 | 2 | 0 | 0.0% | Kept |
-| 314 | [hivemq/helm-charts](https://github.com/hivemq/helm-charts) | 5 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
+| 314 | [hivemq/helm-charts](https://github.com/hivemq/helm-charts) | 5 | 6 | 6 | 0 | 0 | 100.0% | Removed |
 | 315 | [SumoLogic/tailing-sidecar](https://github.com/SumoLogic/tailing-sidecar) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 316 | [hashicorp/waypoint](https://github.com/hashicorp/waypoint) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 317 | [kubelauncher/docker](https://github.com/kubelauncher/docker) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 318 | [Aureum-Cloud/Cloudflare-DDNS](https://github.com/Aureum-Cloud/Cloudflare-DDNS) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 319 | [Azure/secrets-store-csi-driver-provider-azure](https://github.com/Azure/secrets-store-csi-driver-provider-azure) | 2 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 319 | [Azure/secrets-store-csi-driver-provider-azure](https://github.com/Azure/secrets-store-csi-driver-provider-azure) | 2 | 4 | 4 | 0 | 0 | 100.0% | Removed |
 | 320 | [mintel/dex-k8s-authenticator](https://github.com/mintel/dex-k8s-authenticator) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 321 | [Joxit/helm-charts](https://github.com/Joxit/helm-charts) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 322 | [asdf2014/druid-helm](https://github.com/asdf2014/druid-helm) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 322 | [asdf2014/druid-helm](https://github.com/asdf2014/druid-helm) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 323 | [pmoscode-helm/excalidraw](https://github.com/pmoscode-helm/excalidraw) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 324 | [hansehe/jaeger-all-in-one](https://github.com/hansehe/jaeger-all-in-one) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 325 | [kubelauncher/charts](https://github.com/kubelauncher/charts) | 14 | 14 | 14 | 0 | 0 | 100.0% | Removed |
 | 326 | [apecloud/helm-charts](https://github.com/apecloud/helm-charts) | 11 | 11 | 10 | 1 | 0 | 90.9% | Kept |
 | 327 | [kumahq/kuma](https://github.com/kumahq/kuma) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 328 | [one-acre-fund/oaf-public-charts](https://github.com/one-acre-fund/oaf-public-charts) | 13 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 329 | [kubernetes/helm](https://github.com/kubernetes/helm) | 232 | 1 | 0 | 1 | 1 | 0.0% | Dep-Failed |
+| 329 | [kubernetes/helm](https://github.com/kubernetes/helm) | 122 | 1 | 0 | 1 | 1 | 0.0% | Dep-Failed |
 | 330 | [linuxserver/docker-plex](https://github.com/linuxserver/docker-plex) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 331 | [pocket-id/pocket-id](https://github.com/pocket-id/pocket-id) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 332 | [jetstack/cert-manager](https://github.com/jetstack/cert-manager) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
@@ -340,7 +340,7 @@
 | 334 | [sorry-cypress/sorry-cypress](https://github.com/sorry-cypress/sorry-cypress) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 335 | [Altinity/clickhouse-operator](https://github.com/Altinity/clickhouse-operator) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 336 | [apache/couchdb-helm](https://github.com/apache/couchdb-helm) | 1 | 1 | 0 | 1 | 0 | 0.0% | Kept |
-| 337 | [helm/helm](https://github.com/helm/helm) | 232 | 1 | 0 | 1 | 1 | 0.0% | Dep-Failed |
+| 337 | [helm/helm](https://github.com/helm/helm) | 122 | 1 | 0 | 1 | 1 | 0.0% | Dep-Failed |
 | 338 | [vector-im/element-web](https://github.com/vector-im/element-web) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 339 | [blakeblackshear/blakeshome-charts](https://github.com/blakeblackshear/blakeshome-charts) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 340 | [apache/hive](https://github.com/apache/hive) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
@@ -349,7 +349,7 @@
 | 343 | [neo4j-contrib/neo4j-helm](https://github.com/neo4j-contrib/neo4j-helm) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 344 | [kubernetes-incubator/external-storage](https://github.com/kubernetes-incubator/external-storage) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 345 | [banzaicloud/banzai-charts](https://github.com/banzaicloud/banzai-charts) | 49 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 346 | [beeinventor/charts](https://github.com/beeinventor/charts) | 6 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
+| 346 | [beeinventor/charts](https://github.com/beeinventor/charts) | 5 | 6 | 6 | 0 | 0 | 100.0% | Removed |
 | 347 | [fmjstudios/helm](https://github.com/fmjstudios/helm) | 13 | 13 | 12 | 1 | 0 | 92.3% | Kept |
 | 348 | [questdb/questdb-kubernetes](https://github.com/questdb/questdb-kubernetes) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 349 | [quickwit-oss/quickwit](https://github.com/quickwit-oss/quickwit) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
@@ -365,10 +365,10 @@
 | 359 | [ortelius/ortelius-charts](https://github.com/ortelius/ortelius-charts) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
 | 360 | [apache/polaris](https://github.com/apache/polaris) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 361 | [thingsboard/tbmq](https://github.com/thingsboard/tbmq) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 362 | [snowplow-devops/helm-charts](https://github.com/snowplow-devops/helm-charts) | 20 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 362 | [snowplow-devops/helm-charts](https://github.com/snowplow-devops/helm-charts) | 20 | 20 | 19 | 1 | 0 | 95.0% | Kept |
 | 363 | [caddyserver/caddy](https://github.com/caddyserver/caddy) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 364 | [AvistoTelecom/charts](https://github.com/AvistoTelecom/charts) | 4 | 4 | 4 | 0 | 0 | 100.0% | Removed |
-| 365 | [enix/helm-charts](https://github.com/enix/helm-charts) | 12 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
+| 365 | [enix/helm-charts](https://github.com/enix/helm-charts) | 12 | 12 | 11 | 1 | 0 | 91.7% | Kept |
 | 366 | [stevehipwell/helm-charts](https://github.com/stevehipwell/helm-charts) | 11 | 11 | 10 | 1 | 0 | 90.9% | Kept |
 | 367 | [pgautoupgrade/docker-pgautoupgrade](https://github.com/pgautoupgrade/docker-pgautoupgrade) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 368 | [Jamesits/docker-dst-server](https://github.com/Jamesits/docker-dst-server) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
@@ -381,47 +381,47 @@
 | 375 | [mkilchhofer/unifi-chart](https://github.com/mkilchhofer/unifi-chart) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 376 | [valkey-io/valkey](https://github.com/valkey-io/valkey) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 377 | [cloudhippie/charts](https://github.com/cloudhippie/charts) | 5 | 5 | 5 | 0 | 0 | 100.0% | Removed |
-| 378 | [andrenarchy/helm-charts](https://github.com/andrenarchy/helm-charts) | 8 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 378 | [andrenarchy/helm-charts](https://github.com/andrenarchy/helm-charts) | 8 | 8 | 8 | 0 | 0 | 100.0% | Removed |
 | 379 | [logdna/logdna-agent-v2](https://github.com/logdna/logdna-agent-v2) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 380 | [Camunda-Community-Hub/community](https://github.com/Camunda-Community-Hub/community) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 381 | [code-server-boilerplates/charts](https://github.com/code-server-boilerplates/charts) | 3 | 3 | 2 | 1 | 0 | 66.7% | Kept |
 | 382 | [hackmdio/codimd](https://github.com/hackmdio/codimd) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 383 | [devtron-labs/charts](https://github.com/devtron-labs/charts) | 59 | 13 | 13 | 0 | 1 | 100.0% | Dep-Failed |
 | 384 | [Ealenn/Echo-Server](https://github.com/Ealenn/Echo-Server) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 385 | [grafana/grafana-operator](https://github.com/grafana/grafana-operator) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 385 | [grafana/grafana-operator](https://github.com/grafana/grafana-operator) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 386 | [hetznercloud/csi-driver](https://github.com/hetznercloud/csi-driver) | 1 | 4 | 4 | 0 | 0 | 100.0% | Removed |
-| 387 | [gchq/gaffer-docker](https://github.com/gchq/gaffer-docker) | 5 | 19 | 18 | 1 | 0 | 94.7% | Kept |
+| 387 | [gchq/gaffer-docker](https://github.com/gchq/gaffer-docker) | 2 | 6 | 5 | 1 | 0 | 83.3% | Kept |
 | 388 | [spiffe/spiffe](https://github.com/spiffe/spiffe) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 389 | [itboon/kafka-helm](https://github.com/itboon/kafka-helm) | 2 | 2 | 1 | 1 | 0 | 50.0% | Kept |
-| 390 | [litmuschaos/litmus-helm](https://github.com/litmuschaos/litmus-helm) | 12 | 4 | 4 | 0 | 1 | 100.0% | Dep-Failed |
+| 390 | [litmuschaos/litmus-helm](https://github.com/litmuschaos/litmus-helm) | 7 | 8 | 8 | 0 | 0 | 100.0% | Removed |
 | 391 | [nacos-group/nacos-k8s](https://github.com/nacos-group/nacos-k8s) | 3 | 4 | 4 | 0 | 0 | 100.0% | Removed |
 | 392 | [netrisai/charts](https://github.com/netrisai/charts) | 3 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
 | 393 | [nuclio/nuclio](https://github.com/nuclio/nuclio) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 394 | [kubernetes/cloud-provider-openstack](https://github.com/kubernetes/cloud-provider-openstack) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
 | 395 | [secureCodeBox/secureCodeBox](https://github.com/secureCodeBox/secureCodeBox) | 42 | 42 | 42 | 0 | 0 | 100.0% | Removed |
 | 396 | [puppetlabs/pupperware](https://github.com/puppetlabs/pupperware) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 397 | [k8s-home-lab/helm-charts](https://github.com/k8s-home-lab/helm-charts) | 192 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 398 | [sysdiglabs/charts](https://github.com/sysdiglabs/charts) | 18 | 18 | 2 | 16 | 0 | 11.1% | Kept |
+| 397 | [k8s-home-lab/helm-charts](https://github.com/k8s-home-lab/helm-charts) | 191 | 46 | 46 | 0 | 1 | 100.0% | Dep-Failed |
+| 398 | [sysdiglabs/charts](https://github.com/sysdiglabs/charts) | 10 | 10 | 2 | 8 | 0 | 20.0% | Kept |
 | 399 | [prometheus/statsd_exporter](https://github.com/prometheus/statsd_exporter) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 400 | [arequs/beaverdeck](https://github.com/arequs/beaverdeck) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 401 | [cert-manager/istio-csr](https://github.com/cert-manager/istio-csr) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 402 | [cdr/enterprise-helm](https://github.com/cdr/enterprise-helm) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 403 | [epinio/epinio](https://github.com/epinio/epinio) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 404 | [GluuFederation/cloud-native-edition](https://github.com/GluuFederation/cloud-native-edition) | 18 | 18 | 2 | 16 | 0 | 11.1% | Kept |
+| 404 | [GluuFederation/cloud-native-edition](https://github.com/GluuFederation/cloud-native-edition) | 1 | 1 | 1 | 0 | 0 | 100.0% | Kept |
 | 405 | [graylog2/graylog-helm](https://github.com/graylog2/graylog-helm) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 406 | [JanssenProject/jans](https://github.com/JanssenProject/jans) | 15 | 15 | 3 | 12 | 0 | 20.0% | Kept |
-| 407 | [keptn/lifecycle-toolkit](https://github.com/keptn/lifecycle-toolkit) | 4 | 1 | 0 | 1 | 1 | 0.0% | Dep-Failed |
+| 406 | [JanssenProject/jans](https://github.com/JanssenProject/jans) | 2 | 2 | 2 | 0 | 0 | 100.0% | Kept |
+| 407 | [keptn/lifecycle-toolkit](https://github.com/keptn/lifecycle-toolkit) | 1 | 1 | 0 | 1 | 0 | 0.0% | Removed |
 | 408 | [postfinance/kubelet-csr-approver](https://github.com/postfinance/kubelet-csr-approver) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 409 | [lightrun-platform/lightrun-helm-chart](https://github.com/lightrun-platform/lightrun-helm-chart) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 410 | [dunglas/mercure](https://github.com/dunglas/mercure) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
 | 411 | [kuoss/myip](https://github.com/kuoss/myip) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 412 | [fosrl/helm-charts](https://github.com/fosrl/helm-charts) | 2 | 8 | 0 | 8 | 1 | 0.0% | Dep-Failed |
+| 412 | [fosrl/helm-charts](https://github.com/fosrl/helm-charts) | 2 | 9 | 1 | 8 | 0 | 11.1% | Kept |
 | 413 | [skyhook-io/radar](https://github.com/skyhook-io/radar) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 414 | [RedisLabs/redis-enterprise-helm](https://github.com/RedisLabs/redis-enterprise-helm) | 2 | 3 | 1 | 2 | 0 | 33.3% | Kept |
-| 415 | [relution-io/relution-kubernetes](https://github.com/relution-io/relution-kubernetes) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 416 | [solarwinds/swi-k8s-opentelemetry-collector](https://github.com/solarwinds/swi-k8s-opentelemetry-collector) | 3 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 415 | [relution-io/relution-kubernetes](https://github.com/relution-io/relution-kubernetes) | 1 | 1 | 0 | 1 | 0 | 0.0% | Kept |
+| 416 | [solarwinds/swi-k8s-opentelemetry-collector](https://github.com/solarwinds/swi-k8s-opentelemetry-collector) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
 | 417 | [StrangeBeeCorp/helm-charts](https://github.com/StrangeBeeCorp/helm-charts) | 2 | 2 | 1 | 1 | 0 | 50.0% | Kept |
-| 418 | [rhdh-bot/openshift-helm-charts](https://github.com/rhdh-bot/openshift-helm-charts) | 107 | 92 | 87 | 5 | 1 | 94.6% | Dep-Failed |
+| 418 | [rhdh-bot/openshift-helm-charts](https://github.com/rhdh-bot/openshift-helm-charts) | 105 | 90 | 87 | 3 | 1 | 96.7% | Dep-Failed |
 | 419 | [2ndquadrant-it/barman](https://github.com/2ndquadrant-it/barman) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 420 | [google/cadvisor](https://github.com/google/cadvisor) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 421 | [cerbos/cerbos](https://github.com/cerbos/cerbos) | 1 | 101 | 101 | 0 | 0 | 100.0% | Removed |
@@ -440,26 +440,26 @@
 | 434 | [home-assistant/home-assistant](https://github.com/home-assistant/home-assistant) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 435 | [instana/instana-agent-operator](https://github.com/instana/instana-agent-operator) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 436 | [instana/instana-autotrace-webhook](https://github.com/instana/instana-autotrace-webhook) | 1 | 2 | 2 | 0 | 0 | 100.0% | Removed |
-| 437 | [intel/helm-charts](https://github.com/intel/helm-charts) | 233 | 56 | 51 | 5 | 1 | 91.1% | Dep-Failed |
+| 437 | [intel/helm-charts](https://github.com/intel/helm-charts) | 50 | 50 | 45 | 5 | 0 | 90.0% | Removed |
 | 438 | [k8s-at-home/charts](https://github.com/k8s-at-home/charts) | 201 | 55 | 55 | 0 | 1 | 100.0% | Dep-Failed |
-| 439 | [loeken/helm-charts](https://github.com/loeken/helm-charts) | 11 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
+| 439 | [loeken/helm-charts](https://github.com/loeken/helm-charts) | 11 | 11 | 6 | 5 | 0 | 54.5% | Kept |
 | 440 | [yonahd/kor](https://github.com/yonahd/kor) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 441 | [getindata/helm-charts](https://github.com/getindata/helm-charts) | 11 | 11 | 10 | 1 | 0 | 90.9% | Kept |
+| 441 | [getindata/helm-charts](https://github.com/getindata/helm-charts) | 7 | 7 | 6 | 1 | 0 | 85.7% | Kept |
 | 442 | [kubitodev/kubernetes-cloudflare-ddns](https://github.com/kubitodev/kubernetes-cloudflare-ddns) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 443 | [GoogleChrome/lighthouse-ci](https://github.com/GoogleChrome/lighthouse-ci) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 444 | [kube-logging/helm-charts](https://github.com/kube-logging/helm-charts) | 2 | 1 | 1 | 0 | 1 | 100.0% | Dep-Failed |
 | 445 | [cloudeteer/helm-charts](https://github.com/cloudeteer/helm-charts) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 446 | [mattermost/mattermost-operator](https://github.com/mattermost/mattermost-operator) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 447 | [netbox-community/netbox-chart](https://github.com/netbox-community/netbox-chart) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
-| 448 | [obeone/charts](https://github.com/obeone/charts) | 12 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 448 | [obeone/charts](https://github.com/obeone/charts) | 12 | 12 | 10 | 2 | 0 | 83.3% | Kept |
 | 449 | [CloudTooling/k8s-olm](https://github.com/CloudTooling/k8s-olm) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 450 | [suda/charts](https://github.com/suda/charts) | 5 | 5 | 5 | 0 | 0 | 100.0% | Removed |
 | 451 | [icoretech/helm](https://github.com/icoretech/helm) | 10 | 10 | 8 | 2 | 0 | 80.0% | Kept |
 | 452 | [caas-team/py-kube-downscaler](https://github.com/caas-team/py-kube-downscaler) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 453 | [liranme/redisinsight-secure](https://github.com/liranme/redisinsight-secure) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
-| 454 | [cnieg/helm-charts](https://github.com/cnieg/helm-charts) | 7 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 453 | [liranme/redisinsight-secure](https://github.com/liranme/redisinsight-secure) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
+| 454 | [cnieg/helm-charts](https://github.com/cnieg/helm-charts) | 7 | 7 | 7 | 0 | 0 | 100.0% | Removed |
 | 455 | [Warxcell/helm-chart](https://github.com/Warxcell/helm-chart) | 2 | 2 | 0 | 2 | 0 | 0.0% | Kept |
-| 456 | [SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium) | 2 | 2 | 2 | 0 | 0 | 100.0% | Removed |
+| 456 | [SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 457 | [fonzdm/servarr](https://github.com/fonzdm/servarr) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
 | 458 | [OpenMined/PySyft](https://github.com/OpenMined/PySyft) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 459 | [nimbolus/helm-charts](https://github.com/nimbolus/helm-charts) | 3 | 3 | 3 | 0 | 0 | 100.0% | Removed |
@@ -477,31 +477,45 @@
 | 471 | [apache/hertzbeat](https://github.com/apache/hertzbeat) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 472 | [sustainable-computing-io/kepler-helm-chart](https://github.com/sustainable-computing-io/kepler-helm-chart) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 473 | [factorhouse/kpow](https://github.com/factorhouse/kpow) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 474 | [kubewarden/helm-charts](https://github.com/kubewarden/helm-charts) | 4 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 474 | [kubewarden/helm-charts](https://github.com/kubewarden/helm-charts) | 4 | 4 | 4 | 0 | 0 | 100.0% | Removed |
 | 475 | [netscaler/netscaler-k8s-ingress-controller](https://github.com/netscaler/netscaler-k8s-ingress-controller) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 476 | [containers/nri-plugins](https://github.com/containers/nri-plugins) | 8 | 8 | 8 | 0 | 0 | 100.0% | Removed |
 | 477 | [nutanix/helm-releases](https://github.com/nutanix/helm-releases) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 478 | [openmeterio/openmeter](https://github.com/openmeterio/openmeter) | 2 | 1 | 0 | 1 | 1 | 0.0% | Dep-Failed |
+| 478 | [openmeterio/openmeter](https://github.com/openmeterio/openmeter) | 2 | 3 | 2 | 1 | 0 | 66.7% | Kept |
 | 479 | [OpenVPN/as-helm-chart](https://github.com/OpenVPN/as-helm-chart) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 480 | [port-labs/port-k8s-exporter](https://github.com/port-labs/port-k8s-exporter) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 481 | [prometheus-community/json_exporter](https://github.com/prometheus-community/json_exporter) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 482 | [s3gw-tech/s3gw](https://github.com/s3gw-tech/s3gw) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
-| 483 | [kubewarden/sbomscanner](https://github.com/kubewarden/sbomscanner) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 483 | [kubewarden/sbomscanner](https://github.com/kubewarden/sbomscanner) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 | 484 | [SonarSource/docker-sonarqube](https://github.com/SonarSource/docker-sonarqube) | 0 | 0 | 0 | 0 | 0 | 0.0% | Removed |
 | 485 | [apache/spark-kubernetes-operator](https://github.com/apache/spark-kubernetes-operator) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
-| 486 | [kuoss/venti](https://github.com/kuoss/venti) | 1 | 0 | 0 | 0 | 1 | 0.0% | Dep-Failed |
+| 486 | [kuoss/venti](https://github.com/kuoss/venti) | 1 | 1 | 1 | 0 | 0 | 100.0% | Removed |
 |---|------------|--------|------|------------|-------------|-----------------|--------------|--------|
-| **Total** | **486 repos** | **3822** | **1728** | **1476** | **252** | **89** | **85.4%** | - |
+| **Total** | **486 repos** | **3191** | **2098** | **1850** | **248** | **24** | **88.2%** | - |
 
 ## Failure Details
 
-### prometheus-community/helm-charts
+### argoproj/argo-helm
 
-#### `D:\helm_clones_github\prometheus-community__helm-charts\charts\kube-prometheus-stack`
+#### `D:\helm_clones_artifacthub\argoproj__argo-helm\charts\argo-cd`
 
 | Values Files | Command | Error |
 |--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_github\prometheus-community__helm-charts\charts\kube-prometheus-stack` | Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key  Use --debug flag to render out invalid YAML  |
+| (default) | `helm template test D:\helm_clones_artifacthub\argoproj__argo-helm\charts\argo-cd` | Error: an error occurred while checking for chart dependencies. You may need to run 'helm dependency build' to fetch missing dependencies: found in Chart.yaml, but missing in charts/ directory: redis-ha  |
+
+### prometheus-community/helm-charts
+
+#### `D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\kube-prometheus-stack`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\kube-prometheus-stack` | Error: YAML parse error on kube-prometheus-stack/templates/prometheus-operator/admission-webhooks/job-patch/job-createSecret.yaml: error converting YAML to JSON: yaml: line 45: did not find expected key  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\prometheus-postgres-exporter`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\prometheus-community__helm-charts\charts\prometheus-postgres-exporter` | Error: execution error at (prometheus-postgres-exporter/templates/secrets.yaml:2:9): config.datasource.password is required when not using config.datasource.passwordSecret, config.datasource.passwordFile, or config.datasourceSecret  Use --debug flag to render out invalid YAML  |
 
 ### bitnami/charts
 
@@ -538,51 +552,11 @@
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\community-charts__helm-charts\charts\cloudflared` | Error: execution error at (cloudflared/templates/secret.yaml:9:23): Base64 encoded config file string is required! Run base64 -b 0 -i ~/.cloudflared/*.json and add output to tunnelSecrets.base64EncodedConfigJsonFile in values.yaml file.  Use --debug flag to render out invalid YAML  |
 
-### elastic/cloud-on-k8s
-
-#### `D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-agent`
+#### `D:\helm_clones_artifacthub\community-charts__helm-charts\charts\outline`
 
 | Values Files | Command | Error |
 |--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-agent` | Error: execution error at (eck-agent/templates/elastic-agent.yaml:19:5): At least one of daemonSet, deployment or statefulSet is required  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-autoops-agent-policy`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-autoops-agent-policy` | Error: execution error at (eck-autoops-agent-policy/templates/autoopsagentpolicy.yaml:28:19): autoOpsRef.secretName is required to reference the AutoOps configuration secret  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-beats`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-beats` | Error: execution error at (eck-beats/templates/beats.yaml:18:5): At least one of daemonSet or deployment is required for a functional Beat  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-enterprise-search`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-enterprise-search` | Error: execution error at (eck-enterprise-search/templates/enterprisesearch.yaml:24:5): At least one of configRef or elasticsearchRef is required  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-fleet-server`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-fleet-server` | Error: execution error at (eck-fleet-server/templates/fleet-server.yaml:27:5): At least one of statefulSet or deployment is required  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-kibana`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\elastic__cloud-on-k8s\deploy\eck-stack\charts\eck-kibana` | Error: execution error at (eck-kibana/templates/kibana.yaml:27:5): An elasticsearchRef name or secretName is required  Use --debug flag to render out invalid YAML  |
-
-### rook/rook
-
-#### `D:\helm_clones_artifacthub\rook__rook\deploy\charts\library`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\rook__rook\deploy\charts\library` | Error: library charts are not installable  |
+| (default) | `helm template test D:\helm_clones_artifacthub\community-charts__helm-charts\charts\outline` | Error: execution error at (outline/templates/secret.yaml:14:24): PostgreSQL password is required  Use --debug flag to render out invalid YAML  |
 
 ### itzg/minecraft-server-charts
 
@@ -599,6 +573,60 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-agent` | Error: execution error at (victoria-logs-agent/templates/server.yaml:64:20): at least one remoteWrite configuration must be provided  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-collector`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-collector` | Error: execution error at (victoria-logs-collector/templates/server.yaml:67:24): at least one remoteWrite configuration must be provided  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-mcp` | Error: execution error at (victoria-logs-mcp/templates/deployment.yaml:54:25): .Values.vl.entrypoint should be set  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-multilevel`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-logs-multilevel` | Error: execution error at (victoria-logs-multilevel/templates/vlselect-server.yaml:61:19): no storageNodes found. Please set at least one storage node using `.Values.storageNodes` property  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-agent`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-agent` | Error: execution error at (victoria-metrics-agent/templates/server.yaml:80:19): Please define at least one remoteWrite  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-alert` | Error: execution error at (victoria-metrics-alert/templates/alert-server.yaml:8:6): server.datasource.url datasource URL must be specified  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly` | Error: execution error at (victoria-metrics-anomaly/templates/server.yaml:2:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.        See https://victoriametrics.com/legal/esa/ for details.        Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/        for more information, visit https://victoriametrics.com/products/enterprise/        To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-gateway` | Error: execution error at (victoria-metrics-gateway/templates/server.yaml:1:4): Pass valid license at .Values.license or .Values.global.license if you have an enterprise license for running this software.        See https://victoriametrics.com/legal/esa/ for details.        Documentation - https://docs.victoriametrics.com/victoriametrics/enterprise/        for more information, visit https://victoriametrics.com/products/enterprise/        To request a trial license, go to https://victoriametrics.com/products/enterprise/trial/  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-mcp` | Error: execution error at (victoria-metrics-mcp/templates/deployment.yaml:64:25): either .Values.vm.cloudAPIKey or .Values.vm.entrypoint should be set  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\test-charts\victoria-metrics-common` | Error: execution error at (victoria-metrics-common/templates/service.yaml:7:14): .style argument should be either `plain` or `managed`  Use --debug flag to render out invalid YAML  |
 
 ### actions/actions-runner-controller
 
@@ -628,6 +656,44 @@
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\CloudPirates-io__helm-charts\charts\common` | Error: library charts are not installable  |
 
+### atlassian/data-center-helm-charts
+
+#### `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\bamboo`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\bamboo` | Error: bamboo/templates/statefulset.yaml:1:4   executing "bamboo/templates/statefulset.yaml" at <include "common.gateway.validateConfig" .>:     error calling include: template: no template "common.gateway.validateConfig" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\bitbucket`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\bitbucket` | Error: bitbucket/templates/statefulset.yaml:4:4   executing "bitbucket/templates/statefulset.yaml" at <include "common.gateway.validateConfig" .>:     error calling include: template: no template "common.gateway.validateConfig" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\common`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\common` | Error: library charts are not installable  |
+
+#### `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\confluence`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\confluence` | Error: confluence/templates/statefulset.yaml:1:4   executing "confluence/templates/statefulset.yaml" at <include "common.gateway.validateConfig" .>:     error calling include: template: no template "common.gateway.validateConfig" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\crowd`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\crowd` | Error: crowd/templates/statefulset.yaml:1:4   executing "crowd/templates/statefulset.yaml" at <include "common.gateway.validateConfig" .>:     error calling include: template: no template "common.gateway.validateConfig" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\jira`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\atlassian__data-center-helm-charts\src\main\charts\jira` | Error: jira/templates/statefulset.yaml:1:4   executing "jira/templates/statefulset.yaml" at <include "common.gateway.validateConfig" .>:     error calling include: template: no template "common.gateway.validateConfig" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
+
 ### linkerd/linkerd2
 
 #### `D:\helm_clones_artifacthub\linkerd__linkerd2\charts\linkerd-control-plane`
@@ -642,6 +708,22 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\linkerd__linkerd2\charts\patch` | Error: YAML parse error on patch/templates/patch.json: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal array into Go value of type util.SimpleHead  Use --debug flag to render out invalid YAML  |
+
+### grafana/loki
+
+#### `D:\helm_clones_artifacthub\grafana__loki\production\helm\loki`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\grafana__loki\production\helm\loki` | Error: execution error at (loki/templates/write/statefulset-write.yaml:50:28): Please define loki.storage.bucketNames.chunks  Use --debug flag to render out invalid YAML  |
+
+### jp-gouin/helm-openldap
+
+#### `D:\helm_clones_artifacthub\jp-gouin__helm-openldap`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\jp-gouin__helm-openldap` | Error: openldap-stack-ha/charts/phpldapadmin/templates/ingress.yaml:38:30   executing "openldap-stack-ha/charts/phpldapadmin/templates/ingress.yaml" at <include "common.ingress.supportsPathType" $>:     error calling include: template: no template "common.ingress.supportsPathType" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
 
 ### piraeusdatastore/helm-charts
 
@@ -664,38 +746,6 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\influxdata__helm-charts\charts\influxdb3-clustered` | Error: execution error at (influxdb3-clustered/templates/app-instance.yml:90:3): missing catalog.dsn.SecretName  Use --debug flag to render out invalid YAML  |
-
-### acryldata/datahub-helm
-
-#### `D:\helm_clones_artifacthub\acryldata__datahub-helm\charts\datahub\subcharts\acryl-datahub-actions`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\acryldata__datahub-helm\charts\datahub\subcharts\acryl-datahub-actions` | Error: execution error at (acryl-datahub-actions/templates/deployment.yaml:71:20): Global or specific tag is required  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\acryldata__datahub-helm\charts\datahub\subcharts\datahub-frontend`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\acryldata__datahub-helm\charts\datahub\subcharts\datahub-frontend` | Error: datahub-frontend/templates/service.yaml:26:18   executing "datahub-frontend/templates/service.yaml" at <.Values.global.datahub.monitoring.enablePrometheus>:     nil pointer evaluating interface {}.enablePrometheus  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\acryldata__datahub-helm\charts\datahub\subcharts\datahub-gms`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\acryldata__datahub-helm\charts\datahub\subcharts\datahub-gms` | Error: datahub-gms/templates/service.yaml:28:18   executing "datahub-gms/templates/service.yaml" at <.Values.global.datahub.monitoring.enablePrometheus>:     nil pointer evaluating interface {}.enablePrometheus  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\acryldata__datahub-helm\charts\datahub\subcharts\datahub-mae-consumer`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\acryldata__datahub-helm\charts\datahub\subcharts\datahub-mae-consumer` | Error: datahub-mae-consumer/templates/service.yaml:19:18   executing "datahub-mae-consumer/templates/service.yaml" at <.Values.global.datahub.monitoring.enablePrometheus>:     nil pointer evaluating interface {}.enablePrometheus  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\acryldata__datahub-helm\charts\datahub\subcharts\datahub-mce-consumer`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\acryldata__datahub-helm\charts\datahub\subcharts\datahub-mce-consumer` | Error: datahub-mce-consumer/templates/service.yaml:19:18   executing "datahub-mce-consumer/templates/service.yaml" at <.Values.global.datahub.monitoring.enablePrometheus>:     nil pointer evaluating interface {}.enablePrometheus  Use --debug flag to render out invalid YAML  |
 
 ### camunda/camunda-platform-helm
 
@@ -720,6 +770,53 @@
 | D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
 | D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-enterprise.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.10\values-latest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:40:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
 
+#### `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3` | Error: camunda-platform/charts/identity/templates/deployment.yaml:187:24   executing "camunda-platform/charts/identity/templates/deployment.yaml" at <include "identity.keycloak.url" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:169:9   executing "identity.keycloak.url" at <include "identity.keycloak.host" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:137:12   executing "identity.keycloak.host" at <include "identity.keycloak.hostDefault" .>:     error calling include: camunda-platform/charts/common/templates/_names.tpl:31:73   executing "common.names.fullname" at <.Release.Name>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3\values-bitnami-legacy.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3\values-bitnami-legacy.yaml` | Error: camunda-platform/charts/identity/templates/deployment.yaml:187:24   executing "camunda-platform/charts/identity/templates/deployment.yaml" at <include "identity.keycloak.url" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:169:9   executing "identity.keycloak.url" at <include "identity.keycloak.host" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:137:12   executing "identity.keycloak.host" at <include "identity.keycloak.hostDefault" .>:     error calling include: camunda-platform/charts/common/templates/_names.tpl:31:73   executing "common.names.fullname" at <.Release.Name>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3\values-latest.yaml` | Error: camunda-platform/charts/identity/templates/deployment.yaml:187:24   executing "camunda-platform/charts/identity/templates/deployment.yaml" at <include "identity.keycloak.url" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:169:9   executing "identity.keycloak.url" at <include "identity.keycloak.host" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:137:12   executing "identity.keycloak.host" at <include "identity.keycloak.hostDefault" .>:     error calling include: camunda-platform/charts/common/templates/_names.tpl:31:73   executing "common.names.fullname" at <.Release.Name>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3\values-bitnami-legacy.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.3\values-latest.yaml` | Error: camunda-platform/charts/identity/templates/deployment.yaml:187:24   executing "camunda-platform/charts/identity/templates/deployment.yaml" at <include "identity.keycloak.url" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:169:9   executing "identity.keycloak.url" at <include "identity.keycloak.host" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:137:12   executing "identity.keycloak.host" at <include "identity.keycloak.hostDefault" .>:     error calling include: camunda-platform/charts/common/templates/_names.tpl:31:73   executing "common.names.fullname" at <.Release.Name>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4` | Error: camunda-platform/charts/identity/templates/deployment.yaml:187:24   executing "camunda-platform/charts/identity/templates/deployment.yaml" at <include "identity.keycloak.url" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:200:9   executing "identity.keycloak.url" at <include "identity.keycloak.host" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:168:12   executing "identity.keycloak.host" at <include "identity.keycloak.hostDefault" .>:     error calling include: camunda-platform/charts/common/templates/_names.tpl:31:73   executing "common.names.fullname" at <.Release.Name>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4\values-bitnami-legacy.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4\values-bitnami-legacy.yaml` | Error: camunda-platform/charts/identity/templates/deployment.yaml:187:24   executing "camunda-platform/charts/identity/templates/deployment.yaml" at <include "identity.keycloak.url" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:200:9   executing "identity.keycloak.url" at <include "identity.keycloak.host" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:168:12   executing "identity.keycloak.host" at <include "identity.keycloak.hostDefault" .>:     error calling include: camunda-platform/charts/common/templates/_names.tpl:31:73   executing "common.names.fullname" at <.Release.Name>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4\values-latest.yaml` | Error: camunda-platform/charts/identity/templates/deployment.yaml:187:24   executing "camunda-platform/charts/identity/templates/deployment.yaml" at <include "identity.keycloak.url" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:200:9   executing "identity.keycloak.url" at <include "identity.keycloak.host" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:168:12   executing "identity.keycloak.host" at <include "identity.keycloak.hostDefault" .>:     error calling include: camunda-platform/charts/common/templates/_names.tpl:31:73   executing "common.names.fullname" at <.Release.Name>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4\values-bitnami-legacy.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.4\values-latest.yaml` | Error: camunda-platform/charts/identity/templates/deployment.yaml:187:24   executing "camunda-platform/charts/identity/templates/deployment.yaml" at <include "identity.keycloak.url" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:200:9   executing "identity.keycloak.url" at <include "identity.keycloak.host" .>:     error calling include: camunda-platform/charts/identity/templates/_helpers.tpl:168:12   executing "identity.keycloak.host" at <include "identity.keycloak.hostDefault" .>:     error calling include: camunda-platform/charts/common/templates/_names.tpl:31:73   executing "common.names.fullname" at <.Release.Name>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml, D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml | `helm template test D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9 -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-bitnami-legacy.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-digest.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-enterprise.yaml -f D:\helm_clones_artifacthub\camunda__camunda-platform-helm\charts\camunda-platform-8.9\values-latest.yaml` | Error: execution error at (camunda-platform/templates/common/constraints.tpl:32:6): Please configure an expected secondary storage type under `orchestration.data.secondaryStorage.type`, available values are [elasticsearch, opensearch, rdbms]. For more details, see our documentation here: https://docs.camunda.io/docs/next/self-managed/concepts/secondary-storage/configuring-secondary-storage/  Use --debug flag to render out invalid YAML  |
+
+### wiremind/wiremind-helm-charts
+
+#### `D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml | `helm template test D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql -f D:\helm_clones_artifacthub\wiremind__wiremind-helm-charts\charts\postgresql\values-production.yaml` | Error: execution error at (postgresql/templates/statefulset.yaml:335:29): In order to enable metrics you need to specify a database (.Values.postgresqlDatabase or .Values.global.postgresql.postgresqlDatabase)  Use --debug flag to render out invalid YAML  |
+
 ### coder/coder
 
 #### `D:\helm_clones_artifacthub\coder__coder\helm\coder`
@@ -727,12 +824,6 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\coder__coder\helm\coder` | Error: execution error at (coder/templates/coder.yaml:7:3): You must specify the coder.image.tag value if you're installing the Helm chart directly from Git.  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\coder__coder\helm\libcoder`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\coder__coder\helm\libcoder` | Error: library charts are not installable  |
 
 #### `D:\helm_clones_artifacthub\coder__coder\helm\provisioner`
 
@@ -754,6 +845,14 @@
 | D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml, D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml | `helm template test D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml` | level=INFO msg="warning: destination for argo-cd.redis.env is a table. Ignoring non-table value ([])" Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-runtime-from-platform.yaml:22:12): global.codefresh.userToken is mandatory. Set token or secretKeyRef!  Use --debug flag to render out invalid YAML  |
 | D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml, D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml | `helm template test D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml` | level=INFO msg="warning: destination for argo-cd.redis.env is a table. Ignoring non-table value ([])" Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-runtime-from-platform.yaml:22:12): global.codefresh.userToken is mandatory. Set token or secretKeyRef!  Use --debug flag to render out invalid YAML  |
 | D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml, D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml, D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml | `helm template test D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-ha.yaml -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes-first.yaml -f D:\helm_clones_artifacthub\codefresh-io__gitops-runtime-helm\charts\gitops-runtime\values-multi-runtimes.yaml` | level=INFO msg="warning: destination for argo-cd.redis.env is a table. Ignoring non-table value ([])" Error: execution error at (gitops-runtime/templates/hooks/pre-uninstall/delete-runtime-from-platform.yaml:22:12): global.codefresh.userToken is mandatory. Set token or secretKeyRef!  Use --debug flag to render out invalid YAML  |
+
+### groundhog2k/helm-charts
+
+#### `D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\groundhog2k__helm-charts\charts\remark42` | Error: execution error at (remark42/templates/secureconfig.yaml:9:14): .settings.secretKey must contain value  Use --debug flag to render out invalid YAML  |
 
 ### nicholaswilde/helm-charts
 
@@ -1135,20 +1234,6 @@
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_github\nicholaswilde__helm-charts\charts\writefreely` | Error: values don't meet the specifications of the schema(s) in the following chart(s): common: "file:///values.schema.json#" is not valid against metaschema: jsonschema validation failed with 'https://json-schema.org/draft/2020-12/schema#' - at '': 'allOf' failed   - at '': validation failed     - at '/properties/persistence': 'allOf' failed       - at '/properties/persistence/$id': '#/properties/persistence' does not match pattern '^[^#]*#?$'       - at '/properties/persistence': validation failed         - at '/properties/persistence/properties/config': 'allOf' failed           - at '/properties/persistence/properties/config/$id': '#/properties/persistence/properties/config' does not match pattern '^[^#]*#?$'           - at '/properties/persistence/properties/config': validation failed             - at '/properties/persistence/properties/config/properties/enabled': 'allOf' failed               - at '/properties/persistence/properties/config/properties/enabled/$id': '#/properties/persistence/properties/config/properties/enabled' does not match pattern '^[^#]*#?$'             - at '/properties/persistence/properties/config/properties/mountPath': 'allOf' failed               - at '/properties/persistence/properties/config/properties/mountPath/$id': '#/properties/persistence/properties/config/properties/mountPath' does not match pattern '^[^#]*#?$'             - at '/properties/persistence/properties/config/properties/accessMode': 'allOf' failed               - at '/properties/persistence/properties/config/properties/accessMode/$id': '#/properties/persistence/properties/config/properties/accessMode' does not match pattern '^[^#]*#?$'             - at '/properties/persistence/properties/config/properties/size': 'allOf' failed               - at '/properties/persistence/properties/config/properties/size/$id': '#/properties/persistence/properties/config/properties/size' does not match pattern '^[^#]*#?$'             - at '/properties/persistence/properties/config/properties/skipuninstall': 'allOf' failed               - at '/properties/persistence/properties/config/properties/skipuninstall/$id': '#/properties/persistence/properties/config/properties/skipuninstall' does not match pattern '^[^#]*#?$'         - at '/properties/persistence/properties/shared': 'allOf' failed           - at '/properties/persistence/properties/shared/$id': '#/properties/persistence/properties/shared' does not match pattern '^[^#]*#?$'           - at '/properties/persistence/properties/shared': validation failed             - at '/properties/persistence/properties/shared/properties/emptyDir': 'allOf' failed               - at '/properties/persistence/properties/shared/properties/emptyDir/$id': '#/properties/persistence/properties/shared/properties/emptyDir' does not match pattern '^[^#]*#?$'             - at '/properties/persistence/properties/shared/properties/mountPath': 'allOf' failed               - at '/properties/persistence/properties/shared/properties/mountPath/$id': '#/properties/persistence/properties/shared/properties/mountPath' does not match pattern '^[^#]*#?$'             - at '/properties/persistence/properties/shared/properties/enabled': 'allOf' failed               - at '/properties/persistence/properties/shared/properties/enabled/$id': '#/properties/persistence/properties/shared/properties/enabled' does not match pattern '^[^#]*#?$'     - at '/properties/command': 'allOf' failed       - at '/properties/command/$id': '#/properties/command' does not match pattern '^[^#]*#?$'       - at '/properties/command/items': 'allOf' failed         - at '/properties/command/items/$id': '#/properties/command/items' does not match pattern '^[^#]*#?$'     - at '/properties/hostNetwork': 'allOf' failed       - at '/properties/hostNetwork/$id': '#/properties/hostNetwork' does not match pattern '^[^#]*#?$'     - at '/properties/initContainers': 'allOf' failed       - at '/properties/initContainers/$id': '#/properties/initContainers' does not match pattern '^[^#]*#?$'       - at '/properties/initContainers/items': 'allOf' failed         - at '/properties/initContainers/items/$id': '#/properties/initContainers/items' does not match pattern '^[^#]*#?$'     - at '/properties/additionalVolumes': 'allOf' failed       - at '/properties/additionalVolumes/$id': '#/properties/additionalVolumes' does not match pattern '^[^#]*#?$'       - at '/properties/additionalVolumes/items': 'allOf' failed         - at '/properties/additionalVolumes/items/$id': '#/properties/additionalVolumes/items' does not match pattern '^[^#]*#?$'     - at '/properties/tolerations': 'allOf' failed       - at '/properties/tolerations/$id': '#/properties/tolerations' does not match pattern '^[^#]*#?$'       - at '/properties/tolerations/items': 'allOf' failed         - at '/properties/tolerations/items/$id': '#/properties/tolerations/items' does not match pattern '^[^#]*#?$'     - at '/properties/controllerAnnotations': 'allOf' failed       - at '/properties/controllerAnnotations/$id': '#/properties/controllerAnnotations' does not match pattern '^[^#]*#?$'     - at '/properties/args': 'allOf' failed       - at '/properties/args/$id': '#/properties/args' does not match pattern '^[^#]*#?$'       - at '/properties/args/items': 'allOf' failed         - at '/properties/args/items/$id': '#/properties/args/items' does not match pattern '^[^#]*#?$'     - at '/properties/fullnameOverride': 'allOf' failed       - at '/properties/fullnameOverride/$id': '#/properties/fullnameOverride' does not match pattern '^[^#]*#?$'     - at '/properties/secret': 'allOf' failed       - at '/properties/secret/$id': '#/properties/secret' does not match pattern '^[^#]*#?$'     - at '/properties/probes': 'allOf' failed       - at '/properties/probes/$id': '#/properties/probes' does not match pattern '^[^#]*#?$'       - at '/properties/probes': validation failed         - at '/properties/probes/properties/liveness': 'allOf' failed           - at '/properties/probes/properties/liveness/$id': '#/properties/probes/properties/liveness' does not match pattern '^[^#]*#?$'           - at '/properties/probes/properties/liveness': validation failed             - at '/properties/probes/properties/liveness/properties/enabled': 'allOf' failed               - at '/properties/probes/properties/liveness/properties/enabled/$id': '#/properties/probes/properties/liveness/properties/enabled' does not match pattern '^[^#]*#?$'             - at '/properties/probes/properties/liveness/properties/initialDelaySeconds': 'allOf' failed               - at '/properties/probes/properties/liveness/properties/initialDelaySeconds/$id': '#/properties/probes/properties/liveness/properties/initialDelaySeconds' does not match pattern '^[^#]*#?$'             - at '/properties/probes/properties/liveness/properties/failureThreshold': 'allOf' failed               - at '/properties/probes/properties/liveness/properties/failureThreshold/$id': '#/properties/probes/properties/liveness/properties/failureThreshold' does not match pattern '^[^#]*#?$'             - at '/properties/probes/properties/liveness/properties/timeoutSeconds': 'allOf' failed               - at '/properties/probes/properties/liveness/properties/timeoutSeconds/$id': '#/properties/probes/properties/liveness/properties/timeoutSeconds' does not match pattern '^[^#]*#?$'         - at '/properties/probes/properties/readiness': 'allOf' failed           - at '/properties/probes/properties/readiness/$id': '#/properties/probes/properties/readiness' does not match pattern '^[^#]*#?$'           - at '/properties/probes/properties/readiness': validation failed             - at '/properties/probes/properties/readiness/properties/initialDelaySeconds': 'allOf' failed               - at '/properties/probes/properties/readiness/properties/initialDelaySeconds/$id': '#/properties/probes/properties/readiness/properties/initialDelaySeconds' does not match pattern '^[^#]*#?$'             - at '/properties/probes/properties/readiness/properties/failureThreshold': 'allOf' failed               - at '/properties/probes/properties/readiness/properties/failureThreshold/$id': '#/properties/probes/properties/readiness/properties/failureThreshold' does not match pattern '^[^#]*#?$'             - at '/properties/probes/properties/readiness/properties/timeoutSeconds': 'allOf' failed               - at '/properties/probes/properties/readiness/properties/timeoutSeconds/$id': '#/properties/probes/properties/readiness/properties/timeoutSeconds' does not match pattern '^[^#]*#?$'             - at '/properties/probes/properties/readiness/properties/enabled': 'allOf' failed               - at '/properties/probes/properties/readiness/properties/enabled/$id': '#/properties/probes/properties/readiness/properties/enabled' does not match pattern '^[^#]*#?$'         - at '/properties/probes/properties/startup': 'allOf' failed           - at '/properties/probes/properties/startup/$id': '#/properties/probes/properties/startup' does not match pattern '^[^#]*#?$'           - at '/properties/probes/properties/startup': validation failed             - at '/properties/probes/properties/startup/properties/enabled': 'allOf' failed               - at '/properties/probes/properties/startup/properties/enabled/$id': '#/properties/probes/properties/startup/properties/enabled' does not match pattern '^[^#]*#?$'             - at '/properties/probes/properties/startup/properties/initialDelaySeconds': 'allOf' failed               - at '/properties/probes/properties/startup/properties/initialDelaySeconds/$id': '#/properties/probes/properties/startup/properties/initialDelaySeconds' does not match pattern '^[^#]*#?$'             - at '/properties/probes/properties/startup/properties/failureThreshold': 'allOf' failed               - at '/properties/probes/properties/startup/properties/failureThreshold/$id': '#/properties/probes/properties/startup/properties/failureThreshold' does not match pattern '^[^#]*#?$'             - at '/properties/probes/properties/startup/properties/periodSeconds': 'allOf' failed               - at '/properties/probes/properties/startup/properties/periodSeconds/$id': '#/properties/probes/properties/startup/properties/periodSeconds' does not match pattern '^[^#]*#?$'     - at '/properties/hostAliases': 'allOf' failed       - at '/properties/hostAliases/$id': '#/properties/hostAliases' does not match pattern '^[^#]*#?$'       - at '/properties/hostAliases/items': 'allOf' failed         - at '/properties/hostAliases/items/$id': '#/properties/hostAliases/items' does not match pattern '^[^#]*#?$'     - at '/properties/affinity': 'allOf' failed       - at '/properties/affinity/$id': '#/properties/affinity' does not match pattern '^[^#]*#?$'     - at '/properties/controllerType': 'allOf' failed       - at '/properties/controllerType/$id': '#/properties/controllerType' does not match pattern '^[^#]*#?$'     - at '/properties/replicas': 'allOf' failed       - at '/properties/replicas/$id': '#/properties/replicas' does not match pattern '^[^#]*#?$'     - at '/properties/service': 'allOf' failed       - at '/properties/service/$id': '#/properties/service' does not match pattern '^[^#]*#?$'       - at '/properties/service': validation failed         - at '/properties/service/properties/enabled': 'allOf' failed           - at '/properties/service/properties/enabled/$id': '#/properties/service/properties/enabled' does not match pattern '^[^#]*#?$'         - at '/properties/service/properties/type': 'allOf' failed           - at '/properties/service/properties/type/$id': '#/properties/service/properties/type' does not match pattern '^[^#]*#?$'         - at '/properties/service/properties/port': 'allOf' failed           - at '/properties/service/properties/port/$id': '#/properties/service/properties/port' does not match pattern '^[^#]*#?$'           - at '/properties/service/properties/port': validation failed             - at '/properties/service/properties/port/properties/port': 'allOf' failed               - at '/properties/service/properties/port/properties/port/$id': '#/properties/service/properties/port/properties/port' does not match pattern '^[^#]*#?$'             - at '/properties/service/properties/port/properties/name': 'allOf' failed               - at '/properties/service/properties/port/properties/name/$id': '#/properties/service/properties/port/properties/name' does not match pattern '^[^#]*#?$'             - at '/properties/service/properties/port/properties/protocol': 'allOf' failed               - at '/properties/service/properties/port/properties/protocol/$id': '#/properties/service/properties/port/properties/protocol' does not match pattern '^[^#]*#?$'             - at '/properties/service/properties/port/properties/targetPort': 'allOf' failed               - at '/properties/service/properties/port/properties/targetPort/$id': '#/properties/service/properties/port/properties/targetPort' does not match pattern '^[^#]*#?$'         - at '/properties/service/properties/additionalPorts': 'allOf' failed           - at '/properties/service/properties/additionalPorts/$id': '#/properties/service/properties/additionalPorts' does not match pattern '^[^#]*#?$'           - at '/properties/service/properties/additionalPorts/items': 'allOf' failed             - at '/properties/service/properties/additionalPorts/items/$id': '#/properties/service/properties/additionalPorts/items' does not match pattern '^[^#]*#?$'         - at '/properties/service/properties/annotations': 'allOf' failed           - at '/properties/service/properties/annotations/$id': '#/properties/service/properties/annotations' does not match pattern '^[^#]*#?$'         - at '/properties/service/properties/labels': 'allOf' failed           - at '/properties/service/properties/labels/$id': '#/properties/service/properties/labels' does not match pattern '^[^#]*#?$'         - at '/properties/service/properties/additionalServices': 'allOf' failed           - at '/properties/service/properties/additionalServices/$id': '#/properties/service/properties/additionalServices' does not match pattern '^[^#]*#?$'           - at '/properties/service/properties/additionalServices/items': 'allOf' failed             - at '/properties/service/properties/additionalServices/items/$id': '#/properties/service/properties/additionalServices/items' does not match pattern '^[^#]*#?$'     - at '/properties/env': 'allOf' failed       - at '/properties/env/$id': '#/properties/env' does not match pattern '^[^#]*#?$'     - at '/properties/podSecurityContext': 'allOf' failed       - at '/properties/podSecurityContext/$id': '#/properties/podSecurityContext' does not match pattern '^[^#]*#?$'     - at '/properties/resources': 'allOf' failed       - at '/properties/resources/$id': '#/properties/resources' does not match pattern '^[^#]*#?$'     - at '/properties/additionalVolumeMounts': 'allOf' failed       - at '/properties/additionalVolumeMounts/$id': '#/properties/additionalVolumeMounts' does not match pattern '^[^#]*#?$'       - at '/properties/additionalVolumeMounts/items': 'allOf' failed         - at '/properties/additionalVolumeMounts/items/$id': '#/properties/additionalVolumeMounts/items' does not match pattern '^[^#]*#?$'     - at '/properties/nodeSelector': 'allOf' failed       - at '/properties/nodeSelector/$id': '#/properties/nodeSelector' does not match pattern '^[^#]*#?$'     - at '/properties/controllerLabels': 'allOf' failed       - at '/properties/controllerLabels/$id': '#/properties/controllerLabels' does not match pattern '^[^#]*#?$'     - at '/properties/strategy': 'allOf' failed       - at '/properties/strategy/$id': '#/properties/strategy' does not match pattern '^[^#]*#?$'       - at '/properties/strategy/properties/type': 'allOf' failed         - at '/properties/strategy/properties/type/$id': '#/properties/strategy/properties/type' does not match pattern '^[^#]*#?$'     - at '/properties/envFrom': 'allOf' failed       - at '/properties/envFrom/$id': '#/properties/envFrom' does not match pattern '^[^#]*#?$'       - at '/properties/envFrom/items': 'allOf' failed         - at '/properties/envFrom/items/$id': '#/properties/envFrom/items' does not match pattern '^[^#]*#?$'     - at '/properties/dnsPolicy': 'allOf' failed       - at '/properties/dnsPolicy/$id': '#/properties/dnsPolicy' does not match pattern '^[^#]*#?$'     - at '/properties/ingress': 'allOf' failed       - at '/properties/ingress/$id': '#/properties/ingress' does not match pattern '^[^#]*#?$'       - at '/properties/ingress': validation failed         - at '/properties/ingress/properties/enabled': 'allOf' failed           - at '/properties/ingress/properties/enabled/$id': '#/properties/ingress/properties/enabled' does not match pattern '^[^#]*#?$'         - at '/properties/ingress/properties/annotations': 'allOf' failed           - at '/properties/ingress/properties/annotations/$id': '#/properties/ingress/properties/annotations' does not match pattern '^[^#]*#?$'         - at '/properties/ingress/properties/labels': 'allOf' failed           - at '/properties/ingress/properties/labels/$id': '#/properties/ingress/properties/labels' does not match pattern '^[^#]*#?$'         - at '/properties/ingress/properties/hosts': 'allOf' failed           - at '/properties/ingress/properties/hosts/$id': '#/properties/ingress/properties/hosts' does not match pattern '^[^#]*#?$'           - at '/properties/ingress/properties/hosts/items': 'allOf' failed             - at '/properties/ingress/properties/hosts/items/$id': '#/properties/ingress/properties/hosts/items' does not match pattern '^[^#]*#?$'             - at '/properties/ingress/properties/hosts/items/anyOf/0': 'allOf' failed               - at '/properties/ingress/properties/hosts/items/anyOf/0/$id': '#/properties/ingress/properties/hosts/items/anyOf/0' does not match pattern '^[^#]*#?$'               - at '/properties/ingress/properties/hosts/items/anyOf/0': validation failed                 - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/host': 'allOf' failed                   - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/host/$id': '#/properties/ingress/properties/hosts/items/anyOf/0/properties/host' does not match pattern '^[^#]*#?$'                 - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/paths': 'allOf' failed                   - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/$id': '#/properties/ingress/properties/hosts/items/anyOf/0/properties/paths' does not match pattern '^[^#]*#?$'                   - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items': 'allOf' failed                     - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items/$id': '#/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items' does not match pattern '^[^#]*#?$'                     - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items/anyOf/0': 'allOf' failed                       - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items/anyOf/0/$id': '#/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items/anyOf/0' does not match pattern '^[^#]*#?$'                       - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items/anyOf/0': validation failed                         - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items/anyOf/0/properties/pathType': 'allOf' failed                           - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items/anyOf/0/properties/pathType/$id': '#/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items/anyOf/0/properties/pathType' does not match pattern '^[^#]*#?$'                         - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items/anyOf/0/properties/path': 'allOf' failed                           - at '/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items/anyOf/0/properties/path/$id': '#/properties/ingress/properties/hosts/items/anyOf/0/properties/paths/items/anyOf/0/properties/path' does not match pattern '^[^#]*#?$'         - at '/properties/ingress/properties/tls': 'allOf' failed           - at '/properties/ingress/properties/tls/$id': '#/properties/ingress/properties/tls' does not match pattern '^[^#]*#?$'           - at '/properties/ingress/properties/tls/items': 'allOf' failed             - at '/properties/ingress/properties/tls/items/$id': '#/properties/ingress/properties/tls/items' does not match pattern '^[^#]*#?$'         - at '/properties/ingress/properties/additionalIngresses': 'allOf' failed           - at '/properties/ingress/properties/additionalIngresses/$id': '#/properties/ingress/properties/additionalIngresses' does not match pattern '^[^#]*#?$'           - at '/properties/ingress/properties/additionalIngresses/items': 'allOf' failed             - at '/properties/ingress/properties/additionalIngresses/items/$id': '#/properties/ingress/properties/additionalIngresses/items' does not match pattern '^[^#]*#?$'     - at '/properties/rbac': 'allOf' failed       - at '/properties/rbac/$id': '#/properties/rbac' does not match pattern '^[^#]*#?$'     - at '/properties/serviceAccount': 'allOf' failed       - at '/properties/serviceAccount/$id': '#/properties/serviceAccount' does not match pattern '^[^#]*#?$'       - at '/properties/serviceAccount': validation failed         - at '/properties/serviceAccount/properties/create': 'allOf' failed           - at '/properties/serviceAccount/properties/create/$id': '#/properties/serviceAccount/properties/create' does not match pattern '^[^#]*#?$'         - at '/properties/serviceAccount/properties/annotations': 'allOf' failed           - at '/properties/serviceAccount/properties/annotations/$id': '#/properties/serviceAccount/properties/annotations' does not match pattern '^[^#]*#?$'         - at '/properties/serviceAccount/properties/name': 'allOf' failed           - at '/properties/serviceAccount/properties/name/$id': '#/properties/serviceAccount/properties/name' does not match pattern '^[^#]*#?$'     - at '/properties/additionalContainers': 'allOf' failed       - at '/properties/additionalContainers/$id': '#/properties/additionalContainers' does not match pattern '^[^#]*#?$'       - at '/properties/additionalContainers/items': 'allOf' failed         - at '/properties/additionalContainers/items/$id': '#/properties/additionalContainers/items' does not match pattern '^[^#]*#?$'     - at '/properties/addons': 'allOf' failed       - at '/properties/addons/$id': '#/properties/addons' does not match pattern '^[^#]*#?$'       - at '/properties/addons/properties/vpn': 'allOf' failed         - at '/properties/addons/properties/vpn/$id': '#/properties/addons/properties/vpn' does not match pattern '^[^#]*#?$'         - at '/properties/addons/properties/vpn': validation failed           - at '/properties/addons/properties/vpn/properties/additionalVolumeMounts': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/additionalVolumeMounts/$id': '#/properties/addons/properties/vpn/properties/additionalVolumeMounts' does not match pattern '^[^#]*#?$'             - at '/properties/addons/properties/vpn/properties/additionalVolumeMounts/items': 'allOf' failed               - at '/properties/addons/properties/vpn/properties/additionalVolumeMounts/items/$id': '#/properties/addons/properties/vpn/properties/additionalVolumeMounts/items' does not match pattern '^[^#]*#?$'           - at '/properties/addons/properties/vpn/properties/livenessProbe': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/livenessProbe/$id': '#/properties/addons/properties/vpn/properties/livenessProbe' does not match pattern '^[^#]*#?$'           - at '/properties/addons/properties/vpn/properties/openvpn': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/openvpn/$id': '#/properties/addons/properties/vpn/properties/openvpn' does not match pattern '^[^#]*#?$'             - at '/properties/addons/properties/vpn/properties/openvpn': validation failed               - at '/properties/addons/properties/vpn/properties/openvpn/properties/image': 'allOf' failed                 - at '/properties/addons/properties/vpn/properties/openvpn/properties/image/$id': '#/properties/addons/properties/vpn/properties/openvpn/properties/image' does not match pattern '^[^#]*#?$'                 - at '/properties/addons/properties/vpn/properties/openvpn/properties/image': validation failed                   - at '/properties/addons/properties/vpn/properties/openvpn/properties/image/properties/repository': 'allOf' failed                     - at '/properties/addons/properties/vpn/properties/openvpn/properties/image/properties/repository/$id': '#/properties/addons/properties/vpn/properties/openvpn/properties/image/properties/repository' does not match pattern '^[^#]*#?$'                   - at '/properties/addons/properties/vpn/properties/openvpn/properties/image/properties/tag': 'allOf' failed                     - at '/properties/addons/properties/vpn/properties/openvpn/properties/image/properties/tag/$id': '#/properties/addons/properties/vpn/properties/openvpn/properties/image/properties/tag' does not match pattern '^[^#]*#?$'               - at '/properties/addons/properties/vpn/properties/openvpn/properties/auth': 'allOf' failed                 - at '/properties/addons/properties/vpn/properties/openvpn/properties/auth/$id': '#/properties/addons/properties/vpn/properties/openvpn/properties/auth' does not match pattern '^[^#]*#?$'               - at '/properties/addons/properties/vpn/properties/openvpn/properties/authSecret': 'allOf' failed                 - at '/properties/addons/properties/vpn/properties/openvpn/properties/authSecret/$id': '#/properties/addons/properties/vpn/properties/openvpn/properties/authSecret' does not match pattern '^[^#]*#?$'           - at '/properties/addons/properties/vpn/properties/wireguard': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/wireguard/$id': '#/properties/addons/properties/vpn/properties/wireguard' does not match pattern '^[^#]*#?$'             - at '/properties/addons/properties/vpn/properties/wireguard/properties/image': 'allOf' failed               - at '/properties/addons/properties/vpn/properties/wireguard/properties/image/$id': '#/properties/addons/properties/vpn/properties/wireguard/properties/image' does not match pattern '^[^#]*#?$'               - at '/properties/addons/properties/vpn/properties/wireguard/properties/image': validation failed                 - at '/properties/addons/properties/vpn/properties/wireguard/properties/image/properties/repository': 'allOf' failed                   - at '/properties/addons/properties/vpn/properties/wireguard/properties/image/properties/repository/$id': '#/properties/addons/properties/vpn/properties/wireguard/properties/image/properties/repository' does not match pattern '^[^#]*#?$'                 - at '/properties/addons/properties/vpn/properties/wireguard/properties/image/properties/tag': 'allOf' failed                   - at '/properties/addons/properties/vpn/properties/wireguard/properties/image/properties/tag/$id': '#/properties/addons/properties/vpn/properties/wireguard/properties/image/properties/tag' does not match pattern '^[^#]*#?$'           - at '/properties/addons/properties/vpn/properties/env': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/env/$id': '#/properties/addons/properties/vpn/properties/env' does not match pattern '^[^#]*#?$'           - at '/properties/addons/properties/vpn/properties/configFile': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/configFile/$id': '#/properties/addons/properties/vpn/properties/configFile' does not match pattern '^[^#]*#?$'           - at '/properties/addons/properties/vpn/properties/networkPolicy': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/networkPolicy/$id': '#/properties/addons/properties/vpn/properties/networkPolicy' does not match pattern '^[^#]*#?$'             - at '/properties/addons/properties/vpn/properties/networkPolicy': validation failed               - at '/properties/addons/properties/vpn/properties/networkPolicy/properties/enabled': 'allOf' failed                 - at '/properties/addons/properties/vpn/properties/networkPolicy/properties/enabled/$id': '#/properties/addons/properties/vpn/properties/networkPolicy/properties/enabled' does not match pattern '^[^#]*#?$'               - at '/properties/addons/properties/vpn/properties/networkPolicy/properties/egress': 'allOf' failed                 - at '/properties/addons/properties/vpn/properties/networkPolicy/properties/egress/$id': '#/properties/addons/properties/vpn/properties/networkPolicy/properties/egress' does not match pattern '^[^#]*#?$'           - at '/properties/addons/properties/vpn/properties/enabled': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/enabled/$id': '#/properties/addons/properties/vpn/properties/enabled' does not match pattern '^[^#]*#?$'           - at '/properties/addons/properties/vpn/properties/type': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/type/$id': '#/properties/addons/properties/vpn/properties/type' does not match pattern '^[^#]*#?$'           - at '/properties/addons/properties/vpn/properties/imagePullPolicy': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/imagePullPolicy/$id': '#/properties/addons/properties/vpn/properties/imagePullPolicy' does not match pattern '^[^#]*#?$'           - at '/properties/addons/properties/vpn/properties/securityContext': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/securityContext/$id': '#/properties/addons/properties/vpn/properties/securityContext' does not match pattern '^[^#]*#?$'             - at '/properties/addons/properties/vpn/properties/securityContext/properties/capabilities': 'allOf' failed               - at '/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/$id': '#/properties/addons/properties/vpn/properties/securityContext/properties/capabilities' does not match pattern '^[^#]*#?$'               - at '/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/properties/add': 'allOf' failed                 - at '/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/properties/add/$id': '#/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/properties/add' does not match pattern '^[^#]*#?$'                 - at '/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/properties/add/items': 'allOf' failed                   - at '/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/properties/add/items/$id': '#/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/properties/add/items' does not match pattern '^[^#]*#?$'                   - at '/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/properties/add/items/anyOf/0': 'allOf' failed                     - at '/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/properties/add/items/anyOf/0/$id': '#/properties/addons/properties/vpn/properties/securityContext/properties/capabilities/properties/add/items/anyOf/0' does not match pattern '^[^#]*#?$'           - at '/properties/addons/properties/vpn/properties/scripts': 'allOf' failed             - at '/properties/addons/properties/vpn/properties/scripts/$id': '#/properties/addons/properties/vpn/properties/scripts' does not match pattern '^[^#]*#?$'             - at '/properties/addons/properties/vpn/properties/scripts': validation failed               - at '/properties/addons/properties/vpn/properties/scripts/properties/up': 'allOf' failed                 - at '/properties/addons/properties/vpn/properties/scripts/properties/up/$id': '#/properties/addons/properties/vpn/properties/scripts/properties/up' does not match pattern '^[^#]*#?$'               - at '/properties/addons/properties/vpn/properties/scripts/properties/down': 'allOf' failed                 - at '/properties/addons/properties/vpn/properties/scripts/properties/down/$id': '#/properties/addons/properties/vpn/properties/scripts/properties/down' does not match pattern '^[^#]*#?$'     - at '/properties/nameOverride': 'allOf' failed       - at '/properties/nameOverride/$id': '#/properties/nameOverride' does not match pattern '^[^#]*#?$'     - at '/properties/podAnnotations': 'allOf' failed       - at '/properties/podAnnotations/$id': '#/properties/podAnnotations' does not match pattern '^[^#]*#?$'  |
 
-### mattermost/mattermost-helm
-
-#### `D:\helm_clones_artifacthub\mattermost__mattermost-helm\charts\mattermost-enterprise-edition\charts\mattermost-elasticsearch`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\mattermost__mattermost-helm\charts\mattermost-enterprise-edition\charts\mattermost-elasticsearch` | Error: mattermost-elasticsearch/templates/service.yaml:1:14   executing "mattermost-elasticsearch/templates/service.yaml" at <.Values.global.features.elasticsearch.enabled>:     nil pointer evaluating interface {}.features  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\mattermost__mattermost-helm\charts\mattermost-enterprise-edition\charts\mattermost-grafana`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\mattermost__mattermost-helm\charts\mattermost-enterprise-edition\charts\mattermost-grafana` | Error: mattermost-grafana/templates/svc.yaml:1:14   executing "mattermost-grafana/templates/svc.yaml" at <.Values.global.features.grafana.enabled>:     nil pointer evaluating interface {}.features  Use --debug flag to render out invalid YAML  |
-
 ### cetic/helm-nifi
 
 #### `D:\helm_clones_artifacthub\cetic__helm-nifi`
@@ -1156,6 +1241,14 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\cetic__helm-nifi` | level=INFO msg="warning: skipped value for zookeeper.initContainers: Not a table." Error: template: nifi/templates/configmap.yaml:12:4: executing "nifi/templates/configmap.yaml" at <tpl (.Files.Glob "configs/*").AsConfig .>: error calling tpl: cannot parse template "authorizers.xml: \"{{- $replicas := int .Values.replicaCount }}\\r\\n{{- $chart := .Chart.Name\n  }}\\r\\n{{- $release := .Release.Name }}\\r\\n{{- $fullname := include \\\"apache-nifi.fullname\\\"\n  . }}\\r\\n{{- $namespace := .Release.Namespace }}\\r\\n<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\"\n  standalone=\\\"yes\\\"?>\\r\\n<!--\\r\\n  Licensed to the Apache Software Foundation (ASF)\n  under one or more\\r\\n  contributor license agreements.  See the NOTICE file distributed\n  with\\r\\n  this work for additional information regarding copyright ownership.\\r\\n\n  \\ The ASF licenses this file to You under the Apache License, Version 2.0\\r\\n  (the\n  \\\"License\\\"); you may not use this file except in compliance with\\r\\n  the License.\n  \\ You may obtain a copy of the License at\\r\\n      http://www.apache.org/licenses/LICENSE-2.0\\r\\n\n  \\ Unless required by applicable law or agreed to in writing, software\\r\\n  distributed\n  under the License is distributed on an \\\"AS IS\\\" BASIS,\\r\\n  WITHOUT WARRANTIES\n  OR CONDITIONS OF ANY KIND, either express or implied.\\r\\n  See the License for the\n  specific language governing permissions and\\r\\n  limitations under the License.\\r\\n-->\\r\\n<!--\\r\\n\n  \\   This file lists the userGroupProviders, accessPolicyProviders, and authorizers\n  to use when running securely. In order\\r\\n    to use a specific authorizer it must\n  be configured here and it's identifier must be specified in the nifi.properties\n  file.\\r\\n    If the authorizer is a managedAuthorizer, it may need to be configured\n  with an accessPolicyProvider and an userGroupProvider.\\r\\n    This file allows for\n  configuration of them, but they must be configured in order:\\r\\n    ...\\r\\n    all\n  userGroupProviders\\r\\n    all accessPolicyProviders\\r\\n    all Authorizers\\r\\n    ...\\r\\n-->\\r\\n<authorizers>\\r\\n\n  \\   <!--\\r\\n        The FileUserGroupProvider will provide support for managing\n  users and groups which is backed by a file\\r\\n        on the local file system.\\r\\n\n  \\       - Users File - The file where the FileUserGroupProvider will store users\n  and groups.\\r\\n        - Legacy Authorized Users File - The full path to an existing\n  authorized-users.xml that will be automatically\\r\\n            be used to load the\n  users and groups into the Users File.\\r\\n        - Initial User Identity [unique\n  key] - The identity of a users and systems to seed the Users File. The name of\\r\\n\n  \\           each property must be unique, for example: \\\"Initial User Identity A\\\",\n  \\\"Initial User Identity B\\\",\\r\\n            \\\"Initial User Identity C\\\" or \\\"Initial\n  User Identity 1\\\", \\\"Initial User Identity 2\\\", \\\"Initial User Identity 3\\\"\\r\\n\n  \\           NOTE: Any identity mapping rules specified in nifi.properties will also\n  be applied to the user identities,\\r\\n            so the values should be the unmapped\n  identities (i.e. full DN from a certificate).\\r\\n    -->\\r\\n    <userGroupProvider>\\r\\n\n  \\       <identifier>file-user-group-provider</identifier>\\r\\n        <class>org.apache.nifi.authorization.FileUserGroupProvider</class>\\r\\n\n  \\       <property name=\\\"Users File\\\">./auth-conf/users.xml</property>\\r\\n        <property\n  name=\\\"Legacy Authorized Users File\\\"></property>\\r\\n        {{- range $i := until\n  $replicas }}\\r\\n        <property name=\\\"Initial User Identity {{ $i }}\\\">CN={{\n  $fullname }}-{{ $i }}.{{ $fullname }}-headless.{{ $namespace }}.svc.cluster.local,\n  OU=NIFI</property>\\r\\n        {{- end }}\\r\\n        {{- if and .Values.auth.ldap.enabled\n  (not .Values.auth.admin) }}\\r\\n        <property name=\\\"Initial User Identity admin\\\">{{.Values.auth.ldap.admin}}</property>\\r\\n\n  \\       {{- else }}\\r\\n        <property name=\\\"Initial User Identity admin\\\">{{\n  .Values.auth.admin }}</property>\\r\\n        {{- end}}\\r\\n    </userGroupProvider>\\r\\n\n  \\   <!--\\r\\n        The LdapUserGroupProvider will retrieve users and groups from\n  an LDAP server. The users and groups\\r\\n        are not configurable.\\r\\n        'Authentication\n  Strategy' - How the connection to the LDAP server is authenticated. Possible\\r\\n\n  \\           values are ANONYMOUS, SIMPLE, LDAPS, or START_TLS.\\r\\n        'Manager\n  DN' - The DN of the manager that is used to bind to the LDAP server to search for\n  users.\\r\\n        'Manager Password' - The password of the manager that is used\n  to bind to the LDAP server to\\r\\n            search for users.\\r\\n        'TLS -\n  Keystore' - Path to the Keystore that is used when connecting to LDAP using LDAPS\n  or START_TLS.\\r\\n        'TLS - Keystore Password' - Password for the Keystore that\n  is used when connecting to LDAP\\r\\n            using LDAPS or START_TLS.\\r\\n        'TLS\n  - Keystore Type' - Type of the Keystore that is used when connecting to LDAP using\\r\\n\n  \\           LDAPS or START_TLS (i.e. JKS or PKCS12).\\r\\n        'TLS - Truststore'\n  - Path to the Truststore that is used when connecting to LDAP using LDAPS or START_TLS.\\r\\n\n  \\       'TLS - Truststore Password' - Password for the Truststore that is used when\n  connecting to\\r\\n            LDAP using LDAPS or START_TLS.\\r\\n        'TLS - Truststore\n  Type' - Type of the Truststore that is used when connecting to LDAP using\\r\\n            LDAPS\n  or START_TLS (i.e. JKS or PKCS12).\\r\\n        'TLS - Client Auth' - Client authentication\n  policy when connecting to LDAP using LDAPS or START_TLS.\\r\\n            Possible\n  values are REQUIRED, WANT, NONE.\\r\\n        'TLS - Protocol' - Protocol to use when\n  connecting to LDAP using LDAPS or START_TLS. (i.e. TLS,\\r\\n            TLSv1.1,\n  TLSv1.2, etc).\\r\\n        'TLS - Shutdown Gracefully' - Specifies whether the TLS\n  should be shut down gracefully\\r\\n            before the target context is closed.\n  Defaults to false.\\r\\n        'Referral Strategy' - Strategy for handling referrals.\n  Possible values are FOLLOW, IGNORE, THROW.\\r\\n        'Connect Timeout' - Duration\n  of connect timeout. (i.e. 10 secs).\\r\\n        'Read Timeout' - Duration of read\n  timeout. (i.e. 10 secs).\\r\\n        'Url' - Space-separated list of URLs of the\n  LDAP servers (i.e. ldap://<hostname>:<port>).\\r\\n        'Page Size' - Sets the\n  page size when retrieving users and groups. If not specified, no paging is performed.\\r\\n\n  \\       'Sync Interval' - Duration of time between syncing users and groups (i.e.\n  30 mins). Minimum allowable value is 10 secs.\\r\\n        'User Search Base' - Base\n  DN for searching for users (i.e. ou=users,o=nifi). Required to search users.\\r\\n\n  \\       'User Object Class' - Object class for identifying users (i.e. person).\n  Required if searching users.\\r\\n        'User Search Scope' - Search scope for searching\n  users (ONE_LEVEL, OBJECT, or SUBTREE). Required if searching users.\\r\\n        'User\n  Search Filter' - Filter for searching for users against the 'User Search Base' (i.e.\n  (memberof=cn=team1,ou=groups,o=nifi) ). Optional.\\r\\n        'User Identity Attribute'\n  - Attribute to use to extract user identity (i.e. cn). Optional. If not set, the\n  entire DN is used.\\r\\n        'User Group Name Attribute' - Attribute to use to\n  define group membership (i.e. memberof). Optional. If not set\\r\\n            group\n  membership will not be calculated through the users. Will rely on group membership\n  being defined\\r\\n            through 'Group Member Attribute' if set. The value\n  of this property is the name of the attribute in the user ldap entry that\\r\\n            associates\n  them with a group. The value of that user attribute could be a dn or group name\n  for instance. What value is expected\\r\\n            is configured in the 'User Group\n  Name Attribute - Referenced Group Attribute'.\\r\\n        'User Group Name Attribute\n  - Referenced Group Attribute' - If blank, the value of the attribute defined in\n  'User Group Name Attribute'\\r\\n            is expected to be the full dn of the\n  group. If not blank, this property will define the attribute of the group ldap entry\n  that\\r\\n            the value of the attribute defined in 'User Group Name Attribute'\n  is referencing (i.e. name). Use of this property requires that\\r\\n            'Group\n  Search Base' is also configured.\\r\\n        'Group Search Base' - Base DN for searching\n  for groups (i.e. ou=groups,o=nifi). Required to search groups.\\r\\n        'Group\n  Object Class' - Object class for identifying groups (i.e. groupOfNames). Required\n  if searching groups.\\r\\n        'Group Search Scope' - Search scope for searching\n  groups (ONE_LEVEL, OBJECT, or SUBTREE). Required if searching groups.\\r\\n        'Group\n  Search Filter' - Filter for searching for groups against the 'Group Search Base'.\n  Optional.\\r\\n        'Group Name Attribute' - Attribute to use to extract group\n  name (i.e. cn). Optional. If not set, the entire DN is used.\\r\\n        'Group Member\n  Attribute' - Attribute to use to define group membership (i.e. member). Optional.\n  If not set\\r\\n            group membership will not be calculated through the groups.\n  Will rely on group membership being defined\\r\\n            through 'User Group Name\n  Attribute' if set. The value of this property is the name of the attribute in the\n  group ldap entry that\\r\\n            associates them with a user. The value of that\n  group attribute could be a dn or memberUid for instance. What value is expected\\r\\n\n  \\           is configured in the 'Group Member Attribute - Referenced User Attribute'.\n  (i.e. member: cn=User 1,ou=users,o=nifi vs. memberUid: user1)\\r\\n        'Group\n  Member Attribute - Referenced User Attribute' - If blank, the value of the attribute\n  defined in 'Group Member Attribute'\\r\\n            is expected to be the full dn\n  of the user. If not blank, this property will define the attribute of the user ldap\n  entry that\\r\\n            the value of the attribute defined in 'Group Member Attribute'\n  is referencing (i.e. uid). Use of this property requires that\\r\\n            'User\n  Search Base' is also configured. (i.e. member: cn=User 1,ou=users,o=nifi vs. memberUid:\n  user1)\\r\\n        NOTE: Any identity mapping rules specified in nifi.properties\n  will also be applied to the user identities.\\r\\n            Group names are not\n  mapped.\\r\\n    -->\\r\\n    {{- if .Values.auth.ldap.enabled}}\\r\\n    <userGroupProvider>\\r\\n\n  \\       <identifier>ldap-user-group-provider</identifier>\\r\\n        <class>org.apache.nifi.ldap.tenants.LdapUserGroupProvider</class>\\r\\n\n  \\       <property name=\\\"Authentication Strategy\\\">SIMPLE</property>\\r\\n        <property\n  name=\\\"Manager DN\\\">{{.Values.auth.ldap.admin}}</property>\\r\\n        <property\n  name=\\\"Manager Password\\\">{{.Values.auth.ldap.pass}}</property>\\r\\n        <property\n  name=\\\"TLS - Keystore\\\">/opt/nifi/nifi-current/conf/{{.Release.Name}}-nifi-0.{{.Release.Name}}-nifi-headless.{{.Values.properties.namespace}}.svc.cluster.local/keystore.jks</property>\\r\\n\n  \\       <property name=\\\"TLS - Keystore Password\\\">{{.Values.auth.SSL.keystorePasswd}}</property>\\r\\n\n  \\       <property name=\\\"TLS - Keystore Type\\\">jks</property>\\r\\n        <property\n  name=\\\"TLS - Truststore\\\">/opt/nifi/nifi-current/conf/{{.Release.Name}}-nifi-0.{{.Release.Name}}-nifi-headless.{{.Values.properties.namespace}}.svc.cluster.local/truststore.jks</property>\\r\\n\n  \\       <property name=\\\"TLS - Truststore Password\\\">{{.Values.auth.SSL.truststorePasswd}}</property>\\r\\n\n  \\       <property name=\\\"TLS - Truststore Type\\\">JKS</property>\\r\\n        <property\n  name=\\\"TLS - Client Auth\\\">NONE</property>\\r\\n        <property name=\\\"TLS - Protocol\\\">TLS</property>\\r\\n\n  \\       <property name=\\\"TLS - Shutdown Gracefully\\\">false</property>\\r\\n        <property\n  name=\\\"Referral Strategy\\\">IGNORE</property>\\r\\n        <property name=\\\"Connect\n  Timeout\\\">10 secs</property>\\r\\n        <property name=\\\"Read Timeout\\\">10 secs</property>\\r\\n\n  \\       <property name=\\\"Url\\\">{{.Values.auth.ldap.host}}</property>\\r\\n        <property\n  name=\\\"Page Size\\\"></property>\\r\\n        <property name=\\\"Sync Interval\\\">30 mins</property>\\r\\n\n  \\       <property name=\\\"User Search Base\\\">{{.Values.auth.ldap.searchBase}}</property>\\r\\n\n  \\       <property name=\\\"User Object Class\\\">person</property>\\r\\n        <property\n  name=\\\"User Search Scope\\\">{{.Values.auth.ldap.userSearchScope}}</property>\\r\\n\n  \\       <property name=\\\"User Search Filter\\\">{{.Values.auth.ldap.searchFilter}}</property>\\r\\n\n  \\       <property name=\\\"User Identity Attribute\\\">{{.Values.auth.ldap.UserIdentityAttribute}}</property>\\r\\n\n  \\       <property name=\\\"User Group Name Attribute\\\"></property>\\r\\n        <property\n  name=\\\"User Group Name Attribute - Referenced Group Attribute\\\"></property>\\r\\n\n  \\       <property name=\\\"Group Search Base\\\"></property>\\r\\n        <property name=\\\"Group\n  Object Class\\\">group</property>\\r\\n        <property name=\\\"Group Search Scope\\\">{{.Values.auth.ldap.groupSearchScope}}</property>\\r\\n\n  \\       <property name=\\\"Group Search Filter\\\"></property>\\r\\n        <property\n  name=\\\"Group Name Attribute\\\"></property>\\r\\n        <property name=\\\"Group Member\n  Attribute\\\"></property>\\r\\n        <property name=\\\"Group Member Attribute - Referenced\n  User Attribute\\\"></property>\\r\\n    </userGroupProvider>\\r\\n    {{- end}}\\r\\n\\r\\n\n  \\   <!--\\r\\n        The CompositeUserGroupProvider will provide support for retrieving\n  users and groups from multiple sources.\\r\\n        - User Group Provider [unique\n  key] - The identifier of user group providers to load from. The name of\\r\\n            each\n  property must be unique, for example: \\\"User Group Provider A\\\", \\\"User Group Provider\n  B\\\",\\r\\n            \\\"User Group Provider C\\\" or \\\"User Group Provider 1\\\", \\\"User\n  Group Provider 2\\\", \\\"User Group Provider 3\\\"\\r\\n            NOTE: Any identity\n  mapping rules specified in nifi.properties are not applied in this implementation.\n  This behavior\\r\\n            would need to be applied by the base implementation.\\r\\n\n  \\   -->\\r\\n    {{- if .Values.auth.ldap.enabled}}\\r\\n    <userGroupProvider>\\r\\n\n  \\       <identifier>composite-configurable-user-group-provider</identifier>\\r\\n\n  \\       <class>org.apache.nifi.authorization.CompositeConfigurableUserGroupProvider</class>\\r\\n\n  \\       <property name=\\\"Configurable User Group Provider\\\">file-user-group-provider</property>\\r\\n\n  \\       <property name=\\\"User Group Provider 1\\\">ldap-user-group-provider</property>\\r\\n\n  \\   </userGroupProvider>\\r\\n    {{- end}}\\r\\n\\r\\n    <!--\\r\\n        The CompositeConfigurableUserGroupProvider\n  will provide support for retrieving users and groups from multiple sources.\\r\\n\n  \\       Additionally, a single configurable user group provider is required. Users\n  from the configurable user group provider\\r\\n        are configurable, however users\n  loaded from one of the User Group Provider [unique key] will not be.\\r\\n        -\n  Configurable User Group Provider - A configurable user group provider.\\r\\n        -\n  User Group Provider [unique key] - The identifier of user group providers to load\n  from. The name of\\r\\n            each property must be unique, for example: \\\"User\n  Group Provider A\\\", \\\"User Group Provider B\\\",\\r\\n            \\\"User Group Provider\n  C\\\" or \\\"User Group Provider 1\\\", \\\"User Group Provider 2\\\", \\\"User Group Provider\n  3\\\"\\r\\n            NOTE: Any identity mapping rules specified in nifi.properties\n  are not applied in this implementation. This behavior\\r\\n            would need\n  to be applied by the base implementation.\\r\\n    -->\\r\\n    <!-- To enable the composite-configurable-user-group-provider\n  remove 2 lines. This is 1 of 2.\\r\\n    <userGroupProvider>\\r\\n        <identifier>composite-configurable-user-group-provider</identifier>\\r\\n\n  \\       <class>org.apache.nifi.authorization.CompositeConfigurableUserGroupProvider</class>\\r\\n\n  \\       <property name=\\\"Configurable User Group Provider\\\">file-user-group-provider</property>\\r\\n\n  \\       <property name=\\\"User Group Provider 1\\\"></property>\\r\\n    </userGroupProvider>\\r\\n\n  \\   To enable the composite-configurable-user-group-provider remove 2 lines. This\n  is 2 of 2. -->\\r\\n\\r\\n    <!--\\r\\n        The FileAccessPolicyProvider will provide\n  support for managing access policies which is backed by a file\\r\\n        on the\n  local file system.\\r\\n        - User Group Provider - The identifier for an User\n  Group Provider defined above that will be used to access\\r\\n            users and\n  groups for use in the managed access policies.\\r\\n        - Authorizations File\n  - The file where the FileAccessPolicyProvider will store policies.\\r\\n        -\n  Initial Admin Identity - The identity of an initial admin user that will be granted\n  access to the UI and\\r\\n            given the ability to create additional users,\n  groups, and policies. The value of this property could be\\r\\n            a DN when\n  using certificates or LDAP, or a Kerberos principal. This property will only be\n  used when there\\r\\n            are no other policies defined. If this property is\n  specified then a Legacy Authorized Users File can not be specified.\\r\\n            NOTE:\n  Any identity mapping rules specified in nifi.properties will also be applied to\n  the initial admin identity,\\r\\n            so the value should be the unmapped identity.\n  This identity must be found in the configured User Group Provider.\\r\\n        -\n  Legacy Authorized Users File - The full path to an existing authorized-users.xml\n  that will be automatically\\r\\n            converted to the new authorizations model.\n  If this property is specified then an Initial Admin Identity can\\r\\n            not\n  be specified, and this property will only be used when there are no other users,\n  groups, and policies defined.\\r\\n            NOTE: Any users in the legacy users\n  file must be found in the configured User Group Provider.\\r\\n        - Node Identity\n  [unique key] - The identity of a NiFi cluster node. When clustered, a property for\n  each node\\r\\n            should be defined, so that every node knows about every\n  other node. If not clustered these properties can be ignored.\\r\\n            The\n  name of each property must be unique, for example for a three node cluster:\\r\\n\n  \\           \\\"Node Identity A\\\", \\\"Node Identity B\\\", \\\"Node Identity C\\\" or \\\"Node\n  Identity 1\\\", \\\"Node Identity 2\\\", \\\"Node Identity 3\\\"\\r\\n            NOTE: Any\n  identity mapping rules specified in nifi.properties will also be applied to the\n  node identities,\\r\\n            so the values should be the unmapped identities\n  (i.e. full DN from a certificate). This identity must be found\\r\\n            in\n  the configured User Group Provider.\\r\\n    -->\\r\\n    <accessPolicyProvider>\\r\\n\n  \\       <identifier>file-access-policy-provider</identifier>\\r\\n        <class>org.apache.nifi.authorization.FileAccessPolicyProvider</class>\\r\\n\n  \\       <property name=\\\"User Group Provider\\\">file-user-group-provider</property>\\r\\n\n  \\       <property name=\\\"Authorizations File\\\">./auth-conf/authorizations.xml</property>\\r\\n\n  \\       {{- if and .Values.auth.ldap.enabled (not .Values.auth.admin) }}\\r\\n        <property\n  name=\\\"Initial Admin Identity\\\">{{.Values.auth.ldap.admin}}</property>\\r\\n        {{-\n  else }}\\r\\n        <property name=\\\"Initial Admin Identity\\\">{{ .Values.auth.admin\n  }}</property>\\r\\n        {{- end}}\\r\\n        <property name=\\\"Legacy Authorized\n  Users File\\\"></property>\\r\\n        {{- range $i := until $replicas }}\\r\\n        <property\n  name=\\\"Node Identity {{ $i }}\\\">CN={{ $fullname }}-{{ $i }}.{{ $fullname }}-headless.{{\n  $namespace }}.svc.cluster.local, OU=NIFI</property>\\r\\n        {{- end }}\\r\\n        <property\n  name=\\\"Node Identity\\\"></property>\\r\\n    </accessPolicyProvider>\\r\\n     <!--\\r\\n\n  \\       The StandardManagedAuthorizer. This authorizer implementation must be configured\n  with the\\r\\n        Access Policy Provider which it will use to access and manage\n  users, groups, and policies.\\r\\n        These users, groups, and policies will be\n  used to make all access decisions during authorization\\r\\n        requests.\\r\\n\n  \\       - Access Policy Provider - The identifier for an Access Policy Provider\n  defined above.\\r\\n    -->\\r\\n    <authorizer>\\r\\n        <identifier>managed-authorizer</identifier>\\r\\n\n  \\       <class>org.apache.nifi.authorization.StandardManagedAuthorizer</class>\\r\\n\n  \\       <property name=\\\"Access Policy Provider\\\">file-access-policy-provider</property>\\r\\n\n  \\   </authorizer>\\r\\n    <!--\\r\\n        NOTE: This Authorizer has been replaced\n  with the more granular approach configured above with the Standard\\r\\n        Managed\n  Authorizer. However, it is still available for backwards compatibility reasons.\\r\\n\n  \\       The FileAuthorizer is NiFi's provided authorizer and has the following properties:\\r\\n\n  \\       - Authorizations File - The file where the FileAuthorizer will store policies.\\r\\n\n  \\       - Users File - The file where the FileAuthorizer will store users and groups.\\r\\n\n  \\       - Initial Admin Identity - The identity of an initial admin user that will\n  be granted access to the UI and\\r\\n            given the ability to create additional\n  users, groups, and policies. The value of this property could be\\r\\n            a\n  DN when using certificates or LDAP, or a Kerberos principal. This property will\n  only be used when there\\r\\n            are no other users, groups, and policies\n  defined. If this property is specified then a Legacy Authorized\\r\\n            Users\n  File can not be specified.\\r\\n            NOTE: Any identity mapping rules specified\n  in nifi.properties will also be applied to the initial admin identity,\\r\\n            so\n  the value should be the unmapped identity.\\r\\n        - Legacy Authorized Users\n  File - The full path to an existing authorized-users.xml that will be automatically\\r\\n\n  \\           converted to the new authorizations model. If this property is specified\n  then an Initial Admin Identity can\\r\\n            not be specified, and this property\n  will only be used when there are no other users, groups, and policies defined.\\r\\n\n  \\       - Node Identity [unique key] - The identity of a NiFi cluster node. When\n  clustered, a property for each node\\r\\n            should be defined, so that every\n  node knows about every other node. If not clustered these properties can be ignored.\\r\\n\n  \\           The name of each property must be unique, for example for a three node\n  cluster:\\r\\n            \\\"Node Identity A\\\", \\\"Node Identity B\\\", \\\"Node Identity\n  C\\\" or \\\"Node Identity 1\\\", \\\"Node Identity 2\\\", \\\"Node Identity 3\\\"\\r\\n            NOTE:\n  Any identity mapping rules specified in nifi.properties will also be applied to\n  the node identities,\\r\\n            so the values should be the unmapped identities\n  (i.e. full DN from a certificate).\\r\\n    -->\\r\\n    {{- if .Values.auth.ldap.enabled}}\\r\\n\n  \\   <authorizer>\\r\\n        <identifier>file-provider</identifier>\\r\\n        <class>org.apache.nifi.authorization.FileAuthorizer</class>\\r\\n\n  \\       <property name=\\\"Authorizations File\\\">./auth-conf/authorizations.xml</property>\\r\\n\n  \\       <property name=\\\"Users File\\\">./auth-conf/users.xml</property>\\r\\n        <property\n  name=\\\"Initial Admin Identity\\\">{{.Values.auth.ldap.admin}}</property>\\r\\n        <property\n  name=\\\"Legacy Authorized Users File\\\"></property>\\r\\n\\r\\n    </authorizer>\\r\\n    {{-\n  end}}\\r\\n</authorizers>\\r\\n\"\nbootstrap-notification-services.xml: \"<?xml version=\\\"1.0\\\"?>\\r\\n<!--\\r\\n  Licensed\n  to the Apache Software Foundation (ASF) under one or more\\r\\n  contributor license\n  agreements.  See the NOTICE file distributed with\\r\\n  this work for additional\n  information regarding copyright ownership.\\r\\n  The ASF licenses this file to You\n  under the Apache License, Version 2.0\\r\\n  (the \\\"License\\\"); you may not use this\n  file except in compliance with\\r\\n  the License.  You may obtain a copy of the License\n  at\\r\\n      http://www.apache.org/licenses/LICENSE-2.0\\r\\n  Unless required by applicable\n  law or agreed to in writing, software\\r\\n  distributed under the License is distributed\n  on an \\\"AS IS\\\" BASIS,\\r\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either\n  express or implied.\\r\\n  See the License for the specific language governing permissions\n  and\\r\\n  limitations under the License.\\r\\n-->\\r\\n<services>\\r\\n    <!-- This file\n  is used to define how interested parties are notified when events in NiFi's lifecycle\n  occur. -->\\r\\n    <!-- The format of this file is:\\r\\n        <services>\\r\\n            <service>\\r\\n\n  \\               <id>service-identifier</id>\\r\\n                <class>org.apache.nifi.notifications.DesiredNotificationService</class>\\r\\n\n  \\               <property name=\\\"property name\\\">property value</property>\\r\\n                <property\n  name=\\\"another property\\\">another property value</property>\\r\\n            </service>\\r\\n\n  \\       </services>\\r\\n        \\r\\n        This file can contain 0 to many different\n  service definitions.\\r\\n        The id can then be referenced from the bootstrap.conf\n  file in order to configure the notification service\\r\\n        to be used when particular\n  lifecycle events occur.\\r\\n    -->\\r\\n    \\r\\n<!--\\r\\n     <service>\\r\\n        <id>email-notification</id>\\r\\n\n  \\       <class>org.apache.nifi.bootstrap.notification.email.EmailNotificationService</class>\\r\\n\n  \\       <property name=\\\"SMTP Hostname\\\"></property>\\r\\n        <property name=\\\"SMTP\n  Port\\\"></property>\\r\\n        <property name=\\\"SMTP Username\\\"></property>\\r\\n        <property\n  name=\\\"SMTP Password\\\"></property>\\r\\n        <property name=\\\"SMTP TLS\\\"></property>\\r\\n\n  \\       <property name=\\\"From\\\"></property>\\r\\n        <property name=\\\"To\\\"></property>\\r\\n\n  \\    </service>\\r\\n-->\\r\\n<!--\\r\\n     <service>\\r\\n        <id>http-notification</id>\\r\\n\n  \\       <class>org.apache.nifi.bootstrap.notification.http.HttpNotificationService</class>\\r\\n\n  \\       <property name=\\\"URL\\\"></property>\\r\\n     </service>\\r\\n-->\\r\\n</services>\\r\\n\"\nbootstrap.conf: \"#\\r\\n# Licensed to the Apache Software Foundation (ASF) under one\n  or more\\r\\n# contributor license agreements.  See the NOTICE file distributed with\\r\\n#\n  this work for additional information regarding copyright ownership.\\r\\n# The ASF\n  licenses this file to You under the Apache License, Version 2.0\\r\\n# (the \\\"License\\\");\n  you may not use this file except in compliance with\\r\\n# the License.  You may obtain\n  a copy of the License at\\r\\n#\\r\\n#   http://www.apache.org/licenses/LICENSE-2.0\\r\\n#\\r\\n#\n  Unless required by applicable law or agreed to in writing, software\\r\\n# distributed\n  under the License is distributed on an \\\"AS IS\\\" BASIS,\\r\\n# WITHOUT WARRANTIES\n  OR CONDITIONS OF ANY KIND, either express or implied.\\r\\n# See the License for the\n  specific language governing permissions and\\r\\n# limitations under the License.\\r\\n#\\r\\n\\r\\n#\n  Java command to use when running NiFi\\r\\njava=java\\r\\n\\r\\n# Username to use when\n  running NiFi. This value will be ignored on Windows.\\r\\nrun.as=\\r\\n\\r\\n# Configure\n  where NiFi's lib and conf directories live\\r\\nlib.dir=./lib\\r\\nconf.dir=./conf\\r\\n\\r\\n#\n  How long to wait after telling NiFi to shutdown before explicitly killing the Process\\r\\ngraceful.shutdown.seconds=20\\r\\n\\r\\n#\n  Disable JSR 199 so that we can use JSP's without running a JDK\\r\\njava.arg.1=-Dorg.apache.jasper.compiler.disablejsr199=true\\r\\n\\r\\n#\n  JVM memory settings\\r\\njava.arg.2=-Xms{{.Values.jvmMemory}}\\r\\njava.arg.3=-Xmx{{.Values.jvmMemory}}\\r\\n\\r\\n#\n  Enable Remote Debugging\\r\\n#java.arg.debug=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000\\r\\n\\r\\njava.arg.4=-Djava.net.preferIPv4Stack=true\\r\\n\\r\\n#\n  allowRestrictedHeaders is required for Cluster/Node communications to work properly\\r\\njava.arg.5=-Dsun.net.http.allowRestrictedHeaders=true\\r\\njava.arg.6=-Djava.protocol.handler.pkgs=sun.net.www.protocol\\r\\n\\r\\n{{\n  if .Values.certManager.replaceDefaultTrustStore }}\\r\\njava.arg.7=-Djavax.net.ssl.trustStore=/opt/nifi/nifi-current/tls/truststore.jks\\r\\n{{/*\n  if .Values.certManager.replaceDefaultTrustStore */}}{{ end }}\\r\\n\\r\\n# The G1GC\n  is still considered experimental but has proven to be very advantageous in providing\n  great\\r\\n# performance without significant \\\"stop-the-world\\\" delays.\\r\\n#java.arg.13=-XX:+UseG1GC\\r\\n\\r\\n#Set\n  headless mode by default\\r\\njava.arg.14=-Djava.awt.headless=true\\r\\n\\r\\n# Master\n  key in hexadecimal format for encrypted sensitive configuration values\\r\\nnifi.bootstrap.sensitive.key=\\r\\n\\r\\n#\n  Sets the provider of SecureRandom to /dev/urandom to prevent blocking on VMs\\r\\njava.arg.15=-Djava.security.egd=file:/dev/urandom\\r\\n\\r\\n###\\r\\n#\n  Notification Services for notifying interested parties when NiFi is stopped, started,\n  dies\\r\\n###\\r\\n\\r\\n# XML File that contains the definitions of the notification\n  services\\r\\nnotification.services.file=./conf/bootstrap-notification-services.xml\\r\\n\\r\\n#\n  In the case that we are unable to send a notification for an event, how many times\n  should we retry?\\r\\nnotification.max.attempts=5\\r\\n\\r\\n# Comma-separated list of\n  identifiers that are present in the notification.services.file; which services should\n  be used to notify when NiFi is started?\\r\\n#nifi.start.notification.services=email-notification\\r\\n\\r\\n#\n  Comma-separated list of identifiers that are present in the notification.services.file;\n  which services should be used to notify when NiFi is stopped?\\r\\n#nifi.stop.notification.services=email-notification\\r\\n\\r\\n#\n  Comma-separated list of identifiers that are present in the notification.services.file;\n  which services should be used to notify when NiFi dies?\\r\\n#nifi.dead.notification.services=email-notification\\r\\n\\r\\n\\r\\n#\n  Extra bootstrap options\\r\\n{{- range .Values.extraOptions }}\\r\\n{{ .name }}={{ .value\n  }}\\r\\n{{- end }}\\r\\n\\r\\n\"\nflow.xml: \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" standalone=\\\"no\\\"?>\\r\\n<flowController\n  encoding-version=\\\"1.3\\\">\\r\\n    <maxTimerDrivenThreadCount>10</maxTimerDrivenThreadCount>\\r\\n\n  \\   <maxEventDrivenThreadCount>5</maxEventDrivenThreadCount>\\r\\n    <registries>\\r\\n\n  \\       <flowRegistry>\\r\\n            <id>{{ default uuidv4 }}</id>\\r\\n            <name>default</name>\\r\\n\n  \\           <url>{{ template \\\"registry.url\\\" . }}</url>\\r\\n            <description/>\\r\\n\n  \\       </flowRegistry>\\r\\n    </registries>\\r\\n    <rootGroup>\\r\\n        <id>{{\n  default uuidv4 }}</id>\\r\\n        <name>Nifi Flow</name>\\r\\n        <position x=\\\"0.0\\\"\n  y=\\\"0.0\\\"/>\\r\\n        <comment/>\\r\\n    </rootGroup>\\r\\n    <controllerServices/>\\r\\n\n  \\   <reportingTasks/>\\r\\n</flowController>\\r\\n\"\nlogin-identity-providers-ldap.xml: \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" standalone=\\\"yes\\\"?>\\r\\n<!--\\r\\n\n  \\ Licensed to the Apache Software Foundation (ASF) under one or more\\r\\n  contributor\n  license agreements.  See the NOTICE file distributed with\\r\\n  this work for additional\n  information regarding copyright ownership.\\r\\n  The ASF licenses this file to You\n  under the Apache License, Version 2.0\\r\\n  (the \\\"License\\\"); you may not use this\n  file except in compliance with\\r\\n  the License.  You may obtain a copy of the License\n  at\\r\\n      http://www.apache.org/licenses/LICENSE-2.0\\r\\n  Unless required by applicable\n  law or agreed to in writing, software\\r\\n  distributed under the License is distributed\n  on an \\\"AS IS\\\" BASIS,\\r\\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either\n  express or implied.\\r\\n  See the License for the specific language governing permissions\n  and\\r\\n  limitations under the License.\\r\\n-->\\r\\n<!--\\r\\n    This file lists the\n  login identity providers to use when running securely. In order\\r\\n    to use a\n  specific provider it must be configured here and it's identifier\\r\\n    must be\n  specified in the nifi.properties file.\\r\\n-->\\r\\n<loginIdentityProviders>\\r\\n    <!--\\r\\n\n  \\       Identity Provider for users logging in with username/password against an\n  LDAP server.\\r\\n        \\r\\n        'Authentication Strategy' - How the connection\n  to the LDAP server is authenticated. Possible\\r\\n            values are ANONYMOUS,\n  SIMPLE, LDAPS, or START_TLS.\\r\\n        \\r\\n        'Manager DN' - The DN of the\n  manager that is used to bind to the LDAP server to search for users.\\r\\n        'Manager\n  Password' - The password of the manager that is used to bind to the LDAP server\n  to\\r\\n            search for users.\\r\\n            \\r\\n        'TLS - Keystore'\n  - Path to the Keystore that is used when connecting to LDAP using LDAPS or START_TLS.\\r\\n\n  \\       'TLS - Keystore Password' - Password for the Keystore that is used when\n  connecting to LDAP\\r\\n            using LDAPS or START_TLS.\\r\\n        'TLS - Keystore\n  Type' - Type of the Keystore that is used when connecting to LDAP using\\r\\n            LDAPS\n  or START_TLS (i.e. JKS or PKCS12).\\r\\n        'TLS - Truststore' - Path to the Truststore\n  that is used when connecting to LDAP using LDAPS or START_TLS.\\r\\n        'TLS -\n  Truststore Password' - Password for the Truststore that is used when connecting\n  to\\r\\n            LDAP using LDAPS or START_TLS.\\r\\n        'TLS - Truststore Type'\n  - Type of the Truststore that is used when connecting to LDAP using\\r\\n            LDAPS\n  or START_TLS (i.e. JKS or PKCS12).\\r\\n        'TLS - Client Auth' - Client authentication\n  policy when connecting to LDAP using LDAPS or START_TLS.\\r\\n            Possible\n  values are REQUIRED, WANT, NONE.\\r\\n        'TLS - Protocol' - Protocol to use when\n  connecting to LDAP using LDAPS or START_TLS. (i.e. TLS,\\r\\n            TLSv1.1,\n  TLSv1.2, etc).\\r\\n        'TLS - Shutdown Gracefully' - Specifies whether the TLS\n  should be shut down gracefully \\r\\n            before the target context is closed.\n  Defaults to false.\\r\\n            \\r\\n        'Referral Strategy' - Strategy for\n  handling referrals. Possible values are FOLLOW, IGNORE, THROW.\\r\\n        'Connect\n  Timeout' - Duration of connect timeout. (i.e. 10 secs).\\r\\n        'Read Timeout'\n  - Duration of read timeout. (i.e. 10 secs).\\r\\n       \\r\\n        'Url' - Space-separated\n  list of URLs of the LDAP servers (i.e. ldap://<hostname>:<port>).\\r\\n        'User\n  Search Base' - Base DN for searching for users (i.e. CN=Users,DC=example,DC=com).\\r\\n\n  \\       'User Search Filter' - Filter for searching for users against the 'User\n  Search Base'.\\r\\n            (i.e. sAMAccountName={0}). The user specified name\n  is inserted into '{0}'.\\r\\n        'Identity Strategy' - Strategy to identify users.\n  Possible values are USE_DN and USE_USERNAME.\\r\\n            The default functionality\n  if this property is missing is USE_DN in order to retain\\r\\n            backward\n  compatibility. USE_DN will use the full DN of the user entry if possible.\\r\\n            USE_USERNAME\n  will use the username the user logged in with.\\r\\n        'Authentication Expiration'\n  - The duration of how long the user authentication is valid\\r\\n            for.\n  If the user never logs out, they will be required to log back in following\\r\\n            this\n  duration.\\r\\n    -->\\r\\n    <provider>\\r\\n        <identifier>ldap-provider</identifier>\\r\\n\n  \\       <class>org.apache.nifi.ldap.LdapProvider</class>\\r\\n        <property name=\\\"Authentication\n  Strategy\\\">{{.Values.auth.ldap.authStrategy}}</property>\\r\\n        <property name=\\\"Manager\n  DN\\\">{{.Values.auth.ldap.admin}}</property>\\r\\n        <property name=\\\"Manager\n  Password\\\">{{.Values.auth.ldap.pass}}</property>\\r\\n        <property name=\\\"TLS\n  - Keystore\\\">/opt/nifi/nifi-current/conf/{{.Release.Name}}-nifi-0.{{.Release.Name}}-nifi-headless.{{.Release.Namespace}}.svc.cluster.local/keystore.jks</property>\\r\\n\n  \\       <property name=\\\"TLS - Keystore Password\\\">{{.Values.auth.keystorePasswd}}</property>\\r\\n\n  \\       <property name=\\\"TLS - Keystore Type\\\">JKS</property>\\r\\n        <property\n  name=\\\"TLS - Truststore\\\">/opt/nifi/nifi-current/conf/{{.Release.Name}}-nifi-0.{{.Release.Name}}-nifi-headless.{{.Release.Namespace}}.svc.cluster.local/truststore.jks</property>\\r\\n\n  \\       <property name=\\\"TLS - Truststore Password\\\">{{.Values.auth.truststorePasswd}}</property>\\r\\n\n  \\       <property name=\\\"TLS - Truststore Type\\\">JKS</property>\\r\\n        <property\n  name=\\\"TLS - Client Auth\\\">NONE</property>\\r\\n        <property name=\\\"TLS - Protocol\\\">TLS</property>\\r\\n\n  \\       <property name=\\\"TLS - Shutdown Gracefully\\\">false</property>\\r\\n\\r\\n        <property\n  name=\\\"Referral Strategy\\\">FOLLOW</property>\\r\\n        <property name=\\\"Connect\n  Timeout\\\">10 secs</property>\\r\\n        <property name=\\\"Read Timeout\\\">10 secs</property>\\r\\n\n  \\       <property name=\\\"Url\\\">{{.Values.auth.ldap.host}}</property>\\r\\n        <property\n  name=\\\"User Search Base\\\">{{.Values.auth.ldap.searchBase}}</property>\\r\\n        <property\n  name=\\\"User Search Filter\\\">({{.Values.auth.ldap.userIdentityAttribute}}={0})</property>\\r\\n\n  \\       <property name=\\\"Identity Strategy\\\">{{.Values.auth.ldap.IdentityStrategy}}</property>\\r\\n\n  \\       <property name=\\\"Authentication Expiration\\\">{{.Values.auth.ldap.authExpiration}}</property>\\r\\n\n  \\   </provider>\\r\\n</loginIdentityProviders>\\r\\n\"\nnifi.properties: \"# Licensed to the Apache Software Foundation (ASF) under one or\n  more\\r\\n# contributor license agreements.  See the NOTICE file distributed with\\r\\n#\n  this work for additional information regarding copyright ownership.\\r\\n# The ASF\n  licenses this file to You under the Apache License, Version 2.0\\r\\n# (the \\\"License\\\");\n  you may not use this file except in compliance with\\r\\n# the License.  You may obtain\n  a copy of the License at\\r\\n#\\r\\n#     http://www.apache.org/licenses/LICENSE-2.0\\r\\n#\\r\\n#\n  Unless required by applicable law or agreed to in writing, software\\r\\n# distributed\n  under the License is distributed on an \\\"AS IS\\\" BASIS,\\r\\n# WITHOUT WARRANTIES\n  OR CONDITIONS OF ANY KIND, either express or implied.\\r\\n# See the License for the\n  specific language governing permissions and\\r\\n# limitations under the License.\\r\\n\\r\\n#\n  Core Properties #\\r\\nnifi.flow.configuration.file=../data/flow.xml.gz\\r\\nnifi.flow.configuration.archive.enabled=true\\r\\nnifi.flow.configuration.archive.dir=../data/archive/\\r\\nnifi.flow.configuration.archive.max.time={{.Values.properties.flowArchiveMaxTime}}\\r\\nnifi.flow.configuration.archive.max.storage={{.Values.properties.flowArchiveMaxStorage}}\\r\\nnifi.flow.configuration.archive.max.count=\\r\\nnifi.flowcontroller.autoResumeState=true\\r\\nnifi.flowcontroller.graceful.shutdown.period=10\n  sec\\r\\nnifi.flowservice.writedelay.interval=500 ms\\r\\nnifi.administrative.yield.duration=30\n  sec\\r\\n# If a component has no work to do (is \\\"bored\\\"), how long should we wait\n  before checking again for work?\\r\\nnifi.bored.yield.duration=10 millis\\r\\n\\r\\nnifi.authorizer.configuration.file=./conf/authorizers.xml\\r\\nnifi.login.identity.provider.configuration.file=./conf/login-identity-providers.xml\\r\\nnifi.templates.directory=../data/templates\\r\\nnifi.ui.banner.text=\\r\\nnifi.ui.autorefresh.interval=30\n  sec\\r\\nnifi.nar.library.directory=./lib\\r\\nnifi.nar.library.directory.custom={{.Values.properties.customLibPath}}\\r\\nnifi.nar.library.autoload.directory=./extensions\\r\\nnifi.nar.working.directory=./work/nar/\\r\\nnifi.documentation.working.directory=./work/docs/components\\r\\n\\r\\n####################\\r\\n#\n  State Management #\\r\\n####################\\r\\nnifi.state.management.configuration.file=./conf/state-management.xml\\r\\n#\n  The ID of the local state provider\\r\\nnifi.state.management.provider.local=local-provider\\r\\n#\n  The ID of the cluster-wide state provider. This will be ignored if NiFi is not clustered\n  but must be populated if running in a cluster.\\r\\nnifi.state.management.provider.cluster=zk-provider\\r\\n#\n  Specifies whether or not this instance of NiFi should run an embedded ZooKeeper\n  server\\r\\nnifi.state.management.embedded.zookeeper.start=false\\r\\n# Properties file\n  that provides the ZooKeeper properties to use if <nifi.state.management.embedded.zookeeper.start>\n  is set to true\\r\\nnifi.state.management.embedded.zookeeper.properties=./conf/zookeeper.properties\\r\\n\\r\\n\\r\\n#\n  H2 Settings\\r\\nnifi.database.directory=../data/database_repository\\r\\nnifi.h2.url.append=;LOCK_TIMEOUT=25000;WRITE_DELAY=0;AUTO_SERVER=FALSE\\r\\n\\r\\n#\n  FlowFile Repository\\r\\nnifi.flowfile.repository.implementation=org.apache.nifi.controller.repository.WriteAheadFlowFileRepository\\r\\nnifi.flowfile.repository.directory=../flowfile_repository\\r\\nnifi.flowfile.repository.partitions=256\\r\\nnifi.flowfile.repository.checkpoint.interval=2\n  mins\\r\\nnifi.flowfile.repository.always.sync=false\\r\\n\\r\\nnifi.swap.manager.implementation=org.apache.nifi.controller.FileSystemSwapManager\\r\\nnifi.queue.swap.threshold=20000\\r\\nnifi.swap.in.period=5\n  sec\\r\\nnifi.swap.in.threads=1\\r\\nnifi.swap.out.period=5 sec\\r\\nnifi.swap.out.threads=4\\r\\n\\r\\n#\n  Content Repository\\r\\nnifi.content.repository.implementation=org.apache.nifi.controller.repository.FileSystemRepository\\r\\nnifi.content.claim.max.appendable.size=1\n  MB\\r\\nnifi.content.claim.max.flow.files=100\\r\\nnifi.content.repository.directory.default=../content_repository\\r\\nnifi.content.repository.archive.max.retention.period={{.Values.properties.archiveMaxRetentionPeriod}}\\r\\nnifi.content.repository.archive.max.usage.percentage={{.Values.properties.archiveMaxUsagePercentage}}\\r\\nnifi.content.repository.archive.enabled=true\\r\\nnifi.content.repository.always.sync=false\\r\\nnifi.content.viewer.url=/nifi-content-viewer/\\r\\n\\r\\n#\n  Provenance Repository Properties\\r\\nnifi.provenance.repository.implementation=org.apache.nifi.provenance.WriteAheadProvenanceRepository\\r\\nnifi.provenance.repository.debug.frequency=1000000\\r\\nnifi.provenance.repository.encryption.key.provider.implementation=\\r\\nnifi.provenance.repository.encryption.key.provider.location=\\r\\nnifi.provenance.repository.encryption.key.id=\\r\\nnifi.provenance.repository.encryption.key=\\r\\n\\r\\n#\n  Persistent Provenance Repository Properties\\r\\nnifi.provenance.repository.directory.default=../provenance_repository\\r\\nnifi.provenance.repository.max.storage.time={{.Values.properties.provenanceMaxStorageTime}}\\r\\nnifi.provenance.repository.max.storage.size={{.Values.properties.provenanceStorage}}\\r\\nnifi.provenance.repository.rollover.time=30\n  secs\\r\\nnifi.provenance.repository.rollover.size=100 MB\\r\\nnifi.provenance.repository.query.threads=2\\r\\nnifi.provenance.repository.index.threads=2\\r\\nnifi.provenance.repository.compress.on.rollover=true\\r\\nnifi.provenance.repository.always.sync=false\\r\\nnifi.provenance.repository.journal.count=16\\r\\n#\n  Comma-separated list of fields. Fields that are not indexed will not be searchable.\n  Valid fields are:\\r\\n# EventType, FlowFileUUID, Filename, TransitURI, ProcessorID,\n  AlternateIdentifierURI, Relationship, Details\\r\\nnifi.provenance.repository.indexed.fields=EventType,\n  FlowFileUUID, Filename, ProcessorID, Relationship\\r\\n# FlowFile Attributes that\n  should be indexed and made searchable.  Some examples to consider are filename,\n  uuid, mime.type\\r\\nnifi.provenance.repository.indexed.attributes=\\r\\n# Large values\n  for the shard size will result in more Java heap usage when searching the Provenance\n  Repository\\r\\n# but should provide better performance\\r\\nnifi.provenance.repository.index.shard.size=500\n  MB\\r\\n# Indicates the maximum length that a FlowFile attribute can be when retrieving\n  a Provenance Event from\\r\\n# the repository. If the length of any attribute exceeds\n  this value, it will be truncated when the event is retrieved.\\r\\nnifi.provenance.repository.max.attribute.length=65536\\r\\n\\r\\n#\n  Volatile Provenance Respository Properties\\r\\nnifi.provenance.repository.buffer.size=100000\\r\\n\\r\\n#\n  Component Status Repository\\r\\nnifi.components.status.repository.implementation=org.apache.nifi.controller.status.history.VolatileComponentStatusRepository\\r\\nnifi.components.status.repository.buffer.size=1440\\r\\nnifi.components.status.snapshot.frequency=1\n  min\\r\\n\\r\\n# Site to Site properties\\r\\nnifi.remote.input.host=\\r\\nnifi.remote.input.secure=true\\r\\nnifi.remote.input.socket.port={{.Values.properties.siteToSite.port}}\\r\\nnifi.remote.input.http.enabled=true\\r\\nnifi.remote.input.http.transaction.ttl=30\n  sec\\r\\nnifi.remote.contents.cache.expiration=30 secs\\r\\n\\r\\n# web properties #\\r\\nnifi.web.war.directory=./lib\\r\\nnifi.web.proxy.host={{.Values.properties.webProxyHost}}\\r\\nnifi.web.https.port={{.Values.properties.httpsPort}}\\r\\nnifi.web.http.host=\\r\\nnifi.web.http.network.interface.default=\\r\\nnifi.web.https.host={{.Values.properties.webHttpsHost}}\\r\\nnifi.web.https.network.interface.default=\\r\\nnifi.web.jetty.working.directory=./work/jetty\\r\\nnifi.web.jetty.threads=200\\r\\n#\n  nifi.web.proxy.context.path=\\r\\n\\r\\n# security properties #\\r\\nnifi.sensitive.props.key={{.Values.properties.sensitiveKey}}\\r\\nnifi.sensitive.props.key.protected=\\r\\nnifi.sensitive.props.algorithm={{\n  .Values.properties.algorithm }}\\r\\nnifi.sensitive.props.provider=BC\\r\\nnifi.sensitive.props.additional.keys=\\r\\n\\r\\n{{if\n  .Values.auth.clientAuth.enabled}}\\r\\nnifi.security.keystore=/opt/nifi/nifi-current/config-data/certs/keystore.jks\\r\\nnifi.security.keystoreType=jks\\r\\nnifi.security.keystorePasswd={{.Values.auth.SSL.keystorePasswd}}\\r\\nnifi.security.keyPasswd={{.Values.auth.SSL.keystorePasswd}}\\r\\nnifi.security.truststore=/opt/nifi/nifi-current/config-data/certs/truststore.jks\\r\\nnifi.security.truststoreType=jks\\r\\nnifi.security.truststorePasswd={{.Values.auth.SSL.truststorePasswd}}\\r\\nnifi.security.user.authorizer=managed-authorizer\\r\\nnifi.security.user.login.identity.provider=\\r\\n{{else\n  if .Values.auth.ldap.enabled}}\\r\\nnifi.security.keystore=/opt/nifi/nifi-current/conf/{{.Release.Name}}-nifi-0.{{.Release.Name}}-nifi-headless.{{.Release.Namespace}}.svc.cluster.local/keystore.jks\\r\\nnifi.security.keystoreType=jks\\r\\nnifi.security.keystorePasswd={{.Values.auth.SSL.keystorePasswd}}\\r\\nnifi.security.keyPasswd={{.Values.auth.SSL.keystorePasswd}}\\r\\nnifi.security.truststore=/opt/nifi/nifi-current/conf/{{.Release.Name}}-nifi-0.{{.Release.Name}}-nifi-headless.{{.Release.Namespace}}.svc.cluster.local/truststore.jks\\r\\nnifi.security.truststoreType=jks\\r\\nnifi.security.truststorePasswd={{.Values.auth.SSL.truststorePasswd}}\\r\\nproxiedEntity={{.Values.auth.ldap.admin}}\\r\\nnifi.security.user.authorizer=file-provider\\r\\nnifi.security.user.login.identity.provider=ldap-provider\\r\\n{{else\n  if .Values.auth.oidc.enabled}}\\r\\nnifi.security.keystore=/opt/nifi/nifi-current/conf/keystore.p12\\r\\nnifi.security.keystoreType=PKCS12\\r\\nnifi.security.keystorePasswd=\\r\\nnifi.security.keyPasswd=\\r\\nnifi.security.truststore=/opt/nifi/nifi-current/conf/truststore.p12\\r\\nnifi.security.truststoreType=PKCS12\\r\\nnifi.security.truststorePasswd=\\r\\nnifi.security.user.authorizer=managed-authorizer\\r\\n{{\n  else }}\\r\\nnifi.security.keystore=./conf/keystore.p12\\r\\nnifi.security.keystoreType=PKCS12\\r\\nnifi.security.keystorePasswd=\\r\\nnifi.security.keyPasswd=\\r\\nnifi.security.truststore=./conf/truststore.p12\\r\\nnifi.security.truststoreType=PKCS12\\r\\nnifi.security.truststorePasswd=\\r\\nnifi.security.user.login.identity.provider=single-user-provider\\r\\nnifi.security.user.authorizer=single-user-authorizer\\r\\n{{end}}\\r\\nnifi.security.needClientAuth={{.Values.properties.needClientAuth}}\\r\\n\\r\\n{{if\n  .Values.auth.oidc.enabled}}\\r\\n# OpenId Connect SSO Properties #\\r\\nnifi.security.user.oidc.discovery.url={{.Values.auth.oidc.discoveryUrl}}\\r\\nnifi.security.user.oidc.connect.timeout=5\n  secs\\r\\nnifi.security.user.oidc.read.timeout=5 secs\\r\\nnifi.security.user.oidc.client.id={{.Values.auth.oidc.clientId}}\\r\\nnifi.security.user.oidc.client.secret={{.Values.auth.oidc.clientSecret}}\\r\\nnifi.security.user.oidc.preferred.jwsalgorithm={{.Values.auth.oidc.preferredJwsAlgorithm}}\\r\\nnifi.security.user.oidc.claim.identifying.user={{.Values.auth.oidc.claimIdentifyingUser}}\\r\\nnifi.security.user.oidc.additional.scopes={{.Values.auth.oidc.additionalScopes}}\\r\\n{{end}}\\r\\n\\r\\n\\r\\n#\n  Apache Knox SSO Properties #\\r\\nnifi.security.user.knox.url=\\r\\nnifi.security.user.knox.publicKey=\\r\\nnifi.security.user.knox.cookieName=hadoop-jwt\\r\\nnifi.security.user.knox.audiences=\\r\\n\\r\\n#\n  Identity Mapping Properties #\\r\\n# These properties allow normalizing user identities\n  such that identities coming from different identity providers\\r\\n# (certificates,\n  LDAP, Kerberos) can be treated the same internally in NiFi. The following example\n  demonstrates normalizing\\r\\n# DNs from certificates and principals from Kerberos\n  into a common identity string:\\r\\n#\\r\\n# nifi.security.identity.mapping.pattern.dn=^CN=(.*?),\n  OU=(.*?), O=(.*?), L=(.*?), ST=(.*?), C=(.*?)$\\r\\n# nifi.security.identity.mapping.value.dn=$1@$2\\r\\n#\n  nifi.security.identity.mapping.pattern.kerb=^(.*?)/instance@(.*?)$\\r\\n# nifi.security.identity.mapping.value.kerb=$1@$2\\r\\n\\r\\n#\n  cluster common properties (all nodes must have same values) #\\r\\nnifi.cluster.protocol.heartbeat.interval=5\n  sec\\r\\nnifi.cluster.protocol.is.secure=true\\r\\n\\r\\n# cluster node properties (only\n  configure for cluster nodes) #\\r\\nnifi.cluster.is.node={{.Values.properties.isNode}}\\r\\nnifi.cluster.node.address=\\r\\nnifi.cluster.node.protocol.port={{.Values.properties.clusterPort}}\\r\\nnifi.cluster.node.protocol.threads=10\\r\\nnifi.cluster.node.protocol.max.threads=50\\r\\nnifi.cluster.node.event.history.size=25\\r\\nnifi.cluster.node.connection.timeout={{.Values.properties.clusterNodeConnectionTimeout}}\\r\\nnifi.cluster.node.read.timeout={{.Values.properties.clusterNodeReadTimeout}}\\r\\nnifi.cluster.node.max.concurrent.requests=100\\r\\nnifi.cluster.firewall.file=\\r\\nnifi.cluster.flow.election.max.wait.time=1\n  mins\\r\\nnifi.cluster.flow.election.max.candidates=\\r\\n\\r\\n# zookeeper properties,\n  used for cluster management #\\r\\nnifi.zookeeper.client.ensembleTracker={{.Values.properties.zkClientEnsembleTraker}}\\r\\nnifi.zookeeper.connect.string=\\r\\nnifi.zookeeper.connect.timeout={{.Values.properties.zookeeperConnectTimeout}}\\r\\nnifi.zookeeper.session.timeout={{.Values.properties.zookeeperSessionTimeout}}\\r\\nnifi.zookeeper.root.node=/nifi\\r\\n\\r\\n#\n  Zookeeper properties for the authentication scheme used when creating acls on znodes\n  used for cluster management\\r\\n# Values supported for nifi.zookeeper.auth.type are\n  \\\"default\\\", which will apply world/anyone rights on znodes\\r\\n# and \\\"sasl\\\" which\n  will give rights to the sasl/kerberos identity used to authenticate the nifi node\\r\\n#\n  The identity is determined using the value in nifi.kerberos.service.principal and\n  the removeHostFromPrincipal\\r\\n# and removeRealmFromPrincipal values (which should\n  align with the kerberos.removeHostFromPrincipal and kerberos.removeRealmFromPrincipal\\r\\n#\n  values configured on the zookeeper server).\\r\\nnifi.zookeeper.auth.type=\\r\\nnifi.zookeeper.kerberos.removeHostFromPrincipal=\\r\\nnifi.zookeeper.kerberos.removeRealmFromPrincipal=\\r\\n\\r\\n#\n  kerberos #\\r\\nnifi.kerberos.krb5.file=\\r\\n\\r\\n# kerberos service principal #\\r\\nnifi.kerberos.service.principal=\\r\\nnifi.kerberos.service.keytab.location=\\r\\n\\r\\n#\n  kerberos spnego principal #\\r\\nnifi.kerberos.spnego.principal=\\r\\nnifi.kerberos.spnego.keytab.location=\\r\\nnifi.kerberos.spnego.authentication.expiration=12\n  hours\\r\\n\\r\\n# external properties files for variable registry\\r\\n# supports a comma\n  delimited list of file locations\\r\\nnifi.variable.registry.properties=\\r\\n\"\nstate-management.xml: \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" standalone=\\\"yes\\\"?>\\r\\n<stateManagement>\\r\\n\n  \\   <local-provider>\\r\\n        <id>local-provider</id>\\r\\n        <class>org.apache.nifi.controller.state.providers.local.WriteAheadLocalStateProvider</class>\\r\\n\n  \\       <property name=\\\"Directory\\\">./state/local</property>\\r\\n        <property\n  name=\\\"Always Sync\\\">false</property>\\r\\n        <property name=\\\"Partitions\\\">16</property>\\r\\n\n  \\       <property name=\\\"Checkpoint Interval\\\">2 mins</property>\\r\\n    </local-provider>\\r\\n\n  \\   <cluster-provider>\\r\\n        <id>zk-provider</id>\\r\\n        <class>org.apache.nifi.controller.state.providers.zookeeper.ZooKeeperStateProvider</class>\\r\\n\n  \\       <property name=\\\"Connect String\\\">{{ template \\\"zookeeper.url\\\" . }}</property>\\r\\n\n  \\       <property name=\\\"Root Node\\\">/nifi</property>\\r\\n        <property name=\\\"Session\n  Timeout\\\">10 seconds</property>\\r\\n        <property name=\\\"Access Control\\\">Open</property>\\r\\n\n  \\   </cluster-provider>\\r\\n</stateManagement>\\r\\n\"\nzookeeper.properties: \"#\\r\\n#\\r\\n# Licensed to the Apache Software Foundation (ASF)\n  under one\\r\\n# or more contributor license agreements.  See the NOTICE file\\r\\n#\n  distributed with this work for additional information\\r\\n# regarding copyright ownership.\n  \\ The ASF licenses this file\\r\\n# to you under the Apache License, Version 2.0 (the\\r\\n#\n  \\\"License\\\"); you may not use this file except in compliance\\r\\n# with the License.\n  \\ You may obtain a copy of the License at\\r\\n#\\r\\n#   http://www.apache.org/licenses/LICENSE-2.0\\r\\n#\\r\\n#\n  Unless required by applicable law or agreed to in writing,\\r\\n# software distributed\n  under the License is distributed on an\\r\\n# \\\"AS IS\\\" BASIS, WITHOUT WARRANTIES\n  OR CONDITIONS OF ANY\\r\\n# KIND, either express or implied.  See the License for\n  the\\r\\n# specific language governing permissions and limitations\\r\\n# under the\n  License.\\r\\n#\\r\\n#\\r\\n#\\r\\n\\r\\ninitLimit=10\\r\\nautopurge.purgeInterval=24\\r\\nsyncLimit=5\\r\\ntickTime=2000\\r\\ndataDir=./state/zookeeper\\r\\nautopurge.snapRetainCount=30\\r\\n\\r\\n#\\r\\n#\n  Specifies the servers that are part of this zookeeper ensemble. For\\r\\n# every NiFi\n  instance running an embedded zookeeper, there needs to be\\r\\n# a server entry below.\n  For instance:\\r\\n#\\r\\n# server.1=nifi-node1-hostname:2888:3888;2181\\r\\n# server.2=nifi-node2-hostname:2888:3888;2181\\r\\n#\n  server.3=nifi-node3-hostname:2888:3888;2181\\r\\n#\\r\\n# The index of the server corresponds\n  to the myid file that gets created\\r\\n# in the dataDir of each node running an embedded\n  zookeeper. See the\\r\\n# administration guide for more details.\\r\\n#\\r\\n\\r\\nserver.1=\\r\\n\\r\\n\"": template: gotpl:2: unexpected "\\" in operand  Use --debug flag to render out invalid YAML  |
+
+### SigNoz/charts
+
+#### `D:\helm_clones_artifacthub\SigNoz__charts\charts\signoz-otel-gateway`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\SigNoz__charts\charts\signoz-otel-gateway` | Error: parse error at (signoz-otel-gateway/templates/deployment.yaml:13): bad character U+002D '-'  Use --debug flag to render out invalid YAML  |
 
 ### EugenMayer/helm-charts
 
@@ -1233,13 +1326,16 @@
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\abahmed__kwatch\deploy\chart` | Error: values don't meet the specifications of the schema(s) in the following chart(s): kwatch: - at '': missing property 'config'   |
 
-### CrowdStrike/falcon-helm
+### chatwoot/charts
 
-#### `D:\helm_clones_artifacthub\CrowdStrike__falcon-helm\helm-charts\falcon-image-analyzer`
+#### `D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot`
 
 | Values Files | Command | Error |
 |--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\CrowdStrike__falcon-helm\helm-charts\falcon-image-analyzer` | Error: values don't meet the specifications of the schema(s) in the following chart(s): falcon-image-analyzer: - at '': 'allOf' failed   - at '/crowdstrikeConfig': missing property 'cid'   - at '/crowdstrikeConfig': 'allOf' failed     - at '/crowdstrikeConfig': validation failed       - at '/crowdstrikeConfig/clientSecret': '' does not match pattern '^[a-zA-Z0-9]{40}$'       - at '/crowdstrikeConfig/clientID': '' does not match pattern '^[a-zA-Z0-9]{32}$' - at '': 'oneOf' failed, none matched   - at '/deployment/enabled': value must be true   - at '/daemonset/enabled': value must be true   |
+| D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml, D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml | `helm template test D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml` | Error: execution error at (chatwoot/charts/redis/templates/NOTES.txt:182:4):  VALUES VALIDATION:  redis: architecture     Using redis sentinel on standalone mode is not supported.     To deploy redis sentinel, please select the "replication" mode     (--set "architecture=replication,sentinel.enabled=true")  Use --debug flag to render out invalid YAML  |
+| D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml, D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml, D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.v4-upgrade.yaml | `helm template test D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.ci.yaml -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.sentinel-test.yaml -f D:\helm_clones_artifacthub\chatwoot__charts\charts\chatwoot\values.v4-upgrade.yaml` | Error: execution error at (chatwoot/charts/redis/templates/NOTES.txt:182:4):  VALUES VALIDATION:  redis: architecture     Using redis sentinel on standalone mode is not supported.     To deploy redis sentinel, please select the "replication" mode     (--set "architecture=replication,sentinel.enabled=true")  Use --debug flag to render out invalid YAML  |
+
+### CrowdStrike/falcon-helm
 
 #### `D:\helm_clones_artifacthub\CrowdStrike__falcon-helm\helm-charts\falcon-integration-gateway`
 
@@ -1247,23 +1343,11 @@
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\CrowdStrike__falcon-helm\helm-charts\falcon-integration-gateway` | Error: falcon-integration-gateway/templates/secret.yaml:11:50   executing "falcon-integration-gateway/templates/secret.yaml" at <b64enc>:     invalid value; expected string  Use --debug flag to render out invalid YAML  |
 
-#### `D:\helm_clones_artifacthub\CrowdStrike__falcon-helm\helm-charts\falcon-kac`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\CrowdStrike__falcon-helm\helm-charts\falcon-kac` | Error: execution error at (falcon-kac/templates/deployment_webhook.yaml:89:31): Must configure one of falcon.cid or falconSecret with FALCONCTL_OPT_CID data  Use --debug flag to render out invalid YAML  |
-
 #### `D:\helm_clones_artifacthub\CrowdStrike__falcon-helm\helm-charts\falcon-platform`
 
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\CrowdStrike__falcon-helm\helm-charts\falcon-platform` | Error: values don't meet the specifications of the schema(s) in the following chart(s): falcon-image-analyzer: - at '': 'allOf' failed   - at '/crowdstrikeConfig': missing property 'cid'   - at '/crowdstrikeConfig': 'allOf' failed     - at '/crowdstrikeConfig': validation failed       - at '/crowdstrikeConfig/clientID': '' does not match pattern '^[a-zA-Z0-9]{32}$'       - at '/crowdstrikeConfig/clientSecret': '' does not match pattern '^[a-zA-Z0-9]{40}$' - at '': 'oneOf' failed, none matched   - at '/deployment/enabled': value must be true   - at '/daemonset/enabled': value must be true   |
-
-#### `D:\helm_clones_artifacthub\CrowdStrike__falcon-helm\helm-charts\falcon-sensor`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\CrowdStrike__falcon-helm\helm-charts\falcon-sensor` | Error: execution error at (falcon-sensor/templates/daemonset.yaml:49:31): Must configure one of falcon.cid or falconSecret with FALCONCTL_OPT_CID data  Use --debug flag to render out invalid YAML  |
 
 ### neo4j/helm-charts
 
@@ -1296,6 +1380,22 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\neo4j__helm-charts\neo4j-persistent-volume` | Error: execution error at (neo4j-persistent-volume/templates/_helpers.tpl:2:5): neo4j.name is required  Use --debug flag to render out invalid YAML  |
+
+### Flagsmith/flagsmith-charts
+
+#### `D:\helm_clones_artifacthub\Flagsmith__flagsmith-charts\charts\flagsmith`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| D:\helm_clones_artifacthub\Flagsmith__flagsmith-charts\charts\flagsmith\openshift-values.yaml | `helm template test D:\helm_clones_artifacthub\Flagsmith__flagsmith-charts\charts\flagsmith -f D:\helm_clones_artifacthub\Flagsmith__flagsmith-charts\charts\flagsmith\openshift-values.yaml` | Error: flagsmith/templates/routes-frontend.yaml:1:41   executing "flagsmith/templates/routes-frontend.yaml" at <.Values.openshift.route>:     can't evaluate field route in type interface {}  Use --debug flag to render out invalid YAML  |
+
+### aws/karpenter
+
+#### `D:\helm_clones_artifacthub\aws__karpenter\charts\karpenter`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\aws__karpenter\charts\karpenter` | Error: execution error at (karpenter/templates/deployment.yaml:151:25): Chart cannot be installed without a valid settings.clusterName!  Use --debug flag to render out invalid YAML  |
 
 ### Microsoft/mssql-docker
 
@@ -1342,60 +1442,6 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spiffe-step-ssh` | Error: execution error at (spiffe-step-ssh/templates/step-config.yaml:29:6): You must set trustDomain  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spiffe-csi-driver`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spiffe-csi-driver` | Error: spiffe-csi-driver/templates/daemonset.yaml:58:10   executing "spiffe-csi-driver/templates/daemonset.yaml" at <include "spire-lib.default_node_priority_class_name" .>:     error calling include: template: no template "spire-lib.default_node_priority_class_name" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spiffe-oidc-discovery-provider`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spiffe-oidc-discovery-provider` | Error: spiffe-oidc-discovery-provider/templates/tests/test-keys.yaml:21:8   executing "spiffe-oidc-discovery-provider/templates/tests/test-keys.yaml" at <include "spire-lib.podsecuritycontext" .>:     error calling include: template: no template "spire-lib.podsecuritycontext" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spike-keeper`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spike-keeper` | Error: spike-keeper/templates/statefulset.yaml:28:12   executing "spike-keeper/templates/statefulset.yaml" at <include "spire-lib.podsecuritycontext" .>:     error calling include: template: no template "spire-lib.podsecuritycontext" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spike-nexus`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spike-nexus` | Error: spike-nexus/templates/statefulset.yaml:27:12   executing "spike-nexus/templates/statefulset.yaml" at <include "spire-lib.podsecuritycontext" .>:     error calling include: template: no template "spire-lib.podsecuritycontext" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spike-pilot`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spike-pilot` | Error: spike-pilot/templates/deployment.yaml:27:12   executing "spike-pilot/templates/deployment.yaml" at <include "spire-lib.podsecuritycontext" .>:     error calling include: template: no template "spire-lib.podsecuritycontext" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spire-agent`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spire-agent` | Error: spire-agent/templates/daemonset.yaml:1:19   executing "spire-agent/templates/daemonset.yaml" at <include (print $.Template.BasePath "/configmap.yaml") .>:     error calling include: spire-agent/templates/configmap.yaml:211:4   executing "spire-agent/templates/configmap.yaml" at <include "spire-agent.check-config-values" .>:     error calling include: spire-agent/templates/configmap.yaml:2:81   executing "spire-agent.check-config-values" at <include "spire-lib.cluster-name" .>:     error calling include: template: no template "spire-lib.cluster-name" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spire-server`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\spire-server` | Error: spire-server/templates/tests/test-connection.yaml:15:8   executing "spire-server/templates/tests/test-connection.yaml" at <include "spire-lib.podsecuritycontext" .>:     error calling include: template: no template "spire-lib.podsecuritycontext" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\tornjak-frontend`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire\charts\tornjak-frontend` | Error: tornjak-frontend/templates/tests/test-tornjak-connection.yaml:12:8   executing "tornjak-frontend/templates/tests/test-tornjak-connection.yaml" at <include "spire-lib.podsecuritycontext" .>:     error calling include: template: no template "spire-lib.podsecuritycontext" associated with template "gotpl"  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire-lib`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\spiffe__helm-charts-hardened\charts\spire-lib` | Error: library charts are not installable  |
 
 ### mysql/mysql-operator
 
@@ -1500,6 +1546,22 @@
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\cloudfoundry__korifi\helm\korifi` | Error: values don't meet the specifications of the schema(s) in the following chart(s): korifi: - at '': missing properties 'adminUserName', 'defaultAppDomainName' - at '/containerRepositoryPrefix': '' does not match pattern '^[a-z0-9]+([._-][a-z0-9]+)*(:[0-9]+)?(/[a-z0-9]+([._-][a-z0-9]+)*)*/?$' - at '/networking': missing property 'gatewayClass'   |
 
+### snowplow-devops/helm-charts
+
+#### `D:\helm_clones_artifacthub\snowplow-devops__helm-charts\charts\common`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\snowplow-devops__helm-charts\charts\common` | Error: library charts are not installable  |
+
+### enix/helm-charts
+
+#### `D:\helm_clones_artifacthub\enix__helm-charts\charts\swift-exporter`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\enix__helm-charts\charts\swift-exporter` | Error: parse error at (swift-exporter/templates/_helpers.tpl:59): unexpected EOF  Use --debug flag to render out invalid YAML  |
+
 ### stevehipwell/helm-charts
 
 #### `D:\helm_clones_artifacthub\stevehipwell__helm-charts\charts\kube-proxy`
@@ -1534,18 +1596,6 @@
 
 ### sysdiglabs/charts
 
-#### `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\admission-controller`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\sysdiglabs__charts\charts\admission-controller` | Error: execution error at (admission-controller/templates/webhook/deployment.yaml:19:31): A valid cluster name is required  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\agent`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\sysdiglabs__charts\charts\agent` | Error: execution error at (agent/templates/secrets.yaml:12:17): A valid accessKey is required  Use --debug flag to render out invalid YAML  |
-
 #### `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cloud-bench`
 
 | Values Files | Command | Error |
@@ -1563,42 +1613,6 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cloud-scanning` | Error: execution error at (cloud-scanning/templates/secret.yaml:14:23): value 'sysdig.secureAPIToken' is required, but is not set  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cluster-scanner`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cluster-scanner` | Error: execution error at (cluster-scanner/templates/secret.yaml:11:24): please provide a sysdig access key  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cluster-shield`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\sysdiglabs__charts\charts\cluster-shield` | Error: values don't meet the specifications of the schema(s) in the following chart(s): cluster-shield: - at '': 'allOf' failed   - at '': 'anyOf' failed     - at '/cluster_shield/sysdig_endpoint': missing property 'access_key'     - at '/global/sysdig': missing property 'accessKeySecret'     - at '/global/sysdig': missing property 'accessKey'   |
-
-#### `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\common`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\sysdiglabs__charts\charts\common` | Error: library charts are not installable  |
-
-#### `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\kspm-collector`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\sysdiglabs__charts\charts\kspm-collector` | Error: execution error at (kspm-collector/templates/secret.yaml:12:17): A valid accessKey is required  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\node-analyzer`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\sysdiglabs__charts\charts\node-analyzer` | Error: execution error at (node-analyzer/templates/secrets.yaml:13:17): A valid accessKey is required  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\rapid-response`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\sysdiglabs__charts\charts\rapid-response` | Error: execution error at (rapid-response/templates/secrets.yaml:11:16): A valid accessKey is required  Use --debug flag to render out invalid YAML  |
 
 #### `D:\helm_clones_artifacthub\sysdiglabs__charts\charts\registry-scanner`
 
@@ -1629,178 +1643,6 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\sysdiglabs__charts\charts\sysdig-mcm-navmenu` | Error: execution error at (sysdig-mcm-navmenu/templates/configmap.yaml:6:99): value 'companyName' is mandatory, but it is not set  Use --debug flag to render out invalid YAML  |
-
-### GluuFederation/cloud-native-edition
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\casa`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\casa` | Error: casa/templates/service.yaml:19:16   executing "casa/templates/service.yaml" at <.Values.global.alb.ingress.enabled>:     nil pointer evaluating interface {}.alb  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\config`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\config` | Error: config/templates/user-custom-envs.yaml:1:13   executing "config/templates/user-custom-envs.yaml" at <.Values.global.usrEnvs.secret>:     nil pointer evaluating interface {}.usrEnvs  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\cr-rotate`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\cr-rotate` | Error: cr-rotate/templates/daemonset.yaml:68:25   executing "cr-rotate/templates/daemonset.yaml" at <.Values.global.usrEnvs.secret>:     nil pointer evaluating interface {}.usrEnvs  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\fido2`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\fido2` | Error: fido2/templates/service.yml:19:16   executing "fido2/templates/service.yml" at <.Values.global.alb.ingress.enabled>:     nil pointer evaluating interface {}.alb  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\gluu-alb-ingress`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\gluu-alb-ingress` | Error: gluu-alb-ingress/templates/ingress.yaml:1:13   executing "gluu-alb-ingress/templates/ingress.yaml" at <.Values.global.alb.ingress.enabled>:     nil pointer evaluating interface {}.alb  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\gluu-istio-ingress`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\gluu-istio-ingress` | Error: gluu-istio-ingress/templates/gluu-gateway.yaml:1:18   executing "gluu-istio-ingress/templates/gluu-gateway.yaml" at <.Values.global.istio.gateways>:     nil pointer evaluating interface {}.istio  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\jackrabbit`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\jackrabbit` | Error: jackrabbit/templates/storageclass.yaml:23:21   executing "jackrabbit/templates/storageclass.yaml" at <.Values.global.storageClass.provisioner>:     nil pointer evaluating interface {}.storageClass  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\opendj`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\opendj` | Error: opendj/templates/storageclass.yaml:1:21   executing "opendj/templates/storageclass.yaml" at <.Values.global.gluuPersistenceType>:     nil pointer evaluating interface {}.gluuPersistenceType  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxauth`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxauth` | Error: oxauth/templates/service.yml:19:16   executing "oxauth/templates/service.yml" at <.Values.global.alb.ingress.enabled>:     nil pointer evaluating interface {}.alb  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxauth-key-rotation`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxauth-key-rotation` | Error: oxauth-key-rotation/templates/service.yaml:1:14   executing "oxauth-key-rotation/templates/service.yaml" at <.Values.global.istio.enabled>:     nil pointer evaluating interface {}.istio  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxd-server`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxd-server` | Error: oxd-server/templates/oxd-server-pdb.yaml:1:13   executing "oxd-server/templates/oxd-server-pdb.yaml" at <.Values.pdb.enabled>:     nil pointer evaluating interface {}.enabled  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxpassport`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxpassport` | Error: oxpassport/templates/service.yaml:18:16   executing "oxpassport/templates/service.yaml" at <.Values.global.alb.ingress.enabled>:     nil pointer evaluating interface {}.alb  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxshibboleth`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxshibboleth` | Error: oxshibboleth/templates/statefulset.yaml:31:20   executing "oxshibboleth/templates/statefulset.yaml" at <.Values.global.istio.ingress>:     nil pointer evaluating interface {}.istio  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxtrust`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\oxtrust` | Error: oxtrust/templates/statefulset.yml:29:20   executing "oxtrust/templates/statefulset.yml" at <.Values.global.istio.ingress>:     nil pointer evaluating interface {}.istio  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\persistence`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\persistence` | Error: persistence/templates/service.yaml:1:14   executing "persistence/templates/service.yaml" at <.Values.global.istio.enabled>:     nil pointer evaluating interface {}.istio  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\scim`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\GluuFederation__cloud-native-edition\pygluu\kubernetes\templates\helm\gluu\charts\scim` | Error: scim/templates/service.yml:19:16   executing "scim/templates/service.yml" at <.Values.global.alb.ingress.enabled>:     nil pointer evaluating interface {}.alb  Use --debug flag to render out invalid YAML  |
-
-### JanssenProject/jans
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\auth-server`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\auth-server` | Error: template: auth-server/templates/service.yml:4:11: executing "auth-server/templates/service.yml" at <index .Values "global" "auth-server" "authServerServiceName">: error calling index: index of nil pointer  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\auth-server-key-rotation`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\auth-server-key-rotation` | Error: auth-server-key-rotation/templates/service.yaml:1:14   executing "auth-server-key-rotation/templates/service.yaml" at <.Values.global.istio.enabled>:     nil pointer evaluating interface {}.istio  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\casa`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\casa` | Error: casa/templates/service.yaml:4:18   executing "casa/templates/service.yaml" at <.Values.global.casa.casaServiceName>:     nil pointer evaluating interface {}.casa  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\cleanup`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\cleanup` | Error: cleanup/templates/service.yaml:1:14   executing "cleanup/templates/service.yaml" at <.Values.global.istio.enabled>:     nil pointer evaluating interface {}.istio  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\cn-istio-ingress`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\cn-istio-ingress` | Error: cn-istio-ingress/templates/gateway.yaml:1:18   executing "cn-istio-ingress/templates/gateway.yaml" at <.Values.global.istio.gateways>:     nil pointer evaluating interface {}.istio  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\config`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\config` | Error: config/templates/user-custom-envs.yaml:1:13   executing "config/templates/user-custom-envs.yaml" at <.Values.global.usrEnvs.secret>:     nil pointer evaluating interface {}.usrEnvs  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\config-api`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\config-api` | Error: template: config-api/templates/service.yaml:5:11: executing "config-api/templates/service.yaml" at <index .Values "global" "config-api" "configApiServerServiceName">: error calling index: index of nil pointer  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\fido2`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\fido2` | Error: fido2/templates/service.yml:4:18   executing "fido2/templates/service.yml" at <.Values.global.fido2.fido2ServiceName>:     nil pointer evaluating interface {}.fido2  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\gateway-api`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\gateway-api` | Error: template: gateway-api/templates/route.yaml:6:16: executing "gateway-api/templates/route.yaml" at <index .Values.global "auth-server" "authServerServiceName">: error calling index: index of untyped nil  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\nginx-ingress`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\nginx-ingress` | Error: template: nginx-ingress/templates/ingress.yaml:1:6: executing "nginx-ingress/templates/ingress.yaml" at <index .Values "global" "auth-server" "ingress" "openidConfigEnabled">: error calling index: index of nil pointer  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\persistence`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\persistence` | Error: persistence/templates/service.yaml:1:14   executing "persistence/templates/service.yaml" at <.Values.global.istio.enabled>:     nil pointer evaluating interface {}.istio  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\scim`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\JanssenProject__jans\charts\janssen\charts\scim` | Error: scim/templates/service.yml:4:18   executing "scim/templates/service.yml" at <.Values.global.scim.scimServiceName>:     nil pointer evaluating interface {}.scim  Use --debug flag to render out invalid YAML  |
 
 ### keptn/lifecycle-toolkit
 
@@ -1834,6 +1676,14 @@
 | (default) | `helm template test D:\helm_clones_artifacthub\RedisLabs__redis-enterprise-helm\ai\charts\redis-agent-memory` | Error: execution error at (redis-agent-memory/templates/deployment.yaml:1:4): license.existingSecret is required  Use --debug flag to render out invalid YAML  |
 | D:\helm_clones_artifacthub\RedisLabs__redis-enterprise-helm\ai\charts\redis-agent-memory\values-fips.yaml | `helm template test D:\helm_clones_artifacthub\RedisLabs__redis-enterprise-helm\ai\charts\redis-agent-memory -f D:\helm_clones_artifacthub\RedisLabs__redis-enterprise-helm\ai\charts\redis-agent-memory\values-fips.yaml` | Error: execution error at (redis-agent-memory/templates/deployment.yaml:1:4): license.existingSecret is required  Use --debug flag to render out invalid YAML  |
 
+### relution-io/relution-kubernetes
+
+#### `D:\helm_clones_artifacthub\relution-io__relution-kubernetes\charts\relution`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\relution-io__relution-kubernetes\charts\relution` | Error: execution error at (relution/templates/deployment.yaml:2:3): Please provide at least one of the following values: relution.config, relution.environment, relution.secrets  Use --debug flag to render out invalid YAML  |
+
 ### StrangeBeeCorp/helm-charts
 
 #### `D:\helm_clones_artifacthub\StrangeBeeCorp__helm-charts\cortex-charts\cortex`
@@ -1850,23 +1700,11 @@
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.0\src` | Error: chart requires kubeVersion: >= 1.16.0 < 1.22.0 which is incompatible with Kubernetes v1.36.0  Use --debug flag to render out invalid YAML  |
 
-#### `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.0\src\cert-setup`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.0\src\cert-setup` | Error: fortanix-cert-setup/templates/service-account.yaml:5:23   executing "fortanix-cert-setup/templates/service-account.yaml" at <.Values.global.namespace>:     nil pointer evaluating interface {}.namespace  Use --debug flag to render out invalid YAML  |
-
 #### `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.2-4.6\src`
 
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.2-4.6\src` | Error: chart requires kubeVersion: >= 1.16.0 < 1.22.0 which is incompatible with Kubernetes v1.36.0  Use --debug flag to render out invalid YAML  |
-
-#### `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.2-4.6\src\cert-setup`
-
-| Values Files | Command | Error |
-|--------------|---------|-------|
-| (default) | `helm template test D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\partners\fortanix\dsm-secrets-injector-chart\2.2-4.6\src\cert-setup` | Error: fortanix-cert-setup/templates/service-account.yaml:5:23   executing "fortanix-cert-setup/templates/service-account.yaml" at <.Values.global.namespace>:     nil pointer evaluating interface {}.namespace  Use --debug flag to render out invalid YAML  |
 
 #### `D:\helm_clones_artifacthub\rhdh-bot__openshift-helm-charts\charts\redhat\redhat\redhat-httpd-template\0.0.2\src`
 
@@ -1906,6 +1744,38 @@
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\intel__helm-charts\charts\evi-hbase-0.8.3` | Error: execution error at (evi-hbase/templates/pv-zookeeper.yaml:22:16): A valid persistance.zookeeperSize is required!  Use --debug flag to render out invalid YAML  |
 
+### loeken/helm-charts
+
+#### `D:\helm_clones_artifacthub\loeken__helm-charts\charts\jellyseerr`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\loeken__helm-charts\charts\jellyseerr` | Error: values don't meet the specifications of the schema(s) in the following chart(s): jellyseerr: - at '/persistence/config': 'oneOf' failed, subschemas 5, 6 matched   |
+
+#### `D:\helm_clones_artifacthub\loeken__helm-charts\charts\nzbget`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\loeken__helm-charts\charts\nzbget` | Error: values don't meet the specifications of the schema(s) in the following chart(s): nzbget: - at '/persistence/config': 'oneOf' failed, subschemas 5, 6 matched - at '/persistence/downloads': 'oneOf' failed, subschemas 5, 6 matched - at '/persistence/media': 'oneOf' failed, subschemas 5, 6 matched   |
+
+#### `D:\helm_clones_artifacthub\loeken__helm-charts\charts\prowlarr`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\loeken__helm-charts\charts\prowlarr` | Error: values don't meet the specifications of the schema(s) in the following chart(s): prowlarr: - at '/persistence/config': 'oneOf' failed, subschemas 5, 6 matched   |
+
+#### `D:\helm_clones_artifacthub\loeken__helm-charts\charts\sinusbot`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\loeken__helm-charts\charts\sinusbot` | Error: values don't meet the specifications of the schema(s) in the following chart(s): sinusbot: - at '/persistence/sinusbot': 'oneOf' failed, subschemas 5, 6 matched   |
+
+#### `D:\helm_clones_artifacthub\loeken__helm-charts\charts\vaultwarden`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\loeken__helm-charts\charts\vaultwarden` | Error: values don't meet the specifications of the schema(s) in the following chart(s): vaultwarden: - at '/persistence/config': 'oneOf' failed, none matched   - at '/persistence/config': 'allOf' failed     - at '/persistence/config': missing property 'size'   - at '/persistence/config': validation failed     - at '/persistence/config': missing property 'existingClaim'     - at '/persistence/config': additional properties 'accessMode' not allowed   - at '/persistence/config': validation failed     - at '/persistence/config': additional properties 'accessMode' not allowed     - at '/persistence/config': 'oneOf' failed, none matched       - at '/persistence/config': missing property 'name'       - at '/persistence/config': missing property 'identifier'   - at '/persistence/config': validation failed     - at '/persistence/config': additional properties 'accessMode' not allowed     - at '/persistence/config': 'oneOf' failed, none matched       - at '/persistence/config': missing property 'name'       - at '/persistence/config': missing property 'identifier'   - at '/persistence/config': validation failed     - at '/persistence/config': missing properties 'server', 'path'     - at '/persistence/config': additional properties 'accessMode' not allowed   - at '/persistence/config': additional properties 'accessMode' not allowed   - at '/persistence/config': additional properties 'accessMode' not allowed   - at '/persistence/config': validation failed     - at '/persistence/config': missing property 'volumeSpec'     - at '/persistence/config': additional properties 'accessMode' not allowed   |
+
 ### getindata/helm-charts
 
 #### `D:\helm_clones_artifacthub\getindata__helm-charts\charts\kubeflow-pipelines`
@@ -1913,6 +1783,20 @@
 | Values Files | Command | Error |
 |--------------|---------|-------|
 | (default) | `helm template test D:\helm_clones_artifacthub\getindata__helm-charts\charts\kubeflow-pipelines` | Error: execution error at (kubeflow-pipelines/templates/storage-configs.yaml:17:66): Bucket name is required  Use --debug flag to render out invalid YAML  |
+
+### obeone/charts
+
+#### `D:\helm_clones_artifacthub\obeone__charts\charts\fooocus`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\obeone__charts\charts\fooocus` | Error: execution error at (fooocus/templates/common.yaml:1:3): accessMode is required for PVC test-fooocus-data  Use --debug flag to render out invalid YAML  |
+
+#### `D:\helm_clones_artifacthub\obeone__charts\charts\libretranslate`
+
+| Values Files | Command | Error |
+|--------------|---------|-------|
+| (default) | `helm template test D:\helm_clones_artifacthub\obeone__charts\charts\libretranslate` | Error: values don't meet the specifications of the schema(s) in the following chart(s): libretranslate: - at '': validation failed   - at '/persistence/cache': 'oneOf' failed, none matched     - at '/persistence/cache': validation failed       - at '/persistence/cache': missing properties 'accessMode', 'size'       - at '/persistence/cache/type': value must be 'persistentVolumeClaim'       - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed     - at '/persistence/cache': validation failed       - at '/persistence/cache': missing property 'existingClaim'       - at '/persistence/cache/type': value must be 'persistentVolumeClaim'       - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed     - at '/persistence/cache': validation failed       - at '/persistence/cache/type': value must be 'configMap'       - at '/persistence/cache': additional properties 'gpuPath', 'cpuPath' not allowed       - at '/persistence/cache': 'oneOf' failed, none matched         - at '/persistence/cache': missing property 'name'         - at '/persistence/cache': missing property 'identifier'     - at '/persistence/cache': validation failed       - at '/persistence/cache/type': value must be 'secret'       - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed       - at '/persistence/cache': 'oneOf' failed, none matched         - at '/persistence/cache': missing property 'name'         - at '/persistence/cache': missing property 'identifier'     - at '/persistence/cache': validation failed       - at '/persistence/cache': missing properties 'server', 'path'       - at '/persistence/cache/type': value must be 'nfs'       - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed     - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed     - at '/persistence/cache': validation failed       - at '/persistence/cache/type': value must be 'hostPath'       - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed     - at '/persistence/cache': validation failed       - at '/persistence/cache': missing property 'volumeSpec'       - at '/persistence/cache/type': value must be 'custom'       - at '/persistence/cache': additional properties 'cpuPath', 'gpuPath' not allowed   - at '/persistence/db': 'oneOf' failed, none matched     - at '/persistence/db': additional properties 'gpuPath', 'cpuPath' not allowed     - at '/persistence/db': validation failed       - at '/persistence/db': missing property 'existingClaim'       - at '/persistence/db': additional properties 'size', 'accessMode', 'annotations', 'cpuPath', 'gpuPath' not allowed     - at '/persistence/db': validation failed       - at '/persistence/db': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed       - at '/persistence/db': 'oneOf' failed, none matched         - at '/persistence/db': missing property 'name'         - at '/persistence/db': missing property 'identifier'     - at '/persistence/db': validation failed       - at '/persistence/db': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed       - at '/persistence/db': 'oneOf' failed, none matched         - at '/persistence/db': missing property 'name'         - at '/persistence/db': missing property 'identifier'     - at '/persistence/db': validation failed       - at '/persistence/db': missing properties 'server', 'path'       - at '/persistence/db': additional properties 'size', 'accessMode', 'annotations', 'cpuPath', 'gpuPath' not allowed     - at '/persistence/db': additional properties 'annotations', 'cpuPath', 'gpuPath', 'size', 'accessMode' not allowed     - at '/persistence/db': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed     - at '/persistence/db': validation failed       - at '/persistence/db': missing property 'volumeSpec'       - at '/persistence/db': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed   - at '/persistence/files-translate': 'oneOf' failed, none matched     - at '/persistence/files-translate': validation failed       - at '/persistence/files-translate': missing properties 'accessMode', 'size'       - at '/persistence/files-translate/type': value must be 'persistentVolumeClaim'       - at '/persistence/files-translate': additional properties 'path' not allowed     - at '/persistence/files-translate': validation failed       - at '/persistence/files-translate': missing property 'existingClaim'       - at '/persistence/files-translate/type': value must be 'persistentVolumeClaim'       - at '/persistence/files-translate': additional properties 'path' not allowed     - at '/persistence/files-translate': validation failed       - at '/persistence/files-translate/type': value must be 'configMap'       - at '/persistence/files-translate': additional properties 'path' not allowed       - at '/persistence/files-translate': 'oneOf' failed, none matched         - at '/persistence/files-translate': missing property 'name'         - at '/persistence/files-translate': missing property 'identifier'     - at '/persistence/files-translate': validation failed       - at '/persistence/files-translate/type': value must be 'secret'       - at '/persistence/files-translate': additional properties 'path' not allowed       - at '/persistence/files-translate': 'oneOf' failed, none matched         - at '/persistence/files-translate': missing property 'name'         - at '/persistence/files-translate': missing property 'identifier'     - at '/persistence/files-translate': validation failed       - at '/persistence/files-translate': missing property 'server'       - at '/persistence/files-translate/type': value must be 'nfs'     - at '/persistence/files-translate': additional properties 'path' not allowed     - at '/persistence/files-translate': validation failed       - at '/persistence/files-translate/type': value must be 'hostPath'       - at '/persistence/files-translate': additional properties 'path' not allowed     - at '/persistence/files-translate': validation failed       - at '/persistence/files-translate': missing property 'volumeSpec'       - at '/persistence/files-translate/type': value must be 'custom'       - at '/persistence/files-translate': additional properties 'path' not allowed   - at '/persistence/share': 'oneOf' failed, none matched     - at '/persistence/share': additional properties 'cpuPath', 'gpuPath' not allowed     - at '/persistence/share': validation failed       - at '/persistence/share': missing property 'existingClaim'       - at '/persistence/share': additional properties 'size', 'accessMode', 'annotations', 'cpuPath', 'gpuPath' not allowed     - at '/persistence/share': validation failed       - at '/persistence/share': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed       - at '/persistence/share': 'oneOf' failed, none matched         - at '/persistence/share': missing property 'name'         - at '/persistence/share': missing property 'identifier'     - at '/persistence/share': validation failed       - at '/persistence/share': additional properties 'annotations', 'cpuPath', 'gpuPath', 'size', 'accessMode' not allowed       - at '/persistence/share': 'oneOf' failed, none matched         - at '/persistence/share': missing property 'name'         - at '/persistence/share': missing property 'identifier'     - at '/persistence/share': validation failed       - at '/persistence/share': missing properties 'server', 'path'       - at '/persistence/share': additional properties 'gpuPath', 'size', 'accessMode', 'annotations', 'cpuPath' not allowed     - at '/persistence/share': additional properties 'size', 'accessMode', 'annotations', 'cpuPath', 'gpuPath' not allowed     - at '/persistence/share': additional properties 'size', 'accessMode', 'annotations', 'cpuPath', 'gpuPath' not allowed     - at '/persistence/share': validation failed       - at '/persistence/share': missing property 'volumeSpec'       - at '/persistence/share': additional properties 'cpuPath', 'gpuPath', 'size', 'accessMode', 'annotations' not allowed   |
 
 ### icoretech/helm
 

@@ -8422,7 +8422,7 @@
     "repo_url": "https://github.com/IBM/charts",
     "repo_name": "IBM/charts",
     "cloned_dir": "D:\\helm_clones_github\\IBM__charts",
-    "total_charts": 230,
+    "total_charts": 585,
     "total_runs": 3,
     "total_successes": 0,
     "total_failures": 3,
@@ -8514,10 +8514,10 @@
     "repo_url": "https://github.com/mercedes-benz/DnA",
     "repo_name": "mercedes-benz/DnA",
     "cloned_dir": "D:\\helm_clones_github\\mercedes-benz__DnA",
-    "total_charts": 2,
-    "total_runs": 1,
-    "total_successes": 0,
-    "total_failures": 1,
+    "total_charts": 19,
+    "total_runs": 17,
+    "total_successes": 12,
+    "total_failures": 5,
     "total_dep_failures": 1,
     "charts": [
       {
@@ -8531,6 +8531,218 @@
             "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm",
             "success": false,
             "error_message": "Error: helm/charts/storagebe/templates/secret.yaml:9:26\n  executing \"helm/charts/storagebe/templates/secret.yaml\" at \u003cb64enc\u003e:\n    invalid value; expected string\n\nUse --debug flag to render out invalid YAML\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\airflow",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\airflow",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\airflow",
+            "success": false,
+            "error_message": "Error: YAML parse error on airflow/templates/deployment.yaml: error converting YAML to JSON: yaml: line 75: mapping values are not allowed in this context\n\nUse --debug flag to render out invalid YAML\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\backend",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\backend",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\backend",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql\\charts\\common",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql\\charts\\common",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql\\charts\\common",
+            "success": false,
+            "error_message": "Error: library charts are not installable\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\clamav",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\clamav",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\clamav",
+            "success": false,
+            "error_message": "Error: clamav/templates/clamav-deployment.yaml:64:29\n  executing \"clamav/templates/clamav-deployment.yaml\" at \u003c.Values.securityContext.runasUser\u003e:\n    nil pointer evaluating interface {}.runasUser\n\nUse --debug flag to render out invalid YAML\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\dashboard",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\dashboard",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\dashboard",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\frontend",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\frontend",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\frontend",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\i3postgresql",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\i3postgresql",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\i3postgresql",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\microgateway",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\microgateway",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\microgateway",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\minio",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\minio",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\minio",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\minio\\charts\\common",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\minio\\charts\\common",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\minio\\charts\\common",
+            "success": false,
+            "error_message": "Error: library charts are not installable\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\naas",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\naas",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\naas",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\notebooks",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\notebooks",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\notebooks",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\storage-be",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\storage-be",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\storage-be",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\storage-mfe",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\storage-mfe",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\storage-mfe",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\vault",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\vault",
+            "helm_command": "helm template test D:\\helm_clones_github\\mercedes-benz__DnA\\deployment\\kubernetes\\helm\\charts\\vault",
+            "success": true
           }
         ]
       },
@@ -31534,7 +31746,7 @@
     "repo_url": "https://github.com/StatCan/charts",
     "repo_name": "StatCan/charts",
     "cloned_dir": "D:\\helm_clones_github\\StatCan__charts",
-    "total_charts": 56,
+    "total_charts": 59,
     "total_runs": 0,
     "total_successes": 0,
     "total_failures": 0,
@@ -58708,12 +58920,263 @@
     "repo_url": "https://github.com/StackVista/helm-charts",
     "repo_name": "StackVista/helm-charts",
     "cloned_dir": "D:\\helm_clones_github\\StackVista__helm-charts",
-    "total_charts": 26,
-    "total_runs": 13,
-    "total_successes": 11,
-    "total_failures": 2,
+    "total_charts": 43,
+    "total_runs": 34,
+    "total_successes": 25,
+    "total_failures": 9,
     "total_dep_failures": 1,
     "charts": [
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\anomaly-detection",
+        "total_runs": 2,
+        "successes": 1,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\anomaly-detection",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\anomaly-detection",
+            "success": false,
+            "error_message": "Error: anomaly-detection/templates/anomaly-detection-worker.yaml:83:16\n  executing \"anomaly-detection/templates/anomaly-detection-worker.yaml\" at \u003cinclude \"anomaly-detection.stackstate.instance\" .\u003e:\n    error calling include:\nanomaly-detection/templates/_helpers.tpl:35:14\n  executing \"anomaly-detection.stackstate.instance\" at \u003c.Values.stackstate.instance\u003e:\n    wrong type for value; expected string; got interface {}\n\nUse --debug flag to render out invalid YAML\n"
+          },
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\anomaly-detection",
+            "values_files": [
+              "D:\\helm_clones_github\\StackVista__helm-charts\\local\\anomaly-detection\\linter_values.yaml"
+            ],
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\anomaly-detection -f D:\\helm_clones_github\\StackVista__helm-charts\\local\\anomaly-detection\\linter_values.yaml",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\clickhouse",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\clickhouse",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\clickhouse",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\clickhouse\\charts\\common",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\clickhouse\\charts\\common",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\clickhouse\\charts\\common",
+            "success": false,
+            "error_message": "Error: library charts are not installable\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\common",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\common",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\common",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\elasticsearch",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\elasticsearch",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\elasticsearch",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\hbase",
+        "total_runs": 2,
+        "successes": 1,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\hbase",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\hbase",
+            "success": true
+          },
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\hbase",
+            "values_files": [
+              "D:\\helm_clones_github\\StackVista__helm-charts\\local\\hbase\\linter_values.yaml"
+            ],
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\hbase -f D:\\helm_clones_github\\StackVista__helm-charts\\local\\hbase\\linter_values.yaml",
+            "success": false,
+            "error_message": "Error: failed to parse D:\\helm_clones_github\\StackVista__helm-charts\\local\\hbase\\linter_values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\kafka",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\kafka",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\kafka",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\kafka\\charts\\common",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\kafka\\charts\\common",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\kafka\\charts\\common",
+            "success": false,
+            "error_message": "Error: library charts are not installable\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\kafkaup-operator",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\kafkaup-operator",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\kafkaup-operator",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\kubernetes-rbac-agent",
+        "total_runs": 2,
+        "successes": 1,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\kubernetes-rbac-agent",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\kubernetes-rbac-agent",
+            "success": false,
+            "error_message": "Error: execution error at (kubernetes-rbac-agent/templates/url-configmap.yaml:21:4): Url not defined, either provide a SUSE Observability platform url through url.value\n\nUse --debug flag to render out invalid YAML\n"
+          },
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\kubernetes-rbac-agent",
+            "values_files": [
+              "D:\\helm_clones_github\\StackVista__helm-charts\\local\\kubernetes-rbac-agent\\linter_values.yaml"
+            ],
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\kubernetes-rbac-agent -f D:\\helm_clones_github\\StackVista__helm-charts\\local\\kubernetes-rbac-agent\\linter_values.yaml",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\opentelemetry-collector",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\opentelemetry-collector",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\opentelemetry-collector",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\prometheus-elasticsearch-exporter",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\prometheus-elasticsearch-exporter",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\prometheus-elasticsearch-exporter",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\pull-secret",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\pull-secret",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\pull-secret",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\suse-observability-sizing",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\suse-observability-sizing",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\suse-observability-sizing",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\victoria-metrics-single",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\victoria-metrics-single",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\victoria-metrics-single",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\zookeeper",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\zookeeper",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\zookeeper",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\zookeeper\\charts\\common",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\local\\zookeeper\\charts\\common",
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\local\\zookeeper\\charts\\common",
+            "success": false,
+            "error_message": "Error: library charts are not installable\n"
+          }
+        ]
+      },
       {
         "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\stable\\artifactory-cleaner",
         "total_runs": 2,
@@ -58803,15 +59266,24 @@
       },
       {
         "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\stable\\gitlab-steward",
-        "total_runs": 1,
+        "total_runs": 2,
         "successes": 0,
-        "failures": 1,
+        "failures": 2,
         "runs": [
           {
             "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\stable\\gitlab-steward",
             "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\stable\\gitlab-steward",
             "success": false,
             "error_message": "Error: gitlab-steward/templates/sts-secret.yaml:10:65\n  executing \"gitlab-steward/templates/sts-secret.yaml\" at \u003cb64enc\u003e:\n    invalid value; expected string\n\nUse --debug flag to render out invalid YAML\n"
+          },
+          {
+            "chart_path": "D:\\helm_clones_github\\StackVista__helm-charts\\stable\\gitlab-steward",
+            "values_files": [
+              "D:\\helm_clones_github\\StackVista__helm-charts\\stable\\gitlab-steward\\linter_values.yaml"
+            ],
+            "helm_command": "helm template test D:\\helm_clones_github\\StackVista__helm-charts\\stable\\gitlab-steward -f D:\\helm_clones_github\\StackVista__helm-charts\\stable\\gitlab-steward\\linter_values.yaml",
+            "success": false,
+            "error_message": "Error: failed to parse D:\\helm_clones_github\\StackVista__helm-charts\\stable\\gitlab-steward\\linter_values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}\n"
           }
         ]
       },
@@ -80552,10 +81024,10 @@
     "repo_url": "https://github.com/DenisMarta/prodject1",
     "repo_name": "DenisMarta/prodject1",
     "cloned_dir": "D:\\helm_clones_github\\DenisMarta__prodject1",
-    "total_charts": 2,
-    "total_runs": 1,
-    "total_successes": 0,
-    "total_failures": 1,
+    "total_charts": 19,
+    "total_runs": 17,
+    "total_successes": 12,
+    "total_failures": 5,
     "total_dep_failures": 1,
     "charts": [
       {
@@ -80569,6 +81041,218 @@
             "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm",
             "success": false,
             "error_message": "Error: helm/charts/storagebe/templates/secret.yaml:9:26\n  executing \"helm/charts/storagebe/templates/secret.yaml\" at \u003cb64enc\u003e:\n    invalid value; expected string\n\nUse --debug flag to render out invalid YAML\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\airflow",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\airflow",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\airflow",
+            "success": false,
+            "error_message": "Error: YAML parse error on airflow/templates/deployment.yaml: error converting YAML to JSON: yaml: line 75: mapping values are not allowed in this context\n\nUse --debug flag to render out invalid YAML\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\backend",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\backend",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\backend",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql\\charts\\common",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql\\charts\\common",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\bitnami-postgresql\\charts\\common",
+            "success": false,
+            "error_message": "Error: library charts are not installable\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\clamav",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\clamav",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\clamav",
+            "success": false,
+            "error_message": "Error: clamav/templates/clamav-deployment.yaml:64:29\n  executing \"clamav/templates/clamav-deployment.yaml\" at \u003c.Values.securityContext.runasUser\u003e:\n    nil pointer evaluating interface {}.runasUser\n\nUse --debug flag to render out invalid YAML\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\dashboard",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\dashboard",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\dashboard",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\frontend",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\frontend",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\frontend",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\i3postgresql",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\i3postgresql",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\i3postgresql",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\microgateway",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\microgateway",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\microgateway",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\minio",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\minio",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\minio",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\minio\\charts\\common",
+        "total_runs": 1,
+        "successes": 0,
+        "failures": 1,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\minio\\charts\\common",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\minio\\charts\\common",
+            "success": false,
+            "error_message": "Error: library charts are not installable\n"
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\naas",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\naas",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\naas",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\notebooks",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\notebooks",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\notebooks",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\storage-be",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\storage-be",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\storage-be",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\storage-mfe",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\storage-mfe",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\storage-mfe",
+            "success": true
+          }
+        ]
+      },
+      {
+        "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\vault",
+        "total_runs": 1,
+        "successes": 1,
+        "failures": 0,
+        "runs": [
+          {
+            "chart_path": "D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\vault",
+            "helm_command": "helm template test D:\\helm_clones_github\\DenisMarta__prodject1\\deployment\\kubernetes\\helm\\charts\\vault",
+            "success": true
           }
         ]
       },
@@ -91498,7 +92182,7 @@
     "repo_url": "https://github.com/LeeLisker/helm",
     "repo_name": "LeeLisker/helm",
     "cloned_dir": "D:\\helm_clones_github\\LeeLisker__helm",
-    "total_charts": 230,
+    "total_charts": 575,
     "total_runs": 3,
     "total_successes": 0,
     "total_failures": 3,

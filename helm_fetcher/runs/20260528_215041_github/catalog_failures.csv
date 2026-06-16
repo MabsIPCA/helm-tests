@@ -931,20 +931,6 @@ https://github.com/mercedes-benz/DnA,mercedes-benz/DnA,D:\helm_clones_github\mer
 
 Use --debug flag to render out invalid YAML
 "
-https://github.com/mercedes-benz/DnA,mercedes-benz/DnA,D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\airflow,,helm template test D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\airflow,"Error: YAML parse error on airflow/templates/deployment.yaml: error converting YAML to JSON: yaml: line 75: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-"
-https://github.com/mercedes-benz/DnA,mercedes-benz/DnA,D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\bitnami-postgresql\charts\common,,helm template test D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\bitnami-postgresql\charts\common,"Error: library charts are not installable
-"
-https://github.com/mercedes-benz/DnA,mercedes-benz/DnA,D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\clamav,,helm template test D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\clamav,"Error: clamav/templates/clamav-deployment.yaml:64:29
-  executing ""clamav/templates/clamav-deployment.yaml"" at <.Values.securityContext.runasUser>:
-    nil pointer evaluating interface {}.runasUser
-
-Use --debug flag to render out invalid YAML
-"
-https://github.com/mercedes-benz/DnA,mercedes-benz/DnA,D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\minio\charts\common,,helm template test D:\helm_clones_github\mercedes-benz__DnA\deployment\kubernetes\helm\charts\minio\charts\common,"Error: library charts are not installable
-"
 https://github.com/llm-d/llm-d-router,llm-d/llm-d-router,D:\helm_clones_github\llm-d__llm-d-router\config\charts\llm-d-router-gateway,,helm template test D:\helm_clones_github\llm-d__llm-d-router\config\charts\llm-d-router-gateway,"Error: execution error at (llm-d-router-gateway/templates/inferenceextension.yaml:8:3): .Values.router.modelServers.matchLabels is required
 
 Use --debug flag to render out invalid YAML
@@ -27583,27 +27569,6 @@ https://github.com/ppc64le/charts,ppc64le/charts,D:\helm_clones_github\ppc64le__
 "
 https://github.com/ppc64le/charts,ppc64le/charts,D:\helm_clones_github\ppc64le__charts\stable\ibm-open-liberty,D:\helm_clones_github\ppc64le__charts\stable\ibm-open-liberty\values-metadata.yaml,helm template test D:\helm_clones_github\ppc64le__charts\stable\ibm-open-liberty -f D:\helm_clones_github\ppc64le__charts\stable\ibm-open-liberty\values-metadata.yaml,"Error: unsupported chart version
 "
-https://github.com/StackVista/helm-charts,StackVista/helm-charts,D:\helm_clones_github\StackVista__helm-charts\local\anomaly-detection,,helm template test D:\helm_clones_github\StackVista__helm-charts\local\anomaly-detection,"Error: anomaly-detection/templates/anomaly-detection-worker.yaml:83:16
-  executing ""anomaly-detection/templates/anomaly-detection-worker.yaml"" at <include ""anomaly-detection.stackstate.instance"" .>:
-    error calling include:
-anomaly-detection/templates/_helpers.tpl:35:14
-  executing ""anomaly-detection.stackstate.instance"" at <.Values.stackstate.instance>:
-    wrong type for value; expected string; got interface {}
-
-Use --debug flag to render out invalid YAML
-"
-https://github.com/StackVista/helm-charts,StackVista/helm-charts,D:\helm_clones_github\StackVista__helm-charts\local\clickhouse\charts\common,,helm template test D:\helm_clones_github\StackVista__helm-charts\local\clickhouse\charts\common,"Error: library charts are not installable
-"
-https://github.com/StackVista/helm-charts,StackVista/helm-charts,D:\helm_clones_github\StackVista__helm-charts\local\hbase,D:\helm_clones_github\StackVista__helm-charts\local\hbase\linter_values.yaml,helm template test D:\helm_clones_github\StackVista__helm-charts\local\hbase -f D:\helm_clones_github\StackVista__helm-charts\local\hbase\linter_values.yaml,"Error: failed to parse D:\helm_clones_github\StackVista__helm-charts\local\hbase\linter_values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
-"
-https://github.com/StackVista/helm-charts,StackVista/helm-charts,D:\helm_clones_github\StackVista__helm-charts\local\kafka\charts\common,,helm template test D:\helm_clones_github\StackVista__helm-charts\local\kafka\charts\common,"Error: library charts are not installable
-"
-https://github.com/StackVista/helm-charts,StackVista/helm-charts,D:\helm_clones_github\StackVista__helm-charts\local\kubernetes-rbac-agent,,helm template test D:\helm_clones_github\StackVista__helm-charts\local\kubernetes-rbac-agent,"Error: execution error at (kubernetes-rbac-agent/templates/url-configmap.yaml:21:4): Url not defined, either provide a SUSE Observability platform url through url.value
-
-Use --debug flag to render out invalid YAML
-"
-https://github.com/StackVista/helm-charts,StackVista/helm-charts,D:\helm_clones_github\StackVista__helm-charts\local\zookeeper\charts\common,,helm template test D:\helm_clones_github\StackVista__helm-charts\local\zookeeper\charts\common,"Error: library charts are not installable
-"
 https://github.com/StackVista/helm-charts,StackVista/helm-charts,D:\helm_clones_github\StackVista__helm-charts\stable\artifactory-cleaner,,helm template test D:\helm_clones_github\StackVista__helm-charts\stable\artifactory-cleaner,"Error: artifactory-cleaner/templates/cleaner-secret.yaml:9:58
   executing ""artifactory-cleaner/templates/cleaner-secret.yaml"" at <b64enc>:
     invalid value; expected string
@@ -27615,8 +27580,6 @@ https://github.com/StackVista/helm-charts,StackVista/helm-charts,D:\helm_clones_
     invalid value; expected string
 
 Use --debug flag to render out invalid YAML
-"
-https://github.com/StackVista/helm-charts,StackVista/helm-charts,D:\helm_clones_github\StackVista__helm-charts\stable\gitlab-steward,D:\helm_clones_github\StackVista__helm-charts\stable\gitlab-steward\linter_values.yaml,helm template test D:\helm_clones_github\StackVista__helm-charts\stable\gitlab-steward -f D:\helm_clones_github\StackVista__helm-charts\stable\gitlab-steward\linter_values.yaml,"Error: failed to parse D:\helm_clones_github\StackVista__helm-charts\stable\gitlab-steward\linter_values.yaml: cannot unmarshal yaml document: error unmarshaling JSON: while decoding JSON: json: cannot unmarshal string into Go value of type map[string]interface {}
 "
 https://github.com/cap-js/cap-operator-plugin,cap-js/cap-operator-plugin,D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart,,helm template test D:\helm_clones_github\cap-js__cap-operator-plugin\test\files\expectedConfigurableTemplatesChart,"Error: bookshop/templates/cap-operator-cros-svc-ias.yaml:93:23
   executing ""bookshop/templates/cap-operator-cros-svc-ias.yaml"" at <.Values.workloads.amsDeployer.image>:
@@ -29643,20 +29606,6 @@ https://github.com/DenisMarta/prodject1,DenisMarta/prodject1,D:\helm_clones_gith
     invalid value; expected string
 
 Use --debug flag to render out invalid YAML
-"
-https://github.com/DenisMarta/prodject1,DenisMarta/prodject1,D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\airflow,,helm template test D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\airflow,"Error: YAML parse error on airflow/templates/deployment.yaml: error converting YAML to JSON: yaml: line 75: mapping values are not allowed in this context
-
-Use --debug flag to render out invalid YAML
-"
-https://github.com/DenisMarta/prodject1,DenisMarta/prodject1,D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\bitnami-postgresql\charts\common,,helm template test D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\bitnami-postgresql\charts\common,"Error: library charts are not installable
-"
-https://github.com/DenisMarta/prodject1,DenisMarta/prodject1,D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\clamav,,helm template test D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\clamav,"Error: clamav/templates/clamav-deployment.yaml:64:29
-  executing ""clamav/templates/clamav-deployment.yaml"" at <.Values.securityContext.runasUser>:
-    nil pointer evaluating interface {}.runasUser
-
-Use --debug flag to render out invalid YAML
-"
-https://github.com/DenisMarta/prodject1,DenisMarta/prodject1,D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\minio\charts\common,,helm template test D:\helm_clones_github\DenisMarta__prodject1\deployment\kubernetes\helm\charts\minio\charts\common,"Error: library charts are not installable
 "
 https://github.com/EOSC-Lot-1/helm-charts,EOSC-Lot-1/helm-charts,D:\helm_clones_github\EOSC-Lot-1__helm-charts\elasticdump-load,,helm template test D:\helm_clones_github\EOSC-Lot-1__helm-charts\elasticdump-load,"Error: elasticdump-load/templates/job.yaml:32:38
   executing ""elasticdump-load/templates/job.yaml"" at <""elasticdump-load"">:
