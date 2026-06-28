@@ -198,6 +198,7 @@ const viewerTemplate = `<!DOCTYPE html>
     padding: 6px 0; user-select: none; }
   .pill.resolved { background: rgba(63,185,80,.15); color: var(--green); }
   .pill.unresolved { background: rgba(248,81,73,.15); color: var(--red); }
+  .pill.nonreproduced { background: rgba(139,148,158,.15); color: var(--muted); }
   .pill.noattempt { background: rgba(210,153,34,.15); color: var(--amber); }
   .card .body { padding: 0 14px 14px; display: none; }
   .card.open .body { display: block; }
@@ -253,6 +254,7 @@ const viewerTemplate = `<!DOCTYPE html>
           <option value="unresolved">Still to fix</option>
           <option value="all">All</option>
           <option value="resolved">Resolved</option>
+          <option value="nonreproduced">Non-reproduced</option>
           <option value="noattempt">No fix attempt</option>
         </select>
       </label>
@@ -275,7 +277,10 @@ const viewerTemplate = `<!DOCTYPE html>
 
   function statusOf(o) {
     if (!o.fixed) return 'noattempt';
-    return o.fixed.resolved ? 'resolved' : 'unresolved';
+    if (!o.fixed.resolved) return 'unresolved';
+    // Resolved with an empty fix chain = the failure did not reproduce on
+    // re-render; the fixer applied nothing. Not a real fix.
+    return (o.fixed.fix_chain && o.fixed.fix_chain.length) ? 'resolved' : 'nonreproduced';
   }
 
   function esc(s) {
@@ -291,6 +296,7 @@ const viewerTemplate = `<!DOCTYPE html>
       ['Template failures', t.template_failures || 0, ''],
       ['Fix attempts', t.fix_attempted || 0, ''],
       ['Resolved', t.fix_resolved || 0, 'green'],
+      ['Non-reproduced', t.fix_non_reproduced || 0, ''],
       ['Still to fix', t.fix_unresolved || 0, 'red'],
     ];
     if (t.non_fixable_errors) {
@@ -428,8 +434,8 @@ const viewerTemplate = `<!DOCTYPE html>
 
   function card(o, idx) {
     const st = statusOf(o);
-    const pill = { resolved: 'resolved', unresolved: 'unresolved', noattempt: 'noattempt' }[st];
-    const pillLabel = { resolved: 'resolved', unresolved: 'still to fix', noattempt: 'no attempt' }[st];
+    const pill = { resolved: 'resolved', unresolved: 'unresolved', nonreproduced: 'nonreproduced', noattempt: 'noattempt' }[st];
+    const pillLabel = { resolved: 'resolved', unresolved: 'still to fix', nonreproduced: 'non-reproduced', noattempt: 'no attempt' }[st];
     const sk = o.error_kind + '.' + o.error_sub_kind;
     let body = '';
     if (o.helm_command) body += '<div class="field"><div class="lbl">Command</div><pre>' + esc(o.helm_command) + '</pre></div>';

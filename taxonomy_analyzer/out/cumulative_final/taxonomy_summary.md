@@ -1,6 +1,6 @@
 # Helm Error Taxonomy Report
 
-Generated at: `2026-06-10 17:45:26 UTC`
+Generated at: `2026-06-24 18:18:50 UTC`
 
 Source catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_sources_merged.json`
 
@@ -17,7 +17,8 @@ Fixed catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_fi
 | Classified errors | 873 |
 | Unclassified errors | 105 |
 | Fix attempts | 870 |
-| Fix resolved | 481 |
+| Fix resolved | 479 |
+| Fix non-reproduced (no fix applied) | 2 |
 | Fix unresolved | 389 |
 
 ## Taxonomy by Kind
@@ -32,14 +33,14 @@ Fixed catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_fi
 
 | SubKind | Count | Fix Resolved | Fix Unresolved |
 |---|---:|---:|---:|
-| `template.nil_pointer` | 340 | 298 | 42 |
+| `template.nil_pointer` | 340 | 297 | 42 |
 | `template.required_value` | 220 | 154 | 66 |
 | `template.values_schema_validation` | 122 | 0 | 122 |
 | `unknown.unclassified` | 105 | 0 | 1 |
 | `template.custom_validation` | 35 | 0 | 35 |
 | `template.malformed_yaml` | 31 | 0 | 31 |
 | `template.kube_version_incompatible` | 27 | 27 | 0 |
-| `template.missing_template` | 23 | 1 | 22 |
+| `template.missing_template` | 23 | 0 | 22 |
 | `template.author_assertion` | 22 | 0 | 22 |
 | `template.library_chart_not_installable` | 12 | 0 | 12 |
 | `template.type_mismatch` | 9 | 1 | 8 |

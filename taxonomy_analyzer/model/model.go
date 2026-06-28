@@ -21,10 +21,16 @@ type FixedResult struct {
 }
 
 type FixOutcome struct {
-	Attempted    int            `json:"attempted"`
-	Resolved     int            `json:"resolved"`
-	Unresolved   int            `json:"unresolved"`
-	ByStopReason map[string]int `json:"by_stop_reason,omitempty"`
+	Attempted int `json:"attempted"`
+	Resolved  int `json:"resolved"`
+	// NonReproduced counts runs the fixer marked resolved WITHOUT applying any
+	// fix (empty fix chain): the original failure simply did not recur when the
+	// chart was re-rendered (e.g. a floating dependency version or helm-version
+	// drift between the original run and the fixer run). These are not fixes and
+	// are kept out of Resolved so a non-fixable bucket can never show a fix.
+	NonReproduced int            `json:"non_reproduced,omitempty"`
+	Unresolved    int            `json:"unresolved"`
+	ByStopReason  map[string]int `json:"by_stop_reason,omitempty"`
 }
 
 type RunResult struct {
@@ -121,6 +127,10 @@ type ReportTotals struct {
 	NonFixableErrors int `json:"non_fixable_errors,omitempty"`
 	FixAttempted     int `json:"fix_attempted,omitempty"`
 	FixResolved      int `json:"fix_resolved,omitempty"`
+	// FixNonReproduced counts resolved-with-empty-chain runs (see
+	// FixOutcome.NonReproduced): the fixer applied nothing and the failure just
+	// did not recur on re-render. Excluded from FixResolved.
+	FixNonReproduced int `json:"fix_non_reproduced,omitempty"`
 	FixUnresolved    int `json:"fix_unresolved,omitempty"`
 }
 

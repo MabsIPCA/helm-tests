@@ -1,6 +1,6 @@
 # Complete Errors By Taxonomy Bucket
 
-Generated at: `2026-06-10 17:45:26 UTC`
+Generated at: `2026-06-24 18:18:50 UTC`
 
 Source catalog: `C:\Users\miabs\GolandProjects\helm-tests\helm_fetcher\catalog_sources_merged.json`
 

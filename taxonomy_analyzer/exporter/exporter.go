@@ -76,6 +76,9 @@ func writeMarkdown(path string, report model.TaxonomyReport) error {
 	if report.Totals.FixAttempted > 0 {
 		fmt.Fprintf(f, "| Fix attempts | %d |\n", report.Totals.FixAttempted)
 		fmt.Fprintf(f, "| Fix resolved | %d |\n", report.Totals.FixResolved)
+		if report.Totals.FixNonReproduced > 0 {
+			fmt.Fprintf(f, "| Fix non-reproduced (no fix applied) | %d |\n", report.Totals.FixNonReproduced)
+		}
 		fmt.Fprintf(f, "| Fix unresolved | %d |\n", report.Totals.FixUnresolved)
 	}
 	fmt.Fprintln(f)
@@ -152,9 +155,13 @@ func writeCSV(path string, occurrences []model.ErrorOccurrence) error {
 		fixResolved := ""
 		fixStopReason := ""
 		if occ.Fixed != nil {
-			if occ.Fixed.Resolved {
+			switch {
+			case occ.Fixed.Resolved && len(occ.Fixed.FixChain) > 0:
 				fixResolved = "true"
-			} else {
+			case occ.Fixed.Resolved:
+				// resolved with no fix applied — failure did not reproduce on re-render
+				fixResolved = "non_reproduced"
+			default:
 				fixResolved = "false"
 			}
 			fixStopReason = occ.Fixed.StopReason
