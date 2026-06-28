@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T17:45:26.0358167Z",
+  "generated_at": "2026-06-24T18:18:50.0456638Z",
   "source_catalog": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\helm_fetcher\\catalog_sources_merged.json",
   "fixed_catalog": "C:\\Users\\miabs\\GolandProjects\\helm-tests\\helm_fetcher\\catalog_fixed_cumulative.json",
   "totals": {
@@ -12,7 +12,8 @@
     "duplicates_collapsed": 680,
     "non_fixable_errors": 261,
     "fix_attempted": 870,
-    "fix_resolved": 481,
+    "fix_resolved": 479,
+    "fix_non_reproduced": 2,
     "fix_unresolved": 389
   },
   "by_kind": {
@@ -184,7 +185,8 @@
       ],
       "fix_outcome": {
         "attempted": 869,
-        "resolved": 481,
+        "resolved": 479,
+        "non_reproduced": 2,
         "unresolved": 388,
         "by_stop_reason": {
           "loop_detected": 16,
@@ -1144,7 +1146,8 @@
       ],
       "fix_outcome": {
         "attempted": 23,
-        "resolved": 1,
+        "resolved": 0,
+        "non_reproduced": 1,
         "unresolved": 22,
         "by_stop_reason": {
           "unfixable_error_kind": 22
@@ -1296,7 +1299,8 @@
       ],
       "fix_outcome": {
         "attempted": 340,
-        "resolved": 298,
+        "resolved": 297,
+        "non_reproduced": 1,
         "unresolved": 42,
         "by_stop_reason": {
           "loop_detected": 3,

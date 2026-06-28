@@ -154,9 +154,14 @@ func (a *Analyzer) consumeOccurrence(occ model.ErrorOccurrence) {
 
 	if occ.Fixed != nil {
 		a.report.Totals.FixAttempted++
-		if occ.Fixed.Resolved {
+		switch {
+		case occ.Fixed.Resolved && len(occ.Fixed.FixChain) > 0:
 			a.report.Totals.FixResolved++
-		} else {
+		case occ.Fixed.Resolved:
+			// Resolved with an empty fix chain: the fixer injected nothing and the
+			// failure simply did not recur on re-render. Not a fix.
+			a.report.Totals.FixNonReproduced++
+		default:
 			a.report.Totals.FixUnresolved++
 		}
 		a.bumpFixOutcome(a.report.ByKind, kindKey, occ.Fixed)
@@ -195,9 +200,14 @@ func (a *Analyzer) bumpFixOutcome(buckets map[string]model.TaxonomyBucket, key s
 		fo = &model.FixOutcome{}
 	}
 	fo.Attempted++
-	if fixed.Resolved {
+	switch {
+	case fixed.Resolved && len(fixed.FixChain) > 0:
 		fo.Resolved++
-	} else {
+	case fixed.Resolved:
+		// Empty fix chain: resolved only because the failure did not reproduce on
+		// re-render, no fix applied. Counted separately so it never reads as a fix.
+		fo.NonReproduced++
+	default:
 		fo.Unresolved++
 		if fixed.StopReason != "" {
 			if fo.ByStopReason == nil {
