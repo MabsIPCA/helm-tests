@@ -97,7 +97,18 @@
       "Bash(sort -k3)",
       "Bash(/c/Users/miabs/AppData/Local/Programs/Python/Python312/python.exe *)",
       "Bash([ -f \"$CH\" ])",
-      "Bash([ -f \"$B/Chart.yaml\" ])"
+      "Bash([ -f \"$B/Chart.yaml\" ])",
+      "Read(//c/Users/miabs/GolandProjects/kics/**)",
+      "Bash(ls -la kics-render-mock)",
+      "Bash(ls helmfix *)",
+      "Bash(echo \"=== BUILD EXIT $? ===\")",
+      "Bash(grep -rn \"\\\\.\\\\./\\\\.\\\\./\\\\.\\\\./test\\\\|test/fixtures\\\\|Chart.yaml\\\\|charts/\" pkg/resolver/helm/resolver_test.go)",
+      "Bash(mkdir -p /c/Users/miabs/AppData/Local/Temp/claude/C--Users-miabs-GolandProjects-helm-tests-helm-fetcher/8e87604f-a00f-445c-9ddd-b5afe61e94ae/scratchpad/failchart/templates)",
+      "Bash(printf 'apiVersion: v2\\\\nname: failchart\\\\nversion: 0.1.0\\\\n')",
+      "Bash(printf 'image: {}\\\\n')",
+      "Bash(printf 'apiVersion: v1\\\\nkind: ConfigMap\\\\nmetadata:\\\\n  name: cm\\\\ndata:\\\\n  repo: {{ required \"image.repository is required\" .Values.image.repository | quote }}\\\\n')",
+      "Read(//c/Users/miabs/AppData/Local/Temp/claude/C--Users-miabs-GolandProjects-helm-tests-helm-fetcher/8e87604f-a00f-445c-9ddd-b5afe61e94ae/scratchpad/**)",
+      "Bash(echo \"EXIT $?\")"
     ]
   }
 }
