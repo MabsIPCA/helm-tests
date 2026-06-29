@@ -108,7 +108,10 @@
       "Bash(printf 'image: {}\\\\n')",
       "Bash(printf 'apiVersion: v1\\\\nkind: ConfigMap\\\\nmetadata:\\\\n  name: cm\\\\ndata:\\\\n  repo: {{ required \"image.repository is required\" .Values.image.repository | quote }}\\\\n')",
       "Read(//c/Users/miabs/AppData/Local/Temp/claude/C--Users-miabs-GolandProjects-helm-tests-helm-fetcher/8e87604f-a00f-445c-9ddd-b5afe61e94ae/scratchpad/**)",
-      "Bash(echo \"EXIT $?\")"
+      "Bash(echo \"EXIT $?\")",
+      "Bash(/c/Users/miabs/AppData/Local/Temp/claude/C--Users-miabs-GolandProjects-helm-tests-helm-fetcher/8e87604f-a00f-445c-9ddd-b5afe61e94ae/scratchpad/kics.exe version *)",
+      "Bash(/c/Users/miabs/AppData/Local/Programs/Python/Python312/python.exe beforeafter_run.py)",
+      "Bash(echo \"HARNESS_EXIT=$?\")"
     ]
   }
 }
