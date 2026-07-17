@@ -43,14 +43,21 @@ RUN_DIR     ?=
 CATALOG_CUMULATIVE ?= catalog_cumulative.json
 
 # refix-all: per-source input catalogs, clone dirs, and output fixed catalogs
-GITHUB_CATALOG     ?= results/github/catalog_by_project.json
+# GITHUB_CATALOG must be the authoritative top-500 run, NOT results/github/ —
+# that April snapshot is superseded (FINAL_RESULTS.md) and shares only ~97 of
+# its 322 repos with the current seed. Pointing here is what put the published
+# taxonomy on the wrong corpus.
+GITHUB_CATALOG     ?= runs/20260528_215041_github/catalog_by_project.json
 GITHUB_CLONE_DIR   ?= D:/helm_clones_github
 ARTIFACT_CATALOG   ?= runs/20260529_135859_artifacthub/catalog_by_project.json
 ARTIFACT_CLONE_DIR ?= D:/helm_clones_artifacthub
 FIXED_GITHUB       ?= catalog_fixed_github_final.json
 FIXED_ARTIFACT     ?= catalog_fixed_ah_final.json
 FIXED_CUMULATIVE   ?= catalog_fixed_cumulative.json
-# Taxonomy regen at the end of refix-all (input sources catalog + output dir)
+# Taxonomy regen at the end of refix-all (input sources catalog + output dir).
+# SOURCES_CATALOG must be rebuilt from the SAME pair as GITHUB_CATALOG/ARTIFACT_CATALOG
+# above, or the taxonomy is computed on a different corpus than the fixer ran on:
+#   go run ./scripts/merge_sources <out> $(GITHUB_CATALOG) $(ARTIFACT_CATALOG)
 SOURCES_CATALOG    ?= catalog_sources_merged.json
 ANALYZE_OUT        ?= out/cumulative_final
 

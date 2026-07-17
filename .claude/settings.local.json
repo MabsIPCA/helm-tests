@@ -34,7 +34,23 @@
       "PowerShell(cd C:\\\\Users\\\\miabs\\\\GolandProjects\\\\helm-tests\\\\helm_fetcher; if \\(Test-Path .env\\) { Get-Content .env } else { \"no .env file\" }; echo \"---\"; $env:GITHUB_TOKEN | ForEach-Object { if \\($_\\) { \"GITHUB_TOKEN is set \\(length=$\\($_.Length\\)\\)\" } else { \"GITHUB_TOKEN not set\" } })",
       "PowerShell(gh *)",
       "PowerShell(git credential *)",
-      "PowerShell(winget install *)"
+      "PowerShell(winget install *)",
+      "Bash(python -c ' *)",
+      "Bash(py --version)",
+      "Bash(jq --version)",
+      "Bash(go version *)",
+      "Bash(py -c ' *)",
+      "Bash(py *)",
+      "Read(//d/helm_clones_github/**)",
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(awk '{print $5\" bytes\"}')",
+      "Bash(cp catalog_sources_v2.json /c/Users/miabs/AppData/Local/Temp/claude/C--Users-miabs-GolandProjects-helm-tests/e63872c2-32f5-4380-851b-77144eda9921/scratchpad/probe.json)",
+      "Bash(./drop_subcharts_local.exe /c/Users/miabs/AppData/Local/Temp/claude/C--Users-miabs-GolandProjects-helm-tests/e63872c2-32f5-4380-851b-77144eda9921/scratchpad/probe.json)",
+      "Bash(./drop_subcharts_local.exe catalog_sources_v2.json)",
+      "Bash(./taxonomy_local.exe -input ../helm_fetcher/catalog_sources_v2.json --fixed ../helm_fetcher/catalog_fixed_cumulative_v2.json -out out/cumulative_v2)",
+      "Bash(./kics_sdk_local.exe -catalog \"C:/Users/miabs/AppData/Local/Temp/claude/C--Users-miabs-GolandProjects-helm-tests/e63872c2-32f5-4380-851b-77144eda9921/scratchpad/catalog_failing_only.json\")",
+      "Bash(grep -ohrE '\\\\\\\\acrshort\\\\{[a-zA-Z]+\\\\}' *.tex)",
+      "Bash(grep -ohE '\\\\\\\\newacronym\\\\{[a-zA-Z]+\\\\}' acronimos.tex)"
     ]
   }
 }
