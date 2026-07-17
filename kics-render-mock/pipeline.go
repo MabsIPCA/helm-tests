@@ -78,6 +78,17 @@ func updateName(files []*chart.File, c *chart.Chart, name string) []*chart.File 
 //
 // Even when err != nil, rel may be non-nil (partial render before failure).
 func runOnce(chartPath string, valOpts *values.Options, debugMode bool) renderResult {
+	return runOnceKube(chartPath, valOpts, debugMode, "")
+}
+
+// runOnceKube is runOnce with a render-wide Kubernetes version override, the
+// SDK equivalent of "helm template --kube-version". An empty kubeVersion leaves
+// Helm's default capabilities untouched, so runOnce behaviour is unchanged.
+//
+// The fix loop needs this because a chart kubeVersion incompatibility is not a
+// value: it cannot be repaired with --set, only by rendering against a version
+// that satisfies the chart's constraint (see helmfix.KindKubeVersion).
+func runOnceKube(chartPath string, valOpts *values.Options, debugMode bool, kubeVersion string) renderResult {
 	var logs []string
 
 	cfg := new(action.Configuration)
@@ -97,6 +108,14 @@ func runOnce(chartPath string, valOpts *values.Options, debugMode bool) renderRe
 	client.APIVersions = chartutil.VersionSet([]string{})
 	client.IncludeCRDs = false
 	client.Namespace = "kics-namespace"
+
+	if kubeVersion != "" {
+		parsed, kvErr := chartutil.ParseKubeVersion(kubeVersion)
+		if kvErr != nil {
+			return renderResult{err: fmt.Errorf("parse kube-version %q: %w", kubeVersion, kvErr), logs: logs}
+		}
+		client.KubeVersion = parsed
+	}
 
 	log.SetOutput(io.Discard)
 	defer log.SetOutput(nil)
