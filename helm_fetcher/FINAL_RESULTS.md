@@ -1,67 +1,101 @@
 # Helm Fetcher — Final Catalog Results
 
-_Generated 2026-06-16. Top-500 seeds per source, value-prefiltered basis._
+_Generated 2026-07-17 (v2 basis). Top-500 seeds per source, value-prefiltered
+and subchart-collapsed._
 
-## Overview
+## Corpus provenance
 
-Each source was seeded from a top-500 list and processed in `-mode=full`
-(clone → discover charts → `helm dependency build` → `helm template` on the
-default values plus every value-file combination). Results below are on the
-**value-prefiltered basis**: overlay value files that are git-crypt encrypted or
-otherwise unparseable as YAML are excluded from the combinations, so they no
-longer produce false template failures.
+The corpus was cloned once and **never re-pulled** (each repo's git reflog is a
+single clone entry), so chart content is frozen at clone time.
 
-| Source | Seed file (`top: 500`) | Run directory | Repos cataloged |
-|---|---|---|---:|
-| GitHub | `github_search.json` | `runs/20260528_215041_github/` | 487 / 500 |
-| ArtifactHub | `artifacthub_search.json` | `runs/20260529_135859_artifacthub/` | 486 / 500 |
+| Source | Seed file (`top: 500`) | Cloned to | Clone performed | Clone dirs on disk | Cataloged repos |
+|---|---|---|---|---:|---:|
+| GitHub | `github_search.json` (2026-05-28) | `D:\helm_clones_github` | **2026-05-28** | 733 | 492 |
+| ArtifactHub | `artifacthub_search.json` (2026-05-28) | `D:\helm_clones_artifacthub` | **2026-05-29** | 496 | 481 |
 
-> Repos seeded but not cataloged yielded no chart or failed to clone.
+The clone directories on disk (733 / 496) are a **superset** of the cataloged
+repos (492 / 481): they include repos cloned by earlier/larger runs that are
+outside the current top-500 seed, and seeds that yielded no chart. The in-repo
+`helm_fetcher/cloned/` holds only the 7 large monorepos as a kept subset; the
+full corpus lives on `D:\`.
 
-## Results by source
+## Processing model — and the dependency-failure early-stop
+
+`-mode=full` runs, per repo: clone → discover charts (`FindCharts`, with vendored
+subcharts collapsed) → for each chart, `helm dependency build`, then
+`helm template` on the default values plus every value-file combination.
+
+**Important:** within a repo the chart loop **stops at the first
+`helm dependency build` failure** (`main.go:223`, `break`): that chart is recorded
+as a dependency failure, the repo is marked *dep-failed*, and **every remaining
+chart in the repo is skipped**. One broken dependency therefore suppresses all of
+its sibling charts. This is why "charts recorded" is far below the number of
+`Chart.yaml` files on disk — the gap is concentrated in dep-failed **archive /
+mirror monorepos** (e.g. `rancher/partner-charts` = 8,606 charts on disk but only
+33 processed; TrueCharts/TrueNAS archives ≈ 4,600–6,200 each), where an early
+failure skips thousands of siblings.
+
+| Chart accounting | GitHub | ArtifactHub | Combined |
+|---|---:|---:|---:|
+| `Chart.yaml` files on disk (raw) | 75,597 | 3,823 | 79,420 |
+| Charts discovered by `FindCharts` (June, pre–early-stop) | 69,034 | 3,191 | 72,225 |
+| Charts **recorded** in v2 (after early-stop + subchart collapse) | 5,913 | 1,488 | 7,401 |
+
+## Results by source (v2)
 
 | Metric | GitHub | ArtifactHub | Combined |
 |---|---:|---:|---:|
-| Repos | 487 | 486 | 973 |
-| Charts discovered | 69,034 | 3,191 | 72,225 |
-| Helm template runs | 8,012 | 2,098 | 10,110 |
-| ✅ Successes | 5,814 | 1,850 | 7,664 |
-| ❌ Template failures | 2,198 | 248 | 2,446 |
-| 🔧 Dep-build failures (runs) | 194 | 24 | 218 |
-| **Success rate** | **72.6%** | **88.2%** | **75.8%** |
+| Repos | 492 | 481 | 973 |
+| Charts recorded | 5,913 | 1,488 | 7,401 |
+| Helm template runs | 7,749 | 1,851 | 9,600 |
+| ✅ Successes | 5,787 | 1,672 | 7,459 |
+| ❌ Template failures | 1,962 | 179 | 2,141 |
+| 🔧 Dep-build failures (charts) | 182 | 24 | 206 |
+| **Success rate** | **74.7%** | **90.3%** | **77.7%** |
 
-### Repo status breakdown
+> "Charts recorded" is the number of charts written to the catalog (one
+> `ChartSummary` each). Of the 7,401, **206 are dep-failed** (the chart that
+> triggered the early-stop, 0 template runs); the remaining ~7,195 produced the
+> 9,600 template runs. Success rate is over template runs.
+
+### Repo status breakdown (v2)
 
 | Status | GitHub | ArtifactHub | Combined |
 |---|---:|---:|---:|
-| Kept (has template failures) | 86 | 67 | 153 |
-| Removed (clean, no failures) | 207 | 395 | 602 |
-| Dep-failed (dependency build failed) | 194 | 24 | 218 |
-| **Total** | **487** | **486** | **973** |
+| Kept (has template failures) | 81 | 61 | 142 |
+| Removed (clean, no failures) | 229 | 396 | 625 |
+| Dep-failed (dependency build failed) | 182 | 24 | 206 |
+| **Total** | **492** | **481** | **973** |
+
+Because of the early-stop, each dep-failed repo contributes exactly **one**
+dep-build failure, so dep-failed repos (206) = dep-build failures (206).
 
 ## Notes
 
-- **Value prefilter** (`helm.FindValuesFiles` → `IsParseableValuesFile`): an
-  overlay value file is only fed to `helm template` if it parses as a YAML map.
-  Encrypted (git-crypt) and malformed files are dropped, matching what helm
-  itself would refuse on load. This removes false failures from the catalog.
-  - GitHub: 6 / 487 repos affected, 15 false failures removed (rate unchanged at
-    72.6% — GitHub had few such files).
-  - ArtifactHub: prefilter applied; basis reflected in the 88.2% above.
-- **Authoritative data** is each run's `catalog_by_project.json`; the
-  `catalog_results.md` siblings were regenerated from it via `-mode=render-md`
-  so they match exactly. Pre-prefilter snapshots are preserved at
-  `catalog_by_project.json.prefilter.bak`.
-- The stale April top-500 GitHub data in `results/github/` and
-  `backup/GHTop500/` is **superseded** by `runs/20260528_215041_github/` (only
-  ~91/322 of its repos overlap the current seed).
+- **Authoritative data (v2)** is `catalog_sources_v2.json` (merged source
+  catalog) paired with `catalog_fixed_cumulative_v2.json` (merged fixed catalog).
+  The taxonomy report in `taxonomy_analyzer/out/cumulative_v2/` is computed from
+  exactly this pair and reproduces these totals (9,600 runs / 2,141 template
+  failures / 206 dep failures).
+- **v2 is derived from the June run, not a fresh corpus scan.** It was produced
+  from the June catalogs via refetch/refilter passes, so it inherits June's
+  post–early-stop chart set: v2 knows only about the ~7,401 charts June recorded
+  and does **not** re-discover the ~72k charts skipped by the early-stop. A fresh
+  `-mode=full` scan would re-discover them (dominated by the mirror-archive
+  monorepos above).
+- The June basis (`catalog_sources_merged.json` +
+  `catalog_fixed_cumulative.json`, 10,110 runs) and the April top-500 GitHub
+  data in `results/github/` + `backup/GHTop500/` are **superseded**.
+- Per-source *fixed* catalogs are split out (`catalog_fixed_github_v2.json`,
+  `catalog_fixed_ah_v2.json`); a per-source *source* catalog split for v2 is not
+  materialised — the merged `catalog_sources_v2.json` is the basis.
 
-## Source files
+## Source files (v2)
 
 ```
-runs/20260528_215041_github/catalog_by_project.json     # GitHub, authoritative
-runs/20260528_215041_github/catalog_results.md          # GitHub, rendered
-runs/20260529_135859_artifacthub/catalog_by_project.json # ArtifactHub, authoritative
-runs/20260529_135859_artifacthub/catalog_results.md      # ArtifactHub, rendered
-github_search.json / artifacthub_search.json             # top-500 seeds
+catalog_sources_v2.json            # merged source catalog (GitHub + ArtifactHub), authoritative
+catalog_fixed_cumulative_v2.json   # merged fixed catalog (paired with the above)
+catalog_fixed_github_v2.json       # GitHub fixed catalog
+catalog_fixed_ah_v2.json           # ArtifactHub fixed catalog
+github_search.json / artifacthub_search.json   # top-500 seeds (2026-05-28)
 ```

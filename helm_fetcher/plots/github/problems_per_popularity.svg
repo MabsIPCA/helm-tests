@@ -6,104 +6,314 @@
 .grid { stroke: #e5e7eb; stroke-width: 1; }
 .dot { fill-opacity: 0.75; }
 </style>
-<text class="title" x="24" y="36">Problems per Popularity (non-zero only, Top 55 by stars)</text>
+<text class="title" x="24" y="36">Problems per Popularity (non-zero only, Top 263 by stars)</text>
 <line class="grid" x1="90.00" y1="70" x2="90.00" y2="810" />
 <text class="axis" x="90.00" y="830" text-anchor="middle">0</text>
-<line class="grid" x1="177.72" y1="70" x2="177.72" y2="810" />
-<text class="axis" x="177.72" y="830" text-anchor="middle">1</text>
-<line class="grid" x1="229.03" y1="70" x2="229.03" y2="810" />
-<text class="axis" x="229.03" y="830" text-anchor="middle">2</text>
-<line class="grid" x1="316.75" y1="70" x2="316.75" y2="810" />
-<text class="axis" x="316.75" y="830" text-anchor="middle">5</text>
-<line class="grid" x1="393.46" y1="70" x2="393.46" y2="810" />
-<text class="axis" x="393.46" y="830" text-anchor="middle">10</text>
-<line class="grid" x1="475.29" y1="70" x2="475.29" y2="810" />
-<text class="axis" x="475.29" y="830" text-anchor="middle">20</text>
-<line class="grid" x1="587.58" y1="70" x2="587.58" y2="810" />
-<text class="axis" x="587.58" y="830" text-anchor="middle">50</text>
-<line class="grid" x1="674.06" y1="70" x2="674.06" y2="810" />
-<text class="axis" x="674.06" y="830" text-anchor="middle">100</text>
-<line class="grid" x1="761.15" y1="70" x2="761.15" y2="810" />
-<text class="axis" x="761.15" y="830" text-anchor="middle">200</text>
-<line class="grid" x1="876.73" y1="70" x2="876.73" y2="810" />
-<text class="axis" x="876.73" y="830" text-anchor="middle">500</text>
-<line class="grid" x1="964.32" y1="70" x2="964.32" y2="810" />
-<text class="axis" x="964.32" y="830" text-anchor="middle">1k</text>
-<line class="grid" x1="1051.98" y1="70" x2="1051.98" y2="810" />
-<text class="axis" x="1051.98" y="830" text-anchor="middle">2k</text>
-<line class="grid" x1="1167.90" y1="70" x2="1167.90" y2="810" />
-<text class="axis" x="1167.90" y="830" text-anchor="middle">5k</text>
-<line class="grid" x1="1255.61" y1="70" x2="1255.61" y2="810" />
-<text class="axis" x="1255.61" y="830" text-anchor="middle">10k</text>
+<line class="grid" x1="173.95" y1="70" x2="173.95" y2="810" />
+<text class="axis" x="173.95" y="830" text-anchor="middle">1</text>
+<line class="grid" x1="223.06" y1="70" x2="223.06" y2="810" />
+<text class="axis" x="223.06" y="830" text-anchor="middle">2</text>
+<line class="grid" x1="307.01" y1="70" x2="307.01" y2="810" />
+<text class="axis" x="307.01" y="830" text-anchor="middle">5</text>
+<line class="grid" x1="380.43" y1="70" x2="380.43" y2="810" />
+<text class="axis" x="380.43" y="830" text-anchor="middle">10</text>
+<line class="grid" x1="458.74" y1="70" x2="458.74" y2="810" />
+<text class="axis" x="458.74" y="830" text-anchor="middle">20</text>
+<line class="grid" x1="566.21" y1="70" x2="566.21" y2="810" />
+<text class="axis" x="566.21" y="830" text-anchor="middle">50</text>
+<line class="grid" x1="648.97" y1="70" x2="648.97" y2="810" />
+<text class="axis" x="648.97" y="830" text-anchor="middle">100</text>
+<line class="grid" x1="732.32" y1="70" x2="732.32" y2="810" />
+<text class="axis" x="732.32" y="830" text-anchor="middle">200</text>
+<line class="grid" x1="842.94" y1="70" x2="842.94" y2="810" />
+<text class="axis" x="842.94" y="830" text-anchor="middle">500</text>
+<line class="grid" x1="926.77" y1="70" x2="926.77" y2="810" />
+<text class="axis" x="926.77" y="830" text-anchor="middle">1k</text>
+<line class="grid" x1="1010.66" y1="70" x2="1010.66" y2="810" />
+<text class="axis" x="1010.66" y="830" text-anchor="middle">2k</text>
+<line class="grid" x1="1121.60" y1="70" x2="1121.60" y2="810" />
+<text class="axis" x="1121.60" y="830" text-anchor="middle">5k</text>
+<line class="grid" x1="1205.54" y1="70" x2="1205.54" y2="810" />
+<text class="axis" x="1205.54" y="830" text-anchor="middle">10k</text>
+<line class="grid" x1="1260.00" y1="70" x2="1260.00" y2="810" />
+<text class="axis" x="1260.00" y="830" text-anchor="middle">15k</text>
 <line class="grid" x1="90" y1="810.00" x2="1260" y2="810.00" />
 <text class="axis" x="80" y="814.00" text-anchor="end">0</text>
 <line class="grid" x1="90" y1="686.67" x2="1260" y2="686.67" />
-<text class="axis" x="80" y="690.67" text-anchor="end">31</text>
+<text class="axis" x="80" y="690.67" text-anchor="end">85</text>
 <line class="grid" x1="90" y1="563.33" x2="1260" y2="563.33" />
-<text class="axis" x="80" y="567.33" text-anchor="end">62</text>
+<text class="axis" x="80" y="567.33" text-anchor="end">171</text>
 <line class="grid" x1="90" y1="440.00" x2="1260" y2="440.00" />
-<text class="axis" x="80" y="444.00" text-anchor="end">94</text>
+<text class="axis" x="80" y="444.00" text-anchor="end">256</text>
 <line class="grid" x1="90" y1="316.67" x2="1260" y2="316.67" />
-<text class="axis" x="80" y="320.67" text-anchor="end">125</text>
+<text class="axis" x="80" y="320.67" text-anchor="end">341</text>
 <line class="grid" x1="90" y1="193.33" x2="1260" y2="193.33" />
-<text class="axis" x="80" y="197.33" text-anchor="end">156</text>
+<text class="axis" x="80" y="197.33" text-anchor="end">427</text>
 <line class="grid" x1="90" y1="70.00" x2="1260" y2="70.00" />
-<text class="axis" x="80" y="74.00" text-anchor="end">187</text>
+<text class="axis" x="80" y="74.00" text-anchor="end">512</text>
 <text class="axis" x="675.00" y="872" text-anchor="middle">GitHub stars (log10(stars+1))</text>
 <text class="axis" transform="translate(24 440.00) rotate(-90)" text-anchor="middle">Problems (total_failures + total_dep_failures)</text>
-<circle class="dot" cx="1260.00" cy="806.04" r="4" fill="#7c3aed"><title>bitnami/charts | stars=10353, problems=1</title></circle>
-<circle class="dot" cx="1057.43" cy="806.04" r="4" fill="#7c3aed"><title>cozystack/cozystack | stars=2088, problems=1</title></circle>
-<circle class="dot" cx="1051.41" cy="806.04" r="4" fill="#7c3aed"><title>grafana/helm-charts | stars=1991, problems=1</title></circle>
-<circle class="dot" cx="1043.48" cy="806.04" r="4" fill="#7c3aed"><title>microsoft/mssql-docker | stars=1870, problems=1</title></circle>
-<circle class="dot" cx="1001.71" cy="782.30" r="4" fill="#7c3aed"><title>trueforge-org/truecharts | stars=1344, problems=7</title></circle>
-<circle class="dot" cx="879.73" cy="766.47" r="4" fill="#7c3aed"><title>webankfintech/prophecis | stars=512, problems=11</title></circle>
-<circle class="dot" cx="857.10" cy="806.04" r="4" fill="#7c3aed"><title>rancher/charts | stars=428, problems=1</title></circle>
-<circle class="dot" cx="839.05" cy="806.04" r="4" fill="#7c3aed"><title>radondb/radondb-mysql-kubernetes | stars=371, problems=1</title></circle>
-<circle class="dot" cx="816.39" cy="794.17" r="4" fill="#7c3aed"><title>ibm/charts | stars=310, problems=4</title></circle>
-<circle class="dot" cx="762.40" cy="802.09" r="4" fill="#7c3aed"><title>jahstreetorg/spark-on-kubernetes-helm | stars=202, problems=2</title></circle>
-<circle class="dot" cx="656.62" cy="806.04" r="4" fill="#7c3aed"><title>rancher/rke2-charts | stars=87, problems=1</title></circle>
-<circle class="dot" cx="610.24" cy="806.04" r="4" fill="#7c3aed"><title>rancher/partner-charts | stars=60, problems=1</title></circle>
-<circle class="dot" cx="587.58" cy="802.09" r="4" fill="#7c3aed"><title>tmforum-oda/oda-canvas | stars=50, problems=2</title></circle>
-<circle class="dot" cx="574.53" cy="802.09" r="4" fill="#7c3aed"><title>boozallen/aissemble | stars=45, problems=2</title></circle>
-<circle class="dot" cx="565.99" cy="802.09" r="4" fill="#7c3aed"><title>tkestack/charts | stars=42, problems=2</title></circle>
-<circle class="dot" cx="559.96" cy="802.09" r="4" fill="#7c3aed"><title>sapcc/helm-charts | stars=40, problems=2</title></circle>
-<circle class="dot" cx="550.35" cy="327.22" r="4" fill="#7c3aed"><title>acuvity/mcp-servers-registry | stars=37, problems=122</title></circle>
-<circle class="dot" cx="543.51" cy="806.04" r="4" fill="#7c3aed"><title>k8s-home-lab/helm-charts | stars=35, problems=1</title></circle>
-<circle class="dot" cx="486.81" cy="798.13" r="4" fill="#7c3aed"><title>yakecloud/yake | stars=22, problems=3</title></circle>
-<circle class="dot" cx="475.29" cy="778.34" r="4" fill="#7c3aed"><title>k0rdent/catalog | stars=20, problems=8</title></circle>
-<circle class="dot" cx="475.29" cy="802.09" r="4" fill="#7c3aed"><title>mrybas/k8s-bootstrap | stars=20, problems=2</title></circle>
-<circle class="dot" cx="469.12" cy="754.60" r="4" fill="#7c3aed"><title>junghoon2/k8s-class | stars=19, problems=14</title></circle>
-<circle class="dot" cx="455.79" cy="806.04" r="4" fill="#7c3aed"><title>ai-solution-eng/frameworks | stars=17, problems=1</title></circle>
-<circle class="dot" cx="440.88" cy="806.04" r="4" fill="#7c3aed"><title>suse-edge/charts | stars=15, problems=1</title></circle>
-<circle class="dot" cx="423.98" cy="802.09" r="4" fill="#7c3aed"><title>cnrancher/pandaria-catalog | stars=13, problems=2</title></circle>
-<circle class="dot" cx="393.46" cy="802.09" r="4" fill="#7c3aed"><title>llajas/homelab | stars=10, problems=2</title></circle>
-<circle class="dot" cx="368.07" cy="802.09" r="4" fill="#7c3aed"><title>thoughtworks/byor-voting-infrastructure | stars=8, problems=2</title></circle>
-<circle class="dot" cx="336.26" cy="806.04" r="4" fill="#7c3aed"><title>appscode-cloud/ui-wizards | stars=6, problems=1</title></circle>
-<circle class="dot" cx="316.75" cy="70.00" r="4" fill="#7c3aed"><title>above-os/terminus-apps | stars=5, problems=187</title></circle>
-<circle class="dot" cx="316.75" cy="806.04" r="4" fill="#7c3aed"><title>ibuildthecloud/rancher-charts | stars=5, problems=1</title></circle>
-<circle class="dot" cx="293.68" cy="410.32" r="4" fill="#7c3aed"><title>cap-js/cap-operator-plugin | stars=4, problems=101</title></circle>
-<circle class="dot" cx="265.44" cy="806.04" r="4" fill="#7c3aed"><title>makhuta/truecharts-archive-scale-catalog | stars=3, problems=1</title></circle>
-<circle class="dot" cx="265.44" cy="802.09" r="4" fill="#7c3aed"><title>pluralsh/plural-helm-charts | stars=3, problems=2</title></circle>
-<circle class="dot" cx="265.44" cy="806.04" r="4" fill="#7c3aed"><title>rancher/ob-team-charts | stars=3, problems=1</title></circle>
-<circle class="dot" cx="229.03" cy="806.04" r="4" fill="#7c3aed"><title>apasofttraining/cursohelm | stars=2, problems=1</title></circle>
-<circle class="dot" cx="229.03" cy="806.04" r="4" fill="#7c3aed"><title>kevmcarp/truecharts-catalog-fork | stars=2, problems=1</title></circle>
-<circle class="dot" cx="229.03" cy="806.04" r="4" fill="#7c3aed"><title>neuralegion/helmcharts | stars=2, problems=1</title></circle>
-<circle class="dot" cx="229.03" cy="806.04" r="4" fill="#7c3aed"><title>sureya/airflow_k8s_executor | stars=2, problems=1</title></circle>
-<circle class="dot" cx="229.03" cy="802.09" r="4" fill="#7c3aed"><title>cheyang/arena-spark | stars=2, problems=2</title></circle>
-<circle class="dot" cx="229.03" cy="786.26" r="4" fill="#7c3aed"><title>erost/vdz26-demo-fleet-commander | stars=2, problems=6</title></circle>
-<circle class="dot" cx="229.03" cy="806.04" r="4" fill="#7c3aed"><title>lucidworks/ocp-fusion-helm-charts | stars=2, problems=1</title></circle>
-<circle class="dot" cx="229.03" cy="806.04" r="4" fill="#7c3aed"><title>openshift-helm-charts/stage | stars=2, problems=1</title></circle>
-<circle class="dot" cx="229.03" cy="279.73" r="4" fill="#7c3aed"><title>oracle-cne/catalog | stars=2, problems=134</title></circle>
-<circle class="dot" cx="229.03" cy="81.87" r="4" fill="#7c3aed"><title>tetratelabs/charts | stars=2, problems=184</title></circle>
-<circle class="dot" cx="177.72" cy="798.13" r="4" fill="#7c3aed"><title>kapil-bhalodiya/e-commerce | stars=1, problems=3</title></circle>
-<circle class="dot" cx="177.72" cy="806.04" r="4" fill="#7c3aed"><title>kapil-bhalodiya/e-commerce-platform | stars=1, problems=1</title></circle>
-<circle class="dot" cx="177.72" cy="790.21" r="4" fill="#7c3aed"><title>pilotdataplatform/helm-charts | stars=1, problems=5</title></circle>
-<circle class="dot" cx="177.72" cy="806.04" r="4" fill="#7c3aed"><title>tsmc-nycu-lab-13/infrastructures | stars=1, problems=1</title></circle>
-<circle class="dot" cx="177.72" cy="806.04" r="4" fill="#7c3aed"><title>adstanley/archive | stars=1, problems=1</title></circle>
-<circle class="dot" cx="177.72" cy="786.26" r="4" fill="#7c3aed"><title>cisco-open/appdynamics-k8s-webhook-instrumentor | stars=1, problems=6</title></circle>
-<circle class="dot" cx="177.72" cy="806.04" r="4" fill="#7c3aed"><title>hey101/scale-catalog | stars=1, problems=1</title></circle>
-<circle class="dot" cx="177.72" cy="806.04" r="4" fill="#7c3aed"><title>hmcts/hmcts-charts | stars=1, problems=1</title></circle>
-<circle class="dot" cx="177.72" cy="362.83" r="4" fill="#7c3aed"><title>tetratelabs/helm-charts | stars=1, problems=113</title></circle>
-<circle class="dot" cx="90.00" cy="806.04" r="4" fill="#7c3aed"><title>amaterassu17/rl_microservice_grouped_scaler | stars=0, problems=1</title></circle>
-<circle class="dot" cx="90.00" cy="806.04" r="4" fill="#7c3aed"><title>arthur-b-devops/old_helm_charts | stars=0, problems=1</title></circle>
+<circle class="dot" cx="1260.00" cy="808.55" r="4" fill="#7c3aed"><title>tencent/weknora | stars=15678, problems=1</title></circle>
+<circle class="dot" cx="1209.74" cy="808.55" r="4" fill="#7c3aed"><title>bitnami/charts | stars=10353, problems=1</title></circle>
+<circle class="dot" cx="1209.74" cy="808.55" r="4" fill="#7c3aed"><title>bitnami/charts | stars=10353, problems=1</title></circle>
+<circle class="dot" cx="1163.33" cy="808.55" r="4" fill="#7c3aed"><title>feast-dev/feast | stars=7057, problems=1</title></circle>
+<circle class="dot" cx="1146.02" cy="807.11" r="4" fill="#7c3aed"><title>prometheus-community/helm-charts | stars=6117, problems=2</title></circle>
+<circle class="dot" cx="1063.68" cy="808.55" r="4" fill="#7c3aed"><title>collabnix/kubelabs | stars=3099, problems=1</title></circle>
+<circle class="dot" cx="1015.87" cy="808.55" r="4" fill="#7c3aed"><title>cozystack/cozystack | stars=2088, problems=1</title></circle>
+<circle class="dot" cx="1010.11" cy="808.55" r="4" fill="#7c3aed"><title>grafana/helm-charts | stars=1991, problems=1</title></circle>
+<circle class="dot" cx="1004.00" cy="807.11" r="4" fill="#7c3aed"><title>fj-oms/oms-erp | stars=1893, problems=2</title></circle>
+<circle class="dot" cx="1002.52" cy="808.55" r="4" fill="#7c3aed"><title>microsoft/mssql-docker | stars=1870, problems=1</title></circle>
+<circle class="dot" cx="986.12" cy="808.55" r="4" fill="#7c3aed"><title>containers/kubernetes-mcp-server | stars=1633, problems=1</title></circle>
+<circle class="dot" cx="974.70" cy="808.55" r="4" fill="#7c3aed"><title>pluralsh/plural | stars=1486, problems=1</title></circle>
+<circle class="dot" cx="962.55" cy="804.22" r="4" fill="#7c3aed"><title>trueforge-org/truecharts | stars=1344, problems=4</title></circle>
+<circle class="dot" cx="946.39" cy="801.33" r="4" fill="#7c3aed"><title>mobilecoinfoundation/mobilecoin | stars=1176, problems=6</title></circle>
+<circle class="dot" cx="926.04" cy="808.55" r="4" fill="#7c3aed"><title>slurm-personal/school-dev-k8s | stars=994, problems=1</title></circle>
+<circle class="dot" cx="901.42" cy="808.55" r="4" fill="#7c3aed"><title>kubeflow/arena | stars=811, problems=1</title></circle>
+<circle class="dot" cx="888.36" cy="808.55" r="4" fill="#7c3aed"><title>fluxninja/aperture | stars=728, problems=1</title></circle>
+<circle class="dot" cx="850.66" cy="808.55" r="4" fill="#7c3aed"><title>banzaicloud/istio-operator | stars=533, problems=1</title></circle>
+<circle class="dot" cx="845.80" cy="794.10" r="4" fill="#7c3aed"><title>webankfintech/prophecis | stars=512, problems=11</title></circle>
+<circle class="dot" cx="824.15" cy="808.55" r="4" fill="#7c3aed"><title>rancher/charts | stars=428, problems=1</title></circle>
+<circle class="dot" cx="821.00" cy="808.55" r="4" fill="#7c3aed"><title>datadog/helm-charts | stars=417, problems=1</title></circle>
+<circle class="dot" cx="806.88" cy="808.55" r="4" fill="#7c3aed"><title>radondb/radondb-mysql-kubernetes | stars=371, problems=1</title></circle>
+<circle class="dot" cx="799.84" cy="808.55" r="4" fill="#7c3aed"><title>truenas/charts | stars=350, problems=1</title></circle>
+<circle class="dot" cx="790.15" cy="808.55" r="4" fill="#7c3aed"><title>instantlinux/docker-tools | stars=323, problems=1</title></circle>
+<circle class="dot" cx="785.19" cy="804.22" r="4" fill="#7c3aed"><title>ibm/charts | stars=310, problems=4</title></circle>
+<circle class="dot" cx="777.97" cy="807.11" r="4" fill="#7c3aed"><title>mercedes-benz/dna | stars=292, problems=2</title></circle>
+<circle class="dot" cx="769.40" cy="808.55" r="4" fill="#7c3aed"><title>hydrospheredata/hydro-serving | stars=272, problems=1</title></circle>
+<circle class="dot" cx="734.71" cy="807.11" r="4" fill="#7c3aed"><title>llm-d/llm-d-router | stars=204, problems=2</title></circle>
+<circle class="dot" cx="733.52" cy="807.11" r="4" fill="#7c3aed"><title>jahstreetorg/spark-on-kubernetes-helm | stars=202, problems=2</title></circle>
+<circle class="dot" cx="714.85" cy="808.55" r="4" fill="#7c3aed"><title>osm-seed/osm-seed | stars=173, problems=1</title></circle>
+<circle class="dot" cx="672.84" cy="807.11" r="4" fill="#7c3aed"><title>centerforopenscience/helm-charts | stars=122, problems=2</title></circle>
+<circle class="dot" cx="654.82" cy="808.55" r="4" fill="#7c3aed"><title>0xpolygonid/issuer-node | stars=105, problems=1</title></circle>
+<circle class="dot" cx="640.27" cy="807.11" r="4" fill="#7c3aed"><title>companyinfo/helm-charts | stars=93, problems=2</title></circle>
+<circle class="dot" cx="632.28" cy="808.55" r="4" fill="#7c3aed"><title>rancher/rke2-charts | stars=87, problems=1</title></circle>
+<circle class="dot" cx="617.67" cy="808.55" r="4" fill="#7c3aed"><title>obmondo/kubeaid | stars=77, problems=1</title></circle>
+<circle class="dot" cx="617.67" cy="718.95" r="4" fill="#7c3aed"><title>nicholaswilde/helm-charts | stars=77, problems=63</title></circle>
+<circle class="dot" cx="617.67" cy="718.95" r="4" fill="#7c3aed"><title>nicholaswilde/helm-charts | stars=77, problems=63</title></circle>
+<circle class="dot" cx="593.71" cy="808.55" r="4" fill="#7c3aed"><title>polarismesh/polaris-controller | stars=63, problems=1</title></circle>
+<circle class="dot" cx="587.90" cy="808.55" r="4" fill="#7c3aed"><title>rancher/partner-charts | stars=60, problems=1</title></circle>
+<circle class="dot" cx="579.68" cy="808.55" r="4" fill="#7c3aed"><title>lianqingsec/nucleipocgather | stars=56, problems=1</title></circle>
+<circle class="dot" cx="575.36" cy="792.66" r="4" fill="#7c3aed"><title>elastisys/compliantkubernetes-apps | stars=54, problems=12</title></circle>
+<circle class="dot" cx="575.36" cy="808.55" r="4" fill="#7c3aed"><title>wiremind/wiremind-helm-charts | stars=54, problems=1</title></circle>
+<circle class="dot" cx="568.56" cy="541.17" r="4" fill="#7c3aed"><title>beclab/apps | stars=51, problems=186</title></circle>
+<circle class="dot" cx="568.56" cy="808.55" r="4" fill="#7c3aed"><title>bytle/kubee | stars=51, problems=1</title></circle>
+<circle class="dot" cx="566.21" cy="808.55" r="4" fill="#7c3aed"><title>tmforum-oda/oda-canvas | stars=50, problems=1</title></circle>
+<circle class="dot" cx="558.87" cy="791.21" r="4" fill="#7c3aed"><title>industryfusion/digitaltwin | stars=47, problems=13</title></circle>
+<circle class="dot" cx="553.71" cy="808.55" r="4" fill="#7c3aed"><title>boozallen/aissemble | stars=45, problems=1</title></circle>
+<circle class="dot" cx="545.55" cy="807.11" r="4" fill="#7c3aed"><title>tkestack/charts | stars=42, problems=2</title></circle>
+<circle class="dot" cx="539.78" cy="807.11" r="4" fill="#7c3aed"><title>sapcc/helm-charts | stars=40, problems=2</title></circle>
+<circle class="dot" cx="530.57" cy="633.67" r="4" fill="#7c3aed"><title>acuvity/mcp-servers-registry | stars=37, problems=122</title></circle>
+<circle class="dot" cx="524.03" cy="808.55" r="4" fill="#7c3aed"><title>k8s-home-lab/helm-charts | stars=35, problems=1</title></circle>
+<circle class="dot" cx="505.91" cy="808.55" r="4" fill="#7c3aed"><title>neuroxhq/helm-chart-neurox-control | stars=30, problems=1</title></circle>
+<circle class="dot" cx="501.94" cy="802.77" r="4" fill="#7c3aed"><title>eugenmayer/helm-charts | stars=29, problems=5</title></circle>
+<circle class="dot" cx="501.94" cy="802.77" r="4" fill="#7c3aed"><title>eugenmayer/helm-charts | stars=29, problems=5</title></circle>
+<circle class="dot" cx="489.18" cy="808.55" r="4" fill="#7c3aed"><title>pluralsh/console | stars=26, problems=1</title></circle>
+<circle class="dot" cx="474.92" cy="646.68" r="4" fill="#7c3aed"><title>turbonomic/t8c-install | stars=23, problems=113</title></circle>
+<circle class="dot" cx="469.76" cy="805.66" r="4" fill="#7c3aed"><title>yakecloud/yake | stars=22, problems=3</title></circle>
+<circle class="dot" cx="464.38" cy="808.55" r="4" fill="#7c3aed"><title>carbon-twelve-c12/supernova | stars=21, problems=1</title></circle>
+<circle class="dot" cx="464.38" cy="808.55" r="4" fill="#7c3aed"><title>greptimeteam/helm-charts | stars=21, problems=1</title></circle>
+<circle class="dot" cx="458.74" cy="808.55" r="4" fill="#7c3aed"><title>k0rdent/catalog | stars=20, problems=1</title></circle>
+<circle class="dot" cx="458.74" cy="807.11" r="4" fill="#7c3aed"><title>mrybas/k8s-bootstrap | stars=20, problems=2</title></circle>
+<circle class="dot" cx="452.83" cy="808.55" r="4" fill="#7c3aed"><title>junghoon2/k8s-class | stars=19, problems=1</title></circle>
+<circle class="dot" cx="446.62" cy="808.55" r="4" fill="#7c3aed"><title>silogen/cluster-forge | stars=18, problems=1</title></circle>
+<circle class="dot" cx="440.07" cy="808.55" r="4" fill="#7c3aed"><title>ai-solution-eng/frameworks | stars=17, problems=1</title></circle>
+<circle class="dot" cx="440.07" cy="808.55" r="4" fill="#7c3aed"><title>wenerme/kube-stub-cluster | stars=17, problems=1</title></circle>
+<circle class="dot" cx="433.15" cy="798.44" r="4" fill="#7c3aed"><title>thienantrinh/product-search | stars=16, problems=8</title></circle>
+<circle class="dot" cx="433.15" cy="808.55" r="4" fill="#7c3aed"><title>nebius/nebius-k8s-applications | stars=16, problems=1</title></circle>
+<circle class="dot" cx="425.81" cy="808.55" r="4" fill="#7c3aed"><title>suse-edge/charts | stars=15, problems=1</title></circle>
+<circle class="dot" cx="425.81" cy="808.55" r="4" fill="#7c3aed"><title>wx-chevalier/k8s-examples | stars=15, problems=1</title></circle>
+<circle class="dot" cx="417.99" cy="808.55" r="4" fill="#7c3aed"><title>clayrisser/charts | stars=14, problems=1</title></circle>
+<circle class="dot" cx="409.63" cy="807.11" r="4" fill="#7c3aed"><title>cnrancher/pandaria-catalog | stars=13, problems=2</title></circle>
+<circle class="dot" cx="400.66" cy="807.11" r="4" fill="#7c3aed"><title>sebolabs/eks-tf-gitops | stars=12, problems=2</title></circle>
+<circle class="dot" cx="380.43" cy="808.55" r="4" fill="#7c3aed"><title>statcan/charts | stars=10, problems=1</title></circle>
+<circle class="dot" cx="380.43" cy="808.55" r="4" fill="#7c3aed"><title>jordanopensource/charts | stars=10, problems=1</title></circle>
+<circle class="dot" cx="380.43" cy="808.55" r="4" fill="#7c3aed"><title>jugatsu/microservices | stars=10, problems=1</title></circle>
+<circle class="dot" cx="380.43" cy="808.55" r="4" fill="#7c3aed"><title>llajas/homelab | stars=10, problems=1</title></circle>
+<circle class="dot" cx="380.43" cy="807.11" r="4" fill="#7c3aed"><title>matihost/monorepo | stars=10, problems=2</title></circle>
+<circle class="dot" cx="380.43" cy="808.55" r="4" fill="#7c3aed"><title>replicatedhq/chartsmith | stars=10, problems=1</title></circle>
+<circle class="dot" cx="368.88" cy="791.21" r="4" fill="#7c3aed"><title>any-lia/findmytube | stars=9, problems=13</title></circle>
+<circle class="dot" cx="368.88" cy="808.55" r="4" fill="#7c3aed"><title>commercialhaskell/all-cabal-metadata | stars=9, problems=1</title></circle>
+<circle class="dot" cx="368.88" cy="759.41" r="4" fill="#7c3aed"><title>ychennay/operator-flow | stars=9, problems=35</title></circle>
+<circle class="dot" cx="356.12" cy="808.55" r="4" fill="#7c3aed"><title>easy2stake/thegraph | stars=8, problems=1</title></circle>
+<circle class="dot" cx="356.12" cy="808.55" r="4" fill="#7c3aed"><title>gravity182/homeserver | stars=8, problems=1</title></circle>
+<circle class="dot" cx="356.12" cy="807.11" r="4" fill="#7c3aed"><title>thoughtworks/byor-voting-infrastructure | stars=8, problems=2</title></circle>
+<circle class="dot" cx="341.86" cy="808.55" r="4" fill="#7c3aed"><title>twilkin/powerpi | stars=7, problems=1</title></circle>
+<circle class="dot" cx="341.86" cy="805.66" r="4" fill="#7c3aed"><title>linhng98/mess-around | stars=7, problems=3</title></circle>
+<circle class="dot" cx="341.86" cy="805.66" r="4" fill="#7c3aed"><title>safesoftware/helm-charts | stars=7, problems=3</title></circle>
+<circle class="dot" cx="325.68" cy="804.22" r="4" fill="#7c3aed"><title>anza-labs/charts | stars=6, problems=4</title></circle>
+<circle class="dot" cx="325.68" cy="808.55" r="4" fill="#7c3aed"><title>appscode-cloud/ui-wizards | stars=6, problems=1</title></circle>
+<circle class="dot" cx="325.68" cy="808.55" r="4" fill="#7c3aed"><title>joostvdg/cmg | stars=6, problems=1</title></circle>
+<circle class="dot" cx="325.68" cy="808.55" r="4" fill="#7c3aed"><title>samgabrail/env0-argocd | stars=6, problems=1</title></circle>
+<circle class="dot" cx="325.68" cy="802.77" r="4" fill="#7c3aed"><title>silogen/ai-workloads | stars=6, problems=5</title></circle>
+<circle class="dot" cx="307.01" cy="539.73" r="4" fill="#7c3aed"><title>above-os/terminus-apps | stars=5, problems=187</title></circle>
+<circle class="dot" cx="307.01" cy="808.55" r="4" fill="#7c3aed"><title>ai-on-gke/common-infra | stars=5, problems=1</title></circle>
+<circle class="dot" cx="307.01" cy="808.55" r="4" fill="#7c3aed"><title>ibuildthecloud/rancher-charts | stars=5, problems=1</title></circle>
+<circle class="dot" cx="307.01" cy="70.00" r="4" fill="#7c3aed"><title>ministryofjustice/hmpps-probation-integration-services | stars=5, problems=512</title></circle>
+<circle class="dot" cx="307.01" cy="804.22" r="4" fill="#7c3aed"><title>ppc64le/charts | stars=5, problems=4</title></circle>
+<circle class="dot" cx="307.01" cy="808.55" r="4" fill="#7c3aed"><title>wunderio/charts | stars=5, problems=1</title></circle>
+<circle class="dot" cx="284.93" cy="808.55" r="4" fill="#7c3aed"><title>socialgouv/no-package-malware | stars=4, problems=1</title></circle>
+<circle class="dot" cx="284.93" cy="805.66" r="4" fill="#7c3aed"><title>stackvista/helm-charts | stars=4, problems=3</title></circle>
+<circle class="dot" cx="284.93" cy="808.55" r="4" fill="#7c3aed"><title>anup1384/helm-charts | stars=4, problems=1</title></circle>
+<circle class="dot" cx="284.93" cy="664.02" r="4" fill="#7c3aed"><title>cap-js/cap-operator-plugin | stars=4, problems=101</title></circle>
+<circle class="dot" cx="284.93" cy="778.20" r="4" fill="#7c3aed"><title>freqq/docwire | stars=4, problems=22</title></circle>
+<circle class="dot" cx="284.93" cy="808.55" r="4" fill="#7c3aed"><title>hifer/devops | stars=4, problems=1</title></circle>
+<circle class="dot" cx="284.93" cy="808.55" r="4" fill="#7c3aed"><title>marcosviniciusi/k3s-homelab | stars=4, problems=1</title></circle>
+<circle class="dot" cx="284.93" cy="808.55" r="4" fill="#7c3aed"><title>twplatformlabs/local-platform-environment | stars=4, problems=1</title></circle>
+<circle class="dot" cx="257.90" cy="808.55" r="4" fill="#7c3aed"><title>aisphere/ffdl-trainer | stars=3, problems=1</title></circle>
+<circle class="dot" cx="257.90" cy="808.55" r="4" fill="#7c3aed"><title>makhuta/truecharts-archive-scale-catalog | stars=3, problems=1</title></circle>
+<circle class="dot" cx="257.90" cy="808.55" r="4" fill="#7c3aed"><title>megawiz-dev-team/asgard | stars=3, problems=1</title></circle>
+<circle class="dot" cx="257.90" cy="808.55" r="4" fill="#7c3aed"><title>obsidian-owl/floe | stars=3, problems=1</title></circle>
+<circle class="dot" cx="257.90" cy="808.55" r="4" fill="#7c3aed"><title>yunjuzhen/charts | stars=3, problems=1</title></circle>
+<circle class="dot" cx="257.90" cy="808.55" r="4" fill="#7c3aed"><title>joshleecreates/clickhouse-opentelemetry-iac | stars=3, problems=1</title></circle>
+<circle class="dot" cx="257.90" cy="759.41" r="4" fill="#7c3aed"><title>owulveryck/khappygo | stars=3, problems=35</title></circle>
+<circle class="dot" cx="257.90" cy="808.55" r="4" fill="#7c3aed"><title>pluralsh/plural-helm-charts | stars=3, problems=1</title></circle>
+<circle class="dot" cx="257.90" cy="808.55" r="4" fill="#7c3aed"><title>rancher/ob-team-charts | stars=3, problems=1</title></circle>
+<circle class="dot" cx="257.90" cy="792.66" r="4" fill="#7c3aed"><title>szpaczyna/rpi-k3s | stars=3, problems=12</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>andrew-su-0718/zelos-image | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>apasofttraining/cursohelm | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="785.43" r="4" fill="#7c3aed"><title>edengineering/bevel-besu | stars=2, problems=17</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>kevmcarp/truecharts-catalog-fork | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>neuralegion/helmcharts | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>sureya/airflow_k8s_executor | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="807.11" r="4" fill="#7c3aed"><title>cheyang/arena-spark | stars=2, problems=2</title></circle>
+<circle class="dot" cx="223.06" cy="801.33" r="4" fill="#7c3aed"><title>erost/vdz26-demo-fleet-commander | stars=2, problems=6</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>ethpandaops/whisk-devnets | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>galserg/kubetest | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>lucidworks/ocp-fusion-helm-charts | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>one-touch-provisioning/otp-gitops-infra | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>openshift-helm-charts/development | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="804.22" r="4" fill="#7c3aed"><title>openshift-helm-charts/sandbox | stars=2, problems=4</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>openshift-helm-charts/stage | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="671.25" r="4" fill="#7c3aed"><title>oracle-cne/catalog | stars=2, problems=96</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>otterscale/charts | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>platform-mesh/helm-charts | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>presslabs/wordcamp-london-2019 | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="785.43" r="4" fill="#7c3aed"><title>rprasad10/hyperledger-bevel | stars=2, problems=17</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>sdelrio/homelab-k3s | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>tetratelabs/charts | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>thomaswyrick/xdm-helm-chart | stars=2, problems=1</title></circle>
+<circle class="dot" cx="223.06" cy="808.55" r="4" fill="#7c3aed"><title>vineethvijay/prox-k8s-lab | stars=2, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="805.66" r="4" fill="#7c3aed"><title>2694484453/helm-repo | stars=1, problems=3</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>benmalekarim/argocd-helm | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>chinaxiaoming666/kube-prometheus-stack | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="807.11" r="4" fill="#7c3aed"><title>denismarta/prodject1 | stars=1, problems=2</title></circle>
+<circle class="dot" cx="173.95" cy="807.11" r="4" fill="#7c3aed"><title>eosc-lot-1/helm-charts | stars=1, problems=2</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>kapil-bhalodiya/e-commerce | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>kapil-bhalodiya/e-commerce-platform | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="807.11" r="4" fill="#7c3aed"><title>pro-robotech/helmfile-manifests | stars=1, problems=2</title></circle>
+<circle class="dot" cx="173.95" cy="807.11" r="4" fill="#7c3aed"><title>pilotdataplatform/helm-charts | stars=1, problems=2</title></circle>
+<circle class="dot" cx="173.95" cy="805.66" r="4" fill="#7c3aed"><title>smartx-team/smartx-k8s | stars=1, problems=3</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>tsmc-nycu-lab-13/infrastructures | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>adstanley/archive | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>azaurus1/homelab | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="801.33" r="4" fill="#7c3aed"><title>cisco-open/appdynamics-k8s-webhook-instrumentor | stars=1, problems=6</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>davidnuneslima/devops-sre-lab | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>dbgjerez/helm-spring-boot-chart | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>devops-360-online/go-with-me-ml | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>dm3drummer/arducharts | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>epoch8/helm-charts | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>flashiam12/strategic-next-best-offer | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>hawtio/hawtio-online-console-plugin | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>hey101/scale-catalog | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>highmobility/helm-charts | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>hmcts/hmcts-charts | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>hmcts/probate-frontend | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>huytl81/excercise | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>iamkhattar/homelab | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>in2workspace/in2-dome-gitops | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>joctan-tec/2023-02-2021069671-ic4302 | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>laurelmay/dynamic-route53-rs | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>lorenzofratini1998/moneyverse | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>matic-insurance/helm-charts | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>ministryofjustice/laa-amend-a-claim | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>neuroxhq/helm-chart-neurox-workload | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>osherlevi7/dev | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>piliphulko/marketplace-example | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>roman009/go-rust | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="807.11" r="4" fill="#7c3aed"><title>sujan060/testing111 | stars=1, problems=2</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>tetratelabs/helm-charts | stars=1, problems=1</title></circle>
+<circle class="dot" cx="173.95" cy="801.33" r="4" fill="#7c3aed"><title>uc2-io/uc2-gitops | stars=1, problems=6</title></circle>
+<circle class="dot" cx="173.95" cy="808.55" r="4" fill="#7c3aed"><title>wiredquill/ai-demos | stars=1, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>amaterassu17/rl_microservice_grouped_scaler | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>ammar-taimoori/speechmatics-helm-chart | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>arielevs/kubernetes-helm-charts | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>arthur-b-devops/old_helm_charts | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>arvigenterprises/integration-tests-bluegreen | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>assemblerbossss/tools_and_manuals | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>bygx-wcr/magma_nb-iot | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>blastz13/quality_reducer | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>cerit-sc/rancher-apps-secure | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>calebsargeant/helm-charts | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>chalupa-tech/chalupa-tech-local | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>cloudlargescale-uclouvain/c2b2 | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>del-org/s7mensah | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>dakenviy/my-terraform | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>dystopian00/truecharts | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="785.43" r="4" fill="#7c3aed"><title>edengineering/corda-bevel | stars=0, problems=17</title></circle>
+<circle class="dot" cx="90.00" cy="799.88" r="4" fill="#7c3aed"><title>felina22/helm | stars=0, problems=7</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>feederhigh5/master-thesis-poc | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>genocs/genocs-argocd | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>govstackworkinggroup/sandbox-bb-identity | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>groomc4/c4ang-infra | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="786.88" r="4" fill="#7c3aed"><title>heigvd/albasim-catalog | stars=0, problems=16</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>helixdevelopment/helixgitpx | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>icicle-ai/openpass | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>jjimmyflynn/laravel-eks | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>jaebytes/truecharts | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>keshari07/kubernetes_28_29_september_2024 | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>lbrinkmann/machine_culture_machines | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>ltkh/minikube | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="804.22" r="4" fill="#7c3aed"><title>leelisker/helm | stars=0, problems=4</title></circle>
+<circle class="dot" cx="90.00" cy="792.66" r="4" fill="#7c3aed"><title>maap-project/maap-edav-esa-back | stars=0, problems=12</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>must-cloud/osh | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>mainuddin-rizvi/devops | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>mark4562/truenas-scale | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>musaiba/research-investigation-tools | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="807.11" r="4" fill="#7c3aed"><title>mxblu/tcharts | stars=0, problems=2</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>my-digi-id/ssi-helm-charts | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="717.50" r="4" fill="#7c3aed"><title>nagakninja/istio-workshop | stars=0, problems=64</title></circle>
+<circle class="dot" cx="90.00" cy="807.11" r="4" fill="#7c3aed"><title>opensourceconsulting/playcekube-charts | stars=0, problems=2</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>orihoch/sk8s-ops | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>otus-devops-2022-02/saintjb_microservices | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>parkkyuil/bluezone-map | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>pauljequann/the-lab | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="804.22" r="4" fill="#7c3aed"><title>rachelmovsisian/platform_engineering | stars=0, problems=4</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>ramiro-porto/atlas | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="729.06" r="4" fill="#7c3aed"><title>rangulo160503/cloud-native-observability-platform | stars=0, problems=56</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>ridhorezi/microservices | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>riskin1999/arena-appwrapper-volcano | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="807.11" r="4" fill="#7c3aed"><title>salesconnection/sc-helm-charts | stars=0, problems=2</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>settlemintindia/privado-id-issuer-node | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>shadowcyber99/gmt-nm | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>shaharyarshakir/devops-practice | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>sirobi/airflow_k8s_executor | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>stopdenbus/helm-charts | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>supercoolalan/homelab-manifests | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="798.44" r="4" fill="#7c3aed"><title>tp1-outermsa/msa-infra-main | stars=0, problems=8</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>timkhch/school-dev-k8s | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>trevorsquillario/idrac-telemetry-ansible-demo | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>trivialjavabackender/infrastructure-learn | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>umar15071/cloud_datacenters_labs | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>yuzu815/truenasscalearchive | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>zedai00/didegov | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>aashkulkarni/helm | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>abhayjoshi201/cosmocloud-deploy | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>abhilashindulkar/misc | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="807.11" r="4" fill="#7c3aed"><title>abimaelrsergio/abimoney | stars=0, problems=2</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>acaisoft/bolt-platform-helm | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>actions-marketplace-validations/linuxsuren_api-testing | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>aicacia/ts-auth | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>aicanhelp/ai-cloud | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>alb3rtobr/geode-cloudnative-wan-replication | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>albinojimy/neural-hive-mind | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>alnav3/argocd-charts | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>amjadshad/devops | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>andgit7/repo2 | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>anmol372/matrix-chart | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>anzerr/catalog | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>artichoked1/ferritecms-chart | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>arychj/argocd | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>atbnet/az | stars=0, problems=1</title></circle>
+<circle class="dot" cx="90.00" cy="807.11" r="4" fill="#7c3aed"><title>beantownpub/helm | stars=0, problems=2</title></circle>
+<circle class="dot" cx="90.00" cy="808.55" r="4" fill="#7c3aed"><title>bgarcia-elastic/tfk8 | stars=0, problems=1</title></circle>
 </svg>
