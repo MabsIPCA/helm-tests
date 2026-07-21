@@ -2,3 +2,9 @@
 */.env
 helm_fetcher/cloned
 .idea
+
+# Python bytecode caches (e.g. helm_fetcher/scripts/__pycache__)
+__pycache__/
+
+# Thesis is maintained as its own nested git repository
+thesis/
