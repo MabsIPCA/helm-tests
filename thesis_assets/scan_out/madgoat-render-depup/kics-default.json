@@ -1,0 +1,146 @@
+{
+	"kics_version": "development",
+	"files_scanned": 8,
+	"lines_scanned": 550,
+	"files_parsed": 2,
+	"lines_parsed": 294,
+	"lines_ignored": 12,
+	"files_failed_to_scan": 0,
+	"queries_total": 716,
+	"queries_failed_to_execute": 0,
+	"queries_failed_to_compute_similarity_id": 0,
+	"scan_id": "console",
+	"severity_counters": {
+		"CRITICAL": 0,
+		"HIGH": 6,
+		"INFO": 0,
+		"LOW": 0,
+		"MEDIUM": 0,
+		"TRACE": 0
+	},
+	"total_counter": 6,
+	"total_bom_resources": 0,
+	"start": "2026-07-23T02:24:35.147315282+01:00",
+	"end": "2026-07-23T02:24:38.585311472+01:00",
+	"paths": [
+		"/mnt/c/Users/miabs/GolandProjects/mad-deployment-service/helm/render-problems/madgoat-render",
+		"/tmp/kicsv2/assets/queries",
+		"/tmp/kicsv2/assets/libraries"
+	],
+	"queries": [
+		{
+			"query_name": "Passwords And Secrets - Generic Password",
+			"query_id": "487f4be7-3fd9-4506-a07a-eae252180c08",
+			"query_url": "https://docs.kics.io/latest/secrets/",
+			"severity": "HIGH",
+			"platform": "Common",
+			"cwe": "798",
+			"risk_score": "7.8",
+			"cloud_provider": "COMMON",
+			"category": "Secret Management",
+			"experimental": false,
+			"description": "Query to find passwords and secrets in infrastructure code.",
+			"description_id": "d69d8a89",
+			"files": [
+				{
+					"file_name": "../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml",
+					"similarity_id": "970a49c821962c08076d2c639e0f73b7de0c06e61d707e985ee65fce68c846cc",
+					"line": 214,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "Hardcoded secret key appears in source"
+				}
+			]
+		},
+		{
+			"query_name": "Passwords And Secrets - Generic Secret",
+			"query_id": "3e2d3b2f-c22a-4df1-9cc6-a7a0aebb0c99",
+			"query_url": "https://docs.kics.io/latest/secrets/",
+			"severity": "HIGH",
+			"platform": "Common",
+			"cwe": "798",
+			"risk_score": "7.8",
+			"cloud_provider": "COMMON",
+			"category": "Secret Management",
+			"experimental": false,
+			"description": "Query to find passwords and secrets in infrastructure code.",
+			"description_id": "d69d8a89",
+			"files": [
+				{
+					"file_name": "../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml",
+					"similarity_id": "6eb205634b372071b1a034bc06d9c488e0da048be2ef175af26500b1ba95b506",
+					"line": 243,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "Hardcoded secret key appears in source"
+				},
+				{
+					"file_name": "../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml",
+					"similarity_id": "7f39a652b6e86456c4d8cf8b9312b4968aa20f06faa7b89bb85e0117b6cd5390",
+					"line": 226,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "Hardcoded secret key appears in source"
+				}
+			]
+		},
+		{
+			"query_name": "Passwords And Secrets - Password in URL",
+			"query_id": "c4d3b58a-e6d4-450f-9340-04f1e702eaae",
+			"query_url": "https://docs.kics.io/latest/secrets/",
+			"severity": "HIGH",
+			"platform": "Common",
+			"cwe": "798",
+			"risk_score": "7.8",
+			"cloud_provider": "COMMON",
+			"category": "Secret Management",
+			"experimental": false,
+			"description": "Query to find passwords and secrets in infrastructure code.",
+			"description_id": "d69d8a89",
+			"files": [
+				{
+					"file_name": "../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml",
+					"similarity_id": "94212f090e223d2d442e215bdd3884852e22ef539ce7e47f13b9e96ea42060d1",
+					"line": 218,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "Hardcoded secret key appears in source"
+				},
+				{
+					"file_name": "../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml",
+					"similarity_id": "c28e0e381a5d9725ac679fb25ab204f5bcf14a67d7750f3ae53c418ce54eab5b",
+					"line": 252,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "Hardcoded secret key appears in source"
+				},
+				{
+					"file_name": "../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml",
+					"similarity_id": "5829e2fc7f610eb796443c98737e36b1c15672b2e53044d9abba3c4088aa6f86",
+					"line": 247,
+					"issue_type": "RedundantAttribute",
+					"search_key": "",
+					"search_line": 0,
+					"search_value": "",
+					"expected_value": "Hardcoded secret key should not appear in source",
+					"actual_value": "Hardcoded secret key appears in source"
+				}
+			]
+		}
+	]
+}

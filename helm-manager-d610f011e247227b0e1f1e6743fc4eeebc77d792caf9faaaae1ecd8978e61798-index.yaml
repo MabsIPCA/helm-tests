@@ -1,0 +1,4062 @@
+apiVersion: v1
+entries:
+  feast:
+  - apiVersion: v1
+    created: "2026-07-20T13:39:07.861211397Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.65.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.65.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: f8833e7aeb473f6afb833adaf02bc9295cce1d347bcf9f65c90592aa373cade2
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.65.0.tgz
+    version: 0.65.0
+  - apiVersion: v1
+    created: "2026-06-13T11:37:28.44769336Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.64.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.64.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: cc6fd36da6090e2b428e07c92d2d76a51eaf56b0fb52fd1d7753f948f03a883d
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.64.0.tgz
+    version: 0.64.0
+  - apiVersion: v1
+    created: "2026-05-04T04:32:57.428626334Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.63.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.63.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 804034e2632c3240aec5d3032e3f60c296ee904cd1d02c7af95fa5fe06e66628
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.63.0.tgz
+    version: 0.63.0
+  - apiVersion: v1
+    created: "2026-04-08T14:36:55.121498506Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.62.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.62.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: be56ef7c2447958a9fabe3ddf78fe861d6d069ee9dc5e046959f7981dd1e4584
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.62.0.tgz
+    version: 0.62.0
+  - apiVersion: v1
+    created: "2026-03-10T20:41:20.5567712Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.61.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.61.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 34df0449604f62d88b10f3caa47ad57fe3a89d87842cf105dd7434e9972c9689
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.61.0.tgz
+    version: 0.61.0
+  - apiVersion: v1
+    created: "2026-02-17T14:12:24.221377519Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.60.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.60.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 39720f1a3b8a3fc3540cd929f59c53a98a5caaca1c75c94a6ec5d09d81ecb65a
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.60.0.tgz
+    version: 0.60.0
+  - apiVersion: v1
+    created: "2026-01-16T21:21:51.396522203Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.59.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.59.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 27407b8189a6eca53f1af8b4687112af0f7d5c4f17635b7a3f984ff5db18fb3a
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.59.0.tgz
+    version: 0.59.0
+  - apiVersion: v1
+    created: "2025-12-16T18:29:13.176188424Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.58.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.58.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 7d77086b49e237602ce5c267123129bf5857a611456bb088b2ff2d26095a18c7
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.58.0.tgz
+    version: 0.58.0
+  - apiVersion: v1
+    created: "2025-11-13T20:36:35.1010778Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.57.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.57.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 7487303025de3a64ee7d1741e189633a2dba4d7b183a9ee163567375a619ce26
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.57.0.tgz
+    version: 0.57.0
+  - apiVersion: v1
+    created: "2025-10-27T20:39:44.305529255Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.56.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.56.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: f7f6949df8d7ed1750107083146c266664d8b86804a2f006e2c2da7920541756
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.56.0.tgz
+    version: 0.56.0
+  - apiVersion: v1
+    created: "2025-10-14T14:52:41.506365127Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.55.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.55.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 7e82fd452d1449a826c86560d71a655029d9dcf403b0155e0d5268fa439894f9
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.55.0.tgz
+    version: 0.55.0
+  - apiVersion: v1
+    created: "2025-09-30T12:54:31.166219345Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.54.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.54.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: d61c74ca3d9b71e94f5231b878a510d4cb6a608f5842d6df905c578d26593add
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.54.0.tgz
+    version: 0.54.0
+  - apiVersion: v1
+    created: "2025-08-30T04:09:27.722770427Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.53.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.53.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: a8184344637a039f80d0e12019cf739f6722f6792f61111c69b29d435406a3a6
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.53.0.tgz
+    version: 0.53.0
+  - apiVersion: v1
+    created: "2025-08-14T13:30:38.196891844Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.52.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.52.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: b6435ad2690a9e53e8bd9861bc41fb8dad07287efd604eedacd98afc187d4c80
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.52.0.tgz
+    version: 0.52.0
+  - apiVersion: v1
+    created: "2025-07-21T21:03:47.703813031Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.51.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.51.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 79a2f93516456eb3f29d8a8e5046e6463670a456daa15769877fe0018b7f3d82
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.51.0.tgz
+    version: 0.51.0
+  - apiVersion: v1
+    created: "2025-07-01T14:56:28.261825365Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.50.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.50.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 66b1df41b4a14dfab94fb8169e7fdb107e3a61f82c941d95c328041e97b39a86
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.50.0.tgz
+    version: 0.50.0
+  - apiVersion: v1
+    created: "2025-04-29T13:25:53.688498779Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.49.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.49.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 4c3893fdd7776a7ff9d2e3f1b5ed6daccd11677c4086108fa8f901a7dcbada64
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.49.0.tgz
+    version: 0.49.0
+  - apiVersion: v1
+    created: "2025-04-08T17:48:27.232777513Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.48.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.48.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 06c8cfdf4590bdcfea92d027a4adba2bb5358df27d13fccb76c9735a654c99d7
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.48.1.tgz
+    version: 0.48.1
+  - apiVersion: v1
+    created: "2025-04-07T22:45:12.838935367Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.48.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.48.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: c0742f77938e86db8a23c702c402117fbd9663cf7dc4d63f55b1823c984ebd32
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.48.0.tgz
+    version: 0.48.0
+  - apiVersion: v1
+    created: "2025-03-11T02:00:07.67782277Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.47.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.47.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: dd1f7a5e7a69dd3c77636f049f172d082cfc40a42ba7f0973b0e396ec9138f9f
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.47.0.tgz
+    version: 0.47.0
+  - apiVersion: v1
+    created: "2025-02-17T22:33:51.959174272Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.46.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.46.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 7e04fc0b2c653f56b9fd849f0f24429e8a1636e000d434681493691e74c24933
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.46.0.tgz
+    version: 0.46.0
+  - apiVersion: v1
+    created: "2025-02-04T20:24:44.864659085Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.45.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.45.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 7a7eceba09c27b0d996fa2ac39c36b43f7facf2e38d4929b91437729c8a5aeef
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.45.0.tgz
+    version: 0.45.0
+  - apiVersion: v1
+    created: "2025-02-04T19:26:17.832690726Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.44.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.44.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: b5609d21363daf96037ba6de752f9a5c9ec1e413fdc0e6d26ebd1437a774dd03
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.44.0.tgz
+    version: 0.44.0
+  - apiVersion: v1
+    created: "2025-01-23T03:40:06.278821128Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.43.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.43.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: ec2a0c4a5e2445ac1972f8dc596edfa6e9429b0fb327437e5ede46123b658ca3
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.43.0.tgz
+    version: 0.43.0
+  - apiVersion: v1
+    created: "2024-12-06T20:05:57.07668149Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.42.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.42.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 9bc4e3488b6c22ca4480f54814e4882648bcd6800e8274499f1f7bbd1aba3061
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.42.0.tgz
+    version: 0.42.0
+  - apiVersion: v1
+    created: "2024-10-26T18:25:10.578160413Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.41.3
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.41.3
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 01a720cb3d80c72a74aa74ba6e881352dd22d7d6089d7f9f5593052404c6a344
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.41.3.tgz
+    version: 0.41.3
+  - apiVersion: v1
+    created: "2024-10-26T16:54:59.720769948Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.41.2
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.41.2
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 10ac4b8c45c67e0d78c1e9c0e0e068f3a07ef5714e231d0b39ca6fe16034ef6b
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.41.2.tgz
+    version: 0.41.2
+  - apiVersion: v1
+    created: "2024-10-26T14:42:31.208080249Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.41.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.41.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 14e8bf8315cf33fb6a812525e3dfaf8bfa5b2d8f6159fbc5c4e7d1e4833190dc
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.41.1.tgz
+    version: 0.41.1
+  - apiVersion: v1
+    created: "2024-10-26T02:42:11.449701625Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.41.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.41.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: b3863e9ac3da5bc9d88e545a18dd6892c045ff75dc1826047e141d5464db559c
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.41.0.tgz
+    version: 0.41.0
+  - apiVersion: v1
+    created: "2024-08-09T12:21:54.919461816Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.40.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.40.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: ba0710d7a7d88957390f659ad1253e3c526288020d98602f1ffc92d8f6c19c6a
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.40.1.tgz
+    version: 0.40.1
+  - apiVersion: v1
+    created: "2024-07-31T19:22:24.807164817Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.40.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.40.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: b164e84e4b214f6c300aaecd5e315d721c7231f7cd793aebf9e03f918304d709
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.40.0.tgz
+    version: 0.40.0
+  - apiVersion: v1
+    created: "2024-07-04T09:32:43.27780366Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.39.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.39.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 43a29d45b0f6db2196d605b99f4396af1e69f7450ba45ae403a662e6f3f8d3ea
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.39.1.tgz
+    version: 0.39.1
+  - apiVersion: v1
+    created: "2024-06-18T17:00:07.525581972Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.39.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.39.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 9e109fec99ab4d8d6ff10fe438ec12bf69ab98b3922dd156aec575ebf63e62ae
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.39.0.tgz
+    version: 0.39.0
+  - apiVersion: v1
+    created: "2024-05-24T23:32:33.340301271Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.38.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.38.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 036b2258bde6809d92872cb951b38ba8aba3e19c49785fa6e61fe3a7d92cf228
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.38.0.tgz
+    version: 0.38.0
+  - apiVersion: v1
+    created: "2024-04-17T18:38:53.612869898Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.37.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.37.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 0f155323ea64daa14b1ef868822112e3f648ac4ced414618c8515529159c2cf2
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.37.1.tgz
+    version: 0.37.1
+  - apiVersion: v1
+    created: "2024-04-17T16:05:47.057508357Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.37.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.37.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 58d2c0f5363302f34b2f19aea47e345a9f3f2a17e584e8eb09715640e6bb59a1
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.37.0.tgz
+    version: 0.37.0
+  - apiVersion: v1
+    created: "2024-04-16T03:34:10.747995107Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.36.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.36.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 97fc226c14f6fc09aaccd7749df94268b1d756811d55426af65365c8ac24c6df
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.36.0.tgz
+    version: 0.36.0
+  - apiVersion: v1
+    created: "2024-01-13T06:34:19.059232558Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.35.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.35.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 611862b4a92058fbb75d0caeee52b5ae5ee7b093570e96559ef43fb7015debcb
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.35.0.tgz
+    version: 0.35.0
+  - apiVersion: v1
+    created: "2023-09-07T21:37:10.314642689Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.34.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.34.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 53683bfe9e61850cd8f3b58fe02e777c3b705cb0bd068e19fbeab126aeccfdb3
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.34.1.tgz
+    version: 0.34.1
+  - apiVersion: v1
+    created: "2023-09-07T06:54:37.59382992Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.34.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.34.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 0dc97d4d5ff4b8370baf979b94e939d11ad0d43f947a83301be03e8cf7d452b2
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.34.0.tgz
+    version: 0.34.0
+  - apiVersion: v1
+    created: "2023-08-14T03:50:08.510764579Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.33.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.33.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 4ea618b103b1654f8cc3248514b4f8793bdf4189f0cd025f822e2c611af3b328
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.33.1.tgz
+    version: 0.33.1
+  - apiVersion: v1
+    created: "2023-08-14T02:45:25.622140139Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.33.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.33.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 392910b7b070412d32ba472b45841e193ab4b52ac0350feab3e03cbf47a33727
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.33.0.tgz
+    version: 0.33.0
+  - apiVersion: v1
+    created: "2023-08-14T02:13:01.371372532Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.32.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.32.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 79115ce5260247d6a259dc37fa18ed788ba77f175554d27481a41f7edfc06e2a
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.32.1.tgz
+    version: 0.32.1
+  - apiVersion: v1
+    created: "2023-07-17T03:02:37.484099752Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.32.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.32.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 02503d75ddbed6db6339c75312ce45c14131a0f3c6336825f617feb3db46e8ef
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.32.0.tgz
+    version: 0.32.0
+  - apiVersion: v1
+    created: "2023-04-24T16:30:21.918988374Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.31.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.31.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: c7868ae917b27a92ca884660e65d79f235f92c624660241cebb4858cb8c413ed
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.31.1.tgz
+    version: 0.31.1
+  - apiVersion: v1
+    created: "2023-04-21T22:08:54.226276344Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.31.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.31.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 5b0814f68fad1d3fc372af0a8d391c165262ca8931dd1d8b690c810ea350e72e
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.31.0.tgz
+    version: 0.31.0
+  - apiVersion: v1
+    created: "2023-03-25T19:11:44.872449147Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.30.2
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.30.2
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: a5df6102827cb1ce806d7ca8b6d467b2d58d34e825f96df0ba2d6cc76f97ec46
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.30.2.tgz
+    version: 0.30.2
+  - apiVersion: v1
+    created: "2023-03-25T07:13:15.337436846Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.30.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.30.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 93a3655c9fec16be5fa44f9ef64d7f91f331924e520e72a5d144d18786a0657a
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.30.1.tgz
+    version: 0.30.1
+  - apiVersion: v1
+    created: "2023-03-24T20:21:20.685113412Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.30.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.30.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: e05109d584926e79e9ca7d815e23c153bfcdd7f7f48f79c673ab99e65be9c4fe
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.30.0.tgz
+    version: 0.30.0
+  - apiVersion: v1
+    created: "2023-01-31T01:16:23.422189321Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.29.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.29.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: de45561a2c4d5d2dac6afb3a6c8bb68eaebc3e3d3eb8dca33e069161357afce7
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.29.0.tgz
+    version: 0.29.0
+  - apiVersion: v1
+    created: "2023-01-03T09:37:01.730240978Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.28.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.28.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 932259e397397f9f9b8560b7e7e03c2e54ebb45f2e8d363ec813deb58874e197
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.28.0.tgz
+    version: 0.28.0
+  - apiVersion: v1
+    created: "2022-12-15T04:21:13.867321983Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.27.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.27.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: f4b9a88c2f0f537b467b7a12435f83e9f1f3ff0a26c75f71b5697563da1e586d
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.27.1.tgz
+    version: 0.27.1
+  - apiVersion: v1
+    created: "2022-12-05T21:51:01.87198138Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.27.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.27.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: cf6e759df67af599a9f853405405ff24690434498400f644ce802ded9b538f9b
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.27.0.tgz
+    version: 0.27.0
+  - apiVersion: v1
+    created: "2022-10-06T20:03:29.612250922Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.26.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.26.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: ed33b541b0cc8146b2933132b86cddd90bb6d05bbbb99b25ad33a1f0ec41bcb7
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.26.0.tgz
+    version: 0.26.0
+  - apiVersion: v1
+    created: "2022-10-06T18:40:53.634639825Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.25.2
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.25.2
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 97b089d4e737b755440b58226cecfc4e0736d4f2b8c45061d3773f8ae187c182
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.25.2.tgz
+    version: 0.25.2
+  - apiVersion: v1
+    created: "2022-09-30T22:58:55.348413818Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.25.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.25.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: b30aefa98f0e86cb9944a4b8cfd12e2f764bba0d13c70b128615c75f9c8b34b7
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.25.1.tgz
+    version: 0.25.1
+  - apiVersion: v1
+    created: "2022-09-20T05:52:33.936888104Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.25.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.25.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 7a87db345f3999b292392431cfa3f26c15700f23ffb0569a6ef00e39077bb4bd
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.25.0.tgz
+    version: 0.25.0
+  - apiVersion: v1
+    created: "2022-09-08T03:54:41.733018135Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.24.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.24.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 4908623a2a70da778a3b4bd1b995ba497fe231c19cc065d24f008b4ad6ad62e5
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.24.1.tgz
+    version: 0.24.1
+  - apiVersion: v1
+    created: "2022-08-25T12:04:12.328531-07:00"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.24.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.24.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: e551103f02550673e88105ea94f307746fb2f38266c708dcfa9548e8f3716b9d
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.24.0.tgz
+    version: 0.24.0
+  - apiVersion: v1
+    created: "2022-08-15T15:46:39.664475493Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.23.2
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.23.2
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 8436a54e5ee8e7194df2ad191d21afdd0915f54baabeadcc4f34d10f6803496c
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.23.2.tgz
+    version: 0.23.2
+  - apiVersion: v1
+    created: "2022-08-10T15:15:34.514578336Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.23.1
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.23.1
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: be835ceeb7bfb1b6244064006b9884d1f4f9501cab61bce559007faf43d6d9a5
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.23.1.tgz
+    version: 0.23.1
+  - apiVersion: v1
+    created: "2022-08-04T16:17:09.713722-05:00"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.23.0
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.23.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 392dac512feccd39d7526dac4ef198a0be611aec05b27a6e3f1e2412d408b30e
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.23.0.tgz
+    version: 0.23.0
+  - apiVersion: v1
+    created: "2022-10-28T23:57:45.441970873Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.22.5
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.22.5
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 4e5cd095489c8699deb040295e886a1af4abe11412e1e752dc65c65c8bd5444f
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.22.5.tgz
+    version: 0.22.5
+  - apiVersion: v1
+    created: "2022-08-15T15:13:14.869985389Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.22.4
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.22.4
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 3b5f8524f313210973810c8cb429bb01ec9e3ff9160bce115e10c460cc4a52a3
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.22.4.tgz
+    version: 0.22.4
+  - apiVersion: v1
+    created: "2022-08-10T18:55:05.122556524Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.22.3
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.22.3
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 51b62d16d15af1cffddaa98c1dc49acb623f78e1f759e6eccdad02e3bd4a0865
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.22.3.tgz
+    version: 0.22.3
+  - apiVersion: v1
+    created: "2022-07-29T04:30:43.650220395Z"
+    dependencies:
+    - alias: feature-server
+      condition: feature-server.enabled
+      name: feature-server
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.22.2
+    - alias: transformation-service
+      condition: transformation-service.enabled
+      name: transformation-service
+      repository: https://feast-helm-charts.storage.googleapis.com
+      version: 0.22.2
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.helm.sh/stable
+      version: 10.5.6
+    description: Feature store for machine learning
+    digest: 613f27781afe369cc170c5d87327ca88f977de3c2a2aecb1b17c4c54af7eb5bf
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.22.2.tgz
+    version: 0.22.2
+  - apiVersion: v1
+    created: "2022-06-29T20:30:50.993004468Z"
+    description: Feature store for machine learning
+    digest: e841be2440607f559bd01188091edc67c50435352d7761786b96400313fd8d4f
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.22.0.tgz
+    version: 0.22.0
+  - apiVersion: v1
+    created: "2022-05-17T20:36:45.625168297Z"
+    description: Feature store for machine learning
+    digest: bdb838f20a1db4735d7a1f22ccc1d60be05da2ee1101daddbfa1f64fa8ba4d3b
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.21.2.tgz
+    version: 0.21.2
+  - apiVersion: v1
+    created: "2022-05-17T20:25:03.36552451Z"
+    description: Feature store for machine learning
+    digest: c2f042036e5838f6e9568c3c500c733ffc4664e56f5fd865b96d0fd51240a4f8
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.21.1.tgz
+    version: 0.21.1
+  - apiVersion: v1
+    created: "2022-04-28T21:29:35.522739909Z"
+    description: Feature store for machine learning
+    digest: c974418a8b24cf59cb7a21940f58d528ea4a68a8c5ef7e337c0fed12ddda3594
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.20.2.tgz
+    version: 0.20.2
+  - apiVersion: v1
+    created: "2022-04-20T23:46:27.490884077Z"
+    description: Feature store for machine learning
+    digest: 67640b3c790246eedc5f87a34292e18fd19e4fda69d6959338c9064df3a414b4
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.20.1.tgz
+    version: 0.20.1
+  - apiVersion: v1
+    created: "2022-03-09T23:46:25.137184747Z"
+    description: Feature store for machine learning
+    digest: 1c52efa9899d69853701e5b76c1b2f179e88fae7e2b3afc305a2a5f5df17d284
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.19.3.tgz
+    version: 0.19.3
+  - apiVersion: v1
+    created: "2022-03-06T09:14:03.088180263Z"
+    description: Feature store for machine learning
+    digest: ef92a79a97581ceed7c1ed557a7b90df2038419b46895fe8261d0630e232aad1
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.19.2.tgz
+    version: 0.19.2
+  - apiVersion: v1
+    created: "2022-03-05T19:35:19.602646615Z"
+    description: Feature store for machine learning
+    digest: 85c8e7ddd33c7e9c773706838fc14f3be1cbdf6e35e5d4ae1dc2b5c2f4e91bd8
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.19.1.tgz
+    version: 0.19.1
+  - apiVersion: v1
+    created: "2022-02-16T01:41:13.158099655Z"
+    description: Feature store for machine learning
+    digest: ed45c3f5c0b9f7b91689ee3be091c7a2d76d31e966282f814b4555907e2a7305
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.18.1.tgz
+    version: 0.18.1
+  - apiVersion: v1
+    created: "2022-02-09T19:40:55.783182-05:00"
+    description: Feature store for machine learning
+    digest: 0d966f2d288d99092f99678961bbb2022c85addec36b01b1f183b4c729956f2e
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.18.0.tgz
+    version: 0.18.0
+  - apiVersion: v1
+    created: "2022-02-04T09:01:31.600693+08:00"
+    description: Feature store for machine learning
+    digest: 562be1fc8c348da63be7eec1a1cd2e4d07b258fc3479c85e6ba8a0ec011c1e6a
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-0.17.0.tgz
+    version: 0.17.0
+  feast-core:
+  - apiVersion: v1
+    appVersion: 0.25.0
+    created: "2021-02-28T02:44:03.136214397Z"
+    description: 'Feast Core: Feature registry for Feast.'
+    digest: af66686b1df165046755586da9acc5bebf3d0dc82f72848568b50d156c09c7d3
+    home: https://github.com/feast-dev/feast-java
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-core
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-core-0.25.0.tgz
+    version: 0.25.0
+  feast-feature-server:
+  - apiVersion: v2
+    created: "2026-07-20T13:39:08.58083028Z"
+    description: Feast Feature Server in Go or Python
+    digest: becd0ed6b23e1ab7f8c0a3cf4eac502bfc35ecf3189ad3ed460304a6955390ae
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.65.0.tgz
+    version: 0.65.0
+  - apiVersion: v2
+    created: "2026-06-13T11:37:29.304223487Z"
+    description: Feast Feature Server in Go or Python
+    digest: b1eea44be01cd18f256fe0b8e8bce87180b4d96a7227708f8b7c2cd08907117e
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.64.0.tgz
+    version: 0.64.0
+  - apiVersion: v2
+    created: "2026-05-04T04:32:58.081615876Z"
+    description: Feast Feature Server in Go or Python
+    digest: 6fee35e50c5f2192242c19a61fa777e05964d3d282245aa9c2094059da11aa28
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.63.0.tgz
+    version: 0.63.0
+  - apiVersion: v2
+    created: "2026-04-08T14:36:56.026769669Z"
+    description: Feast Feature Server in Go or Python
+    digest: 7a0c723736ecaa6ce3d03de31b749be144ee9bc399a919d5b138306509d5bd9e
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.62.0.tgz
+    version: 0.62.0
+  - apiVersion: v2
+    created: "2026-03-10T20:41:21.608568633Z"
+    description: Feast Feature Server in Go or Python
+    digest: 28bd4623a0cb617adf9c829cfd9b7e10c252ef985d3be952dc13f072a49009f3
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.61.0.tgz
+    version: 0.61.0
+  - apiVersion: v2
+    created: "2026-02-17T14:12:25.191308693Z"
+    description: Feast Feature Server in Go or Python
+    digest: b8680c264035a00e19f8afbea1f9d7727cb2f670334d27cd6a856fef9000187c
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.60.0.tgz
+    version: 0.60.0
+  - apiVersion: v2
+    created: "2026-01-16T21:21:52.023564951Z"
+    description: Feast Feature Server in Go or Python
+    digest: 0eea21c0b7a3d6698ae3cac996a62ea38aa4318bd308d75df7e4724bc3259b5a
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.59.0.tgz
+    version: 0.59.0
+  - apiVersion: v2
+    created: "2025-12-16T18:29:13.959587868Z"
+    description: Feast Feature Server in Go or Python
+    digest: 4770a9002f41eaf8b4a827858ef93dacc7d9f7e414e067b45733a46d01e32d89
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.58.0.tgz
+    version: 0.58.0
+  - apiVersion: v2
+    created: "2025-11-13T20:36:35.977041489Z"
+    description: Feast Feature Server in Go or Python
+    digest: cdd17156ad4393ba6db4763c24fda5996508403c5c0e541fa84261e8420f5ad5
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.57.0.tgz
+    version: 0.57.0
+  - apiVersion: v2
+    created: "2025-10-27T20:39:45.236041296Z"
+    description: Feast Feature Server in Go or Python
+    digest: f333b207a98112ddbc15297941b1ffe2101158ed7c731c58072207d1c93fb68a
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.56.0.tgz
+    version: 0.56.0
+  - apiVersion: v2
+    created: "2025-10-14T14:52:42.325817239Z"
+    description: Feast Feature Server in Go or Python
+    digest: b6da9c5bbf21ddd08168d666b97626dd703b33f3a4575a47bb4193e6aad42c13
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.55.0.tgz
+    version: 0.55.0
+  - apiVersion: v2
+    created: "2025-09-30T12:54:31.768378926Z"
+    description: Feast Feature Server in Go or Python
+    digest: 73e08af47f1b6939febe389419c4c944131692bb78c3502baf8cd348bde2e891
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.54.0.tgz
+    version: 0.54.0
+  - apiVersion: v2
+    created: "2025-08-30T04:09:28.639887532Z"
+    description: Feast Feature Server in Go or Python
+    digest: 811b96c6eeabb6a605396670a7dcb876d75ef40c00cb09f2d5e6a9c4c46bfdab
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.53.0.tgz
+    version: 0.53.0
+  - apiVersion: v2
+    created: "2025-08-14T13:30:39.09471962Z"
+    description: Feast Feature Server in Go or Python
+    digest: e770d7fd6e5740229241488c4f86b7554bff933672bbc5599be2a1829dc295fe
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.52.0.tgz
+    version: 0.52.0
+  - apiVersion: v2
+    created: "2025-07-21T21:03:48.618804834Z"
+    description: Feast Feature Server in Go or Python
+    digest: 43c9b3a0c499701e9bcb0d8e59a309449191e68e75f8c3dfca4c2867b2a44094
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.51.0.tgz
+    version: 0.51.0
+  - apiVersion: v2
+    created: "2025-07-01T14:56:28.95050212Z"
+    description: Feast Feature Server in Go or Python
+    digest: b6b97796f54170063172e1de01eeb73055edff997c1406b4ae9e056a568721ce
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.50.0.tgz
+    version: 0.50.0
+  - apiVersion: v2
+    created: "2025-04-29T13:25:54.570235231Z"
+    description: Feast Feature Server in Go or Python
+    digest: 1c83b04e7bf241cdc2ba40e1817f94c4723b41bfaef831c787a47688fee5d472
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.49.0.tgz
+    version: 0.49.0
+  - apiVersion: v2
+    created: "2025-04-08T17:48:27.873221963Z"
+    description: Feast Feature Server in Go or Python
+    digest: 836ff6c4870eddde9fefd25a4906d82add6297bb1e374e7533d6fe6cb6d09092
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.48.1.tgz
+    version: 0.48.1
+  - apiVersion: v2
+    created: "2025-04-07T22:45:13.569218452Z"
+    description: Feast Feature Server in Go or Python
+    digest: 858ff212d7750d4e05ae5c16eac63435af6d93e45526e21cd89a97c07a4e3b87
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.48.0.tgz
+    version: 0.48.0
+  - apiVersion: v2
+    created: "2025-03-11T02:00:08.522975534Z"
+    description: Feast Feature Server in Go or Python
+    digest: f740ba1441fa8179a6047bd58e6480cdc79da78f31895e31714fd328f9556911
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.47.0.tgz
+    version: 0.47.0
+  - apiVersion: v2
+    created: "2025-02-17T22:33:52.640655699Z"
+    description: Feast Feature Server in Go or Python
+    digest: 0ec00c0834023ee210be8f668f73e10fbbf4ba778e65e559d96153f092de3a97
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.46.0.tgz
+    version: 0.46.0
+  - apiVersion: v2
+    created: "2025-02-04T20:24:45.573919878Z"
+    description: Feast Feature Server in Go or Python
+    digest: 56d0decc10e31ffc24fa494de664194cc2e05a029142e7574a15007e38ee3cb0
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.45.0.tgz
+    version: 0.45.0
+  - apiVersion: v2
+    created: "2025-02-04T19:26:18.576163813Z"
+    description: Feast Feature Server in Go or Python
+    digest: 66deaa718ad102c6bf5cefd75cf0b0cac8ec3cbae8e99fd339bab4a9c06e224b
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.44.0.tgz
+    version: 0.44.0
+  - apiVersion: v2
+    created: "2025-01-23T03:40:07.092728886Z"
+    description: Feast Feature Server in Go or Python
+    digest: 48dd3a18f12f8b3cb964f9a55452460d0458d00b3b96ed1ccc1c74acedbbcf7b
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.43.0.tgz
+    version: 0.43.0
+  - apiVersion: v2
+    created: "2024-12-06T20:05:57.853359964Z"
+    description: Feast Feature Server in Go or Python
+    digest: 375b3ae9c4d056ce473cfce2b6c1702798c52766e3f147dd7697fd51725823d4
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.42.0.tgz
+    version: 0.42.0
+  - apiVersion: v2
+    created: "2024-10-26T18:25:11.425513499Z"
+    description: Feast Feature Server in Go or Python
+    digest: f1c6f5e9163259c7499118961a37ab4d2268838932c7a9ca0083b8c225112c45
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.41.3.tgz
+    version: 0.41.3
+  - apiVersion: v2
+    created: "2024-10-26T16:55:00.597832987Z"
+    description: Feast Feature Server in Go or Python
+    digest: d7932118e64325a9b98d54090f0885ac54d7f461612f5f8f9159145986258309
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.41.2.tgz
+    version: 0.41.2
+  - apiVersion: v2
+    created: "2024-10-26T14:42:32.090606244Z"
+    description: Feast Feature Server in Go or Python
+    digest: ac32ee12e61249a5572bd10be8487bd1e026513625e1072420e0faa1276ca7e3
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.41.1.tgz
+    version: 0.41.1
+  - apiVersion: v2
+    created: "2024-10-26T02:42:12.14298907Z"
+    description: Feast Feature Server in Go or Python
+    digest: 44334642d6956a952f18ceb4f7d56a694b261abab53c35637bdb1f20510fee1e
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.41.0.tgz
+    version: 0.41.0
+  - apiVersion: v2
+    created: "2024-08-09T12:21:55.70151746Z"
+    description: Feast Feature Server in Go or Python
+    digest: 8ea09ed35522b13779c39e30421da899176530f6126343418bd2dc75ea1adc5a
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.40.1.tgz
+    version: 0.40.1
+  - apiVersion: v2
+    created: "2024-07-31T19:22:25.648395575Z"
+    description: Feast Feature Server in Go or Python
+    digest: 60e1e52e282c1bc0340d7093c013d1c189e9be76880b297b220efdc0069aa404
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.40.0.tgz
+    version: 0.40.0
+  - apiVersion: v2
+    created: "2024-07-04T09:32:43.933944903Z"
+    description: Feast Feature Server in Go or Python
+    digest: 0d985005d47aa705c354f415c62a6380d63db0a1bc9eaf4198d4f3cc879dc305
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.39.1.tgz
+    version: 0.39.1
+  - apiVersion: v2
+    created: "2024-06-18T17:00:08.121058169Z"
+    description: Feast Feature Server in Go or Python
+    digest: 6301837fda36d806a86ccae3a40265aecda5af3d8d07fd1196879a4593fd4101
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.39.0.tgz
+    version: 0.39.0
+  - apiVersion: v2
+    created: "2024-05-24T23:32:33.918419663Z"
+    description: Feast Feature Server in Go or Python
+    digest: 4e1c2a6ec2e21397337fb18fde1e664f49636fd7043ff8bb6cd08719b169972a
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.38.0.tgz
+    version: 0.38.0
+  - apiVersion: v2
+    created: "2024-04-17T18:38:54.242477964Z"
+    description: Feast Feature Server in Go or Python
+    digest: fca3207841d52f57ba39c809732d81c63fdcfd4bf14e52b5e8fd496e1ee32f10
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.37.1.tgz
+    version: 0.37.1
+  - apiVersion: v2
+    created: "2024-04-17T16:05:47.69466221Z"
+    description: Feast Feature Server in Go or Python
+    digest: 4840ba958ea6597c4ed04a8eba78f279c53bb29bb5ef945a576c08e7748eb9c1
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.37.0.tgz
+    version: 0.37.0
+  - apiVersion: v2
+    created: "2024-04-16T03:34:11.57749285Z"
+    description: Feast Feature Server in Go or Python
+    digest: 4cfe99f86642494dc79c0f152e49e5dca6f4b649ee37ed1afb8b53795347a58c
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.36.0.tgz
+    version: 0.36.0
+  - apiVersion: v2
+    created: "2024-01-13T06:34:19.701462986Z"
+    description: Feast Feature Server in Go or Python
+    digest: a29fbe08ea615d79903fa5d9e3bc99cdd2f1183e42686419496ac06f3652103e
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.35.0.tgz
+    version: 0.35.0
+  - apiVersion: v2
+    created: "2023-09-07T21:37:10.984637782Z"
+    description: Feast Feature Server in Go or Python
+    digest: 6a0d441e98969cc53f8832d7a8fb03cfd90bc939e36e41d38fe8c955f8bee88c
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.34.1.tgz
+    version: 0.34.1
+  - apiVersion: v2
+    created: "2023-09-07T06:54:38.307054808Z"
+    description: Feast Feature Server in Go or Python
+    digest: 3f153132010e9eee8034d617d9cddfe63a9972f046a5629beade66034e732796
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.34.0.tgz
+    version: 0.34.0
+  - apiVersion: v2
+    created: "2023-08-14T03:50:09.185103307Z"
+    description: Feast Feature Server in Go or Python
+    digest: 563ca6229f099765569724fcbbbea283a0bf71849a52150fa995bdddf3505073
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.33.1.tgz
+    version: 0.33.1
+  - apiVersion: v2
+    created: "2023-08-14T02:45:26.321684568Z"
+    description: Feast Feature Server in Go or Python
+    digest: 1328af5fc95948abd0c980691f24ab88f37bc46deea54d4f876e548162f8f4ad
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.33.0.tgz
+    version: 0.33.0
+  - apiVersion: v2
+    created: "2023-08-14T02:13:02.302752684Z"
+    description: Feast Feature Server in Go or Python
+    digest: 14fcd453178f65a41c5a4355c2e79069875ba8999b6b7a1e95db1c966af7565d
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.32.1.tgz
+    version: 0.32.1
+  - apiVersion: v2
+    created: "2023-07-17T03:02:38.42835636Z"
+    description: Feast Feature Server in Go or Python
+    digest: b2a5455dbc748da403b81974fa5391c33358265e438613f0d7f2887aff80b2d4
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.32.0.tgz
+    version: 0.32.0
+  - apiVersion: v2
+    created: "2023-04-24T16:30:23.013351001Z"
+    description: Feast Feature Server in Go or Python
+    digest: 2488bdec88919a0b3b82248f49733eca3c1d36c53a9faddd5ea44fec60037f65
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.31.1.tgz
+    version: 0.31.1
+  - apiVersion: v2
+    created: "2023-04-21T22:08:54.872615401Z"
+    description: Feast Feature Server in Go or Python
+    digest: a186f9c06e286d08410921662d162f956db46627c8a06019acd747b3c155be2d
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.31.0.tgz
+    version: 0.31.0
+  - apiVersion: v2
+    created: "2023-03-25T19:11:45.69053537Z"
+    description: Feast Feature Server in Go or Python
+    digest: 4ce6a39e128531f642b6d0b28b5178f2a5469a3b29727be5145d80f481154d47
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.30.2.tgz
+    version: 0.30.2
+  - apiVersion: v2
+    created: "2023-03-25T07:13:16.126531375Z"
+    description: Feast Feature Server in Go or Python
+    digest: 13c479679da586704d24bec0d16deda60647f3a9d28b2fdad3d57088d3025721
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.30.1.tgz
+    version: 0.30.1
+  - apiVersion: v2
+    created: "2023-03-24T20:21:21.812764039Z"
+    description: Feast Feature Server in Go or Python
+    digest: 4c0f8e7682e727686b2abc15c283954f6732a78e76a56d67355b78309320e972
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.30.0.tgz
+    version: 0.30.0
+  - apiVersion: v2
+    created: "2023-01-31T01:16:24.37864671Z"
+    description: Feast Feature Server in Go or Python
+    digest: e0607480f57abf171559cd607b6ef4863883b8caf9237363dd03f94207941206
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.29.0.tgz
+    version: 0.29.0
+  - apiVersion: v2
+    created: "2023-01-03T09:37:02.628258197Z"
+    description: Feast Feature Server in Go or Python
+    digest: 934e6679d7b5566677c30e2223c7ee30326f66c05add5e64274738d09046d2f0
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.28.0.tgz
+    version: 0.28.0
+  - apiVersion: v2
+    created: "2022-12-15T04:21:14.541768461Z"
+    description: Feast Feature Server in Go or Python
+    digest: e6f8ff0e90b1d7b403a45e6970d0f16845f523819c035c5dc436fcb0be4f7799
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.27.1.tgz
+    version: 0.27.1
+  - apiVersion: v2
+    created: "2022-12-05T21:51:02.760721731Z"
+    description: Feast Feature Server in Go or Python
+    digest: 77d105d996aa3cc04a5a9855e400d5cbe0ef346fe2fe42ed2408b60164746aab
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.27.0.tgz
+    version: 0.27.0
+  - apiVersion: v2
+    created: "2022-10-06T20:03:31.40039561Z"
+    description: Feast Feature Server in Go or Python
+    digest: 88e871bfea57ef7abb5e3c49288c23e26a98e63eb679c24cfbd6fa1e762015b5
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.26.0.tgz
+    version: 0.26.0
+  - apiVersion: v2
+    created: "2022-10-06T18:40:55.43188754Z"
+    description: Feast Feature Server in Go or Python
+    digest: aa0364efc605625f4a78e6d46ef1875946e4221ef49dfdf319263d04b080856f
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.25.2.tgz
+    version: 0.25.2
+  - apiVersion: v2
+    created: "2022-09-30T22:58:56.973735927Z"
+    description: Feast Feature Server in Go or Python
+    digest: f139c63562ae475cf2825fd0412c55404ea29c78a6ea276c3e643ca0093c3213
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.25.1.tgz
+    version: 0.25.1
+  - apiVersion: v2
+    created: "2022-09-20T05:52:35.32023281Z"
+    description: Feast Feature Server in Go or Python
+    digest: 0760db004b8282d231d34e177f16f5a8a7aca895303bce6495ac69d352806b78
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.25.0.tgz
+    version: 0.25.0
+  - apiVersion: v2
+    created: "2022-09-08T03:54:44.475238038Z"
+    description: Feast Feature Server in Go or Python
+    digest: c72adba64caea1659d71611a5b21f8e83369b4291ee839d5f1f973e0ac8a77c7
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.24.1.tgz
+    version: 0.24.1
+  - apiVersion: v2
+    created: "2022-08-25T12:04:26.531257-07:00"
+    description: Feast Feature Server in Go or Python
+    digest: 0e5a9598cfa085743da858cd78c1ff7b8d8b1b19526d55ec97defecd956b5c28
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.24.0.tgz
+    version: 0.24.0
+  - apiVersion: v2
+    created: "2022-08-15T15:46:41.092758133Z"
+    description: Feast Feature Server in Go or Python
+    digest: 40e353d43c5d61cd3415abfc83f8a9e3281fee745f9decd9e0093d4e3bbd2021
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.23.2.tgz
+    version: 0.23.2
+  - apiVersion: v2
+    created: "2022-08-10T15:15:36.338954751Z"
+    description: Feast Feature Server in Go or Python
+    digest: d7e59922cb1bde13257a22cdab5fc583cd9bb0285ec49b007565df55fab689dc
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.23.1.tgz
+    version: 0.23.1
+  - apiVersion: v2
+    created: "2022-08-04T16:17:11.997453-05:00"
+    description: Feast Feature Server in Go or Python
+    digest: 6315cda8ce9f71812833e0b0840837c9948052081b25cf6562a6abab25e7a478
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.23.0.tgz
+    version: 0.23.0
+  - apiVersion: v2
+    created: "2022-10-28T23:57:46.341167351Z"
+    description: Feast Feature Server in Go or Python
+    digest: b2d71d7bac608f0e75dacbc85eaeac9e6626ae2fd4483cc4afde7205d41c994a
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.22.5.tgz
+    version: 0.22.5
+  - apiVersion: v2
+    created: "2022-08-15T15:13:16.478005247Z"
+    description: Feast Feature Server in Go or Python
+    digest: 67dd51802032dcc54b797a3ff3c78ad3b164480c898d154cbc2f3d162923449d
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.22.4.tgz
+    version: 0.22.4
+  - apiVersion: v2
+    created: "2022-08-10T18:55:06.580224654Z"
+    description: Feast Feature Server in Go or Python
+    digest: d3ff3127919b56285c43c0969f0cd09f5a3d759b22f4917695d3e1a1df6e54a2
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-feature-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-feature-server-0.22.3.tgz
+    version: 0.22.3
+  feast-python-server:
+  - apiVersion: v2
+    created: "2022-10-06T20:03:30.549904144Z"
+    description: Feast Feature Server in Python
+    digest: 493adef22e751f04f6bf35b84adce1f7589301c1dbfafde3e19d9ccc610f0e50
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.26.0.tgz
+    version: 0.26.0
+  - apiVersion: v2
+    created: "2022-10-06T18:40:54.502226467Z"
+    description: Feast Feature Server in Python
+    digest: 8e8687324d1e8869a6b509e407305b930dac2030d5e339424ede5a656ecc095c
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.25.2.tgz
+    version: 0.25.2
+  - apiVersion: v2
+    created: "2022-09-30T22:58:56.262755149Z"
+    description: Feast Feature Server in Python
+    digest: 18f87a713d29465425ff256bc23cd5eaa037033be46cf40130da27bdbf00d4cb
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.25.1.tgz
+    version: 0.25.1
+  - apiVersion: v2
+    created: "2022-09-20T05:52:34.652897117Z"
+    description: Feast Feature Server in Python
+    digest: 48baee635e3d6dae8871f779923b264a21c9c40804d51696ca82973a18fe4bb0
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.25.0.tgz
+    version: 0.25.0
+  - apiVersion: v2
+    created: "2022-09-08T03:54:43.146058958Z"
+    description: Feast Feature Server in Python
+    digest: 4dfcfefa8e5f18355adf5cd66642451d8dfa9ecb942bdc5ffd5df8302cdfca69
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.24.1.tgz
+    version: 0.24.1
+  - apiVersion: v2
+    created: "2022-08-25T12:04:40.261416-07:00"
+    description: Feast Feature Server in Python
+    digest: fa03855761f4bde24fac3a8edc2351ecce63b5df99b63db1f52bf86b34bc8327
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.24.0.tgz
+    version: 0.24.0
+  - apiVersion: v2
+    created: "2022-08-15T15:46:40.377229418Z"
+    description: Feast Feature Server in Python
+    digest: 0e721a17adc72414b74fcec151323e685574ce95b9c47425914dc4a66501fdb8
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.23.2.tgz
+    version: 0.23.2
+  - apiVersion: v2
+    created: "2022-08-10T15:15:35.441704447Z"
+    description: Feast Feature Server in Python
+    digest: 04cd18859ef95d4b6b7152344b57ec0408033b85cfad42f1c049dc2789f8f60c
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.23.1.tgz
+    version: 0.23.1
+  - apiVersion: v2
+    created: "2022-08-04T16:17:10.863832-05:00"
+    description: Feast Feature Server in Python
+    digest: be274ae30cb02cac62ff6070a25f6b4ef422f2691689b18cb6650a3d50e75731
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.23.0.tgz
+    version: 0.23.0
+  - apiVersion: v2
+    created: "2022-08-15T15:13:15.668275357Z"
+    description: Feast Feature Server in Python
+    digest: 0b1fed037d310aedfc799d3f28fae1e8453ea1a1c240b241658463de81546ced
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.22.4.tgz
+    version: 0.22.4
+  - apiVersion: v2
+    created: "2022-08-10T18:55:05.865470768Z"
+    description: Feast Feature Server in Python
+    digest: f01e59f846a9e3fd0f267a7e188c14c2ce1576fd486203c8f0f69894226b42ad
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.22.3.tgz
+    version: 0.22.3
+  - apiVersion: v2
+    created: "2022-07-29T04:30:44.433903497Z"
+    description: Feast Feature Server in Python
+    digest: a9cf09e5e6829853f16bad14bd2908cd11bd094f74177c49251e90bd5583cda5
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.22.2.tgz
+    version: 0.22.2
+  - apiVersion: v2
+    created: "2022-07-19T01:07:52.683976364Z"
+    description: Feast Feature Server in Python
+    digest: d018633e5db40a2d28c969701ce5a919ad1ec32f0bcaa403d35206caecd9038f
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    type: application
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.22.1.tgz
+    version: 0.22.1
+  - apiVersion: v2
+    created: "2022-06-29T20:30:51.794449591Z"
+    description: Feast Feature Server in Python
+    digest: 2e3d0f04d60d7735ccc3b2cf147bb3597a98fb4426cffc3dc2187466efd343df
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.22.0.tgz
+    version: 0.22.0
+  - apiVersion: v2
+    created: "2022-06-13T17:15:56.836597937Z"
+    description: Feast Feature Server in Python
+    digest: 7bd3d03b15df7d51dc98c0bb35cfffe54128f436cc6d83d944bfdd5399235a0b
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.21.3.tgz
+    version: 0.21.3
+  - apiVersion: v2
+    created: "2022-05-17T20:36:46.347485412Z"
+    description: Feast Feature Server in Python
+    digest: 68213a12f8cd481ffbee24c6b5629955d7aeb147dc4c0ff00a861a4a07e76b17
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.21.2.tgz
+    version: 0.21.2
+  - apiVersion: v2
+    created: "2022-05-17T20:25:04.242961122Z"
+    description: Feast Feature Server in Python
+    digest: be72e86c76da26fe5cc52af5f25127f7774175b48311f062c8948b7ab305a8ce
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.21.1.tgz
+    version: 0.21.1
+  - apiVersion: v2
+    created: "2022-05-13T22:12:32.81196907Z"
+    description: Feast Feature Server in Python
+    digest: e5490c57ad91d0fc8eea0c724a3d53881f7eecd5d1fce49d78f669d21032db21
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.21.0.tgz
+    version: 0.21.0
+  - apiVersion: v2
+    created: "2022-04-28T21:29:36.279323867Z"
+    description: Feast Feature Server in Python
+    digest: f505fd9f1cc35044b486463dc63efcc9dbb1b2fc73351a63548ceb34c1733495
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.20.2.tgz
+    version: 0.20.2
+  - apiVersion: v2
+    created: "2022-04-20T23:46:28.332010449Z"
+    description: Feast Feature Server in Python
+    digest: cf0c9826ec6613b2affebdb176abd483764ee60181e2fe4b44ad0156b3e12cea
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.20.1.tgz
+    version: 0.20.1
+  - apiVersion: v2
+    created: "2022-04-15T00:00:15.857017464Z"
+    description: Feast Feature Server in Python
+    digest: 5c050aaa94d24ff40f8d5bc79a4922c134c29f1aa8aab997a51629d7b6c8e1cf
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.20.0.tgz
+    version: 0.20.0
+  - apiVersion: v2
+    created: "2022-04-06T18:53:42.975503605Z"
+    description: Feast Feature Server in Python
+    digest: 137f8ebb26c5f79b994dd6e8c8f87337ee0a65efa3779800892863fe282efb9d
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.19.4.tgz
+    version: 0.19.4
+  - apiVersion: v2
+    created: "2022-03-09T23:46:25.85807101Z"
+    description: Feast Feature Server in Python
+    digest: 11a0dfb708fc0c5b83ccbbe3f0332be58a4fb84c0b4d4feb9f6ecceb564c16a0
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.19.3.tgz
+    version: 0.19.3
+  - apiVersion: v2
+    created: "2022-03-06T09:14:03.922466306Z"
+    description: Feast Feature Server in Python
+    digest: 8fe8ebb4ccba9f57d3f2d39066a10a6060c5848b6353740b457e947e447bd528
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.19.2.tgz
+    version: 0.19.2
+  - apiVersion: v2
+    created: "2022-03-05T19:35:20.383640842Z"
+    description: Feast Feature Server in Python
+    digest: 6a6bef54dad4be70397ccbf2060b94f8e360351caf4cef15a9cd35195df6dbd0
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.19.1.tgz
+    version: 0.19.1
+  - apiVersion: v2
+    created: "2022-03-05T06:18:00.414798113Z"
+    description: Feast Feature Server in Python
+    digest: 50cbf30b7ae5f02734e6889c4622be943bbc2ea719746731d15e8d8f5188e37c
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.19.0.tgz
+    version: 0.19.0
+  - apiVersion: v2
+    created: "2022-02-16T01:41:14.715769357Z"
+    description: Feast Feature Server in Python
+    digest: 5757e6dafc491fe34868681c3dea17c7318244f18f53dbc1453f7fbd04034800
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.18.1.tgz
+    version: 0.18.1
+  - apiVersion: v2
+    created: "2022-02-09T12:15:40.746036-05:00"
+    description: Feast Feature Server in Python
+    digest: 69cfb14c15d53af550280d3d86fe795cf437eb4b277ce4774473b15da594e835
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.18.0.tgz
+    version: 0.18.0
+  - apiVersion: v2
+    created: "2022-02-04T09:01:35.261185+08:00"
+    description: Feast Feature Server in Python
+    digest: ad86a32916d319efd427a13885e4ce30547e7c9da5a79fe1bf966b652dbdc306
+    home: https://feast.dev/
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-python-server
+    sources:
+    - https://github.com/feast-dev/feast
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-python-server-0.17.0.tgz
+    version: 0.17.0
+  feast-serving:
+  - apiVersion: v1
+    appVersion: 0.26.2
+    created: "2021-05-19T05:35:31.215596595Z"
+    description: 'Feast Serving: Online feature serving service for Feast'
+    digest: 638ce20b11477ffb1e0aac98b125873555ad6159495d6eaa01da5276eb5b46d6
+    home: https://github.com/feast-dev/feast-java
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-serving
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-serving-0.26.2.tgz
+    version: 0.26.2
+  - apiVersion: v1
+    appVersion: 0.26.0
+    created: "2021-04-15T04:25:38.737926316Z"
+    description: 'Feast Serving: Online feature serving service for Feast'
+    digest: a5b68b6f7d1636109bb755ef6993f6eebbc975ef0f9d20871fe6b423ea12ece0
+    home: https://github.com/feast-dev/feast-java
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-serving
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-serving-0.26.0.tgz
+    version: 0.26.0
+  - apiVersion: v1
+    appVersion: 0.25.2
+    created: "2021-03-22T01:56:53.93778689Z"
+    description: 'Feast Serving: Online feature serving service for Feast'
+    digest: 204a313cab082684d754325376a481a2655ae838072cfdd67aab66083b0c503a
+    home: https://github.com/feast-dev/feast-java
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-serving
+    urls:
+    - gs://feast-helm-charts/feast-serving-0.25.2.tgz
+    version: 0.25.2
+  - apiVersion: v1
+    appVersion: 0.25.1
+    created: "2021-03-10T07:51:41.842309359Z"
+    description: 'Feast Serving: Online feature serving service for Feast'
+    digest: 35d5a9c5a1f321ff94ff2c37a863100049b8ed97b0c9fbcd2f72f764c4a55b8c
+    home: https://github.com/feast-dev/feast-java
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-serving
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-serving-0.25.1.tgz
+    version: 0.25.1
+  - apiVersion: v1
+    appVersion: 0.25.0
+    created: "2021-02-28T02:44:04.143633741Z"
+    description: 'Feast Serving: Online feature serving service for Feast'
+    digest: 4bf58ab0ca6eb165183dfa31c11025d97fbc52c0482e910ed8c5e00a9956b61c
+    home: https://github.com/feast-dev/feast-java
+    keywords:
+    - machine learning
+    - big data
+    - mlops
+    name: feast-serving
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-serving-0.25.0.tgz
+    version: 0.25.0
+  feast-spark:
+  - apiVersion: v1
+    created: "2022-07-08T02:51:45.102091717Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 458705f3aab828957febf19ee96ff6a8a60ab1d18f6dbd8b0867ff915bc161f8
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.37.tgz
+    version: 0.2.37
+  - apiVersion: v1
+    created: "2022-07-07T09:29:20.759194175Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 2ef188400d50d96bc57e4186df51bdb15d65040bca9b6c21fc731f68d8486cfa
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.36.tgz
+    version: 0.2.36
+  - apiVersion: v1
+    created: "2022-06-29T07:00:08.304827778Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 442c73940070d67121a64626c31e900f4ac75ad4f7f50acb84cb5f3823bfde4a
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.35.tgz
+    version: 0.2.35
+  - apiVersion: v1
+    created: "2022-06-29T05:24:35.118670767Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: a857b2ebb09952d868bcb1ceddd5bf3a7eca380fce621753a37333a36f70d163
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.34.tgz
+    version: 0.2.34
+  - apiVersion: v1
+    created: "2022-06-27T14:31:02.856238028Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 48a6a8fb07710abcdde34c79975181267a002e0533d9d9e80bb684bc93b50f43
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.33.tgz
+    version: 0.2.33
+  - apiVersion: v1
+    created: "2022-06-09T05:00:13.4466044Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: b7bba7bd8863761956bfc040645db14a2291d0613c071391cf49c815514125e1
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.32.tgz
+    version: 0.2.32
+  - apiVersion: v1
+    created: "2022-05-25T02:31:48.926479745Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 7080cf6f2376d9a6aee1c4db1f144747bcb6a54c0d9f445069041f7680a56265
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.31.tgz
+    version: 0.2.31
+  - apiVersion: v1
+    created: "2022-05-18T03:19:28.492508774Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: fcbc123511c230acc979ec16234ddecb492592e5a2fadba4aea9dddfff7981c5
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.30.tgz
+    version: 0.2.30
+  - apiVersion: v1
+    created: "2022-05-16T15:32:47.088762341Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: ace0f607f7b709a0e37c26d75e5e7acd806b57f45eb1015fa1ad04835fb19a0f
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.29.tgz
+    version: 0.2.29
+  - apiVersion: v1
+    created: "2022-05-06T02:54:19.878846226Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: a08cddbec6014198750551e1afe9611056c909bc7decbc99d6a3c2c439cf6427
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.28.tgz
+    version: 0.2.28
+  - apiVersion: v1
+    created: "2022-04-25T03:49:33.810816363Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: f5958422b253995f86ccf4bf1f9a9e8cee3bc96fbe9a1019e5ed2245e84f7fac
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.27.tgz
+    version: 0.2.27
+  - apiVersion: v1
+    created: "2022-04-22T03:49:58.977731669Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 40180a3363459609d6f45211614ef2524df0eeabe17dc00e150e27589939314c
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.26.tgz
+    version: 0.2.26
+  - apiVersion: v1
+    created: "2022-04-13T08:35:31.62159696Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 00a587b60fb7bbd309083d52db9c1ce991f2c0d1276ada304c6fa7e36aa08a13
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.25.tgz
+    version: 0.2.25
+  - apiVersion: v1
+    created: "2022-03-30T02:36:02.75700459Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 520244dcc0396a437011207123deb1290d4894ab5ecaccc09c019948e86e8c0e
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.24.tgz
+    version: 0.2.24
+  - apiVersion: v1
+    created: "2022-03-28T07:51:55.315516636Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: de6cd8eac2ebc1e52ad386a8c3660bfbc093cfbc59b77a9c3463db07f2acf255
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.23.tgz
+    version: 0.2.23
+  - apiVersion: v1
+    created: "2022-03-03T03:26:07.883246583Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 3c4aaaae89646c6ccd2086429919e0e45a07d5a31c9df5e063821f0a8af8cb12
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.22.tgz
+    version: 0.2.22
+  - apiVersion: v1
+    created: "2022-02-24T08:59:37.797824529Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: dad5e78506e6003fc86bbe140e4c1c73b1beb02c87da85c1cd69eb6f1796d433
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.21.tgz
+    version: 0.2.21
+  - apiVersion: v1
+    created: "2022-02-24T03:08:42.151852099Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: ccdcfb745151a09d2c603a519801fc2cca7dc53c83bc0a937f4a3d00e818d29c
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.20.tgz
+    version: 0.2.20
+  - apiVersion: v1
+    created: "2022-02-22T04:36:03.218328929Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 673678ad33712605dba800a040d3d013c30b098bd087aa158d0186736b87e887
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.19.tgz
+    version: 0.2.19
+  - apiVersion: v1
+    created: "2022-02-21T07:33:47.755534853Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 3f6e9db1c0c2b098409c0cd3aff85ee394337ddcd765e27ccc4f93fb594a5c68
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.18.tgz
+    version: 0.2.18
+  - apiVersion: v1
+    created: "2021-12-16T06:19:40.943342161Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: f11368bc56f70cca8f910de91083f97c0908e59436e44f1a06b264439ecacfee
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.17.tgz
+    version: 0.2.17
+  - apiVersion: v1
+    created: "2021-12-13T06:39:48.127365652Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 3e2a11e4e5ed438fd8ba1b24c35d33f80dd0dddc5733772fe88c9965220e7691
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.16.tgz
+    version: 0.2.16
+  - apiVersion: v1
+    created: "2021-10-12T03:43:32.742098836Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 540b33275590405cd30ef3fbb7e371fa1aaa98d6261ec7cda32ca2822d050247
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.15.tgz
+    version: 0.2.15
+  - apiVersion: v1
+    created: "2021-09-27T04:23:32.586636743Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: aa9aaccfd14bb19dc34b0078b5f8482c3616fa79d8e7185bdfdc8ca39a91222a
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.14.tgz
+    version: 0.2.14
+  - apiVersion: v1
+    created: "2021-09-25T14:00:48.019229413Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 723a9ec90c0583fb101ae3c2274d548f22afd82629ac93364d438d9eef33172b
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.13.tgz
+    version: 0.2.13
+  - apiVersion: v1
+    created: "2021-08-17T07:47:50.016902845Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 4f0e1a983e939eed603db11cc7c032e9fbad542be7afe7f7515111e917024be8
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.12.tgz
+    version: 0.2.12
+  - apiVersion: v1
+    created: "2021-08-16T14:17:43.225597353Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: cac9d0ee96ad1c8bd3d2bc1baeb21fc9a90a89cbc18c5a9b5c7d2537f15586ee
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.11.tgz
+    version: 0.2.11
+  - apiVersion: v1
+    created: "2021-08-13T06:12:24.950590581Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 0e3ba193c66d41057e327a68dee53ec44ea0f752cb1bd92c19f2037d19748cec
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.10.tgz
+    version: 0.2.10
+  - apiVersion: v1
+    created: "2021-07-28T04:54:42.476889754Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 47b3eb7f5fadf3089ba87db6e338e2ccc9c46d003cd84bb2e164e85a93ed1f9a
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.9.tgz
+    version: 0.2.9
+  - apiVersion: v1
+    created: "2021-07-07T05:53:07.978681203Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 4a89046bd796e4b7862324f86335078ef63cde60c0f71615a624099760fad074
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.8.tgz
+    version: 0.2.8
+  - apiVersion: v1
+    created: "2021-06-15T07:26:53.588147522Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 7ea3f1f47a17174cfa3e32e99b2440143e1b3fa79dde9aa8e50bd13a9632cde2
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.7.tgz
+    version: 0.2.7
+  - apiVersion: v1
+    created: "2021-05-20T03:29:57.557301567Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: d9ce584afed4cce2013eb9e39f47a989493ec4254a568eddaef930f105054d18
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.6.tgz
+    version: 0.2.6
+  - apiVersion: v1
+    created: "2021-05-11T06:32:51.889928156Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 8ba2eeff4314cfc0c8500d4abd7514f149c54b30d5994049ebad72a5e1a46e85
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.5.tgz
+    version: 0.2.5
+  - apiVersion: v1
+    created: "2021-05-05T03:29:19.07775411Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 088323e97c92510b3b79ea64b1fc8353621bfc2b2be54a64fa055ef1a07e1bc7
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.4.tgz
+    version: 0.2.4
+  - apiVersion: v1
+    created: "2021-04-29T08:26:10.299127243Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 39b934054ec0f70b87d839d83353537b6865cb99d51ab0635af5b827f69beaf2
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.3.tgz
+    version: 0.2.3
+  - apiVersion: v1
+    created: "2021-04-27T09:17:14.419906261Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: b2076b481ad3a53487b54c74c68600264236fc2431bb0f82852fcda06ed1df3e
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v1
+    created: "2021-04-19T03:29:16.299533034Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: da68b674fd4d67e848c511782a013e3917aa6b0ed6942a24c5d43fb78972b6aa
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v1
+    created: "2021-04-15T04:13:55.168410709Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 81dfb027ab420fc9779dc526964943960a56fd6934a9f016ead0188d6fc91b41
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
+    created: "2021-03-17T04:40:12.29990174Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 3dd2d7d5ca758e7ce1199a168ecaa43d4895658f29c420f496a99dc4705682df
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    created: "2021-03-11T06:05:09.21397892Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 44f21a6545b5b8add035abb8d967c4676244400accd2810fe823815dba730e2f
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    created: "2021-03-08T07:50:30.668921269Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: 1d1e9f258b9fa7c25cb70b7e57f6068de576f917642a7b915fce8f6694fdc23c
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v1
+    created: "2021-03-02T19:24:01.230140791Z"
+    description: Feast Extension for running Ingestion on Spark
+    digest: db529745cfdc27de333f3af6a4a97bbf89f896900b573c9eb333aa10eaca75f4
+    name: feast-spark
+    urls:
+    - https://feast-helm-charts.storage.googleapis.com/feast-spark-0.1.0-rc.5.tgz
+    version: 0.1.0-rc.5
+generated: "2026-07-20T13:39:08.582321554Z"

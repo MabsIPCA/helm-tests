@@ -1,0 +1,449 @@
+batch: 9861 charts, 0 already done, 9861 to scan (12 workers, 180s/engine, engines=['kics-default', 'kics-enhanced'])
+  25/9861  (1299/h, ETA 7.6h)  D:\helm_clones_github\bitnami__charts\bitnami\flink
+  50/9861  (1521/h, ETA 6.4h)  D:\helm_clones_github\bitnami__charts\bitnami\kafka
+  75/9861  (1645/h, ETA 5.9h)  D:\helm_clones_github\bitnami__charts\bitnami\nats
+  100/9861  (1830/h, ETA 5.3h)  D:\helm_clones_github\bitnami__charts\bitnami\redmine
+  125/9861  (1904/h, ETA 5.1h)  D:\helm_clones_github\prometheus-community__helm-charts\charts\jiralert
+  150/9861  (2048/h, ETA 4.7h)  D:\helm_clones_github\prometheus-community__helm-charts\charts\prometheus-node-exporter
+  175/9861  (2139/h, ETA 4.5h)  D:\helm_clones_github\diggerhq__digger\self-hosting\kubernetes\helm-charts\taco-token-service
+  200/9861  (2261/h, ETA 4.3h)  D:\helm_clones_github\cozystack__cozystack\packages\apps\vm-disk
+  225/9861  (2360/h, ETA 4.1h)  D:\helm_clones_github\cozystack__cozystack\packages\system\capi-providers-bootstrap
+  250/9861  (2331/h, ETA 4.1h)  D:\helm_clones_github\cozystack__cozystack\packages\system\fluxcd
+  275/9861  (2304/h, ETA 4.2h)  D:\helm_clones_github\cozystack__cozystack\packages\system\kubeovn
+  300/9861  (2307/h, ETA 4.1h)  D:\helm_clones_github\cozystack__cozystack\packages\system\monitoring-agents
+  325/9861  (2318/h, ETA 4.1h)  D:\helm_clones_github\cozystack__cozystack\packages\system\reloader
+Exception in thread Thread-1407 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1599, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8d in position 2856: character maps to <undefined>
+  350/9861  (2343/h, ETA 4.1h)  D:\helm_clones_github\FJ-OMS__oms-erp\skyer-after-sales\charts\skyer-after-sales
+  375/9861  (2351/h, ETA 4.0h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\airsonic
+  400/9861  (2394/h, ETA 4.0h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\archiveteam-warrior
+  425/9861  (2431/h, ETA 3.9h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\batnoter
+  450/9861  (2464/h, ETA 3.8h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\calibre
+  475/9861  (2491/h, ETA 3.8h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\cloudcommander
+  500/9861  (2513/h, ETA 3.7h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\csi-addons-controller
+  525/9861  (2487/h, ETA 3.8h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\dns-doh-companion
+  550/9861  (2508/h, ETA 3.7h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\ersatztv
+  575/9861  (2526/h, ETA 3.7h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\ffmpeg-mkvdts2ac3
+  600/9861  (2545/h, ETA 3.6h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\fluidd
+  625/9861  (2564/h, ETA 3.6h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\googlephotossync
+  650/9861  (2581/h, ETA 3.6h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\hasty-paste
+  675/9861  (2604/h, ETA 3.5h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\intel-gpu-plugin
+  700/9861  (2620/h, ETA 3.5h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\kiwix-serve
+  725/9861  (2631/h, ETA 3.5h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\librespeed
+  750/9861  (2642/h, ETA 3.4h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\manyfold
+  775/9861  (2659/h, ETA 3.4h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\misskey
+  800/9861  (2670/h, ETA 3.4h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\n8n
+  825/9861  (2656/h, ETA 3.4h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\obsidian
+  850/9861  (2662/h, ETA 3.4h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\pasta
+  875/9861  (2670/h, ETA 3.4h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\pihole
+  900/9861  (2678/h, ETA 3.3h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\posterr
+  925/9861  (2682/h, ETA 3.3h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\quickshare
+  950/9861  (2688/h, ETA 3.3h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\remotely
+  975/9861  (2694/h, ETA 3.3h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\rustdesk
+  1000/9861  (2696/h, ETA 3.3h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\sia-daemon
+  1025/9861  (2696/h, ETA 3.3h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\speedtest-tracker
+  1050/9861  (2702/h, ETA 3.3h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\tachidesk-docker
+  1075/9861  (2710/h, ETA 3.2h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\thelounge
+  1100/9861  (2715/h, ETA 3.2h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\twofauth
+  1125/9861  (2709/h, ETA 3.2h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\watchyourlan
+  1150/9861  (2716/h, ETA 3.2h)  D:\helm_clones_github\trueforge-org__truecharts\charts\stable\xteve
+  1175/9861  (2722/h, ETA 3.2h)  D:\helm_clones_github\kubernetes-csi__csi-driver-nfs\charts\v4.11.0\csi-driver-nfs
+  1200/9861  (2737/h, ETA 3.2h)  D:\helm_clones_github\mobilecoinfoundation__mobilecoin\.internal-ci\helm\mobilecoind
+  1225/9861  (2720/h, ETA 3.2h)  D:\helm_clones_github\secureCodeBox__secureCodeBox\scanners\ffuf
+  1250/9861  (2636/h, ETA 3.3h)  D:\helm_clones_github\secureCodeBox__secureCodeBox\scanners\zap-automation-framework
+  1275/9861  (2631/h, ETA 3.3h)  D:\helm_clones_github\fluxninja__aperture\playground\tanka\charts\demo-app
+  1300/9861  (2629/h, ETA 3.3h)  D:\helm_clones_github\kubernetes-csi__csi-driver-smb\charts\v1.20.1\csi-driver-smb
+  1325/9861  (2625/h, ETA 3.3h)  D:\helm_clones_github\WeBankFinTech__Prophecis\di\jobmonitor\charts\training
+  1350/9861  (2630/h, ETA 3.2h)  D:\helm_clones_github\rancher__charts\charts\elemental\104.1.1+up1.5.4
+  1375/9861  (2627/h, ETA 3.2h)  D:\helm_clones_github\rancher__charts\charts\elemental-crd\103.2.0+up1.4.3
+  1400/9861  (2635/h, ETA 3.2h)  D:\helm_clones_github\rancher__charts\charts\elemental-crd\108.1.0+up1.8.1
+  1425/9861  (2642/h, ETA 3.2h)  D:\helm_clones_github\rancher__charts\charts\fleet\103.1.11+up0.9.12
+  1450/9861  (2649/h, ETA 3.2h)  D:\helm_clones_github\rancher__charts\charts\fleet\104.1.7+up0.10.11
+  1475/9861  (2655/h, ETA 3.2h)  D:\helm_clones_github\rancher__charts\charts\fleet\105.1.5+up0.11.12
+  1500/9861  (2663/h, ETA 3.1h)  D:\helm_clones_github\rancher__charts\charts\fleet\107.0.5+up0.13.5
+  1525/9861  (2672/h, ETA 3.1h)  D:\helm_clones_github\rancher__charts\charts\fleet\109.0.0+up0.15.0-rc.5
+  1550/9861  (2685/h, ETA 3.1h)  D:\helm_clones_github\rancher__charts\charts\fleet-agent\103.1.12+up0.9.13
+  1575/9861  (2682/h, ETA 3.1h)  D:\helm_clones_github\rancher__charts\charts\fleet-agent\105.0.4+up0.11.4
+  1600/9861  (2696/h, ETA 3.1h)  D:\helm_clones_github\rancher__charts\charts\fleet-agent\106.1.12+up0.12.14
+  1625/9861  (2704/h, ETA 3.0h)  D:\helm_clones_github\rancher__charts\charts\fleet-agent\108.0.2+up0.14.2
+  1650/9861  (2713/h, ETA 3.0h)  D:\helm_clones_github\rancher__charts\charts\fleet-agent\109.0.1+up0.15.1-beta.4
+  1675/9861  (2714/h, ETA 3.0h)  D:\helm_clones_github\rancher__charts\charts\fleet-crd\104.0.0+up0.10.0
+  1700/9861  (2722/h, ETA 3.0h)  D:\helm_clones_github\rancher__charts\charts\fleet-crd\104.2.4+up0.10.16
+  1725/9861  (2721/h, ETA 3.0h)  D:\helm_clones_github\rancher__charts\charts\fleet-crd\106.1.9+up0.12.11
+  1750/9861  (2720/h, ETA 3.0h)  D:\helm_clones_github\rancher__charts\charts\fleet-crd\109.0.0+up0.15.0-alpha.10
+  1775/9861  (2718/h, ETA 3.0h)  D:\helm_clones_github\rancher__charts\charts\fleet-crd\109.0.1+up0.15.1-beta.2
+  1800/9861  (2729/h, ETA 3.0h)  D:\helm_clones_github\rancher__charts\charts\harvester-cloud-provider\104.0.1+up0.2.4\dependency_charts\kube-vip
+  1825/9861  (2739/h, ETA 2.9h)  D:\helm_clones_github\rancher__charts\charts\harvester-cloud-provider\107.0.0+up0.2.10
+  1850/9861  (2747/h, ETA 2.9h)  D:\helm_clones_github\rancher__charts\charts\harvester-csi-driver\106.0.1+up0.1.24
+  1875/9861  (2744/h, ETA 2.9h)  D:\helm_clones_github\rancher__charts\charts\longhorn\102.5.0+up1.7.1
+  1900/9861  (2747/h, ETA 2.9h)  D:\helm_clones_github\rancher__charts\charts\longhorn\104.2.2+up1.7.3
+  1925/9861  (2753/h, ETA 2.9h)  D:\helm_clones_github\rancher__charts\charts\longhorn\108.1.0+up1.9.2
+  1950/9861  (2757/h, ETA 2.9h)  D:\helm_clones_github\rancher__charts\charts\longhorn-crd\102.3.3+up1.5.5
+  1975/9861  (2760/h, ETA 2.9h)  D:\helm_clones_github\rancher__charts\charts\longhorn-crd\104.1.1+up1.6.3
+  2000/9861  (2762/h, ETA 2.8h)  D:\helm_clones_github\rancher__charts\charts\longhorn-crd\107.3.0+up1.11.1
+  2025/9861  (2762/h, ETA 2.8h)  D:\helm_clones_github\rancher__charts\charts\neuvector\102.0.9+up2.7.6
+  2050/9861  (2758/h, ETA 2.8h)  D:\helm_clones_github\rancher__charts\charts\neuvector\104.0.4+up2.8.4
+  2075/9861  (2754/h, ETA 2.8h)  D:\helm_clones_github\rancher__charts\charts\neuvector\107.0.5+up2.8.12
+  2100/9861  (2758/h, ETA 2.8h)  D:\helm_clones_github\rancher__charts\charts\neuvector-crd\102.0.9+up2.7.6
+  2125/9861  (2765/h, ETA 2.8h)  D:\helm_clones_github\rancher__charts\charts\neuvector-crd\105.0.4+up2.8.7
+  2150/9861  (2774/h, ETA 2.8h)  D:\helm_clones_github\rancher__charts\charts\neuvector-crd\108.0.2+up2.8.11
+  2175/9861  (2766/h, ETA 2.8h)  D:\helm_clones_github\rancher__charts\charts\neuvector-monitor\105.0.0+up2.8.3
+  2200/9861  (2763/h, ETA 2.8h)  D:\helm_clones_github\rancher__charts\charts\neuvector-monitor\107.0.3+up2.8.10
+  2225/9861  (2763/h, ETA 2.8h)  D:\helm_clones_github\rancher__charts\charts\prometheus-federator\105.2.0+up2.0.0
+  2250/9861  (2766/h, ETA 2.8h)  D:\helm_clones_github\rancher__charts\charts\rancher-aks-operator\103.2.0+up1.2.2
+  2275/9861  (2772/h, ETA 2.7h)  D:\helm_clones_github\rancher__charts\charts\rancher-aks-operator\105.4.0+up1.10.4
+  2300/9861  (2778/h, ETA 2.7h)  D:\helm_clones_github\rancher__charts\charts\rancher-aks-operator\107.5.0+up1.12.5
+  2325/9861  (2784/h, ETA 2.7h)  D:\helm_clones_github\rancher__charts\charts\rancher-aks-operator-crd\102.2.1+up1.1.2
+  2350/9861  (2790/h, ETA 2.7h)  D:\helm_clones_github\rancher__charts\charts\rancher-aks-operator-crd\105.4.0+up1.10.4
+  2375/9861  (2796/h, ETA 2.7h)  D:\helm_clones_github\rancher__charts\charts\rancher-aks-operator-crd\108.1.0+up1.13.1
+  2400/9861  (2801/h, ETA 2.7h)  D:\helm_clones_github\rancher__charts\charts\rancher-alerting-drivers\108.0.1
+  2425/9861  (2807/h, ETA 2.6h)  D:\helm_clones_github\rancher__charts\charts\rancher-backup\104.1.0+up5.0.4
+  2450/9861  (2799/h, ETA 2.6h)  D:\helm_clones_github\rancher__charts\charts\rancher-backup\108.0.3+up9.0.3
+  2475/9861  (2791/h, ETA 2.6h)  D:\helm_clones_github\rancher__charts\charts\rancher-backup-crd\104.0.2+up5.0.2
+  2500/9861  (2797/h, ETA 2.6h)  D:\helm_clones_github\rancher__charts\charts\rancher-backup-crd\108.0.3+up9.0.3
+  2525/9861  (2801/h, ETA 2.6h)  D:\helm_clones_github\rancher__charts\charts\rancher-cis-benchmark\105.4.0+up7.4.0
+  2550/9861  (2806/h, ETA 2.6h)  D:\helm_clones_github\rancher__charts\charts\rancher-cis-benchmark\6.0.0
+  2575/9861  (2811/h, ETA 2.6h)  D:\helm_clones_github\rancher__charts\charts\rancher-cis-benchmark-crd\105.5.0+up7.6.0
+  2600/9861  (2815/h, ETA 2.6h)  D:\helm_clones_github\rancher__charts\charts\rancher-cis-benchmark-crd\5.7.0
+  2625/9861  (2820/h, ETA 2.6h)  D:\helm_clones_github\rancher__charts\charts\rancher-compliance\108.4.0+up1.3.4
+  2650/9861  (2823/h, ETA 2.6h)  D:\helm_clones_github\rancher__charts\charts\rancher-compliance-crd\108.4.0+up1.3.4
+  2675/9861  (2828/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-eks-operator\103.0.0+up1.3.0
+  2700/9861  (2832/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-eks-operator\105.1.0+up1.10.1
+  2725/9861  (2838/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-eks-operator\107.7.0+up1.12.7
+  2750/9861  (2843/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-eks-operator-crd\102.0.1+up1.1.5
+  2775/9861  (2836/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-eks-operator-crd\106.7.0+up1.11.7
+  2800/9861  (2840/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-eks-operator-crd\108.0.0+up1.13.0
+  2825/9861  (2844/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-gke-operator\103.0.1+up1.2.0
+  2850/9861  (2849/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-gke-operator\105.1.0+up1.10.1
+  2875/9861  (2853/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-gke-operator\107.6.0+up1.12.6
+  2900/9861  (2857/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-gke-operator-crd\103.2.0+up1.2.2
+  2925/9861  (2861/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-gke-operator-crd\106.0.0+up1.11.0
+  2950/9861  (2864/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-gke-operator-crd\107.3.0+up1.12.3
+  2975/9861  (2841/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-istio\103.0.1+up1.18.2
+  3000/9861  (2813/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-istio\107.2.0+up1.26.2
+  3025/9861  (2807/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-logging\106.0.1+up4.10.0-rancher.4
+  3050/9861  (2798/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-logging-crd\102.0.1+up3.17.10
+  3075/9861  (2734/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-logging-crd\106.0.7+up4.10.0-rancher.23
+  3100/9861  (2708/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-monitoring\103.0.4+up45.31.1
+  3125/9861  (2701/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-monitoring\107.2.0+up69.8.2-rancher.20
+  3150/9861  (2702/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-monitoring-crd\103.2.1+up57.0.3
+  3175/9861  (2707/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-monitoring-crd\106.1.4+up69.8.2-rancher.23
+  3200/9861  (2710/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-supportability-review\104.0.1+up0.1.3
+  3225/9861  (2704/h, ETA 2.5h)  D:\helm_clones_github\rancher__charts\charts\rancher-supportability-review-crd\107.0.3+up0.1.5
+  3250/9861  (2705/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-webhook\1.0.4+up0.2.5
+  3275/9861  (2709/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-webhook\104.0.0+up0.5.0
+  3300/9861  (2713/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-webhook\105.0.4+up0.6.5
+  3325/9861  (2719/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-webhook\108.0.3+up0.9.3
+  3350/9861  (2724/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\rancher-webhook\2.0.0+up0.3.0
+  3375/9861  (2729/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\sriov\103.1.0+up0.1.0
+  3400/9861  (2734/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\charts\system-upgrade-controller\107.0.1
+  3425/9861  (2737/h, ETA 2.4h)  D:\helm_clones_github\rancher__charts\packages\rancher-istio\1.25\rancher-istio\charts
+  3450/9861  (2736/h, ETA 2.3h)  D:\helm_clones_github\truenas__charts\charts\home-assistant\1.0.130
+  3475/9861  (2736/h, ETA 2.3h)  D:\helm_clones_github\truenas__charts\charts\wg-easy\1.0.12
+  3500/9861  (2741/h, ETA 2.3h)  D:\helm_clones_github\truenas__charts\community\homepage\1.2.26
+  3525/9861  (2745/h, ETA 2.3h)  D:\helm_clones_github\truenas__charts\community\nginx-proxy-manager\1.0.36
+  3550/9861  (2750/h, ETA 2.3h)  D:\helm_clones_github\truenas__charts\community\sftpgo\1.2.12
+  3575/9861  (2753/h, ETA 2.3h)  D:\helm_clones_github\truenas__charts\library\ix-dev\charts\ix-chart
+  3600/9861  (2758/h, ETA 2.3h)  D:\helm_clones_github\truenas__charts\library\ix-dev\community\ddns-updater
+  3625/9861  (2760/h, ETA 2.3h)  D:\helm_clones_github\truenas__charts\library\ix-dev\community\komga
+  3650/9861  (2762/h, ETA 2.2h)  D:\helm_clones_github\truenas__charts\library\ix-dev\community\planka
+  3675/9861  (2766/h, ETA 2.2h)  D:\helm_clones_github\truenas__charts\library\ix-dev\community\unifi-protect-backup
+  3700/9861  (2769/h, ETA 2.2h)  D:\helm_clones_github\instantlinux__docker-tools\images\mariadb-galera\helm
+  3725/9861  (2773/h, ETA 2.2h)  D:\helm_clones_github\instantlinux__docker-tools\k8s\helm\grafana
+  3750/9861  (2778/h, ETA 2.2h)  D:\helm_clones_github\IBM__charts\community\knative
+  3775/9861  (2773/h, ETA 2.2h)  D:\helm_clones_github\IBM__charts\components\ibm-dap-base-prod
+  3800/9861  (2774/h, ETA 2.2h)  D:\helm_clones_github\IBM__charts\components\ibm-openpages-prod
+  3825/9861  (2775/h, ETA 2.2h)  D:\helm_clones_github\IBM__charts\components\ibm-wml-canvas-prod
+  3850/9861  (2774/h, ETA 2.2h)  D:\helm_clones_github\IBM__charts\entitled\ibm-aspera-hsts-icp4i
+  3875/9861  (2774/h, ETA 2.2h)  D:\helm_clones_github\IBM__charts\entitled\ibm-ucv-prod
+  3900/9861  (2779/h, ETA 2.1h)  D:\helm_clones_github\IBM__charts\samples\ibm-sch\unit-tests\test-routename-1\chart
+  3925/9861  (2783/h, ETA 2.1h)  D:\helm_clones_github\IBM__charts\stable\ibm-calico-bgp-peer
+  3950/9861  (2783/h, ETA 2.1h)  D:\helm_clones_github\IBM__charts\stable\ibm-offline-docs
+  3975/9861  (2782/h, ETA 2.1h)  D:\helm_clones_github\JahstreetOrg__spark-on-kubernetes-helm\charts\livy
+  4000/9861  (2775/h, ETA 2.1h)  D:\helm_clones_github\kubernetes-sigs__blob-csi-driver\charts\v1.13.0\blob-csi-driver
+  4025/9861  (2779/h, ETA 2.1h)  D:\helm_clones_github\kubernetes-sigs__blob-csi-driver\charts\v1.23.3\blob-csi-driver
+  4050/9861  (2782/h, ETA 2.1h)  D:\helm_clones_github\kubernetes-sigs__blob-csi-driver\charts\v1.27.0\blob-csi-driver
+Exception in thread Thread-16229 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1599, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 123563: character maps to <undefined>
+  4075/9861  (2783/h, ETA 2.1h)  D:\helm_clones_github\CenterForOpenScience__helm-charts\ingress-nginx
+  4100/9861  (2779/h, ETA 2.1h)  D:\helm_clones_github\CenterForOpenScience__helm-charts\pgpool
+  4125/9861  (2781/h, ETA 2.1h)  D:\helm_clones_github\rancher__rke2-charts\packages\rke2-whereabouts\charts
+  4150/9861  (2781/h, ETA 2.1h)  D:\helm_clones_github\Obmondo__KubeAid\argocd-helm-charts\crossplane
+  4175/9861  (2778/h, ETA 2.0h)  D:\helm_clones_github\Obmondo__KubeAid\argocd-helm-charts\kubeaid-security-config
+  4200/9861  (2773/h, ETA 2.0h)  D:\helm_clones_github\Obmondo__KubeAid\argocd-helm-charts\opsbridge
+  4225/9861  (2768/h, ETA 2.0h)  D:\helm_clones_github\Obmondo__KubeAid\argocd-helm-charts\strimzi-kafka-operator
+  4250/9861  (2771/h, ETA 2.0h)  D:\helm_clones_github\nicholaswilde__helm-charts\charts\davos
+  4275/9861  (2768/h, ETA 2.0h)  D:\helm_clones_github\nicholaswilde__helm-charts\charts\pixapop
+  4300/9861  (2773/h, ETA 2.0h)  D:\helm_clones_github\nicholaswilde__helm-charts\charts\wiki
+  4325/9861  (2776/h, ETA 2.0h)  D:\helm_clones_github\Mirantis__rockoon\charts\openstack\glance
+  4350/9861  (2776/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\airlock\microgateway\4.4.3
+  4375/9861  (2772/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\amd\amd-gpu\0.14.0
+  4400/9861  (2767/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\asserts\asserts\1.59.0
+  4425/9861  (2750/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\buoyant\linkerd-control-plane\2024.10.5
+  4450/9861  (2732/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\buoyant\linkerd-control-plane\2024.7.5
+  4475/9861  (2715/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\buoyant\linkerd-control-plane\2025.3.2
+  4500/9861  (2702/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\buoyant\linkerd-control-plane\2025.8.4
+  4525/9861  (2694/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\buoyant\linkerd-crds\2024.10.3
+  4550/9861  (2696/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\buoyant\linkerd-crds\2024.7.2
+  4575/9861  (2699/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\buoyant\linkerd-crds\2025.2.1
+  4600/9861  (2702/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\buoyant\linkerd-crds\2025.7.6
+  4625/9861  (2645/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\cerbos\cerbos\0.38.1
+  4650/9861  (2613/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\clastix\kamaji\0.15.1
+  4675/9861  (2593/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\cockroach-labs\cockroachdb\11.1.7
+  4700/9861  (2585/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\cockroach-labs\cockroachdb\14.0.2
+  4725/9861  (2588/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\cockroach-labs\cockroachdb\17.0.1
+  4750/9861  (2581/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\codefresh\cf-runtime\10.0.11
+  4775/9861  (2558/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\codefresh\cf-runtime\6.3.58
+  4800/9861  (2538/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\codefresh\cf-runtime\7.2.1
+  4825/9861  (2521/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\codefresh\cf-runtime\7.7.2
+  4850/9861  (2506/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\codefresh\cf-runtime\8.3.1
+  4875/9861  (2496/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\coder\coder\2.18.4
+  4900/9861  (2498/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\coder\coder\2.27.3
+  4925/9861  (2501/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\coder\coder\2.32.0
+  4950/9861  (2489/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\confluent\confluent-for-kubernetes\0.1033.33
+  4975/9861  (2491/h, ETA 2.0h)  D:\helm_clones_github\rancher__partner-charts\charts\crate\crate-operator\2.30.1
+  5000/9861  (2494/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\crate\crate-operator\2.51.0
+  5025/9861  (2488/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\crowdstrike\falcon-sensor\1.30.0
+  5050/9861  (2488/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\dagger\dagger-helm\0.18.5
+  5075/9861  (2489/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\datawiza\access-broker\0.1.1
+  5100/9861  (2493/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\dell\csi-powermax\2.7.0
+  5125/9861  (2497/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\dell\csi-unity\2.10.1
+  5150/9861  (2499/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\dell\csi-vxflexos\2.14.0
+  5175/9861  (2501/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\dh2i\dxoperator\1.0.4
+  5200/9861  (2504/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\dynatrace\dynatrace-operator\1.4.1
+  5225/9861  (2502/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\f5\f5-bigip-ctlr\0.0.3601
+  5250/9861  (2489/h, ETA 1.9h)  D:\helm_clones_github\rancher__partner-charts\charts\f5\nginx-ingress\2.2.0
+  5275/9861  (2483/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\gluu\gluu\5.0.19
+  5300/9861  (2482/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\gluu\gluu\5.5.0
+  5325/9861  (2483/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\haproxy\haproxy\1.39.0
+  5350/9861  (2485/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\haproxy\haproxy\1.49.0
+  5375/9861  (2486/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\hashicorp\consul\1.7.0
+  5400/9861  (2488/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\hpe\hpe-array-exporter\1.0.2
+  5425/9861  (2491/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\instana\instana-agent\1.2.71
+  5450/9861  (2492/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\instana\instana-agent\2.0.27
+  5475/9861  (2494/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\intel\intel-device-plugins-operator\0.27.1
+  5500/9861  (2497/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\intel\intel-device-plugins-qat\0.35.0
+  5525/9861  (2489/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\jfrog\artifactory-ha\107.104.14
+  5550/9861  (2474/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\jfrog\artifactory-ha\107.125.4
+  5575/9861  (2440/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\jfrog\artifactory-ha\107.63.8
+  5600/9861  (2411/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\jfrog\artifactory-ha\107.84.12
+  5625/9861  (2402/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\jfrog\artifactory-jcr\107.104.5
+  5650/9861  (2385/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\jfrog\artifactory-jcr\107.133.16
+  5675/9861  (2372/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\jfrog\artifactory-jcr\107.63.14
+  5700/9861  (2366/h, ETA 1.8h)  D:\helm_clones_github\rancher__partner-charts\charts\jfrog\artifactory-jcr\107.84.17
+  5725/9861  (2364/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\kasten\k10\6.0.1
+  5750/9861  (2362/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\kasten\k10\7.0.201
+  5775/9861  (2357/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\kasten\k10\8.0.1101
+  5800/9861  (2354/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\kasten\k10\8.5.901
+  5825/9861  (2356/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\kong\kong\2.45.0
+  5850/9861  (2359/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\kubecost\cost-analyzer\1.103.5
+  5875/9861  (2360/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\kubecost\cost-analyzer\1.107.1
+  5900/9861  (2358/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\kubemq\kubemq-controller\1.12.0
+  5925/9861  (2360/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\kuma\kuma\2.11.5
+  5950/9861  (2363/h, ETA 1.7h)  D:\helm_clones_github\rancher__partner-charts\charts\kuma\kuma\2.7.0
+  5975/9861  (2365/h, ETA 1.6h)  D:\helm_clones_github\rancher__partner-charts\charts\linux-polska\ezd-backend\1.9.0
+  6000/9861  (2365/h, ETA 1.6h)  D:\helm_clones_github\rancher__partner-charts\charts\loft\loft\3.4.4
+  6025/9861  (2367/h, ETA 1.6h)  D:\helm_clones_github\rancher__partner-charts\charts\loft\loft\4.5.4
+  6050/9861  (2369/h, ETA 1.6h)  D:\helm_clones_github\rancher__partner-charts\charts\mongodb\community-operator\0.8.1
+  6075/9861  (2373/h, ETA 1.6h)  D:\helm_clones_github\rancher__partner-charts\charts\netscaler\netscaler-cpx-with-ingress-controller\3.1.34
+  6100/9861  (2376/h, ETA 1.6h)  D:\helm_clones_github\rancher__partner-charts\charts\netscaler\netscaler-ipam-controller\2.2.1
+  6125/9861  (2375/h, ETA 1.6h)  D:\helm_clones_github\rancher__partner-charts\charts\new-relic\nri-bundle\5.0.119
+  6150/9861  (2372/h, ETA 1.6h)  D:\helm_clones_github\rancher__partner-charts\charts\new-relic\nri-bundle\5.0.63
+  6175/9861  (2371/h, ETA 1.6h)  D:\helm_clones_github\rancher__partner-charts\charts\new-relic\nri-bundle\5.0.97
+  6200/9861  (2371/h, ETA 1.5h)  D:\helm_clones_github\rancher__partner-charts\charts\new-relic\nri-bundle\6.0.29
+  6225/9861  (2360/h, ETA 1.5h)  D:\helm_clones_github\rancher__partner-charts\charts\ngrok\kubernetes-ingress-controller\0.12.1
+  6250/9861  (2353/h, ETA 1.5h)  D:\helm_clones_github\rancher__partner-charts\charts\nirmata\kyverno\3.4.8
+  6275/9861  (2345/h, ETA 1.5h)  D:\helm_clones_github\rancher__partner-charts\charts\nutanix\nutanix-csi-storage\3.3.1
+  6300/9861  (2345/h, ETA 1.5h)  D:\helm_clones_github\rancher__partner-charts\charts\paravela\chronicle\0.1.27
+  6325/9861  (2348/h, ETA 1.5h)  D:\helm_clones_github\rancher__partner-charts\charts\percona\psmdb-operator\1.15.2
+  6350/9861  (2347/h, ETA 1.5h)  D:\helm_clones_github\rancher__partner-charts\charts\percona\pxc-db\1.13.7
+  6375/9861  (2345/h, ETA 1.5h)  D:\helm_clones_github\rancher__partner-charts\charts\percona\pxc-operator\1.15.1
+  6400/9861  (2337/h, ETA 1.5h)  D:\helm_clones_github\rancher__partner-charts\charts\portworx\portworx\7.0.4
+  6425/9861  (2337/h, ETA 1.5h)  D:\helm_clones_github\rancher__partner-charts\charts\redpanda\redpanda\25.2.1
+  6450/9861  (2340/h, ETA 1.5h)  D:\helm_clones_github\rancher__partner-charts\charts\redpanda\redpanda\5.1.2
+  6475/9861  (2339/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\redpanda\redpanda\5.6.27
+  6500/9861  (2340/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\redpanda\redpanda\5.8.14
+  6525/9861  (2339/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\redpanda\redpanda\5.9.5
+  6550/9861  (2340/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\speedscale\speedscale-operator\1.3.40
+  6575/9861  (2341/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\speedscale\speedscale-operator\2.1.301
+  6600/9861  (2343/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\speedscale\speedscale-operator\2.2.231
+  6625/9861  (2344/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\speedscale\speedscale-operator\2.2.567
+  6650/9861  (2345/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\speedscale\speedscale-operator\2.3.158
+  6675/9861  (2346/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\speedscale\speedscale-operator\2.3.37
+  6700/9861  (2347/h, ETA 1.3h)  D:\helm_clones_github\rancher__partner-charts\charts\speedscale\speedscale-operator\2.3.608
+  6725/9861  (2349/h, ETA 1.3h)  D:\helm_clones_github\rancher__partner-charts\charts\speedscale\speedscale-operator\2.4.9
+  6750/9861  (2350/h, ETA 1.3h)  D:\helm_clones_github\rancher__partner-charts\charts\speedscale\speedscale-operator\2.5.248
+  6775/9861  (2245/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\sumologic\sumologic\4.18.0
+  6800/9861  (2226/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\synadia\nats\1.1.3
+  6825/9861  (2214/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\synadia\nats\1.2.8
+  6850/9861  (2216/h, ETA 1.4h)  D:\helm_clones_github\rancher__partner-charts\charts\traefik\traefik\24.0.0
+  6875/9861  (2217/h, ETA 1.3h)  D:\helm_clones_github\rancher__partner-charts\charts\traefik\traefik\34.4.1
+  6900/9861  (2218/h, ETA 1.3h)  D:\helm_clones_github\rancher__partner-charts\charts\traefik\traefik\39.0.0
+  6925/9861  (2218/h, ETA 1.3h)  D:\helm_clones_github\rancher__partner-charts\charts\trilio\k8s-triliovault-operator\5.0.4
+  6950/9861  (2220/h, ETA 1.3h)  D:\helm_clones_github\rancher__partner-charts\charts\weka\csi-wekafsplugin\2.7.1
+  6975/9861  (2206/h, ETA 1.3h)  D:\helm_clones_github\rancher__partner-charts\charts\yugabyte\yugabyte\2.16.6
+  7000/9861  (2186/h, ETA 1.3h)  D:\helm_clones_github\rancher__partner-charts\charts\yugabyte\yugaware\2.14.15
+  7025/9861  (2185/h, ETA 1.3h)  D:\helm_clones_github\rancher__partner-charts\charts\yugabyte\yugaware\2024.2.0
+  7050/9861  (2186/h, ETA 1.3h)  D:\helm_clones_github\elastisys__compliantkubernetes-apps\helmfile.d\charts\gatekeeper\mutations
+  7075/9861  (2190/h, ETA 1.3h)  D:\helm_clones_github\elastisys__compliantkubernetes-apps\helmfile.d\charts\node-local-dns
+  7100/9861  (2191/h, ETA 1.3h)  D:\helm_clones_github\elastisys__compliantkubernetes-apps\helmfile.d\upstream\jetstack\cert-manager
+  7125/9861  (2192/h, ETA 1.2h)  D:\helm_clones_github\wiremind__wiremind-helm-charts\charts\cluster-manager
+  7150/9861  (2193/h, ETA 1.2h)  D:\helm_clones_github\wiremind__wiremind-helm-charts\charts\koherence
+  7175/9861  (2196/h, ETA 1.2h)  D:\helm_clones_github\wiremind__wiremind-helm-charts\charts\rancher-crds
+  7200/9861  (2199/h, ETA 1.2h)  D:\helm_clones_github\beclab__apps\affine
+  7225/9861  (2201/h, ETA 1.2h)  D:\helm_clones_github\beclab__apps\coder
+  7250/9861  (2204/h, ETA 1.2h)  D:\helm_clones_github\beclab__apps\dman
+  7275/9861  (2207/h, ETA 1.2h)  D:\helm_clones_github\beclab__apps\freshrss
+  7300/9861  (2210/h, ETA 1.2h)  D:\helm_clones_github\beclab__apps\hunyuan3dv21v2\hunyuan3dv21v2
+  7325/9861  (2213/h, ETA 1.1h)  D:\helm_clones_github\beclab__apps\lidarr
+  7350/9861  (2215/h, ETA 1.1h)  D:\helm_clones_github\beclab__apps\mindmap
+  7375/9861  (2219/h, ETA 1.1h)  D:\helm_clones_github\beclab__apps\ollamadeepseekr114bv2
+  7400/9861  (2223/h, ETA 1.1h)  D:\helm_clones_github\beclab__apps\ollamagemma426a4budq4kxlv2\ollamagemma426a4budq4kxlv2
+  7425/9861  (2227/h, ETA 1.1h)  D:\helm_clones_github\beclab__apps\ollamaminicpmv8bv2\ollamaminicpmv8bv2
+  7450/9861  (2232/h, ETA 1.1h)  D:\helm_clones_github\beclab__apps\ollamaqwen3coder30bv2\ollamaqwen3coder30bv2server
+  7475/9861  (2235/h, ETA 1.1h)  D:\helm_clones_github\beclab__apps\otmoicrelaysvc
+  7500/9861  (2238/h, ETA 1.1h)  D:\helm_clones_github\beclab__apps\rembgv2\rembgv2server
+  7525/9861  (2241/h, ETA 1.0h)  D:\helm_clones_github\beclab__apps\speaches\speachesserver
+  7550/9861  (2245/h, ETA 1.0h)  D:\helm_clones_github\beclab__apps\vllmgemma327bqatv2
+  7575/9861  (2249/h, ETA 1.0h)  D:\helm_clones_github\beclab__apps\whisperwebuiv2
+  7600/9861  (2252/h, ETA 1.0h)  D:\helm_clones_github\beclab__apps\xinference
+  7625/9861  (2255/h, ETA 1.0h)  D:\helm_clones_github\tmforum-oda__oda-canvas\feature-definition-and-test-kit\testData\productinventory-v1
+  7650/9861  (2257/h, ETA 1.0h)  D:\helm_clones_github\boozallen__aissemble\extensions\extensions-helm\aissemble-infrastructure-chart
+  7675/9861  (2258/h, ETA 1.0h)  D:\helm_clones_github\tkestack__charts\incubator\argo-events
+  7700/9861  (2260/h, ETA 1.0h)  D:\helm_clones_github\tkestack__charts\incubator\etcd
+  7725/9861  (2260/h, ETA 0.9h)  D:\helm_clones_github\tkestack__charts\incubator\kruise-game
+Exception in thread Thread-30983 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1599, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8d in position 15393: character maps to <undefined>
+Exception in thread Thread-31003 (_readerthread):
+Traceback (most recent call last):
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1599, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+  File "C:\Users\miabs\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x8d in position 15393: character maps to <undefined>
+  7750/9861  (2262/h, ETA 0.9h)  D:\helm_clones_github\tkestack__charts\incubator\node-exporter
+  7775/9861  (2262/h, ETA 0.9h)  D:\helm_clones_github\tkestack__charts\incubator\tapm-operator
+  7800/9861  (2264/h, ETA 0.9h)  D:\helm_clones_github\sapcc__helm-charts\common\manila-provisioner
+  7825/9861  (2265/h, ETA 0.9h)  D:\helm_clones_github\sapcc__helm-charts\global\gardener-extension-provider-openstack
+  7850/9861  (2268/h, ETA 0.9h)  D:\helm_clones_github\sapcc__helm-charts\openstack\billing
+  7875/9861  (2270/h, ETA 0.9h)  D:\helm_clones_github\sapcc__helm-charts\openstack\keppel-trivy
+  7900/9861  (2272/h, ETA 0.9h)  D:\helm_clones_github\sapcc__helm-charts\openstack\limes-campfire
+  7925/9861  (2275/h, ETA 0.9h)  D:\helm_clones_github\sapcc__helm-charts\openstack\prometheus-openstack
+  7950/9861  (2276/h, ETA 0.8h)  D:\helm_clones_github\sapcc__helm-charts\prometheus-exporters\ipmi-exporter
+  7975/9861  (2277/h, ETA 0.8h)  D:\helm_clones_github\sapcc__helm-charts\prometheus-rules\prometheus-controlplane-rules
+  8000/9861  (2279/h, ETA 0.8h)  D:\helm_clones_github\sapcc__helm-charts\system\cc-cluster
+  8025/9861  (2282/h, ETA 0.8h)  D:\helm_clones_github\sapcc__helm-charts\system\descheduler
+  8050/9861  (2283/h, ETA 0.8h)  D:\helm_clones_github\sapcc__helm-charts\system\jupyterhub
+  8075/9861  (2287/h, ETA 0.8h)  D:\helm_clones_github\sapcc__helm-charts\system\kube-system-admin-k3s
+  8100/9861  (2288/h, ETA 0.8h)  D:\helm_clones_github\sapcc__helm-charts\system\percona-xtradb-cluster-operator
+  8125/9861  (2290/h, ETA 0.8h)  D:\helm_clones_github\sapcc__helm-charts\system\servicemesh-crds
+  8150/9861  (2292/h, ETA 0.7h)  D:\helm_clones_github\sapcc__helm-charts\system\vertical-pod-autoscaler
+  8175/9861  (2295/h, ETA 0.7h)  D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-apify-rag-web-browser\charts\mcp-server-apify-rag-web-browser
+  8200/9861  (2298/h, ETA 0.7h)  D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-aws-aurora-dsql\charts\mcp-server-aws-aurora-dsql
+  8225/9861  (2298/h, ETA 0.7h)  D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-bing-search\charts\mcp-server-bing-search
+  8250/9861  (2300/h, ETA 0.7h)  D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-coda\charts\mcp-server-coda
+  8275/9861  (2302/h, ETA 0.7h)  D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-evm\charts\mcp-server-evm
+  8300/9861  (2305/h, ETA 0.7h)  D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-hyperbrowser\charts\mcp-server-hyperbrowser
+  8325/9861  (2307/h, ETA 0.7h)  D:\helm_clones_github\acuvity__mcp-servers-registry\mcp-server-prisma\charts\mcp-server-prisma
+  8350/9861  (2309/h, ETA 0.7h)  D:\helm_clones_github\redhat-community-ai-tools__UnifAI\helm\multiagent\multiagent-config
+  8375/9861  (2312/h, ETA 0.6h)  D:\helm_clones_github\k8s-home-lab__helm-charts\charts\stable\bitmagnet
+  8400/9861  (2313/h, ETA 0.6h)  D:\helm_clones_github\k8s-home-lab__helm-charts\charts\stable\syslog-ng
+  8425/9861  (2315/h, ETA 0.6h)  D:\helm_clones_github\k8s-home-lab__helm-charts\unmaintained\autobrr
+  8450/9861  (2316/h, ETA 0.6h)  D:\helm_clones_github\k8s-home-lab__helm-charts\unmaintained\gonic
+  8475/9861  (2317/h, ETA 0.6h)  D:\helm_clones_github\k8s-home-lab__helm-charts\unmaintained\modem-stats
+  8500/9861  (2320/h, ETA 0.6h)  D:\helm_clones_github\k8s-home-lab__helm-charts\unmaintained\overseerr
+  8525/9861  (2321/h, ETA 0.6h)  D:\helm_clones_github\k8s-home-lab__helm-charts\unmaintained\rtsp-to-web
+  8550/9861  (2321/h, ETA 0.6h)  D:\helm_clones_github\k8s-home-lab__helm-charts\unmaintained\whoogle
+  8575/9861  (2323/h, ETA 0.6h)  D:\helm_clones_github\ethersphere__helm\charts\nethermind
+  8600/9861  (2325/h, ETA 0.5h)  D:\helm_clones_github\EugenMayer__helm-charts\charts\whoami-tls
+  8625/9861  (2327/h, ETA 0.5h)  D:\helm_clones_github\burrsutter__fantaco-redhat-one-2026\helm\fantaco-agent
+  8650/9861  (2328/h, ETA 0.5h)  D:\helm_clones_github\turbonomic__t8c-install\operator\helm-charts\base\telemetry
+  8675/9861  (2331/h, ETA 0.5h)  D:\helm_clones_github\turbonomic__t8c-install\operator\helm-charts\probes\mediation-compellent
+  8700/9861  (2333/h, ETA 0.5h)  D:\helm_clones_github\turbonomic__t8c-install\operator\helm-charts\probes\mediation-snmp
+  8725/9861  (2335/h, ETA 0.5h)  D:\helm_clones_github\turbonomic__t8c-install\operator\helm-charts\services\cost
+  8750/9861  (2337/h, ETA 0.5h)  D:\helm_clones_github\YAKEcloud__yake\addons\addons
+  8775/9861  (2339/h, ETA 0.5h)  D:\helm_clones_github\YAKEcloud__yake\helmcharts\provider-azure
+  8800/9861  (2342/h, ETA 0.5h)  D:\helm_clones_github\omdv__homelab-server\cluster\apps\ibkr-mcp-server
+  8825/9861  (2345/h, ETA 0.4h)  D:\helm_clones_github\omdv__homelab-server\cluster\apps\tailscale
+  8850/9861  (2346/h, ETA 0.4h)  D:\helm_clones_github\k0rdent__catalog\apps\cadvisor\charts\cadvisor-service-template-2.3.3
+  8875/9861  (2348/h, ETA 0.4h)  D:\helm_clones_github\k0rdent__catalog\apps\dapr-dashboard\charts\dapr-dashboard-0.15.0
+  8900/9861  (2351/h, ETA 0.4h)  D:\helm_clones_github\k0rdent__catalog\apps\elasticsearch\example
+  8925/9861  (2353/h, ETA 0.4h)  D:\helm_clones_github\k0rdent__catalog\apps\gatekeeper\charts\gatekeeper-3.17.1
+  8950/9861  (2355/h, ETA 0.4h)  D:\helm_clones_github\k0rdent__catalog\apps\headlamp\example_ingress
+  8975/9861  (2358/h, ETA 0.4h)  D:\helm_clones_github\k0rdent__catalog\apps\istio\charts\istiod-1.27.1
+  9000/9861  (2360/h, ETA 0.4h)  D:\helm_clones_github\k0rdent__catalog\apps\k0rdent-istio\example
+  9025/9861  (2361/h, ETA 0.4h)  D:\helm_clones_github\k0rdent__catalog\apps\kiali\charts\kiali-operator-2.19.0
+  9050/9861  (2363/h, ETA 0.3h)  D:\helm_clones_github\k0rdent__catalog\apps\kubecost\example
+  9075/9861  (2365/h, ETA 0.3h)  D:\helm_clones_github\k0rdent__catalog\apps\loki\charts\loki-6.53.0
+  9100/9861  (2366/h, ETA 0.3h)  D:\helm_clones_github\k0rdent__catalog\apps\mirantis-kyverno-guardrails\example
+  9125/9861  (2370/h, ETA 0.3h)  D:\helm_clones_github\k0rdent__catalog\apps\nvidia\charts\gpu-operator-25.3.0
+  9150/9861  (2372/h, ETA 0.3h)  D:\helm_clones_github\k0rdent__catalog\apps\open-webui\charts\open-webui-service-template-6.20.0
+  9175/9861  (2375/h, ETA 0.3h)  D:\helm_clones_github\k0rdent__catalog\apps\prometheus\charts\prometheus-service-template-27.5.1
+  9200/9861  (2377/h, ETA 0.3h)  D:\helm_clones_github\k0rdent__catalog\apps\strimzi-kafka-operator\charts\strimzi-kafka-operator-0.47.0
+  9225/9861  (2379/h, ETA 0.3h)  D:\helm_clones_github\k0rdent__catalog\apps\valkey\example
+  9250/9861  (2382/h, ETA 0.3h)  D:\helm_clones_github\junghoon2__k8s-class\aws-load-balancer-controller\aws-lb-controller-1.4.8
+  9275/9861  (2379/h, ETA 0.2h)  D:\helm_clones_github\junghoon2__k8s-class\kubecost\cost-analyzer-1.107.0
+  9300/9861  (2378/h, ETA 0.2h)  D:\helm_clones_github\junghoon2__k8s-class\sns\image-server
+  9325/9861  (2376/h, ETA 0.2h)  D:\helm_clones_artifacthub\aws__eks-charts\stable\appmesh-jaeger
+  9350/9861  (2374/h, ETA 0.2h)  D:\helm_clones_artifacthub\cilium__cilium\test\k8s\manifests\cnp-second-namespaces
+  9375/9861  (2375/h, ETA 0.2h)  D:\helm_clones_artifacthub\artifacthub__hub\cmd\ah\testdata\lint\test2\pkgs\chart1
+  9400/9861  (2374/h, ETA 0.2h)  D:\helm_clones_artifacthub\hashicorp__consul-k8s\charts\consul
+  9425/9861  (2376/h, ETA 0.2h)  D:\helm_clones_artifacthub\apache__superset\helm\superset
+  9450/9861  (2375/h, ETA 0.2h)  D:\helm_clones_artifacthub\VictoriaMetrics__helm-charts\charts\victoria-metrics-anomaly
+  9475/9861  (2375/h, ETA 0.2h)  D:\helm_clones_artifacthub\kubernetes__charts\incubator\cockroachdb
+  9500/9861  (2377/h, ETA 0.2h)  D:\helm_clones_artifacthub\kubernetes__charts\incubator\jaeger
+  9525/9861  (2378/h, ETA 0.1h)  D:\helm_clones_artifacthub\kubernetes__charts\incubator\sentry-kubernetes
+  9550/9861  (2379/h, ETA 0.1h)  D:\helm_clones_artifacthub\kubernetes__charts\stable\aws-iam-authenticator
+  9575/9861  (2379/h, ETA 0.1h)  D:\helm_clones_artifacthub\kubernetes__charts\stable\dask
+  9600/9861  (2380/h, ETA 0.1h)  D:\helm_clones_artifacthub\kubernetes__charts\stable\express-gateway
+  9625/9861  (2380/h, ETA 0.1h)  D:\helm_clones_artifacthub\kubernetes__charts\stable\hazelcast-jet
+  9650/9861  (2381/h, ETA 0.1h)  D:\helm_clones_artifacthub\kubernetes__charts\stable\kapacitor
+  9675/9861  (2382/h, ETA 0.1h)  D:\helm_clones_artifacthub\kubernetes__charts\stable\lamp
+  9700/9861  (2383/h, ETA 0.1h)  D:\helm_clones_artifacthub\kubernetes__charts\stable\mysqldump
+  9725/9861  (2384/h, ETA 0.1h)  D:\helm_clones_artifacthub\kubernetes__charts\stable\owncloud
+  9750/9861  (2385/h, ETA 0.0h)  D:\helm_clones_artifacthub\kubernetes__charts\stable\prometheus-pushgateway
+  9775/9861  (2387/h, ETA 0.0h)  D:\helm_clones_artifacthub\kubernetes__charts\stable\sensu
+  9800/9861  (2388/h, ETA 0.0h)  D:\helm_clones_artifacthub\kubernetes__charts\stable\tensorflow-notebook
+  9825/9861  (2389/h, ETA 0.0h)  D:\helm_clones_artifacthub\actions__actions-runner-controller\charts\gha-runner-scale-set-controller
+  9850/9861  (2391/h, ETA 0.0h)  D:\helm_clones_artifacthub\CloudPirates-io__helm-charts\charts\valkey
+  9861/9861  (2392/h, ETA 0.0h)  D:\helm_clones_artifacthub\enix__x509-certificate-exporter\chart
+batch: wrote 9861 records to C:\Users\miabs\GolandProjects\helm-tests\thesis_assets\scan_out\top200-kics\results_win.jsonl

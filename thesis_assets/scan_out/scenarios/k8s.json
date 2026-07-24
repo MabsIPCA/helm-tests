@@ -1,0 +1,80 @@
+{
+  "source": "/mnt/c/Users/miabs/GolandProjects/mad-deployment-service/k8s",
+  "results": [
+    {
+      "scanner": "kics-default",
+      "findings": 408,
+      "owasp": [
+        "K01",
+        "K05",
+        "K07"
+      ],
+      "vulns": [
+        "k01-readOnlyRootFs",
+        "k01-runAsRoot",
+        "k01-unboundedResources",
+        "k05-permissiveNetpol",
+        "k07-kubeletAlwaysAllow",
+        "k07-kubeletAnonymousAuth"
+      ]
+    },
+    {
+      "scanner": "kics-enhanced",
+      "findings": 408,
+      "owasp": [
+        "K01",
+        "K05",
+        "K07"
+      ],
+      "vulns": [
+        "k01-readOnlyRootFs",
+        "k01-runAsRoot",
+        "k01-unboundedResources",
+        "k05-permissiveNetpol",
+        "k07-kubeletAlwaysAllow",
+        "k07-kubeletAnonymousAuth"
+      ]
+    },
+    {
+      "scanner": "kubescape",
+      "findings": 279,
+      "owasp": [
+        "K01",
+        "K03",
+        "K05"
+      ],
+      "vulns": [
+        "k01-privileged",
+        "k01-readOnlyRootFs",
+        "k01-runAsRoot",
+        "k01-unboundedResources",
+        "k03-jwtKeyInEnv",
+        "k05-noDefaultDeny"
+      ]
+    },
+    {
+      "scanner": "trivy",
+      "findings": 291,
+      "owasp": [
+        "K01",
+        "K03"
+      ],
+      "vulns": [
+        "k01-readOnlyRootFs",
+        "k01-runAsRoot",
+        "k01-unboundedResources",
+        "k03-jwtKeyInEnv"
+      ]
+    },
+    {
+      "scanner": "kube-linter",
+      "findings": 54,
+      "owasp": [
+        "K01"
+      ],
+      "vulns": [
+        "k01-runAsRoot"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+2:32AM | DEBUG | console.scan()
+2:32AM | DEBUG | console.scan()
+2:32AM | WARN  | KICS crash report disabled
+2:32AM | INFO  | Scanning with Keeping Infrastructure as Code Secure development
+2:32AM | INFO  | Operating system: linux
+2:32AM | INFO  | Total memory: 15.1G
+2:32AM | INFO  | CPU: 16.0
+2:32AM | INFO  | Max file size permitted for scanning: 5 MB
+2:32AM | INFO  | Max resolver depth permitted for resolving files: 15
+2:32AM | DEBUG | storage.NewMemoryStorage()
+2:32AM | DEBUG | Trying to load path (--queries-path) from /tmp/kics-fork/assets/queries
+2:32AM | WARN  | Failed getting the file info for file '2'
+2:32AM | ERROR | stat /mnt/c/Users/miabs/GolandProjects/helm-tests/2: no such file or directory
+2:32AM | ERROR | Failed to run application ERROR:"stat /mnt/c/Users/miabs/GolandProjects/helm-tests/2: no such file or directory"
+2:32AM | DEBUG | Error Report: 
+{
+  "location": "func Execute()",
+  "flags": {
+    "analyze-path": [],
+    "analyze-results": "platforms.json",
+    "bom": false,
+    "ci": false,
+    "cloud-provider": [
+      ""
+    ],
+    "config": "",
+    "disable-full-descriptions": false,
+    "disable-secrets": false,
+    "enable-openapi-refs": false,
+    "exclude-categories": [],
+    "exclude-gitignore": false,
+    "exclude-paths": [],
+    "exclude-queries": [],
+    "exclude-results": [],
+    "exclude-severities": [],
+    "exclude-type": [
+      ""
+    ],
+    "experimental-helm-scan": true,
+    "experimental-queries": false,
+    "fail-on": [
+      "critical",
+      "high",
+      "medium",
+      "low",
+      "info"
+    ],
+    "ignore-on-exit": "none",
+    "include-ids": [
+      "all"
+    ],
+    "include-queries": [],
+    "input-data": "",
+    "kics_compute_new_simid": false,
+    "libraries-path": "/tmp/kics-fork/assets/libraries",
+    "log-file": true,
+    "log-format": "pretty",
+    "log-level": "DEBUG",
+    "log-path": "",
+    "max-file-size": 5,
+    "max-resolver-depth": 15,
+    "minimal-ui": false,
+    "no-color": true,
+    "no-progress": false,
+    "old-severities": false,
+    "output-name": "results",
+    "output-path": "/tmp",
+    "parallel": 0,
+    "path": [
+      "/mnt/c/Users/miabs/GolandProjects/mad-deployment-service/helm/render-problems/madgoat-render"
+    ],
+    "payload-lines": false,
+    "payload-path": "",
+    "preview-lines": 3,
+    "profiling": "",
+    "queries-path": [
+      "/tmp/kics-fork/assets/queries",
+      "2"
+    ],
+    "report-formats": [
+      "json"
+    ],
+    "results": "",
+    "secrets-regexes-path": "",
+    "silent": false,
+    "terraform-vars-path": "",
+    "timeout": 60,
+    "type": [
+      ""
+    ],
+    "verbose": false
+  },
+  "file_name": "",
+  "query_name": "",
+  "platform": "",
+  "kind": "",
+  "query_metadata": null,
+  "message": "Failed to run application",
+  "error": {
+    "Op": "stat",
+    "Path": "/mnt/c/Users/miabs/GolandProjects/helm-tests/2",
+    "Err": 2
+  },
+  "additional_values": null
+}
+

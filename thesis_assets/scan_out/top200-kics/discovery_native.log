@@ -1,0 +1,7 @@
+﻿listcharts.exe : listcharts: clones present=194 missing=0 | discovered charts=9861 (filter="")
+At line:7 char:1
++ & "$env:TEMP\listcharts.exe" -catalog "catalog_cumulative.json" -repo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (listcharts: clo...861 (filter=""):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

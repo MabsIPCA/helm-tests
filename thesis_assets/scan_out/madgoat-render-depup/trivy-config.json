@@ -1,0 +1,10 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.72.0"
+  },
+  "ReportID": "019f8c93-af1f-7288-9456-4bb2b8c7fcf7",
+  "CreatedAt": "2026-07-23T02:25:16.703168227+01:00",
+  "ArtifactName": "/mnt/c/Users/miabs/GolandProjects/mad-deployment-service/helm/render-problems/madgoat-render",
+  "ArtifactType": "filesystem"
+}

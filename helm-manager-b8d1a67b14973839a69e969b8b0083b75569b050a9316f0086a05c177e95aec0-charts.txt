@@ -1,0 +1,5 @@
+cluster
+cnpg-sandbox
+pgbench
+plugin-barman-cloud
+cloudnative-pg
