@@ -1,0 +1,13 @@
+hperf
+minkms-operator
+warp
+aistor-keymanager
+aistor-objectstore
+aistor-objectstore-operator
+aistor-volumemanager
+directpv
+minkms
+minkms-enclave
+sidekick-operator
+aistor-keymanager-operator
+aistor-operator

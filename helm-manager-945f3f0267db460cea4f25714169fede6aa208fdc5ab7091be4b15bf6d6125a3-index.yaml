@@ -1,0 +1,1652 @@
+---
+apiVersion: v1
+entries:
+  matrix-synapse:
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.33
+    apiVersion: v2
+    appVersion: "1.157.1"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-07-22T15:56:07.050875000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.33.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.32
+    apiVersion: v2
+    appVersion: "1.157.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-07-21T16:06:24.496432000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.32.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.31
+    apiVersion: v2
+    appVersion: "1.156.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-07-07T19:56:20.345962000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.31.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.30
+    apiVersion: v2
+    appVersion: "1.155.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-06-16T16:20:17.101077000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.30.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.29
+    apiVersion: v2
+    appVersion: "1.154.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-06-05T16:00:48.956498000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.29.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.28
+    apiVersion: v2
+    appVersion: "1.153.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-05-19T15:43:50.270077000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.28.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.27
+    apiVersion: v2
+    appVersion: "1.152.1"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-05-07T15:34:13.585136000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.27.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.26
+    apiVersion: v2
+    appVersion: "1.152.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-05-02T09:51:19.291986000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.26.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.25
+    apiVersion: v2
+    appVersion: "1.151.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-04-08T09:11:28.727571000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.25.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.24
+    apiVersion: v2
+    appVersion: "1.150.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-03-24T15:11:38.743827000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.24.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.23
+    apiVersion: v2
+    appVersion: "1.149.1"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-03-11T10:25:12.193946000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.23.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.22
+    apiVersion: v2
+    appVersion: "1.148.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-02-24T12:46:07.190914000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.22.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.21
+    apiVersion: v2
+    appVersion: "1.147.1"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-02-16T10:58:25.349251000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.21.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.19
+    apiVersion: v2
+    appVersion: "1.146.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-01-27T18:02:11.910829000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.19.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.18
+    apiVersion: v2
+    appVersion: "1.145.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-01-21T08:56:08.242797000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.18.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.17
+    apiVersion: v2
+    appVersion: "1.144.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-12-09T16:58:43.104503000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.17.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.16
+    apiVersion: v2
+    appVersion: "1.143.0"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-11-25T18:21:40.261593000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.16.tgz
+  - icon: https://matrix.org/images/matrix-logo.svg
+    name: matrix-synapse
+    type: application
+    version: 3.12.15
+    apiVersion: v2
+    appVersion: "1.142.1"
+    description: Matrix reference homeserver
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-11-21T17:32:38.518759000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-synapse-3.12.15.tgz
+  element-web:
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.41
+    apiVersion: v2
+    appVersion: "1.12.24"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-07-21T14:12:57.401732000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.41.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.40
+    apiVersion: v2
+    appVersion: "1.12.23"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-07-07T19:56:17.173175000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.40.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.39
+    apiVersion: v2
+    appVersion: "1.12.22"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-06-23T14:00:07.529487000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.39.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.38
+    apiVersion: v2
+    appVersion: "1.12.21"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-06-09T14:00:20.732713000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.38.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.37
+    apiVersion: v2
+    appVersion: "1.12.18"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-05-23T08:14:50.029568000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.37.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.36
+    apiVersion: v2
+    appVersion: "1.12.17"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-05-02T09:51:16.520442000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.36.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.34
+    apiVersion: v2
+    appVersion: "1.12.14"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-04-08T04:11:19.714388000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.34.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.33
+    apiVersion: v2
+    appVersion: "1.12.13"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-03-24T15:11:34.120954000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.33.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.32
+    apiVersion: v2
+    appVersion: "1.12.12"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-03-10T15:20:01.742714000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.32.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.31
+    apiVersion: v2
+    appVersion: "1.12.11"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-02-24T15:36:48.848168000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.31.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.30
+    apiVersion: v2
+    appVersion: "1.12.10"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-02-16T10:58:22.216081000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.30.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.29
+    apiVersion: v2
+    appVersion: "1.12.9"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-01-27T18:02:08.436109000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.29.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.28
+    apiVersion: v2
+    appVersion: "1.12.8"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-01-21T08:53:54.158496000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.28.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.27
+    apiVersion: v2
+    appVersion: "1.12.7"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2026-01-07T06:11:13.900747000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.27.tgz
+  - icon: https://element.io/images/logo-mark-primary.svg
+    name: element-web
+    type: application
+    version: 1.4.26
+    apiVersion: v2
+    appVersion: "1.12.6"
+    description: 'All-in-one secure chat app for teams, friends and organisations.
+      Keeps conversations in your control, safe from data-mining and ads. Talk to
+      everyone through the open global Matrix network, protected by proper end-to-end
+      encryption. '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2025-12-03T17:44:20.597780000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/element-web-1.4.26.tgz
+  lemmy:
+  - icon: https://join-lemmy.org/static/assets/images/lemmy.svg
+    name: lemmy
+    type: application
+    version: 0.6.15
+    apiVersion: v2
+    appVersion: "0.19.20"
+    description: A link aggregator and forum for the fediverse
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.5"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-07-21T10:52:56.159516000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/lemmy-0.6.15.tgz
+  - icon: https://join-lemmy.org/static/assets/images/lemmy.svg
+    name: lemmy
+    type: application
+    version: 0.6.14
+    apiVersion: v2
+    appVersion: "0.19.19"
+    description: A link aggregator and forum for the fediverse
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.5"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-06-09T14:00:22.762817000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/lemmy-0.6.14.tgz
+  - icon: https://join-lemmy.org/static/assets/images/lemmy.svg
+    name: lemmy
+    type: application
+    version: 0.6.13
+    apiVersion: v2
+    appVersion: "0.19.18"
+    description: A link aggregator and forum for the fediverse
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.5"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-04-22T07:14:40.897402000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/lemmy-0.6.13.tgz
+  - icon: https://join-lemmy.org/static/assets/images/lemmy.svg
+    name: lemmy
+    type: application
+    version: 0.6.12
+    apiVersion: v2
+    appVersion: "0.19.17"
+    description: A link aggregator and forum for the fediverse
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.5"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-03-24T15:11:36.412251000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/lemmy-0.6.12.tgz
+  - icon: https://join-lemmy.org/static/assets/images/lemmy.svg
+    name: lemmy
+    type: application
+    version: 0.6.11
+    apiVersion: v2
+    appVersion: "0.19.16"
+    description: A link aggregator and forum for the fediverse
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.5"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-03-03T17:05:02.634242000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/lemmy-0.6.11.tgz
+  - icon: https://join-lemmy.org/static/assets/images/lemmy.svg
+    name: lemmy
+    type: application
+    version: 0.6.10
+    apiVersion: v2
+    appVersion: "0.19.15"
+    description: A link aggregator and forum for the fediverse
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.5"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-12-24T11:41:41.305581000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/lemmy-0.6.10.tgz
+  - icon: https://join-lemmy.org/static/assets/images/lemmy.svg
+    name: lemmy
+    type: application
+    version: 0.6.9
+    apiVersion: v2
+    appVersion: "0.19.14"
+    description: A link aggregator and forum for the fediverse
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.5"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-12-09T16:58:41.157348000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/lemmy-0.6.9.tgz
+  - icon: https://join-lemmy.org/static/assets/images/lemmy.svg
+    name: lemmy
+    type: application
+    version: 0.6.8
+    apiVersion: v2
+    appVersion: "0.19.13"
+    description: A link aggregator and forum for the fediverse
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.5"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-09-10T12:15:44.168220000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/lemmy-0.6.8.tgz
+  funkwhale:
+  - icon: https://funkwhale.audio/favicon.png
+    name: funkwhale
+    type: application
+    version: 3.0.4
+    apiVersion: v2
+    appVersion: "2.0.6"
+    description: A social platform to enjoy and share music
+    created: '2026-07-21T10:52:54.570643000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/funkwhale-3.0.4.tgz
+  - icon: https://funkwhale.audio/favicon.png
+    name: funkwhale
+    type: application
+    version: 3.0.3
+    apiVersion: v2
+    appVersion: "2.0.6"
+    description: A social platform to enjoy and share music
+    created: '2026-06-30T11:58:55.939791000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/funkwhale-3.0.3.tgz
+  - icon: https://funkwhale.audio/favicon.png
+    name: funkwhale
+    type: application
+    version: 3.0.2
+    apiVersion: v2
+    appVersion: "2.0.4"
+    description: A social platform to enjoy and share music
+    created: '2026-06-07T20:50:28.039595000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/funkwhale-3.0.2.tgz
+  - icon: https://funkwhale.audio/favicon.png
+    name: funkwhale
+    type: application
+    version: 3.0.1
+    apiVersion: v2
+    appVersion: "2.0.1"
+    description: A social platform to enjoy and share music
+    created: '2026-04-26T11:43:54.073940000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/funkwhale-3.0.1.tgz
+  - icon: https://funkwhale.audio/favicon.png
+    name: funkwhale
+    type: application
+    version: 3.0.0
+    apiVersion: v2
+    appVersion: "2.0.1"
+    description: A social platform to enjoy and share music
+    created: '2026-04-20T05:43:48.147351000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/funkwhale-3.0.0.tgz
+  - icon: https://funkwhale.audio/favicon.png
+    name: funkwhale
+    type: application
+    version: 2.0.6
+    apiVersion: v2
+    appVersion: "1.4.1"
+    description: A social platform to enjoy and share music
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-04-14T19:59:44.147696000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/funkwhale-2.0.6.tgz
+  peertube:
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.8.0
+    apiVersion: v2
+    appVersion: "8.2.3"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-07-21T10:50:38.066959000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.8.0.tgz
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.7.6
+    apiVersion: v2
+    appVersion: "8.2.2"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-07-02T21:46:29.012077000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.7.6.tgz
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.7.5
+    apiVersion: v2
+    appVersion: "8.2.1"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-06-14T14:28:18.481946000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.7.5.tgz
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.7.4
+    apiVersion: v2
+    appVersion: "8.1.8"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-05-23T15:24:48.543384000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.7.4.tgz
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.7.3
+    apiVersion: v2
+    appVersion: "8.1.7"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-05-23T08:14:54.813883000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.7.3.tgz
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.7.2
+    apiVersion: v2
+    appVersion: "8.1.5"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-04-08T04:12:15.767880000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.7.2.tgz
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.7.1
+    apiVersion: v2
+    appVersion: "8.1.2"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-03-16T06:54:58.659784000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.7.1.tgz
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.7.0
+    apiVersion: v2
+    appVersion: "8.1.1"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-03-11T12:09:34.906471000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.7.0.tgz
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.6.2
+    apiVersion: v2
+    appVersion: "8.0.2"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-01-27T18:02:14.203385000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.6.2.tgz
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.6.1
+    apiVersion: v2
+    appVersion: "8.0.0"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-12-15T10:30:12.605224000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.6.1.tgz
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.6.0
+    apiVersion: v2
+    appVersion: "8.0.0"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-12-09T16:58:45.504991000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.6.0.tgz
+  - icon: https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_de_PeerTube.svg
+    name: peertube
+    type: application
+    version: 1.5.9
+    apiVersion: v2
+    appVersion: "7.3.0"
+    description: 'Free software to take back control of your videos '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-09-09T14:05:03.013011000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/peertube-1.5.9.tgz
+  netbox:
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.15
+    apiVersion: v2
+    appVersion: "4.6.4"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      has ended and is only in basic maintenance, migrate to the official chart instead,
+      located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-07-01T12:15:26.862794000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.15.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.14
+    apiVersion: v2
+    appVersion: "4.6.3"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      has ended and is only in basic maintenance, migrate to the official chart instead,
+      located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-06-16T19:44:16.992048000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.14.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.13
+    apiVersion: v2
+    appVersion: "4.6.2"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      has ended and is only in basic maintenance, migrate to the official chart instead,
+      located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-06-05T16:02:30.487330000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.13.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.12
+    apiVersion: v2
+    appVersion: "4.6.1"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      has ended and is only in basic maintenance, migrate to the official chart instead,
+      located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-05-23T08:14:53.318514000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.12.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.11
+    apiVersion: v2
+    appVersion: "4.5.9"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      has ended and is only in basic maintenance, migrate to the official chart instead,
+      located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-05-02T09:51:20.818606000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.11.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.10
+    apiVersion: v2
+    appVersion: "4.5.8"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      has ended and is only in basic maintenance, migrate to the official chart instead,
+      located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-04-22T07:14:45.015454000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.10.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.9
+    apiVersion: v2
+    appVersion: "4.5.5"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      will end this year, migrate to the official chart instead, located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-03-18T08:29:37.001380000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.9.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.8
+    apiVersion: v2
+    appVersion: "4.5.4"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      will end this year, migrate to the official chart instead, located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-03-09T14:00:45.737428000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.8.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.7
+    apiVersion: v2
+    appVersion: "4.5.2"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      will end this year, migrate to the official chart instead, located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-02-16T10:58:26.807304000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.7.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.6
+    apiVersion: v2
+    appVersion: "4.5.1"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      will end this year, migrate to the official chart instead, located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-01-21T08:53:57.971541000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.6.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.5
+    apiVersion: v2
+    appVersion: "4.5.0"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      will end this year, migrate to the official chart instead, located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2026-01-07T06:10:08.333005000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.5.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.4
+    apiVersion: v2
+    appVersion: "4.4.9"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      will end this year, migrate to the official chart instead, located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-12-24T11:41:44.211731000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.4.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.3
+    apiVersion: v2
+    appVersion: "4.4.8"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      will end this year, migrate to the official chart instead, located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-12-11T15:06:37.395933000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.3.tgz
+  - icon: https://raw.githubusercontent.com/netbox-community/netbox/develop/netbox/project-static/img/netbox_icon.svg
+    name: netbox
+    type: application
+    version: 6.2.2
+    apiVersion: v2
+    appVersion: "4.4.5"
+    description: 'An IP address management (IPAM) and data center infrastructure management
+      (DCIM) tool.  Important; With chart version 4.0.0 there are major upgrades to
+      the packaged Redis and Postgres, as well as a major version bump of Netbox that
+      introduces housekeeping. Take care when upgrading.  NB; Support for this chart
+      will end this year, migrate to the official chart instead, located at https://github.com/netbox-community/netbox-chart '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-10-30T12:17:04.349639000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/netbox-6.2.2.tgz
+  sliding-sync-proxy:
+  - name: sliding-sync-proxy
+    type: application
+    version: 0.2.13
+    apiVersion: v2
+    appVersion: "0.99.19"
+    description: An implementation of MSC3575
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.2.2"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-10-24T06:58:13.362727000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/sliding-sync-proxy-0.2.13.tgz
+  matrix-media-repo:
+  - name: matrix-media-repo
+    type: application
+    version: 3.1.0
+    apiVersion: v2
+    appVersion: "1.3.8"
+    description: 'Matrix media repository with multi-domain in mind.  NB; Before updating
+      the Chart to 3.0.0, make sure to read https://docs.t2bot.io/matrix-media-repo/upgrading/130.html '
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    dependencies:
+    - name: postgresql
+      version: "^12.1.4"
+      condition: postgresql.enabled
+      repository: https://charts.bitnami.com/bitnami
+    - name: redis
+      version: "^17.3.17"
+      condition: redis.enabled
+      repository: https://charts.bitnami.com/bitnami
+    created: '2025-01-16T19:53:46.176580000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/matrix-media-repo-3.1.0.tgz
+  synatainer:
+  - home: https://gitlab.com/mb-saces/synatainer
+    name: synatainer
+    type: application
+    version: 1.1.5
+    apiVersion: v2
+    appVersion: "0.4.4"
+    description: Synapse Maintenance Container
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2024-11-13T16:34:22.681764000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/synatainer-1.1.5.tgz
+  radosgw:
+  - icon: http://ceph.com/wp-content/uploads/2016/07/Ceph_Logo_Stacked_RGB_120411_fa.png
+    name: radosgw
+    version: 0.3.4
+    apiVersion: v1
+    appVersion: '14.2'
+    description: CEPH RadosGW
+    created: '2024-04-23T15:21:47.882737000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/radosgw-0.3.4.tgz
+  puppetboard:
+  - icon: https://raw.githubusercontent.com/voxpupuli/logos/master/images/8bit-vox.png
+    name: puppetboard
+    type: application
+    version: 0.1.0
+    apiVersion: v2
+    appVersion: "5.3.0"
+    description: Web frontend for PuppetDB
+    maintainers:
+    - name: Alexander Olofsson
+      email: ace@haxalot.com
+    created: '2024-02-08T16:43:17.604374000Z'
+    digest:
+    urls:
+    - https://gitlab.com/api/v4/projects/12378663/packages/helm/stable/charts/puppetboard-0.1.0.tgz
+generated: '2026-07-22T15:56:09.046105078Z'
+serverInfo:
+  contextPath: "/api/v4/projects/12378663/packages/helm"

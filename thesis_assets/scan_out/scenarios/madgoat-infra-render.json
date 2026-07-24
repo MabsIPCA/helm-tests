@@ -1,0 +1,78 @@
+{
+  "source": "/mnt/c/Users/miabs/GolandProjects/mad-deployment-service/helm/render-problems/madgoat-infra-render",
+  "results": [
+    {
+      "scanner": "kics-default",
+      "findings": 177,
+      "owasp": [
+        "K01",
+        "K02",
+        "K05",
+        "K09"
+      ],
+      "vulns": [
+        "k01-readOnlyRootFs",
+        "k01-runAsRoot",
+        "k01-unboundedResources",
+        "k02-clusterAdminBinding",
+        "k02-secretsListWatch",
+        "k05-permissiveNetpol",
+        "k09-sharedServiceAccount"
+      ]
+    },
+    {
+      "scanner": "kics-enhanced",
+      "findings": 177,
+      "owasp": [
+        "K01",
+        "K02",
+        "K05",
+        "K09"
+      ],
+      "vulns": [
+        "k01-readOnlyRootFs",
+        "k01-runAsRoot",
+        "k01-unboundedResources",
+        "k02-clusterAdminBinding",
+        "k02-secretsListWatch",
+        "k05-permissiveNetpol",
+        "k09-sharedServiceAccount"
+      ]
+    },
+    {
+      "scanner": "kubescape",
+      "findings": 120,
+      "owasp": [
+        "K01",
+        "K02",
+        "K03",
+        "K05"
+      ],
+      "vulns": [
+        "k01-privileged",
+        "k01-readOnlyRootFs",
+        "k01-runAsRoot",
+        "k01-unboundedResources",
+        "k02-secretsListWatch",
+        "k03-jwtKeyInEnv",
+        "k05-noDefaultDeny"
+      ]
+    },
+    {
+      "scanner": "trivy",
+      "findings": 0,
+      "owasp": [],
+      "vulns": []
+    },
+    {
+      "scanner": "kube-linter",
+      "findings": 24,
+      "owasp": [
+        "K01"
+      ],
+      "vulns": [
+        "k01-runAsRoot"
+      ]
+    }
+  ]
+}

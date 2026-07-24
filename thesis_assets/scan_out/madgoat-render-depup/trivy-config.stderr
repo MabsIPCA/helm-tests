@@ -1,0 +1,4 @@
+2026-07-23T02:25:15+01:00	INFO	[misconfig] Misconfiguration scanning is enabled
+2026-07-23T02:25:15+01:00	INFO	[checks-client] Using existing checks from cache	path="/home/miguel/.cache/trivy/policy/content"
+2026-07-23T02:25:16+01:00	WARN	[helm scanner] Skipping chart	file_path="." err="parse chart: found in Chart.yaml, but missing in charts/ directory: madgoat-infra-render"
+2026-07-23T02:25:16+01:00	INFO	Detected config files	num=0

@@ -1,0 +1,1565 @@
+apiVersion: v1
+entries:
+  aistor-keymanager:
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.734927704+02:00"
+      description: Helm chart for MinIO AIStor Key Manager
+      digest: 185b8befeb8c0b703d8dab0eb6bdcec971af23e89302d5dde027b028f6a2116d
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - key-manager
+        - kms
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-keymanager
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-keymanager-2.1.0.tgz
+      version: 2.1.0
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.734556509+02:00"
+      description: Helm chart for MinIO AIStor Key Manager
+      digest: 81039a18a1862ebf1d2f9849407683b6fc09c47345fa9631976013492d815272
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - key-manager
+        - kms
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-keymanager
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-keymanager-2.0.1.tgz
+      version: 2.0.1
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.734178551+02:00"
+      description: Helm chart for MinIO AIStor Key Manager
+      digest: 66810d1c72f47b4aaaa7fa36d35ac53d209679f787a78c642331a07f999d045d
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - key-manager
+        - kms
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-keymanager
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-keymanager-1.0.0.tgz
+      version: 1.0.0
+  aistor-keymanager-operator:
+    - apiVersion: v2
+      appVersion: v20250819175300.0.0
+      created: "2026-04-03T12:04:50.739659445+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 4e617607222e05ee1137dc1e4713ae26836861f136e70a33295433c07417bd7d
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-keymanager-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-keymanager-operator-1.1.4.tgz
+      version: 1.1.4
+    - apiVersion: v2
+      appVersion: v20250819175300.0.0
+      created: "2026-04-03T12:04:50.739227968+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 8a3eb70868378d24d5ae6c2d51b8afbdf3935df1b07eabff49e2d240028fdfbe
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-keymanager-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-keymanager-operator-1.1.3.tgz
+      version: 1.1.3
+    - apiVersion: v2
+      appVersion: v20250801184927.0.0
+      created: "2026-04-03T12:04:50.738714441+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 22583246bb986e83d114a2db602c957fe2410e602e64b9ff31303055e6433909
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-keymanager-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-keymanager-operator-1.1.2.tgz
+      version: 1.1.2
+    - apiVersion: v2
+      appVersion: v20250701011319.0.0
+      created: "2026-04-03T12:04:50.736731864+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: c8391ac2f2d83290419aa27ace53721b02dfbb0d23bf57bf31bef2f65aba2d5d
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-keymanager-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-keymanager-operator-1.1.1.tgz
+      version: 1.1.1
+    - apiVersion: v2
+      appVersion: v20250701011319.0.0
+      created: "2026-04-03T12:04:50.736089781+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: be54c3f85f876bfee857b6554035b00bddf7b7245e57494f1456e97676418372
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-keymanager-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-keymanager-operator-1.1.0.tgz
+      version: 1.1.0
+    - apiVersion: v2
+      appVersion: v20250603065135.0.0
+      created: "2026-04-03T12:04:50.735484041+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 5c71a03ed230260108d63eddf27b5c5dc1388595a418a8ec2fa1ced2ffab2161
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-keymanager-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-keymanager-operator-1.0.0.tgz
+      version: 1.0.0
+  aistor-objectstore:
+    - apiVersion: v2
+      created: "2026-07-17T09:55:04.196808+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: 50ffa6a4e014cdc48566b237593baab41d039f103cdc50c1b1ac173b8d8bf71e
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.16.tgz
+      version: 1.0.16
+    - apiVersion: v2
+      created: "2026-07-15T01:11:42.081193+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: 2b5c301be974556e477ef477f9bc66e1256043a0caf35bd0cd6f3908e900b0d3
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.15.tgz
+      version: 1.0.15
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.742822977+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: c3acc5a8b7ef0801ae62b7e9a0a1e38c526165f4073845139e30fbe0db83365b
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.14.tgz
+      version: 1.0.14
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.742200708+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: be6b10a4ded6a4d625ba65447bcbdec0dcf99f33e37af5ed4c370c2993e130df
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.13.tgz
+      version: 1.0.13
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.741555179+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: 1f9ffdf2a608dd6b8fe27e28f1eaf5975e62684ce3c9db7537d24a386dbd0a7c
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.12.tgz
+      version: 1.0.12
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.740937587+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: 7f3fcb04a7a952096aa1d86e45aa5224a34fe2a84b0decd133d529301c86a526
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.11.tgz
+      version: 1.0.11
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.740282568+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: cdc2ece20533704796eab762ad0db8c6bf683868cb2431bddb29ee6466fcf92e
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.10.tgz
+      version: 1.0.10
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.748109163+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: da9dd494d6a443cee9401f0c3e10cedf2b615d59ad292582a3e17dba4ab820ca
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.9.tgz
+      version: 1.0.9
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.747425333+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: 17808666d7d9f314eaa59f9517f4f9df43924747a566afd5e4883950f80aaad9
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.8.tgz
+      version: 1.0.8
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.746715678+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: 18fff2705fb339abccb85ac7a40b244cd54dc9d7996c9a1cfa0ed6ae48e2e6c7
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.7.tgz
+      version: 1.0.7
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.746084415+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: e5c2e2327921e332f8065c41f3e79f01d1929268517cd611f29a69e99b80dbfc
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.6.tgz
+      version: 1.0.6
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.745213792+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: af0d6033fcb8baf8eb09628e1d558dd4e8bc49378d799690c6709f3ab000b9ca
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.5.tgz
+      version: 1.0.5
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.744232977+02:00"
+      description: Helm chart for MinIO AIStor Object Store
+      digest: c154bb96796c3a57e27f30d39f1b771a3b112daffe28596b8831d401078dc74d
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-1.0.3.tgz
+      version: 1.0.3
+  aistor-objectstore-operator:
+    - apiVersion: v2
+      appVersion: v20250819175300.0.0
+      created: "2026-04-03T12:04:50.765838294+02:00"
+      description: Helm chart for MinIO AIStor Object Store operator
+      digest: df90729ab7b8e205ae94f9ad6685e9582a1b28361d673adb23962a0d8da222b9
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-operator-5.1.0.tgz
+      version: 5.1.0
+    - apiVersion: v2
+      appVersion: v20250819175300.0.0
+      created: "2026-04-03T12:04:50.763953484+02:00"
+      description: Helm chart for MinIO AIStor Object Store operator
+      digest: 58832527470e7f1ba34706b3e17ead59fa8ecd20a73c302d9d97c37dcea99d70
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-operator-5.0.2.tgz
+      version: 5.0.2
+    - apiVersion: v2
+      appVersion: v20250801184927.0.0
+      created: "2026-04-03T12:04:50.762523549+02:00"
+      description: Helm chart for MinIO AIStor Object Store operator
+      digest: 0e6fe555c618fc0e53dbef6e91a8eff87bc3d6e6cb44898c0ebc4b45afeaef16
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-operator-5.0.1.tgz
+      version: 5.0.1
+    - apiVersion: v2
+      appVersion: v20250801184927.0.0
+      created: "2026-04-03T12:04:50.760059872+02:00"
+      description: Helm chart for MinIO AIStor Object Store operator
+      digest: 6a350acf09284d2f696ac7f1e87f44acd37e1a51b91ec406fc6f3eb710e45076
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-operator-5.0.0.tgz
+      version: 5.0.0
+    - apiVersion: v2
+      appVersion: v20250701011319.0.0
+      created: "2026-04-03T12:04:50.758630622+02:00"
+      description: Helm chart for MinIO AIStor Object Store operator
+      digest: 90db8201762469f60708cb45819191442a25e5de1002cb6ac29e34561a3daa8b
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-operator-4.1.1.tgz
+      version: 4.1.1
+    - apiVersion: v2
+      appVersion: v20250701011319.0.0
+      created: "2026-04-03T12:04:50.756413337+02:00"
+      description: Helm chart for MinIO AIStor Object Store operator
+      digest: 53fad9a8bcd730490fa45e35a35ad2f25b591891f5358a1b8b423fee1d625ecf
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-operator-4.1.0.tgz
+      version: 4.1.0
+    - apiVersion: v2
+      appVersion: v20250603065135.0.0
+      created: "2026-04-03T12:04:50.752682783+02:00"
+      description: Helm chart for MinIO AIStor Object Store operator
+      digest: 1909cc9861b6198db2f2e37e1a4b52ed891ca5b609c025f161ca548479ac234c
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-operator-4.0.1.tgz
+      version: 4.0.1
+    - apiVersion: v2
+      appVersion: v20250603065135.0.0
+      created: "2026-04-03T12:04:50.750710257+02:00"
+      description: Helm chart for MinIO AIStor Object Store operator
+      digest: f6092229a0a3c63623942d9864f2d3305876bdf907e042c8fa717b773a0191c9
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-objectstore-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-objectstore-operator-4.0.0.tgz
+      version: 4.0.0
+  aistor-operator:
+    - apiVersion: v2
+      appVersion: v20260721224148.0.0
+      created: "2026-07-22T13:27:41.269148+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: e5534f5ae4f6f12a3528a8cda5954d73280cba1a8e979e1628fbf3aac76babd1
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.10.0.tgz
+      version: 5.10.0
+    - apiVersion: v2
+      appVersion: v20260716235330.0.0
+      created: "2026-07-17T09:55:04.234548+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: 5f3d50021a70c2d223329b5818f3aef5af98b98311d0d2cee0d562c657b73263
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.9.0.tgz
+      version: 5.9.0
+    - apiVersion: v2
+      appVersion: v20260714194205.0.0
+      created: "2026-07-15T00:46:52.142778+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: ae2657b32d30f5ab0f9a2608ea7e74f86322776b487668cd94ba8de482f37c80
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.8.0.tgz
+      version: 5.8.0
+    - apiVersion: v2
+      appVersion: v20260610050221.0.0
+      created: "2026-06-10T10:54:49.681765229+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: bdd78103db14c247eac91da42896b3bb88a220a6a6abb48a6d8e5d0720a31328
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.7.0.tgz
+      version: 5.7.0
+    - apiVersion: v2
+      appVersion: v20260413102716.0.0
+      created: "2026-05-12T20:40:13.138772064+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: 413ff0bf6cc17b26ae4935b3c8e5eb98afafa5efb2644d2643ebe35bd8458ec6
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.6.4.tgz
+      version: 5.6.4
+    - apiVersion: v2
+      appVersion: v20260413102716.0.0
+      created: "2026-05-05T15:26:54.477851639+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: 8221f2ae59934e55a52a0fe61e3111f901f4d05b1e2848705d0cc854c6513e83
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.6.3.tgz
+      version: 5.6.3
+    - apiVersion: v2
+      appVersion: v20260413102716.0.0
+      created: "2026-04-15T08:57:06.220992+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: 827f6584d2a0eb178b5e7e3cba93e328b1c885c94471e664f23412a7819777e6
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.6.2.tgz
+      version: 5.6.2
+    - apiVersion: v2
+      appVersion: v20260411082401.0.0
+      created: "2026-04-13T10:08:58.209036495+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: 80e8a65a0a78c93610e71748f3f233e3618605b82afcde74a28b808e6535529f
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.6.1.tgz
+      version: 5.6.1
+    - apiVersion: v2
+      appVersion: v20260402210825.0.0
+      created: "2026-04-03T12:04:50.779838786+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: f1b896f2657dfbf7afc1f42238f2069b04523d9ea153ad896df707c85ffbe15d
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.6.0.tgz
+      version: 5.6.0
+    - apiVersion: v2
+      appVersion: v20260318173617.0.0
+      created: "2026-04-03T12:04:50.777694832+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: 1258508fc37eaedd0ea9643f862ae2f0558f562ccf6eefa2f84b37e5d21accdf
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.5.2.tgz
+      version: 5.5.2
+    - apiVersion: v2
+      appVersion: v20260318173617.0.0
+      created: "2026-04-03T12:04:50.776317624+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: f374998b3a9c6366cd7c3293fe5abe8d593136472f339c8a437782004e04746f
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.5.1.tgz
+      version: 5.5.1
+    - apiVersion: v2
+      appVersion: v20260318173617.0.0
+      created: "2026-04-03T12:04:50.774118937+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: 680146e2e0c830b72bfe8cd5d4fcd96227f269ae3ca0dc1c6e746bfac8cc5a1e
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.5.0.tgz
+      version: 5.5.0
+    - apiVersion: v2
+      appVersion: v20260209031243.0.0
+      created: "2026-04-03T12:04:50.772670642+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: ef60f651b2e53ffc5470d64ae00bbe13ae8c5f09315f777c2b0888d2e5f75ddd
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.4.0.tgz
+      version: 5.4.0
+    - apiVersion: v2
+      appVersion: v20251220100920.0.0
+      created: "2026-04-03T12:04:50.770539514+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: e25b6143b9e01877db1ff79abfebf68b56d191a7c1052f4e0a9dd6bfdef7fef2
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.3.0.tgz
+      version: 5.3.0
+    - apiVersion: v2
+      appVersion: v20251217191008.0.0
+      created: "2026-04-03T12:04:50.769307816+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: 3c833fd95e7bfc3d576f54e48f4950df82fab503bca77c6559adacb1e7f62366
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.2.1.tgz
+      version: 5.2.1
+    - apiVersion: v2
+      appVersion: v20251217191008.0.0
+      created: "2026-04-03T12:04:50.767182899+02:00"
+      description: Helm chart for MinIO AIStor operators
+      digest: f3801e95fa29b11bbfda42c44a8ed7a09c00563850681c61bc675608895e1206
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Enterprise Object Storage
+        - storage
+        - object-storage
+        - S3
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-operator
+      sources:
+        - https://min.io/product/aistor-overview
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-operator-5.2.0.tgz
+      version: 5.2.0
+  aistor-volumemanager:
+    - apiVersion: v2
+      appVersion: 5.0.2
+      created: "2026-04-03T12:04:50.782820775+02:00"
+      description: DirectPV - AIStor Volume Manager
+      digest: 8fd23d18c5b0618f061593b98dbefdc79c742d0e2d498ab833f5d02a1f09a091
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-volumemanager
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-volumemanager-0.3.2.tgz
+      version: 0.3.2
+    - apiVersion: v2
+      appVersion: 5.0.1
+      created: "2026-04-03T12:04:50.782405601+02:00"
+      description: DirectPV - AIStor Volume Manager
+      digest: 2239ff729b02445cdfa19ba149568554c9c263a25230bee3d07464148a90f158
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - storage
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-volumemanager
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-volumemanager-0.3.1.tgz
+      version: 0.3.1
+    - apiVersion: v2
+      appVersion: 5.0.0
+      created: "2026-04-03T12:04:50.782021903+02:00"
+      description: DirectPV - AIStor Volume Manager
+      digest: a70f719ec57af2aef390bbdb5fb1179a3cd40d3404cacf89e0acbf4b5301fd98
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - storage
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-volumemanager
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-volumemanager-0.3.0.tgz
+      version: 0.3.0
+    - apiVersion: v2
+      appVersion: 5.0.0
+      created: "2026-04-03T12:04:50.781649058+02:00"
+      description: DirectPV - AIStor Volume Manager
+      digest: a5e875ae287e874a59231adf183061f2ba721407751e2d225009a14b51636ca1
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - storage
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-volumemanager
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-volumemanager-0.2.0.tgz
+      version: 0.2.0
+    - apiVersion: v2
+      appVersion: 5.0.0
+      created: "2026-04-03T12:04:50.781248881+02:00"
+      description: DirectPV - AIStor Volume Manager
+      digest: 268f4aa040e9ac9c1e106387d61fb4012813c667dc8c78436df93b776c956dd7
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - storage
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-volumemanager
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-volumemanager-0.1.3.tgz
+      version: 0.1.3
+    - apiVersion: v2
+      appVersion: 5.0.0
+      created: "2026-04-03T12:04:50.780910413+02:00"
+      description: DirectPV - AIStor Volume Manager
+      digest: bccc013dc271b77e396e8c894678f89a3b6233ee795e1412de5fc8f69b70b078
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - storage
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-volumemanager
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-volumemanager-0.1.2.tgz
+      version: 0.1.2
+    - apiVersion: v2
+      appVersion: 5.0.0
+      created: "2026-04-03T12:04:50.780556165+02:00"
+      description: DirectPV - AIStor Volume Manager
+      digest: c89b368a281f8a893bc08ce10919fd0900957d3f35f84343541da7d4b30d3c94
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - storage
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-volumemanager
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-volumemanager-0.1.1.tgz
+      version: 0.1.1
+    - apiVersion: v2
+      appVersion: 5.0.0
+      created: "2026-04-03T12:04:50.78025279+02:00"
+      description: DirectPV - AIStor Volume Manager
+      digest: dd4d4690acc17c019a3b93b499e62556d05d66eddf99cffe8d3de7351b074ccb
+      home: https://min.io
+      icon: https://min.io/resources/img/logo/MINIO_wordmark.png
+      keywords:
+        - storage
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: aistor-volumemanager
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/aistor-volumemanager-0.1.0.tgz
+      version: 0.1.0
+  directpv:
+    - apiVersion: v2
+      appVersion: 5.1.2
+      created: "2026-06-16T23:24:16.86589-04:00"
+      description: DirectPV
+      digest: 1f430ff7acdc9682cbbcc6b332d4d64f610007afe23dafb5a4e3a1aa72f97d22
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: directpv
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/directpv-0.4.4.tgz
+      version: 0.4.4
+    - apiVersion: v2
+      appVersion: 5.1.0
+      created: "2026-04-03T12:04:50.783558107+02:00"
+      description: DirectPV
+      digest: 664a3fba9dacd9c3c1d5e4bdc6196b99d3e1bfbd20561774c15d23b4c6352a93
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: directpv
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/directpv-0.4.1.tgz
+      version: 0.4.1
+    - apiVersion: v2
+      appVersion: 5.1.0
+      created: "2026-04-03T12:04:50.783176603+02:00"
+      description: DirectPV
+      digest: 17706b975bf76d4770a9300f502554ee8ffc56d4e181829e020bc895f9644e21
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - storage
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: directpv
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/directpv-0.4.0.tgz
+      version: 0.4.0
+  hperf:
+    - apiVersion: v2
+      appVersion: 5.0.6
+      created: "2026-04-03T12:04:50.783810702+02:00"
+      description: hperf is a tool for active measurements of the maximum achievable bandwidth between N peers, measuring RX/TX bandwidth for each peers.
+      digest: 507a7f411beb1ff3876755303d530a07727f04757d0a1015620d5f33b2977ba2
+      name: hperf
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/hperf-v5.0.6.tgz
+      version: v5.0.6
+  minkms:
+    - apiVersion: v2
+      created: "2026-07-15T01:11:42.112991+02:00"
+      description: Helm chart for MinIO AIStor Key Manager
+      digest: 4ae116cfa39f38dd9b641df06ca57e46a553761692752d4173ddc92c4c89de60
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - key-manager
+        - kms
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-2.5.0.tgz
+      version: 2.5.0
+    - apiVersion: v2
+      created: "2026-06-10T14:03:25.435322282+02:00"
+      description: Helm chart for MinIO AIStor Key Manager
+      digest: 6124df6f814d251dfc5b91cc2fe9341b5f328d2e35b4203f00289b0184d569fb
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - key-manager
+        - kms
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-2.4.0.tgz
+      version: 2.4.0
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.784469244+02:00"
+      description: Helm chart for MinIO AIStor Key Manager
+      digest: 6ae4e3ca946e949d67b1cf36000509297f4f336f90f4b3734d10a265f2ea16f4
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - key-manager
+        - kms
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-2.3.0.tgz
+      version: 2.3.0
+    - apiVersion: v2
+      created: "2026-04-03T12:04:50.784149775+02:00"
+      description: Helm chart for MinIO AIStor Key Manager
+      digest: bd22ccb1d93d705a4d60599fee7c7cbc18d4a9352e885d433fc8a88b48b906e7
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - key-manager
+        - kms
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-2.2.0.tgz
+      version: 2.2.0
+  minkms-enclave:
+    - apiVersion: v2
+      created: "2026-07-15T00:48:11.970718+02:00"
+      description: Helm chart to declaratively provision a MinIO AIStor Key Manager enclave with its identities and keys
+      digest: 8d925d11b5304991ca6d218824f5080e73cdda11d49903f68f4e2bc13d135c0a
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - key-manager
+        - kms
+        - enclave
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-enclave
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-enclave-1.0.0.tgz
+      version: 1.0.0
+    - apiVersion: v2
+      created: "2026-07-08T22:19:46.934572+02:00"
+      description: Helm chart to declaratively provision a MinIO AIStor Key Manager enclave with its identities and keys
+      digest: 6c3e33484388694f8f4ec9871fe35739df63ffe1c8708cd46719e90a5d315aea
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - key-manager
+        - kms
+        - enclave
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-enclave
+      sources:
+        - https://github.com/minio/aistor
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-enclave-1.0.0-rc.1.tgz
+      version: 1.0.0-rc.1
+  minkms-operator:
+    - apiVersion: v2
+      appVersion: v20260721224148.0.0
+      created: "2026-07-22T13:27:41.30334+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: eae658caa208bc4738c4c6c23492865f9a9cc45f20e99a6363c3d191e604ab09
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.9.0.tgz
+      version: 1.9.0
+    - apiVersion: v2
+      appVersion: v20260716235330.0.0
+      created: "2026-07-21T12:09:16.51402+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 226cfe6ee84586e009575564d391837cc6862d530900e7497c2a7ab92fca9636
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.8.1.tgz
+      version: 1.8.1
+    - apiVersion: v2
+      appVersion: v20260716235330.0.0
+      created: "2026-07-17T09:55:04.246724+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: c90d4e4c1efff7fc2a26a8f4cff56fa057fd037d1163ebbb42b9e7b0172e983d
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.8.0.tgz
+      version: 1.8.0
+    - apiVersion: v2
+      appVersion: v20260714194205.0.0
+      created: "2026-07-15T00:46:52.153744+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 716a4ed17b2fc681728996903aff1c09cb556f4c52eed27a41f29884dd49d93f
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.7.0.tgz
+      version: 1.7.0
+    - apiVersion: v2
+      appVersion: v20260610050221.0.0
+      created: "2026-07-08T22:19:46.939499+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 70d6a2959ea6479bde7677d699c824cc69352ffd6f09ca041da820072b6c4b59
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.7.0-rc.1.tgz
+      version: 1.7.0-rc.1
+    - apiVersion: v2
+      appVersion: v20260610050221.0.0
+      created: "2026-06-10T10:54:49.697923512+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 79cb8e1bc7f11eeb02d97cfdb0786c49a2257bf8bced61f7432a8e5fd300799b
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.6.0.tgz
+      version: 1.6.0
+    - apiVersion: v2
+      appVersion: v20260413102716.0.0
+      created: "2026-05-20T20:06:49.847170591+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 250e0ac726dfecec30d67e6e564c7e15395b296f10b721558845ae9d0139d5ac
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.5.3.tgz
+      version: 1.5.3
+    - apiVersion: v2
+      appVersion: v20260413102716.0.0
+      created: "2026-04-15T08:57:06.230535+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 8c72ef81503b0f5befcadc2f83afb7a2efd5832b7b93b04704022d104f3596f6
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.5.2.tgz
+      version: 1.5.2
+    - apiVersion: v2
+      appVersion: v20260411082401.0.0
+      created: "2026-04-13T10:08:58.219786578+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 7b9a3d70ab744ec75c17006601232de7b626c68cf4837a82e5ca6999dda2e06d
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.5.1.tgz
+      version: 1.5.1
+    - apiVersion: v2
+      appVersion: v20260402210825.0.0
+      created: "2026-04-03T12:04:50.788221055+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: aaa3b26a36df8a066cb7ac0ebc37b898abe3ba1f0c7c2e9c4301f3824745394c
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.5.0.tgz
+      version: 1.5.0
+    - apiVersion: v2
+      appVersion: v20260318173617.0.0
+      created: "2026-04-03T12:04:50.78754822+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 4b60b3aaa00f7c1ed503275785cde07384233c605326166541ed73a57a667224
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.4.0.tgz
+      version: 1.4.0
+    - apiVersion: v2
+      appVersion: v20260209031243.0.0
+      created: "2026-04-03T12:04:50.786988261+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 89ce0d262916eab0ab775f9038687256afa21b5e2f46e11e1fab50a28794b84a
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.3.0.tgz
+      version: 1.3.0
+    - apiVersion: v2
+      appVersion: v20251217191008.0.0
+      created: "2026-04-03T12:04:50.785050139+02:00"
+      description: Helm chart for MinIO AIStor Key Manager operator
+      digest: 398e48b8c7e427a2b6c352b6a07bb086ca87a7c51a8ee991fb83fede53c14386
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Key Management
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: minkms-operator
+      sources:
+        - https://min.io/product/aistor/key-management-server
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/minkms-operator-1.2.0.tgz
+      version: 1.2.0
+  sidekick-operator:
+    - apiVersion: v2
+      appVersion: v20260714215022.0.0
+      created: "2026-07-15T00:46:52.15401+02:00"
+      description: Helm chart for the MinIO AIStor Sidekick sidecar injection operator
+      digest: 33d43fcb72a31b7de3a0e666bf2aad85fa32a52ef4f6e2d13bf64b98fa430689
+      home: https://min.io
+      icon: https://helm.min.io/logo.png
+      keywords:
+        - Load Balancer
+        - Sidekick
+      maintainers:
+        - email: dev@minio.io
+          name: MinIO, Inc
+      name: sidekick-operator
+      sources:
+        - https://github.com/minio/sidekick
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/sidekick-operator-1.0.0.tgz
+      version: 1.0.0
+  warp:
+    - apiVersion: v2
+      appVersion: latest
+      created: "2026-04-03T12:04:50.788557983+02:00"
+      description: A Helm chart for Kubernetes
+      digest: bd9a9017ad87db99176f59d21cb4925ddd747d0afa51feb491f43796ae4410a1
+      name: warp
+      type: application
+      urls:
+        - https://helm.min.io/helm-releases/warp-0.1.0.tgz
+      version: 0.1.0
+generated: "2026-07-22T13:27:41.238895+02:00"

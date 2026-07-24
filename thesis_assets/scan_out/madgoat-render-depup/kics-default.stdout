@@ -1,0 +1,101 @@
+[38;2;34;187;51m
+                                                                                                                                                   
+                                                                                                                                                                                                    
+   MLLLLLM             MLLLLLLLLL   LLLLLLL             KLLLLLLLLLLLLLLLL       LLLLLLLLLLLLLLLLLLLLLLL 
+   MMMMMMM           MMMMMMMMMML    MMMMMMMK       LMMMMMMMMMMMMMMMMMMMML   KLMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM         MMMMMMMMML       MMMMMMMK     LMMMMMMMMMMMMMMMMMMMMMML  LMMMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM      MMMMMMMMMML         MMMMMMMK   LMMMMMMMMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM    LMMMMMMMMML           MMMMMMMK  LMMMMMMMMMLLMLLLLLLLLLLLLLL LMMMMMMMLLLLLLLLLLLLLLLLLLLLM 
+   MMMMMMM  MMMMMMMMMLM             MMMMMMMK LMMMMMMMM                    LMMMMMML                      
+   MMMMMMMLMMMMMMMML                MMMMMMMK MMMMMMML                     LMMMMMMMMLLLLLLLLLLLLLMLL     
+   MMMMMMMMMMMMMMMM                 MMMMMMMK MMMMMML                       LMMMMMMMMMMMMMMMMMMMMMMMMML  
+   MMMMMMMMMMMMMMMMMM               MMMMMMMK MMMMMMM                         LMMMMMMMMMMMMMMMMMMMMMMMML 
+   MMMMMMM KLMMMMMMMMML             MMMMMMMK LMMMMMMM                                          MMMMMMMML
+   MMMMMMM    LMMMMMMMMMM           MMMMMMMK LMMMMMMMMLL                                        MMMMMMML
+   MMMMMMM      LMMMMMMMMMLL        MMMMMMMK  LMMMMMMMMMMMMMMMMMMMMMMMMML LLLLLLLLLLLLLLLLLLLLMMMMMMMMMM
+   MMMMMMM        MMMMMMMMMMML      MMMMMMMK   MMMMMMMMMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM          LLMMMMMMMMML    MMMMMMMK     LLMMMMMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMMMML  
+   MMMMMMM             MMMMMMMMMML  MMMMMMMK         KLMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMLK    
+                                                                                                            
+                                                                                                                                                                                                                                                                                                                        
+
+[0m
+Scanning with Keeping Infrastructure as Code Secure development
+
+
+Preparing Scan Assets:  \Preparing Scan Assets:  -Preparing Scan Assets:  |Preparing Scan Assets:  /Preparing Scan Assets:  -Preparing Scan Assets:  |Preparing Scan Assets:  \Preparing Scan Assets: DoneExecuting queries: [--------->__________________________________________] 18.40%Executing queries: [-------------->_____________________________________] 28.38%Executing queries: [------------------->________________________________] 37.92%Executing queries: [------------------------->__________________________] 48.56%Executing queries: [------------------------------>_____________________] 58.98%Executing queries: [------------------------------------>_______________] 69.40%Executing queries: [------------------------------------------>_________] 81.15%Executing queries: [----------------------------------------------->____] 91.91%Executing queries: [---------------------------------------------------] 100.00%
+
+
+[38;2;187;33;36mPasswords And Secrets - Password in URL[0m, Severity: [38;2;187;33;36mHIGH[0m, Results: 3
+[1mDescription:[0m Query to find passwords and secrets in infrastructure code.
+[1mPlatform:[0m Common
+[1mCWE:[0m 798
+[1mRisk Score:[0m 7.8
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/common-queries/a88baa34-e2ad-44ea-ad6f-8cac87bc7c71
+
+	[38;2;187;33;36m[1]:[0m ../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml:[38;2;34;187;51m218[0m
+
+		217:       RMQ_PRODUCER_QUEUE: "lesson_completed_queue"
+[38;2;240;173;78m		218:       RMQ_PRODUCER_URL: <SECRET-MASKED-ON-PURPOSE>:5672"
+[0m		219:       RMQ_PRODUCER_QUEUE_DURABLE: "true"
+
+
+	[38;2;187;33;36m[2]:[0m ../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml:[38;2;34;187;51m252[0m
+
+		251:       RMQ_PRODUCER_QUEUE_DURABLE: "true"
+[38;2;240;173;78m		252:       RMQ_PRODUCER_URL: <SECRET-MASKED-ON-PURPOSE>:5672"
+[0m		253: 
+
+
+	[38;2;187;33;36m[3]:[0m ../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml:[38;2;34;187;51m247[0m
+
+		246:     data:
+[38;2;240;173;78m		247:       MONGO_CONNECTION_STRING: <SECRET-MASKED-ON-PURPOSE>:27017/?retryWrites=false&serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&authSource=admin&authMechanism=SCRAM-SHA-256"
+[0m		248:       MONGO_DATABASE_NAME: "scoreboard"
+
+
+[38;2;187;33;36mPasswords And Secrets - Generic Secret[0m, Severity: [38;2;187;33;36mHIGH[0m, Results: 2
+[1mDescription:[0m Query to find passwords and secrets in infrastructure code.
+[1mPlatform:[0m Common
+[1mCWE:[0m 798
+[1mRisk Score:[0m 7.8
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/common-queries/a88baa34-e2ad-44ea-ad6f-8cac87bc7c71
+
+	[38;2;187;33;36m[1]:[0m ../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml:[38;2;34;187;51m243[0m
+
+		242:       KC_REALM: "MADGoat"
+[38;2;240;173;78m		243:       KC_SECRET: <SECRET-MASKED-ON-PURPOSE>
+[0m		244:       KC_SERVER_URL: "http://keycloak.madgoat.tech"
+
+
+	[38;2;187;33;36m[2]:[0m ../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml:[38;2;34;187;51m226[0m
+
+		225:       GO_PORT: "3000"
+[38;2;240;173;78m		226:       JWT_SECRET: <SECRET-MASKED-ON-PURPOSE>
+[0m		227:   - name: env-webapp
+
+
+[38;2;187;33;36mPasswords And Secrets - Generic Password[0m, Severity: [38;2;187;33;36mHIGH[0m, Results: 1
+[1mDescription:[0m Query to find passwords and secrets in infrastructure code.
+[1mPlatform:[0m Common
+[1mCWE:[0m 798
+[1mRisk Score:[0m 7.8
+[1mLearn more about this vulnerability:[0m https://docs.kics.io/latest/queries/common-queries/a88baa34-e2ad-44ea-ad6f-8cac87bc7c71
+
+	[38;2;187;33;36m[1]:[0m ../mad-deployment-service/helm/render-problems/madgoat-render/values.yaml:[38;2;34;187;51m214[0m
+
+		213:       DB_USERNAME: "postgres"
+[38;2;240;173;78m		214:       DB_PASSWORD: <SECRET-MASKED-ON-PURPOSE>
+[0m		215:       DB_NAME: "lessons"
+
+
+
+Results Summary:
+[38;2;255;0;0mCRITICAL[0m: 0
+[38;2;187;33;36mHIGH[0m: 6
+[38;2;255;114;19mMEDIUM[0m: 0
+[38;2;237;213;126mLOW[0m: 0
+[38;2;91;192;222mINFO[0m: 0
+TOTAL: 6
+
+Generating Reports: Done

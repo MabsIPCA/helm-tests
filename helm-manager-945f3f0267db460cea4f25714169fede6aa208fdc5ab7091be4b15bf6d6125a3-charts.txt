@@ -1,0 +1,11 @@
+element-web
+matrix-media-repo
+matrix-synapse
+netbox
+radosgw
+sliding-sync-proxy
+synatainer
+funkwhale
+lemmy
+peertube
+puppetboard

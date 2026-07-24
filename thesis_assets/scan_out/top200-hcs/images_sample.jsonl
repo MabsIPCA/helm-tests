@@ -1,0 +1,300 @@
+{"chart": "D:\\helm_clones_github\\beclab__apps\\falco", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\linux-polska\\ezd-backend\\2.0.0", "ok": true, "images": ["sourcemation/rabbitmq-4:4.1.3", "sourcemation/redis-exporter:1.74.0", "sourcemation/redis:8.2.0"]}
+{"chart": "D:\\helm_clones_github\\sapcc__helm-charts\\system\\owner-label-injector", "ok": true, "images": ["ccloud/owner-label-injector:1.1.0"]}
+{"chart": "D:\\helm_clones_github\\kubernetes-sigs__blob-csi-driver\\charts\\v1.22.3\\blob-csi-driver", "ok": true, "images": ["oss/kubernetes-csi/blob-csi:v1.22.3", "oss/kubernetes-csi/csi-node-driver-registrar:v2.8.0", "oss/kubernetes-csi/csi-provisioner:v3.5.0", "oss/kubernetes-csi/csi-resizer:v1.8.0", "oss/kubernetes-csi/livenessprobe:v2.10.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\epinio-crd\\103.0.0+up1.8.1", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_artifacthub\\argoproj__argo-rollouts\\examples\\helm-blue-green", "ok": true, "images": ["heptio-images/ks-guestbook-demo:0.1"]}
+{"chart": "D:\\helm_clones_github\\acuvity__mcp-servers-registry\\mcp-server-scrapezy\\charts\\mcp-server-scrapezy", "ok": true, "images": ["acuvity/mcp-server-scrapezy:1.0.0-0.1.1"]}
+{"chart": "D:\\helm_clones_github\\acuvity__mcp-servers-registry\\mcp-server-coincap\\charts\\mcp-server-coincap", "ok": true, "images": ["acuvity/mcp-server-coincap:1.0.0-0.9.3"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\sshwifty", "ok": true, "images": ["niruix/sshwifty:sha256:610b0c828bb4e3c561d8ac0ae0f0fa9749610f1f5ab858f7c1101790f623ad7a"]}
+{"chart": "D:\\helm_clones_github\\truenas__charts\\charts\\plex\\1.7.60", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\kuma\\kuma\\2.13.6", "ok": true, "images": ["kumahq/kuma-cp:2.13.6"]}
+{"chart": "D:\\helm_clones_github\\cozystack__cozystack\\packages\\system\\velero", "ok": true, "images": ["kubevirt/kubevirt-velero-plugin:v0.8.0", "velero/velero-plugin-for-aws:v1.12.1", "velero/velero:v1.17.0"]}
+{"chart": "D:\\helm_clones_github\\truenas__charts\\library\\ix-dev\\community\\drawio", "ok": true, "images": ["jgraph/drawio:26.1.0", "library/bash:4.4.23"]}
+{"chart": "D:\\helm_clones_github\\k0rdent__catalog\\apps\\open-webui\\charts\\open-webui-5.20.0", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-eks-operator\\103.2.0+up1.3.2", "ok": true, "images": ["rancher/eks-operator:v1.3.2"]}
+{"chart": "D:\\helm_clones_github\\truenas__charts\\library\\ix-dev\\community\\audiobookshelf", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-cis-benchmark-crd\\6.0.0", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\acuvity__mcp-servers-registry\\mcp-server-fetch\\charts\\mcp-server-fetch", "ok": true, "images": ["acuvity/mcp-server-fetch:1.0.0-2025.4.7"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\booksonic-air", "ok": true, "images": ["linuxserver/booksonic-air:sha256:381b4e0026a88832b173b7888cc29320d7979310c742a71e1b40581e25a4358e"]}
+{"chart": "D:\\helm_clones_artifacthub\\kubernetes__charts\\stable\\coscale", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\kuma\\kuma\\2.5.0", "ok": true, "images": ["kumahq/kuma-cp:2.5.0"]}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\bytebase", "ok": true, "images": ["beclab/aboveos-bitnami-openresty:1.25.3-2", "beclab/bytebase-bytebase:3.14.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\fleet\\106.1.10+up0.12.12", "ok": true, "images": ["rancher/fleet:v0.12.12"]}
+{"chart": "D:\\helm_clones_github\\truenas__charts\\test\\minio\\1.0.24", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\buoyant\\linkerd-control-plane\\2025.8.4", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\truenas__charts\\community\\castopod\\1.2.32", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\kubernetes-sigs__blob-csi-driver\\charts\\v1.26.11\\blob-csi-driver", "ok": true, "images": ["oss/v2/kubernetes-csi/blob-csi:v1.26.11", "oss/v2/kubernetes-csi/csi-node-driver-registrar:v2.14.0", "oss/v2/kubernetes-csi/csi-provisioner:v6.1.0", "oss/v2/kubernetes-csi/csi-resizer:v2.0.0", "oss/v2/kubernetes-csi/livenessprobe:v2.16.0"]}
+{"chart": "D:\\helm_clones_artifacthub\\kubernetes__charts\\stable\\inbucket", "ok": true, "images": ["jhillyerd/inbucket:release-2.0.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-cis-benchmark-crd\\5.7.0", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\ui-plugin-operator-crd\\102.0.2+up0.2.1", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\tkestack__charts\\incubator\\p2p-agent", "ok": true, "images": ["tke-market/p2p-agent:0.2.0", "tke-market/seed-server:0.2.0", "tke-market/tracker:0.2.0"]}
+{"chart": "D:\\helm_clones_github\\kubernetes-sigs__blob-csi-driver\\charts\\v1.26.0\\blob-csi-driver", "ok": true, "images": ["oss/kubernetes-csi/blob-csi:v1.26.0", "oss/kubernetes-csi/csi-node-driver-registrar:v2.13.0", "oss/kubernetes-csi/csi-provisioner:v5.2.0", "oss/kubernetes-csi/csi-resizer:v1.13.2", "oss/kubernetes-csi/livenessprobe:v2.15.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\speedscale\\speedscale-operator\\2.3.509", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\tkestack__charts\\incubator\\thanos", "ok": true, "images": ["bitnami/minio:2020.4.28-debian-10-r2"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-compliance\\107.6.0+up1.2.5", "ok": true, "images": ["rancher/compliance-operator:v1.2.5"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\hashicorp\\consul\\1.5.0", "ok": true, "images": ["hashicorp/consul-telemetry-collector:0.0.2", "hashicorp/consul:1.19.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\nirmata\\kyverno\\3.5.3", "ok": true, "images": ["nirmata/background-controller:v1.15.2-n4k.nirmata.1", "nirmata/cleanup-controller:v1.15.2-n4k.nirmata.1", "nirmata/kyverno:v1.15.2-n4k.nirmata.1", "nirmata/kyvernopre:v1.15.2-n4k.nirmata.1", "nirmata/reports-controller:v1.15.2-n4k.nirmata.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-backup\\2.1.1", "ok": true, "images": ["rancher/backup-restore-operator:v2.1.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\jfrog\\artifactory-ha\\107.117.14", "ok": true, "images": ["bitnami/postgresql:16.6.0-debian-12-r2", "jfrog/artifactory-pro:7.117.14", "jfrog/nginx-artifactory-pro:7.117.14", "jfrog/router:7.177.4", "ubi9/ubi-minimal:9.6.1749489516"]}
+{"chart": "D:\\helm_clones_github\\cozystack__cozystack\\packages\\system\\kilo", "ok": true, "images": ["library/alpine:3.23", "library/golang:1.25"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-gke-operator-crd\\107.2.0+up1.12.2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\whereabouts", "ok": true, "images": ["bitnami/whereabouts:0.9.2-debian-12-r2"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\kong\\kong\\2.41.1", "ok": true, "images": ["kong/kubernetes-ingress-controller:3.3", "library/kong:3.6"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\coder\\coder\\2.32.1", "ok": true, "images": ["coder/coder:v2.32.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\kuma\\kuma\\2.4.2", "ok": true, "images": ["kumahq/kuma-cp:2.4.2"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\harvester-csi-driver\\105.0.1+up0.1.22", "ok": true, "images": ["rancher/harvester-csi-driver:v0.2.2", "rancher/mirrored-longhornio-csi-attacher:v3.2.1", "rancher/mirrored-longhornio-csi-node-driver-registrar:v2.3.0", "rancher/mirrored-longhornio-csi-provisioner:v2.1.2", "rancher/mirrored-longhornio-csi-resizer:v1.2.0"]}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\homeassistant", "ok": true, "images": ["beclab/aboveos-busybox:1.37.0", "beclab/aboveos-nginx:1.27.0", "beclab/homeassistant-home-assistant:2026.3.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\confluent\\confluent-for-kubernetes\\0.1193.34", "ok": true, "images": ["confluentinc/confluent-operator:0.1193.34"]}
+{"chart": "D:\\helm_clones_github\\instantlinux__docker-tools\\images\\blacklist\\helm", "ok": true, "images": ["instantlinux/blacklist:1.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\cockroach-labs\\cockroachdb\\14.0.0", "ok": true, "images": ["cockroachdb/cockroach:v24.2.0", "cockroachlabs-helm-charts/cockroach-self-signer-cert:1.5", "library/busybox:latest"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\jfrog\\artifactory-jcr\\107.146.13", "ok": true, "images": ["bitnami/postgresql:17.6.0-debian-12-r2", "jfrog/artifactory-jcr:7.146.13", "jfrog/nginx-artifactory-pro:7.146.13", "jfrog/observability:2.33.0", "jfrog/router:7.320.19", "ubi9/ubi-minimal:9.7.1777857961"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\kong\\kong\\2.33.3", "ok": true, "images": ["kong/kubernetes-ingress-controller:3.0", "library/kong:3.5"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\gluu\\gluu\\5.0.21", "ok": true, "images": ["gluufederation/flex/admin-ui:1.0.17_dev", "gluufederation/flex/casa:5.0.0-15", "janssenproject/auth-server:1.0.16-1", "janssenproject/config-api:1.0.16-1", "janssenproject/configurator:1.0.16-1", "janssenproject/jans/auth-server:1.0.17_dev", "janssenproject/jans/config-api:1.0.17_dev", "janssenproject/jans/configurator:1.0.17_dev", "janssenproject/jans/fido2:1.0.17_dev", "janssenproject/jans/persistence-loader:1.0.17_dev", "janssenproject/jans/scim:1.0.17_dev", "janssenproject/persistence-loader:1.0.16-1"]}
+{"chart": "D:\\helm_clones_github\\k0rdent__catalog\\apps\\amd-gpu\\charts\\amd-gpu-operator-v1.4.1", "ok": true, "images": ["brancz/kube-rbac-proxy:v0.18.1", "nfd/node-feature-discovery:v0.16.1", "rocm/device-config-manager:v1.4.1", "rocm/device-metrics-exporter:v1.4.1", "rocm/gpu-operator-utils:v1.4.0", "rocm/gpu-operator:v1.4.1", "rocm/kernel-module-management-operator:v1.4.1", "rocm/kernel-module-management-webhook-server:v1.4.1", "rocm/test-runner:v1.4.1"]}
+{"chart": "D:\\helm_clones_github\\truenas__charts\\library\\ix-dev\\community\\overseerr", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\cockroach-labs\\cockroachdb\\18.0.3", "ok": true, "images": ["cockroachdb/cockroach:v25.3.2", "cockroachlabs-helm-charts/cockroach-self-signer-cert:1.9", "library/busybox:latest"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-cis-benchmark\\6.8.0", "ok": true, "images": ["rancher/cis-operator:v1.2.6"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\percona\\psmdb-operator\\1.19.0", "ok": true, "images": ["percona/percona-server-mongodb-operator:1.19.0"]}
+{"chart": "D:\\helm_clones_github\\wiremind__wiremind-helm-charts\\charts\\druid", "ok": true, "images": ["apache/druid:29.0.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-cis-benchmark-crd\\5.2.0", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\mongodb-sharded", "ok": true, "images": ["bitnami/mongodb-sharded:8.0.13-debian-12-r0"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\buoyant\\linkerd-crds\\2026.5.1", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\instantlinux__docker-tools\\images\\il-v1\\helm", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\neuvector-crd\\103.0.7+up2.8.3", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\turbonomic__t8c-install\\operator\\helm-charts\\suspend\\suspend", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\coder\\coder\\2.27.2", "ok": true, "images": ["coder/coder:v2.27.2"]}
+{"chart": "D:\\helm_clones_github\\rancher__rke2-charts\\packages\\rke2-multus\\charts", "ok": true, "images": ["rancher/hardened-cni-plugins:v1.9.1-build20260511", "rancher/hardened-multus-cni:v4.2.4-build20260310"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\longhorn-crd\\101.1.1+up1.3.3", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\nicholaswilde__helm-charts\\charts\\olivetin", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\fleet\\106.1.3+up0.12.5", "ok": true, "images": ["rancher/fleet:v0.12.5"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\speedscale\\speedscale-operator\\1.3.40", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\valetudo-mapper", "ok": true, "images": ["rand256/valetudo-mapper:sha256:4ca244330be0baf945db767b6d4d80e7c0f786ba372e8e2509b005183522b717"]}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\anythingllm", "ok": true, "images": ["beclab/aboveos-busybox:1.37.0", "beclab/mintplexlabs-anythingllm:1.11.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\speedscale\\speedscale-operator\\2.2.233", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\IBM__charts\\components\\ibm-watson-aiops-prod", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-aks-operator\\107.1.0+up1.12.1", "ok": true, "images": ["rancher/aks-operator:v1.12.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\speedscale\\speedscale-operator\\2.0.11", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\harvester-cloud-provider\\104.0.1+up0.2.4\\dependency_charts\\kube-vip", "ok": true, "images": ["rancher/mirrored-kube-vip-kube-vip-iptables:v0.6.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\jfrog\\artifactory-ha\\107.146.8", "ok": true, "images": ["bitnami/postgresql:17.6.0-debian-12-r2", "jfrog/artifactory-pro:7.146.8", "jfrog/nginx-artifactory-pro:7.146.8", "jfrog/observability:2.33.0", "jfrog/router:7.320.9", "ubi9/ubi-minimal:9.7.1773939694"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-eks-operator-crd\\108.5.0+up1.13.5", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\fleet-agent\\105.1.4+up0.11.11", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\onlyofficev2\\onlyofficev2", "ok": true, "images": ["beclab/aboveos-bitnami-openresty:1.25.3-2"]}
+{"chart": "D:\\helm_clones_github\\sapcc__helm-charts\\system\\ldap-named-user", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\acuvity__mcp-servers-registry\\mcp-server-apify-rag-web-browser\\charts\\mcp-server-apify-rag-web-browser", "ok": true, "images": ["acuvity/mcp-server-apify-rag-web-browser:1.0.0-0.1.4"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\yugabyte\\yugabyte\\2.16.7", "ok": true, "images": ["yugabyte/yugabyte-ubi:2.16.7.0-b59", "yugabytedb/yugabyte:2.16.7.0-b59"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\neuvector-monitor\\107.0.4+up2.8.11", "ok": true, "images": ["rancher/neuvector-prometheus-exporter:1.0.10"]}
+{"chart": "D:\\helm_clones_github\\elastisys__compliantkubernetes-apps\\helmfile.d\\upstream\\bitnami\\thanos", "ok": true, "images": ["bitnami/thanos:0.39.2-debian-12-r2"]}
+{"chart": "D:\\helm_clones_github\\Mirantis__rockoon\\charts\\openstack\\manila", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\tensorzero", "ok": true, "images": ["beclab/aboveos-bitnami-openresty:1.25.3-2", "beclab/aboveos-busybox:1.37.0", "beclab/clickhouse-clickhouse-server:25.5", "beclab/tensorzero-gateway:2026.4.0", "beclab/tensorzero-ui:2026.4.0"]}
+{"chart": "D:\\helm_clones_github\\k0rdent__catalog\\apps\\kube-prometheus-stack\\charts\\kube-prometheus-stack-77.0.0", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\turbonomic__t8c-install\\operator\\helm-charts\\probes\\mediation-vmax", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\sapcc__helm-charts\\system\\jupyter-cron-reports", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\sia-daemon", "ok": true, "images": ["siafoundation/siad:sha256:be7850f0389a6a68ae86181e1e1363328062f76777ce5bcfb3ae3a7ca314cd03"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\telethon-downloader", "ok": true, "images": ["jsavargas/telethon_downloader:sha256:cf278a7a3ae876dd7c3731e6ecd4a2832700efd78b48e6b58d8e08a86a15806e"]}
+{"chart": "D:\\helm_clones_github\\cozystack__cozystack\\packages\\apps\\mongodb", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\nicholaswilde__helm-charts\\charts\\fossil", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\k0rdent__catalog\\apps\\kyverno\\charts\\kyverno-3.2.6", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\synadia\\nats\\1.3.3", "ok": true, "images": ["library/nats:2.11.1-alpine", "natsio/nats-box:0.17.0", "natsio/nats-server-config-reloader:0.17.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\f5\\nginx-ingress\\1.4.2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\theme-park", "ok": true, "images": ["containerforge/theme-park:sha256:5d183557413c12d13d157b100efe213e6f17a7e87bebbaec3da51516bc086591"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\longhorn-crd\\108.0.0+up1.8.2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\alienswarm-reactivedrop", "ok": true, "images": ["ich777/steamcmd:sha256:bb03282a0b85fee8340505ca1f49b7351f79812f123e3753fd19476896c8a28d"]}
+{"chart": "D:\\helm_clones_github\\Mirantis__rockoon\\charts\\openstack\\ironic", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\percona\\pxc-db\\1.14.0", "ok": true, "images": ["percona/percona-xtradb-cluster-operator:1.14.0-haproxy", "percona/percona-xtradb-cluster-operator:1.14.0-logcollector", "percona/percona-xtradb-cluster-operator:1.14.0-pxc8.0-backup-pxb8.0.35", "percona/percona-xtradb-cluster:8.0.32-24.2"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\speedscale\\speedscale-operator\\2.4.82", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\neuvector-crd\\107.0.1+up2.8.8", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\netdata", "ok": true, "images": ["netdata/netdata:sha256:51d9de36e7a13bf2d97496ff01ce84e83daec4b1c25f69b022374418cb7d7e87"]}
+{"chart": "D:\\helm_clones_github\\k0rdent__catalog\\apps\\elasticsearch\\example", "ok": true, "images": ["eck/eck-operator:3.3.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\commitgo\\gitea\\12.0.0", "ok": true, "images": ["bitnami/pgpool:4.6.0-debian-12-r8", "bitnami/postgresql-repmgr:17.5.0-debian-12-r1", "bitnami/valkey-cluster:8.1.1-debian-12-r0", "gitea:1.23.8-rootless"]}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\fishspeechv2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\percona\\pxc-db\\1.14.2", "ok": true, "images": ["percona/percona-xtradb-cluster-operator:1.14.0-haproxy", "percona/percona-xtradb-cluster-operator:1.14.0-logcollector", "percona/percona-xtradb-cluster-operator:1.14.0-pxc8.0-backup-pxb8.0.35", "percona/percona-xtradb-cluster:8.0.35-27.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\harvester-csi-driver\\106.0.1+up0.1.24", "ok": true, "images": ["rancher/harvester-csi-driver:v0.2.3", "rancher/mirrored-longhornio-csi-attacher:v3.2.1", "rancher/mirrored-longhornio-csi-node-driver-registrar:v2.3.0", "rancher/mirrored-longhornio-csi-provisioner:v2.1.2", "rancher/mirrored-longhornio-csi-resizer:v1.2.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\intel\\intel-device-plugins-qat\\0.34.0", "ok": true, "images": ["intel/intel-qat-plugin:0.34.0"]}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\duplicati", "ok": true, "images": ["beclab/duplicati-duplicati:2.2.0.102"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\f5\\nginx-ingress\\1.2.2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-webhook\\109.0.0+up0.10.0-rc.10", "ok": true, "images": ["rancher/rancher-webhook:v0.10.0-rc.10"]}
+{"chart": "D:\\helm_clones_artifacthub\\kubernetes__charts\\stable\\gangway", "ok": true, "images": ["heptio-images/gangway:v3.2.0"]}
+{"chart": "D:\\helm_clones_artifacthub\\kubernetes__charts\\stable\\centrifugo", "ok": true, "images": ["centrifugo/centrifugo:v2.4.0"]}
+{"chart": "D:\\helm_clones_github\\Obmondo__KubeAid\\argocd-helm-charts\\kubeaid-security-config", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\sriov-crd\\104.0.0+up0.1.0", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\hunyuan3dv21v2\\hunyuan3dv21v2", "ok": true, "images": ["beclab/aboveos-bitnami-openresty:1.25.3-2"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\jfrog\\artifactory-ha\\107.63.12", "ok": true, "images": ["bitnami/postgresql:13.10.0-debian-11-r14", "jfrog/artifactory-pro:7.63.12", "jfrog/nginx-artifactory-pro:7.63.12", "jfrog/router:7.71.0", "ubi9/ubi-minimal:9.2.691"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\new-relic\\nri-bundle\\5.0.92", "ok": true, "images": ["kubebuilder/kube-rbac-proxy:v0.14.0", "newrelic/k8s-agents-operator:0.12.0", "pixie-oss/pixie-prod/operator-vizier_deleter:0.1.6"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\dynatrace\\dynatrace-operator\\1.7.2", "ok": true, "images": ["dynatrace/dynatrace-operator:v1.7.2"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\intel\\intel-device-plugins-sgx\\0.34.0", "ok": true, "images": ["intel/intel-sgx-plugin:0.34.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-webhook\\2.0.5+up0.3.5", "ok": true, "images": ["rancher/rancher-webhook:v0.3.5"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\fleet-agent\\106.1.1+up0.12.3", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\loft\\loft\\3.3.4", "ok": true, "images": ["loft-sh/loft:3.3.4"]}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\ollamaphi414bv2\\ollamaphi414bv2server", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\tkestack__charts\\incubator\\seldon-core-operator-on-tke", "ok": true, "images": ["seldonio/tritonserver:latest", "tke-market/alibiexplainer:1.12.0", "tke-market/mlflowserver:latest", "tke-market/mlserver:latest", "tke-market/rclone-storage-initializer:1.12.0", "tke-market/serving:latest", "tke-market/sklearnserver:latest", "tke-market/tfserving-proxy:latest", "tke-market/xgboostserver:latest"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\redpanda\\redpanda\\5.9.17", "ok": true, "images": ["redpandadata/console:v2.7.2"]}
+{"chart": "D:\\helm_clones_github\\tkestack__charts\\incubator\\cert-manager-webhook-dnspod", "ok": true, "images": ["tke-market/cert-manager-webhook-dnspod:1.5.2"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\jfrog\\artifactory-ha\\107.125.10", "ok": true, "images": ["bitnami/postgresql:17.6.0-debian-12-r2", "jfrog/artifactory-pro:7.125.10", "jfrog/nginx-artifactory-pro:7.125.10", "jfrog/observability:2.18.2", "jfrog/router:7.193.7", "ubi9/ubi-minimal:9.7.1762956380"]}
+{"chart": "D:\\helm_clones_github\\cozystack__cozystack\\packages\\apps\\mariadb", "ok": true, "images": ["library/alpine:3.20"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\syncthing", "ok": true, "images": ["syncthing/syncthing:sha256:7c60eb0ec887696c8684de88aea2dfe39a7391184b29d33c0aad778c99c7683e"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\buoyant\\linkerd-control-plane\\2026.3.2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-eks-operator\\105.0.0+up1.10.0", "ok": true, "images": ["rancher/eks-operator:v1.10.0"]}
+{"chart": "D:\\helm_clones_artifacthub\\kubernetes-sigs__headlamp\\charts\\headlamp", "ok": true, "images": ["headlamp-k8s/headlamp:v0.42.0"]}
+{"chart": "D:\\helm_clones_artifacthub\\VictoriaMetrics__helm-charts\\charts\\victoria-logs-single", "ok": true, "images": ["victoriametrics/victoria-logs:v1.50.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\elemental\\106.0.2+up1.6.10", "ok": true, "images": ["rancher/elemental-channel/sl-micro:6.1-baremetal", "rancher/mirrored-elemental-operator:1.6.10"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\traefik\\traefik\\33.0.0", "ok": true, "images": ["library/traefik:v3.2.0"]}
+{"chart": "D:\\helm_clones_github\\turbonomic__t8c-install\\operator\\helm-charts\\base\\timescaledb", "ok": true, "images": ["cpopen/turbonomic/timescaledb:2.10.2-pg12"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\speedscale\\speedscale-operator\\2.3.149", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\nicholaswilde__helm-charts\\charts\\pixapop", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\IBM__charts\\components\\ibm-planning-analytics", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\speedscale\\speedscale-operator\\2.3.16", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-logging-crd\\103.1.2+up4.4.0", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\k0rdent__catalog\\apps\\keda\\charts\\keda-2.17.0", "ok": true, "images": ["kedacore/keda-admission-webhooks:2.17.0", "kedacore/keda-metrics-apiserver:2.17.0", "kedacore/keda:2.17.0"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\amcrest2mqtt", "ok": true, "images": ["dchesterton/amcrest2mqtt:sha256:5a503bcf7b39bd846ca60be1846ce8b73eae979fd074f2a31e14462f85447260"]}
+{"chart": "D:\\helm_clones_github\\redhat-community-ai-tools__UnifAI\\helm\\shared-resources\\identity", "ok": true, "images": ["unifai/identity:latest"]}
+{"chart": "D:\\helm_clones_github\\truenas__charts\\library\\ix-dev\\community\\node-red", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\IBM__charts\\components\\ibm-ws-rstudio", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\k0rdent__catalog\\apps\\penpot\\example", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\dagger\\dagger-helm\\0.19.9", "ok": true, "images": ["engine:v0.19.9"]}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\vllmqwen330ba3binstruct4bitv2\\vllmqwen330ba3bv2server", "ok": true, "images": ["beclab/harveyff-hf-downloader:v0.1.0", "vllm/vllm-openai:v0.20.2-cu129"]}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\ollamaglm47flashv2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\percona\\psmdb-operator\\1.20.0", "ok": true, "images": ["percona/percona-server-mongodb-operator:1.20.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-monitoring-crd\\107.1.0+up69.8.2-rancher.15", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\hashicorp\\consul\\1.2.1", "ok": true, "images": ["hashicorp/consul-telemetry-collector:0.0.1", "hashicorp/consul:1.16.1"]}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\speaches\\speaches", "ok": true, "images": ["beclab/aboveos-bitnami-openresty:1.25.3-2"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\littlelink", "ok": true, "images": ["techno-tim/littlelink-server:sha256:e84ea9d93b60362cf9e292dba43adb604e375d9206d5fcf1de6bb766a20aabd1"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\victoriametrics", "ok": true, "images": ["victoriametrics/victoria-metrics:sha256:dc030542eb0cd262287c9ec32e5867f8dcccc0efd5906c10f7fc8176c53d34d7"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\fleet-agent\\106.1.2+up0.12.4", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\portworx\\portworx\\7.0.2", "ok": true, "images": ["portworx/oci-monitor:3.4.0.1", "portworx/px-operator:25.3.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\codefresh\\cf-runtime\\8.0.2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\kms", "ok": true, "images": ["pykmsorg/py-kms:sha256:d6e0989ae210c203c8e0d56638344219a5e5f27d088e816b910b6fdde935dd8c"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\discordgsm", "ok": true, "images": ["containerforge/postgresql-client:sha256:c7ea20fbec42f93e8c45d05676673654dfba12665f63b9dc7020a00e01cff3cc", "discordgsm/discord-game-server-monitor:sha256:c50826cb218cbd87e304e429bbf3a7272e7ee8ab84f1ea2c6ed3e036ffb942f4"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\game-server-watcher", "ok": true, "images": ["a-sync/game-server-watcher:sha256:989096de6b6286f949a8fc639454016857b81add008620535ac9c23d924f0824"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\kuma\\kuma\\2.2.2", "ok": true, "images": ["kumahq/kuma-cp:2.2.2"]}
+{"chart": "D:\\helm_clones_artifacthub\\kubernetes__charts\\stable\\docker-registry", "ok": true, "images": ["library/registry:2.7.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\fleet-agent\\104.1.3+up0.10.7", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-backup-crd\\109.0.0+up10.0.0", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\speedscale\\speedscale-operator\\2.5.248", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\trilio\\k8s-triliovault-operator\\4.0.1", "ok": true, "images": ["triliovault/k8s-triliovault-operator:4.0.1", "triliovault/operator-webhook-init:4.0.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\jfrog\\artifactory-ha\\107.84.16", "ok": true, "images": ["bitnami/postgresql:15.6.0-debian-11-r16", "jfrog/artifactory-pro:7.84.16", "jfrog/nginx-artifactory-pro:7.84.16", "jfrog/router:7.105.1", "ubi9/ubi-minimal:9.4.949"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\commitgo\\gitea\\12.6.0", "ok": true, "images": ["bitnamilegacy/pgpool:4.6.3-debian-12-r0", "bitnamilegacy/postgresql-repmgr:17.6.0-debian-12-r2", "bitnamilegacy/valkey-cluster:8.1.3-debian-12-r3", "gitea:1.26.1-rootless"]}
+{"chart": "D:\\helm_clones_github\\IBM__charts\\components\\0025-databases", "ok": true, "images": ["library/zen-database-core:3.5.0-683-x86_64", "library/zen-databases:3.5.0-683-x86_64"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\mongodb\\community-operator\\0.10.0", "ok": true, "images": ["mongodb/mongodb-kubernetes-operator:0.10.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-turtles\\108.0.2+up0.25.2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_artifacthub\\kubernetes__charts\\stable\\reloader", "ok": true, "images": ["stakater/reloader:v0.0.41"]}
+{"chart": "D:\\helm_clones_github\\junghoon2__k8s-class\\demo-app\\opentelemetry-demo-0.22.3", "ok": true, "images": ["grafana/grafana:9.4.7", "jaegertracing/all-in-one:1.42.0", "library/busybox:latest", "library/postgres:14", "library/redis:alpine", "open-telemetry/demo:1.4.0-accountingservice", "open-telemetry/demo:1.4.0-adservice", "open-telemetry/demo:1.4.0-cartservice", "open-telemetry/demo:1.4.0-checkoutservice", "open-telemetry/demo:1.4.0-currencyservice", "open-telemetry/demo:1.4.0-emailservice", "open-telemetry/demo:1.4.0-featureflagservice", "open-telemetry/demo:1.4.0-frauddetectionservice", "open-telemetry/demo:1.4.0-frontend", "open-telemetry/demo:1.4.0-frontendproxy", "open-telemetry/demo:1.4.0-kafka", "open-telemetry/demo:1.4.0-loadgenerator", "open-telemetry/demo:1.4.0-paymentservice", "open-telemetry/demo:1.4.0-productcatalogservice", "open-telemetry/demo:1.4.0-quoteservice", "open-telemetry/demo:1.4.0-recommendationservice", "open-telemetry/demo:1.4.0-shippingservice", "otel/opentelemetry-collector-contrib:0.76.1", "prometheus/prometheus:v2.43.0"]}
+{"chart": "D:\\helm_clones_github\\kubeflow__arena\\charts\\tf-horovod", "ok": true, "images": ["ai_zhangbei/deep-learning:gpu-tf-1.6.0", "kube-ai/ali-horovod:gpu-tf-1.6.0", "kube-ai/jobmon:latest"]}
+{"chart": "D:\\helm_clones_artifacthub\\backstage__charts\\charts\\backstage", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\k0rdent__catalog\\apps\\minio\\charts\\minio-14.1.2", "ok": true, "images": ["bitnami/minio:2024.3.21-debian-12-r0"]}
+{"chart": "D:\\helm_clones_github\\kubernetes-sigs__blob-csi-driver\\charts\\v1.22.8\\blob-csi-driver", "ok": true, "images": ["oss/kubernetes-csi/blob-csi:v1.22.8", "oss/kubernetes-csi/csi-node-driver-registrar:v2.8.0", "oss/kubernetes-csi/csi-provisioner:v3.5.0", "oss/kubernetes-csi/csi-resizer:v1.8.0", "oss/kubernetes-csi/livenessprobe:v2.10.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\fleet-agent\\107.0.0+up0.13.0", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-webhook\\1.0.8+up0.2.9", "ok": true, "images": ["rancher/rancher-webhook:v0.2.9"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\longhorn-crd\\107.3.1+up1.11.2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\ollamallama318bv2\\ollamallama318bv2", "ok": true, "images": ["beclab/aboveos-bitnami-openresty:1.25.3-2"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\jdownloader2", "ok": true, "images": ["jlesage/jdownloader-2:sha256:3d6cb102bd9bacff12ab1ca5136a38cb8f93d6595a7ccf5bce60aac4df138ebd"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\neuvector-crd\\104.0.8+up2.8.8", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\jellyseerr", "ok": true, "images": ["containerforge/jellyseerr:sha256:8d266530eaee828b54552981a244614bd5d8ba3dca143a779538c78e3c435e6b"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\kitana", "ok": true, "images": ["pannal/kitana:sha256:a6164e44a03bca92b07216412e564e9c445487fe739d1b80848ffe4b4c6ccd3b"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\trilio\\k8s-triliovault-operator\\5.3.1", "ok": true, "images": ["triliodata/k8s-triliovault-operator:5.3.1"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\rdtclient", "ok": true, "images": ["p3terx/aria2-pro:sha256:086d1a37c586edb07ec0fb956bf9edd89d1d38d138ad5309ff96d510c8c9a011", "rogerfar/rdtclient:sha256:2d42d6835bff75010178b64c00b8370086548c0070ec6016d59b521d4e1be7d6"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\neuvector-monitor\\105.0.5+up2.8.8", "ok": true, "images": ["rancher/neuvector-prometheus-exporter:1.0.7"]}
+{"chart": "D:\\helm_clones_artifacthub\\kubernetes__charts\\stable\\atlantis", "ok": true, "images": ["runatlantis/atlantis:v0.14.0"]}
+{"chart": "D:\\helm_clones_github\\companyinfo__helm-charts\\charts\\helmet\\examples\\simple", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\truenas__charts\\library\\ix-dev\\charts\\netdata", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\sapcc__helm-charts\\prometheus-rules\\prometheus-kubernetes-rules", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\buoyant\\linkerd-control-plane\\2025.9.4", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\gravity", "ok": true, "images": ["beryju/gravity:sha256:850e7d9a909f659a16f1c134c53efda23795a60a2d74fccb8b3b68c56b79db59"]}
+{"chart": "D:\\helm_clones_artifacthub\\hashicorp__consul-k8s\\charts\\demo", "ok": true, "images": ["hashicorpdemoapp/frontend:v1.0.3", "hashicorpdemoapp/payments:v0.0.16", "hashicorpdemoapp/product-api-db:v0.0.21", "hashicorpdemoapp/product-api:v0.0.21", "hashicorpdemoapp/public-api:v0.0.6", "jaegertracing/jaeger-agent:latest", "library/nginx:alpine"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\linux-polska\\ezd-crd\\1.8.0", "ok": true, "images": ["bitnami/rabbitmq-cluster-operator:2.14.0", "cloudnative-pg/cloudnative-pg:1.26.0", "ot-container-kit/redis-operator/redis-operator:v0.20.2"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\linux-polska\\ezd-backend\\1.7.0", "ok": true, "images": ["sourcemation/rabbitmq-4-management:4.1.0", "sourcemation/redis-exporter:1.71.0", "sourcemation/redis:8.0.0"]}
+{"chart": "D:\\helm_clones_github\\k8s-home-lab__helm-charts\\unmaintained\\amcrest2mqtt", "ok": true, "images": ["dchesterton/amcrest2mqtt:1.0.9"]}
+{"chart": "D:\\helm_clones_github\\k8s-home-lab__helm-charts\\unmaintained\\smarter-device-manager", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\kubecost\\cost-analyzer\\1.107.1", "ok": true, "images": ["aws-observability/aws-sigv4-proxy:latest", "jaegertracing/all-in-one:latest", "kubecost/cost-model:latest", "kubecost/frontend:latest", "kubecost1/cluster-controller:v0.12.0", "kubecost1/cost-model:latest", "kubecost1/frontend:latest", "kubecost1/kubecost-network-costs:v0.17.1", "nginxinc/nginx-unprivileged:latest", "prometheus-engine/frontend:v0.4.1-gke.0", "thanosio/thanos:v0.29.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\haproxy\\haproxy\\1.37.0", "ok": true, "images": ["haproxytech/kubernetes-ingress:1.10.11"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\xmrig", "ok": true, "images": ["cooleye72/xmrig:sha256:f7e590b243f86ab7fe0b440b125814387fff1c3a6341a6c9db8e6a0528c4c183"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\traefik\\traefik\\37.3.0", "ok": true, "images": ["library/traefik:v3.6.0"]}
+{"chart": "D:\\helm_clones_artifacthub\\kubernetes__charts\\stable\\heapster", "ok": true, "images": ["addon-resizer:1.7", "heapster-amd64:v1.5.4"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\fleet-crd\\108.0.1+up0.14.1", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_artifacthub\\kubernetes__charts\\incubator\\chartmuseum", "ok": true, "images": ["chartmuseum/chartmuseum:v0.5.1"]}
+{"chart": "D:\\helm_clones_github\\tkestack__charts\\incubator\\jenkins", "ok": true, "images": ["tke-market/jenkins:2.263.1", "tke-market/k8s-sidecar:0.1.275"]}
+{"chart": "D:\\helm_clones_github\\IBM__charts\\samples\\ibm-sch\\unit-tests\\test-routename-1\\chart", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\ngrok\\kubernetes-ingress-controller\\0.11.0", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\kasten\\k10\\8.0.1101", "ok": true, "images": ["library/dex:latest", "library/kanister-tools:latest", "prometheus-operator/prometheus-config-reloader:v0.82.2", "prometheus/prometheus:v3.4.0"]}
+{"chart": "D:\\helm_clones_artifacthub\\aws__eks-charts\\stable\\appmesh-prometheus", "ok": true, "images": ["library/alpine:latest", "prom/prometheus:v2.13.1"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\czkawka", "ok": true, "images": ["jlesage/czkawka:sha256:bb1012c8a162f79918eac88c7fd5e579b52e1464eeadc6fb2509363d2e569a10"]}
+{"chart": "D:\\helm_clones_github\\sapcc__helm-charts\\system\\provider-vsphere", "ok": true, "images": ["k8s-staging-capi-vsphere/cluster-api-vsphere-controller:v1.9.3"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\longhorn-crd\\103.1.1+up1.4.4", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\bitnami__charts\\bitnami\\dremio", "ok": true, "images": ["bitnami/dremio:26.0.0-debian-12-r5", "bitnami/minio:2025.7.23-debian-12-r3", "bitnami/os-shell:12-debian-12-r51", "bitnami/zookeeper:3.9.3-debian-12-r21"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\instana\\instana-agent\\2.0.0", "ok": true, "images": ["instana/instana-agent-operator:2.1.9"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\nutanix\\nutanix-csi-snapshot\\6.3.3", "ok": true, "images": ["sig-storage/snapshot-controller:v6.3.3", "sig-storage/snapshot-validation-webhook:v6.3.3"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\loft\\loft\\3.4.1", "ok": true, "images": ["loft-sh/loft:3.4.1"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\avidemux", "ok": true, "images": ["jlesage/avidemux:sha256:178803682387ea49e289e69e2489af52e7c5a7e7c72932db6ed18c67aaf1a5e4"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\sumologic\\sumologic\\4.15.0", "ok": true, "images": ["bats/bats:latest", "brancz/kube-rbac-proxy:v0.18.1", "falcosecurity/falco-driver-loader:0.36.2", "falcosecurity/falco-no-driver:0.36.2", "falcosecurity/falcoctl:0.6.2", "library/busybox:latest", "library/chronograf:1.6.2", "library/influxdb:1.7.9", "library/redis:alpine", "open-telemetry/opentelemetry-operator/opentelemetry-operator:0.122.0", "sumologic/busybox:1.36.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-monitoring-crd\\103.0.3+up45.31.1", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\jfrog\\artifactory-jcr\\107.90.8", "ok": true, "images": ["bitnami/postgresql:15.6.0-debian-11-r16", "jfrog/artifactory-jcr:7.90.8", "jfrog/nginx-artifactory-pro:7.90.8", "jfrog/router:7.118.0", "ubi9/ubi-minimal:9.4.949.1716471857"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-gke-operator\\104.4.0+up1.9.4", "ok": true, "images": ["rancher/gke-operator:v1.9.4"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\yugabyte\\yugabyte\\2.18.4+2", "ok": true, "images": ["yugabyte/yugabyte-ubi:2.18.4.2-b2", "yugabytedb/yugabyte:2.18.4.2-b2"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\buoyant\\linkerd-crds\\2024.6.1", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\truenas__charts\\library\\ix-dev\\community\\zerotier", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\truenas__charts\\library\\ix-dev\\community\\ipfs", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-backup\\1.0.201", "ok": true, "images": ["rancher/backup-restore-operator:v1.0.2"]}
+{"chart": "D:\\helm_clones_github\\instantlinux__docker-tools\\k8s\\helm\\jira", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\hashicorp\\vault\\0.28.1", "ok": true, "images": ["hashicorp/vault-k8s:1.4.2", "hashicorp/vault-k8s:1.4.2-ubi", "hashicorp/vault:1.17.2", "hashicorp/vault:1.17.2-ubi"]}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\stablefast3dsharev2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\synadia\\nats\\1.2.1", "ok": true, "images": ["library/nats:2.10.17-alpine", "natsio/nats-box:0.14.3", "natsio/nats-server-config-reloader:0.15.0"]}
+{"chart": "D:\\helm_clones_github\\turbonomic__t8c-install\\operator\\helm-charts\\services\\reporting", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\redpanda\\redpanda\\5.10.2", "ok": true, "images": ["redpandadata/console:v2.8.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\longhorn-crd\\102.3.3+up1.5.5", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-logging-crd\\103.0.1+up3.17.10", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\sapcc__helm-charts\\system\\liquid-ceph", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\sapcc__helm-charts\\openstack\\cc3test", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\blinko", "ok": true, "images": ["beclab/blinkospace-blinko:1.8.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\fleet-crd\\103.1.4+up0.9.4", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\beclab__apps\\acestep15v2\\acestep15v2server", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\cozystack__cozystack\\packages\\system\\ingress-rd", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\jfrog\\artifactory-ha\\107.117.19", "ok": true, "images": ["bitnami/postgresql:16.6.0-debian-12-r2", "jfrog/artifactory-pro:7.117.19", "jfrog/nginx-artifactory-pro:7.117.19", "jfrog/router:7.177.11", "ubi9/ubi-minimal:9.6.1749489516"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-monitoring\\106.0.2+up66.7.1-rancher.14", "ok": true, "images": ["rancher/mirrored-grafana-grafana:11.4.5"]}
+{"chart": "D:\\helm_clones_github\\YAKEcloud__yake\\helmcharts\\provider-azure", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\jfrog\\artifactory-jcr\\107.98.7", "ok": true, "images": ["bitnami/postgresql:15.6.0-debian-11-r16", "jfrog/artifactory-jcr:7.98.7", "jfrog/nginx-artifactory-pro:7.98.7", "jfrog/router:7.135.1", "ubi9/ubi-minimal:9.4.1227"]}
+{"chart": "D:\\helm_clones_github\\WeBankFinTech__Prophecis\\di\\jobmonitor\\charts\\trtserving", "ok": true, "images": ["tensorflow/serving:latest"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\pvk-ii", "ok": true, "images": ["ich777/steamcmd:sha256:22d30823848fc33bd937257181430c4bf263ee9c7edbf2704a7f044b6df918f5"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\hashicorp\\consul\\1.9.6", "ok": true, "images": ["hashicorp/consul-telemetry-collector:0.0.2", "hashicorp/consul:1.22.6"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\percona\\pxc-db\\1.16.1", "ok": true, "images": ["percona/haproxy:2.8.11", "percona/percona-xtradb-cluster-operator:1.16.1-logcollector-fluentbit3.2.2", "percona/percona-xtradb-cluster-operator:1.16.1-pxc8.0-backup-pxb8.0.35", "percona/percona-xtradb-cluster:8.0.39-30.1"]}
+{"chart": "D:\\helm_clones_github\\k0rdent__catalog\\apps\\pure-plugin\\charts\\pure-k8s-plugin-2.7.1", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\hashicorp\\vault\\0.31.0", "ok": true, "images": ["hashicorp/vault-k8s:1.7.0", "hashicorp/vault-k8s:1.7.0-ubi", "hashicorp/vault:1.20.4", "hashicorp/vault:1.20.4-ubi"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\blocky", "ok": true, "images": ["0xerr0r/blocky:sha256:d9f15eddffedded40797406349012cbd5966ef99c286b13321e7a76efddb9bdc", "bitnamisecure/valkey:sha256:a3c580c005e12c3e0f97a3d6d703ca2d361c917457a35b080880de18b0fcd8d3", "containerforge/postgresql-client:sha256:c7ea20fbec42f93e8c45d05676673654dfba12665f63b9dc7020a00e01cff3cc", "containerforge/valkey-tools:sha256:10dfaf1f3bcc49a58eb1c298d3433efbe8e05e17b7e856699381efb2e4338362"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\jfrog\\artifactory-ha\\107.71.5", "ok": true, "images": ["bitnami/postgresql:13.10.0-debian-11-r14", "jfrog/artifactory-pro:7.71.5", "jfrog/nginx-artifactory-pro:7.71.5", "jfrog/router:7.81.0", "ubi9/ubi-minimal:9.2.750.1697534106"]}
+{"chart": "D:\\helm_clones_github\\sapcc__helm-charts\\system\\thanos-metal", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\ngrok\\kubernetes-ingress-controller\\0.12.4", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\turbonomic__t8c-install\\operator\\helm-charts\\probes\\mediation-oracle", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\turbonomic__t8c-install\\operator\\helm-charts\\base\\consul", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\sapcc__helm-charts\\system\\netbox-ztp", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\longhorn\\103.2.1+up1.5.3", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-webhook\\106.0.1+up0.7.1", "ok": true, "images": ["rancher/rancher-webhook:v0.7.1"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\prophetstor\\federatorai\\5.1.4", "ok": true, "images": ["prophetstor/alameda-ai-dispatcher:v5.1.4-b2262", "prophetstor/alameda-ai:v5.1.4-b2262", "prophetstor/alameda-datahub-ubi:v5.1.4-b2262", "prophetstor/alameda-influxdb:v5.1.4-b2262", "prophetstor/alameda-notifier-ubi:v5.1.4-b2262", "prophetstor/alameda-rabbitmq:v5.1.4-b2262", "prophetstor/alameda-recommender-ubi:v5.1.4-b2262", "prophetstor/fedemeter-api-ubi:v5.1.4-b2262", "prophetstor/fedemeter-influxdb:v5.1.4-b2262", "prophetstor/federatorai-agent-ubi:v5.1.4-b2262", "prophetstor/federatorai-alert-manager:v5.1.4-b2262", "prophetstor/federatorai-dashboard-backend:v5.1.4-b2262", "prophetstor/federatorai-dashboard-frontend:v5.1.4-b2262", "prophetstor/federatorai-data-adapter:v5.1.4-b2262", "prophetstor/federatorai-postgresql:v5.1.4-b2262", "prophetstor/federatorai-rest-ubi:v5.1.4-b2262"]}
+{"chart": "D:\\helm_clones_github\\IBM__charts\\community\\sonarqube", "ok": true, "images": ["library/postgres:9.6.2", "library/sonarqube:7.7-community"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\sriov\\102.0.0+up0.1.0", "ok": true, "images": ["rancher/hardened-ib-sriov-cni:latest", "rancher/hardened-node-feature-discovery:v0.12.1-build20230120", "rancher/hardened-sriov-cni:latest", "rancher/hardened-sriov-network-config-daemon:latest", "rancher/hardened-sriov-network-device-plugin:latest", "rancher/hardened-sriov-network-operator:latest", "rancher/hardened-sriov-network-resources-injector:latest", "rancher/hardened-sriov-network-webhook:latest"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\dagger\\dagger-helm\\0.19.6", "ok": true, "images": ["engine:v0.19.6"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\fleet-crd\\102.1.1+up0.7.1", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-gke-operator-crd\\107.6.0+up1.12.6", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\longhorn\\104.3.1+up1.8.2", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\k0rdent__catalog\\apps\\kagent\\charts\\kagent-crds-0.3.13", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\rancher-gatekeeper-crd\\102.1.2+up3.13.0", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\truenas__charts\\library\\ix-dev\\community\\lidarr", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\sapcc__helm-charts\\system\\unbound", "ok": true, "images": ["library/bind-rpz-proxy:latest", "library/dnstap:latest", "library/unbound:latest", "library/unbound_exporter:latest"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\coder\\coder\\2.30.0", "ok": true, "images": ["coder/coder:v2.30.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\packages\\neuvector\\templates\\crd-template", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\h5ai", "ok": true, "images": ["awesometic/h5ai:sha256:efa4514bd2099c521bc0d7974e93404d5f09fbbde161402bbcb0d1222259c133"]}
+{"chart": "D:\\helm_clones_github\\IBM__charts\\components\\ibm-watson-discovery-crust-prod", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\kubernetes-sigs__blob-csi-driver\\charts\\v1.23.3\\blob-csi-driver", "ok": true, "images": ["oss/kubernetes-csi/blob-csi:v1.23.3", "oss/kubernetes-csi/csi-node-driver-registrar:v2.8.0", "oss/kubernetes-csi/csi-provisioner:v3.5.0", "oss/kubernetes-csi/csi-resizer:v1.8.0", "oss/kubernetes-csi/livenessprobe:v2.10.0"]}
+{"chart": "D:\\helm_clones_github\\cozystack__cozystack\\packages\\tests\\cozy-lib-tests", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\asserts\\asserts\\1.53.0", "ok": true, "images": ["asserts/wait-for:v2.2.3", "kiwigrid/k8s-sidecar:1.21.0", "prometheus/alertmanager:v0.23.0"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\crate\\crate-operator\\2.35.0", "ok": true, "images": ["crate/crate-operator:2.35.0"]}
+{"chart": "D:\\helm_clones_artifacthub\\kubernetes__charts\\stable\\minio", "ok": true, "images": ["minio/minio:RELEASE.2020-06-14T18-32-17Z"]}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\jfrog\\artifactory-jcr\\107.77.9", "ok": true, "images": ["bitnami/postgresql:13.10.0-debian-11-r14", "jfrog/artifactory-jcr:7.77.9", "jfrog/nginx-artifactory-pro:7.77.9", "jfrog/router:7.91.0", "ubi9/ubi-minimal:9.3.1475"]}
+{"chart": "D:\\helm_clones_github\\k8s-home-lab__helm-charts\\unmaintained\\ihatemoney", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\wifi-card", "ok": true, "images": ["bndw/wifi-card:sha256:0cb0bdebcc58641a30d2c8d5de2646955bcad0ddb7fbd102928d6ae646a26797"]}
+{"chart": "D:\\helm_clones_github\\tkestack__charts\\incubator\\mongodb", "ok": true, "images": ["bitnami/mongodb:4.4.0-debian-10-r0", "tke-market/mongodb-exporter:0.11.1-debian-10-r5", "tke-market/mongodb:4.4.0-debian-10-r0"]}
+{"chart": "D:\\helm_clones_github\\grafana__helm-charts\\charts\\lgtm-distributed", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\cozystack__cozystack\\packages\\system\\hetzner-robotlb", "ok": true, "images": ["intreecom/robotlb:0.0.6"]}
+{"chart": "D:\\helm_clones_github\\k0rdent__catalog\\apps\\kagent\\charts\\kagent-0.3.13", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\acuvity__mcp-servers-registry\\mcp-server-glif\\charts\\mcp-server-glif", "ok": true, "images": ["acuvity/mcp-server-glif:1.0.0-0.9.9"]}
+{"chart": "D:\\helm_clones_github\\trueforge-org__truecharts\\charts\\stable\\chromium", "ok": true, "images": ["ich777/chrome:sha256:b41b5df4623e756e2c70957ef1ac1f1432f06bddadfaed958b1b3f5fe4935843"]}
+{"chart": "D:\\helm_clones_github\\rancher__charts\\charts\\fleet-agent\\109.0.1+up0.15.1-beta.4", "ok": true, "images": []}
+{"chart": "D:\\helm_clones_github\\rancher__partner-charts\\charts\\elastic\\eck-operator\\3.3.2", "ok": true, "images": []}

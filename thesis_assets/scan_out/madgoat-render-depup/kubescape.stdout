@@ -1,0 +1,49 @@
+{"level":"info","ts":"2026-07-23T02:25:17+01:00","msg":"Kubescape scanner initializing..."}
+{"level":"info","ts":"2026-07-23T02:25:19+01:00","msg":"Initialized scanner"}
+{"level":"info","ts":"2026-07-23T02:25:19+01:00","msg":"Loading policies..."}
+{"level":"info","ts":"2026-07-23T02:25:19+01:00","msg":"Loaded policies"}
+{"level":"info","ts":"2026-07-23T02:25:19+01:00","msg":"Loading exceptions..."}
+{"level":"info","ts":"2026-07-23T02:25:19+01:00","msg":"Loaded exceptions"}
+{"level":"info","ts":"2026-07-23T02:25:19+01:00","msg":"Loading account configurations..."}
+{"level":"info","ts":"2026-07-23T02:25:19+01:00","msg":"Loaded account configurations"}
+{"level":"info","ts":"2026-07-23T02:25:19+01:00","msg":"Accessing local objects..."}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"Rendering of Helm chart template 'madgoat-render', failed: [template: madgoat-render/templates/render-errors.yaml:14:21: executing \"madgoat-render/templates/render-errors.yaml\" at <.Values.renderErrors.nilPointerCfg.db.host>: nil pointer evaluating interface {}.db]"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 1: yaml: did not find expected node content"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 2: yaml: line 6: did not find expected key"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 1: yaml: did not find expected node content"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 2: yaml: line 22: could not find expected ':'"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 1: yaml: did not find expected node content"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 2: yaml: line 13: could not find expected ':'"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 3: yaml: line 13: could not find expected ':'"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 4: yaml: line 12: could not find expected ':'"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 5: yaml: line 13: could not find expected ':'"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 1: yaml: did not find expected node content"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 3: yaml: line 10: could not find expected ':'"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 4: yaml: line 10: could not find expected ':'"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 1: yaml: did not find expected node content"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 2: yaml: line 10: could not find expected ':'"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 3: yaml: did not find expected node content"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 4: yaml: line 19: could not find expected ':'"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 1: yaml: did not find expected node content"}
+{"level":"warn","ts":"2026-07-23T02:25:20+01:00","msg":"skipping malformed YAML document 2: yaml: line 9: could not find expected ':'"}
+{"level":"info","ts":"2026-07-23T02:25:21+01:00","msg":"Done accessing local objects"}
+{"level":"info","ts":"2026-07-23T02:25:21+01:00","msg":"Scanning GitLocal"}
+{"level":"info","ts":"2026-07-23T02:25:21+01:00","msg":"Done scanning GitLocal"}
+{"level":"info","ts":"2026-07-23T02:25:21+01:00","msg":"Done aggregating results"}
+
+
+Security posture overview for repo: '/mnt/c/Users/miabs/GolandProjects/mad-deployment-service/helm/render-problems/madgoat-render'
+
+All controls passed. No issues found
+
+What now?
+─────────
+
+* Run one of the suggested commands to learn more about a failed control failure
+* Run a cluster scan: '$ kubescape scan'
+* Scan a workload with '$ kubescape scan workload' to see vulnerability information
+* Install Kubescape in your cluster for continuous monitoring and a full vulnerability report: https://kubescape.io/docs/install-operator/
+
+{"level":"info","ts":"2026-07-23T02:25:21+01:00","msg":"Scan results saved","filename":"/mnt/c/Users/miabs/GolandProjects/helm-tests/thesis_assets/scan_out/madgoat-render-depup/kubescape.json"}
+
+Overall compliance-score (100- Excellent, 0- All failed): 94

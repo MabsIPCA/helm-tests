@@ -1,0 +1,3806 @@
+3:10AM DBG console.scan()
+3:10AM DBG console.scan()
+3:10AM WRN KICS crash report disabled
+
+                                                                                                                                                   
+                                                                                                                                                                                                    
+   MLLLLLM             MLLLLLLLLL   LLLLLLL             KLLLLLLLLLLLLLLLL       LLLLLLLLLLLLLLLLLLLLLLL 
+   MMMMMMM           MMMMMMMMMML    MMMMMMMK       LMMMMMMMMMMMMMMMMMMMML   KLMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM         MMMMMMMMML       MMMMMMMK     LMMMMMMMMMMMMMMMMMMMMMML  LMMMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM      MMMMMMMMMML         MMMMMMMK   LMMMMMMMMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM    LMMMMMMMMML           MMMMMMMK  LMMMMMMMMMLLMLLLLLLLLLLLLLL LMMMMMMMLLLLLLLLLLLLLLLLLLLLM 
+   MMMMMMM  MMMMMMMMMLM             MMMMMMMK LMMMMMMMM                    LMMMMMML                      
+   MMMMMMMLMMMMMMMML                MMMMMMMK MMMMMMML                     LMMMMMMMMLLLLLLLLLLLLLMLL     
+   MMMMMMMMMMMMMMMM                 MMMMMMMK MMMMMML                       LMMMMMMMMMMMMMMMMMMMMMMMMML  
+   MMMMMMMMMMMMMMMMMM               MMMMMMMK MMMMMMM                         LMMMMMMMMMMMMMMMMMMMMMMMML 
+   MMMMMMM KLMMMMMMMMML             MMMMMMMK LMMMMMMM                                          MMMMMMMML
+   MMMMMMM    LMMMMMMMMMM           MMMMMMMK LMMMMMMMMLL                                        MMMMMMML
+   MMMMMMM      LMMMMMMMMMLL        MMMMMMMK  LMMMMMMMMMMMMMMMMMMMMMMMMML LLLLLLLLLLLLLLLLLLLLMMMMMMMMMM
+   MMMMMMM        MMMMMMMMMMML      MMMMMMMK   MMMMMMMMMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMMMMMM 
+   MMMMMMM          LLMMMMMMMMML    MMMMMMMK     LLMMMMMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMMMML  
+   MMMMMMM             MMMMMMMMMML  MMMMMMMK         KLMMMMMMMMMMMMMMMMML LMMMMMMMMMMMMMMMMMMMMMMMLK    
+                                                                                                            
+                                                                                                                                                                                                                                                                                                                        
+
+
+Scanning with Keeping Infrastructure as Code Secure development
+
+
+3:10AM INF Scanning with Keeping Infrastructure as Code Secure development
+3:10AM INF Operating system: linux
+3:10AM INF Total memory: 15.1G
+3:10AM INF CPU: 16.0
+3:10AM INF Max file size permitted for scanning: 5 MB
+3:10AM INF Max resolver depth permitted for resolving files: 15
+3:10AM DBG storage.NewMemoryStorage()
+3:10AM DBG Trying to load path (--queries-path) from /tmp/kics-fork/assets/queries
+3:10AM DBG Trying to load path (--libraries-path) from /tmp/kics-fork/assets/libraries
+3:10AM INF Total files in the project: 8
+3:10AM INF Loading queries of type: kubernetes, cloudformation
+3:10AM DBG source.NewFilesystemSource()
+3:10AM DBG engine.NewInspector()
+3:10AM DBG Excluding query ID: 124b173b-e06d-48a6-8acd-f889443d97a4 category: Bill Of Materials severity: TRACE
+3:10AM DBG Excluding query ID: 4e67c0ae-38a0-47f4-a50c-f0c9b75826df category: Bill Of Materials severity: TRACE
+3:10AM DBG Excluding query ID: 0b0556ea-9cd9-476f-862e-20679dda752b category: Bill Of Materials severity: TRACE
+3:10AM DBG Excluding query ID: ef05a925-8568-4054-8ff1-f5ba82631c16 category: Bill Of Materials severity: TRACE
+3:10AM DBG Excluding query ID: c689f51b-9203-43b3-9d8b-caed123f706c category: Bill Of Materials severity: TRACE
+3:10AM DBG Excluding query ID: d53323be-dde6-4457-9a43-42df737e71d2 category: Bill Of Materials severity: TRACE
+3:10AM DBG Excluding query ID: 209189f3-c879-48a7-9703-fbcfa96d0cef category: Bill Of Materials severity: TRACE
+3:10AM DBG Excluding query ID: 2730c169-51d7-4ae7-99b5-584379eff1bb category: Bill Of Materials severity: TRACE
+3:10AM DBG Excluding query ID: 6ef03ff6-a2bd-483c-851f-631f248bc0ea category: Bill Of Materials severity: TRACE
+3:10AM DBG Excluding query ID: b5d6a2e0-8f15-4664-bd5b-68ec5c9bab83 category: Bill Of Materials severity: TRACE
+3:10AM DBG Excluding query ID: 42e7dca3-8cce-4325-8df0-108888259136 category: Bill Of Materials severity: TRACE
+3:10AM DBG Excluding query ID: 59a849c2-1127-4023-85a5-ef906dcd458c category: Bill Of Materials severity: TRACE
+3:10AM DBG Trying to load custom libraries from /tmp/kics-fork/assets/libraries
+3:10AM DBG Trying to load custom libraries from /tmp/kics-fork/assets/libraries
+3:10AM DBG Could not open embedded library data for cloudFormation platform
+3:10AM DBG Trying to load custom libraries from /tmp/kics-fork/assets/libraries
+3:10AM DBG Could not open embedded library data for k8s platform
+3:10AM DBG helpers.GetDefaultQueryPath()
+3:10AM DBG helpers.GetExecutableDirectory()
+3:10AM WRN Unable to find transition information files, similarity ID transitions will not be available
+3:10AM ERR Error walking through transition information files: lstat : no such file or directory
+3:10AM ERR Error getting similarity ID transition query map: lstat : no such file or directory
+3:10AM INF Inspector initialized, number of queries=716
+3:10AM INF Query execution timeout=1m0s
+3:10AM DBG provider.NewFileSystemSourceProvider()
+3:10AM DBG parser.NewBuilder()
+3:10AM DBG resolver.Add()
+3:10AM DBG resolver.Build()
+3:10AM DBG helm fixer: vendored missing chart dependencies, re-rendering chart=madgoat-render dependencies=1
+3:10AM DBG helm fixer: vendored missing chart dependencies, re-rendering chart=madgoat-render dependencies=1
+3:10AM DBG helm fixer: render resolved after value injection attempts=6 chart=madgoat-render
+3:10AM DBG helm fixer: render resolved after value injection attempts=6 chart=madgoat-render
+3:10AM DBG resolver.Resolve() rendered file: /mnt/c/Users/miabs/GolandProjects/mad-deployment-service/helm/render-problems/madgoat-render
+3:10AM DBG resolver.Resolve() rendered file: /mnt/c/Users/miabs/GolandProjects/mad-deployment-service/helm/render-problems/madgoat-render
+3:10AM DBG service.StartScan()
+3:10AM DBG service.StartScan()
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM INF failed to unmarshal file: yaml: did not find expected node content
+3:10AM DBG engine.Inspect()
+3:10AM DBG Starting to run query amazon_mq_broker_encryption_disabled
+3:10AM DBG Starting to run query api_gateway_cache_encrypted_disabled
+3:10AM DBG Starting to run query amplify_app_access_token_exposed
+3:10AM DBG Finished to run query amplify_app_access_token_exposed after 78.91µs
+3:10AM DBG Starting to run query amplify_app_oauth_token_exposed
+3:10AM DBG Finished to run query amplify_app_oauth_token_exposed after 62.688µs
+3:10AM DBG Starting to run query amazon_dms_replication_instance_is_publicly_accessible
+3:10AM DBG Finished to run query amazon_dms_replication_instance_is_publicly_accessible after 37.311µs
+3:10AM DBG Starting to run query access_key_not_rotated_within_90_days
+3:10AM DBG Finished to run query api_gateway_cache_encrypted_disabled after 53.719µs
+3:10AM DBG Starting to run query api_gateway_cache_cluster_disabled
+3:10AM DBG Finished to run query api_gateway_cache_cluster_disabled after 45.266µs
+3:10AM DBG Starting to run query api_gateway_access_logging_disabled
+3:10AM DBG Starting to run query alexa_skill_plaintext_client_secret_exposed
+3:10AM DBG Finished to run query alexa_skill_plaintext_client_secret_exposed after 44.851µs
+3:10AM DBG Starting to run query amplify_app_basic_auth_config_password_exposed
+3:10AM DBG Finished to run query amplify_app_basic_auth_config_password_exposed after 57.54µs
+3:10AM DBG Starting to run query api_gateway_deployment_without_access_log_setting
+3:10AM DBG Finished to run query api_gateway_deployment_without_access_log_setting after 47.586µs
+3:10AM DBG Starting to run query alb_is_not_integrated_with_waf
+3:10AM DBG Finished to run query alb_is_not_integrated_with_waf after 33.738µs
+3:10AM DBG Finished to run query access_key_not_rotated_within_90_days after 105.376µs
+3:10AM DBG Starting to run query alb_listening_on_http
+3:10AM DBG Finished to run query api_gateway_access_logging_disabled after 87.217µs
+3:10AM DBG Starting to run query api_gateway_endpoint_config_is_not_private
+3:10AM DBG Starting to run query amplify_branch_basic_auth_config_password_exposed
+3:10AM DBG Starting to run query api_gateway_deployment_without_api_gateway_usage_plan_associated
+3:10AM DBG Finished to run query amazon_mq_broker_encryption_disabled after 160.395µs
+3:10AM DBG Finished to run query amplify_branch_basic_auth_config_password_exposed after 706.593µs
+3:10AM DBG Finished to run query alb_listening_on_http after 85.643µs
+3:10AM DBG Starting to run query api_gateway_method_does_not_contains_an_api_key
+3:10AM DBG Finished to run query api_gateway_deployment_without_api_gateway_usage_plan_associated after 57.789µs
+3:10AM DBG Finished to run query api_gateway_method_does_not_contains_an_api_key after 74.466µs
+3:10AM DBG Starting to run query api_gateway_stage_without_api_gateway_usage_plan_associated
+3:10AM DBG Finished to run query api_gateway_stage_without_api_gateway_usage_plan_associated after 151.231µs
+3:10AM DBG Starting to run query api_gateway_with_invalid_compression
+3:10AM DBG Starting to run query api_gateway_with_open_access
+3:10AM DBG Finished to run query api_gateway_endpoint_config_is_not_private after 15.651234ms
+3:10AM DBG Finished to run query api_gateway_with_invalid_compression after 3.010919ms
+3:10AM DBG Finished to run query api_gateway_with_open_access after 2.276545ms
+3:10AM DBG Starting to run query api_gateway_without_configured_authorizer
+3:10AM DBG Finished to run query api_gateway_without_configured_authorizer after 68.531µs
+3:10AM DBG Starting to run query api_gateway_without_security_policy
+3:10AM DBG Finished to run query api_gateway_without_security_policy after 80.433µs
+3:10AM DBG Starting to run query api_gateway_without_ssl_certificate
+3:10AM DBG Starting to run query api_gateway_without_waf
+3:10AM DBG Finished to run query api_gateway_without_waf after 32.877µs
+3:10AM DBG Starting to run query auto_scaling_group_with_no_associated_elb
+3:10AM DBG Finished to run query auto_scaling_group_with_no_associated_elb after 48.063µs
+3:10AM DBG Finished to run query api_gateway_without_ssl_certificate after 308.525µs
+3:10AM DBG Starting to run query automatic_minor_upgrades_disabled
+3:10AM DBG Starting to run query api_gateway_xray_disabled
+3:10AM DBG Finished to run query api_gateway_xray_disabled after 58.359µs
+3:10AM DBG Starting to run query batch_job_definition_with_privileged_container_properties
+3:10AM DBG Finished to run query batch_job_definition_with_privileged_container_properties after 53.646µs
+3:10AM DBG Starting to run query cloudformation_specifying_credentials_not_safe
+3:10AM DBG Finished to run query cloudformation_specifying_credentials_not_safe after 53.812µs
+3:10AM DBG Starting to run query block_device_is_not_encrypted
+3:10AM DBG Starting to run query cdn_configuration_is_missing
+3:10AM DBG Starting to run query cloudtrail_log_file_validation_disabled
+3:10AM DBG Finished to run query automatic_minor_upgrades_disabled after 9.861496ms
+3:10AM DBG Starting to run query cloudfront_viewer_protocol_policy_allows_http
+3:10AM DBG Finished to run query cloudfront_viewer_protocol_policy_allows_http after 110.462µs
+3:10AM DBG Starting to run query cloudfront_without_minimum_protocol_tls_1.2
+3:10AM DBG Finished to run query block_device_is_not_encrypted after 105.065µs
+3:10AM DBG Finished to run query cloudtrail_log_file_validation_disabled after 119.96µs
+3:10AM DBG Starting to run query cloudfront_without_waf
+3:10AM DBG Finished to run query cdn_configuration_is_missing after 10.438142ms
+3:10AM DBG Starting to run query cloudfront_logging_disabled
+3:10AM DBG Starting to run query cloudtrail_log_files_not_encrypted_with_kms
+3:10AM DBG Finished to run query cloudtrail_log_files_not_encrypted_with_kms after 61.85µs
+3:10AM DBG Finished to run query cloudfront_without_minimum_protocol_tls_1.2 after 6.780508ms
+3:10AM DBG Starting to run query cloudtrail_multi_region_disabled
+3:10AM DBG Finished to run query cloudtrail_multi_region_disabled after 189.05µs
+3:10AM DBG Starting to run query cloudtrail_sns_topic_name_undefined
+3:10AM DBG Finished to run query cloudtrail_sns_topic_name_undefined after 68.013µs
+3:10AM DBG Starting to run query cloudtrail_logging_disabled
+3:10AM DBG Finished to run query cloudfront_without_waf after 11.758697ms
+3:10AM DBG Finished to run query cloudtrail_logging_disabled after 51.574µs
+3:10AM DBG Starting to run query cloudtrail_not_integrated_with_cloudwatch
+3:10AM DBG Finished to run query cloudtrail_not_integrated_with_cloudwatch after 90.873µs
+3:10AM DBG Finished to run query cloudfront_logging_disabled after 14.905736ms
+3:10AM DBG Starting to run query cloudwatch_metrics_disabled
+3:10AM DBG Starting to run query cloudwatch_logging_disabled
+3:10AM DBG Finished to run query cloudwatch_logging_disabled after 100.237µs
+3:10AM DBG Finished to run query cloudwatch_metrics_disabled after 175.18µs
+3:10AM DBG Starting to run query cmk_is_unusable
+3:10AM DBG Starting to run query codebuild_not_encrypted
+3:10AM DBG Starting to run query cmk_rotation_disabled
+3:10AM DBG Starting to run query cognito_userpool_without_mfa
+3:10AM DBG Finished to run query cmk_is_unusable after 97.689µs
+3:10AM DBG Starting to run query cmk_unencrypted_storage
+3:10AM DBG Finished to run query codebuild_not_encrypted after 75.896µs
+3:10AM DBG Finished to run query cmk_rotation_disabled after 87.414µs
+3:10AM DBG Finished to run query cognito_userpool_without_mfa after 148.662µs
+3:10AM DBG Starting to run query dax_cluster_not_encrypted
+3:10AM DBG Finished to run query cmk_unencrypted_storage after 109.829µs
+3:10AM DBG Starting to run query connection_between_cloudfront_origin_not_encrypted
+3:10AM DBG Starting to run query config_rule_for_encryption_volumes_disabled
+3:10AM DBG Finished to run query config_rule_for_encryption_volumes_disabled after 42.966µs
+3:10AM DBG Starting to run query config_configuration_aggregator_to_all_regions_disabled
+3:10AM DBG Starting to run query db_security_group_open_to_large_scope
+3:10AM DBG Starting to run query cross_account_iam_assume_role_policy_without_external_id_or_mfa
+3:10AM DBG Starting to run query db_security_group_with_public_scope
+3:10AM DBG Finished to run query db_security_group_with_public_scope after 102.133µs
+3:10AM DBG Finished to run query connection_between_cloudfront_origin_not_encrypted after 65.765µs
+3:10AM DBG Finished to run query db_security_group_open_to_large_scope after 160.596µs
+3:10AM DBG Finished to run query cross_account_iam_assume_role_policy_without_external_id_or_mfa after 4.107618ms
+3:10AM DBG Starting to run query default_kms_key_usage
+3:10AM DBG Finished to run query default_kms_key_usage after 51.284µs
+3:10AM DBG Starting to run query directory_service_microsoft_ad_password_set_to_plaintext_or_default_ref
+3:10AM DBG Starting to run query default_security_groups_with_unrestricted_traffic
+3:10AM DBG Finished to run query config_configuration_aggregator_to_all_regions_disabled after 81.448µs
+3:10AM DBG Finished to run query dax_cluster_not_encrypted after 16.424371ms
+3:10AM DBG Starting to run query dms_endpoint_mongo_db_settings_password_exposed
+3:10AM DBG Finished to run query dms_endpoint_mongo_db_settings_password_exposed after 172.756µs
+3:10AM DBG Starting to run query docdb_cluster_master_password_in_plaintext
+3:10AM DBG Finished to run query docdb_cluster_master_password_in_plaintext after 490.778µs
+3:10AM DBG Starting to run query docdb_logging_disabled
+3:10AM DBG Finished to run query docdb_logging_disabled after 69.608µs
+3:10AM DBG Finished to run query default_security_groups_with_unrestricted_traffic after 46.426µs
+3:10AM DBG Starting to run query directory_service_simple_ad_password_exposed
+3:10AM DBG Finished to run query directory_service_simple_ad_password_exposed after 90.149µs
+3:10AM DBG Starting to run query dynamodb_table_point_in_time_recovery_disabled
+3:10AM DBG Finished to run query dynamodb_table_point_in_time_recovery_disabled after 86.171µs
+3:10AM DBG Starting to run query dms_endpoint_password_exposed
+3:10AM DBG Finished to run query directory_service_microsoft_ad_password_set_to_plaintext_or_default_ref after 85.322µs
+3:10AM DBG Starting to run query dynamodb_table_not_encrypted
+3:10AM DBG Finished to run query dms_endpoint_password_exposed after 88.366µs
+3:10AM DBG Finished to run query dynamodb_table_not_encrypted after 757.302µs
+3:10AM DBG Starting to run query ebs_volume_encryption_disabled
+3:10AM DBG Finished to run query ebs_volume_encryption_disabled after 84.255µs
+3:10AM DBG Starting to run query dynamodb_with_table_billing_mode_not_recommended
+3:10AM DBG Starting to run query dynamodb_with_aws_owned_cmk
+3:10AM DBG Finished to run query dynamodb_with_table_billing_mode_not_recommended after 415.68µs
+3:10AM DBG Finished to run query dynamodb_with_aws_owned_cmk after 1.462237ms
+3:10AM DBG Starting to run query ebs_volume_not_attached_to_instances
+3:10AM DBG Starting to run query ec2_instance_has_no_iam_role
+3:10AM DBG Finished to run query ec2_instance_has_no_iam_role after 76.154µs
+3:10AM DBG Starting to run query ec2_instance_subnet_has_public_ip_mapping_on_launch
+3:10AM DBG Finished to run query ebs_volume_not_attached_to_instances after 473.598µs
+3:10AM DBG Starting to run query ebs_volume_without_kms_key_id
+3:10AM DBG Finished to run query ebs_volume_without_kms_key_id after 86.119µs
+3:10AM DBG Finished to run query ec2_instance_subnet_has_public_ip_mapping_on_launch after 4.774902ms
+3:10AM DBG Starting to run query ec2_network_acl_duplicate_rule
+3:10AM DBG Starting to run query ec2_instance_monitoring_disabled
+3:10AM DBG Finished to run query ec2_instance_monitoring_disabled after 79.873µs
+3:10AM DBG Starting to run query ec2_instance_using_default_security_group
+3:10AM DBG Starting to run query ec2_network_acl_ineffective_denied_traffic
+3:10AM DBG Finished to run query ec2_network_acl_ineffective_denied_traffic after 34.11µs
+3:10AM DBG Finished to run query ec2_network_acl_duplicate_rule after 67.598µs
+3:10AM DBG Starting to run query ec2_network_acl_overlapping_ports
+3:10AM DBG Finished to run query ec2_network_acl_overlapping_ports after 40.304µs
+3:10AM DBG Finished to run query ec2_instance_using_default_security_group after 4.851488ms
+3:10AM DBG Starting to run query ec2_public_instance_exposed_through_subnet
+3:10AM DBG Finished to run query ec2_public_instance_exposed_through_subnet after 40.501µs
+3:10AM DBG Starting to run query ec2_instance_using_default_vpc
+3:10AM DBG Finished to run query ec2_instance_using_default_vpc after 52.393µs
+3:10AM DBG Starting to run query ec2_sensitive_port_is_publicly_exposed
+3:10AM DBG Finished to run query ec2_sensitive_port_is_publicly_exposed after 76.103µs
+3:10AM DBG Starting to run query ec2_not_ebs_optimized
+3:10AM DBG Finished to run query ec2_not_ebs_optimized after 118.81µs
+3:10AM DBG Starting to run query ec2_permissive_network_acl_protocols
+3:10AM DBG Finished to run query ec2_permissive_network_acl_protocols after 44.416µs
+3:10AM DBG Starting to run query ecr_image_tag_not_immutable
+3:10AM DBG Finished to run query ecr_image_tag_not_immutable after 45.442µs
+3:10AM DBG Starting to run query ecr_repository_not_encrypted_with_CMK
+3:10AM DBG Finished to run query ecr_repository_not_encrypted_with_CMK after 46.457µs
+3:10AM DBG Starting to run query ecr_repository_is_publicly_accessible
+3:10AM DBG Finished to run query ecr_repository_is_publicly_accessible after 144.799µs
+3:10AM DBG Starting to run query ecs_service_admin_role_is_present
+3:10AM DBG Finished to run query ecs_service_admin_role_is_present after 86.979µs
+3:10AM DBG Starting to run query ecs_cluster_container_insights_disabled
+3:10AM DBG Finished to run query ecs_cluster_container_insights_disabled after 182.058µs
+3:10AM DBG Starting to run query ecs_cluster_not_encrypted_at_rest
+3:10AM DBG Finished to run query ecs_cluster_not_encrypted_at_rest after 37.777µs
+3:10AM DBG Starting to run query ecs_services_assigned_with_public_ip_address
+3:10AM DBG Finished to run query ecs_services_assigned_with_public_ip_address after 38.543µs
+3:10AM DBG Starting to run query ecs_service_without_running_tasks
+3:10AM DBG Finished to run query ecs_service_without_running_tasks after 52.807µs
+3:10AM DBG Starting to run query ecs_no_load_balancer_attached
+3:10AM DBG Finished to run query ecs_no_load_balancer_attached after 47.596µs
+3:10AM DBG Starting to run query ecs_task_definition_invalid_cpu_or_memory
+3:10AM DBG Finished to run query ecs_task_definition_invalid_cpu_or_memory after 43.039µs
+3:10AM DBG Starting to run query efs_not_encrypted
+3:10AM DBG Finished to run query efs_not_encrypted after 53.853µs
+3:10AM DBG Starting to run query ecs_task_definition_healthcheck_missing
+3:10AM DBG Finished to run query ecs_task_definition_healthcheck_missing after 39.827µs
+3:10AM DBG Starting to run query ecs_task_definition_network_mode_not_recommended
+3:10AM DBG Finished to run query ecs_task_definition_network_mode_not_recommended after 38.761µs
+3:10AM DBG Starting to run query efs_without_kms
+3:10AM DBG Finished to run query efs_without_kms after 83.084µs
+3:10AM DBG Starting to run query efs_volume_with_disabled_transit_encryption
+3:10AM DBG Starting to run query eks_node_group_remote_access
+3:10AM DBG Starting to run query efs_without_tags
+3:10AM DBG Finished to run query efs_without_tags after 87.01µs
+3:10AM DBG Finished to run query efs_volume_with_disabled_transit_encryption after 124.528µs
+3:10AM DBG Finished to run query eks_node_group_remote_access after 85.467µs
+3:10AM DBG Starting to run query elasticache_with_disabled_transit_encryption
+3:10AM DBG Finished to run query elasticache_with_disabled_transit_encryption after 171.099µs
+3:10AM DBG Starting to run query eks_cluster_encryption_disabled
+3:10AM DBG Starting to run query elasticache_nodes_not_created_across_multi_az
+3:10AM DBG Finished to run query elasticache_nodes_not_created_across_multi_az after 111.041µs
+3:10AM DBG Starting to run query elasticache_using_default_port
+3:10AM DBG Finished to run query elasticache_using_default_port after 52.61µs
+3:10AM DBG Starting to run query elasticache_with_disabled_at_rest_encryption
+3:10AM DBG Finished to run query elasticache_with_disabled_at_rest_encryption after 76.341µs
+3:10AM DBG Starting to run query elasticache_without_vpc
+3:10AM DBG Finished to run query elasticache_without_vpc after 54.495µs
+3:10AM DBG Finished to run query eks_cluster_encryption_disabled after 109.146µs
+3:10AM DBG Starting to run query elasticsearch_domain_encryption_with_kms_disabled
+3:10AM DBG Starting to run query elasticsearch_domain_not_encrypted_node_to_node
+3:10AM DBG Finished to run query elasticsearch_domain_not_encrypted_node_to_node after 141.04µs
+3:10AM DBG Starting to run query elasticsearch_not_encrypted_at_rest
+3:10AM DBG Starting to run query elasticsearch_with_https_disabled
+3:10AM DBG Starting to run query elasticsearch_without_es_application_logs
+3:10AM DBG Starting to run query elasticsearch_without_iam_authentication
+3:10AM DBG Finished to run query elasticsearch_not_encrypted_at_rest after 8.970643ms
+3:10AM DBG Starting to run query elasticsearch_without_audit_logs
+3:10AM DBG Starting to run query elb_using_insecure_protocols
+3:10AM DBG Finished to run query elb_using_insecure_protocols after 45.556µs
+3:10AM DBG Starting to run query elasticsearch_without_slow_logs
+3:10AM DBG Finished to run query elasticsearch_domain_encryption_with_kms_disabled after 10.456614ms
+3:10AM DBG Starting to run query elb_access_log_disabled
+3:10AM DBG Finished to run query elb_access_log_disabled after 58.359µs
+3:10AM DBG Starting to run query elb_using_weak_ciphers
+3:10AM DBG Finished to run query elb_using_weak_ciphers after 73.047µs
+3:10AM DBG Starting to run query elb_v2_alb_access_log_disabled
+3:10AM DBG Finished to run query elb_v2_alb_access_log_disabled after 86.347µs
+3:10AM DBG Starting to run query elb_sensitive_port_is_exposed_to_entire_network
+3:10AM DBG Finished to run query elasticsearch_without_iam_authentication after 2.240228ms
+3:10AM DBG Starting to run query elb_with_security_group_without_inbound_rules
+3:10AM DBG Finished to run query elb_sensitive_port_is_exposed_to_entire_network after 174.777µs
+3:10AM DBG Finished to run query elb_with_security_group_without_inbound_rules after 103.573µs
+3:10AM DBG Finished to run query elasticsearch_without_audit_logs after 14.330491ms
+3:10AM DBG Finished to run query elasticsearch_without_slow_logs after 13.93778ms
+3:10AM DBG Finished to run query elasticsearch_without_es_application_logs after 17.769339ms
+3:10AM DBG Finished to run query elasticsearch_with_https_disabled after 27.585687ms
+3:10AM DBG Starting to run query elb_with_security_group_without_outbound_rules
+3:10AM DBG Finished to run query elb_with_security_group_without_outbound_rules after 45.028µs
+3:10AM DBG Starting to run query empty_roles_for_ecs_cluster_task_definitions
+3:10AM DBG Finished to run query empty_roles_for_ecs_cluster_task_definitions after 73.782µs
+3:10AM DBG Starting to run query emr_cluster_without_security_configuration
+3:10AM DBG Finished to run query emr_cluster_without_security_configuration after 50.59µs
+3:10AM DBG Starting to run query emr_wihout_vpc
+3:10AM DBG Starting to run query elb_without_secure_protocol
+3:10AM DBG Finished to run query elb_without_secure_protocol after 79.966µs
+3:10AM DBG Starting to run query geo_restriction_disabled
+3:10AM DBG Finished to run query geo_restriction_disabled after 74.487µs
+3:10AM DBG Starting to run query fully_open_ingress
+3:10AM DBG Finished to run query fully_open_ingress after 73.109µs
+3:10AM DBG Starting to run query gamelift_fleet_ec2_inbound_permissions_with_port_range
+3:10AM DBG Finished to run query emr_wihout_vpc after 78.496µs
+3:10AM DBG Starting to run query hardcoded_aws_access_key_in_lambda
+3:10AM DBG Starting to run query github_repository_set_to_public
+3:10AM DBG Finished to run query github_repository_set_to_public after 60.41µs
+3:10AM DBG Starting to run query http_port_open
+3:10AM DBG Starting to run query guardduty_detector_disabled
+3:10AM DBG Finished to run query guardduty_detector_disabled after 33.665µs
+3:10AM DBG Finished to run query hardcoded_aws_access_key_in_lambda after 113.724µs
+3:10AM DBG Starting to run query iam_access_analyzer_not_enabled
+3:10AM DBG Finished to run query iam_access_analyzer_not_enabled after 35.467µs
+3:10AM DBG Finished to run query http_port_open after 79.998µs
+3:10AM DBG Finished to run query gamelift_fleet_ec2_inbound_permissions_with_port_range after 107.519µs
+3:10AM DBG Starting to run query iam_database_auth_not_enabled
+3:10AM DBG Starting to run query iam_db_cluster_auth_not_enabled
+3:10AM DBG Starting to run query emr_security_configuration_encryptions_enabled
+3:10AM DBG Finished to run query emr_security_configuration_encryptions_enabled after 204.184µs
+3:10AM DBG Starting to run query iam_groups_inline_policies
+3:10AM DBG Finished to run query iam_groups_inline_policies after 132.338µs
+3:10AM DBG Finished to run query iam_db_cluster_auth_not_enabled after 9.788807ms
+3:10AM DBG Starting to run query iam_policies_attached_to_user
+3:10AM DBG Finished to run query iam_database_auth_not_enabled after 11.345431ms
+3:10AM DBG Finished to run query iam_policies_attached_to_user after 48.457µs
+3:10AM DBG Starting to run query iam_managed_policy_applied_to_a_user
+3:10AM DBG Finished to run query iam_managed_policy_applied_to_a_user after 41.485µs
+3:10AM DBG Starting to run query iam_password_without_minimum_length
+3:10AM DBG Finished to run query iam_password_without_minimum_length after 59.001µs
+3:10AM DBG Starting to run query iam_policy_allows_for_data_exfiltration
+3:10AM DBG Finished to run query iam_policy_allows_for_data_exfiltration after 45.318µs
+3:10AM DBG Starting to run query iam_group_without_users
+3:10AM DBG Finished to run query iam_group_without_users after 371.921µs
+3:10AM DBG Starting to run query iam_policies_with_full_privileges
+3:10AM DBG Finished to run query iam_policies_with_full_privileges after 85.208µs
+3:10AM DBG Starting to run query iam_policy_grants_assumerole_permission_across_all_services
+3:10AM DBG Starting to run query iam_user_login_profile_password_is_in_plaintext
+3:10AM DBG Finished to run query iam_user_login_profile_password_is_in_plaintext after 39.88µs
+3:10AM DBG Starting to run query iam_role_allows_all_principals_to_assume
+3:10AM DBG Starting to run query iam_policies_without_groups
+3:10AM DBG Starting to run query iam_policy_on_user
+3:10AM DBG Finished to run query iam_policy_on_user after 51.366µs
+3:10AM DBG Starting to run query iam_user_with_no_group
+3:10AM DBG Starting to run query iam_policy_grants_full_permissions
+3:10AM DBG Finished to run query iam_policies_without_groups after 42.791µs
+3:10AM DBG Starting to run query iam_user_too_many_access_keys
+3:10AM DBG Finished to run query iam_user_too_many_access_keys after 41.423µs
+3:10AM DBG Finished to run query iam_user_with_no_group after 116.107µs
+3:10AM DBG Finished to run query iam_role_allows_all_principals_to_assume after 5.189929ms
+3:10AM DBG Starting to run query inline_policies_are_attached_to_ecs_service
+3:10AM DBG Finished to run query inline_policies_are_attached_to_ecs_service after 35.632µs
+3:10AM DBG Starting to run query instance_with_no_vpc
+3:10AM DBG Finished to run query instance_with_no_vpc after 52.745µs
+3:10AM DBG Finished to run query iam_policy_grants_full_permissions after 438.084µs
+3:10AM DBG Finished to run query iam_policy_grants_assumerole_permission_across_all_services after 57.623µs
+3:10AM DBG Starting to run query kinesis_sse_not_configured
+3:10AM DBG Finished to run query kinesis_sse_not_configured after 53.615µs
+3:10AM DBG Starting to run query instance_uses_metadata_service_IMDSv1
+3:10AM DBG Finished to run query instance_uses_metadata_service_IMDSv1 after 119.069µs
+3:10AM DBG Starting to run query iot_policy_allows_action_as_wildcard
+3:10AM DBG Finished to run query iot_policy_allows_action_as_wildcard after 71.494µs
+3:10AM DBG Starting to run query kms_allows_wildcard_principal
+3:10AM DBG Finished to run query kms_allows_wildcard_principal after 43.578µs
+3:10AM DBG Starting to run query kms_enable_key_rotation_disabled
+3:10AM DBG Finished to run query kms_enable_key_rotation_disabled after 47.544µs
+3:10AM DBG Starting to run query iot_policy_allows_wildcard_resource
+3:10AM DBG Finished to run query iot_policy_allows_wildcard_resource after 41.702µs
+3:10AM DBG Starting to run query kms_key_with_full_permissions
+3:10AM DBG Finished to run query kms_key_with_full_permissions after 47.918µs
+3:10AM DBG Starting to run query lambda_functions_without_unique_iam_roles
+3:10AM DBG Finished to run query lambda_functions_without_unique_iam_roles after 148.477µs
+3:10AM DBG Starting to run query lambda_function_without_dead_letter_queue
+3:10AM DBG Starting to run query lambda_function_without_tags
+3:10AM DBG Starting to run query lambda_functions_without_x-ray_tracing
+3:10AM DBG Finished to run query lambda_functions_without_x-ray_tracing after 70.001µs
+3:10AM DBG Starting to run query lambda_permission_misconfigured
+3:10AM DBG Finished to run query lambda_function_without_dead_letter_queue after 120.488µs
+3:10AM DBG Finished to run query lambda_function_without_tags after 98.569µs
+3:10AM DBG Starting to run query lambda_functions_with_full_privileges
+3:10AM DBG Finished to run query lambda_functions_with_full_privileges after 36.979µs
+3:10AM DBG Starting to run query msk_broker_is_publicly_accessible
+3:10AM DBG Starting to run query msk_cluster_logging_disabled
+3:10AM DBG Finished to run query msk_cluster_logging_disabled after 42.77µs
+3:10AM DBG Starting to run query low_rds_backup_retention_period
+3:10AM DBG Starting to run query mq_broker_logging_disabled
+3:10AM DBG Finished to run query mq_broker_logging_disabled after 189.744µs
+3:10AM DBG Starting to run query mq_broker_is_publicly_accessible
+3:10AM DBG Finished to run query mq_broker_is_publicly_accessible after 53.853µs
+3:10AM DBG Starting to run query msk_cluster_encryption_disabled
+3:10AM DBG Finished to run query lambda_permission_misconfigured after 3.91138ms
+3:10AM DBG Starting to run query lambda_permission_principal_is_wildcard
+3:10AM DBG Starting to run query neptune_database_cluster_encryption_disabled
+3:10AM DBG Finished to run query msk_broker_is_publicly_accessible after 41.019µs
+3:10AM DBG Starting to run query neptune_logging_is_disabled
+3:10AM DBG Finished to run query neptune_database_cluster_encryption_disabled after 2.363254ms
+3:10AM DBG Finished to run query msk_cluster_encryption_disabled after 97.741µs
+3:10AM DBG Starting to run query neptune_cluster_with_iam_database_authentication_disabled
+3:10AM DBG Starting to run query public_lambda_via_api_gateway
+3:10AM DBG Finished to run query lambda_permission_principal_is_wildcard after 2.521861ms
+3:10AM DBG Finished to run query low_rds_backup_retention_period after 17.899708ms
+3:10AM DBG Finished to run query neptune_logging_is_disabled after 10.387501ms
+3:10AM DBG Finished to run query public_lambda_via_api_gateway after 4.727579ms
+3:10AM DBG Starting to run query rds_db_instance_publicly_accessible
+3:10AM DBG Finished to run query neptune_cluster_with_iam_database_authentication_disabled after 6.996788ms
+3:10AM DBG Starting to run query rds_multi_az_deployment_disabled
+3:10AM DBG Starting to run query rds_storage_not_encrypted
+3:10AM DBG Starting to run query rds_associated_with_public_subnet
+3:10AM DBG Starting to run query rds_using_default_port
+3:10AM DBG Starting to run query rds_storage_encryption_disabled
+3:10AM DBG Starting to run query rds_db_instance_with_deletion_protection_disabled
+3:10AM DBG Finished to run query rds_db_instance_publicly_accessible after 4.617646ms
+3:10AM DBG Finished to run query rds_associated_with_public_subnet after 4.112444ms
+3:10AM DBG Finished to run query rds_using_default_port after 4.005602ms
+3:10AM DBG Starting to run query rds_with_backup_disabled
+3:10AM DBG Starting to run query redshift_cluster_without_kms_cmk
+3:10AM DBG Finished to run query redshift_cluster_without_kms_cmk after 42.273µs
+3:10AM DBG Finished to run query rds_storage_not_encrypted after 7.757108ms
+3:10AM DBG Starting to run query redshift_cluster_without_vpc
+3:10AM DBG Finished to run query redshift_cluster_without_vpc after 140.066µs
+3:10AM DBG Finished to run query rds_multi_az_deployment_disabled after 9.789174ms
+3:10AM DBG Finished to run query rds_storage_encryption_disabled after 5.539212ms
+3:10AM DBG Finished to run query rds_with_backup_disabled after 4.023353ms
+3:10AM DBG Finished to run query rds_db_instance_with_deletion_protection_disabled after 5.202665ms
+3:10AM DBG Starting to run query redshift_cluster_logging_disabled
+3:10AM DBG Finished to run query redshift_cluster_logging_disabled after 45.805µs
+3:10AM DBG Starting to run query redshift_not_encrypted
+3:10AM DBG Finished to run query redshift_not_encrypted after 48.094µs
+3:10AM DBG Starting to run query refresh_token_is_exposed
+3:10AM DBG Finished to run query refresh_token_is_exposed after 83.861µs
+3:10AM DBG Starting to run query redshift_publicly_accessible
+3:10AM DBG Finished to run query redshift_publicly_accessible after 86.875µs
+3:10AM DBG Starting to run query remote_desktop_port_open_to_internet
+3:10AM DBG Finished to run query remote_desktop_port_open_to_internet after 38.824µs
+3:10AM DBG Starting to run query redshift_using_default_port
+3:10AM DBG Finished to run query redshift_using_default_port after 223.75µs
+3:10AM DBG Starting to run query root_account_has_active_access_keys
+3:10AM DBG Finished to run query root_account_has_active_access_keys after 150.082µs
+3:10AM DBG Starting to run query s3_bucket_acl_allows_read_or_write_to_all_users
+3:10AM DBG Starting to run query s3_bucket_access_to_any_principal
+3:10AM DBG Finished to run query s3_bucket_access_to_any_principal after 41.858µs
+3:10AM DBG Starting to run query s3_bucket_allows_delete_actions_from_all_principals
+3:10AM DBG Finished to run query s3_bucket_acl_allows_read_or_write_to_all_users after 3.456462ms
+3:10AM DBG Starting to run query routertable_with_default_routing
+3:10AM DBG Starting to run query s3_bucket_acl_allows_read_to_all_users
+3:10AM DBG Starting to run query s3_bucket_allows_get_actions_from_all_principals
+3:10AM DBG Starting to run query s3_bucket_acl_allows_read_to_any_authenticated_user
+3:10AM DBG Starting to run query s3_bucket_allows_list_actions_from_all_principals
+3:10AM DBG Starting to run query route53_record_undefined
+3:10AM DBG Finished to run query route53_record_undefined after 40.76µs
+3:10AM DBG Finished to run query s3_bucket_allows_delete_actions_from_all_principals after 2.642836ms
+3:10AM DBG Starting to run query s3_bucket_cloudtrail_logging_disabled
+3:10AM DBG Finished to run query s3_bucket_cloudtrail_logging_disabled after 106.96µs
+3:10AM DBG Starting to run query s3_bucket_allows_put_actions_from_all_principals
+3:10AM DBG Finished to run query s3_bucket_acl_allows_read_to_all_users after 3.210483ms
+3:10AM DBG Starting to run query s3_bucket_allows_public_acl
+3:10AM DBG Finished to run query s3_bucket_allows_get_actions_from_all_principals after 4.106071ms
+3:10AM DBG Starting to run query s3_bucket_logging_disabled
+3:10AM DBG Finished to run query s3_bucket_allows_public_acl after 136.243µs
+3:10AM DBG Finished to run query s3_bucket_acl_allows_read_to_any_authenticated_user after 8.76912ms
+3:10AM DBG Starting to run query s3_bucket_should_have_bucket_policy
+3:10AM DBG Finished to run query routertable_with_default_routing after 13.49896ms
+3:10AM DBG Finished to run query s3_bucket_allows_list_actions_from_all_principals after 11.124954ms
+3:10AM DBG Starting to run query s3_bucket_allows_restore_actions_from_all_principals
+3:10AM DBG Finished to run query s3_bucket_allows_put_actions_from_all_principals after 8.683792ms
+3:10AM DBG Finished to run query s3_bucket_logging_disabled after 6.401419ms
+3:10AM DBG Finished to run query s3_bucket_allows_restore_actions_from_all_principals after 3.309653ms
+3:10AM DBG Starting to run query s3_bucket_with_all_permissions
+3:10AM DBG Starting to run query s3_bucket_with_public_policy
+3:10AM DBG Finished to run query s3_bucket_with_public_policy after 133.726µs
+3:10AM DBG Finished to run query s3_bucket_should_have_bucket_policy after 17.479719ms
+3:10AM DBG Starting to run query s3_bucket_with_unsecured_cors_rule
+3:10AM DBG Finished to run query s3_bucket_with_unsecured_cors_rule after 98.663µs
+3:10AM DBG Starting to run query s3_bucket_without_server_side_encryption
+3:10AM DBG Finished to run query s3_bucket_without_server_side_encryption after 55.283µs
+3:10AM DBG Starting to run query s3_static_website_host_enabled
+3:10AM DBG Starting to run query s3_bucket_without_ignore_public_acl
+3:10AM DBG Finished to run query s3_bucket_without_ignore_public_acl after 63.424µs
+3:10AM DBG Starting to run query s3_bucket_without_versioning
+3:10AM DBG Finished to run query s3_bucket_with_all_permissions after 15.146369ms
+3:10AM DBG Starting to run query sagemaker_endpoint_config_should_specify_kms_key_id_attribute
+3:10AM DBG Starting to run query s3_bucket_without_ssl_in_write_actions
+3:10AM DBG Finished to run query sagemaker_endpoint_config_should_specify_kms_key_id_attribute after 482.209µs
+3:10AM DBG Finished to run query s3_static_website_host_enabled after 4.003061ms
+3:10AM DBG Finished to run query s3_bucket_without_ssl_in_write_actions after 67.391µs
+3:10AM DBG Starting to run query sagemaker_enabling_internet_access
+3:10AM DBG Finished to run query sagemaker_enabling_internet_access after 75.533µs
+3:10AM DBG Starting to run query sagemaker_notebook_not_placed_in_vpc
+3:10AM DBG Finished to run query sagemaker_notebook_not_placed_in_vpc after 91.371µs
+3:10AM DBG Starting to run query sdb_domain_declared_as_a_resource
+3:10AM DBG Finished to run query sdb_domain_declared_as_a_resource after 75.72µs
+3:10AM DBG Starting to run query sagemaker_data_encryption_disabled
+3:10AM DBG Finished to run query sagemaker_data_encryption_disabled after 148.632µs
+3:10AM DBG Starting to run query secrets_manager_should_specify_kms_key_id
+3:10AM DBG Finished to run query secrets_manager_should_specify_kms_key_id after 77.584µs
+3:10AM DBG Starting to run query s3_bucket_without_restriction_of_public_bucket
+3:10AM DBG Finished to run query s3_bucket_without_restriction_of_public_bucket after 50.476µs
+3:10AM DBG Starting to run query secretsmanager_secret_without_kms
+3:10AM DBG Finished to run query secretsmanager_secret_without_kms after 39.724µs
+3:10AM DBG Finished to run query s3_bucket_without_versioning after 17.561964ms
+3:10AM DBG Starting to run query secure_ciphers_disabled
+3:10AM DBG Finished to run query secure_ciphers_disabled after 220.84µs
+3:10AM DBG Starting to run query security_group_egress_with_all_protocols
+3:10AM DBG Finished to run query security_group_egress_with_all_protocols after 80.66µs
+3:10AM DBG Starting to run query security_group_egress_cidr_open_to_world
+3:10AM DBG Finished to run query security_group_egress_cidr_open_to_world after 1.992011ms
+3:10AM DBG Starting to run query security_group_ingress_with_port_range
+3:10AM DBG Finished to run query security_group_ingress_with_port_range after 48.974µs
+3:10AM DBG Starting to run query security_groups_with_exhibited_admin_ports
+3:10AM DBG Finished to run query security_groups_with_exhibited_admin_ports after 41.526µs
+3:10AM DBG Starting to run query security_group_rule_without_description
+3:10AM DBG Starting to run query security_groups_with_meta_ip
+3:10AM DBG Finished to run query security_groups_with_meta_ip after 39.787µs
+3:10AM DBG Finished to run query security_group_rule_without_description after 51.739µs
+3:10AM DBG Starting to run query security_groups_with_unrestricted_access_to_ssh
+3:10AM DBG Finished to run query security_groups_with_unrestricted_access_to_ssh after 72.27µs
+3:10AM DBG Starting to run query security_groups_allows_unrestricted_outbound_traffic
+3:10AM DBG Finished to run query security_groups_allows_unrestricted_outbound_traffic after 67.774µs
+3:10AM DBG Starting to run query security_group_ingress_has_cidr_not_recommended
+3:10AM DBG Finished to run query security_group_ingress_has_cidr_not_recommended after 105.095µs
+3:10AM DBG Starting to run query security_groups_without_vpc_attached
+3:10AM DBG Starting to run query security_groups_unrestricted_access_to_rdp
+3:10AM DBG Starting to run query security_group_ingress_with_all_protocols
+3:10AM DBG Finished to run query security_group_ingress_with_all_protocols after 63.072µs
+3:10AM DBG Starting to run query sns_topic_publicity_has_allow_and_not_action_simultaneously
+3:10AM DBG Finished to run query sns_topic_publicity_has_allow_and_not_action_simultaneously after 41.92µs
+3:10AM DBG Starting to run query sns_topic_is_publicly_accessible
+3:10AM DBG Starting to run query sns_topic_without_kms_master_key_id
+3:10AM DBG Finished to run query sns_topic_without_kms_master_key_id after 37.746µs
+3:10AM DBG Starting to run query shield_advanced_not_in_use
+3:10AM DBG Finished to run query sns_topic_is_publicly_accessible after 88.035µs
+3:10AM DBG Starting to run query security_group_egress_with_port_range
+3:10AM DBG Finished to run query security_group_egress_with_port_range after 139.143µs
+3:10AM DBG Finished to run query security_groups_unrestricted_access_to_rdp after 3.874203ms
+3:10AM DBG Finished to run query shield_advanced_not_in_use after 103.283µs
+3:10AM DBG Finished to run query security_groups_without_vpc_attached after 8.008766ms
+3:10AM DBG Starting to run query sqs_with_sse_disabled
+3:10AM DBG Starting to run query sqs_policy_with_public_access
+3:10AM DBG Finished to run query sqs_policy_with_public_access after 85.198µs
+3:10AM DBG Starting to run query support_has_no_role_associated
+3:10AM DBG Finished to run query support_has_no_role_associated after 71.814µs
+3:10AM DBG Starting to run query tags_not_copied_to_rds_cluster_snapshot
+3:10AM DBG Starting to run query stack_notifications_disabled
+3:10AM DBG Finished to run query sqs_with_sse_disabled after 2.774252ms
+3:10AM DBG Starting to run query stack_retention_disabled
+3:10AM DBG Finished to run query stack_retention_disabled after 108.442µs
+3:10AM DBG Finished to run query stack_notifications_disabled after 83.622µs
+3:10AM DBG Finished to run query tags_not_copied_to_rds_cluster_snapshot after 48.104µs
+3:10AM DBG Starting to run query unscanned_ecr_image
+3:10AM DBG Finished to run query unscanned_ecr_image after 99.771µs
+3:10AM DBG Starting to run query unrestricted_security_group_ingress
+3:10AM DBG Finished to run query unrestricted_security_group_ingress after 59.985µs
+3:10AM DBG Starting to run query tcp_or_udp_protocol_network_acl_entry_allows_all_ports
+3:10AM DBG Finished to run query tcp_or_udp_protocol_network_acl_entry_allows_all_ports after 61.456µs
+3:10AM DBG Starting to run query unknown_port_exposed_to_internet
+3:10AM DBG Finished to run query unknown_port_exposed_to_internet after 40.926µs
+3:10AM DBG Starting to run query user_data_contains_encoded_private_key
+3:10AM DBG Starting to run query user_iam_missing_password_reset_required
+3:10AM DBG Finished to run query user_iam_missing_password_reset_required after 57.602µs
+3:10AM DBG Finished to run query user_data_contains_encoded_private_key after 84.11µs
+3:10AM DBG Starting to run query vpc_without_network_firewall
+3:10AM DBG Starting to run query vpc_attached_with_too_many_gateways
+3:10AM DBG Starting to run query vpc_without_attached_subnet
+3:10AM DBG Finished to run query vpc_without_network_firewall after 3.413288ms
+3:10AM DBG Starting to run query vpc_flowlogs_disabled
+3:10AM DBG Finished to run query vpc_attached_with_too_many_gateways after 5.488229ms
+3:10AM DBG Finished to run query vpc_flowlogs_disabled after 1.478073ms
+3:10AM DBG Finished to run query vpc_without_attached_subnet after 4.504404ms
+3:10AM DBG Starting to run query vulnerable_default_ssl_certificate
+3:10AM DBG Finished to run query vulnerable_default_ssl_certificate after 45.577µs
+3:10AM DBG Starting to run query serverless_api_cache_cluster_disabled
+3:10AM DBG Finished to run query serverless_api_cache_cluster_disabled after 48.052µs
+3:10AM DBG Starting to run query wildcard_in_acm_certificate_domain_name
+3:10AM DBG Starting to run query serverless_api_access_logging_setting_undefined
+3:10AM DBG Finished to run query serverless_api_access_logging_setting_undefined after 75.802µs
+3:10AM DBG Starting to run query workspace_without_encryption
+3:10AM DBG Finished to run query workspace_without_encryption after 122.466µs
+3:10AM DBG Starting to run query serverless_api_without_content_encoding
+3:10AM DBG Finished to run query wildcard_in_acm_certificate_domain_name after 43.029µs
+3:10AM DBG Starting to run query webacl_allow_defaultaction
+3:10AM DBG Starting to run query serverless_api_endpoint_config_not_private
+3:10AM DBG Starting to run query serverless_api_xray_tracing_disabled
+3:10AM DBG Starting to run query serverless_function_environment_variables_not_encrypted
+3:10AM DBG Finished to run query serverless_function_environment_variables_not_encrypted after 48.529µs
+3:10AM DBG Finished to run query serverless_api_endpoint_config_not_private after 68.064µs
+3:10AM DBG Finished to run query webacl_allow_defaultaction after 3.319038ms
+3:10AM DBG Finished to run query serverless_api_without_content_encoding after 78.786µs
+3:10AM DBG Starting to run query serverless_function_without_dead_letter_queue
+3:10AM DBG Finished to run query serverless_function_without_dead_letter_queue after 58.411µs
+3:10AM DBG Starting to run query serverless_function_without_tags
+3:10AM DBG Finished to run query serverless_function_without_tags after 67.019µs
+3:10AM DBG Finished to run query serverless_api_xray_tracing_disabled after 41.071µs
+3:10AM DBG Starting to run query serverless_function_without_x-ray_tracing
+3:10AM DBG Starting to run query serverless_function_without_unique_iam_role
+3:10AM DBG Starting to run query always_admit_admission_control_plugin_set
+3:10AM DBG Starting to run query always_pull_images_admission_control_plugin_not_set
+3:10AM DBG Finished to run query serverless_function_without_x-ray_tracing after 632.158µs
+3:10AM DBG Finished to run query serverless_function_without_unique_iam_role after 234.937µs
+3:10AM DBG Finished to run query always_admit_admission_control_plugin_set after 1.409987ms
+3:10AM DBG Finished to run query always_pull_images_admission_control_plugin_not_set after 1.172387ms
+3:10AM DBG Starting to run query audit_log_maxbackup_not_properly_set
+3:10AM DBG Starting to run query audit_policy_not_cover_key_security_concerns
+3:10AM DBG Finished to run query audit_policy_not_cover_key_security_concerns after 51.377µs
+3:10AM DBG Starting to run query audit_log_maxage_not_properly_set
+3:10AM DBG Starting to run query authorization_mode_set_to_always_allow
+3:10AM DBG Starting to run query audit_log_maxsize_not_properly_set
+3:10AM DBG Starting to run query anonymous_auth_is_not_set_to_false
+3:10AM DBG Finished to run query audit_log_maxbackup_not_properly_set after 980.324µs
+3:10AM DBG Starting to run query audit_policy_file_not_defined
+3:10AM DBG Finished to run query anonymous_auth_is_not_set_to_false after 1.243539ms
+3:10AM DBG Starting to run query basic_auth_file_is_set
+3:10AM DBG Finished to run query audit_log_maxsize_not_properly_set after 1.666957ms
+3:10AM DBG Starting to run query audit_log_path_not_set
+3:10AM DBG Starting to run query authorization_mode_rbac_not_set
+3:10AM DBG Finished to run query audit_log_path_not_set after 648.018µs
+3:10AM DBG Finished to run query audit_log_maxage_not_properly_set after 4.949626ms
+3:10AM DBG Finished to run query authorization_mode_rbac_not_set after 1.105932ms
+3:10AM DBG Finished to run query audit_policy_file_not_defined after 1.862739ms
+3:10AM DBG Finished to run query basic_auth_file_is_set after 886.977µs
+3:10AM DBG Starting to run query auto_tls_set_to_true
+3:10AM DBG Starting to run query bind_address_not_properly_set
+3:10AM DBG Starting to run query cluster_allows_unsafe_sysctls
+3:10AM DBG Finished to run query bind_address_not_properly_set after 1.6068ms
+3:10AM DBG Starting to run query cluster_admin_role_binding_with_super_user_permissions
+3:10AM DBG Finished to run query cluster_admin_role_binding_with_super_user_permissions after 352.173µs
+3:10AM DBG Finished to run query auto_tls_set_to_true after 1.039552ms
+3:10AM DBG Starting to run query cni_plugin_does_not_support_network_policies
+3:10AM DBG Finished to run query cluster_allows_unsafe_sysctls after 865.583µs
+3:10AM DBG Finished to run query authorization_mode_set_to_always_allow after 1.59147ms
+3:10AM DBG Finished to run query cni_plugin_does_not_support_network_policies after 1.01896ms
+3:10AM DBG Starting to run query authorization_mode_node_not_set
+3:10AM DBG Starting to run query client_certificate_authentication_not_setup_properly
+3:10AM DBG Finished to run query authorization_mode_node_not_set after 945.499µs
+3:10AM DBG Finished to run query client_certificate_authentication_not_setup_properly after 1.278115ms
+3:10AM DBG Starting to run query container_is_privileged
+3:10AM DBG Starting to run query container_runs_unmasked
+3:10AM DBG Finished to run query container_runs_unmasked after 95.97µs
+3:10AM DBG Starting to run query containers_run_with_low_uid
+3:10AM DBG Finished to run query container_is_privileged after 8.522092ms
+3:10AM DBG Starting to run query containers_with_sys_admin_capabilities
+3:10AM DBG Finished to run query containers_with_sys_admin_capabilities after 603.249µs
+3:10AM DBG Starting to run query containers_with_added_capabilities
+3:10AM DBG Starting to run query containers_running_as_root
+3:10AM DBG Starting to run query dashboard_is_enabled
+3:10AM DBG Starting to run query cpu_limits_not_set
+3:10AM DBG Starting to run query cronjob_deadline_not_configured
+3:10AM DBG Finished to run query cronjob_deadline_not_configured after 75.481µs
+3:10AM DBG Starting to run query encryption_provider_not_properly_configured
+3:10AM DBG Finished to run query containers_running_as_root after 3.199161ms
+3:10AM DBG Starting to run query deployment_without_pod_disruption_budget
+3:10AM DBG Finished to run query deployment_without_pod_disruption_budget after 109.944µs
+3:10AM DBG Starting to run query deployment_has_no_pod_anti_affinity
+3:10AM DBG Finished to run query deployment_has_no_pod_anti_affinity after 939.055µs
+3:10AM DBG Starting to run query cpu_requests_not_set
+3:10AM DBG Starting to run query ensure_administrative_boundaries_between_resources
+3:10AM DBG Finished to run query containers_with_added_capabilities after 662.581µs
+3:10AM DBG Finished to run query containers_run_with_low_uid after 7.160858ms
+3:10AM DBG Finished to run query encryption_provider_not_properly_configured after 140.966µs
+3:10AM DBG Finished to run query cpu_limits_not_set after 3.216662ms
+3:10AM DBG Starting to run query docker_daemon_socket_is_exposed_to_containers
+3:10AM DBG Finished to run query dashboard_is_enabled after 904.769µs
+3:10AM DBG Finished to run query docker_daemon_socket_is_exposed_to_containers after 631.806µs
+3:10AM DBG Starting to run query etcd_client_certificate_authentication_set_to_false
+3:10AM DBG Finished to run query ensure_administrative_boundaries_between_resources after 984.358µs
+3:10AM DBG Starting to run query etcd_client_certificate_file_not_defined
+3:10AM DBG Finished to run query cpu_requests_not_set after 4.368589ms
+3:10AM DBG Starting to run query encryption_provider_config_is_not_defined
+3:10AM DBG Finished to run query etcd_client_certificate_authentication_set_to_false after 1.153401ms
+3:10AM DBG Finished to run query etcd_client_certificate_file_not_defined after 1.162526ms
+3:10AM DBG Finished to run query encryption_provider_config_is_not_defined after 1.720302ms
+3:10AM DBG Starting to run query etcd_peer_client_certificate_authentication_set_to_false
+3:10AM DBG Finished to run query etcd_peer_client_certificate_authentication_set_to_false after 1.103856ms
+3:10AM DBG Starting to run query etcd_peer_tls_certificate_files_not_properly_set
+3:10AM DBG Starting to run query event_rate_limit_admission_control_plugin_not_set
+3:10AM DBG Finished to run query event_rate_limit_admission_control_plugin_not_set after 1.407294ms
+3:10AM DBG Starting to run query hpa_targets_invalid_object
+3:10AM DBG Finished to run query hpa_targets_invalid_object after 73.948µs
+3:10AM DBG Finished to run query etcd_peer_tls_certificate_files_not_properly_set after 3.06989ms
+3:10AM DBG Starting to run query etcd_tls_certificate_not_properly_configured
+3:10AM DBG Finished to run query etcd_tls_certificate_not_properly_configured after 661.711µs
+3:10AM DBG Starting to run query image_policy_webhook_admission_control_plugin_not_set
+3:10AM DBG Starting to run query etcd_tls_certificate_files_not_properly_set
+3:10AM DBG Starting to run query image_without_digest
+3:10AM DBG Finished to run query etcd_tls_certificate_files_not_properly_set after 615.119µs
+3:10AM DBG Starting to run query incorrect_volume_claim_access_mode_read_write_once
+3:10AM DBG Starting to run query ingress_controller_exposes_workload
+3:10AM DBG Starting to run query hpa_targeted_deployments_with_configured_replica_count
+3:10AM DBG Starting to run query image_pull_policy_of_container_is_not_always
+3:10AM DBG Finished to run query image_without_digest after 4.737042ms
+3:10AM DBG Finished to run query incorrect_volume_claim_access_mode_read_write_once after 79.334µs
+3:10AM DBG Starting to run query invalid_image
+3:10AM DBG Finished to run query image_pull_policy_of_container_is_not_always after 4.50341ms
+3:10AM DBG Starting to run query insecure_bind_address_set
+3:10AM DBG Finished to run query image_policy_webhook_admission_control_plugin_not_set after 712.022µs
+3:10AM DBG Finished to run query ingress_controller_exposes_workload after 136.875µs
+3:10AM DBG Finished to run query invalid_image after 2.32904ms
+3:10AM DBG Starting to run query kubelet_certificate_authority_not_set
+3:10AM DBG Finished to run query hpa_targeted_deployments_with_configured_replica_count after 395.056µs
+3:10AM DBG Starting to run query kubelet_client_periodic_certificate_switch_disabled
+3:10AM DBG Starting to run query insecure_port_not_properly_set
+3:10AM DBG Finished to run query kubelet_client_periodic_certificate_switch_disabled after 853.92µs
+3:10AM DBG Starting to run query kubelet_client_certificate_or_key_not_set
+3:10AM DBG Finished to run query insecure_bind_address_set after 1.780743ms
+3:10AM DBG Finished to run query kubelet_certificate_authority_not_set after 763.461µs
+3:10AM DBG Finished to run query insecure_port_not_properly_set after 1.015697ms
+3:10AM DBG Finished to run query kubelet_client_certificate_or_key_not_set after 966.209µs
+3:10AM DBG Starting to run query kubelet_hostname_override_is_set
+3:10AM DBG Finished to run query kubelet_hostname_override_is_set after 1.09529ms
+3:10AM DBG Starting to run query kubelet_event_qps_not_properly_set
+3:10AM DBG Finished to run query kubelet_event_qps_not_properly_set after 1.500762ms
+3:10AM DBG Starting to run query kubelet_https_set_to_false
+3:10AM DBG Starting to run query kubelet_not_managing_ip_tables
+3:10AM DBG Finished to run query kubelet_https_set_to_false after 557.423µs
+3:10AM DBG Starting to run query liveness_probe_is_not_defined
+3:10AM DBG Starting to run query metadata_label_is_invalid
+3:10AM DBG Starting to run query kubelet_read_only_port_is_not_set_to_zero
+3:10AM DBG Finished to run query kubelet_not_managing_ip_tables after 5.993592ms
+3:10AM DBG Finished to run query metadata_label_is_invalid after 520.185µs
+3:10AM DBG Finished to run query kubelet_read_only_port_is_not_set_to_zero after 1.266535ms
+3:10AM DBG Finished to run query liveness_probe_is_not_defined after 3.625855ms
+3:10AM DBG Starting to run query memory_limits_not_defined
+3:10AM DBG Starting to run query network_policy_is_not_targeting_any_pod
+3:10AM DBG Starting to run query kubelet_streaming_connection_timeout_disabled
+3:10AM DBG Starting to run query namespace_lifecycle_admission_control_plugin_disabled
+3:10AM DBG Starting to run query kubelet_protect_kernel_defaults_set_to_false
+3:10AM DBG Starting to run query memory_requests_not_defined
+3:10AM DBG Finished to run query kubelet_protect_kernel_defaults_set_to_false after 588.001µs
+3:10AM DBG Starting to run query missing_app_armor_config
+3:10AM DBG Starting to run query net_raw_capabilities_not_being_dropped
+3:10AM DBG Starting to run query net_raw_capabilities_disabled_for_psp
+3:10AM DBG Finished to run query net_raw_capabilities_disabled_for_psp after 62.927µs
+3:10AM DBG Finished to run query memory_limits_not_defined after 881.862µs
+3:10AM DBG Finished to run query kubelet_streaming_connection_timeout_disabled after 691.761µs
+3:10AM DBG Finished to run query net_raw_capabilities_not_being_dropped after 2.723869ms
+3:10AM DBG Starting to run query no_drop_capabilities_for_containers
+3:10AM DBG Starting to run query not_unique_certificate_authority
+3:10AM DBG Finished to run query memory_requests_not_defined after 1.142214ms
+3:10AM DBG Finished to run query network_policy_is_not_targeting_any_pod after 280.079µs
+3:10AM DBG Finished to run query missing_app_armor_config after 3.497342ms
+3:10AM DBG Starting to run query node_restriction_admission_control_plugin_not_set
+3:10AM DBG Finished to run query namespace_lifecycle_admission_control_plugin_disabled after 484.283µs
+3:10AM DBG Finished to run query not_unique_certificate_authority after 1.061884ms
+3:10AM DBG Starting to run query object_is_using_a_deprecated_api_version
+3:10AM DBG Finished to run query node_restriction_admission_control_plugin_not_set after 905.463µs
+3:10AM DBG Starting to run query non_kube_system_pod_with_host_mount
+3:10AM DBG Finished to run query no_drop_capabilities_for_containers after 6.06438ms
+3:10AM DBG Starting to run query not_limited_capabilities_for_pod_security_policy
+3:10AM DBG Finished to run query not_limited_capabilities_for_pod_security_policy after 63.714µs
+3:10AM DBG Finished to run query object_is_using_a_deprecated_api_version after 123.823µs
+3:10AM DBG Finished to run query non_kube_system_pod_with_host_mount after 824.534µs
+3:10AM DBG Starting to run query peer_auto_tls_set_to_true
+3:10AM DBG Finished to run query peer_auto_tls_set_to_true after 1.901593ms
+3:10AM DBG Starting to run query pod_misconfigured_network_policy
+3:10AM DBG Finished to run query pod_misconfigured_network_policy after 88.15µs
+3:10AM DBG Starting to run query permissive_access_to_create_pods
+3:10AM DBG Finished to run query permissive_access_to_create_pods after 198.352µs
+3:10AM DBG Starting to run query psp_allows_sharing_host_ipc
+3:10AM DBG Starting to run query pod_or_container_without_security_context
+3:10AM DBG Starting to run query profiling_not_set_to_false
+3:10AM DBG Starting to run query privilege_escalation_allowed
+3:10AM DBG Starting to run query pod_or_container_without_limit_range
+3:10AM DBG Starting to run query psp_allows_privilege_escalation
+3:10AM DBG Starting to run query pod_security_policy_admission_control_plugin_not_set
+3:10AM DBG Starting to run query pod_or_container_without_resource_quota
+3:10AM DBG Finished to run query pod_security_policy_admission_control_plugin_not_set after 521.252µs
+3:10AM DBG Finished to run query privilege_escalation_allowed after 2.685625ms
+3:10AM DBG Finished to run query pod_or_container_without_security_context after 2.081093ms
+3:10AM DBG Finished to run query profiling_not_set_to_false after 1.656306ms
+3:10AM DBG Finished to run query psp_allows_privilege_escalation after 710.489µs
+3:10AM DBG Starting to run query psp_with_added_capabilities
+3:10AM DBG Finished to run query psp_allows_sharing_host_ipc after 87.662µs
+3:10AM DBG Starting to run query psp_with_unrestricted_access_to_host_path
+3:10AM DBG Finished to run query pod_or_container_without_limit_range after 2.104223ms
+3:10AM DBG Starting to run query psp_allows_sharing_host_pid
+3:10AM DBG Finished to run query psp_allows_sharing_host_pid after 120.322µs
+3:10AM DBG Starting to run query rbac_roles_with_attach_permission
+3:10AM DBG Finished to run query rbac_roles_with_attach_permission after 201.356µs
+3:10AM DBG Starting to run query psp_containers_share_host_network_namespace
+3:10AM DBG Starting to run query rbac_roles_allow_privilege_escalation
+3:10AM DBG Finished to run query psp_with_unrestricted_access_to_host_path after 338.562µs
+3:10AM DBG Starting to run query psp_set_to_privileged
+3:10AM DBG Finished to run query rbac_roles_allow_privilege_escalation after 1.191437ms
+3:10AM DBG Finished to run query psp_with_added_capabilities after 511.971µs
+3:10AM DBG Finished to run query psp_containers_share_host_network_namespace after 279.012µs
+3:10AM DBG Finished to run query pod_or_container_without_resource_quota after 1.535669ms
+3:10AM DBG Finished to run query psp_set_to_privileged after 75.347µs
+3:10AM DBG Starting to run query rbac_roles_with_exec_permission
+3:10AM DBG Finished to run query rbac_roles_with_exec_permission after 320.995µs
+3:10AM DBG Starting to run query rbac_roles_with_impersonate_permission
+3:10AM DBG Starting to run query rbac_roles_with_portforwarding_permissions
+3:10AM DBG Finished to run query rbac_roles_with_impersonate_permission after 91.391µs
+3:10AM DBG Finished to run query rbac_roles_with_portforwarding_permissions after 127.895µs
+3:10AM DBG Starting to run query rbac_wildcard_in_rule
+3:10AM DBG Starting to run query readiness_probe_is_not_configured
+3:10AM DBG Finished to run query readiness_probe_is_not_configured after 2.860743ms
+3:10AM DBG Starting to run query rbac_roles_with_read_secrets_permissions
+3:10AM DBG Finished to run query rbac_wildcard_in_rule after 4.940629ms
+3:10AM DBG Starting to run query rotate_kubelet_server_certificate_not_active
+3:10AM DBG Finished to run query rbac_roles_with_read_secrets_permissions after 588.602µs
+3:10AM DBG Finished to run query rotate_kubelet_server_certificate_not_active after 1.235874ms
+3:10AM DBG Starting to run query root_ca_file_not_defined
+3:10AM DBG Starting to run query root_container_not_mounted_as_read_only
+3:10AM DBG Finished to run query root_ca_file_not_defined after 673.841µs
+3:10AM DBG Starting to run query seccomp_profile_is_not_configured
+3:10AM DBG Starting to run query security_context_deny_admission_control_plugin_not_set
+3:10AM DBG Starting to run query secrets_as_environment_variables
+3:10AM DBG Finished to run query security_context_deny_admission_control_plugin_not_set after 654.595µs
+3:10AM DBG Starting to run query role_binding_to_default_service_account
+3:10AM DBG Starting to run query service_account_admission_control_plugin_disabled
+3:10AM DBG Starting to run query request_timeout_not_properly_set
+3:10AM DBG Starting to run query root_containers_admitted
+3:10AM DBG Finished to run query root_container_not_mounted_as_read_only after 4.256426ms
+3:10AM DBG Starting to run query secure_port_set_to_zero
+3:10AM DBG Finished to run query secrets_as_environment_variables after 1.416864ms
+3:10AM DBG Finished to run query role_binding_to_default_service_account after 345.627µs
+3:10AM DBG Starting to run query service_account_allows_access_secrets
+3:10AM DBG Finished to run query root_containers_admitted after 189.402µs
+3:10AM DBG Finished to run query service_account_admission_control_plugin_disabled after 1.555159ms
+3:10AM DBG Finished to run query request_timeout_not_properly_set after 1.024039ms
+3:10AM DBG Finished to run query secure_port_set_to_zero after 614.85µs
+3:10AM DBG Finished to run query seccomp_profile_is_not_configured after 9.686254ms
+3:10AM DBG Starting to run query service_account_name_undefined_or_empty
+3:10AM DBG Starting to run query service_account_lookup_set_to_false
+3:10AM DBG Finished to run query service_account_name_undefined_or_empty after 671.013µs
+3:10AM DBG Starting to run query service_account_private_key_file_not_defined
+3:10AM DBG Finished to run query service_account_lookup_set_to_false after 1.928536ms
+3:10AM DBG Finished to run query service_account_private_key_file_not_defined after 647.769µs
+3:10AM DBG Starting to run query service_does_not_target_pod
+3:10AM DBG Starting to run query service_account_key_file_not_properly_set
+3:10AM DBG Finished to run query service_account_allows_access_secrets after 532.998µs
+3:10AM DBG Starting to run query service_account_token_automount_not_disabled
+3:10AM DBG Finished to run query service_account_key_file_not_properly_set after 924.985µs
+3:10AM DBG Starting to run query service_type_is_nodeport
+3:10AM DBG Starting to run query shared_host_network_namespace
+3:10AM DBG Starting to run query shared_host_ipc_namespace
+3:10AM DBG Finished to run query shared_host_ipc_namespace after 628.368µs
+3:10AM DBG Finished to run query service_type_is_nodeport after 2.215233ms
+3:10AM DBG Finished to run query service_account_token_automount_not_disabled after 10.514755ms
+3:10AM DBG Starting to run query shared_service_account
+3:10AM DBG Starting to run query service_with_external_load_balancer
+3:10AM DBG Finished to run query shared_host_network_namespace after 2.31834ms
+3:10AM DBG Starting to run query shared_host_pid_namespace
+3:10AM DBG Starting to run query statefulset_requests_storage
+3:10AM DBG Finished to run query shared_service_account after 508.014µs
+3:10AM DBG Finished to run query service_with_external_load_balancer after 213.899µs
+3:10AM DBG Starting to run query statefulset_without_service_name
+3:10AM DBG Finished to run query statefulset_without_service_name after 99.223µs
+3:10AM DBG Finished to run query statefulset_requests_storage after 80.132µs
+3:10AM DBG Starting to run query statefulset_without_pod_disruption_budget
+3:10AM DBG Finished to run query statefulset_without_pod_disruption_budget after 103.501µs
+3:10AM DBG Finished to run query shared_host_pid_namespace after 520.195µs
+3:10AM DBG Starting to run query terminated_pod_garbage_collector_threshold_not_properly_set
+3:10AM DBG Finished to run query service_does_not_target_pod after 22.757777ms
+3:10AM DBG Starting to run query statefulset_has_no_pod_anti_affinity
+3:10AM DBG Starting to run query tiller_is_deployed
+3:10AM DBG Starting to run query using_unrecommended_namespace
+3:10AM DBG Starting to run query tiller_service_is_not_deleted
+3:10AM DBG Starting to run query token_auth_file_is_set
+3:10AM DBG Starting to run query use_service_account_credentials_not_set_to_true
+3:10AM DBG Starting to run query tls_connection_certificate_not_setup
+3:10AM DBG Starting to run query using_kubernetes_native_secret_management
+3:10AM DBG Finished to run query terminated_pod_garbage_collector_threshold_not_properly_set after 450.266µs
+3:10AM DBG Finished to run query statefulset_has_no_pod_anti_affinity after 311.206µs
+3:10AM DBG Starting to run query tiller_deployment_is_accessible_from_within_the_cluster
+3:10AM DBG Finished to run query tiller_is_deployed after 629.373µs
+3:10AM DBG Finished to run query tiller_service_is_not_deleted after 215.93µs
+3:10AM DBG Starting to run query volume_mount_with_os_directory_write_permissions
+3:10AM DBG Finished to run query token_auth_file_is_set after 1.367476ms
+3:10AM DBG Finished to run query use_service_account_credentials_not_set_to_true after 2.123764ms
+3:10AM DBG Finished to run query using_unrecommended_namespace after 4.146017ms
+3:10AM DBG Starting to run query weak_tls_cipher_suites
+3:10AM DBG Finished to run query using_kubernetes_native_secret_management after 109.84µs
+3:10AM DBG Starting to run query workload_mounting_with_sensitive_os_directory
+3:10AM DBG Finished to run query tls_connection_certificate_not_setup after 1.411768ms
+3:10AM DBG Starting to run query workload_host_port_not_specified
+3:10AM DBG Finished to run query tiller_deployment_is_accessible_from_within_the_cluster after 453.415µs
+3:10AM DBG Finished to run query volume_mount_with_os_directory_write_permissions after 1.218244ms
+3:10AM DBG Finished to run query weak_tls_cipher_suites after 606.988µs
+3:10AM DBG Finished to run query workload_mounting_with_sensitive_os_directory after 666.01µs
+3:10AM DBG Finished to run query workload_host_port_not_specified after 244.374µs
+
+3:10AM DBG model.CreateSummary()
+3:10AM WRN Unable to get descriptions: the BaseURL or KICS_DESCRIPTIONS_ENDPOINT environment variable not set
+3:10AM WRN Using default descriptions
+3:10AM DBG console.resolveOutputs()
+3:10AM DBG helpers.PrintResult()
+
+
+Liveness Probe Is Not Defined, Severity: INFO, Results: 13
+Description: In case of an unresponsive container, a Liveness Probe can help your application become more available since it restarts the container. However, it can lead to cascading failures. Define one if you really need it
+Platform: Kubernetes
+CWE: 754
+Risk Score: 0.0
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/ade74944-a674-4e00-859e-c6eab5bde441
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+Ensure Administrative Boundaries Between Resources, Severity: INFO, Results: 1
+Description: As a best practice, ensure that is made the correct use of namespaces to adequately administer your resources. Kubernetes Authorization plugins can also be used to create policies that segregate user access to namespaces.
+Platform: Kubernetes
+CWE: 284
+Risk Score: 0.0
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/e84eaf4d-2f45-47b2-abe8-e581b06deb66
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/rbac.yaml:24
+
+		023:   name: mad-secrets-reader
+		024:   namespace: default
+		025:   labels:
+
+
+Service Does Not Target Pod, Severity: LOW, Results: 1
+Description: Service should Target a Pod
+Platform: Kubernetes
+CWE: 665
+Risk Score: 3.3
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/3ca03a61-3249-4c16-8427-6f8e47dda729
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/service.yaml:15
+
+		014:     - name: "{{ .name }}"
+		015:       port: {{ .port }}
+		016:       targetPort: {{ .targetPort }}
+
+
+Root Container Not Mounted Read-only, Severity: LOW, Results: 16
+Description: Check if the root container filesystem is not being mounted as read-only.
+Platform: Kubernetes
+CWE: 668
+Risk Score: 3.6
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/a9c2f49d-0671-4fc9-9ece-f4e261e128d0
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+Pod or Container Without Security Context, Severity: LOW, Results: 13
+Description: A security context defines privilege and access control settings for a Pod or Container
+Platform: Kubernetes
+CWE: 285
+Risk Score: 3.6
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/a97a340a-0063-418e-b3a1-3028941d0995
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+Pod or Container Without ResourceQuota, Severity: LOW, Results: 19
+Description: Each namespace should have a ResourceQuota policy associated to limit the total amount of resources Pods, Containers and PersistentVolumeClaims can consume
+Platform: Kubernetes
+CWE: 400
+Risk Score: 2.8
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/48a5beba-e4c0-4584-a2aa-e6894e4cf424
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:20
+
+		019:   {{- end}}
+		020: ---
+		021: apiVersion: apps/v1
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:11
+
+		010:     io.mad.service: {{ .claim }}
+		011:   name: {{ .claim }}
+		012: spec:
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:9
+
+		008:     io.mad.service: {{ .name }}-claim0
+		009:   name: {{ .name }}-claim0
+		010: spec:
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:11
+
+		010:     io.mad.service: {{ .claim }}
+		011:   name: {{ .claim }}
+		012: spec:
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:17
+
+		016: {{- end}}
+		017: ---
+		018: apiVersion: apps/v1
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:9
+
+		008:     io.mad.service: {{ .name }}-claim0
+		009:   name: {{ .name }}-claim0
+		010: spec:
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:20
+
+		019:   {{- end}}
+		020: ---
+		021: apiVersion: apps/v1
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:17
+
+		016: {{- end}}
+		017: ---
+		018: apiVersion: apps/v1
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:9
+
+		008:     io.mad.service: {{ .name }}-claim0
+		009:   name: {{ .name }}-claim0
+		010: spec:
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[17]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:17
+
+		016: {{- end}}
+		017: ---
+		018: apiVersion: apps/v1
+
+
+	[18]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:9
+
+		008:     io.mad.service: {{ .name }}-claim0
+		009:   name: {{ .name }}-claim0
+		010: spec:
+
+
+	[19]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:17
+
+		016: {{- end}}
+		017: ---
+		018: apiVersion: apps/v1
+
+
+Pod or Container Without LimitRange, Severity: LOW, Results: 19
+Description: Each namespace should have a LimitRange policy associated to ensure that resource allocations of Pods, Containers and PersistentVolumeClaims do not exceed the defined boundaries
+Platform: Kubernetes
+CWE: 400
+Risk Score: 2.8
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/4a20ebac-1060-4c81-95d1-1f7f620e983b
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:17
+
+		016: {{- end}}
+		017: ---
+		018: apiVersion: apps/v1
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:17
+
+		016: {{- end}}
+		017: ---
+		018: apiVersion: apps/v1
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:9
+
+		008:     io.mad.service: {{ .name }}-claim0
+		009:   name: {{ .name }}-claim0
+		010: spec:
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:17
+
+		016: {{- end}}
+		017: ---
+		018: apiVersion: apps/v1
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:11
+
+		010:     io.mad.service: {{ .claim }}
+		011:   name: {{ .claim }}
+		012: spec:
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:20
+
+		019:   {{- end}}
+		020: ---
+		021: apiVersion: apps/v1
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:11
+
+		010:     io.mad.service: {{ .claim }}
+		011:   name: {{ .claim }}
+		012: spec:
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:9
+
+		008:     io.mad.service: {{ .name }}-claim0
+		009:   name: {{ .name }}-claim0
+		010: spec:
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:17
+
+		016: {{- end}}
+		017: ---
+		018: apiVersion: apps/v1
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:9
+
+		008:     io.mad.service: {{ .name }}-claim0
+		009:   name: {{ .name }}-claim0
+		010: spec:
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[17]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:9
+
+		008:     io.mad.service: {{ .name }}-claim0
+		009:   name: {{ .name }}-claim0
+		010: spec:
+
+
+	[18]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:4
+
+		003: ---
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+
+
+	[19]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:20
+
+		019:   {{- end}}
+		020: ---
+		021: apiVersion: apps/v1
+
+
+No Drop Capabilities for Containers, Severity: LOW, Results: 26
+Description: Sees if Kubernetes Drop Capabilities exists to ensure containers security context
+Platform: Kubernetes
+CWE: 754
+Risk Score: 3.6
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/268ca686-7fb7-4ae9-b129-955a2a89064e
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:69
+
+		068:           name: {{ .name }}
+		069:           securityContext:
+		070:             {{- if not $.Values.global.vulnerabilities.k01_runAsRoot }}
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:69
+
+		068:           name: {{ .name }}
+		069:           securityContext:
+		070:             {{- if not $.Values.global.vulnerabilities.k01_runAsRoot }}
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[17]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[18]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[19]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[20]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[21]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[22]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[23]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[24]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[25]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[26]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+Network Policy Is Not Targeting Any Pod, Severity: LOW, Results: 1
+Description: Check if any network policy is not targeting any pod.
+Platform: Kubernetes
+CWE: 665
+Risk Score: 2.9
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/85ab1c5b-014e-4352-b5f8-d7dea3bb4fd3
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/mad-network-networkpolicy.yaml:28
+
+		027:   podSelector:
+		028:     matchLabels:
+		029:       io.mad.network/mad-network: "true"
+
+
+Missing AppArmor Profile, Severity: LOW, Results: 16
+Description: Containers should be configured with an AppArmor profile to enforce fine-grained access control over low-level system resources
+Platform: Kubernetes
+CWE: 284
+Risk Score: 3.3
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/8b36775e-183d-4d46-b0f7-96a6f34a723f
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:35
+
+		034:   template:
+		035:     metadata:
+		036:       labels:
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:16
+
+		015:   template:
+		016:     metadata:
+		017:       labels:
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:32
+
+		031:   template:
+		032:     metadata:
+		033:       labels:
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:35
+
+		034:   template:
+		035:     metadata:
+		036:       labels:
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:16
+
+		015:   template:
+		016:     metadata:
+		017:       labels:
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:32
+
+		031:   template:
+		032:     metadata:
+		033:       labels:
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:16
+
+		015:   template:
+		016:     metadata:
+		017:       labels:
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:16
+
+		015:   template:
+		016:     metadata:
+		017:       labels:
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:16
+
+		015:   template:
+		016:     metadata:
+		017:       labels:
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:32
+
+		031:   template:
+		032:     metadata:
+		033:       labels:
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:16
+
+		015:   template:
+		016:     metadata:
+		017:       labels:
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:32
+
+		031:   template:
+		032:     metadata:
+		033:       labels:
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:32
+
+		031:   template:
+		032:     metadata:
+		033:       labels:
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:35
+
+		034:   template:
+		035:     metadata:
+		036:       labels:
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:32
+
+		031:   template:
+		032:     metadata:
+		033:       labels:
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:16
+
+		015:   template:
+		016:     metadata:
+		017:       labels:
+
+
+Image Without Digest, Severity: LOW, Results: 16
+Description: Images should be specified together with their digests to ensure integrity
+Platform: Kubernetes
+CWE: 665
+Risk Score: 4.1
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/7c81d34c-8e5a-402b-9798-9f442630e678
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:67
+
+		066:       containers:
+		067:         - image: {{ .image }}
+		068:           name: {{ .name }}
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+Image Pull Policy Of The Container Is Not Set To Always, Severity: LOW, Results: 16
+Description: Image Pull Policy of the container must be defined and set to Always
+Platform: Kubernetes
+CWE: 665
+Risk Score: 2.8
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/caa3479d-885d-4882-9aac-95e5e78ef5c2
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+Cluster Admin Rolebinding With Superuser Permissions, Severity: LOW, Results: 1
+Description: Ensure that the cluster-admin role is only used where required (RBAC)
+Platform: Kubernetes
+CWE: 269
+Risk Score: 4.5
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/249328b8-5f0f-409f-b1dd-029f07882e11
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/rbac.yaml:9
+
+		008:     io.mad.vuln: k02-clusterAdminBinding
+		009: roleRef:
+		010:   apiGroup: rbac.authorization.k8s.io
+
+
+CPU Requests Not Set, Severity: LOW, Results: 4
+Description: CPU requests should be set to ensure the sum of the resource requests of the scheduled Containers is less than the capacity of the node
+Platform: Kubernetes
+CWE: 400
+Risk Score: 2.9
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/ca469dd4-c736-448f-8ac1-30a642705e0a
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+CPU Limits Not Set, Severity: LOW, Results: 4
+Description: CPU limits should be set because if the system has CPU time free, a container is guaranteed to be allocated as much CPU as it requests
+Platform: Kubernetes
+CWE: 400
+Risk Score: 2.9
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/4ac0e2b7-d2d2-4af7-8799-e8de6721ccda
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+Using Unrecommended Namespace, Severity: MEDIUM, Results: 43
+Description: Namespaces like 'default', 'kube-system' or 'kube-public' should not be used
+Platform: Kubernetes
+CWE: 665
+Risk Score: 5.5
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/611ab018-c4aa-4ba2-b0f6-a448337509a6
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/configmap.yaml:6
+
+		005: metadata:
+		006:   name: {{ .name }}
+		007: data:
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/service.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/ingressRoutes.yaml:24
+
+		023:   name: keycloak-traefik-ingress
+		024:   namespace: default
+		025: spec:
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/ingressRoutes.yaml:5
+
+		004:   name: traefik-ingress
+		005:   namespace: default
+		006: spec:
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db-services.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:5
+
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+		006: metadata:
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/configmap.yaml:6
+
+		005: metadata:
+		006:   name: {{ .name }}
+		007: data:
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/service.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:22
+
+		021: apiVersion: apps/v1
+		022: kind: Deployment
+		023: metadata:
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db-services.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db-services.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core-services.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/configmap.yaml:6
+
+		005: metadata:
+		006:   name: {{ .name }}
+		007: data:
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/configmap.yaml:16
+
+		015: metadata:
+		016:     name: realm-config
+		017: data:
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/configmap.yaml:6
+
+		005: metadata:
+		006:   name: {{ .name }}
+		007: data:
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:22
+
+		021: apiVersion: apps/v1
+		022: kind: Deployment
+		023: metadata:
+
+
+	[17]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/configmap.yaml:6
+
+		005: metadata:
+		006:   name: {{ .name }}
+		007: data:
+
+
+	[18]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/render-errors.yaml:10
+
+		009: metadata:
+		010:   name: render-error-nil-pointer
+		011:   labels:
+
+
+	[19]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/configmap.yaml:6
+
+		005: metadata:
+		006:   name: {{ .name }}
+		007: data:
+
+
+	[20]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/service.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[21]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/service.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[22]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:5
+
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+		006: metadata:
+
+
+	[23]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db-services.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[24]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/render-errors.yaml:41
+
+		040: metadata:
+		041:   name: render-error-required-value
+		042:   labels:
+
+
+	[25]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:5
+
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+		006: metadata:
+
+
+	[26]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core-services.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[27]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:5
+
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+		006: metadata:
+
+
+	[28]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:19
+
+		018: apiVersion: apps/v1
+		019: kind: Deployment
+		020: metadata:
+
+
+	[29]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/service.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[30]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:19
+
+		018: apiVersion: apps/v1
+		019: kind: Deployment
+		020: metadata:
+
+
+	[31]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/configmap.yaml:6
+
+		005: metadata:
+		006:   name: {{ .name }}
+		007: data:
+
+
+	[32]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/rbac.yaml:34
+
+		033: kind: RoleBinding
+		034: metadata:
+		035:   name: mad-secrets-reader-binding
+
+
+	[33]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/service.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[34]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/rbac.yaml:24
+
+		023:   name: mad-secrets-reader
+		024:   namespace: default
+		025:   labels:
+
+
+	[35]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/configmap.yaml:6
+
+		005: metadata:
+		006:   name: {{ .name }}
+		007: data:
+
+
+	[36]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/render-errors.yaml:26
+
+		025: metadata:
+		026:   name: render-error-type-mismatch
+		027:   labels:
+
+
+	[37]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:19
+
+		018: apiVersion: apps/v1
+		019: kind: Deployment
+		020: metadata:
+
+
+	[38]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:5
+
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+		006: metadata:
+
+
+	[39]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/service.yaml:10
+
+		009: 
+		010:   name: {{ .name }}
+		011: spec:
+
+
+	[40]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/configmap.yaml:6
+
+		005: metadata:
+		006:   name: {{ .name }}
+		007: data:
+
+
+	[41]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:19
+
+		018: apiVersion: apps/v1
+		019: kind: Deployment
+		020: metadata:
+
+
+	[42]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:5
+
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+		006: metadata:
+
+
+	[43]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:5
+
+		004: apiVersion: apps/v1
+		005: kind: Deployment
+		006: metadata:
+
+
+ServiceAccount Allows Access Secrets, Severity: MEDIUM, Results: 1
+Description: Roles and ClusterRoles when binded, should not use get, list or watch as verbs
+Platform: Kubernetes
+CWE: 522
+Risk Score: 5.9
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/056ac60e-fe07-4acc-9b34-8e1d51716ab9
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/rbac.yaml:27
+
+		026:     io.mad.vuln: k02-secretsListWatch
+		027: rules:
+		028: - apiGroups: [""]
+
+
+Service Account Token Automount Not Disabled, Severity: MEDIUM, Results: 13
+Description: Service Account Tokens are automatically mounted even if not necessary
+Platform: Kubernetes
+CWE: 665
+Risk Score: 6.8
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/48471392-d4d0-47c0-b135-cdec95eb3eef
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:36
+
+		035:         io.mad.service: {{ .name }}
+		036:     spec:
+		037:       {{ if hasKey . "initialization" }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:36
+
+		035:         io.mad.service: {{ .name }}
+		036:     spec:
+		037:       {{ if hasKey . "initialization" }}
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:38
+
+		037:         io.mad.service: {{ .name }}
+		038:     spec:
+		039: {{- if hasKey . "initContainers"}}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:20
+
+		019:         io.mad.network/mad-network: "true"
+		020:     spec:
+		021:       containers:
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:20
+
+		019:         io.mad.network/mad-network: "true"
+		020:     spec:
+		021:       containers:
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:38
+
+		037:         io.mad.service: {{ .name }}
+		038:     spec:
+		039: {{- if hasKey . "initContainers"}}
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:36
+
+		035:         io.mad.service: {{ .name }}
+		036:     spec:
+		037:       {{ if hasKey . "initialization" }}
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:20
+
+		019:         io.mad.network/mad-network: "true"
+		020:     spec:
+		021:       containers:
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:20
+
+		019:         io.mad.network/mad-network: "true"
+		020:     spec:
+		021:       containers:
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:20
+
+		019:         io.mad.network/mad-network: "true"
+		020:     spec:
+		021:       containers:
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:36
+
+		035:         io.mad.service: {{ .name }}
+		036:     spec:
+		037:       {{ if hasKey . "initialization" }}
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:20
+
+		019:         io.mad.network/mad-network: "true"
+		020:     spec:
+		021:       containers:
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:20
+
+		019:         io.mad.network/mad-network: "true"
+		020:     spec:
+		021:       containers:
+
+
+Seccomp Profile Is Not Configured, Severity: MEDIUM, Results: 16
+Description: Containers should be configured with a secure Seccomp profile to restrict potentially dangerous syscalls
+Platform: Kubernetes
+CWE: 665
+Risk Score: 6.8
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/f377b83e-bd07-4f48-a591-60c82b14a78b
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:69
+
+		068:           name: {{ .name }}
+		069:           securityContext:
+		070:             {{- if not $.Values.global.vulnerabilities.k01_runAsRoot }}
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:69
+
+		068:           name: {{ .name }}
+		069:           securityContext:
+		070:             {{- if not $.Values.global.vulnerabilities.k01_runAsRoot }}
+
+
+Role Binding To Default Service Account, Severity: MEDIUM, Results: 1
+Description: No role nor cluster role should bind to a default service account
+Platform: Kubernetes
+CWE: 665
+Risk Score: 5.8
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/1e749bc9-fde8-471c-af0c-8254efd2dee5
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/rbac.yaml:45
+
+		044: - kind: ServiceAccount
+		045:   name: default
+		046:   namespace: default
+
+
+Readiness Probe Is Not Configured, Severity: MEDIUM, Results: 13
+Description: Check if Readiness Probe is not configured.
+Platform: Kubernetes
+CWE: 754
+Risk Score: 5.1
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/a659f3b5-9bf0-438a-bd9a-7d3a6427f1e3
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+RBAC Roles with Read Secrets Permissions, Severity: MEDIUM, Results: 1
+Description: Roles and ClusterRoles with get/watch/list RBAC permissions on Kubernetes secrets are dangerous and should be avoided. In case of compromise, attackers could abuse these roles to access sensitive data, such as passwords, tokens and keys
+Platform: Kubernetes
+CWE: 732
+Risk Score: 6.2
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/b7bca5c4-1dab-4c2c-8cbe-3050b9d59b14
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/rbac.yaml:27
+
+		026:     io.mad.vuln: k02-secretsListWatch
+		027: rules:
+		028: - apiGroups: [""]
+
+
+NET_RAW Capabilities Not Being Dropped, Severity: MEDIUM, Results: 6
+Description: Containers should drop 'ALL' or at least 'NET_RAW' capabilities
+Platform: Kubernetes
+CWE: 269
+Risk Score: 6.2
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/dbbc6705-d541-43b0-b166-dd4be8208b54
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+Memory Requests Not Defined, Severity: MEDIUM, Results: 4
+Description: Memory requests should be defined for each container. This allows the kubelet to reserve the requested amount of system resources and prevents over-provisioning on individual nodes
+Platform: Kubernetes
+CWE: 400
+Risk Score: 5.5
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/229588ef-8fde-40c8-8756-f4f2b5825ded
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+Memory Limits Not Defined, Severity: MEDIUM, Results: 4
+Description: Memory limits should be defined for each container. This prevents potential resource exhaustion by ensuring that containers consume not more than the designated amount of memory
+Platform: Kubernetes
+CWE: 400
+Risk Score: 5.5
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/b14d1bc4-a208-45db-92f0-e21f8e2588e9
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+Container Running With Low UID, Severity: MEDIUM, Results: 16
+Description: Check if containers are running with low UID, which might cause conflicts with the host's user table.
+Platform: Kubernetes
+CWE: 1188
+Risk Score: 4.9
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/02323c00-cdc3-4fdc-a310-4f2b3e7a1660
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:69
+
+		068:           name: {{ .name }}
+		069:           securityContext:
+		070:             {{- if not $.Values.global.vulnerabilities.k01_runAsRoot }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:69
+
+		068:           name: {{ .name }}
+		069:           securityContext:
+		070:             {{- if not $.Values.global.vulnerabilities.k01_runAsRoot }}
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+Container Running As Root, Severity: MEDIUM, Results: 16
+Description: Containers should only run as non-root user. This limits the exploitability of security misconfigurations and restricts an attacker's possibilities in case of compromise
+Platform: Kubernetes
+CWE: 1188
+Risk Score: 5.8
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/cf34805e-3872-4c08-bf92-6ff7bb0cfadb
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+Volume Mount With OS Directory Write Permissions, Severity: HIGH, Results: 3
+Description: Containers can mount sensitive folders from the hosts, giving them potentially dangerous access to critical host configurations and binaries.
+Platform: Kubernetes
+CWE: 284
+Risk Score: 8.0
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/b7652612-de4e-4466-a0bf-1cd81f0c6063
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:116
+
+		115:         {{- end }}
+		116:             name: {{ .name }}-claim0
+		117:       restartPolicy: Always
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:116
+
+		115:         {{- end }}
+		116:             name: {{ .name }}-claim0
+		117:       restartPolicy: Always
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:116
+
+		115:         {{- end }}
+		116:             name: {{ .name }}-claim0
+		117:       restartPolicy: Always
+
+
+Privilege Escalation Allowed, Severity: HIGH, Results: 16
+Description: Containers should not run with allowPrivilegeEscalation in order to prevent them from gaining more privileges than their parent process
+Platform: Kubernetes
+CWE: 269
+Risk Score: 7.7
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/5572cc5e-1e4c-4113-92a6-7a8a3bd25e6d
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[4]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[5]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:66
+
+		065: {{- end }}
+		066:       containers:
+		067:         - image: {{ .image }}
+
+
+	[6]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[7]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[8]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[9]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[10]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/core.yaml:40
+
+		039: {{- if hasKey . "initContainers"}}
+		040:       initContainers:
+		041:         {{ range .initContainers }}
+
+
+	[11]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[12]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[13]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[14]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:38
+
+		037:       {{ if hasKey . "initialization" }}
+		038:       initContainers:
+		039:         - name: default-data-loader
+
+
+	[15]: ../mad-deployment-service/helm/render-problems/madgoat-render/charts/madgoat-infra-render/templates/db.yaml:48
+
+		047:       {{ end }}
+		048:       containers:
+		049:       - securityContext:
+
+
+	[16]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+Container Is Privileged, Severity: HIGH, Results: 3
+Description: Privileged containers lack essential security restrictions and should be avoided by removing the 'privileged' flag or by changing its value to false
+Platform: Kubernetes
+CWE: 269
+Risk Score: 7.7
+Learn more about this vulnerability: https://docs.kics.io/latest/queries/kubernetes-queries/dd29336b-fe57-445b-a26e-e6aa867ae609
+
+	[1]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[2]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+	[3]: ../mad-deployment-service/helm/render-problems/madgoat-render/templates/deployment.yaml:45
+
+		044:           - configMapRef:
+		045:               name: {{ . }}
+		046:           {{- end }}
+
+
+3:10AM INF --- Parsing Summary ---
+3:10AM INF Scanned Files: 13
+3:10AM INF Parsed Files: 13
+3:10AM INF Scanned Lines: 6887
+3:10AM INF Parsed Lines: 6824
+3:10AM INF Ignored Lines: 63
+3:10AM INF Queries loaded: 716
+3:10AM INF Queries failed to execute: 716
+
+3:10AM INF --- Results Summary ---
+3:10AM INF CRITICAL: 0
+3:10AM INF HIGH: 22
+3:10AM INF MEDIUM: 134
+3:10AM INF LOW: 152
+3:10AM INF INFO: 14
+3:10AM INF TOTAL: 322
+
+3:10AM INF --- Queries Summary ---
+Platform      Query Name                                                 Severity    CWE     Results
+                                                                                              
+Kubernetes    Container Is Privileged                                    HIGH        269     3
+Kubernetes    Privilege Escalation Allowed                               HIGH        269     16
+Kubernetes    Volume Mount With OS Directory Write Permissions           HIGH        284     3
+Kubernetes    Container Running As Root                                  MEDIUM      1188    16
+Kubernetes    Container Running With Low UID                             MEDIUM      1188    16
+Kubernetes    Memory Limits Not Defined                                  MEDIUM      400     4
+Kubernetes    Memory Requests Not Defined                                MEDIUM      400     4
+Kubernetes    NET_RAW Capabilities Not Being Dropped                     MEDIUM      269     6
+Kubernetes    RBAC Roles with Read Secrets Permissions                   MEDIUM      732     1
+Kubernetes    Readiness Probe Is Not Configured                          MEDIUM      754     13
+Kubernetes    Role Binding To Default Service Account                    MEDIUM      665     1
+Kubernetes    Seccomp Profile Is Not Configured                          MEDIUM      665     16
+Kubernetes    Service Account Token Automount Not Disabled               MEDIUM      665     13
+Kubernetes    ServiceAccount Allows Access Secrets                       MEDIUM      522     1
+Kubernetes    Using Unrecommended Namespace                              MEDIUM      665     43
+Kubernetes    CPU Limits Not Set                                         LOW         400     4
+Kubernetes    CPU Requests Not Set                                       LOW         400     4
+Kubernetes    Cluster Admin Rolebinding With Superuser Permissions       LOW         269     1
+Kubernetes    Image Pull Policy Of The Container Is Not Set To Always    LOW         665     16
+Kubernetes    Image Without Digest                                       LOW         665     16
+Kubernetes    Missing AppArmor Profile                                   LOW         284     16
+Kubernetes    Network Policy Is Not Targeting Any Pod                    LOW         665     1
+Kubernetes    No Drop Capabilities for Containers                        LOW         754     26
+Kubernetes    Pod or Container Without LimitRange                        LOW         400     19
+Kubernetes    Pod or Container Without ResourceQuota                     LOW         400     19
+Kubernetes    Pod or Container Without Security Context                  LOW         285     13
+Kubernetes    Root Container Not Mounted Read-only                       LOW         668     16
+Kubernetes    Service Does Not Target Pod                                LOW         665     1
+Kubernetes    Ensure Administrative Boundaries Between Resources         INFO        284     1
+Kubernetes    Liveness Probe Is Not Defined                              INFO        754     13
+
+3:10AM INF Inspector stopped
+3:10AM DBG console.printOutput()
+3:10AM DBG Output formats provided [json]
+3:10AM DBG helpers.GenerateReport()
+3:10AM INF Results saved to file /mnt/c/Users/miabs/GolandProjects/helm-tests/thesis_assets/scan_out/madgoat-render-depup/kics-enhanced.json fileName=kics-enhanced.json
+3:10AM INF Scan duration: 10.657022603s
+
