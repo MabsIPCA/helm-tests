@@ -4,7 +4,7 @@ import "flag"
 
 const (
 	modeFlag           = "mode"
-	modeUsage          = "Execution mode: full, github-search-json, artifacthub-search-json, or fixer"
+	modeUsage          = "Execution mode: full, github-search-json, artifacthub-search-json, fixer, merge, refetch-deps, refilter-values, or render-md"
 	modeDefault        = "full"
 	sourceFlag         = "source"
 	sourceUsage        = "Discovery source: artifacthub or github (full mode loads repos from -search-in JSON)"

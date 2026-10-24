@@ -1,0 +1,10 @@
+# Local build products and run diagnostics
+*.exe
+*.test
+*.log
+
+# Automatic catalog backups; named research snapshots remain versioned
+*.bak
+
+# Machine-specific assistant settings
+/.claude/settings.local.json

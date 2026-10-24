@@ -64,7 +64,7 @@ ANALYZE_OUT        ?= out/cumulative_final
 ## GH_USER: GitHub username used by setup-token
 GH_USER ?=
 
-.PHONY: run run-both run-github-search-json run-artifacthub-search-json get-github get-artifact run-fixer refix-all merge setup-token gen-token plot-problems plot-popularity plot-problems-popularity plot-all clean-cloned clean-output clean help
+.PHONY: run run-both run-github-search-json run-artifacthub-search-json get-github get-artifact run-fixer refix-all merge get-token setup-token plot-problems plot-popularity plot-problems-popularity plot-all clean-cloned clean-output clean help
 
 ## run: fetch repos from selected source, run helm template on all combinations
 run:
@@ -174,7 +174,7 @@ plot-problems-popularity:
 		--output=$(PLOT_DIR)/problems_per_popularity.svg \
 		--top=$(PLOT_TOP_POPULARITY)
 
-## plot-all: generate both plots
+## plot-all: generate all three plots
 plot-all: plot-problems plot-popularity plot-problems-popularity
 
 ## clean-cloned: remove all cloned repositories
@@ -208,7 +208,7 @@ help:
 	@echo     get-artifact           - fetch top-500 Artifact Hub repos and write artifacthub_search.json
 	@echo     run-github-search-json - generate GitHub search JSON only (uses SEARCH_TOP)
 	@echo     run-artifacthub-search-json - generate Artifact Hub search JSON only (uses SEARCH_TOP)
-	@echo     gen-token              - open GitHub token page, paste token, save to .env
+	@echo     get-token              - authenticate via GitHub CLI and save the token to .env
 	@echo     setup-token            - store GitHub PAT in .env and Windows Credential Manager
 	@echo     merge                  - rebuild catalog_cumulative.json from all runs/ subfolders
 	@echo     run-fixer              - read catalog and apply fix loop (writes catalog_fixed.json)
@@ -218,7 +218,7 @@ help:
 	@echo     plot-problems-popularity - generate plots/problems_per_popularity.svg
 	@echo     plot-all               - generate all plot files
 	@echo     clean-cloned  - delete the configured clone directory
-	@echo     clean-output  - delete catalog_all_results.json, catalog_failures.csv and github_search.json
+	@echo     clean-output  - delete catalog_all_results.json, catalog_failures.csv, github_search.json, catalog_fixed.json and catalog_fixer_report.md
 	@echo     clean         - clean-cloned + clean-output
 	@echo     help          - show this message
 	@echo.

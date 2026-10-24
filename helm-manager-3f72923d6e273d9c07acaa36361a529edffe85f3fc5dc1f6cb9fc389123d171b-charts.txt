@@ -1,6 +1,0 @@
-traefikee
-maesh
-traefik
-traefik-crds
-traefik-hub
-traefik-mesh

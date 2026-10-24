@@ -93,7 +93,12 @@
       "Read(//home/miguel/go/bin/**)",
       "Bash(~/go/bin/trivy --version)",
       "Bash(/tmp/hcs-build/bin/hcs --help)",
-      "Bash(/tmp/hcs-build/bin/hcs scan *)"
+      "Bash(/tmp/hcs-build/bin/hcs scan *)",
+      "Bash(wsl -e bash -lc 'echo \"=== WSL available ===\"; which kubescape trivy kube-linter kics hcs helm 2>/dev/null; echo \"=== go bins ===\"; ls ~/go/bin 2>/dev/null; echo \"=== /tmp builds ===\"; ls -d /tmp/kics* /tmp/hcs* 2>/dev/null')",
+      "Bash(wsl -e bash -lc ' *)",
+      "Bash(wsl *)",
+      "Read(//mnt/c/**)",
+      "Bash(mkdir -p \"/c/temp/gox\")"
     ]
   }
 }

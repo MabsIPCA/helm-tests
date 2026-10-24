@@ -1,6 +1,0 @@
-feast-python-server
-feast-serving
-feast-spark
-feast
-feast-core
-feast-feature-server
